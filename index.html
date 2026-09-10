@@ -1167,8 +1167,8 @@ function startCustomerTrackingLive(){
     if(trackedOrderId) fetchTrackedOrder();
   },5000);
 }
-// v26: the only Supabase Auth user allowed to use admin controls.
-const MEGJET_ADMIN_USER_ID="dc6214fe-26e5-4ff9-8813-4aea2fc40a8c";
+// Admin authorization is enforced by public.admin_users / megjet_require_admin in Supabase.
+const MEGJET_ADMIN_USER_ID=null;
 
 let cart=[];
 let appliedCoupon=null;
@@ -2141,11 +2141,6 @@ async function adminRequest(path,options={}){
   const base=cfg.url.replace(/\/+$/,"");
   const token=localStorage.getItem("megjet_access_token");
   if(!token)throw new Error("Admin sign-in required.");
-  const session=await fetchJson(base+"/auth/v1/user",{headers:{apikey:cfg.key,Authorization:"Bearer "+token}});
-  if(String(session?.id)!==MEGJET_ADMIN_USER_ID){
-    localStorage.removeItem("megjet_access_token");
-    throw new Error("This account is not authorized as the Megjet admin.");
-  }
   return fetchJson(base+path,{...options,headers:{...(options.headers||{}),apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"}});
 }
 
@@ -2158,12 +2153,8 @@ async function adminLogin(){
     if(!data.access_token)throw new Error("No access token returned.");
     localStorage.setItem("megjet_access_token",data.access_token);
 
-    // Verify the authenticated user's UUID before opening the admin panel.
-    const user=await fetchJson(base+"/auth/v1/user",{headers:{apikey:cfg.key,Authorization:"Bearer "+data.access_token}});
-    if(String(user?.id)!==MEGJET_ADMIN_USER_ID){
-      localStorage.removeItem("megjet_access_token");
-      throw new Error("This account is not authorized as the Megjet admin.");
-    }
+    // Database-side admin authorization is authoritative.
+    // The authenticated user must exist in public.admin_users.
     await loadAdminOrders();
     await startRealtimeForCurrentRole();
   }catch(e){$("adminAuthMessage").textContent="Sign in failed: "+e.message;}
