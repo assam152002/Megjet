@@ -1380,7 +1380,17 @@ function renderVendors(vendors,products){
   list.innerHTML=vendors.length?vendors.map(v=>`<div class="card vendor vendor-profile-list-card" onclick="openVendorProfile('${escapeHtml(v.id)}')"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><div><h2>${escapeHtml(v.name)}</h2><div class="muted">⭐ ${escapeHtml(v.rating||'New')} • ${escapeHtml(v.preparation_minutes||20)} mins • ${escapeHtml(v.area||'Gazimagusa')}</div></div><span style="font-size:26px">›</span></div><button class="view-menu-btn" type="button" onclick="event.stopPropagation();openVendorProfile('${escapeHtml(v.id)}')">View Menu</button></div>`).join(''):`<div class='card'><h2>No vendors yet</h2><p class='muted'>Your Supabase connection works, but no active vendors have been added yet.</p></div>`;
   window.openVendorProfile=function(vendorId){
     const v=vendors.find(x=>String(x.id)===String(vendorId)); if(!v)return;
-    const ps=products.filter(p=>String(p.vendor_id)===String(v.id)); const groups={};
+    // De-duplicate live product rows for this vendor by product name + price.
+    // This protects the customer menu if the installer was run more than once.
+    const rawPs=products.filter(p=>String(p.vendor_id)===String(v.id));
+    const seenProducts=new Set();
+    const ps=rawPs.filter(p=>{
+      const key=String(p.name||'').trim().toLowerCase()+'|'+Number(p.price||0).toFixed(2);
+      if(seenProducts.has(key)) return false;
+      seenProducts.add(key);
+      return true;
+    });
+    const groups={};
     ps.forEach(p=>{const c=productCategory(p);(groups[c] ||= []).push(p);});
     const cats=[...categoryOrder.filter(c=>groups[c]),...Object.keys(groups).filter(c=>!categoryOrder.includes(c))];
     const hero=MEGJET_CATEGORY_IMAGES['Sweets Menu']||'';
