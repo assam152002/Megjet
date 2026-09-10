@@ -1402,7 +1402,14 @@ function renderVendors(vendors,products){
   }
 
   $("vendors").innerHTML=vendors.length?vendors.map(v=>{
-    const ps=products.filter(p=>String(p.vendor_id)===String(v.id));
+    const rawPs=products.filter(p=>String(p.vendor_id)===String(v.id));
+    // Hide exact duplicate records caused by repeated installer runs.
+    const seen=new Set();
+    const ps=rawPs.filter(p=>{
+      const key=[productCategory(p),String(p.name||'').trim().toLowerCase(),Number(p.price||0),String(p.description||'').trim().toLowerCase()].join('|');
+      if(seen.has(key)) return false;
+      seen.add(key); return true;
+    });
     const groups={};
     ps.forEach(p=>{const c=productCategory(p);(groups[c] ||= []).push(p);});
     const cats=[...categoryOrder.filter(c=>groups[c]),...Object.keys(groups).filter(c=>!categoryOrder.includes(c))];
@@ -3621,11 +3628,11 @@ async function megjetAutoInstallRestaurant(){
       vendor={id:r?.id||r?.vendor_id};
     }
     if(!vendor.id) throw new Error('Could not get vendor ID');
-    let existing=await adminRequest('/rest/v1/products?select=id,name&vendor_id=eq.'+encodeURIComponent(vendor.id));
-    const map={};(existing||[]).forEach(p=>map[p.name]=p.id);
+    let existing=await adminRequest('/rest/v1/products?select=id,name,price&vendor_id=eq.'+encodeURIComponent(vendor.id));
+    const map={};(existing||[]).forEach(p=>{const key=String(p.name||'').trim().toLowerCase()+'|'+Number(p.price||0);if(!map[key])map[key]=p.id;});
     let done=0;
     for(const p of MEGJET_AUTO_MENU){
-      await adminRequest('/rest/v1/rpc/admin_save_product_full',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:map[p.name]||null,p_vendor_id:vendor.id,p_name:p.name,p_description:p.description,p_price:p.price,p_available:true})});
+      await adminRequest('/rest/v1/rpc/admin_save_product_full',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:map[String(p.name||'').trim().toLowerCase()+'|'+Number(p.price||0)]||null,p_vendor_id:vendor.id,p_name:p.name,p_description:p.description,p_price:p.price,p_available:true})});
       done++; if(msg)msg.textContent=`Installing menu… ${done}/${MEGJET_AUTO_MENU.length}`;
     }
     if(msg)msg.textContent=`✓ Çikolata Evim installed with ${done} menu items. Refreshing…`;
