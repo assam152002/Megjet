@@ -4043,3 +4043,74 @@ setInterval(()=>{
     megjetCafe5Install().catch(()=>{});
 },7000);
 </script>
+<!-- MEGJET CUSTOMER ORDER + BILINGUAL LAYER -->
+<style>
+  .megjet-language-toggle{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.36);border-radius:999px;margin-left:10px;vertical-align:middle}.megjet-language-toggle button{border:0!important;background:transparent!important;color:#fff!important;padding:6px 9px!important;border-radius:999px!important;min-width:38px;font-size:12px;font-weight:900;line-height:1}.megjet-language-toggle button.active{background:#fff!important;color:#0878bd!important}.megjet-language-toggle button:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){.megjet-language-toggle{margin-left:6px}.megjet-language-toggle button{padding:6px 8px!important}}
+</style>
+<script>
+/* Customer-facing bilingual interface. Menu, restaurant and vendor content stay untouched. */
+(() => {
+  const LANGUAGE_KEY="megjet_customer_language";
+  let lang=localStorage.getItem(LANGUAGE_KEY)==="tr"?"tr":"en";
+  const tr={
+    "Your Cart":"Sepetiniz","View Cart":"Sepeti Gör","Hide Cart":"Sepeti Gizle","Subtotal":"Ara Toplam","Delivery":"Teslimat","Checkout":"Ödeme","Add":"Ekle","Search":"Ara","Search menu items or restaurants…":"Menü öğesi veya restoran ara…","Search food, restaurants, meals or snacks…":"Yemek, restoran, öğün veya atıştırmalık ara…","Search this menu…":"Bu menüde ara…","All restaurants":"Tüm restoranlar","No available products yet.":"Henüz ürün bulunmuyor.",
+    "Customer Details":"Müşteri Bilgileri","Delivery details":"Teslimat bilgileri","Your name":"Adınız","Full name":"Ad soyad","Phone number":"Telefon numarası","Email address":"E-posta adresi","Delivery address in Gazimagusa":"Gazimağusa teslimat adresi","Payment":"Ödeme","Cash on Delivery":"Kapıda Ödeme","Easypaisa / JazzCash on Delivery":"Teslimatta Easypaisa / JazzCash","Coupon":"Kupon","Coupon code":"Kupon kodu","Apply":"Uygula","Discount":"İndirim","Payable Total":"Ödenecek Toplam","Place order":"Sipariş ver","Sending order…":"Sipariş gönderiliyor…","Choose a saved address or enter a new one below.":"Kayıtlı bir adres seçin veya aşağıya yeni bir adres girin.","Cash on Delivery is live. Easypaisa/JazzCash can be recorded as payment methods. Live online gateway checkout requires provider API credentials.":"Kapıda ödeme aktiftir. Easypaisa/JazzCash ödeme yöntemi olarak kaydedilebilir. Canlı çevrimiçi ödeme için sağlayıcı API bilgileri gerekir.",
+    "Order placed successfully!":"Siparişiniz başarıyla alındı!","Order Status:":"Sipariş Durumu:","Pending":"Beklemede","Track My Order":"Siparişimi Takip Et","Continue Shopping":"Alışverişe Devam Et","Track Your Order":"Siparişinizi Takip Edin","Refresh":"Yenile","Items":"Ürünler","Total":"Toplam","Order number (e.g. BE424888)":"Sipariş numarası (örn. BE424888)",
+    "My Megjet Account":"Megjet Hesabım","My Account":"Hesabım","Your account, orders and quick reorders.":"Hesabınız, siparişleriniz ve hızlı tekrar siparişleriniz.","Create Account":"Hesap Oluştur","Sign In":"Giriş Yap","Sign Out":"Çıkış Yap","Sign in":"Giriş yap","Sign up":"Kayıt ol","Sign out":"Çıkış yap","Email":"E-posta","Password":"Şifre","Password (minimum 6 characters)":"Şifre (en az 6 karakter)","Forgot password?":"Şifrenizi mi unuttunuz?","Profile":"Profil","Save Profile":"Profili Kaydet","Saved Addresses":"Kayıtlı Adresler","Save home, office or event locations and choose one at checkout.":"Ev, iş veya etkinlik adreslerinizi kaydedin ve ödeme sırasında seçin.","Label (e.g. Home, Office)":"Etiket (örn. Ev, Ofis)","Full delivery address":"Tam teslimat adresi","Area (e.g. Gazimagusa)":"Bölge (örn. Gazimağusa)","Delivery phone":"Teslimat telefonu","Set as default address":"Varsayılan adres yap","My Orders":"Siparişlerim","Refresh Orders":"Siparişleri Yenile","No saved addresses yet.":"Henüz kayıtlı adres yok.","Use a saved address…":"Kayıtlı bir adres kullan…","Set Default":"Varsayılan Yap","Edit":"Düzenle","Delete":"Sil","Add Address":"Adres Ekle","Update Address":"Adresi Güncelle",
+    "Open for orders now.":"Siparişe açığız.","Store is temporarily closed.":"Mağaza geçici olarak kapalı.","Order failed:":"Sipariş başarısız:","Please enter your name, phone and delivery address.":"Lütfen adınızı, telefonunuzu ve teslimat adresinizi girin.","Enter a coupon code.":"Bir kupon kodu girin.","Coupon is invalid or expired.":"Kupon geçersiz veya süresi dolmuş.","Coupon applied:":"Kupon uygulandı:","Minimum order is ":"Minimum sipariş tutarı ","No recent order is saved on this device.":"Bu cihazda kayıtlı yakın tarihli sipariş yok.","Checking latest order status…":"Sipariş durumu kontrol ediliyor…","Last checked:":"Son kontrol:","Order not found.":"Sipariş bulunamadı.","Available items added to your cart ✓":"Uygun ürünler sepetinize eklendi ✓","Previous order added to your cart ✓":"Önceki sipariş sepetinize eklendi ✓",
+    "Featured picks":"Öne Çıkanlar","View all →":"Tümünü gör →","Restaurants":"Restoranlar","Categories":"Kategoriler","Popular":"Popüler","New":"Yeni","Bestseller":"Çok Satan","Special":"Özel","Favourite":"Favori"
+  };
+  const attributeTranslations={placeholder:tr,title:{"Search":"Ara","Cart":"Sepet"},"aria-label":tr};
+  function translateText(text){
+    if(lang!=="tr")return text;
+    const lead=(text.match(/^\s*/)||[""])[0],tail=(text.match(/\s*$/)||[""])[0],core=text.slice(lead.length,text.length-tail.length);
+    const dynamic=core.replace(/^(\\d+) items?$/,(_,n)=>n+" ürün").replace(/^Order #/,'Sipariş #').replace(/^Your order number is #/,'Sipariş numaranız #');
+    return lead+(tr[core]||dynamic)+tail;
+  }
+  function walk(root=document.body){
+    if(!root)return;
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){return n.parentElement&&["SCRIPT","STYLE","TEXTAREA"].includes(n.parentElement.tagName)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT;}});
+    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(n=>{const original=n.nodeValue;if(n.__megjetOriginal===undefined)n.__megjetOriginal=original;n.nodeValue=translateText(n.__megjetOriginal);});
+    root.querySelectorAll?.("[placeholder],[title],[aria-label]").forEach(el=>{["placeholder","title","aria-label"].forEach(a=>{if(!el.hasAttribute(a))return;const key="megjetOriginal"+a[0].toUpperCase()+a.slice(1);if(el.dataset[key]===undefined)el.dataset[key]=el.getAttribute(a);const original=el.dataset[key];el.setAttribute(a,lang==="tr"?(attributeTranslations[a]?.[original]||original):original);});});
+  }
+  function addToggle(){
+    const header=document.querySelector("header");if(!header||document.getElementById("megjetLanguageToggle"))return;
+    const box=document.createElement("span");box.id="megjetLanguageToggle";box.className="megjet-language-toggle";box.setAttribute("aria-label","Language");
+    box.innerHTML='<button type="button" data-lang="en">EN</button><button type="button" data-lang="tr">TR</button>';
+    box.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
+    const brand=header.querySelector(".brand");(brand||header).appendChild(box);
+  }
+  function setLanguage(next){lang=next==="tr"?"tr":"en";localStorage.setItem(LANGUAGE_KEY,lang);document.documentElement.lang=lang;document.querySelectorAll("#megjetLanguageToggle button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));walk();}
+  window.megjetTranslate=(s)=>lang==="tr"?(tr[s]||s):s;
+  window.megjetCustomerLanguage=()=>lang;
+  addToggle();setLanguage(lang);
+  const observer=new MutationObserver(records=>{for(const r of records){r.addedNodes.forEach(n=>{if(n.nodeType===1)walk(n);else if(n.nodeType===3){if(n.__megjetOriginal===undefined)n.__megjetOriginal=n.nodeValue;n.nodeValue=translateText(n.__megjetOriginal);}});}});
+  observer.observe(document.body,{childList:true,subtree:true});
+})();
+
+/* Replace the fragile checkout handler. The RPC remains the existing backend source of truth. */
+$("placeOrder").onclick=async()=>{
+  if(!cart.length)return;
+  const name=$("customerName").value.trim(),phone=$("phone").value.trim(),address=$("address").value.trim();
+  const say=s=>window.megjetTranslate?window.megjetTranslate(s):s;
+  if(!name||!phone||!address){$("orderMessage").textContent=say("Please enter your name, phone and delivery address.");return;}
+  const base=cfg.url.replace(/\/+$/,"");const button=$("placeOrder");
+  try{
+    button.disabled=true;$("orderMessage").textContent=say("Sending order…");
+    const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+    const invalid=cart.filter(p=>!uuid.test(String(p?.id||"")));
+    if(invalid.length)throw new Error("Your cart contains an unavailable item. Please remove it and add it again from the menu.");
+    const compact=new Map();
+    cart.forEach(p=>{const id=String(p.id);compact.set(id,(compact.get(id)||0)+Math.max(1,Number(p.quantity)||1));});
+    const items=[...compact].map(([product_id,quantity])=>({product_id,quantity}));
+    if(!items.length)throw new Error("Your cart is empty.");
+    const orderId=crypto.randomUUID();
+    await fetchJson(base+"/rest/v1/rpc/create_customer_order_account",{method:"POST",headers:await customerAuthHeaders(),body:JSON.stringify({p_order_id:orderId,p_customer_name:name,p_customer_phone:phone,p_delivery_address:address,p_payment_method:$("paymentMethod")?.value||"Cash on Delivery",p_coupon_code:appliedCoupon?.code||null,p_items:items})},15000);
+    const displayId=String(orderId).replace(/-/g,"").slice(-8).toUpperCase();trackedOrderId=orderId;localStorage.setItem("megjet_last_order_id",trackedOrderId);localStorage.setItem("megjet_last_order_phone",phone);
+    cart=[];saveCart();renderCart();$("checkout").classList.add("hidden");$("confirmationOrderNumber").textContent=(window.megjetCustomerLanguage?.()==="tr"?"Sipariş numaranız #":"Your order number is #")+displayId;$("confirmationStatus").textContent=say("Pending");$("orderConfirmation").classList.remove("hidden");$("orderMessage").textContent="";
+    $("customerName").value=$("phone").value=$("address").value="";$("couponCode").value="";$("couponMessage").textContent="";appliedCoupon=null;renderCheckoutTotals();
+  }catch(e){const detail=String(e?.message||"Unable to place your order.");$("orderMessage").textContent=(window.megjetCustomerLanguage?.()==="tr"?"Sipariş başarısız: ":"Order failed: ")+detail;}
+  finally{button.disabled=false;}
+};
+</script>
