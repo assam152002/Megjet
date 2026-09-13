@@ -970,11 +970,11 @@ function megjetSupportHTML(orderId=""){
           <div class="vendor-form-grid">
             <div class="full"><input id="vendorName" placeholder="Vendor name"></div>
             <div><input id="vendorArea" placeholder="Area"></div>
-            <div><input id="vendorPhone" type="tel" placeholder="Vendor phone" inputmode="tel"></div>
+            <div><input id="adminVendorPhone" type="tel" placeholder="Vendor phone" inputmode="tel"></div>
             <div class="full"><input id="vendorAddress" placeholder="Full vendor address"></div>
             <div><input id="vendorRating" placeholder="Rating (e.g. 4.8)"></div>
             <div><input id="vendorPrep" type="number" min="0" step="1" placeholder="Preparation time (minutes)"></div>
-            <div class="full"><input id="vendorPassword" type="password" placeholder="Portal password (6+ characters)"></div>
+            <div class="full"><input id="adminVendorPassword" type="password" placeholder="Portal password (6+ characters)"></div>
           </div>
           <label style="display:flex;align-items:center;gap:8px;margin:10px 0"><input id="vendorActive" type="checkbox" checked style="width:auto;margin:0"> Active for customers</label>
           <div class="vendor-actions">
@@ -2582,7 +2582,7 @@ function renderAdminMenu(){
 }
 
 function resetVendorForm(){
-  ["vendorItemId","vendorName","vendorArea","vendorAddress","vendorPhone","vendorRating","vendorPrep","vendorPassword"].forEach(id=>{if($(id))$(id).value="";});
+  ["vendorItemId","vendorName","vendorArea","vendorAddress","adminVendorPhone","vendorRating","vendorPrep","adminVendorPassword"].forEach(id=>{if($(id))$(id).value="";});
   if($("vendorActive"))$("vendorActive").checked=true;
   if($("vendorFormTitle"))$("vendorFormTitle").textContent="Add Vendor";
   if($("vendorSaveBtn"))$("vendorSaveBtn").textContent="Save Vendor";
@@ -2593,9 +2593,9 @@ function showVendorForm(v=null){
   if(v){
     $("vendorFormTitle").textContent="Edit Vendor";$("vendorSaveBtn").textContent="Save Changes";
     $("vendorItemId").value=v.id||"";$("vendorName").value=v.name||"";$("vendorArea").value=v.area||"";
-    $("vendorAddress").value=v.address||"";$("vendorPhone").value=v.phone||"";$("vendorRating").value=v.rating??"";
+    $("vendorAddress").value=v.address||"";$("adminVendorPhone").value=v.phone||"";$("vendorRating").value=v.rating??"";
     $("vendorPrep").value=v.preparation_minutes??20;$("vendorActive").checked=v.active!==false;
-    $("vendorPassword").placeholder="New password (optional; 6+ characters)";
+    $("adminVendorPassword").placeholder="New password (optional; 6+ characters)";
   }else{$("vendorArea").value="Gazimagusa";$("vendorPrep").value=20;}
   $("vendorName")?.focus();
 }
@@ -2733,11 +2733,11 @@ async function saveVendor(){
   const name=$("vendorName").value.trim();
   const area=$("vendorArea").value.trim();
   const address=$("vendorAddress").value.trim();
-  const phone=$("vendorPhone").value.trim();
+  const phone=$("adminVendorPhone").value.trim();
   const rating=$("vendorRating").value.trim();
   const prep=Number($("vendorPrep").value);
   const active=$("vendorActive").checked;
-  const password=$("vendorPassword").value;
+  const password=$("adminVendorPassword").value;
   if(!name||!phone||!address){$("vendorMessage").textContent="Name, phone and address are required.";return;}
   if(!Number.isFinite(prep)||prep<0){$("vendorMessage").textContent="Please enter a valid preparation time.";return;}
   if(!id && password.length<6){$("vendorMessage").textContent="A new vendor needs a password of at least 6 characters.";return;}
