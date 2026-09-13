@@ -4113,4 +4113,25 @@ $("placeOrder").onclick=async()=>{
   }catch(e){const detail=String(e?.message||"Unable to place your order.");$("orderMessage").textContent=(window.megjetCustomerLanguage?.()==="tr"?"Sipariş başarısız: ":"Order failed: ")+detail;}
   finally{button.disabled=false;}
 };
+
+/* Compatibility fallback for menu Add buttons, including older cached menu cards. */
+document.addEventListener("click",event=>{
+  const button=event.target?.closest?.("button");
+  if(!button||!button.closest(".item"))return;
+  const label=String(button.textContent||"").trim().toLowerCase();
+  if(label!=="add"&&label!=="ekle")return;
+  const before=Array.isArray(cart)?cart.length:0;
+  setTimeout(()=>{
+    if(!Array.isArray(cart)||cart.length!==before)return; // The original handler worked.
+    const card=button.closest(".item");
+    const name=card.querySelector("b")?.textContent?.trim();
+    const priceText=card.querySelector(".price")?.textContent||"";
+    const price=Number(String(priceText).replace(/[^0-9.,]/g,"").replace(",","."));
+    const vendorName=card.closest(".vendor")?.querySelector("h2")?.textContent?.trim()||"";
+    const match=(typeof products!=="undefined"?products:[]).find(p=>String(p.name||"").trim()===name&&Number(p.price||0)===price&&(!vendorName||!p.vendor_name||String(p.vendor_name).trim()===vendorName));
+    if(!match){setStatus("This menu item is no longer available. Please refresh the menu.","bad");return;}
+    cart.push({id:match.id,vendor_id:match.vendor_id,vendor_name:match.vendor_name||vendorName,name:match.name,description:match.description||"",price:Number(match.price||0),quantity:1});
+    saveCart();renderCart();setStatus("Item added to your cart ✓","ok");
+  },0);
+},true);
 </script>
