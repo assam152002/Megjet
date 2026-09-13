@@ -4128,7 +4128,8 @@ document.addEventListener("click",event=>{
     const priceText=card.querySelector(".price")?.textContent||"";
     const price=Number(String(priceText).replace(/[^0-9.,]/g,"").replace(",","."));
     const vendorName=card.closest(".vendor")?.querySelector("h2")?.textContent?.trim()||"";
-    const match=(typeof products!=="undefined"?products:[]).find(p=>String(p.name||"").trim()===name&&Number(p.price||0)===price&&(!vendorName||!p.vendor_name||String(p.vendor_name).trim()===vendorName));
+    const catalogue=window.MEGJET_VENDOR_DATA?.products||[];
+    const match=catalogue.find(p=>String(p.name||"").trim()===name&&Number(p.price||0)===price&&(!vendorName||!p.vendor_name||String(p.vendor_name).trim()===vendorName));
     if(!match){setStatus("This menu item is no longer available. Please refresh the menu.","bad");return;}
     cart.push({id:match.id,vendor_id:match.vendor_id,vendor_name:match.vendor_name||vendorName,name:match.name,description:match.description||"",price:Number(match.price||0),quantity:1});
     saveCart();renderCart();setStatus("Item added to your cart ✓","ok");
