@@ -1440,10 +1440,6 @@ let appliedCoupon=null;
 let vendorReviewRatings={};
 let riderReviewRating=0;
 
-// Stable in-memory product registry for menu Add buttons.
-// Using a product ID avoids HTML attribute/quote parsing problems.
-const MEGJET_CART_PRODUCTS=new Map();
-
 const $=id=>document.getElementById(id);
 const MEGJET_CURRENCY="TRY";
 const money=n=>"₺"+Number(n||0).toLocaleString("tr-TR",{maximumFractionDigits:0});
@@ -1486,25 +1482,28 @@ function buildStars(containerId,target){const el=$(containerId);if(!el)return;co
 function buildVendorReviewStars(vendorId){const el=$("vendorStars_"+vendorId);if(!el)return;const value=Number(vendorReviewRatings[vendorId]||0);el.innerHTML=[1,2,3,4,5].map(n=>`<button type="button" class="review-star ${n<=value?"selected":""}" data-rating="${n}" aria-label="Rate ${n} out of 5">★ ${n}</button>`).join("");el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{vendorReviewRatings[vendorId]=Number(b.dataset.rating);buildVendorReviewStars(vendorId);}));}
 function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 
-// Reliable cart handler for all dynamically-rendered Add buttons.
-// Menu items use a stable product ID registry instead of putting JSON inside HTML attributes.
+// Cart product registry: never put JSON/product text inside an HTML attribute.
+// This makes Add work reliably with Turkish characters, apostrophes, quotes,
+// ampersands, URLs, and long descriptions.
+window.MEGJET_CART_PRODUCTS=window.MEGJET_CART_PRODUCTS||Object.create(null);
+let megjetCartProductSeq=0;
+function registerMegjetCartProduct(product){
+  const token="p"+(++megjetCartProductSeq);
+  window.MEGJET_CART_PRODUCTS[token]={...product,quantity:Number(product?.quantity||1)};
+  return token;
+}
+
+// One delegated handler works for menu items, favourites and featured products.
 document.addEventListener('click',function(e){
-  const btn=e.target.closest('[data-megjet-product-id],[data-megjet-add]');
+  const btn=e.target.closest('[data-megjet-add-id]');
   if(!btn)return;
   e.preventDefault();
   e.stopPropagation();
   try{
-    let product=null;
-    const productId=btn.getAttribute('data-megjet-product-id');
-    if(productId){
-      product=MEGJET_CART_PRODUCTS.get(String(productId))||null;
-    }
-    if(!product){
-      const raw=btn.getAttribute('data-megjet-add')||'';
-      if(raw) product=JSON.parse(decodeURIComponent(raw));
-    }
+    const token=btn.getAttribute('data-megjet-add-id');
+    const product=token?window.MEGJET_CART_PRODUCTS[token]:null;
     if(!product || !product.id) throw new Error('Invalid product.');
-    add({...product,quantity:1});
+    add(product);
     const cartBox=document.getElementById('cartBox');
     if(cartBox){
       cartBox.classList.remove('hidden');
@@ -1513,10 +1512,7 @@ document.addEventListener('click',function(e){
   }catch(err){
     console.error('Megjet cart add failed:',err);
     const status=document.getElementById('status');
-    if(status){
-      status.textContent='Could not add this item to your cart. Please try again.';
-      status.className='notice bad';
-    }
+    if(status){status.textContent='Could not add this item to your cart: '+(err?.message||'Unknown error'); status.className='notice bad';}
   }
 },true);
 
@@ -1567,7 +1563,7 @@ function renderCustomerFavorites(){
   const box=$("customerFavorites"); if(!box)return;
   if(!customerAuthUser){box.innerHTML='<div class="muted">Sign in to save your favourite food items.</div>';return;}
   if(!customerFavorites.length){box.innerHTML='<div class="muted">No favourites yet. Tap ♡ on any item to save it.</div>';return;}
-  box.innerHTML=customerFavorites.map(f=>`<div class="favorite-item"><div><b>${escapeHtml(f.product_name||"Item")}</b><div class="muted">${escapeHtml(f.vendor_name||"")} • ${money(f.price||0)}</div></div><div class="account-mini-actions"><button data-megjet-add='${encodeURIComponent(JSON.stringify({id:f.product_id,name:f.product_name,price:f.price,vendor_id:f.vendor_id,vendor_name:f.vendor_name}))}'>Add</button><button class="fav-btn active" data-product-id="${escapeHtml(f.product_id)}" onclick='toggleFavorite(${JSON.stringify({id:f.product_id}).replace(/'/g,"&#39;")})'>♥</button></div></div>`).join("");
+  box.innerHTML=customerFavorites.map(f=>`<div class="favorite-item"><div><b>${escapeHtml(f.product_name||"Item")}</b><div class="muted">${escapeHtml(f.vendor_name||"")} • ${money(f.price||0)}</div></div><div class="account-mini-actions"><button type="button" data-megjet-add-id="${registerMegjetCartProduct({id:f.product_id,name:f.product_name,price:Number(f.price||0),vendor_id:f.vendor_id,vendor_name:f.vendor_name,quantity:1})}">Add</button><button class="fav-btn active" data-product-id="${escapeHtml(f.product_id)}" onclick='toggleFavorite(${JSON.stringify({id:f.product_id}).replace(/'/g,"&#39;")})'>♥</button></div></div>`).join("");
 }
 async function loadDeliveryFee(){
   try{
@@ -1691,14 +1687,13 @@ function renderVendors(vendors,products){
     return k?window.MEGJET_VENDOR_HOURS[k]:'';
   }
   function renderProduct(p,v){
-    const item={...p,vendor_name:v.name,quantity:1};
-    MEGJET_CART_PRODUCTS.set(String(p.id),item);
+    const item={...p,vendor_name:v.name};
     const photoKey=Object.keys(MEGJET_PRODUCT_PHOTOS).find(k=>k.trim().toLowerCase()===String(p.name||"").trim().toLowerCase());
     const productImage=(photoKey?MEGJET_PRODUCT_PHOTOS[photoKey]:"")||p.image_url||"https://placehold.co/96x96?text=Food";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
     const photoClass=isSweetHoles?'product-image-admin sweetholes-product-photo':'product-image-admin';
     const infoClass=isSweetHoles?'item-info sweetholes-product-info':'item-info';
-    return `<div class="item"><div class="${infoClass}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(p.name||'Product')}"><div><b>${escapeHtml(p.name)}</b><div class="muted">${escapeHtml(cleanDesc(p))}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button type="button" class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-btn" data-megjet-product-id="${escapeHtml(p.id)}">Add</button></div></div>`;
+    return `<div class="item"><div class="${infoClass}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(p.name||'Product')}"><div><b>${escapeHtml(p.name)}</b><div class="muted">${escapeHtml(cleanDesc(p))}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" data-megjet-add-id="${registerMegjetCartProduct(item)}">Add</button></div></div>`;
   }
   function renderCategory(name,items,v){
     if(!items.length)return "";
@@ -3835,7 +3830,7 @@ async function loadGrowthHome(){
     const fv=Array.isArray(data?.featured_vendors)?data.featured_vendors.filter(x=>x.featured):[];
     let out="";
     if(promos.length) out+=`<div><div class="growth-offer-head"><h2 style="margin:0">🔥 Special offers</h2><span class="growth-view-all">Hot deals</span></div><div class="growth-strip">${promos.map(p=>`<div class="growth-card">${p.image_url?`<img src="${escapeHtml(p.image_url)}" alt="">`:``}<div class="growth-card-body"><h3>${escapeHtml(p.title||"Offer")}</h3><div class="muted">${escapeHtml(p.subtitle||"")}</div>${p.link_type==="coupon"&&p.link_value?`<div class="growth-badge" style="margin-top:8px">Code: ${escapeHtml(p.link_value)}</div>`:""}</div></div>`).join("")}</div></div>`;
-    if(fp.length) out+=`<div><div class="growth-section-head"><h2>⭐ Featured picks</h2><span class="growth-view-all">View all →</span></div><div class="growth-feature-list">${fp.slice(0,8).map(p=>`<div class="growth-feature-row"><div style="position:relative">${p.image_url?`<img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.name||"")}">`:`<div style="width:100%;height:108px;border-radius:12px;background:#f1e7df;display:flex;align-items:center;justify-content:center;color:#a58f7f;font-weight:800">Food</div>`}</div><div class="growth-feature-info"><b class="growth-feature-name">${escapeHtml(p.name||"Product")}</b><div class="growth-feature-meta">${money(p.price)}</div></div><button class="growth-feature-add" type="button" aria-label="Add ${escapeHtml(p.name||"product")}" data-megjet-add='${encodeURIComponent(JSON.stringify({id:p.id,name:p.name,description:p.description||"",price:Number(p.price||0),image_url:p.image_url||"",vendor_id:p.vendor_id,quantity:1}))}'>+</button></div>`).join("")}</div></div>`;
+    if(fp.length) out+=`<div><div class="growth-section-head"><h2>⭐ Featured picks</h2><span class="growth-view-all">View all →</span></div><div class="growth-feature-list">${fp.slice(0,8).map(p=>`<div class="growth-feature-row"><div style="position:relative">${p.image_url?`<img src="${escapeHtml(p.image_url)}" alt="${escapeHtml(p.name||"")}">`:`<div style="width:100%;height:108px;border-radius:12px;background:#f1e7df;display:flex;align-items:center;justify-content:center;color:#a58f7f;font-weight:800">Food</div>`}</div><div class="growth-feature-info"><b class="growth-feature-name">${escapeHtml(p.name||"Product")}</b><div class="growth-feature-meta">${money(p.price)}</div></div><button class="growth-feature-add" type="button" aria-label="Add ${escapeHtml(p.name||"product")}" data-megjet-add-id="${registerMegjetCartProduct({id:p.id,name:p.name,description:p.description||"",price:Number(p.price||0),image_url:p.image_url||"",vendor_id:p.vendor_id,quantity:1})}">+</button></div>`).join("")}</div></div>`;
     if(fv.length) out+=`<div><div class="growth-section-head"><h2>🏪 Featured vendors</h2><span class="growth-view-all">View all →</span></div><div class="growth-feature-list">${fv.slice(0,8).map(v=>`<div class="growth-feature-row growth-feature-vendor">${v.image_url?`<img src="${escapeHtml(v.image_url)}" alt="${escapeHtml(v.name||"")}">`:`<div style="width:100%;height:92px;border-radius:12px;background:linear-gradient(135deg,#7b401c,#e18428);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px">☕</div>`}<div class="growth-feature-info"><b class="growth-feature-name">${escapeHtml(v.name||"Vendor")}</b><div class="growth-feature-meta">${escapeHtml(v.area||"Gazimagusa")} · ⭐ ${escapeHtml(String(v.rating??"New"))}</div></div><span class="growth-feature-arrow">›</span></div>`).join("")}</div></div>`;
     box.innerHTML=out;
   }catch(e){console.warn("Growth home unavailable",e);}
