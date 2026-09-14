@@ -1439,6 +1439,7 @@ let cart=[];
 let appliedCoupon=null;
 let vendorReviewRatings={};
 let riderReviewRating=0;
+try{const saved=JSON.parse(localStorage.getItem("megjet_cart")||"[]");if(Array.isArray(saved))cart=saved.map(p=>({...p,quantity:Math.max(1,Number(p.quantity||1))}));}catch(e){cart=[];}
 
 const $=id=>document.getElementById(id);
 const MEGJET_CURRENCY="TRY";
@@ -1454,30 +1455,27 @@ function showSetup(msg=""){
   if(cfg){$("url").value=cfg.url||"";$("key").value=cfg.key||"";}
 }
 function hideSetup(){$("setup").classList.add("hidden");}
+function cartSubtotal(){return cart.reduce((a,p)=>a+Number(p.price||0)*Math.max(1,Number(p.quantity||1)),0);}
 function renderCart(){
-  const n=cart.length;
+  const n=cart.reduce((a,p)=>a+Math.max(1,Number(p.quantity||1)),0);
   $("count").textContent=n+" item"+(n===1?"":"s");
   $("cartBadge").textContent=n;
-  $("cartItems").innerHTML=cart.map((p,i)=>
-    `<div class="row"><span><b>${escapeHtml(p.name)}</b>${p.vendor_name?`<div class="cart-vendor">${escapeHtml(p.vendor_name)}</div>`:""} <button class="secondary" style="padding:4px 8px" onclick="removeItem(${i})">×</button></span><span>${money(p.price)}</span></div>`
-  ).join("");
-  const s=cart.reduce((a,p)=>a+Number(p.price),0);
+  $("cartItems").innerHTML=cart.map((p,i)=>{const q=Math.max(1,Number(p.quantity||1));const line=Number(p.price||0)*q;return `<div class="row cart-line"><span style="min-width:0"><b>${escapeHtml(p.name)}</b>${p.vendor_name?`<div class="cart-vendor">${escapeHtml(p.vendor_name)}</div>`:""}<div style="display:flex;align-items:center;gap:6px;margin-top:7px"><button class="secondary" type="button" onclick="changeQty(${i},-1)">−</button><b>${q}</b><button class="secondary" type="button" onclick="changeQty(${i},1)">+</button><button class="secondary" type="button" onclick="removeItem(${i})">Remove</button></div></span><span>${money(line)}</span></div>`;}).join("");
+  const s=cartSubtotal();
   $("subtotal").textContent=money(s);
   if($("cartDelivery"))$("cartDelivery").textContent=money(DELIVERY);
   $("total").textContent=money(s+DELIVERY);
   $("cartTotal").textContent=money(s+DELIVERY);
-  $("checkoutBtn").classList.toggle("hidden",n===0);
-  $("cartBox").classList.toggle("hidden",n===0);
-  if(!n){$("cartBody").classList.remove("open");$("cartToggle").textContent="View Cart";}
+  $("checkoutBtn").classList.toggle("hidden",!cart.length);
+  $("cartBox").classList.toggle("hidden",!cart.length);
+  if(!cart.length){$("cartBody").classList.remove("open");$("cartToggle").textContent="View Cart";}
 }
-function saveCart(){
-  try{localStorage.setItem("megjet_cart",JSON.stringify(cart));}catch(e){}
-}
+function saveCart(){try{localStorage.setItem("megjet_cart",JSON.stringify(cart));}catch(e){}}
 function removeItem(i){cart.splice(i,1);saveCart();renderCart();}
-function add(p){cart.push({...p,quantity:Number(p.quantity||1)});saveCart();renderCart();}
-function checkoutTotals(){const subtotal=cart.reduce((a,p)=>a+Number(p.price),0);const discount=Number(appliedCoupon?.discount||0);return {subtotal,discount,total:Math.max(0,subtotal+DELIVERY-discount)};}
-function renderCheckoutTotals(){const t=checkoutTotals();if($("checkoutDiscount"))$("checkoutDiscount").textContent=money(t.discount);if($("checkoutDelivery"))$("checkoutDelivery").textContent=money(DELIVERY);if($("checkoutTotal"))$("checkoutTotal").textContent=money(t.total);}
-async function applyCouponCode(){const code=$("couponCode")?.value.trim();if(!code){appliedCoupon=null;$("couponMessage").textContent="Enter a coupon code.";renderCheckoutTotals();return;}const subtotal=cart.reduce((a,p)=>a+Number(p.price),0);try{const base=cfg.url.replace(/\/+$/,'');const rows=await fetchJson(base+"/rest/v1/coupons?select=code,discount_type,discount_value,min_order,max_discount,expires_at&code=eq."+encodeURIComponent(code.toUpperCase())+"&active=eq.true",{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}});if(!rows.length)throw new Error("Coupon is invalid or expired.");const c=rows[0];if(subtotal<Number(c.min_order||0))throw new Error("Minimum order is "+money(c.min_order)+".");const calc=await fetchJson(base+"/rest/v1/rpc/calculate_coupon_discount",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key,"Content-Type":"application/json"},body:JSON.stringify({p_code:code,p_subtotal:subtotal})});const discount=Number(calc||0);if(discount<=0)throw new Error("Coupon cannot be applied to this order.");appliedCoupon={code:String(c.code).toUpperCase(),discount};$("couponMessage").textContent="✓ Coupon applied: "+money(discount)+" off";renderCheckoutTotals();}catch(e){appliedCoupon=null;$("couponMessage").textContent="⚠️ "+e.message;renderCheckoutTotals();}}
+function changeQty(i,delta){if(!cart[i])return;cart[i].quantity=Math.max(1,Number(cart[i].quantity||1)+delta);if(cart[i].quantity<=0)cart.splice(i,1);saveCart();renderCart();}
+function add(p){const id=String(p.id);const existing=cart.find(x=>String(x.id)===id);if(existing)existing.quantity=Math.max(1,Number(existing.quantity||1)+1);else cart.push({...p,quantity:1});saveCart();renderCart();}
+function checkoutTotals(){const subtotal=cartSubtotal();const discount=Number(appliedCoupon?.discount||0);return {subtotal,discount,total:Math.max(0,subtotal+DELIVERY-discount)};}
+function renderCheckoutTotals(){const t=checkoutTotals();if($("checkoutSubtotal"))$("checkoutSubtotal").textContent=money(t.subtotal);if($("checkoutDiscount"))$("checkoutDiscount").textContent=money(t.discount);if($("checkoutDelivery"))$("checkoutDelivery").textContent=money(DELIVERY);if($("checkoutTotal"))$("checkoutTotal").textContent=money(t.total);}
 function buildStars(containerId,target){const el=$(containerId);if(!el)return;const value=Number(target.value||0);el.innerHTML=[1,2,3,4,5].map(n=>`<button type="button" class="review-star ${n<=value?"selected":""}" data-rating="${n}" aria-label="Rate ${n} out of 5">★ ${n}</button>`).join("");el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{const rating=Number(b.dataset.rating);if(containerId==="riderStars"){riderReviewRating=rating;buildStars("riderStars",{value:riderReviewRating});}}));}
 function buildVendorReviewStars(vendorId){const el=$("vendorStars_"+vendorId);if(!el)return;const value=Number(vendorReviewRatings[vendorId]||0);el.innerHTML=[1,2,3,4,5].map(n=>`<button type="button" class="review-star ${n<=value?"selected":""}" data-rating="${n}" aria-label="Rate ${n} out of 5">★ ${n}</button>`).join("");el.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{vendorReviewRatings[vendorId]=Number(b.dataset.rating);buildVendorReviewStars(vendorId);}));}
 function escapeHtml(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
@@ -1759,7 +1757,7 @@ $("placeOrder").onclick=async()=>{
   const name=$("customerName").value.trim(),phone=$("phone").value.trim(),address=$("address").value.trim();
   if(!name||!phone||!address){$("orderMessage").textContent="Please enter your name, phone and delivery address.";return;}
   const base=cfg.url.replace(/\/+$/,"");
-  const subtotal=cart.reduce((a,p)=>a+Number(p.price),0);
+  const subtotal=cartSubtotal();
   try{
     $("placeOrder").disabled=true;$("orderMessage").textContent="Sending order…";
     // Generate the order UUID in the browser so checkout does not need
@@ -1769,11 +1767,9 @@ $("placeOrder").onclick=async()=>{
     const paymentMethod=$("paymentMethod")?.value||"Cash on Delivery";
     const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1)}));
     const orderHeaders=await customerAuthHeaders();
-    await fetchJson(base+"/rest/v1/rpc/create_customer_order_account",{
-      method:"POST",
-      headers:orderHeaders,
-      body:JSON.stringify({p_order_id:orderId,p_customer_name:name,p_customer_phone:phone,p_delivery_address:address,p_payment_method:paymentMethod,p_coupon_code:appliedCoupon?.code||null,p_items:items})
-    });
+    const orderRpc=customerAuthUser?"create_customer_order_account":"create_customer_order";
+    const orderBody=customerAuthUser?{p_order_id:orderId,p_customer_name:name,p_customer_phone:phone,p_delivery_address:address,p_payment_method:paymentMethod,p_coupon_code:appliedCoupon?.code||null,p_items:items}:{p_order_id:orderId,p_customer_name:name,p_customer_phone:phone,p_delivery_address:address,p_payment_method:paymentMethod,p_coupon_code:appliedCoupon?.code||null,p_items:items};
+    await fetchJson(base+"/rest/v1/rpc/"+orderRpc,{method:"POST",headers:orderHeaders,body:JSON.stringify(orderBody)});
     const displayId=String(orderId||"").replace(/-/g,"").slice(-8).toUpperCase();
     trackedOrderId=String(orderId||"");
     localStorage.setItem("megjet_last_order_id",trackedOrderId);
@@ -4042,97 +4038,4 @@ setInterval(()=>{
   if(localStorage.getItem("megjet_access_token") && localStorage.getItem("megjet_auto_cafe5_v1")!=="done")
     megjetCafe5Install().catch(()=>{});
 },7000);
-</script>
-<!-- MEGJET CUSTOMER ORDER + BILINGUAL LAYER -->
-<style>
-  .megjet-language-toggle{display:inline-flex;align-items:center;gap:2px;padding:3px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.36);border-radius:999px;margin-left:10px;vertical-align:middle}.megjet-language-toggle button{border:0!important;background:transparent!important;color:#fff!important;padding:6px 9px!important;border-radius:999px!important;min-width:38px;font-size:12px;font-weight:900;line-height:1}.megjet-language-toggle button.active{background:#fff!important;color:#0878bd!important}.megjet-language-toggle button:focus-visible{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){.megjet-language-toggle{margin-left:6px}.megjet-language-toggle button{padding:6px 8px!important}}
-</style>
-<script>
-/* Customer-facing bilingual interface. Menu, restaurant and vendor content stay untouched. */
-(() => {
-  const LANGUAGE_KEY="megjet_customer_language";
-  let lang=localStorage.getItem(LANGUAGE_KEY)==="tr"?"tr":"en";
-  const tr={
-    "Your Cart":"Sepetiniz","View Cart":"Sepeti Gör","Hide Cart":"Sepeti Gizle","Subtotal":"Ara Toplam","Delivery":"Teslimat","Checkout":"Ödeme","Add":"Ekle","Search":"Ara","Search menu items or restaurants…":"Menü öğesi veya restoran ara…","Search food, restaurants, meals or snacks…":"Yemek, restoran, öğün veya atıştırmalık ara…","Search this menu…":"Bu menüde ara…","All restaurants":"Tüm restoranlar","No available products yet.":"Henüz ürün bulunmuyor.",
-    "Customer Details":"Müşteri Bilgileri","Delivery details":"Teslimat bilgileri","Your name":"Adınız","Full name":"Ad soyad","Phone number":"Telefon numarası","Email address":"E-posta adresi","Delivery address in Gazimagusa":"Gazimağusa teslimat adresi","Payment":"Ödeme","Cash on Delivery":"Kapıda Ödeme","Easypaisa / JazzCash on Delivery":"Teslimatta Easypaisa / JazzCash","Coupon":"Kupon","Coupon code":"Kupon kodu","Apply":"Uygula","Discount":"İndirim","Payable Total":"Ödenecek Toplam","Place order":"Sipariş ver","Sending order…":"Sipariş gönderiliyor…","Choose a saved address or enter a new one below.":"Kayıtlı bir adres seçin veya aşağıya yeni bir adres girin.","Cash on Delivery is live. Easypaisa/JazzCash can be recorded as payment methods. Live online gateway checkout requires provider API credentials.":"Kapıda ödeme aktiftir. Easypaisa/JazzCash ödeme yöntemi olarak kaydedilebilir. Canlı çevrimiçi ödeme için sağlayıcı API bilgileri gerekir.",
-    "Order placed successfully!":"Siparişiniz başarıyla alındı!","Order Status:":"Sipariş Durumu:","Pending":"Beklemede","Track My Order":"Siparişimi Takip Et","Continue Shopping":"Alışverişe Devam Et","Track Your Order":"Siparişinizi Takip Edin","Refresh":"Yenile","Items":"Ürünler","Total":"Toplam","Order number (e.g. BE424888)":"Sipariş numarası (örn. BE424888)",
-    "My Megjet Account":"Megjet Hesabım","My Account":"Hesabım","Your account, orders and quick reorders.":"Hesabınız, siparişleriniz ve hızlı tekrar siparişleriniz.","Create Account":"Hesap Oluştur","Sign In":"Giriş Yap","Sign Out":"Çıkış Yap","Sign in":"Giriş yap","Sign up":"Kayıt ol","Sign out":"Çıkış yap","Email":"E-posta","Password":"Şifre","Password (minimum 6 characters)":"Şifre (en az 6 karakter)","Forgot password?":"Şifrenizi mi unuttunuz?","Profile":"Profil","Save Profile":"Profili Kaydet","Saved Addresses":"Kayıtlı Adresler","Save home, office or event locations and choose one at checkout.":"Ev, iş veya etkinlik adreslerinizi kaydedin ve ödeme sırasında seçin.","Label (e.g. Home, Office)":"Etiket (örn. Ev, Ofis)","Full delivery address":"Tam teslimat adresi","Area (e.g. Gazimagusa)":"Bölge (örn. Gazimağusa)","Delivery phone":"Teslimat telefonu","Set as default address":"Varsayılan adres yap","My Orders":"Siparişlerim","Refresh Orders":"Siparişleri Yenile","No saved addresses yet.":"Henüz kayıtlı adres yok.","Use a saved address…":"Kayıtlı bir adres kullan…","Set Default":"Varsayılan Yap","Edit":"Düzenle","Delete":"Sil","Add Address":"Adres Ekle","Update Address":"Adresi Güncelle",
-    "Open for orders now.":"Siparişe açığız.","Store is temporarily closed.":"Mağaza geçici olarak kapalı.","Order failed:":"Sipariş başarısız:","Please enter your name, phone and delivery address.":"Lütfen adınızı, telefonunuzu ve teslimat adresinizi girin.","Enter a coupon code.":"Bir kupon kodu girin.","Coupon is invalid or expired.":"Kupon geçersiz veya süresi dolmuş.","Coupon applied:":"Kupon uygulandı:","Minimum order is ":"Minimum sipariş tutarı ","No recent order is saved on this device.":"Bu cihazda kayıtlı yakın tarihli sipariş yok.","Checking latest order status…":"Sipariş durumu kontrol ediliyor…","Last checked:":"Son kontrol:","Order not found.":"Sipariş bulunamadı.","Available items added to your cart ✓":"Uygun ürünler sepetinize eklendi ✓","Previous order added to your cart ✓":"Önceki sipariş sepetinize eklendi ✓",
-    "Featured picks":"Öne Çıkanlar","View all →":"Tümünü gör →","Restaurants":"Restoranlar","Categories":"Kategoriler","Popular":"Popüler","New":"Yeni","Bestseller":"Çok Satan","Special":"Özel","Favourite":"Favori"
-  };
-  const attributeTranslations={placeholder:tr,title:{"Search":"Ara","Cart":"Sepet"},"aria-label":tr};
-  function translateText(text){
-    if(lang!=="tr")return text;
-    const lead=(text.match(/^\s*/)||[""])[0],tail=(text.match(/\s*$/)||[""])[0],core=text.slice(lead.length,text.length-tail.length);
-    const dynamic=core.replace(/^(\\d+) items?$/,(_,n)=>n+" ürün").replace(/^Order #/,'Sipariş #').replace(/^Your order number is #/,'Sipariş numaranız #');
-    return lead+(tr[core]||dynamic)+tail;
-  }
-  function walk(root=document.body){
-    if(!root)return;
-    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode(n){return n.parentElement&&["SCRIPT","STYLE","TEXTAREA"].includes(n.parentElement.tagName)?NodeFilter.FILTER_REJECT:NodeFilter.FILTER_ACCEPT;}});
-    const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
-    nodes.forEach(n=>{const original=n.nodeValue;if(n.__megjetOriginal===undefined)n.__megjetOriginal=original;n.nodeValue=translateText(n.__megjetOriginal);});
-    root.querySelectorAll?.("[placeholder],[title],[aria-label]").forEach(el=>{["placeholder","title","aria-label"].forEach(a=>{if(!el.hasAttribute(a))return;const key="megjetOriginal"+a[0].toUpperCase()+a.slice(1);if(el.dataset[key]===undefined)el.dataset[key]=el.getAttribute(a);const original=el.dataset[key];el.setAttribute(a,lang==="tr"?(attributeTranslations[a]?.[original]||original):original);});});
-  }
-  function addToggle(){
-    const header=document.querySelector("header");if(!header||document.getElementById("megjetLanguageToggle"))return;
-    const box=document.createElement("span");box.id="megjetLanguageToggle";box.className="megjet-language-toggle";box.setAttribute("aria-label","Language");
-    box.innerHTML='<button type="button" data-lang="en">EN</button><button type="button" data-lang="tr">TR</button>';
-    box.querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
-    const brand=header.querySelector(".brand");(brand||header).appendChild(box);
-  }
-  function setLanguage(next){lang=next==="tr"?"tr":"en";localStorage.setItem(LANGUAGE_KEY,lang);document.documentElement.lang=lang;document.querySelectorAll("#megjetLanguageToggle button").forEach(b=>b.classList.toggle("active",b.dataset.lang===lang));walk();}
-  window.megjetTranslate=(s)=>lang==="tr"?(tr[s]||s):s;
-  window.megjetCustomerLanguage=()=>lang;
-  addToggle();setLanguage(lang);
-  const observer=new MutationObserver(records=>{for(const r of records){r.addedNodes.forEach(n=>{if(n.nodeType===1)walk(n);else if(n.nodeType===3){if(n.__megjetOriginal===undefined)n.__megjetOriginal=n.nodeValue;n.nodeValue=translateText(n.__megjetOriginal);}});}});
-  observer.observe(document.body,{childList:true,subtree:true});
-})();
-
-/* Replace the fragile checkout handler. The RPC remains the existing backend source of truth. */
-$("placeOrder").onclick=async()=>{
-  if(!cart.length)return;
-  const name=$("customerName").value.trim(),phone=$("phone").value.trim(),address=$("address").value.trim();
-  const say=s=>window.megjetTranslate?window.megjetTranslate(s):s;
-  if(!name||!phone||!address){$("orderMessage").textContent=say("Please enter your name, phone and delivery address.");return;}
-  const base=cfg.url.replace(/\/+$/,"");const button=$("placeOrder");
-  try{
-    button.disabled=true;$("orderMessage").textContent=say("Sending order…");
-    const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
-    const invalid=cart.filter(p=>!uuid.test(String(p?.id||"")));
-    if(invalid.length)throw new Error("Your cart contains an unavailable item. Please remove it and add it again from the menu.");
-    const compact=new Map();
-    cart.forEach(p=>{const id=String(p.id);compact.set(id,(compact.get(id)||0)+Math.max(1,Number(p.quantity)||1));});
-    const items=[...compact].map(([product_id,quantity])=>({product_id,quantity}));
-    if(!items.length)throw new Error("Your cart is empty.");
-    const orderId=crypto.randomUUID();
-    await fetchJson(base+"/rest/v1/rpc/create_customer_order_account",{method:"POST",headers:await customerAuthHeaders(),body:JSON.stringify({p_order_id:orderId,p_customer_name:name,p_customer_phone:phone,p_delivery_address:address,p_payment_method:$("paymentMethod")?.value||"Cash on Delivery",p_coupon_code:appliedCoupon?.code||null,p_items:items})},15000);
-    const displayId=String(orderId).replace(/-/g,"").slice(-8).toUpperCase();trackedOrderId=orderId;localStorage.setItem("megjet_last_order_id",trackedOrderId);localStorage.setItem("megjet_last_order_phone",phone);
-    cart=[];saveCart();renderCart();$("checkout").classList.add("hidden");$("confirmationOrderNumber").textContent=(window.megjetCustomerLanguage?.()==="tr"?"Sipariş numaranız #":"Your order number is #")+displayId;$("confirmationStatus").textContent=say("Pending");$("orderConfirmation").classList.remove("hidden");$("orderMessage").textContent="";
-    $("customerName").value=$("phone").value=$("address").value="";$("couponCode").value="";$("couponMessage").textContent="";appliedCoupon=null;renderCheckoutTotals();
-  }catch(e){const detail=String(e?.message||"Unable to place your order.");$("orderMessage").textContent=(window.megjetCustomerLanguage?.()==="tr"?"Sipariş başarısız: ":"Order failed: ")+detail;}
-  finally{button.disabled=false;}
-};
-
-/* Compatibility fallback for menu Add buttons, including older cached menu cards. */
-document.addEventListener("click",event=>{
-  const button=event.target?.closest?.("button");
-  if(!button||!button.closest(".item"))return;
-  const label=String(button.textContent||"").trim().toLowerCase();
-  if(label!=="add"&&label!=="ekle")return;
-  const before=Array.isArray(cart)?cart.length:0;
-  setTimeout(()=>{
-    if(!Array.isArray(cart)||cart.length!==before)return; // The original handler worked.
-    const card=button.closest(".item");
-    const name=card.querySelector("b")?.textContent?.trim();
-    const priceText=card.querySelector(".price")?.textContent||"";
-    const price=Number(String(priceText).replace(/[^0-9.,]/g,"").replace(",","."));
-    const vendorName=card.closest(".vendor")?.querySelector("h2")?.textContent?.trim()||"";
-    const catalogue=window.MEGJET_VENDOR_DATA?.products||[];
-    const match=catalogue.find(p=>String(p.name||"").trim()===name&&Number(p.price||0)===price&&(!vendorName||!p.vendor_name||String(p.vendor_name).trim()===vendorName));
-    if(!match){setStatus("This menu item is no longer available. Please refresh the menu.","bad");return;}
-    cart.push({id:match.id,vendor_id:match.vendor_id,vendor_name:match.vendor_name||vendorName,name:match.name,description:match.description||"",price:Number(match.price||0),quantity:1});
-    saveCart();renderCart();setStatus("Item added to your cart ✓","ok");
-  },0);
-},true);
 </script>
