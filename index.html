@@ -564,11 +564,56 @@ button,.vendor-view{min-height:42px}
 }
 
 /* MEGJET CART FINAL FIX — always visible after adding an item */
-#cartBox.megjet-cart-fixed{position:fixed!important;left:50%!important;transform:translateX(-50%)!important;bottom:12px!important;top:auto!important;width:min(760px,calc(100% - 18px))!important;z-index:2147483000!important;margin:0!important;}
+/* MEGJET CART — MOBILE BOTTOM SHEET */
+#cartBox.megjet-cart-fixed{
+  position:fixed!important;
+  left:50%!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:12px!important;
+  transform:translateX(-50%)!important;
+  width:min(760px,calc(100vw - 20px))!important;
+  max-width:calc(100vw - 20px)!important;
+  box-sizing:border-box!important;
+  margin:0!important;
+  z-index:2147483000!important;
+}
 #cartBox.megjet-cart-fixed.hidden{display:none!important;}
-#cartBox.megjet-cart-fixed .cart-body.open{display:block!important;max-height:55vh!important;overflow:auto!important;}
-#cartBox.megjet-cart-fixed .cart-head{cursor:pointer;}
-@media(max-width:600px){#cartBox.megjet-cart-fixed{bottom:8px!important;width:calc(100% - 14px)!important;border-radius:18px!important;}#cartBox.megjet-cart-fixed .cart-body.open{max-height:52vh!important;}}
+#cartBox.megjet-cart-fixed .cart-head{min-height:42px;cursor:pointer;}
+#cartBox.megjet-cart-fixed .cart-body.open{
+  display:block!important;
+  max-height:min(52vh,460px)!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  -webkit-overflow-scrolling:touch!important;
+}
+#cartBox.megjet-cart-fixed .cart-items{max-width:100%;}
+#cartBox.megjet-cart-fixed .row{min-width:0;}
+@media(max-width:600px){
+  #cartBox.megjet-cart-fixed{
+    left:6px!important;
+    right:6px!important;
+    bottom:max(8px,env(safe-area-inset-bottom))!important;
+    transform:none!important;
+    width:auto!important;
+    max-width:none!important;
+    border-radius:16px!important;
+    padding:8px 9px!important;
+  }
+  #cartBox.megjet-cart-fixed .cart-head{gap:7px!important;min-height:40px!important;}
+  #cartBox.megjet-cart-fixed .cart-summary{gap:7px!important;}
+  #cartBox.megjet-cart-fixed .cart-label{font-size:13px!important;}
+  #cartBox.megjet-cart-fixed #count{font-size:11px!important;}
+  #cartBox.megjet-cart-fixed .cart-badge{width:28px!important;height:28px!important;font-size:12px!important;}
+  #cartBox.megjet-cart-fixed .cart-header-subtotal{display:none!important;}
+  #cartBox.megjet-cart-fixed .cart-head-actions{margin-left:auto!important;}
+  #cartBox.megjet-cart-fixed .cart-toggle{padding:8px 10px!important;font-size:12px!important;white-space:nowrap!important;}
+  #cartBox.megjet-cart-fixed .cart-body.open{max-height:45vh!important;padding-top:9px!important;margin-top:8px!important;}
+  #cartBox.megjet-cart-fixed .cart-body .row{font-size:13px!important;gap:8px!important;padding:7px 0!important;}
+  #cartBox.megjet-cart-fixed .cart-body .total{font-size:15px!important;}
+  #cartBox.megjet-cart-fixed .cart-actions button{width:100%!important;min-height:42px!important;}
+}
+
 </style>
 
 <script>
@@ -1515,7 +1560,7 @@ window.megjetAddDirect=function(token){
       cartBox.style.display='block';
       if(cartBody){cartBody.classList.add('open'); cartBody.style.display='block';}
       if(cartToggle)cartToggle.textContent='Hide Cart';
-      setTimeout(()=>cartBox.scrollIntoView({behavior:'smooth',block:'end'}),30);
+      
     }
     const status=document.getElementById('status');
     if(status){status.textContent='✓ Added to cart';status.className='notice ok';}
@@ -1545,7 +1590,6 @@ document.addEventListener('click',function(e){
       cartBox.style.display='block';
       const cartBody=document.getElementById('cartBody');
       if(cartBody)cartBody.classList.add('open');
-      cartBox.scrollIntoView({behavior:'smooth',block:'end'});
     }
   }catch(err){
     console.error('Megjet cart add failed:',err);
@@ -1912,7 +1956,6 @@ async function reorderCustomerOrder(idx){
     });
     saveCart();
     renderCart();
-    $("cartBox")?.scrollIntoView({behavior:"smooth",block:"start"});
     setStatus(missing.length?"Available items added to your cart ✓ Some old items are no longer available.":"Previous order added to your cart ✓","ok");
   }catch(e){
     alert("Could not prepare this reorder: "+e.message);
