@@ -46,7 +46,7 @@ button.secondary{background:#eee;color:#25170f}
 .hidden{display:none}
 .small{font-size:12px;word-break:break-all;color:#786b62;margin-top:8px}
 
-.product-image-admin{width:72px;height:72px;min-width:72px;max-width:72px;object-fit:cover;display:block;border-radius:14px;border:1px solid #eadfd6;background:#f5eee8;box-shadow:0 2px 8px rgba(60,35,20,.08)}
+.product-image-admin{width:72px;height:72px;min-width:72px;max-width:72px;object-fit:contain;display:block;border-radius:14px;border:1px solid #eadfd6;background:#fff;box-shadow:0 2px 8px rgba(60,35,20,.08);padding:5px}.menu-photo-admin{display:flex;align-items:center;gap:9px;margin-top:9px;flex-wrap:wrap}.menu-photo-admin .menu-photo-thumb{width:54px;height:54px;object-fit:contain;border-radius:11px;border:1px solid #eadfd6;background:#fff;padding:3px}.menu-photo-admin label{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid #cfe7f3;border-radius:10px;background:#eef9fd;color:#0b6f9f;font-weight:800;font-size:12px;cursor:pointer}.menu-photo-admin input[type=file]{display:none}.menu-photo-status{font-size:12px;color:#786b62}
 .item .item-info{min-width:0;flex:1}.item .item-info>div{min-width:0}.item .item-info b{display:block;font-size:17px;line-height:1.2;margin-bottom:3px}.item .item-info .muted{font-size:12px;line-height:1.35}.item .item-info .price{font-size:16px;margin-top:4px}
 @media(max-width:600px){.product-image-admin{width:68px;height:68px;min-width:68px;max-width:68px;border-radius:12px}.item .item-info b{font-size:16px}}
 .menu-admin{margin-top:18px;padding-top:18px;border-top:1px solid #eadfd6}
@@ -2741,19 +2741,56 @@ function renderAdminMenu(){
   $("menuList").innerHTML=adminMenuCache.map(p=>{
     const vendor=adminVendorsCache.find(v=>String(v.id)===String(p.vendor_id));
     const available=p.available!==false;
+    const pid=escapeJsString(p.id);
+    const photo=p.image_url||"";
+    const photoHtml=photo
+      ? `<img class="menu-photo-thumb" src="${escapeHtml(photo)}" alt="${escapeHtml(p.name||"Product photo")}">`
+      : `<div class="menu-photo-thumb" style="display:flex;align-items:center;justify-content:center;font-size:22px">🍽️</div>`;
     return `<div class="menu-item-admin">
       <div class="row">
-        <div style="min-width:0"><b>${escapeHtml(p.name||"Unnamed item")}</b><div class="muted">${escapeHtml(p.description||"No description")}</div></div>
+        <div style="min-width:0;flex:1"><b>${escapeHtml(p.name||"Unnamed item")}</b><div class="muted">${escapeHtml(p.description||"No description")}</div></div>
         <div style="text-align:right"><b>${money(p.price)}</b><br><span class="${available?"pill-available":"pill-unavailable"}">${available?"Available":"Unavailable"}</span></div>
       </div>
       <div class="muted"><b>Vendor:</b> ${escapeHtml(vendor?.name||"Vendor not found")}</div><div class="menu-id">Item ID: ${escapeHtml(String(p.id))}</div>
+      <div class="menu-photo-admin">
+        ${photoHtml}
+        <label>📷 ${photo?"Change Photo":"Upload Photo"}<input type="file" accept="image/png,image/jpeg,image/webp,image/*" onchange="uploadAdminMenuPhoto('${pid}',this)"></label>
+        <span id="menu-photo-status-${escapeHtml(String(p.id))}" class="menu-photo-status">${photo?"Photo added":"No photo yet"}</span>
+      </div>
       <div class="menu-actions">
-        <button type="button" onclick="editMenuItem('${String(p.id).replaceAll("'","\\'")}')">Edit</button>
-        <button type="button" class="secondary" onclick="toggleMenuItem('${String(p.id).replaceAll("'","\\'")}',${available})">${available?"Mark Sold Out":"Make Available"}</button>
-        <button type="button" class="secondary" onclick="deleteMenuItem('${String(p.id).replaceAll("'","\\'")}')">Delete</button>
+        <button type="button" onclick="editMenuItem('${pid}')">Edit</button>
+        <button type="button" class="secondary" onclick="toggleMenuItem('${pid}',${available})">${available?"Mark Sold Out":"Make Available"}</button>
+        <button type="button" class="secondary" onclick="deleteMenuItem('${pid}')">Delete</button>
       </div>
     </div>`;
   }).join("");
+}
+
+async function uploadAdminMenuPhoto(productId,input){
+  const file=input?.files?.[0];
+  if(!file)return;
+  const status=$("menu-photo-status-"+String(productId));
+  try{
+    if(!/^image\//i.test(file.type))throw new Error("Please choose an image file.");
+    if(file.size>5*1024*1024)throw new Error("Photo must be 5 MB or smaller.");
+    if(status)status.textContent="Uploading…";
+    const token=localStorage.getItem("megjet_access_token");
+    if(!token)throw new Error("Admin sign-in required.");
+    const safeName=file.name.toLowerCase().replace(/[^a-z0-9._-]/g,"-");
+    const path=String(productId)+"/"+Date.now()+"-"+safeName;
+    await fetchJson(cfg.url.replace(/\/+$/,'')+"/storage/v1/object/product-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type||"image/jpeg","x-upsert":"true"},body:file},60000);
+    const imageUrl=cfg.url.replace(/\/+$/,'')+"/storage/v1/object/public/product-images/"+path.split('/').map(encodeURIComponent).join('/');
+    await adminRequest("/rest/v1/rpc/admin_set_product_image",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:String(productId),p_image_url:imageUrl})});
+    const cached=adminMenuCache.find(x=>String(x.id)===String(productId));
+    if(cached)cached.image_url=imageUrl;
+    renderAdminMenu();
+    await load();
+  }catch(e){
+    if(status)status.textContent="Upload failed: "+e.message;
+    else alert("Could not upload photo: "+e.message);
+  }finally{
+    if(input)input.value="";
+  }
 }
 
 function resetVendorForm(){
