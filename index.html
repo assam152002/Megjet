@@ -717,6 +717,18 @@ function megjetSupportHTML(orderId=""){
 .rider-step{font-size:10px;text-align:center;padding:7px 4px;border-radius:9px;background:#edf6fa;color:#648095;font-weight:800}
 .rider-step.done{background:#e5f8ee;color:#245b35}.rider-step.current{background:#dff4ff;color:#075b82}
 @media(max-width:600px){.rider-stepper{grid-template-columns:repeat(2,1fr)}}
+
+/* ===== PHASE 2 COMPLETE ===== */
+.phase2-global-search{margin-top:14px;padding:14px;border:1px solid #eadfd6;border-radius:16px;background:#fff}
+.phase2-global-search .gs-row{display:flex;gap:8px;flex-wrap:wrap}
+.phase2-global-search input{flex:1;min-width:210px;margin:0}
+.phase2-results{margin-top:10px;display:grid;gap:8px}
+.phase2-result{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px;border:1px solid #eee2d8;border-radius:12px;background:#fffaf5}
+.phase2-result-main{min-width:0}.phase2-result-main b{display:block}.phase2-result-main .muted{font-size:12px}
+.phase2-type{font-size:10px;font-weight:900;padding:4px 7px;border-radius:999px;background:#edf6fa;white-space:nowrap}
+.phase2-prep-presets{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}.phase2-prep-presets button{padding:7px 9px;font-size:12px}
+@media(max-width:600px){.phase2-result{align-items:flex-start;flex-direction:column}.phase2-result button{width:100%}}
+
 </style>
 
 </head>
@@ -1061,6 +1073,17 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
         <button id="newOrderAlertRefresh" type="button">View New Orders</button>
       </div>
       <div id="adminPreloadStatus" class="muted" style="margin:10px 0">⚡ Loading Admin data in parallel…</div>
+
+      <div class="phase2-global-search">
+        <h3 style="margin:0 0 5px">🔎 Global Search</h3>
+        <div class="muted">Search customers, orders, vendors, riders and menu items from one place.</div>
+        <div class="gs-row" style="margin-top:10px">
+          <input id="phase2GlobalSearch" type="search" placeholder="Search name, phone, order #, vendor, rider or menu item…" autocomplete="off">
+          <button id="phase2GlobalSearchBtn" type="button">Search</button>
+          <button id="phase2GlobalSearchClear" class="secondary" type="button">Clear</button>
+        </div>
+        <div id="phase2GlobalSearchResults" class="phase2-results"><div class="muted">Type something to search.</div></div>
+      </div>
           <div class="notification-controls">
         <button id="enableNotifications" class="secondary" type="button">🔔 Enable Notifications</button>
         <span id="notificationStatus" class="muted">New orders will be checked automatically.</span>
@@ -3835,6 +3858,38 @@ $("adminSearch").oninput=renderAdminOrders;
 $("adminClearFilters").onclick=()=>{$("adminSearch").value="";$("adminStatusFilter").value="all";renderAdminOrders();};
 
 
+// ===== PHASE 2: ADMIN GLOBAL SEARCH =====
+async function phase2GlobalSearch(){
+  const q=String($('phase2GlobalSearch')?.value||'').trim().toLowerCase();
+  const box=$('phase2GlobalSearchResults');
+  if(!box)return;
+  if(!q){box.innerHTML='<div class="muted">Type something to search.</div>';return;}
+  box.innerHTML='<div class="muted">Searching…</div>';
+  try{
+    const esc=encodeURIComponent;
+    const like=encodeURIComponent('*'+q+'*');
+    const results=[];
+    const [vendors,riders,products,orders]=await Promise.all([
+      adminRequest('/rest/v1/vendors?select=id,name,area,address,phone,active&order=name&limit=1000'),
+      adminRequest('/rest/v1/riders?select=id,name,phone,active,available&order=name&limit=1000'),
+      adminRequest('/rest/v1/products?select=id,vendor_id,name,price,available&order=name&limit=1000'),
+      adminRequest('/rest/v1/orders?select=id,customer_name,customer_phone,delivery_address,status,total,created_at&order=created_at.desc&limit=1000')
+    ]);
+    (vendors||[]).forEach(v=>{const hay=[v.name,v.area,v.address,v.phone].join(' ').toLowerCase();if(hay.includes(q))results.push({type:'Vendor',title:v.name||'Vendor',meta:[v.area,v.phone,v.active===false?'Inactive':'Active'].filter(Boolean).join(' • '),action:`document.querySelector('[data-admin-tab="vendors"]')?.click()`});});
+    (riders||[]).forEach(r=>{const hay=[r.name,r.phone].join(' ').toLowerCase();if(hay.includes(q))results.push({type:'Rider',title:r.name||'Rider',meta:[r.phone,r.active===false?'Inactive':(r.available===false?'Offline':'Available')].filter(Boolean).join(' • '),action:`document.querySelector('[data-admin-tab="riders"]')?.click()`});});
+    (products||[]).forEach(p=>{const hay=[p.name,p.id,p.vendor_id].join(' ').toLowerCase();if(hay.includes(q))results.push({type:'Menu',title:p.name||'Menu item',meta:`${money(p.price||0)} • ${p.available===false?'Sold out':'Available'}`,action:`document.querySelector('[data-admin-tab="menu"]')?.click()`});});
+    (orders||[]).forEach(o=>{const hay=[o.id,o.customer_name,o.customer_phone,o.delivery_address,o.status].join(' ').toLowerCase();if(hay.includes(q))results.push({type:'Order',title:'#'+displayOrderId(o.id)+' — '+(o.customer_name||'Customer'),meta:[o.customer_phone,o.status,money(o.total||0)].filter(Boolean).join(' • '),action:`openAdminOrdersWithFilter('${String(o.status||'all').replace(/'/g,"\\'")}')`});});
+    const limited=results.slice(0,80);
+    box.innerHTML=limited.length?limited.map(r=>`<div class="phase2-result"><div class="phase2-result-main"><b>${escapeHtml(r.title)}</b><div class="muted">${escapeHtml(r.meta||'')}</div></div><div style="display:flex;gap:6px;align-items:center"><span class="phase2-type">${escapeHtml(r.type)}</span><button class="secondary" type="button" onclick="${r.action}">Open</button></div></div>`).join(''):`<div class="muted">No matches found.</div>`;
+  }catch(e){box.innerHTML='<div class="muted">Search failed: '+escapeHtml(e.message||'Unknown error')+'</div>';}
+}
+$('phase2GlobalSearchBtn')?.addEventListener('click',phase2GlobalSearch);
+$('phase2GlobalSearch')?.addEventListener('keydown',e=>{if(e.key==='Enter')phase2GlobalSearch();});
+$('phase2GlobalSearchClear')?.addEventListener('click',()=>{$('phase2GlobalSearch').value='';$('phase2GlobalSearchResults').innerHTML='<div class="muted">Type something to search.</div>';});
+$('phase2GlobalSearch')?.addEventListener('input',()=>{if(!$('phase2GlobalSearch').value.trim())$('phase2GlobalSearchResults').innerHTML='<div class="muted">Type something to search.</div>';});
+
+document.addEventListener('click',e=>{const b=e.target.closest('[data-prep-preset]');if(b&&$('vendorPrep'))$('vendorPrep').value=b.dataset.prepPreset;});
+
 function renderAdminOverview(){
   const orders=adminOrdersCache||[];
   const today=orders.filter(o=>isTodayCyprus(o.created_at));
@@ -4500,3 +4555,5 @@ setInterval(()=>{
 })();
 
 </script>
+
+<script>window.MEGJET_PHASE2_COMPLETE=true;</script>
