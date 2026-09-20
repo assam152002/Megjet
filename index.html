@@ -122,7 +122,7 @@ button.secondary{background:#eee;color:#25170f}
 @media(max-width:600px){.vendor-form-grid{grid-template-columns:1fr}.vendor-form-grid .full{grid-column:auto}}
 
 
-.vendor-menu-panel{margin-top:12px;padding:12px;border-top:1px solid #eee;background:#fffaf5;border-radius:12px}.vendor-menu-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.vendor-menu-list{display:grid;gap:8px;margin-top:10px}.vendor-menu-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px;background:#fff;border:1px solid #eadfd6;border-radius:11px}.vendor-menu-row .menu-actions{margin-top:0}.vendor-menu-empty{padding:8px 0}.vendor-menu-form{margin-top:10px;padding:10px;background:#fff;border:1px solid #eadfd6;border-radius:11px}.vendor-menu-form-grid{display:grid;grid-template-columns:1fr 110px;gap:8px}.vendor-menu-form-grid .full{grid-column:1/-1}.vendor-menu-form textarea{margin:0}.vendor-menu-form input{margin:0}.vendor-menu-form select{width:100%;padding:13px;border:1px solid #ddd;border-radius:11px;font:inherit}.vendor-menu-form-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.vendor-menu-form-actions button{padding:9px 11px;font-size:13px}.vendor-menu-open{margin-top:9px;width:100%}@media(max-width:600px){.vendor-menu-form-grid{grid-template-columns:1fr}.vendor-menu-form-grid .full{grid-column:auto}}
+.vendor-photo-box{display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap}.vendor-photo-thumb{width:58px;height:58px;object-fit:contain;border-radius:11px;border:1px solid #d8ebf3;background:#fff;padding:4px}.vendor-photo-upload{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border:1px solid #cfe7f3;border-radius:10px;background:#eef9fd;color:#0b6f9f;font-weight:800;font-size:12px;cursor:pointer}.vendor-photo-upload input[type=file]{display:none}.vendor-photo-status{font-size:11px;color:#6f8490}.vendor-menu-search{margin-top:10px;display:flex;gap:8px;align-items:center}.vendor-menu-search input{margin:0;flex:1}.vendor-menu-search .small{white-space:nowrap}.vendor-menu-row{align-items:flex-start!important}.vendor-menu-row .vendor-menu-main{min-width:0;flex:1}.vendor-menu-row .menu-actions{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}.vendor-menu-row .menu-actions button{white-space:nowrap}.vendor-menu-panel{margin-top:12px;padding:12px;border-top:1px solid #eee;background:#fffaf5;border-radius:12px}.vendor-menu-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.vendor-menu-list{display:grid;gap:8px;margin-top:10px}.vendor-menu-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px;background:#fff;border:1px solid #eadfd6;border-radius:11px}.vendor-menu-row .menu-actions{margin-top:0}.vendor-menu-empty{padding:8px 0}.vendor-menu-form{margin-top:10px;padding:10px;background:#fff;border:1px solid #eadfd6;border-radius:11px}.vendor-menu-form-grid{display:grid;grid-template-columns:1fr 110px;gap:8px}.vendor-menu-form-grid .full{grid-column:1/-1}.vendor-menu-form textarea{margin:0}.vendor-menu-form input{margin:0}.vendor-menu-form select{width:100%;padding:13px;border:1px solid #ddd;border-radius:11px;font:inherit}.vendor-menu-form-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:8px}.vendor-menu-form-actions button{padding:9px 11px;font-size:13px}.vendor-menu-open{margin-top:9px;width:100%}@media(max-width:600px){.vendor-menu-form-grid{grid-template-columns:1fr}.vendor-menu-form-grid .full{grid-column:auto}}
 .sales-dashboard{margin-top:18px;padding-top:18px;border-top:1px solid #eadfd6}
 .rider-assignment{margin-top:12px;padding-top:12px;border-top:1px solid #eee}
 .rider-assignment-box{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -929,7 +929,8 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
       <div id="vendorStats" class="vendor-stat-grid"></div>
       <div id="vendorProfileCard" class="feature-panel" style="margin-top:12px"></div>
       <div id="vendorMenuManager" class="feature-panel" style="margin-top:12px">
-        <div class="vendor-menu-head"><div><h3 style="margin:0">🍵 My Menu</h3><div class="muted">Add items, change prices and mark items available or sold out.</div></div><button id="vendorMenuAddBtn" type="button">+ Add Item</button></div>
+        <div class="vendor-menu-head"><div><h3 style="margin:0">🍵 My Menu</h3><div class="muted">Search any of your menu items, then upload or change its photo.</div></div><button id="vendorMenuAddBtn" type="button">+ Add Item</button></div>
+        <div class="vendor-menu-search"><input id="vendorMenuSearch" type="search" placeholder="🔎 Search your menu item…" autocomplete="off"><span id="vendorMenuSearchCount" class="small muted"></span></div>
         <div id="vendorMenuFormHost"></div>
         <div id="vendorMenuList" class="vendor-menu-list"><div class="muted">Loading menu…</div></div>
       </div>
@@ -2485,11 +2486,73 @@ function renderVendorDashboard(){
 
 let vendorMenuCache=[];let vendorMenuEditingId=null;
 function vendorMenuNotice(msg,ok=false){const el=$("vendorPortalNotice");if(!el)return;el.textContent=msg;el.style.color=ok?"#245b35":"";el.classList.add("show");setTimeout(()=>el.classList.remove("show"),5000);}
-function renderVendorMenu(){const box=$("vendorMenuList");if(!box)return;if(!vendorMenuCache.length){box.innerHTML='<div class="muted">No menu items yet. Add your first item.</div>';return;}box.innerHTML=vendorMenuCache.map(p=>`<div class="vendor-menu-row"><div><b>${escapeHtml(p.name||"Item")}</b><div class="muted">${escapeHtml(p.description||"")}</div><div class="small">${money(p.price)} • ${p.available!==false?'Available':'Sold Out'}</div></div><div class="menu-actions"><button type="button" class="secondary" onclick="editVendorPortalMenu('${escapeJsString(p.id)}')">Edit</button><button type="button" class="secondary" onclick="toggleVendorPortalMenu('${escapeJsString(p.id)}',${p.available!==false})">${p.available!==false?'Sold Out':'Available'}</button><button type="button" class="danger" onclick="deleteVendorPortalMenu('${escapeJsString(p.id)}')">Delete</button></div></div>`).join('');}
+function renderVendorMenu(){
+  const box=$("vendorMenuList"); if(!box)return;
+  const search=($("vendorMenuSearch")?.value||"").trim().toLowerCase();
+  if(!vendorMenuCache.length){box.innerHTML='<div class="muted">No menu items yet. Add your first item.</div>';if($("vendorMenuSearchCount"))$("vendorMenuSearchCount").textContent="";return;}
+  const items=vendorMenuCache.filter(p=>!search || [p.name,p.description].some(v=>String(v||"").toLowerCase().includes(search)));
+  if($("vendorMenuSearchCount"))$("vendorMenuSearchCount").textContent=search?`${items.length} matching item${items.length===1?'':'s'}`:`${vendorMenuCache.length} item${vendorMenuCache.length===1?'':'s'}`;
+  if(!items.length){box.innerHTML='<div class="muted">No menu item matches your search.</div>';return;}
+  box.innerHTML=items.map(p=>{
+    const photo=p.image_url||""; const pid=escapeJsString(p.id);
+    const photoHtml=photo?`<img class="vendor-photo-thumb" src="${escapeHtml(photo)}" alt="${escapeHtml(p.name||"Item")} photo">`:`<div class="vendor-photo-thumb" style="display:flex;align-items:center;justify-content:center;font-size:22px">🍽️</div>`;
+    return `<div class="vendor-menu-row">
+      <div class="vendor-menu-main">
+        <b>${escapeHtml(p.name||"Item")}</b>
+        <div class="muted">${escapeHtml(p.description||"")}</div>
+        <div class="small">${money(p.price)} • ${p.available!==false?'Available':'Sold Out'}</div>
+        <div class="vendor-photo-box">${photoHtml}<label class="vendor-photo-upload">📷 ${photo?'Change Photo':'Upload Photo'}<input type="file" accept="image/png,image/jpeg,image/webp,image/*" onchange="uploadVendorMenuPhoto('${pid}',this)"></label><span id="vendor-photo-status-${escapeHtml(String(p.id))}" class="vendor-photo-status">${photo?'Photo added':'No photo yet'}</span></div>
+      </div>
+      <div class="menu-actions"><button type="button" class="secondary" onclick="editVendorPortalMenu('${pid}')">Edit</button><button type="button" class="secondary" onclick="toggleVendorPortalMenu('${pid}',${p.available!==false})">${p.available!==false?'Sold Out':'Available'}</button><button type="button" class="danger" onclick="deleteVendorPortalMenu('${pid}')">Delete</button></div>
+    </div>`;
+  }).join('');
+}
 function showVendorPortalMenuForm(product=null){vendorMenuEditingId=product?.id||null;const host=$("vendorMenuFormHost");if(!host)return;host.innerHTML=`<div class="vendor-menu-form"><div class="vendor-menu-form-grid"><div class="full"><input id="vpMenuName" placeholder="Item name" value="${escapeHtml(product?.name||"")}"></div><div class="full"><textarea id="vpMenuDescription" rows="2" placeholder="Description">${escapeHtml(product?.description||"")}</textarea></div><div><input id="vpMenuPrice" type="number" min="0" step="1" placeholder="Price (₺)" value="${escapeHtml(product?.price??"")}"></div><div><select id="vpMenuAvailable"><option value="true" ${product?.available!==false?'selected':''}>Available</option><option value="false" ${product?.available===false?'selected':''}>Sold Out</option></select></div></div><div class="vendor-menu-form-actions"><button type="button" onclick="saveVendorPortalMenu()">${product?'Save Changes':'Add Item'}</button><button type="button" class="secondary" onclick="cancelVendorPortalMenuForm()">Cancel</button></div><div id="vpMenuMessage" class="small"></div></div>`;$("vpMenuName")?.focus();}
 function cancelVendorPortalMenuForm(){vendorMenuEditingId=null;if($("vendorMenuFormHost"))$("vendorMenuFormHost").innerHTML="";}
 function editVendorPortalMenu(id){const p=vendorMenuCache.find(x=>String(x.id)===String(id));if(p)showVendorPortalMenuForm(p);}
 async function loadVendorMenu(){try{const token=localStorage.getItem('megjet_vendor_access_token');if(!token||!vendorProfile?.id)return;vendorMenuCache=await vendorRequest('/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&vendor_id=eq.'+encodeURIComponent(vendorProfile.id)+'&order=name');renderVendorMenu();}catch(e){if($("vendorMenuList"))$("vendorMenuList").innerHTML='<div class="muted">Could not load menu: '+escapeHtml(e.message)+'</div>';}}
+async function uploadVendorMenuPhoto(productId,input){
+  const file=input?.files?.[0]; if(!file)return;
+  const status=$("vendor-photo-status-"+String(productId));
+  try{
+    if(!/^image\//i.test(file.type))throw new Error("Please choose an image file.");
+    if(file.size>10*1024*1024)throw new Error("Photo must be 10 MB or smaller.");
+    if(status)status.textContent="Preparing photo…";
+    const dataUrl=await compressVendorMenuPhoto(file);
+    if(status)status.textContent="Saving photo…";
+    await vendorRequest('/rest/v1/products?id=eq.'+encodeURIComponent(productId),{method:'PATCH',headers:{'Prefer':'return=minimal'},body:JSON.stringify({image_url:dataUrl})});
+    const cached=vendorMenuCache.find(x=>String(x.id)===String(productId));
+    if(cached)cached.image_url=dataUrl;
+    renderVendorMenu();
+    vendorPortalNotice('Photo saved for the menu item ✓');
+  }catch(e){
+    if(status)status.textContent='Upload failed: '+e.message;
+    else alert('Could not upload photo: '+e.message);
+  }finally{if(input)input.value='';}
+}
+function compressVendorMenuPhoto(file){
+  return new Promise((resolve,reject)=>{
+    const reader=new FileReader();
+    reader.onerror=()=>reject(new Error('Could not read the photo.'));
+    reader.onload=()=>{
+      const img=new Image();
+      img.onerror=()=>reject(new Error('Could not process the photo.'));
+      img.onload=()=>{
+        const max=900,scale=Math.min(1,max/Math.max(img.naturalWidth||img.width,img.naturalHeight||img.height));
+        const w=Math.max(1,Math.round((img.naturalWidth||img.width)*scale)),h=Math.max(1,Math.round((img.naturalHeight||img.height)*scale));
+        const canvas=document.createElement('canvas');canvas.width=w;canvas.height=h;
+        const ctx=canvas.getContext('2d');ctx.fillStyle='#ffffff';ctx.fillRect(0,0,w,h);ctx.drawImage(img,0,0,w,h);
+        let quality=.82; let out=canvas.toDataURL('image/webp',quality);
+        while(out.length>650000 && quality>.55){quality-=.07;out=canvas.toDataURL('image/webp',quality);}
+        if(out.length>850000){const max2=700,scale2=Math.min(1,max2/Math.max(w,h));canvas.width=Math.max(1,Math.round(w*scale2));canvas.height=Math.max(1,Math.round(h*scale2));const c2=canvas.getContext('2d');c2.fillStyle='#fff';c2.fillRect(0,0,canvas.width,canvas.height);c2.drawImage(img,0,0,canvas.width,canvas.height);out=canvas.toDataURL('image/webp',.68);}
+        resolve(out);
+      };
+      img.src=reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
 async function saveVendorPortalMenu(){const msg=$("vpMenuMessage"),name=$("vpMenuName")?.value.trim(),description=$("vpMenuDescription")?.value.trim(),price=Number($("vpMenuPrice")?.value),available=$("vpMenuAvailable")?.value!=="false";if(!name){if(msg)msg.textContent="Item name is required.";return;}if(!Number.isFinite(price)||price<0){if(msg)msg.textContent="Enter a valid price.";return;}try{if(msg)msg.textContent="Saving…";await vendorRequest('/rest/v1/rpc/vendor_save_product',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:vendorMenuEditingId||null,p_name:name,p_description:description,p_price:price,p_available:available})});cancelVendorPortalMenuForm();await loadVendorMenu();vendorPortalNotice('Menu updated successfully ✓');}catch(e){if(msg)msg.textContent='Could not save item: '+e.message;}}
 async function toggleVendorPortalMenu(id,current){try{await vendorRequest('/rest/v1/rpc/vendor_set_product_available',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:id,p_available:!current})});await loadVendorMenu();}catch(e){alert('Could not update item: '+e.message);}}
 async function deleteVendorPortalMenu(id){const p=vendorMenuCache.find(x=>String(x.id)===String(id));if(!p||!confirm('Delete "'+(p.name||'this item')+'"?'))return;try{await vendorRequest('/rest/v1/rpc/vendor_delete_product',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:id})});await loadVendorMenu();}catch(e){alert('Could not delete item: '+e.message);}}
@@ -3717,6 +3780,7 @@ $("riderLogin").onclick=riderLogin;
 $("riderRefresh").onclick=loadRiderDashboard;
 $("riderLogout").onclick=()=>{stopRiderLocationSharing();localStorage.removeItem("megjet_rider_access_token");riderProfile=null;$("riderPanel").classList.add("hidden");$("riderAuth").classList.remove("hidden");$("riderAuthMessage").textContent="Signed out.";};
 $("vendorRefresh").onclick=loadVendorDashboard;
+if($("vendorMenuSearch")) $("vendorMenuSearch").addEventListener("input",renderVendorMenu);
 if($("vendorStatusFilter")) $("vendorStatusFilter").onchange=renderVendorDashboard;
 $("vendorLogout").onclick=()=>{localStorage.removeItem("megjet_vendor_access_token");vendorProfile=null;$("vendorPanel").classList.add("hidden");$("vendorAuth").classList.remove("hidden");$("vendorAuthMessage").textContent="Signed out.";};
 $("adminLogin").onclick=adminLogin;
