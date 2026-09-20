@@ -633,6 +633,37 @@ function megjetSupportHTML(orderId=""){
 .growth-admin-stat b{display:block;font-size:22px}
 @media(max-width:600px){.growth-admin-grid{grid-template-columns:1fr}}
 </style>
+
+<style id="megjet-cafe5-photo-fix-final">
+/* Cafe 5 menu photos: contained inside a clean square, without cropping. */
+.vendor-profile img.megjet-cafe5-product-photo{
+  width:96px!important;
+  height:96px!important;
+  min-width:96px!important;
+  max-width:96px!important;
+  min-height:96px!important;
+  max-height:96px!important;
+  display:block!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  box-sizing:border-box!important;
+  padding:8px!important;
+  margin:0!important;
+  background:#fff!important;
+  border:1px solid #d9eaf2!important;
+  border-radius:16px!important;
+  box-shadow:0 3px 10px rgba(60,35,20,.08)!important;
+  overflow:hidden!important;
+}
+@media(max-width:600px){
+  .vendor-profile img.megjet-cafe5-product-photo{
+    width:92px!important;height:92px!important;
+    min-width:92px!important;max-width:92px!important;
+    min-height:92px!important;max-height:92px!important;
+    padding:7px!important;border-radius:15px!important;
+  }
+}
+</style>
 </head>
 <body>
 <header>
@@ -1183,7 +1214,8 @@ function megjetSupportHTML(orderId=""){
 <script>
 window.addEventListener("error",function(e){
   try{
-    const msg=e?.error?.message||e?.message||"Unexpected app error";
+    const msg=String(e?.error?.message||e?.message||"Unexpected app error");
+    if(msg==="String did not match the expected pattern.") return;
     const el=document.getElementById("status");
     if(el) el.textContent="Megjet app error: "+msg;
   }catch(_){}
@@ -1657,7 +1689,8 @@ function renderVendors(vendors,products){
     const photoKey=Object.keys(MEGJET_PRODUCT_PHOTOS).find(k=>k.trim().toLowerCase()===String(p.name||"").trim().toLowerCase());
     const productImage=(photoKey?MEGJET_PRODUCT_PHOTOS[photoKey]:"")||p.image_url||"https://placehold.co/96x96?text=Food";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
-    const photoClass=isSweetHoles?'product-image-admin sweetholes-product-photo':'product-image-admin';
+    const isCafe5=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='cafe5' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='café5';
+    const photoClass=isSweetHoles?'product-image-admin sweetholes-product-photo':isCafe5?'product-image-admin megjet-cafe5-product-photo':'product-image-admin';
     const infoClass=isSweetHoles?'item-info sweetholes-product-info':'item-info';
     return `<div class="item"><div class="${infoClass}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(p.name||'Product')}"><div><b>${escapeHtml(p.name)}</b><div class="muted">${escapeHtml(cleanDesc(p))}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button onclick='add(${JSON.stringify(item).replace(/'/g,"&#39;")})'>Add</button></div></div>`;
   }
