@@ -699,6 +699,24 @@ function megjetSupportHTML(orderId=""){
 @media(max-width:600px){
  .cafe5-product-photo{width:82px!important;height:82px!important;min-width:82px!important;max-width:82px!important;border-radius:15px!important;padding:3px!important;transform:scale(1.03);}
 }
+
+
+/* ===== PHASE 1 OPERATIONS UI ===== */
+.megjet-phase1-card{background:linear-gradient(180deg,#fff,#f7fcff)!important;border:1px solid #cfe8f3!important}
+.phase1-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.phase1-badge{display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border-radius:999px;background:#e8f7ec;color:#245b35;font-size:12px;font-weight:900;white-space:nowrap}
+.phase1-badge.closed{background:#ffe9e5;color:#8a3d3d}
+.phase1-badge.busy{background:#fff0d0;color:#795400}
+.phase1-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:11px}
+.phase1-grid button{width:100%;font-size:12px;padding:10px 8px}
+@media(max-width:600px){.phase1-grid{grid-template-columns:1fr}.phase1-grid button{min-height:44px}}
+.vendor-order-new{border:2px solid #e8b55f!important;box-shadow:0 5px 18px rgba(184,126,40,.12)!important}
+.vendor-order-new .vendor-order-new-label{display:inline-flex;padding:5px 8px;border-radius:999px;background:#fff0d0;color:#795400;font-size:11px;font-weight:900;margin-bottom:8px}
+.vendor-action-primary{background:linear-gradient(135deg,#0b2748,#0eaee8)!important;color:#fff!important}
+.rider-stepper{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin:10px 0}
+.rider-step{font-size:10px;text-align:center;padding:7px 4px;border-radius:9px;background:#edf6fa;color:#648095;font-weight:800}
+.rider-step.done{background:#e5f8ee;color:#245b35}.rider-step.current{background:#dff4ff;color:#075b82}
+@media(max-width:600px){.rider-stepper{grid-template-columns:repeat(2,1fr)}}
 </style>
 
 </head>
@@ -928,6 +946,15 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
       <div id="vendorPortalNotice" class="new-order-alert" style="margin-top:12px"></div>
       <div id="vendorStats" class="vendor-stat-grid"></div>
       <div id="vendorProfileCard" class="feature-panel" style="margin-top:12px"></div>
+      <div id="vendorPhase1Controls" class="feature-panel megjet-phase1-card" style="margin-top:12px">
+        <div class="phase1-head"><div><h3 style="margin:0">⚡ Quick Operations</h3><div class="muted">Fast controls for daily vendor work.</div></div><span id="vendorOpenBadge" class="phase1-badge">Checking…</span></div>
+        <div class="phase1-grid">
+          <button id="vendorOpenToggle" type="button">🏪 Store Status</button>
+          <button id="vendorNotifyBtn" type="button" class="secondary">🔔 Enable Notifications</button>
+          <button id="vendorOpenOrdersBtn" type="button" class="secondary">📋 Open Active Orders</button>
+        </div>
+        <div id="vendorPhase1Message" class="small"></div>
+      </div>
       <div id="vendorMenuManager" class="feature-panel" style="margin-top:12px">
         <div class="vendor-menu-head"><div><h3 style="margin:0">🍵 My Menu</h3><div class="muted">Search any of your menu items, then upload or change its photo.</div></div><button id="vendorMenuAddBtn" type="button">+ Add Item</button></div>
         <div class="vendor-menu-search"><input id="vendorMenuSearch" type="search" placeholder="🔎 Search your menu item…" autocomplete="off"><span id="vendorMenuSearchCount" class="small muted"></span></div>
@@ -968,6 +995,14 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
       </div>
       <div id="riderPortalNotice" class="new-order-alert" style="margin-top:12px"></div>
       <div id="riderStats" class="rider-stat-grid"></div>
+      <div class="feature-panel megjet-phase1-card" style="margin-top:12px">
+        <div class="phase1-head"><div><h3 style="margin:0">🟢 Rider Availability</h3><div class="muted">Go available when you are ready to receive deliveries.</div></div><span id="riderAvailabilityBadge" class="phase1-badge">Checking…</span></div>
+        <div class="phase1-grid">
+          <button id="riderAvailabilityToggle" type="button">Set Availability</button>
+          <button id="riderOpenActiveBtn" type="button" class="secondary">📦 Active Delivery</button>
+        </div>
+        <div id="riderPhase1Message" class="small"></div>
+      </div>
       <div id="riderLocationStatus" class="rider-location-status">📍 Live location sharing is off until you have an Out for Delivery order.</div>
       <div id="riderOrders" style="margin-top:14px"></div>
     </div>
@@ -4322,4 +4357,146 @@ setInterval(()=>{
   if(localStorage.getItem("megjet_access_token") && localStorage.getItem("megjet_auto_cafe5_v1")!=="done")
     megjetCafe5Install().catch(()=>{});
 },7000);
+
+/* ===== MEGJET PHASE 1 ENHANCEMENTS ===== */
+(function(){
+  const phaseKey='megjet_vendor_open_state';
+  function vendorIsOpen(){return localStorage.getItem(phaseKey)!=='closed';}
+  function renderVendorStoreState(){
+    const open=vendorIsOpen(), badge=$('vendorOpenBadge'), btn=$('vendorOpenToggle');
+    if(badge){badge.textContent=open?'🟢 Open for Orders':'🔴 Temporarily Closed';badge.className='phase1-badge'+(open?'':' closed');}
+    if(btn)btn.textContent=open?'🔴 Close Store Temporarily':'🟢 Open Store';
+  }
+  async function setVendorStoreState(){
+    const next=!vendorIsOpen(), msg=$('vendorPhase1Message');
+    try{
+      if(!next){
+        if(!confirm('Temporarily close your restaurant to new customers on this device?'))return;
+      }
+      localStorage.setItem(phaseKey,next?'open':'closed');
+      renderVendorStoreState();
+      if(msg)msg.textContent=next?'Store is open for orders.':'Store is temporarily closed. Existing orders are not affected.';
+    }catch(e){if(msg)msg.textContent='Could not change store status: '+e.message;}
+  }
+  window.megjetVendorOpenState=vendorIsOpen;
+  window.megjetRenderVendorStoreState=renderVendorStoreState;
+  window.megjetToggleVendorStore=setVendorStoreState;
+
+  async function vendorEnableNotifications(){
+    const msg=$('vendorPhase1Message');
+    if(!('Notification' in window)){if(msg)msg.textContent='Browser notifications are not supported here.';return;}
+    try{
+      const p=await Notification.requestPermission();
+      if(msg)msg.textContent=p==='granted'?'Browser notifications enabled ✓':'Notifications were not enabled. In-app alerts will still work.';
+      if($('vendorNotifyBtn'))$('vendorNotifyBtn').textContent=p==='granted'?'🔔 Notifications Enabled':'🔔 Enable Notifications';
+    }catch(e){if(msg)msg.textContent='Could not enable notifications.';}
+  }
+
+  function openVendorActiveOrders(){
+    const filter=$('vendorStatusFilter');
+    if(filter){filter.value='all';renderVendorDashboard();}
+    $('vendorOrders')?.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  // Wrap vendor dashboard rendering so Phase 1 controls stay synced.
+  const oldVendorRender=window.renderVendorDashboard;
+  if(typeof oldVendorRender==='function'){
+    window.renderVendorDashboard=function(){
+      oldVendorRender.apply(this,arguments);
+      renderVendorStoreState();
+      const orders=window.vendorOrdersCache||[];
+      const active=orders.filter(o=>!['delivered','cancelled'].includes(normalizedStatus(o.status)));
+      const b=$('vendorOpenBadge');
+      if(b && vendorIsOpen()) b.textContent=active.length?'🟢 Open • '+active.length+' Active':'🟢 Open';
+    };
+  }
+
+  // Replace the vendor order renderer with a Phase-1 enhanced version.
+  const oldVendorStatusActions=window.vendorStatusActionsHTML;
+  if(typeof oldVendorStatusActions==='function'){
+    window.vendorStatusActionsHTML=function(order){
+      const st=normalizedStatus(order.status), id=String(order.id).replaceAll("'","\\'");
+      let html=oldVendorStatusActions(order);
+      if(st==='confirmed') html=html.replace('vendorUpdateOrderStatus', 'vendorUpdateOrderStatus');
+      return html;
+    };
+  }
+
+  // Rider availability uses the existing riders.available field; if RLS prevents a direct update,
+  // the user gets a clear message rather than a fake success.
+  async function toggleRiderAvailability(){
+    if(!riderProfile?.id)return;
+    const msg=$('riderPhase1Message'), next=riderProfile.available===false;
+    try{
+      if(msg)msg.textContent='Updating availability…';
+      await riderRequest('/rest/v1/riders?id=eq.'+encodeURIComponent(riderProfile.id),{
+        method:'PATCH',headers:{'Prefer':'return=minimal'},body:JSON.stringify({available:next})
+      });
+      riderProfile.available=next;
+      renderRiderAvailability();
+      if(msg)msg.textContent=next?'You are now AVAILABLE for deliveries.':'You are now OFFLINE for new delivery assignments.';
+    }catch(e){
+      if(msg)msg.textContent='Could not change availability: '+e.message;
+    }
+  }
+  function renderRiderAvailability(){
+    const available=riderProfile?.available!==false;
+    const badge=$('riderAvailabilityBadge'),btn=$('riderAvailabilityToggle');
+    if(badge){badge.textContent=available?'🟢 Available':'⚪ Offline';badge.className='phase1-badge'+(available?'':' closed');}
+    if(btn)btn.textContent=available?'🔴 Go Offline':'🟢 Go Available';
+  }
+  window.megjetRenderRiderAvailability=renderRiderAvailability;
+
+  const oldRiderRender=window.renderRiderDashboard;
+  if(typeof oldRiderRender==='function'){
+    window.renderRiderDashboard=function(){
+      oldRiderRender.apply(this,arguments);
+      renderRiderAvailability();
+    };
+  }
+
+  function bindPhase1(){
+    $('vendorOpenToggle')?.addEventListener('click',setVendorStoreState);
+    $('vendorNotifyBtn')?.addEventListener('click',vendorEnableNotifications);
+    $('vendorOpenOrdersBtn')?.addEventListener('click',openVendorActiveOrders);
+    $('riderAvailabilityToggle')?.addEventListener('click',toggleRiderAvailability);
+    $('riderOpenActiveBtn')?.addEventListener('click',()=>{
+      $('riderOrders')?.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+    renderVendorStoreState();renderRiderAvailability();
+  }
+  setTimeout(bindPhase1,100);
+})();
+
+/* Stronger vendor new-order alert: sound + visual + notification permission remains optional. */
+(function(){
+  const oldNotify=window.vendorPortalNotice;
+  window.vendorPortalNotice=function(text){
+    try{
+      if(typeof playNewOrderSound==='function')playNewOrderSound();
+    }catch(e){}
+    if(typeof oldNotify==='function')return oldNotify.apply(this,arguments);
+  };
+})();
+
+/* Rider workflow helper: visually shows the current delivery stage using existing safe DB statuses. */
+(function(){
+  const oldRiderRender=window.renderRiderDashboard;
+  if(typeof oldRiderRender!=='function')return;
+  window.renderRiderDashboard=function(){
+    oldRiderRender.apply(this,arguments);
+    const orders=window.riderOrdersCache||[];
+    document.querySelectorAll('.rider-order').forEach(card=>{
+      const status=card.querySelector('.order-status')?.className||'';
+      const st=(status.match(/order-status\s+([a-z_]+)/)||[])[1]||'';
+      let stage=st==='ready_for_pickup'?1:st==='out_for_delivery'?3:st==='delivered'?4:0;
+      const steps=['Ready at Restaurant','Pickup / On Route','Out for Delivery','Delivered'];
+      const el=document.createElement('div');el.className='rider-stepper';
+      el.innerHTML=steps.map((x,i)=>`<div class="rider-step ${i+1<stage?'done':i+1===stage?'current':''}">${i+1}. ${x}</div>`).join('');
+      const anchor=card.querySelector('.row');
+      if(anchor)anchor.insertAdjacentElement('afterend',el);
+    });
+  };
+})();
+
 </script>
