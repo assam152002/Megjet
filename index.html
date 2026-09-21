@@ -764,6 +764,7 @@ function megjetSupportHTML(orderId=""){
 
 
 
+
 <style id="megjet-customer-pro-css">
 :root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
 #mjCustomerNav{display:none}
@@ -5053,6 +5054,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
 
+
 <script id="megjet-customer-pro-js">
 (function(){
   'use strict';
@@ -5062,7 +5064,8 @@ document.addEventListener("DOMContentLoaded",function(){
   function scrollToEl(el){if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>{try{el.focus({preventScroll:true})}catch(e){}},350)}
   function makeNav(){if($('mjCustomerNav'))return;const n=document.createElement('nav');n.id='mjCustomerNav';n.setAttribute('aria-label','Customer navigation');n.innerHTML='<button type="button" data-mj-nav="home"><span class="mj-i">⌂</span><span>Home</span></button><button type="button" data-mj-nav="search"><span class="mj-i">⌕</span><span>Search</span></button><button type="button" data-mj-nav="orders"><span class="mj-i">▤</span><span>Orders</span></button><button type="button" data-mj-nav="account"><span class="mj-i">♙</span><span>Account</span></button><button type="button" data-mj-nav="cart"><span class="mj-i">🛒</span><span>Cart</span><b id="mjNavCartBadge" hidden>0</b></button>';document.body.appendChild(n)}
   function net(){let e=$('mjCustomerStatus');if(!e){e=document.createElement('div');e.id='mjCustomerStatus';e.innerHTML='<i></i><span></span>';document.body.appendChild(e)}const on=navigator.onLine;e.classList.toggle('offline',!on);e.querySelector('span').textContent=on?'Online':'Offline'}
-  function sync(){makeNav();net();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
+  function checkoutUX(){const n=$('customerName'),p=$('phone'),a=$('address'),pay=$('paymentMethod');if(n){n.required=true;n.autocomplete='name'}if(p){p.required=true;p.inputMode='tel';p.autocomplete='tel'}if(a){a.required=true;a.autocomplete='street-address'}if(pay)pay.required=true;const btn=$('placeOrder');if(btn){btn.setAttribute('aria-label','Place your Megjet order');btn.style.minHeight='48px'}}
+  function sync(){makeNav();net();checkoutUX();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
   document.addEventListener('click',e=>{const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
   const mo=new MutationObserver(sync);
   function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync);window.addEventListener('online',sync);window.addEventListener('offline',sync)}
