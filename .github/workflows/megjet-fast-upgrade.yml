@@ -41,6 +41,7 @@ jobs:
               t=t.replace(old,new,1)
           elif 'Creating vendor login…' not in t:
               raise SystemExit('saveVendor target not found and provisioning patch absent')
+          assert 'admin-provision-vendor' in t, 'vendor provisioning patch missing after replacement'
           t=t.replace('p_vendor_id:vendor_id','p_vendor_id:vendorId')
           for tag,id_ in [('style','megjet-customer-pro-css'),('script','megjet-customer-pro-js')]:
               t=re.sub(r'<'+tag+r'[^>]*id=["\']'+id_+r'["\'][^>]*>.*?</'+tag+r'>','',t,flags=re.S|re.I)
