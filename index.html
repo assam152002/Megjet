@@ -760,12 +760,15 @@ function megjetSupportHTML(orderId=""){
 #cartBox.mj-clean-cart .mj-qty button{width:28px;height:28px;padding:0!important;border-radius:9px!important}
 @media(min-width:761px){#cartBox.mj-clean-cart{left:auto!important;right:20px!important;bottom:20px!important;width:430px!important}}
 </style>
+
 <style id="megjet-customer-pro-css">
 :root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
 #mjCustomerNav{display:none}
 #mjCustomerToast{position:fixed;left:50%;bottom:154px;transform:translate(-50%,16px);z-index:2147483000;background:#0b2748;color:#fff;padding:10px 16px;border-radius:999px;font-weight:800;font-size:13px;box-shadow:0 12px 34px rgba(11,39,72,.25);opacity:0;pointer-events:none;transition:.2s ease;white-space:nowrap}
 #mjCustomerToast.show{opacity:1;transform:translate(-50%,0)}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(14,174,232,.35)!important;outline-offset:2px!important}
+#cartBox.mj-clean-cart #cartItems .row{padding:12px 0!important;border-bottom:1px solid #edf3f7!important;align-items:center!important}
+#cartBox.mj-clean-cart #cartItems .row:last-child{border-bottom:0!important}
 @media(max-width:760px){
   body{padding-bottom:82px!important}
   #mjCustomerNav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:10px;height:64px;z-index:2147482500;background:rgba(255,255,255,.97);border:1px solid #dcecf4;border-radius:20px;box-shadow:0 14px 40px rgba(11,39,72,.20);backdrop-filter:blur(14px);overflow:hidden}
@@ -5009,6 +5012,7 @@ document.addEventListener("DOMContentLoaded",function(){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script>
+
 <script id="megjet-customer-pro-js">
 (function(){
   'use strict';
