@@ -743,6 +743,23 @@ function megjetSupportHTML(orderId=""){
 .vp-menu-photo-selected{font-size:12px;font-weight:800;color:#245b35}
 @media(max-width:600px){.vp-menu-photo-preview{min-height:100px}.vp-menu-photo-preview img{width:110px;height:110px}.vp-menu-photo-upload{width:100%;justify-content:center}}
 </style>
+<style id="megjet-clean-cart-css">
+#cartBox.mj-clean-cart{
+  position:fixed!important;left:12px!important;right:12px!important;
+  bottom:84px!important;z-index:2147482000!important;margin:0 auto!important;
+  max-width:720px!important;background:#fff!important;border:1px solid #d9eaf3!important;
+  border-radius:20px!important;box-shadow:0 18px 50px rgba(11,39,72,.22)!important;
+  overflow:hidden!important
+}
+#cartBox.mj-clean-cart.hidden{display:none!important}
+#cartBox.mj-clean-cart:not(.hidden){display:block!important}
+#cartBox.mj-clean-cart .cart-head{padding:12px 14px!important;min-height:54px!important}
+#cartBox.mj-clean-cart .cart-body{max-height:58vh;overflow:auto}
+#cartBox.mj-clean-cart .row{gap:10px}
+#cartBox.mj-clean-cart .mj-qty{display:inline-flex;align-items:center;gap:7px;margin-left:8px}
+#cartBox.mj-clean-cart .mj-qty button{width:28px;height:28px;padding:0!important;border-radius:9px!important}
+@media(min-width:761px){#cartBox.mj-clean-cart{left:auto!important;right:20px!important;bottom:20px!important;width:430px!important}}
+</style>
 </head>
 <body>
 <script>
@@ -4868,6 +4885,108 @@ setInterval(()=>{
 document.addEventListener("DOMContentLoaded",function(){
   try{ if(typeof renderCart==="function") renderCart(); }catch(e){ console.warn("Megjet cart init",e); }
 });
+</script>
+<script id="megjet-clean-cart-js">
+(function(){
+  'use strict';
+  const KEY='megjet_cart';
+  const $=id=>document.getElementById(id);
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const money=v=>{try{return new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY'}).format(Number(v||0));}catch(e){return '₺'+Number(v||0).toFixed(2)}};
+
+  function state(){
+    if(!Array.isArray(window.cart)) window.cart=[];
+    return window.cart;
+  }
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(state()))}catch(e){}}
+  function portalOpen(){
+    return ['admin','vendor','rider'].some(id=>{
+      const e=$(id); if(!e)return false;
+      const s=getComputedStyle(e);
+      return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden';
+    });
+  }
+  function mount(){
+    const box=$('cartBox');
+    if(!box)return null;
+    if(box.parentElement!==document.body)document.body.appendChild(box);
+    box.classList.add('mj-clean-cart');
+    return box;
+  }
+  function qty(){return state().reduce((a,x)=>a+Math.max(1,Number(x.quantity||1)),0)}
+  function sub(){return state().reduce((a,x)=>a+Number(x.price||0)*Math.max(1,Number(x.quantity||1)),0)}
+  function delivery(){return typeof window.DELIVERY!=='undefined'?Number(window.DELIVERY||0):(typeof DELIVERY!=='undefined'?Number(DELIVERY||0):0)}
+
+  function draw(){
+    const box=mount(); if(!box)return;
+    const n=qty(), subtotal=sub(), del=delivery(), grand=subtotal+del;
+    if($('count'))$('count').textContent=n+' item'+(n===1?'':'s');
+    if($('cartBadge'))$('cartBadge').textContent=n;
+    if($('subtotal'))$('subtotal').textContent=money(subtotal);
+    if($('cartDelivery'))$('cartDelivery').textContent=money(del);
+    if($('total'))$('total').textContent=money(grand);
+    if($('cartTotal'))$('cartTotal').textContent=money(grand);
+    if($('checkoutBtn'))$('checkoutBtn').classList.toggle('hidden',!n);
+    const items=$('cartItems');
+    if(items)items.innerHTML=state().map((x,i)=>{
+      const q=Math.max(1,Number(x.quantity||1));
+      return '<div class="row"><span><b>'+esc(x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor">'+esc(x.vendor_name)+'</div>':'')+
+      '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
+      ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
+    }).join('');
+    const hide=!n||portalOpen();
+    box.classList.toggle('hidden',hide);
+    box.style.display=hide?'none':'block';
+    const nav=$('mjNavCartBadge');
+    if(nav){nav.textContent=n>99?'99+':String(n);nav.hidden=!n}
+    save();
+  }
+
+  function addProduct(product){
+    if(!product)return false;
+    const a=state(), id=String(product.id??''), vendor=String(product.vendor_id??'');
+    const found=a.find(x=>String(x.id??'')===id&&String(x.vendor_id??'')===vendor);
+    if(found)found.quantity=Math.max(1,Number(found.quantity||1))+1;
+    else a.push({...product,price:Number(product.price||0),quantity:1});
+    draw();
+    return false;
+  }
+
+  window.megjetAddDirect=function(token){
+    const p=token&&window.MEGJET_CART_PRODUCTS?window.MEGJET_CART_PRODUCTS[token]:null;
+    if(!p){console.error('Megjet cart product missing',token);return false}
+    return addProduct(p);
+  };
+  window.MEGJET_ADD_FROM_BUTTON=function(button,event){
+    if(event){event.preventDefault();event.stopPropagation()}
+    return window.megjetAddDirect(button&&button.getAttribute('data-megjet-add-id'));
+  };
+
+  document.addEventListener('click',e=>{
+    const minus=e.target.closest&&e.target.closest('[data-mj-minus]');
+    const plus=e.target.closest&&e.target.closest('[data-mj-plus]');
+    const rem=e.target.closest&&e.target.closest('[data-mj-remove]');
+    if(!minus&&!plus&&!rem)return;
+    e.preventDefault();e.stopPropagation();
+    const a=state();
+    if(plus){const i=Number(plus.dataset.mjPlus);if(a[i])a[i].quantity=Math.max(1,Number(a[i].quantity||1))+1}
+    if(minus){const i=Number(minus.dataset.mjMinus);if(a[i]){const q=Math.max(1,Number(a[i].quantity||1));if(q<=1)a.splice(i,1);else a[i].quantity=q-1}}
+    if(rem){const i=Number(rem.dataset.mjRemove);if(a[i])a.splice(i,1)}
+    draw();
+  },true);
+
+  function init(){
+    mount();
+    try{
+      const saved=JSON.parse(localStorage.getItem(KEY)||'[]');
+      if(Array.isArray(saved)&&(!Array.isArray(window.cart)||!window.cart.length))window.cart=saved;
+    }catch(e){}
+    draw();
+    window.addEventListener('hashchange',draw);
+    window.addEventListener('pageshow',draw);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
 </script>
 </body>
 </html>
