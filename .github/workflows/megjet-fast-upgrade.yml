@@ -21,6 +21,24 @@ jobs:
           import re
           p=Path('index.html')
           t=p.read_text(encoding='utf-8')
+          # Secure vendor provisioning: patch the real saveVendor function in index.html.
+          old='''    resetVendorForm();$("vendorForm").classList.add("hidden");
+    $("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
+    await loadAdminMenu();await load();'''
+          new='''    if(password){
+      $("vendorMessage").textContent="Creating vendor login…";
+      const token=localStorage.getItem("megjet_access_token");
+      if(!token)throw new Error("Admin sign-in required to create vendor login.");
+      const provision=await fetchJson(cfg.url.replace(/\\/+$/,'')+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:String(result?.vendor_id||id||""),phone,password})},30000);
+      if(!provision?.success)throw new Error(provision?.error||"Vendor login could not be created.");
+    }
+    resetVendorForm();$("vendorForm").classList.add("hidden");
+    $("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
+    await loadAdminMenu();await load();'''
+          if 'admin-provision-vendor' not in t:
+              if old not in t: raise SystemExit('saveVendor target not found')
+              t=t.replace(old,new,1)
+          t=t.replace('p_vendor_id:vendor_id','p_vendor_id:vendorId')
           for tag,id_ in [('style','megjet-customer-pro-css'),('script','megjet-customer-pro-js')]:
               t=re.sub(r'<'+tag+r'[^>]*id=["\']'+id_+r'["\'][^>]*>.*?</'+tag+r'>','',t,flags=re.S|re.I)
           css=r'''<style id="megjet-customer-pro-css">
