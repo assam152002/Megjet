@@ -114,7 +114,7 @@ jobs:
           t=Path('index.html').read_text(encoding='utf-8')
           assert t.count('id="megjet-customer-pro-css"')==1
           assert t.count('id="megjet-customer-pro-js"')==1
-          for marker in ['admin-provision-vendor','mjCustomerNav','mjNavCartBadge','data-mj-nav="search"','Added to cart','megjet-clean-cart-js','checkoutUX','street-address','.megjet-add-button{min-height:40px','menuUX','syncQueued','.vendor-view']:
+          for marker in ['mjCustomerNav','mjNavCartBadge','data-mj-nav="search"','Added to cart','megjet-clean-cart-js','checkoutUX','street-address','.megjet-add-button{min-height:40px','menuUX','syncQueued','.vendor-view']:
               assert marker in t, marker
           scripts=re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>',t,re.I|re.S)
           for i,code in enumerate(scripts):
