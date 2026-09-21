@@ -1,4 +1,4 @@
-name: Megjet Clean Cart Rebuild
+name: Megjet Customer Professional UX
 
 on:
   push:
@@ -9,12 +9,11 @@ permissions:
   contents: write
 
 jobs:
-  rebuild-cart:
+  upgrade-customer:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Remove previous cart patches and install one clean cart
+      - name: Install professional customer UX
         shell: bash
         run: |
           python3 - <<'PY'
@@ -22,172 +21,72 @@ jobs:
           import re
           p=Path('index.html')
           t=p.read_text(encoding='utf-8')
-
-          # Remove every later experimental cart patch by known IDs.
-          ids=[
-            'megjet-customer-cart-fix-v2-style','megjet-customer-cart-fix-v2-js',
-            'megjet-customer-cart-final-css','megjet-customer-cart-final-js',
-            'megjet-customer-cart-launcher-style','megjet-customer-cart-launcher-js',
-            'megjet-persistent-cart-css','megjet-persistent-cart-js',
-            'megjet-clean-cart-css','megjet-clean-cart-js'
-          ]
-          for i in ids:
-            t=re.sub(r'<style[^>]*id=["\']'+re.escape(i)+r'["\'][^>]*>.*?</style>','',t,flags=re.S|re.I)
-            t=re.sub(r'<script[^>]*id=["\']'+re.escape(i)+r'["\'][^>]*>.*?</script>','',t,flags=re.S|re.I)
-
-          css=r'''<style id="megjet-clean-cart-css">
-          #cartBox.mj-clean-cart{
-            position:fixed!important;left:12px!important;right:12px!important;
-            bottom:84px!important;z-index:2147482000!important;margin:0 auto!important;
-            max-width:720px!important;background:#fff!important;border:1px solid #d9eaf3!important;
-            border-radius:20px!important;box-shadow:0 18px 50px rgba(11,39,72,.22)!important;
-            overflow:hidden!important
+          for tag,id_ in [('style','megjet-customer-pro-css'),('script','megjet-customer-pro-js')]:
+              t=re.sub(r'<'+tag+r'[^>]*id=["\']'+id_+r'["\'][^>]*>.*?</'+tag+r'>','',t,flags=re.S|re.I)
+          css=r'''<style id="megjet-customer-pro-css">
+          :root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
+          #mjCustomerNav{display:none}
+          #mjCustomerToast{position:fixed;left:50%;bottom:154px;transform:translate(-50%,16px);z-index:2147483000;background:#0b2748;color:#fff;padding:10px 16px;border-radius:999px;font-weight:800;font-size:13px;box-shadow:0 12px 34px rgba(11,39,72,.25);opacity:0;pointer-events:none;transition:.2s ease;white-space:nowrap}
+          #mjCustomerToast.show{opacity:1;transform:translate(-50%,0)}
+          button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(14,174,232,.35)!important;outline-offset:2px!important}
+          @media(max-width:760px){
+            body{padding-bottom:82px!important}
+            #mjCustomerNav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:10px;height:64px;z-index:2147482500;background:rgba(255,255,255,.97);border:1px solid #dcecf4;border-radius:20px;box-shadow:0 14px 40px rgba(11,39,72,.20);backdrop-filter:blur(14px);overflow:hidden}
+            #mjCustomerNav.mj-hide{display:none!important}
+            #mjCustomerNav button{position:relative;border:0!important;background:transparent!important;color:#587086!important;padding:7px 2px 5px!important;min-width:0!important;border-radius:0!important;font-size:10px!important;font-weight:800!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:none!important}
+            #mjCustomerNav button .mj-i{font-size:20px;line-height:1}
+            #mjCustomerNav button:active{background:#eef9fe!important;color:var(--mj-pro-blue)!important}
+            #mjNavCartBadge{position:absolute;top:5px;left:calc(50% + 7px);min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:#e5484d;color:#fff;font-size:10px;line-height:17px;text-align:center}
+            #cartBox.mj-clean-cart{bottom:84px!important;left:10px!important;right:10px!important;border-radius:18px!important}
+            #cartBox.mj-clean-cart .cart-body{max-height:52vh!important}
+            #customerSearch{min-height:46px!important;font-size:16px!important}
+            button{touch-action:manipulation}
           }
-          #cartBox.mj-clean-cart.hidden{display:none!important}
-          #cartBox.mj-clean-cart:not(.hidden){display:block!important}
-          #cartBox.mj-clean-cart .cart-head{padding:12px 14px!important;min-height:54px!important}
-          #cartBox.mj-clean-cart .cart-body{max-height:58vh;overflow:auto}
-          #cartBox.mj-clean-cart .row{gap:10px}
-          #cartBox.mj-clean-cart .mj-qty{display:inline-flex;align-items:center;gap:7px;margin-left:8px}
-          #cartBox.mj-clean-cart .mj-qty button{width:28px;height:28px;padding:0!important;border-radius:9px!important}
-          @media(min-width:761px){#cartBox.mj-clean-cart{left:auto!important;right:20px!important;bottom:20px!important;width:430px!important}}
+          @media(prefers-reduced-motion:reduce){#mjCustomerToast{transition:none!important}}
           </style>'''
-
-          js=r'''<script id="megjet-clean-cart-js">
+          js=r'''<script id="megjet-customer-pro-js">
           (function(){
             'use strict';
-            const KEY='megjet_cart';
             const $=id=>document.getElementById(id);
-            const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-            const money=v=>{try{return new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY'}).format(Number(v||0));}catch(e){return '₺'+Number(v||0).toFixed(2)}};
-
-            function state(){
-              if(!Array.isArray(window.cart)) window.cart=[];
-              return window.cart;
-            }
-            function save(){try{localStorage.setItem(KEY,JSON.stringify(state()))}catch(e){}}
-            function portalOpen(){
-              return ['admin','vendor','rider'].some(id=>{
-                const e=$(id); if(!e)return false;
-                const s=getComputedStyle(e);
-                return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden';
-              });
-            }
-            function mount(){
-              const box=$('cartBox');
-              if(!box)return null;
-              if(box.parentElement!==document.body)document.body.appendChild(box);
-              box.classList.add('mj-clean-cart');
-              return box;
-            }
-            function qty(){return state().reduce((a,x)=>a+Math.max(1,Number(x.quantity||1)),0)}
-            function sub(){return state().reduce((a,x)=>a+Number(x.price||0)*Math.max(1,Number(x.quantity||1)),0)}
-            function delivery(){return typeof window.DELIVERY!=='undefined'?Number(window.DELIVERY||0):(typeof DELIVERY!=='undefined'?Number(DELIVERY||0):0)}
-
-            function draw(){
-              const box=mount(); if(!box)return;
-              const n=qty(), subtotal=sub(), del=delivery(), grand=subtotal+del;
-              if($('count'))$('count').textContent=n+' item'+(n===1?'':'s');
-              if($('cartBadge'))$('cartBadge').textContent=n;
-              if($('subtotal'))$('subtotal').textContent=money(subtotal);
-              if($('cartDelivery'))$('cartDelivery').textContent=money(del);
-              if($('total'))$('total').textContent=money(grand);
-              if($('cartTotal'))$('cartTotal').textContent=money(grand);
-              if($('checkoutBtn'))$('checkoutBtn').classList.toggle('hidden',!n);
-              const items=$('cartItems');
-              if(items)items.innerHTML=state().map((x,i)=>{
-                const q=Math.max(1,Number(x.quantity||1));
-                return '<div class="row"><span><b>'+esc(x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor">'+esc(x.vendor_name)+'</div>':'')+
-                '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
-                ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
-              }).join('');
-              const hide=!n||portalOpen();
-              box.classList.toggle('hidden',hide);
-              box.style.display=hide?'none':'block';
-              const nav=$('mjNavCartBadge');
-              if(nav){nav.textContent=n>99?'99+':String(n);nav.hidden=!n}
-              save();
-            }
-
-            function addProduct(product){
-              if(!product)return false;
-              const a=state(), id=String(product.id??''), vendor=String(product.vendor_id??'');
-              const found=a.find(x=>String(x.id??'')===id&&String(x.vendor_id??'')===vendor);
-              if(found)found.quantity=Math.max(1,Number(found.quantity||1))+1;
-              else a.push({...product,price:Number(product.price||0),quantity:1});
-              draw();
-              return false;
-            }
-
-            window.megjetAddDirect=function(token){
-              const p=token&&window.MEGJET_CART_PRODUCTS?window.MEGJET_CART_PRODUCTS[token]:null;
-              if(!p){console.error('Megjet cart product missing',token);return false}
-              return addProduct(p);
-            };
-            window.MEGJET_ADD_FROM_BUTTON=function(button,event){
-              if(event){event.preventDefault();event.stopPropagation()}
-              return window.megjetAddDirect(button&&button.getAttribute('data-megjet-add-id'));
-            };
-
-            document.addEventListener('click',e=>{
-              const minus=e.target.closest&&e.target.closest('[data-mj-minus]');
-              const plus=e.target.closest&&e.target.closest('[data-mj-plus]');
-              const rem=e.target.closest&&e.target.closest('[data-mj-remove]');
-              if(!minus&&!plus&&!rem)return;
-              e.preventDefault();e.stopPropagation();
-              const a=state();
-              if(plus){const i=Number(plus.dataset.mjPlus);if(a[i])a[i].quantity=Math.max(1,Number(a[i].quantity||1))+1}
-              if(minus){const i=Number(minus.dataset.mjMinus);if(a[i]){const q=Math.max(1,Number(a[i].quantity||1));if(q<=1)a.splice(i,1);else a[i].quantity=q-1}}
-              if(rem){const i=Number(rem.dataset.mjRemove);if(a[i])a.splice(i,1)}
-              draw();
-            },true);
-
-            function init(){
-              mount();
-              try{
-                const saved=JSON.parse(localStorage.getItem(KEY)||'[]');
-                if(Array.isArray(saved)&&(!Array.isArray(window.cart)||!window.cart.length))window.cart=saved;
-              }catch(e){}
-              draw();
-              window.addEventListener('hashchange',draw);
-              window.addEventListener('pageshow',draw);
-            }
-            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+            function portalOpen(){return ['admin','vendor','rider'].some(id=>{const e=$(id);if(!e)return false;const s=getComputedStyle(e);return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden'})}
+            function toast(msg){let e=$('mjCustomerToast');if(!e){e=document.createElement('div');e.id='mjCustomerToast';e.setAttribute('role','status');e.setAttribute('aria-live','polite');document.body.appendChild(e)}e.textContent=msg;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),1400)}
+            function scrollToEl(el){if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>{try{el.focus({preventScroll:true})}catch(e){}},350)}
+            function makeNav(){if($('mjCustomerNav'))return;const n=document.createElement('nav');n.id='mjCustomerNav';n.setAttribute('aria-label','Customer navigation');n.innerHTML='<button type="button" data-mj-nav="home"><span class="mj-i">⌂</span><span>Home</span></button><button type="button" data-mj-nav="search"><span class="mj-i">⌕</span><span>Search</span></button><button type="button" data-mj-nav="orders"><span class="mj-i">▤</span><span>Orders</span></button><button type="button" data-mj-nav="account"><span class="mj-i">♙</span><span>Account</span></button><button type="button" data-mj-nav="cart"><span class="mj-i">🛒</span><span>Cart</span><b id="mjNavCartBadge" hidden>0</b></button>';document.body.appendChild(n)}
+            function sync(){makeNav();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
+            document.addEventListener('click',e=>{const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
+            const mo=new MutationObserver(sync);
+            function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync)}
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
           })();
           </script>'''
-
           t=t.replace('</head>',css+'\n</head>')
           t=t.replace('</body>',js+'\n</body>')
           p.write_text(t,encoding='utf-8')
           PY
-
-      - name: Validate whole app and clean cart
+      - name: Validate professional UX and all inline JavaScript
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re,subprocess
           t=Path('index.html').read_text(encoding='utf-8')
-          assert t.count('id="megjet-clean-cart-css"')==1
-          assert t.count('id="megjet-clean-cart-js"')==1
-          for bad in ['megjet-customer-cart-fix-v2-js','megjet-customer-cart-final-js','megjet-persistent-cart-js']:
-              assert bad not in t, bad
-          for marker in ['window.MEGJET_ADD_FROM_BUTTON=function','data-mj-minus','data-mj-plus','data-mj-remove','localStorage.setItem(KEY']:
+          assert t.count('id="megjet-customer-pro-css"')==1
+          assert t.count('id="megjet-customer-pro-js"')==1
+          for marker in ['mjCustomerNav','mjNavCartBadge','data-mj-nav="search"','Added to cart','megjet-clean-cart-js']:
               assert marker in t, marker
           scripts=re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>',t,re.I|re.S)
           for i,code in enumerate(scripts):
               f=Path('/tmp')/f'megjet_{i}.js';f.write_text(code,encoding='utf-8')
               r=subprocess.run(['node','--check',str(f)],capture_output=True,text=True)
               if r.returncode: raise SystemExit(f'Inline JS {i} failed: '+r.stderr)
-          print('PASS: whole Megjet inline JavaScript + clean cart syntax')
+          print('PASS: professional customer UX + all inline JavaScript')
           PY
-
-      - name: Commit clean cart
+      - name: Commit customer UX
         shell: bash
         run: |
           if git diff --quiet -- index.html; then echo "No changes"; exit 0; fi
-          git config user.name "Megjet Rebuild Bot"
+          git config user.name "Megjet UX Bot"
           git config user.email "actions@users.noreply.github.com"
           git add index.html
-          git commit -m "Rebuild customer cart cleanly"
+          git commit -m "Upgrade professional customer experience"
           git push
