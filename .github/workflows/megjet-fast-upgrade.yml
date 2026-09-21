@@ -1,0 +1,104 @@
+name: Megjet Fast Professional Upgrade
+
+on:
+  push:
+    paths:
+      - '.github/workflows/megjet-fast-upgrade.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upgrade Megjet customer and portal UX
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          p=Path('index.html')
+          text=p.read_text(encoding='utf-8')
+          CSS=r'''
+          <style id="megjet-speed-professional-upgrade">
+          :root{--mj-shadow:0 10px 30px rgba(11,39,72,.10);--mj-shadow-sm:0 5px 16px rgba(11,39,72,.08);--mj-ring:0 0 0 3px rgba(14,174,232,.22)}
+          html{scroll-behavior:smooth}body{background:linear-gradient(180deg,#f7fbfd 0,#fff 340px);-webkit-tap-highlight-color:transparent}
+          button,a,input,select,textarea{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:0;box-shadow:var(--mj-ring)!important}
+          button{transition:transform .14s ease,box-shadow .14s ease,opacity .14s ease}button:not(:disabled):active{transform:translateY(1px) scale(.99)}button:disabled{opacity:.58!important;cursor:not-allowed!important}
+          .card,.feature-panel,.vendor-card,.vendor-order,.rider-order{box-shadow:var(--mj-shadow-sm)}#status{position:relative;border-radius:14px!important;font-weight:750}#status.mj-offline{background:#fff4e5!important;border-color:#ffd18b!important;color:#744b00!important}
+          .customer-hero{box-shadow:var(--mj-shadow)!important;overflow:hidden;position:relative}.customer-hero:after{content:"";position:absolute;width:150px;height:150px;border-radius:50%;right:-55px;top:-70px;background:rgba(255,255,255,.12);pointer-events:none}.customer-search{position:relative;z-index:1;box-shadow:0 7px 20px rgba(0,0,0,.10)}.customer-search input{font-size:16px!important}
+          .quick-chip{cursor:pointer;user-select:none;transition:.15s ease}.quick-chip:hover,.quick-chip:focus-visible{transform:translateY(-1px);box-shadow:var(--mj-shadow-sm)}.section-title,#vendors{scroll-margin-top:88px}.megjet-cart-fixed{box-shadow:0 14px 42px rgba(11,39,72,.22)!important}.cart-toggle{min-height:42px}
+          .mj-toast-stack{position:fixed;z-index:2147483646;right:14px;top:14px;display:grid;gap:8px;max-width:min(390px,calc(100vw - 28px));pointer-events:none}.mj-toast{pointer-events:auto;background:#0b2748;color:#fff;border:1px solid rgba(255,255,255,.16);box-shadow:0 10px 30px rgba(11,39,72,.25);border-radius:14px;padding:11px 13px;display:flex;gap:9px;align-items:flex-start;font-size:13px;font-weight:750;animation:mjToastIn .18s ease}.mj-toast.ok{background:#165c37}.mj-toast.warn{background:#744b00}.mj-toast.bad{background:#8a2f35}@keyframes mjToastIn{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
+          .mj-mobile-nav{display:none}.mj-net-pill{display:inline-flex;align-items:center;gap:6px;padding:5px 8px;border-radius:999px;background:rgba(255,255,255,.14);color:#fff;font-size:11px;font-weight:850;margin-left:4px}.mj-net-dot{width:7px;height:7px;border-radius:50%;background:#56e889;box-shadow:0 0 0 3px rgba(86,232,137,.15)}.mj-net-pill.offline .mj-net-dot{background:#ffcb62;box-shadow:0 0 0 3px rgba(255,203,98,.15)}
+          .admin-section,.vendor#vendor,.rider#rider{scroll-margin-top:80px}.admin-tabs{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);padding:8px 0!important;border-bottom:1px solid #e6f0f5}.vendor-stat-grid,.rider-stat-grid,.statsGrid{gap:10px!important}.new-order-alert{border-radius:14px!important}
+          @media(max-width:760px){body{padding-bottom:84px!important}main{padding-left:10px!important;padding-right:10px!important}header{padding-bottom:16px!important}header .megjet-logo{width:52px!important;height:52px!important}.customer-hero{border-radius:20px!important;padding:20px 16px!important;margin-top:8px!important}.customer-hero h1{font-size:25px!important;line-height:1.12!important;max-width:92%}.customer-hero p{font-size:13px!important;line-height:1.5!important}.quick-row{padding-bottom:5px;scrollbar-width:none}.quick-row::-webkit-scrollbar{display:none}.quick-chip{min-height:38px;display:flex;align-items:center;white-space:nowrap}.section-title h2{font-size:20px!important}.mj-mobile-nav{position:fixed;z-index:2147482500;left:8px;right:8px;bottom:max(8px,env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.97);border:1px solid #d7eaf3;border-radius:20px;box-shadow:0 14px 40px rgba(11,39,72,.22);padding:6px;backdrop-filter:blur(14px)}.mj-mobile-nav[hidden]{display:none!important}.mj-nav-btn{position:relative;border:0!important;background:transparent!important;color:#557083!important;padding:7px 3px!important;min-height:52px!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-radius:14px!important;font-size:10px!important;font-weight:850!important;box-shadow:none!important}.mj-nav-btn .ico{font-size:19px;line-height:1}.mj-nav-btn.active{background:#eaf8fe!important;color:#0878bd!important}.mj-nav-badge{position:absolute;top:3px;right:calc(50% - 19px);min-width:17px;height:17px;padding:0 4px;border-radius:999px;background:#e44646;color:#fff;font-size:10px;line-height:17px;text-align:center;font-weight:900}.mj-toast-stack{top:auto;right:10px;left:10px;bottom:82px;max-width:none}.mj-toast{justify-content:center;text-align:center}#cartBox.megjet-cart-fixed{bottom:78px!important;left:8px!important;right:8px!important;width:auto!important;max-width:none!important;border-radius:18px!important}.customer-account-sheet{max-height:91dvh!important}}
+          @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}
+          </style>
+          '''
+          JS=r'''
+          <script id="megjet-speed-professional-upgrade-js">
+          (function(){'use strict';
+            const $=id=>document.getElementById(id),q=(s,r=document)=>r.querySelector(s),qa=(s,r=document)=>Array.from(r.querySelectorAll(s));
+            function toast(message,type='ok',ms=2200){let stack=$('mjToastStack');if(!stack){stack=document.createElement('div');stack.id='mjToastStack';stack.className='mj-toast-stack';stack.setAttribute('aria-live','polite');document.body.appendChild(stack);}const el=document.createElement('div');el.className='mj-toast '+type;el.textContent=String(message||'');stack.appendChild(el);setTimeout(()=>{el.style.opacity='0';el.style.transform='translateY(5px)';setTimeout(()=>el.remove(),180);},ms);}window.megjetToast=toast;
+            ['status','orderMessage','vendorAuthMessage','riderAuthMessage','adminAuthMessage','customerAuthMessage','customerAccountMessage'].forEach(id=>{const el=$(id);if(el){el.setAttribute('aria-live','polite');el.setAttribute('aria-atomic','true');}});
+            function updateNetwork(){const online=navigator.onLine!==false,status=$('status');if(status)status.classList.toggle('mj-offline',!online);const pill=$('mjNetPill');if(pill){pill.classList.toggle('offline',!online);const t=q('.mj-net-text',pill);if(t)t.textContent=online?'Online':'Offline';}if(!online)toast('You are offline. Live updates need internet.','warn',3200);}
+            function addNetworkPill(){const header=document.querySelector('header');if(!header||$('mjNetPill'))return;const p=document.createElement('span');p.id='mjNetPill';p.className='mj-net-pill';p.innerHTML='<span class="mj-net-dot"></span><span class="mj-net-text">Online</span>';header.appendChild(p);updateNetwork();}
+            function customerMode(){return !['#admin','#vendor','#rider'].includes(location.hash.toLowerCase());}function setNavActive(key){qa('.mj-nav-btn').forEach(b=>b.classList.toggle('active',b.dataset.mjNav===key));}
+            function updateCartBadge(){const badge=$('mjNavCartBadge');if(!badge)return;const arr=Array.isArray(window.cart)?window.cart:[],n=arr.reduce((s,x)=>s+Math.max(1,Number(x?.quantity||1)),0);badge.textContent=n>99?'99+':String(n);badge.hidden=!n;}
+            function openCart(){const box=$('cartBox'),body=$('cartBody'),toggle=$('cartToggle');if(!box||!Array.isArray(window.cart)||!window.cart.length){toast('Your cart is empty.','warn');return;}box.classList.remove('hidden');box.style.display='block';if(body){body.classList.add('open');body.style.display='block';}if(toggle)toggle.textContent='Hide Cart';box.scrollIntoView({behavior:'smooth',block:'end'});}
+            function openOrders(){const loggedIn=$('customerLoggedIn')&&!$('customerLoggedIn').classList.contains('hidden');if(loggedIn&&typeof window.openCustomerAccount==='function'){window.openCustomerAccount();setTimeout(()=>{$('historySearchBtn')?.click();$('historyResult')?.scrollIntoView({behavior:'smooth',block:'center'});},120);}else{$('orderLookup')?.scrollIntoView({behavior:'smooth',block:'center'});setNavActive('orders');}}
+            function syncRoleNav(){const nav=$('megjetMobileNav');if(nav)nav.hidden=!customerMode();}
+            function buildMobileNav(){if($('megjetMobileNav'))return;const nav=document.createElement('nav');nav.id='megjetMobileNav';nav.className='mj-mobile-nav';nav.setAttribute('aria-label','Customer navigation');nav.innerHTML='<button type="button" class="mj-nav-btn active" data-mj-nav="home"><span class="ico">⌂</span><span>Home</span></button><button type="button" class="mj-nav-btn" data-mj-nav="search"><span class="ico">⌕</span><span>Search</span></button><button type="button" class="mj-nav-btn" data-mj-nav="orders"><span class="ico">▣</span><span>Orders</span></button><button type="button" class="mj-nav-btn" data-mj-nav="cart"><span class="ico">🛒</span><span>Cart</span><span id="mjNavCartBadge" class="mj-nav-badge" hidden>0</span></button><button type="button" class="mj-nav-btn" data-mj-nav="account"><span class="ico">◉</span><span>Account</span></button>';document.body.appendChild(nav);nav.addEventListener('click',e=>{const b=e.target.closest('.mj-nav-btn');if(!b)return;const key=b.dataset.mjNav;setNavActive(key);if(key==='home')window.scrollTo({top:0,behavior:'smooth'});if(key==='search'){const s=$('customerSearch');s?.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>s?.focus(),250);}if(key==='orders')openOrders();if(key==='cart')openCart();if(key==='account'){if(typeof window.openCustomerAccount==='function')window.openCustomerAccount();else $('customerAccountOpen')?.click();}});syncRoleNav();updateCartBadge();}
+            function bindCategoryChips(){const search=$('customerSearch');if(!search)return;qa('.quick-chip').forEach(chip=>{chip.setAttribute('role','button');chip.setAttribute('tabindex','0');const go=()=>{const value=chip.textContent.replace(/[^A-Za-zÀ-ž ]/g,'').trim();search.value=value==='Food'?'':value;search.dispatchEvent(new Event('input',{bubbles:true}));search.scrollIntoView({behavior:'smooth',block:'center'});if(value)toast('Showing '+value.toLowerCase());};chip.addEventListener('click',go);chip.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});});}
+            function optimizeImages(){qa('img').forEach((img,i)=>{if(i>0&&!img.hasAttribute('loading'))img.loading='lazy';img.decoding='async';if(!img.alt)img.alt='Megjet image';});}
+            function protectOrderButton(){const btn=$('placeOrder');if(!btn||btn.dataset.mjProtected)return;btn.dataset.mjProtected='1';btn.addEventListener('click',()=>{if(btn.disabled)return;const old=btn.textContent;setTimeout(()=>{if(!$('orderConfirmation')?.classList.contains('hidden'))return;btn.disabled=true;btn.textContent='Placing order…';const obs=new MutationObserver(()=>{const msg=($('orderMessage')?.textContent||'').toLowerCase(),done=!$('orderConfirmation')?.classList.contains('hidden');if(done||msg.includes('error')||msg.includes('could not')||msg.includes('required')||msg.includes('please')){btn.disabled=false;btn.textContent=old;obs.disconnect();}});if($('orderMessage'))obs.observe($('orderMessage'),{childList:true,subtree:true,characterData:true});setTimeout(()=>{btn.disabled=false;btn.textContent=old;obs.disconnect();},12000);},0);});}
+            function hookCart(){const oldRender=window.renderCart;if(typeof oldRender==='function'&&!oldRender.__mjWrapped){const wrapped=function(){const r=oldRender.apply(this,arguments);updateCartBadge();return r;};wrapped.__mjWrapped=true;window.renderCart=wrapped;}document.addEventListener('click',e=>{const add=e.target.closest('button[data-megjet-add-id]');if(add)setTimeout(()=>{updateCartBadge();const name=window.MEGJET_CART_PRODUCTS?.[add.getAttribute('data-megjet-add-id')]?.name||'Item';toast(name+' added to cart');},0);});}
+            function init(){addNetworkPill();buildMobileNav();bindCategoryChips();optimizeImages();protectOrderButton();hookCart();updateNetwork();window.addEventListener('online',()=>{updateNetwork();toast('Back online. Live updates resumed.','ok');});window.addEventListener('offline',updateNetwork);window.addEventListener('hashchange',syncRoleNav);document.addEventListener('keydown',e=>{if(e.key==='Escape')$('customerAccountClose')?.click();});}
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+          })();
+          </script>
+          '''
+          if 'id="megjet-speed-professional-upgrade"' not in text:
+              text=text.replace('</head>',CSS+'\n</head>')
+          if 'id="megjet-speed-professional-upgrade-js"' not in text:
+              text=text.replace('</body>',JS+'\n</body>')
+          p.write_text(text,encoding='utf-8')
+          PY
+
+      - name: Regression checks
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re, subprocess, sys, tempfile
+          t=Path('index.html').read_text(encoding='utf-8')
+          required=['id="customerSearch"','id="cartBox"','id="admin"','id="vendor"','id="rider"','megjet-speed-professional-upgrade-js']
+          missing=[x for x in required if x not in t]
+          if missing: raise SystemExit('Missing required markers: '+str(missing))
+          if t.count('window.MEGJET_ADD_FROM_BUTTON=function')!=1: raise SystemExit('Cart handler count is not 1')
+          ids=re.findall(r'\bid=["\']([^"\']+)["\']',t)
+          dup=sorted({x for x in ids if ids.count(x)>1})
+          if dup: raise SystemExit('Duplicate IDs: '+str(dup[:20]))
+          scripts=re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>',t,re.I|re.S)
+          for i,code in enumerate(scripts):
+              f=Path('/tmp')/f'megjet_{i}.js'; f.write_text(code,encoding='utf-8')
+              r=subprocess.run(['node','--check',str(f)],capture_output=True,text=True)
+              if r.returncode: raise SystemExit(f'JS syntax failure in script {i}: '+r.stderr)
+          print(f'PASS: {len(scripts)} inline scripts, {len(ids)} IDs, one cart handler')
+          PY
+
+      - name: Commit upgraded index
+        shell: bash
+        run: |
+          if git diff --quiet -- index.html; then
+            echo "No index changes required"
+            exit 0
+          fi
+          git config user.name "Megjet Upgrade Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          git commit -m "Professional UX and reliability upgrade"
+          git push
