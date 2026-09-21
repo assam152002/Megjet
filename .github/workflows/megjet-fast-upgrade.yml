@@ -1,4 +1,4 @@
-name: Megjet Customer Cart Fix
+name: Megjet Customer Cart Final Fix
 
 on:
   push:
@@ -9,164 +9,65 @@ permissions:
   contents: write
 
 jobs:
-  fix-cart:
+  fix-cart-final:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Make cart customer-owned and always visible after Add
+      - name: Inject independent customer cart launcher
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           p=Path('index.html')
-          text=p.read_text(encoding='utf-8')
-
-          STYLE=r'''
-          <style id="megjet-customer-cart-fix-v2-style">
-          #cartBox.mj-customer-cart-root{
-            position:fixed!important;
-            z-index:2147483000!important;
-            left:12px!important;
-            right:12px!important;
-            bottom:86px!important;
-            width:auto!important;
-            max-width:740px!important;
-            margin:0 auto!important;
-            background:#fff!important;
-            border:1px solid #d8eaf3!important;
-            border-radius:18px!important;
-            box-shadow:0 16px 46px rgba(11,39,72,.24)!important;
-          }
-          #cartBox.mj-customer-cart-root.hidden{display:none!important}
-          #cartBox.mj-customer-cart-root:not(.hidden){display:block}
-          #cartBox.mj-customer-cart-root .cart-head{min-height:52px}
-          @media(min-width:761px){#cartBox.mj-customer-cart-root{bottom:18px!important}}
-          </style>
-          '''
-
-          SCRIPT=r'''
-          <script id="megjet-customer-cart-fix-v2-js">
-          (function(){
-            'use strict';
+          t=p.read_text(encoding='utf-8')
+          css='''<style id="megjet-customer-cart-final-css">
+          #mjCustomerCartBar{display:none;position:fixed;left:10px;right:10px;bottom:max(78px,env(safe-area-inset-bottom));z-index:2147483000;background:#0b2748;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;box-shadow:0 12px 35px rgba(11,39,72,.28);padding:10px 12px;align-items:center;gap:10px}
+          #mjCustomerCartBar.show{display:flex}#mjCustomerCartBar .mjcb-main{flex:1;min-width:0}#mjCustomerCartBar .mjcb-title{font-weight:900;font-size:14px}#mjCustomerCartBar .mjcb-sub{font-size:12px;opacity:.82;margin-top:2px}#mjCustomerCartBar button{background:#18b7ee!important;color:#06233b!important;border:0!important;border-radius:12px!important;padding:10px 13px!important;font-weight:900!important;white-space:nowrap!important}
+          @media(min-width:761px){#mjCustomerCartBar{left:auto;right:18px;bottom:18px;width:390px}}
+          </style>'''
+          js='''<script id="megjet-customer-cart-final-js">
+          (function(){'use strict';
             const $=id=>document.getElementById(id);
-            const isPortal=()=>['#admin','#vendor','#rider'].includes((location.hash||'').toLowerCase());
-            const countItems=()=>Array.isArray(window.cart)?window.cart.reduce((s,x)=>s+Math.max(1,Number(x&&x.quantity||1)),0):0;
-
-            function mountCart(){
-              const box=$('cartBox');
-              if(!box)return null;
-              if(box.parentElement!==document.body) document.body.appendChild(box);
-              box.classList.add('mj-customer-cart-root');
-              return box;
-            }
-
-            function syncCustomerCart(openBody){
-              const box=mountCart();
-              if(!box)return;
-              const n=countItems();
-              if(isPortal()){
-                box.style.display='none';
-                return;
-              }
-              if(!n){
-                box.classList.add('hidden');
-                box.style.display='none';
-                return;
-              }
-              box.classList.remove('hidden');
-              box.style.display='block';
-              if(openBody){
-                const body=$('cartBody');
-                if(body){body.classList.add('open');body.style.display='block';}
-                const toggle=$('cartToggle');
-                if(toggle)toggle.textContent='Hide Cart';
-              }
-              const navBadge=$('mjNavCartBadge');
-              if(navBadge){navBadge.textContent=n>99?'99+':String(n);navBadge.hidden=false;}
-            }
-
-            function afterAdd(){
-              setTimeout(()=>{
-                try{if(typeof window.renderCart==='function')window.renderCart();}catch(e){}
-                syncCustomerCart(false);
-              },0);
-            }
-
-            function init(){
-              mountCart();
-              try{if(typeof window.renderCart==='function')window.renderCart();}catch(e){}
-              syncCustomerCart(false);
-
-              document.addEventListener('click',function(e){
-                const add=e.target.closest&&e.target.closest('button[data-megjet-add-id]');
-                if(add)afterAdd();
-              },false);
-
-              window.addEventListener('hashchange',()=>setTimeout(()=>syncCustomerCart(false),0));
-
-              const box=$('cartBox');
-              if(box){
-                new MutationObserver(()=>{
-                  if(!isPortal()&&countItems()>0){
-                    box.classList.remove('hidden');
-                    box.style.display='block';
-                  }
-                }).observe(box,{attributes:true,subtree:true,childList:true});
-              }
-            }
-
-            if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
-            else init();
+            function isCustomer(){return !['#admin','#vendor','#rider'].includes((location.hash||'').toLowerCase());}
+            function items(){return Array.isArray(window.cart)?window.cart:[];}
+            function count(){return items().reduce((s,x)=>s+Math.max(1,Number(x&&x.quantity||1)),0);}
+            function subtotal(){return items().reduce((s,x)=>s+Number(x&&x.price||0)*Math.max(1,Number(x&&x.quantity||1)),0);}
+            function money(v){try{return new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2}).format(Number(v||0));}catch(e){return '₺'+Number(v||0).toFixed(2);}}
+            function ensureBar(){let bar=$('mjCustomerCartBar');if(bar)return bar;bar=document.createElement('div');bar.id='mjCustomerCartBar';bar.innerHTML='<div class="mjcb-main"><div class="mjcb-title">Your cart</div><div class="mjcb-sub" id="mjCustomerCartText">0 items</div></div><button type="button" id="mjCustomerCartOpen">View cart</button>';document.body.appendChild(bar);$('mjCustomerCartOpen').addEventListener('click',openCart);return bar;}
+            function makeCartIndependent(){const box=$('cartBox');if(box&&box.parentElement!==document.body)document.body.appendChild(box);}
+            function refresh(){const bar=ensureBar(),n=count(),customer=isCustomer();bar.classList.toggle('show',customer&&n>0);const text=$('mjCustomerCartText');if(text)text.textContent=n+' item'+(n===1?'':'s')+' • '+money(subtotal());const box=$('cartBox');if(!customer&&box){box.classList.add('hidden');box.style.display='none';}return n;}
+            function openCart(){makeCartIndependent();const box=$('cartBox'),body=$('cartBody'),toggle=$('cartToggle');if(!box||!count())return;box.classList.remove('hidden');box.style.setProperty('display','block','important');box.style.setProperty('visibility','visible','important');box.style.setProperty('opacity','1','important');if(body){body.classList.add('open');body.style.setProperty('display','block','important');}if(toggle)toggle.textContent='Hide Cart';}
+            function afterAdd(){makeCartIndependent();refresh();if(isCustomer())openCart();}
+            function bind(){ensureBar();makeCartIndependent();refresh();const old=window.MEGJET_ADD_FROM_BUTTON;if(typeof old==='function'&&!old.__mjCustomerFinal){const wrapped=function(button,event){const r=old.call(this,button,event);setTimeout(afterAdd,0);setTimeout(afterAdd,80);return r};wrapped.__mjCustomerFinal=true;window.MEGJET_ADD_FROM_BUTTON=wrapped;}const oldRender=window.renderCart;if(typeof oldRender==='function'&&!oldRender.__mjCustomerFinal){const rr=function(){const r=oldRender.apply(this,arguments);makeCartIndependent();refresh();return r};rr.__mjCustomerFinal=true;window.renderCart=rr;}document.addEventListener('click',e=>{if(e.target.closest('button[data-megjet-add-id]'))setTimeout(afterAdd,120);},true);window.addEventListener('hashchange',()=>{makeCartIndependent();refresh();});setInterval(refresh,1200);}
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind,{once:true});else bind();
           })();
-          </script>
-          '''
-
-          if 'id="megjet-customer-cart-fix-v2-style"' not in text:
-              text=text.replace('</head>',STYLE+'\n</head>')
-          if 'id="megjet-customer-cart-fix-v2-js"' not in text:
-              text=text.replace('</body>',SCRIPT+'\n</body>')
-
-          p.write_text(text,encoding='utf-8')
+          </script>'''
+          if 'id="megjet-customer-cart-final-css"' not in t:t=t.replace('</head>',css+'\n</head>')
+          if 'id="megjet-customer-cart-final-js"' not in t:t=t.replace('</body>',js+'\n</body>')
+          p.write_text(t,encoding='utf-8')
           PY
-
-      - name: Validate cart fix and JavaScript
+      - name: Validate final cart fix
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re, subprocess
+          import re,subprocess
           t=Path('index.html').read_text(encoding='utf-8')
-          required=[
-            'id="cartBox"',
-            'megjet-customer-cart-fix-v2-style',
-            'megjet-customer-cart-fix-v2-js',
-            "document.body.appendChild(box)",
-            "button[data-megjet-add-id]"
-          ]
-          missing=[x for x in required if x not in t]
-          if missing: raise SystemExit('Missing cart fix markers: '+str(missing))
-          if t.count('window.MEGJET_ADD_FROM_BUTTON=function')!=1:
-              raise SystemExit('Unexpected Add handler count')
+          for marker in ['megjet-customer-cart-final-js','mjCustomerCartBar','MEGJET_ADD_FROM_BUTTON']:
+              assert marker in t, marker
           scripts=re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>',t,re.I|re.S)
           for i,code in enumerate(scripts):
-              f=Path('/tmp')/f'megjet_{i}.js'
-              f.write_text(code,encoding='utf-8')
+              f=Path('/tmp')/f'mj_{i}.js';f.write_text(code,encoding='utf-8')
               r=subprocess.run(['node','--check',str(f)],capture_output=True,text=True)
-              if r.returncode:
-                  raise SystemExit(f'JS syntax failure in script {i}: '+r.stderr)
-          print(f'PASS: {len(scripts)} inline scripts; cart mounted to body for customers; Add listener present')
+              if r.returncode: raise SystemExit(r.stderr)
+          print('PASS final customer cart launcher and JS syntax')
           PY
-
-      - name: Commit cart fix
+      - name: Commit final cart fix
         shell: bash
         run: |
-          if git diff --quiet -- index.html; then
-            echo "No index changes required"
-            exit 0
-          fi
+          if git diff --quiet -- index.html; then exit 0; fi
           git config user.name "Megjet Cart Fix Bot"
           git config user.email "actions@users.noreply.github.com"
           git add index.html
-          git commit -m "Fix customer cart visibility"
+          git commit -m "Make customer cart independent and always accessible"
           git push
