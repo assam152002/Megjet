@@ -1,4 +1,4 @@
-name: Megjet Persistent Customer Cart Fix
+name: Megjet Clean Cart Rebuild
 
 on:
   push:
@@ -9,193 +9,185 @@ permissions:
   contents: write
 
 jobs:
-  fix-persistent-cart:
+  rebuild-cart:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Replace conflicting cart launcher
+      - name: Remove previous cart patches and install one clean cart
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
-
           p=Path('index.html')
           t=p.read_text(encoding='utf-8')
 
-          css=r'''<style id="megjet-customer-cart-final-css">
-          #mjCustomerCartBar{display:none;position:fixed;left:10px;right:10px;bottom:max(78px,env(safe-area-inset-bottom));z-index:2147483000;background:#0b2748;color:#fff;border:1px solid rgba(255,255,255,.14);border-radius:18px;box-shadow:0 12px 35px rgba(11,39,72,.28);padding:10px 12px;align-items:center;gap:10px}
-          #mjCustomerCartBar.show{display:flex!important}
-          #mjCustomerCartBar .mjcb-main{flex:1;min-width:0}
-          #mjCustomerCartBar .mjcb-title{font-weight:900;font-size:14px}
-          #mjCustomerCartBar .mjcb-sub{font-size:12px;opacity:.82;margin-top:2px}
-          #mjCustomerCartBar button{background:#18b7ee!important;color:#06233b!important;border:0!important;border-radius:12px!important;padding:10px 13px!important;font-weight:900!important;white-space:nowrap!important}
-          @media(min-width:761px){#mjCustomerCartBar{left:auto;right:18px;bottom:18px;width:390px}}
+          # Remove every later experimental cart patch by known IDs.
+          ids=[
+            'megjet-customer-cart-fix-v2-style','megjet-customer-cart-fix-v2-js',
+            'megjet-customer-cart-final-css','megjet-customer-cart-final-js',
+            'megjet-customer-cart-launcher-style','megjet-customer-cart-launcher-js',
+            'megjet-persistent-cart-css','megjet-persistent-cart-js',
+            'megjet-clean-cart-css','megjet-clean-cart-js'
+          ]
+          for i in ids:
+            t=re.sub(r'<style[^>]*id=["\']'+re.escape(i)+r'["\'][^>]*>.*?</style>','',t,flags=re.S|re.I)
+            t=re.sub(r'<script[^>]*id=["\']'+re.escape(i)+r'["\'][^>]*>.*?</script>','',t,flags=re.S|re.I)
+
+          css=r'''<style id="megjet-clean-cart-css">
+          #cartBox.mj-clean-cart{
+            position:fixed!important;left:12px!important;right:12px!important;
+            bottom:84px!important;z-index:2147482000!important;margin:0 auto!important;
+            max-width:720px!important;background:#fff!important;border:1px solid #d9eaf3!important;
+            border-radius:20px!important;box-shadow:0 18px 50px rgba(11,39,72,.22)!important;
+            overflow:hidden!important
+          }
+          #cartBox.mj-clean-cart.hidden{display:none!important}
+          #cartBox.mj-clean-cart:not(.hidden){display:block!important}
+          #cartBox.mj-clean-cart .cart-head{padding:12px 14px!important;min-height:54px!important}
+          #cartBox.mj-clean-cart .cart-body{max-height:58vh;overflow:auto}
+          #cartBox.mj-clean-cart .row{gap:10px}
+          #cartBox.mj-clean-cart .mj-qty{display:inline-flex;align-items:center;gap:7px;margin-left:8px}
+          #cartBox.mj-clean-cart .mj-qty button{width:28px;height:28px;padding:0!important;border-radius:9px!important}
+          @media(min-width:761px){#cartBox.mj-clean-cart{left:auto!important;right:20px!important;bottom:20px!important;width:430px!important}}
           </style>'''
 
-          js=r'''<script id="megjet-customer-cart-final-js">
-          (function(){'use strict';
+          js=r'''<script id="megjet-clean-cart-js">
+          (function(){
+            'use strict';
+            const KEY='megjet_cart';
             const $=id=>document.getElementById(id);
+            const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+            const money=v=>{try{return new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY'}).format(Number(v||0));}catch(e){return '₺'+Number(v||0).toFixed(2)}};
 
-            function liveItems(){
-              if(Array.isArray(window.cart) && window.cart.length) return window.cart;
-              try{
-                const saved=JSON.parse(localStorage.getItem('megjet_cart')||'[]');
-                return Array.isArray(saved)?saved:[];
-              }catch(e){ return []; }
+            function state(){
+              if(!Array.isArray(window.cart)) window.cart=[];
+              return window.cart;
             }
-            function count(){return liveItems().reduce((s,x)=>s+Math.max(1,Number(x&&x.quantity||1)),0);}
-            function subtotal(){return liveItems().reduce((s,x)=>s+Number(x&&x.price||0)*Math.max(1,Number(x&&x.quantity||1)),0);}
-            function money(v){try{return new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2}).format(Number(v||0));}catch(e){return '₺'+Number(v||0).toFixed(2);}}
-
-            function portalVisible(){
+            function save(){try{localStorage.setItem(KEY,JSON.stringify(state()))}catch(e){}}
+            function portalOpen(){
               return ['admin','vendor','rider'].some(id=>{
-                const el=$(id); if(!el) return false;
-                const st=getComputedStyle(el);
-                return !el.classList.contains('hidden') && st.display!=='none' && st.visibility!=='hidden';
+                const e=$(id); if(!e)return false;
+                const s=getComputedStyle(e);
+                return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden';
               });
             }
-
-            function ensureBar(){
-              let bar=$('mjCustomerCartBar');
-              if(bar) return bar;
-              bar=document.createElement('div');
-              bar.id='mjCustomerCartBar';
-              bar.innerHTML='<div class="mjcb-main"><div class="mjcb-title">Your cart</div><div class="mjcb-sub" id="mjCustomerCartText">0 items</div></div><button type="button" id="mjCustomerCartOpen">View cart</button>';
-              document.body.appendChild(bar);
-              $('mjCustomerCartOpen').addEventListener('click',openCart);
-              return bar;
-            }
-
-            function makeCartIndependent(){
+            function mount(){
               const box=$('cartBox');
-              if(box && box.parentElement!==document.body) document.body.appendChild(box);
+              if(!box)return null;
+              if(box.parentElement!==document.body)document.body.appendChild(box);
+              box.classList.add('mj-clean-cart');
+              return box;
+            }
+            function qty(){return state().reduce((a,x)=>a+Math.max(1,Number(x.quantity||1)),0)}
+            function sub(){return state().reduce((a,x)=>a+Number(x.price||0)*Math.max(1,Number(x.quantity||1)),0)}
+            function delivery(){return typeof window.DELIVERY!=='undefined'?Number(window.DELIVERY||0):(typeof DELIVERY!=='undefined'?Number(DELIVERY||0):0)}
+
+            function draw(){
+              const box=mount(); if(!box)return;
+              const n=qty(), subtotal=sub(), del=delivery(), grand=subtotal+del;
+              if($('count'))$('count').textContent=n+' item'+(n===1?'':'s');
+              if($('cartBadge'))$('cartBadge').textContent=n;
+              if($('subtotal'))$('subtotal').textContent=money(subtotal);
+              if($('cartDelivery'))$('cartDelivery').textContent=money(del);
+              if($('total'))$('total').textContent=money(grand);
+              if($('cartTotal'))$('cartTotal').textContent=money(grand);
+              if($('checkoutBtn'))$('checkoutBtn').classList.toggle('hidden',!n);
+              const items=$('cartItems');
+              if(items)items.innerHTML=state().map((x,i)=>{
+                const q=Math.max(1,Number(x.quantity||1));
+                return '<div class="row"><span><b>'+esc(x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor">'+esc(x.vendor_name)+'</div>':'')+
+                '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
+                ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
+              }).join('');
+              const hide=!n||portalOpen();
+              box.classList.toggle('hidden',hide);
+              box.style.display=hide?'none':'block';
+              const nav=$('mjNavCartBadge');
+              if(nav){nav.textContent=n>99?'99+':String(n);nav.hidden=!n}
+              save();
             }
 
-            function closeLegacyCart(){
-              const box=$('cartBox'),body=$('cartBody'),toggle=$('cartToggle');
-              if(body){body.classList.remove('open');body.style.setProperty('display','none','important');}
-              if(box){box.classList.add('hidden');box.style.setProperty('display','none','important');}
-              if(toggle) toggle.textContent='View Cart';
+            function addProduct(product){
+              if(!product)return false;
+              const a=state(), id=String(product.id??''), vendor=String(product.vendor_id??'');
+              const found=a.find(x=>String(x.id??'')===id&&String(x.vendor_id??'')===vendor);
+              if(found)found.quantity=Math.max(1,Number(found.quantity||1))+1;
+              else a.push({...product,price:Number(product.price||0),quantity:1});
+              draw();
+              return false;
             }
 
-            function refresh(){
-              const bar=ensureBar(), n=count(), portal=portalVisible();
-              bar.classList.toggle('show',!portal && n>0);
-              const text=$('mjCustomerCartText');
-              if(text) text.textContent=n+' item'+(n===1?'':'s')+' • '+money(subtotal());
-              if(portal) closeLegacyCart();
-              return n;
+            window.megjetAddDirect=function(token){
+              const p=token&&window.MEGJET_CART_PRODUCTS?window.MEGJET_CART_PRODUCTS[token]:null;
+              if(!p){console.error('Megjet cart product missing',token);return false}
+              return addProduct(p);
+            };
+            window.MEGJET_ADD_FROM_BUTTON=function(button,event){
+              if(event){event.preventDefault();event.stopPropagation()}
+              return window.megjetAddDirect(button&&button.getAttribute('data-megjet-add-id'));
+            };
+
+            document.addEventListener('click',e=>{
+              const minus=e.target.closest&&e.target.closest('[data-mj-minus]');
+              const plus=e.target.closest&&e.target.closest('[data-mj-plus]');
+              const rem=e.target.closest&&e.target.closest('[data-mj-remove]');
+              if(!minus&&!plus&&!rem)return;
+              e.preventDefault();e.stopPropagation();
+              const a=state();
+              if(plus){const i=Number(plus.dataset.mjPlus);if(a[i])a[i].quantity=Math.max(1,Number(a[i].quantity||1))+1}
+              if(minus){const i=Number(minus.dataset.mjMinus);if(a[i]){const q=Math.max(1,Number(a[i].quantity||1));if(q<=1)a.splice(i,1);else a[i].quantity=q-1}}
+              if(rem){const i=Number(rem.dataset.mjRemove);if(a[i])a.splice(i,1)}
+              draw();
+            },true);
+
+            function init(){
+              mount();
+              try{
+                const saved=JSON.parse(localStorage.getItem(KEY)||'[]');
+                if(Array.isArray(saved)&&(!Array.isArray(window.cart)||!window.cart.length))window.cart=saved;
+              }catch(e){}
+              draw();
+              window.addEventListener('hashchange',draw);
+              window.addEventListener('pageshow',draw);
             }
-
-            function openCart(){
-              if(!count() || portalVisible()) return;
-              makeCartIndependent();
-              const box=$('cartBox'),body=$('cartBody'),toggle=$('cartToggle');
-              if(!box) return;
-              box.classList.remove('hidden');
-              box.style.setProperty('display','block','important');
-              box.style.setProperty('visibility','visible','important');
-              box.style.setProperty('opacity','1','important');
-              if(body){body.classList.add('open');body.style.setProperty('display','block','important');}
-              if(toggle) toggle.textContent='Hide Cart';
-            }
-
-            function afterAdd(){
-              makeCartIndependent();
-              closeLegacyCart();
-              refresh();
-            }
-
-            function installDirectAdd(){
-              const original=window.megjetAddDirect;
-              if(typeof original!=='function' || original.__mjPersistentCart) return;
-              const direct=function(token){
-                const product=(token && window.MEGJET_CART_PRODUCTS)?window.MEGJET_CART_PRODUCTS[token]:null;
-                let result=false;
-                if(product && typeof window.add==='function'){
-                  result=window.add({...product,price:Number(product.price||0),quantity:1});
-                }else{
-                  result=original.call(this,token);
-                }
-                afterAdd();
-                requestAnimationFrame(afterAdd);
-                setTimeout(afterAdd,60);
-                setTimeout(afterAdd,180);
-                return false;
-              };
-              direct.__mjPersistentCart=true;
-              window.megjetAddDirect=direct;
-            }
-
-            function bind(){
-              ensureBar();
-              makeCartIndependent();
-              installDirectAdd();
-              closeLegacyCart();
-              refresh();
-
-              // Keep the compact customer cart persistent, but never auto-open the large cart.
-              document.addEventListener('click',e=>{
-                if(e.target.closest('button[data-megjet-add-id]')){
-                  setTimeout(()=>{installDirectAdd();afterAdd();},0);
-                  setTimeout(afterAdd,120);
-                }
-              },true);
-
-              window.addEventListener('hashchange',()=>{closeLegacyCart();refresh();});
-              window.addEventListener('pageshow',refresh);
-              window.addEventListener('storage',refresh);
-              setInterval(()=>{installDirectAdd();refresh();},700);
-            }
-
-            if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',bind,{once:true});
-            else bind();
+            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
           })();
           </script>'''
 
-          style_pat=r'<style id="megjet-customer-cart-final-css">.*?</style>'
-          script_pat=r'<script id="megjet-customer-cart-final-js">.*?</script>'
-
-          if re.search(style_pat,t,re.S):
-              t=re.sub(style_pat,lambda m:css,t,count=1,flags=re.S)
-          else:
-              t=t.replace('</head>',css+'\n</head>')
-
-          if re.search(script_pat,t,re.S):
-              t=re.sub(script_pat,lambda m:js,t,count=1,flags=re.S)
-          else:
-              t=t.replace('</body>',js+'\n</body>')
-
+          t=t.replace('</head>',css+'\n</head>')
+          t=t.replace('</body>',js+'\n</body>')
           p.write_text(t,encoding='utf-8')
           PY
 
-      - name: Validate persistent cart fix
+      - name: Validate whole app and clean cart
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re,subprocess
           t=Path('index.html').read_text(encoding='utf-8')
-          assert t.count('id="megjet-customer-cart-final-js"')==1
-          assert t.count('id="megjet-customer-cart-final-css"')==1
-          for marker in ['function portalVisible()','function closeLegacyCart()','window.megjetAddDirect=direct','never auto-open the large cart']:
+          assert t.count('id="megjet-clean-cart-css"')==1
+          assert t.count('id="megjet-clean-cart-js"')==1
+          for bad in ['megjet-customer-cart-fix-v2-js','megjet-customer-cart-final-js','megjet-persistent-cart-js']:
+              assert bad not in t, bad
+          for marker in ['window.MEGJET_ADD_FROM_BUTTON=function','data-mj-minus','data-mj-plus','data-mj-remove','localStorage.setItem(KEY']:
               assert marker in t, marker
           scripts=re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>',t,re.I|re.S)
           for i,code in enumerate(scripts):
-              f=Path('/tmp')/f'mj_{i}.js';f.write_text(code,encoding='utf-8')
+              f=Path('/tmp')/f'megjet_{i}.js';f.write_text(code,encoding='utf-8')
               r=subprocess.run(['node','--check',str(f)],capture_output=True,text=True)
-              if r.returncode: raise SystemExit(f'JS syntax failure in script {i}: '+r.stderr)
-          print('PASS: persistent customer cart fix and all inline JS syntax')
+              if r.returncode: raise SystemExit(f'Inline JS {i} failed: '+r.stderr)
+          print('PASS: whole Megjet inline JavaScript + clean cart syntax')
           PY
 
-      - name: Commit persistent cart fix
+      - name: Commit clean cart
         shell: bash
         run: |
-          if git diff --quiet -- index.html; then echo 'No index changes'; exit 0; fi
-          git config user.name "Megjet Cart Fix Bot"
+          if git diff --quiet -- index.html; then echo "No changes"; exit 0; fi
+          git config user.name "Megjet Rebuild Bot"
           git config user.email "actions@users.noreply.github.com"
           git add index.html
-          git commit -m "Keep customer cart visible after adding items"
+          git commit -m "Rebuild customer cart cleanly"
           git push
