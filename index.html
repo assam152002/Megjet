@@ -765,6 +765,7 @@ function megjetSupportHTML(orderId=""){
 
 
 
+
 <style id="megjet-customer-pro-css">
 :root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
 #mjCustomerNav{display:none}
@@ -776,6 +777,9 @@ function megjetSupportHTML(orderId=""){
 #mjCustomerStatus.offline{color:#a12b30}
 #customerSearch{transition:border-color .2s,box-shadow .2s}
 #customerSearch:focus{border-color:#0eaee8!important;box-shadow:0 0 0 4px rgba(14,174,232,.12)!important}
+.megjet-add-button{min-height:40px!important;height:auto!important;padding:9px 14px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1.1!important;overflow:visible!important}
+.account-mini-actions{min-height:42px!important;align-items:center!important}
+@media(max-width:600px){.megjet-add-button{min-height:42px!important;padding:10px 14px!important;font-size:14px!important}.vendor-profile-cats .item{min-height:108px!important;height:auto!important}}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(14,174,232,.35)!important;outline-offset:2px!important}
 #cartBox.mj-clean-cart #cartItems .row{padding:12px 0!important;border-bottom:1px solid #edf3f7!important;align-items:center!important}
 #cartBox.mj-clean-cart #cartItems .row:last-child{border-bottom:0!important}
@@ -5050,6 +5054,7 @@ document.addEventListener("DOMContentLoaded",function(){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
 </script>
+
 
 
 
