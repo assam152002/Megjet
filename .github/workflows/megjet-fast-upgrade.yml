@@ -40,7 +40,11 @@ jobs:
             #mjCustomerNav button:active{background:#eef9fe!important;color:var(--mj-pro-blue)!important}
             #mjNavCartBadge{position:absolute;top:5px;left:calc(50% + 7px);min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:#e5484d;color:#fff;font-size:10px;line-height:17px;text-align:center}
             #cartBox.mj-clean-cart{bottom:84px!important;left:10px!important;right:10px!important;border-radius:18px!important}
-            #cartBox.mj-clean-cart .cart-body{max-height:52vh!important}
+            #cartBox.mj-clean-cart .cart-body{max-height:min(58vh,520px)!important;padding:10px 14px 14px!important}
+            #cartBox.mj-clean-cart #cartItems .row{grid-template-columns:1fr auto!important;gap:10px!important}
+            #cartBox.mj-clean-cart .mj-qty button{min-width:36px!important;width:36px!important;height:36px!important;font-size:18px!important}
+            #cartBox.mj-clean-cart [data-mj-remove]{min-height:36px!important;padding:6px 10px!important}
+            #cartBox.mj-clean-cart .cart-head{padding:12px!important}
             #customerSearch{min-height:46px!important;font-size:16px!important}
             button{touch-action:manipulation}
           }
