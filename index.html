@@ -614,7 +614,7 @@ button,.vendor-view{min-height:42px}
   #cartBox.megjet-cart-fixed .cart-actions button{width:100%!important;min-height:42px!important;}
 }
 
-</style>
+.phase3-ops-bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 14px;padding:12px;border:1px solid #dbe9f2;border-radius:14px;background:#f7fbfd}.phase3-ops-bar button{margin:0}.phase3-workflow{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.phase3-step{padding:7px 10px;border-radius:999px;background:#f1eee9;color:#6f6258;font-size:12px;font-weight:800}.phase3-step.done{background:#dff5e7;color:#14532d}.phase3-step.current{background:#e8f1ff;color:#174b7a}.phase3-step.next{background:#fff0d0;color:#76530a}.phase3-gps-note{font-size:12px;margin-top:8px}</style>
 
 <script>
 /* Megjet Support — v32 */
@@ -1104,7 +1104,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
 
       </section>
       <section id="adminSectionOrders" class="admin-section">
-      <div class="admin-tools"><input id="adminSearch" type="search" placeholder="Search name, phone, address or order #"><select id="adminStatusFilter"><option value="all">All orders</option><option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="preparing">Preparing</option><option value="ready_for_pickup">Ready for Pickup</option><option value="out_for_delivery">Out for Delivery</option><option value="delivered">Delivered</option><option value="cancelled">Cancelled</option></select><button id="adminClearFilters" class="secondary" type="button">Clear</button></div>
+      <div class="admin-tools"><input id="adminSearch" type="search" placeholder="Search name, phone, address or order #"><select id="adminStatusFilter"><option value="all">All orders</option><option value="pending">Pending</option><option value="confirmed">Confirmed</option><option value="preparing">Preparing</option><option value="ready_for_pickup">Ready for Pickup</option><option value="out_for_delivery">Out for Delivery</option><option value="delivered">Delivered</option><option value="cancelled">Cancelled</option></select><button id="adminClearFilters" class="secondary" type="button">Clear</button></div><div class="phase3-ops-bar"><button id="phase3AutoAssign" type="button">🤖 Auto-Assign Ready Orders</button><span id="phase3AutoAssignMessage" class="muted">Assigns ready orders to active available riders.</span></div>
       <div id="adminOrders"></div>
       </section>
       <section id="adminSectionVendors" class="admin-section">
@@ -2838,12 +2838,50 @@ function renderRiderDashboard(){
       <div class="muted">📍 ${escapeHtml(o.delivery_address||'No address')}</div>
       ${o.customer_phone?`<div class="order-customer-actions"><a href="tel:${escapeHtml(phoneForCall(o.customer_phone))}">📞 Call Customer</a><a target="_blank" rel="noopener" href="https://wa.me/${escapeHtml(phoneForWhatsApp(o.customer_phone))}">💬 WhatsApp</a></div>`:''}
       <div class="row"><span>Order Total</span><b>${money(o.total)}</b></div>
+      ${renderRiderPhase3Workflow(o)}
       ${waiting?`<div class="rider-note">📦 Order is ready for pickup.</div><div class="rider-order-actions"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.delivery_address||'Gazimagusa')}">🗺️ View Route</a><button type="button" onclick="riderAcceptDelivery('${String(o.id).replaceAll("'","\\'")}')">🚚 Accept Delivery</button></div>`:''}
       ${canDeliver?`<div class="rider-order-actions"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.delivery_address||'Gazimagusa')}">🗺️ Navigate</a><button type="button" onclick="riderMarkDelivered('${String(o.id).replaceAll("'","\\'")}')">✅ Mark Delivered</button></div>`:''}
       ${st==='delivered'?`<div class="rider-note">🏠 Delivery completed. You are available for another order.</div>`:''}
       ${st==='cancelled'?`<div class="rider-note">❌ This order was cancelled.</div>`:''}
     </div>`;
   }).join('');
+}
+
+function renderRiderPhase3Workflow(order){
+  const st=normalizedStatus(order.status);
+  const steps=[['ready_for_pickup','📦 Ready'],['out_for_delivery','🛵 On the way'],['delivered','✅ Delivered']];
+  const idx=steps.findIndex(x=>x[0]===st);
+  const html=steps.map((x,i)=>{const cls=i<idx?'done':i===idx?'current':'next';return `<span class="phase3-step ${cls}">${x[1]}</span>`;}).join('');
+  return `<div class="phase3-workflow" aria-label="Delivery workflow">${html}</div>`;
+}
+
+async function autoAssignReadyOrders(){
+  const msg=$("phase3AutoAssignMessage");
+  try{
+    if(msg)msg.textContent='Checking ready orders and available riders…';
+    await loadAdminRidersAndAssignments();
+    const ready=(adminOrdersCache||[]).filter(o=>normalizedStatus(o.status)==='ready_for_pickup'&&!adminOrderRiderMap[String(o.id)]);
+    const riders=(adminRidersCache||[]).filter(r=>r.active!==false&&r.available!==false);
+    if(!ready.length){if(msg)msg.textContent='No unassigned ready orders right now.';return;}
+    if(!riders.length){if(msg)msg.textContent='No active available riders are available.';return;}
+    let assigned=0;
+    const workload={};
+    for(const r of riders)workload[String(r.id)]=0;
+    for(const o of (adminOrdersCache||[])){
+      const a=adminOrderRiderMap[String(o.id)];
+      if(a&&workload[String(a.rider_id)]!==undefined&&['ready_for_pickup','out_for_delivery'].includes(normalizedStatus(o.status)))workload[String(a.rider_id)]++;
+    }
+    for(const o of ready){
+      const candidate=[...riders].sort((a,b)=>(workload[String(a.id)]||0)-(workload[String(b.id)]||0))[0];
+      if(!candidate)continue;
+      await assignRiderToOrder(o.id,candidate.id);
+      adminOrderRiderMap[String(o.id)]={...candidate,rider_id:candidate.id,id:candidate.id};
+      workload[String(candidate.id)]=(workload[String(candidate.id)]||0)+1;
+      assigned++;
+    }
+    if(msg)msg.textContent=`✓ Assigned ${assigned} ready order${assigned===1?'':'s'} automatically.`;
+    await loadAdminOrders();
+  }catch(e){if(msg)msg.textContent='Auto-assignment failed: '+e.message;}
 }
 
 async function riderMarkDelivered(orderId){
@@ -3905,6 +3943,7 @@ $("menuSaveBtn").onclick=saveMenuItem;
 $("vendorLogin").onclick=vendorLogin;
 $("riderLogin").onclick=riderLogin;
 $("riderRefresh").onclick=loadRiderDashboard;
+if($("phase3AutoAssign"))$("phase3AutoAssign").onclick=autoAssignReadyOrders;
 $("riderLogout").onclick=()=>{stopRiderLocationSharing();localStorage.removeItem("megjet_rider_access_token");riderProfile=null;$("riderPanel").classList.add("hidden");$("riderAuth").classList.remove("hidden");$("riderAuthMessage").textContent="Signed out.";};
 $("vendorRefresh").onclick=loadVendorDashboard;
 if($("vendorMenuSearch")) $("vendorMenuSearch").addEventListener("input",renderVendorMenu);
@@ -4625,4 +4664,4 @@ setInterval(()=>{
 
 </script>
 
-<script>window.MEGJET_PHASE2_COMPLETE=true;</script>
+<script>window.MEGJET_PHASE2_COMPLETE=true;window.MEGJET_PHASE3_RIDER_ORDER=true;</script>
