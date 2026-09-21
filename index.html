@@ -768,6 +768,7 @@ function megjetSupportHTML(orderId=""){
 
 
 
+
 <style id="megjet-customer-pro-css">
 :root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
 #mjCustomerNav{display:none}
@@ -5064,6 +5065,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
 
+
 <script id="megjet-customer-pro-js">
 (function(){
   'use strict';
@@ -5076,7 +5078,7 @@ document.addEventListener("DOMContentLoaded",function(){
   function menuUX(){const ds=document.querySelectorAll('details.menu-category');if(ds.length&&!Array.from(ds).some(d=>d.open))ds[0].open=true;document.querySelectorAll('.megjet-add-button').forEach(b=>{b.style.setProperty('min-height','42px','important');b.style.setProperty('min-width','58px','important')})}
   function checkoutUX(){const n=$('customerName'),p=$('phone'),a=$('address'),pay=$('paymentMethod');if(n){n.required=true;n.autocomplete='name'}if(p){p.required=true;p.inputMode='tel';p.autocomplete='tel'}if(a){a.required=true;a.autocomplete='street-address'}if(pay)pay.required=true;const btn=$('placeOrder');if(btn){btn.setAttribute('aria-label','Place your Megjet order');btn.style.minHeight='48px'}}
   function sync(){makeNav();net();menuUX();checkoutUX();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
-  document.addEventListener('click',e=>{const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
+  document.addEventListener('click',e=>{if(e.target.closest('.vendor-view'))setTimeout(menuUX,500);const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
   let syncQueued=false;const mo=new MutationObserver(()=>{if(syncQueued)return;syncQueued=true;requestAnimationFrame(()=>{syncQueued=false;sync()})});
   function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync);window.addEventListener('online',sync);window.addEventListener('offline',sync)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
