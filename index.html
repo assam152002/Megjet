@@ -1605,20 +1605,19 @@ function showSetup(msg=""){
 function hideSetup(){$("setup").classList.add("hidden");}
 function renderCart(){
   const n=cart.length;
-  $("count").textContent=n+" item"+(n===1?"":"s");
-  $("cartBadge").textContent=n;
-  $("cartItems").innerHTML=cart.map((p,i)=>
-    `<div class="row"><span><b>${escapeHtml(p.name)}</b>${p.vendor_name?`<div class="cart-vendor">${escapeHtml(p.vendor_name)}</div>`:""} <button class="secondary" style="padding:4px 8px" onclick="removeItem(${i})">×</button></span><span>${money(p.price)}</span></div>`
-  ).join("");
-  const s=cart.reduce((a,p)=>a+Number(p.price),0);
-  $("subtotal").textContent=money(s);
+  const countEl=$("count"),badgeEl=$("cartBadge"),itemsEl=$("cartItems"),subtotalEl=$("subtotal");
+  const totalEl=$("total"),cartTotalEl=$("cartTotal"),checkoutBtn=$("checkoutBtn"),cartBox=$("cartBox"),cartBody=$("cartBody"),cartToggle=$("cartToggle");
+  if(countEl)countEl.textContent=n+" item"+(n===1?"":"s");
+  if(badgeEl)badgeEl.textContent=n;
+  if(itemsEl)itemsEl.innerHTML=cart.map((p,i)=>`<div class="row"><span><b>${escapeHtml(p.name)}</b>${p.vendor_name?`<div class="cart-vendor">${escapeHtml(p.vendor_name)}</div>`:""} <button class="secondary" style="padding:4px 8px" type="button" onclick="removeItem(${i})">×</button></span><span>${money(p.price)}</span></div>`).join("");
+  const total=cart.reduce((a,p)=>a+Number(p.price||0),0)+DELIVERY;
+  if(subtotalEl)subtotalEl.textContent=money(total-DELIVERY);
   if($("cartDelivery"))$("cartDelivery").textContent=money(DELIVERY);
-  $("total").textContent=money(s+DELIVERY);
-  $("cartTotal").textContent=money(s+DELIVERY);
-  $("checkoutBtn").classList.toggle("hidden",n===0);
-  $("cartBox").classList.toggle("hidden",n===0);
-  if(n){$("cartBox").style.display="block";}
-  if(!n){$("cartBody").classList.remove("open");$("cartToggle").textContent="View Cart";}
+  if(totalEl)totalEl.textContent=money(total);
+  if(cartTotalEl)cartTotalEl.textContent=money(total);
+  if(checkoutBtn)checkoutBtn.classList.toggle("hidden",n===0);
+  if(cartBox){cartBox.classList.toggle("hidden",n===0);if(n)cartBox.style.display="block";}
+  if(!n){if(cartBody)cartBody.classList.remove("open");if(cartToggle)cartToggle.textContent="View Cart";}
 }
 function saveCart(){
   try{localStorage.setItem("megjet_cart",JSON.stringify(cart));}catch(e){}
@@ -1647,53 +1646,23 @@ function registerMegjetCartProduct(product){
 window.megjetAddDirect=function(token){
   try{
     const product=token?window.MEGJET_CART_PRODUCTS[token]:null;
-    if(!product || !product.id) throw new Error('Invalid product.');
-    add(product);
-    const cartBox=document.getElementById('cartBox');
-    const cartBody=document.getElementById('cartBody');
-    const cartToggle=document.getElementById('cartToggle');
-    if(cartBox){
-      cartBox.classList.remove('hidden');
-      cartBox.style.display='block';
-      if(cartBody){cartBody.classList.add('open'); cartBody.style.display='block';}
-      if(cartToggle)cartToggle.textContent='Hide Cart';
-      
-    }
-    const status=document.getElementById('status');
-    if(status){status.textContent='✓ Added to cart';status.className='notice ok';}
+    if(!product) throw new Error("This item is no longer available. Please refresh the menu.");
+    const item={...product,quantity:Math.max(1,Number(product.quantity||1)),price:Number(product.price||0)};
+    cart.push(item);saveCart();renderCart();
+    const cartBox=document.getElementById("cartBox"),cartBody=document.getElementById("cartBody"),cartToggle=document.getElementById("cartToggle");
+    if(cartBox){cartBox.classList.remove("hidden");cartBox.style.display="block";}
+    if(cartBody){cartBody.classList.add("open");cartBody.style.display="block";}
+    if(cartToggle)cartToggle.textContent="Hide Cart";
+    const status=document.getElementById("status");if(status){status.textContent="✓ Added to cart";status.className="notice ok";}
     return false;
   }catch(err){
-    console.error('Megjet cart add failed:',err);
-    const status=document.getElementById('status');
-    if(status){status.textContent='Could not add this item: '+(err?.message||'Unknown error');status.className='notice bad';}
+    console.error("Megjet cart add failed:",err);
+    const status=document.getElementById("status");if(status){status.textContent="Could not add this item: "+(err?.message||"Unknown error");status.className="notice bad";}
     return false;
   }
 };
 
-// Delegated fallback for any dynamically-created Add button.
-document.addEventListener('click',function(e){
-  const btn=e.target.closest('[data-megjet-add-id]');
-  if(!btn)return;
-  e.preventDefault();
-  e.stopPropagation();
-  try{
-    const token=btn.getAttribute('data-megjet-add-id');
-    const product=token?window.MEGJET_CART_PRODUCTS[token]:null;
-    if(!product || !product.id) throw new Error('Invalid product.');
-    add(product);
-    const cartBox=document.getElementById('cartBox');
-    if(cartBox){
-      cartBox.classList.remove('hidden');
-      cartBox.style.display='block';
-      const cartBody=document.getElementById('cartBody');
-      if(cartBody)cartBody.classList.add('open');
-    }
-  }catch(err){
-    console.error('Megjet cart add failed:',err);
-    const status=document.getElementById('status');
-    if(status){status.textContent='Could not add this item to your cart: '+(err?.message||'Unknown error'); status.className='notice bad';}
-  }
-},true);
+// Add buttons use their direct onclick handler. Avoid a capture-phase interceptor on mobile browsers.
 
 async function fetchJson(url,options={},timeout=9000){
   const controller=new AbortController();
