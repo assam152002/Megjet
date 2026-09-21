@@ -760,6 +760,27 @@ function megjetSupportHTML(orderId=""){
 #cartBox.mj-clean-cart .mj-qty button{width:28px;height:28px;padding:0!important;border-radius:9px!important}
 @media(min-width:761px){#cartBox.mj-clean-cart{left:auto!important;right:20px!important;bottom:20px!important;width:430px!important}}
 </style>
+<style id="megjet-customer-pro-css">
+:root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
+#mjCustomerNav{display:none}
+#mjCustomerToast{position:fixed;left:50%;bottom:154px;transform:translate(-50%,16px);z-index:2147483000;background:#0b2748;color:#fff;padding:10px 16px;border-radius:999px;font-weight:800;font-size:13px;box-shadow:0 12px 34px rgba(11,39,72,.25);opacity:0;pointer-events:none;transition:.2s ease;white-space:nowrap}
+#mjCustomerToast.show{opacity:1;transform:translate(-50%,0)}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(14,174,232,.35)!important;outline-offset:2px!important}
+@media(max-width:760px){
+  body{padding-bottom:82px!important}
+  #mjCustomerNav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:10px;height:64px;z-index:2147482500;background:rgba(255,255,255,.97);border:1px solid #dcecf4;border-radius:20px;box-shadow:0 14px 40px rgba(11,39,72,.20);backdrop-filter:blur(14px);overflow:hidden}
+  #mjCustomerNav.mj-hide{display:none!important}
+  #mjCustomerNav button{position:relative;border:0!important;background:transparent!important;color:#587086!important;padding:7px 2px 5px!important;min-width:0!important;border-radius:0!important;font-size:10px!important;font-weight:800!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:none!important}
+  #mjCustomerNav button .mj-i{font-size:20px;line-height:1}
+  #mjCustomerNav button:active{background:#eef9fe!important;color:var(--mj-pro-blue)!important}
+  #mjNavCartBadge{position:absolute;top:5px;left:calc(50% + 7px);min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:#e5484d;color:#fff;font-size:10px;line-height:17px;text-align:center}
+  #cartBox.mj-clean-cart{bottom:84px!important;left:10px!important;right:10px!important;border-radius:18px!important}
+  #cartBox.mj-clean-cart .cart-body{max-height:52vh!important}
+  #customerSearch{min-height:46px!important;font-size:16px!important}
+  button{touch-action:manipulation}
+}
+@media(prefers-reduced-motion:reduce){#mjCustomerToast{transition:none!important}}
+</style>
 </head>
 <body>
 <script>
@@ -4986,6 +5007,21 @@ document.addEventListener("DOMContentLoaded",function(){
     window.addEventListener('pageshow',draw);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
+</script>
+<script id="megjet-customer-pro-js">
+(function(){
+  'use strict';
+  const $=id=>document.getElementById(id);
+  function portalOpen(){return ['admin','vendor','rider'].some(id=>{const e=$(id);if(!e)return false;const s=getComputedStyle(e);return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden'})}
+  function toast(msg){let e=$('mjCustomerToast');if(!e){e=document.createElement('div');e.id='mjCustomerToast';e.setAttribute('role','status');e.setAttribute('aria-live','polite');document.body.appendChild(e)}e.textContent=msg;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),1400)}
+  function scrollToEl(el){if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>{try{el.focus({preventScroll:true})}catch(e){}},350)}
+  function makeNav(){if($('mjCustomerNav'))return;const n=document.createElement('nav');n.id='mjCustomerNav';n.setAttribute('aria-label','Customer navigation');n.innerHTML='<button type="button" data-mj-nav="home"><span class="mj-i">⌂</span><span>Home</span></button><button type="button" data-mj-nav="search"><span class="mj-i">⌕</span><span>Search</span></button><button type="button" data-mj-nav="orders"><span class="mj-i">▤</span><span>Orders</span></button><button type="button" data-mj-nav="account"><span class="mj-i">♙</span><span>Account</span></button><button type="button" data-mj-nav="cart"><span class="mj-i">🛒</span><span>Cart</span><b id="mjNavCartBadge" hidden>0</b></button>';document.body.appendChild(n)}
+  function sync(){makeNav();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
+  document.addEventListener('click',e=>{const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
+  const mo=new MutationObserver(sync);
+  function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync)}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
 })();
 </script>
 </body>
