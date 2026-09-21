@@ -751,6 +751,28 @@ html{scroll-behavior:smooth}body{background:linear-gradient(180deg,#f7fbfd 0,#ff
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.001ms!important;transition-duration:.001ms!important}}
 </style>
 
+
+<style id="megjet-customer-cart-fix-v2-style">
+#cartBox.mj-customer-cart-root{
+  position:fixed!important;
+  z-index:2147483000!important;
+  left:12px!important;
+  right:12px!important;
+  bottom:86px!important;
+  width:auto!important;
+  max-width:740px!important;
+  margin:0 auto!important;
+  background:#fff!important;
+  border:1px solid #d8eaf3!important;
+  border-radius:18px!important;
+  box-shadow:0 16px 46px rgba(11,39,72,.24)!important;
+}
+#cartBox.mj-customer-cart-root.hidden{display:none!important}
+#cartBox.mj-customer-cart-root:not(.hidden){display:block}
+#cartBox.mj-customer-cart-root .cart-head{min-height:52px}
+@media(min-width:761px){#cartBox.mj-customer-cart-root{bottom:18px!important}}
+</style>
+
 </head>
 <body>
 <script>
@@ -4893,6 +4915,82 @@ function optimizeImages(){qa('img').forEach((img,i)=>{if(i>0&&!img.hasAttribute(
 function protectOrder(){const btn=$('placeOrder');if(!btn||btn.dataset.mjProtected)return;btn.dataset.mjProtected='1';btn.addEventListener('click',()=>{if(btn.disabled)return;const old=btn.textContent;setTimeout(()=>{btn.disabled=true;btn.textContent='Placing order…';setTimeout(()=>{btn.disabled=false;btn.textContent=old},10000)},0)})}
 function hookCart(){const old=window.renderCart;if(typeof old==='function'&&!old.__mjWrapped){const wrapped=function(){const r=old.apply(this,arguments);updateCartBadge();return r};wrapped.__mjWrapped=true;window.renderCart=wrapped}document.addEventListener('click',e=>{const add=e.target.closest('button[data-megjet-add-id]');if(add)setTimeout(()=>{updateCartBadge();const name=window.MEGJET_CART_PRODUCTS?.[add.getAttribute('data-megjet-add-id')]?.name||'Item';toast(name+' added to cart')},0)})}
 function init(){['status','orderMessage','vendorAuthMessage','riderAuthMessage','adminAuthMessage','customerAuthMessage'].forEach(id=>{const el=$(id);if(el)el.setAttribute('aria-live','polite')});addNetworkPill();buildNav();bindChips();optimizeImages();protectOrder();hookCart();updateNetwork();window.addEventListener('online',()=>{updateNetwork();toast('Back online.','ok')});window.addEventListener('offline',()=>{updateNetwork();toast('You are offline.','warn')});window.addEventListener('hashchange',syncRoleNav)}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()})();
+</script>
+
+
+<script id="megjet-customer-cart-fix-v2-js">
+(function(){
+  'use strict';
+  const $=id=>document.getElementById(id);
+  const isPortal=()=>['#admin','#vendor','#rider'].includes((location.hash||'').toLowerCase());
+  const countItems=()=>Array.isArray(window.cart)?window.cart.reduce((s,x)=>s+Math.max(1,Number(x&&x.quantity||1)),0):0;
+
+  function mountCart(){
+    const box=$('cartBox');
+    if(!box)return null;
+    if(box.parentElement!==document.body) document.body.appendChild(box);
+    box.classList.add('mj-customer-cart-root');
+    return box;
+  }
+
+  function syncCustomerCart(openBody){
+    const box=mountCart();
+    if(!box)return;
+    const n=countItems();
+    if(isPortal()){
+      box.style.display='none';
+      return;
+    }
+    if(!n){
+      box.classList.add('hidden');
+      box.style.display='none';
+      return;
+    }
+    box.classList.remove('hidden');
+    box.style.display='block';
+    if(openBody){
+      const body=$('cartBody');
+      if(body){body.classList.add('open');body.style.display='block';}
+      const toggle=$('cartToggle');
+      if(toggle)toggle.textContent='Hide Cart';
+    }
+    const navBadge=$('mjNavCartBadge');
+    if(navBadge){navBadge.textContent=n>99?'99+':String(n);navBadge.hidden=false;}
+  }
+
+  function afterAdd(){
+    setTimeout(()=>{
+      try{if(typeof window.renderCart==='function')window.renderCart();}catch(e){}
+      syncCustomerCart(false);
+    },0);
+  }
+
+  function init(){
+    mountCart();
+    try{if(typeof window.renderCart==='function')window.renderCart();}catch(e){}
+    syncCustomerCart(false);
+
+    document.addEventListener('click',function(e){
+      const add=e.target.closest&&e.target.closest('button[data-megjet-add-id]');
+      if(add)afterAdd();
+    },false);
+
+    window.addEventListener('hashchange',()=>setTimeout(()=>syncCustomerCart(false),0));
+
+    const box=$('cartBox');
+    if(box){
+      new MutationObserver(()=>{
+        if(!isPortal()&&countItems()>0){
+          box.classList.remove('hidden');
+          box.style.display='block';
+        }
+      }).observe(box,{attributes:true,subtree:true,childList:true});
+    }
+  }
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true});
+  else init();
+})();
 </script>
 
 </body>
