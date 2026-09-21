@@ -4597,6 +4597,51 @@ Object.assign(MEGJET_PRODUCT_PHOTOS, {"BİRA TABAĞI (2 Kişilik)":"data:image/j
   }
 })();
 </script>
+
+<script>
+/* MEGJET CART FINAL FIX — isolated from the rest of the app.
+   This listener is installed after all existing scripts and catches Add clicks
+   before vendor/profile click handlers can interfere. */
+(function(){
+  if(window.MEGJET_CART_FINAL_FIX)return;
+  window.MEGJET_CART_FINAL_FIX=true;
+  function addFromButton(btn){
+    const token=btn && btn.getAttribute('data-megjet-add-id');
+    const product=token && window.MEGJET_CART_PRODUCTS ? window.MEGJET_CART_PRODUCTS[token] : null;
+    if(!product || !product.id){
+      console.error('Megjet cart: product token not found',token);
+      return false;
+    }
+    try{
+      cart.push({...product,quantity:Math.max(1,Number(product.quantity||1)),price:Number(product.price||0)});
+      saveCart();
+      renderCart();
+      const box=document.getElementById('cartBox');
+      const body=document.getElementById('cartBody');
+      const toggle=document.getElementById('cartToggle');
+      if(box){box.classList.remove('hidden');box.style.display='block';}
+      if(body){body.classList.add('open');body.style.display='block';}
+      if(toggle)toggle.textContent='Hide Cart';
+      const status=document.getElementById('status');
+      if(status){status.textContent='✓ Added to cart';status.className='notice ok';}
+      return true;
+    }catch(err){
+      console.error('Megjet cart final fix failed:',err);
+      const status=document.getElementById('status');
+      if(status){status.textContent='Could not add this item: '+(err && err.message ? err.message : 'Unknown error');status.className='notice bad';}
+      return false;
+    }
+  }
+  window.megjetCartFinalAdd=addFromButton;
+  document.addEventListener('click',function(e){
+    const btn=e.target && e.target.closest ? e.target.closest('.megjet-add-button[data-megjet-add-id]') : null;
+    if(!btn)return;
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    addFromButton(btn);
+  },true);
+})();
+</script>
 </body>
 </html>
 <!-- MEGJET_CAFE5_SETUP -->
