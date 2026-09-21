@@ -35,9 +35,12 @@ jobs:
     resetVendorForm();$("vendorForm").classList.add("hidden");
     $("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
     await loadAdminMenu();await load();'''
-          if 'admin-provision-vendor' not in t:
-              if old not in t: raise SystemExit('saveVendor target not found')
+          # The phrase can appear elsewhere in the app, so decide from the actual
+          # saveVendor target instead of a global marker.
+          if old in t:
               t=t.replace(old,new,1)
+          elif 'Creating vendor login…' not in t:
+              raise SystemExit('saveVendor target not found and provisioning patch absent')
           t=t.replace('p_vendor_id:vendor_id','p_vendor_id:vendorId')
           for tag,id_ in [('style','megjet-customer-pro-css'),('script','megjet-customer-pro-js')]:
               t=re.sub(r'<'+tag+r'[^>]*id=["\']'+id_+r'["\'][^>]*>.*?</'+tag+r'>','',t,flags=re.S|re.I)
