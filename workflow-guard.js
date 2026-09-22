@@ -41,12 +41,9 @@
         return;
       }
 
-      if (next === "out_for_delivery") {
-        const assigned = window.adminOrderRiderMap?.[String(orderId)];
-        if (!assigned) {
-          alert("Assign a rider before sending this order out for delivery.");
-          return;
-        }
+      if (next === "out_for_delivery" && !window.adminOrderRiderMap?.[String(orderId)]) {
+        alert("Assign a rider before sending this order out for delivery.");
+        return;
       }
 
       if (next === "delivered") {
@@ -95,8 +92,101 @@
     alert("Use “Verify PIN & Mark Delivered” and enter the customer's 4-digit delivery PIN.");
   };
 
-  const observer = new MutationObserver(removeDeliveryBypasses);
-  const riderOrders = document.getElementById("riderOrders");
-  if (riderOrders) observer.observe(riderOrders, { childList: true, subtree: true });
+  function checkoutMessage(text) {
+    const message = document.getElementById("orderMessage");
+    if (message) {
+      message.textContent = text;
+      message.setAttribute("role", "alert");
+    }
+  }
+
+  function configurePayments() {
+    const payment = document.getElementById("paymentMethod");
+    if (!payment) return;
+    const card = Array.from(payment.options).find(option => option.value === "Credit / Debit Card");
+    if (card) {
+      card.disabled = true;
+      card.textContent = "Credit / Debit Card — Coming Soon";
+    }
+    if (payment.value === "Credit / Debit Card") payment.value = "Cash on Delivery";
+  }
+
+  function checkoutFingerprint(name, phone, address) {
+    const items = (window.cart || []).map(item => [
+      String(item.id || ""),
+      Math.max(1, Number(item.quantity || 1))
+    ]);
+    return JSON.stringify([name.toLowerCase(), phone, address.toLowerCase(), items]);
+  }
+
+  function protectCheckout() {
+    const button = document.getElementById("placeOrder");
+    if (!button || button.dataset.megjetProtected === "true" || typeof button.onclick !== "function") return;
+
+    const originalPlaceOrder = button.onclick;
+    button.dataset.megjetProtected = "true";
+    button.onclick = async function(event) {
+      const name = document.getElementById("customerName")?.value.trim() || "";
+      const rawPhone = document.getElementById("phone")?.value.trim() || "";
+      const phone = rawPhone.replace(/[^0-9]/g, "");
+      const address = document.getElementById("address")?.value.trim() || "";
+      const items = window.cart || [];
+
+      if (name.length < 2) {
+        checkoutMessage("Please enter your full name.");
+        document.getElementById("customerName")?.focus();
+        return;
+      }
+      if (phone.length < 8 || phone.length > 15) {
+        checkoutMessage("Please enter a valid phone number with 8 to 15 digits.");
+        document.getElementById("phone")?.focus();
+        return;
+      }
+      if (address.length < 8) {
+        checkoutMessage("Please enter a complete delivery address in Gazimagusa.");
+        document.getElementById("address")?.focus();
+        return;
+      }
+      if (!items.length || items.some(item => !item.id || Number(item.quantity || 0) < 1 || Number(item.quantity || 0) > 50)) {
+        checkoutMessage("Your cart contains an invalid item. Please refresh the menu and try again.");
+        return;
+      }
+
+      configurePayments();
+      const fingerprint = checkoutFingerprint(name, phone, address);
+      const previous = sessionStorage.getItem("megjet_checkout_fingerprint");
+      const previousAt = Number(sessionStorage.getItem("megjet_checkout_time") || 0);
+      if (previous === fingerprint && Date.now() - previousAt < 60000) {
+        checkoutMessage("This order was already submitted. Please check My Orders before trying again.");
+        return;
+      }
+
+      const oldOrderId = String(window.trackedOrderId || localStorage.getItem("megjet_last_order_id") || "");
+      sessionStorage.setItem("megjet_checkout_fingerprint", fingerprint);
+      sessionStorage.setItem("megjet_checkout_time", String(Date.now()));
+
+      try {
+        await originalPlaceOrder.call(this, event);
+        const newOrderId = String(window.trackedOrderId || localStorage.getItem("megjet_last_order_id") || "");
+        if (!newOrderId || newOrderId === oldOrderId) {
+          sessionStorage.removeItem("megjet_checkout_fingerprint");
+          sessionStorage.removeItem("megjet_checkout_time");
+        }
+      } catch (error) {
+        sessionStorage.removeItem("megjet_checkout_fingerprint");
+        sessionStorage.removeItem("megjet_checkout_time");
+        throw error;
+      }
+    };
+  }
+
+  const observer = new MutationObserver(() => {
+    removeDeliveryBypasses();
+    configurePayments();
+    protectCheckout();
+  });
+  observer.observe(document.body, { childList: true, subtree: true });
   removeDeliveryBypasses();
+  configurePayments();
+  protectCheckout();
 })();
