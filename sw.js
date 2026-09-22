@@ -1,4 +1,4 @@
-const CACHE_NAME = "megjet-app-v2";
+const CACHE_NAME = "megjet-app-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
