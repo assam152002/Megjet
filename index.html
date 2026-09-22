@@ -2097,7 +2097,9 @@ $("checkoutBtn").onclick=()=>{
   $("cartToggle").textContent="View Cart";
   $("checkout").classList.remove("hidden");
   appliedCoupon=null;$("couponCode").value="";$("couponMessage").textContent="";renderCheckoutTotals();
-  $("customerName").focus();
+  // Bring the delivery form into view on phones before opening the keyboard.
+  $("checkout").scrollIntoView({behavior:"smooth",block:"start"});
+  setTimeout(()=>$("customerName")?.focus({preventScroll:true}),350);
 };
 $("continueShopping").onclick=()=>{$("orderConfirmation").classList.add("hidden");window.scrollTo({top:0,behavior:"smooth"});};
 
@@ -4247,7 +4249,21 @@ async function submitVendorApplication(){
 }
 function notifyCustomerWhatsApp(order,status){const phone=phoneForWhatsApp(order.customer_phone);if(!phone)return;const text=`Megjet order #${displayOrderId(order.id)} update: ${String(status).replaceAll("_"," ")}. Total ${money(order.total)}.`;window.open("https://wa.me/"+phone+"?text="+encodeURIComponent(text),"_blank");}
 function notifyCustomerWhatsAppById(id,status){const order=(adminOrdersCache||[]).find(o=>String(o.id)===String(id));if(order)notifyCustomerWhatsApp(order,status);}
-function isStoreOpenNow(){try{const now=new Date();const [oh,om]=String(MEGJET_OPEN_TIME||"00:00").split(":").map(Number);const [ch,cm]=String(MEGJET_CLOSE_TIME||"23:59").split(":").map(Number);const n=now.getHours()*60+now.getMinutes(),a=oh*60+om,b=ch*60+cm;return a<=b?n>=a&&n<=b:n>=a||n<=b;}catch(e){return true;}}
+function isStoreOpenNow(){
+  try{
+    // Megjet operates in Gazimağusa. Customer devices may be in Pakistan,
+    // Turkey, Europe, or elsewhere, so never use the device's local clock.
+    const parts=new Intl.DateTimeFormat("en-GB",{
+      timeZone:"Europe/Nicosia",hour:"2-digit",minute:"2-digit",hourCycle:"h23"
+    }).formatToParts(new Date());
+    const hour=Number(parts.find(p=>p.type==="hour")?.value||0);
+    const minute=Number(parts.find(p=>p.type==="minute")?.value||0);
+    const [oh,om]=String(MEGJET_OPEN_TIME||"00:00").split(":").map(Number);
+    const [ch,cm]=String(MEGJET_CLOSE_TIME||"23:59").split(":").map(Number);
+    const n=hour*60+minute,a=oh*60+om,b=ch*60+cm;
+    return a<=b?n>=a&&n<=b:n>=a||n<=b;
+  }catch(e){return true;}
+}
 function applyLaunchSettingsUI(){if($("deliveryFeeHeader"))$("deliveryFeeHeader").textContent=money(DELIVERY)+" delivery";if($("serviceAreaHeader"))$("serviceAreaHeader").textContent=MEGJET_SERVICE_AREA||"Gazimagusa";const btn=$("checkoutBtn");const subtotal=cart.reduce((a,p)=>a+Number(p.price||0)*Number(p.quantity||1),0);const reason=!MEGJET_STORE_ACTIVE?"Store is temporarily closed.":(!isStoreOpenNow()?`Ordering is closed. Open ${MEGJET_OPEN_TIME}–${MEGJET_CLOSE_TIME}.`:(MEGJET_MIN_ORDER>0&&subtotal<MEGJET_MIN_ORDER?`Minimum order is ${money(MEGJET_MIN_ORDER)}.`:""));if(btn){btn.disabled=!!reason;btn.title=reason||"Checkout";}const note=$("launchStatusNote");if(note){note.textContent=!MEGJET_STORE_ACTIVE?"Megjet is currently closed.":(!isStoreOpenNow()?`Ordering hours: ${MEGJET_OPEN_TIME}–${MEGJET_CLOSE_TIME}.`:(MEGJET_MIN_ORDER>0?`Minimum order: ${money(MEGJET_MIN_ORDER)}.`:"Open for orders now."));}}
 
 function openCustomerAccount(){
