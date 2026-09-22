@@ -1,9 +1,10 @@
-const CACHE_NAME = "megjet-app-v3";
+const CACHE_NAME = "megjet-app-v4";
+const GUARD_URL = "./workflow-guard.js?v=2";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
-  "./workflow-guard.js",
+  GUARD_URL,
   "./icons/megjet-192.svg",
   "./icons/megjet-512.svg"
 ];
@@ -27,9 +28,8 @@ async function withWorkflowGuard(response) {
   if (!type.includes("text/html")) return response;
 
   let html = await response.text();
-  if (!html.includes('src="./workflow-guard.js"')) {
-    html = html.replace("</body>", '<script src="./workflow-guard.js"></script></body>');
-  }
+  html = html.replace(/<script src="\.\/workflow-guard\.js(?:\?[^"]*)?"><\/script>/g, "");
+  html = html.replace("</body>", '<script src="./workflow-guard.js?v=2"></script></body>');
 
   const headers = new Headers(response.headers);
   headers.delete("content-length");
@@ -59,6 +59,21 @@ self.addEventListener("fetch", event => {
         return withWorkflowGuard(await caches.match("./index.html"));
       }
     })());
+    return;
+  }
+
+  if (url.pathname.endsWith("/workflow-guard.js")) {
+    event.respondWith(
+      fetch(event.request, { cache: "no-store" })
+        .then(response => {
+          if (response.ok) {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
     return;
   }
 
