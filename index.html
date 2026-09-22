@@ -2724,7 +2724,7 @@ async function uploadVendorMenuPhoto(productId,input){
     if(status)status.textContent="Preparing photo…";
     const dataUrl=await compressVendorMenuPhoto(file);
     if(status)status.textContent="Saving photo…";
-    await vendorRequest('/rest/v1/products?id=eq.'+encodeURIComponent(productId),{method:'PATCH',headers:{'Prefer':'return=minimal'},body:JSON.stringify({image_url:dataUrl})});
+    await vendorRequest('/rest/v1/rpc/vendor_set_product_image',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:productId,p_image_url:dataUrl})});
     const cached=vendorMenuCache.find(x=>String(x.id)===String(productId));
     if(cached)cached.image_url=dataUrl;
     renderVendorMenu();
@@ -2773,7 +2773,7 @@ async function saveVendorPortalMenu(){
       if(imageFile.size>10*1024*1024)throw new Error("Photo must be 10 MB or smaller.");
       if(msg)msg.textContent="Uploading product photo…";
       const dataUrl=await compressVendorMenuPhoto(imageFile);
-      await vendorRequest('/rest/v1/products?id=eq.'+encodeURIComponent(savedId),{method:'PATCH',headers:{'Prefer':'return=minimal'},body:JSON.stringify({image_url:dataUrl})});
+      await vendorRequest('/rest/v1/rpc/vendor_set_product_image',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({p_product_id:savedId,p_image_url:dataUrl})});
     }
     cancelVendorPortalMenuForm();
     await loadVendorMenu();
@@ -4054,6 +4054,7 @@ if($("phase3AutoAssign"))$("phase3AutoAssign").onclick=autoAssignReadyOrders;
 $("riderLogout").onclick=()=>{stopRiderLocationSharing();localStorage.removeItem("megjet_rider_access_token");riderProfile=null;$("riderPanel").classList.add("hidden");$("riderAuth").classList.remove("hidden");$("riderAuthMessage").textContent="Signed out.";};
 $("vendorRefresh").onclick=loadVendorDashboard;
 if($("vendorMenuSearch")) $("vendorMenuSearch").addEventListener("input",renderVendorMenu);
+if($("vendorMenuAddBtn")) $("vendorMenuAddBtn").addEventListener("click",()=>showVendorPortalMenuForm());
 if($("vendorStatusFilter")) $("vendorStatusFilter").onchange=renderVendorDashboard;
 $("vendorLogout").onclick=()=>{localStorage.removeItem("megjet_vendor_access_token");vendorProfile=null;$("vendorPanel").classList.add("hidden");$("vendorAuth").classList.remove("hidden");$("vendorAuthMessage").textContent="Signed out.";};
 $("adminLogin").onclick=adminLogin;
@@ -5011,7 +5012,10 @@ document.addEventListener("DOMContentLoaded",function(){
       '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
       ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
     }).join('');
-    const hide=!n||portalOpen();
+    // The cart belongs to the customer shopping flow and must never depend on
+    // admin/vendor/rider authentication state. A stale portal hash or a portal
+    // section left visible used to hide the cart for normal customers.
+    const hide=!n;
     box.classList.toggle('hidden',hide);
     box.style.display=hide?'none':'block';
     const nav=$('mjNavCartBadge');
