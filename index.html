@@ -3284,7 +3284,14 @@ async function saveVendor(){
   try{
     $("vendorSaveBtn").disabled=true;$("vendorMessage").textContent="Saving vendor…";
     const result=await adminRequest("/rest/v1/rpc/admin_save_vendor_full",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:id||null,p_name:name,p_area:area,p_address:address,p_phone:phone,p_rating:rating||null,p_preparation_minutes:prep,p_active:active,p_password:password||null})});
-    if(password){\n      $("vendorMessage").textContent="Creating vendor login…";\n      const token=localStorage.getItem("megjet_access_token");\n      if(!token)throw new Error("Admin sign-in required to create vendor login.");\n      const provision=await fetchJson(cfg.url.replace(/\\\/+$/,"")+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:String(result?.vendor_id||id||""),phone,password})},30000);\n      if(!provision?.success)throw new Error(provision?.error||"Vendor login could not be created.");\n    }\n    resetVendorForm();$("vendorForm").classList.add("hidden");$("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
+    if(password){
+      $("vendorMessage").textContent="Creating vendor login…";
+      const token=localStorage.getItem("megjet_access_token");
+      if(!token)throw new Error("Admin sign-in required to create vendor login.");
+      const provision=await fetchJson(cfg.url.replace(/\/+$/,"")+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:String(result?.vendor_id||id||""),phone,password})},30000);
+      if(!provision?.success)throw new Error(provision?.error||"Vendor login could not be created.");
+    }
+    resetVendorForm();$("vendorForm").classList.add("hidden");$("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
     await loadAdminMenu();await load();
   }catch(e){$("vendorMessage").textContent="Could not save vendor: "+e.message;}finally{$("vendorSaveBtn").disabled=false;}
 }
