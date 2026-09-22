@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Megjet">
+<rect width="512" height="512" rx="112" fill="#0b5f9c"/>
+<circle cx="256" cy="256" r="196" fill="#0d6fac"/>
+<path d="M130 294c0-82 53-147 131-147 53 0 96 27 118 69l-59 33c-11-23-32-35-59-35-37 0-65 32-65 80 0 43 27 73 67 73 21 0 40-7 54-20v-21h-59v-57h128v107c-31 37-75 56-128 56-77 0-128-58-128-138Z" fill="#fff"/>
+<path d="M348 88h59l-45 94h-59z" fill="#35d5e7"/>
+</svg>
