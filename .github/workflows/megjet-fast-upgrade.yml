@@ -1,4 +1,5 @@
 name: Megjet Customer Professional UX
+# trigger vendor auth build
 
 on:
   push:
