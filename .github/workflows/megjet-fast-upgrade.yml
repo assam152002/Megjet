@@ -1,157 +1,58 @@
-name: Megjet Customer Professional UX
-# trigger vendor auth build
-
+name: Megjet Vendor Auth Fix
 on:
   push:
     paths:
       - '.github/workflows/megjet-fast-upgrade.yml'
-
 permissions:
   contents: write
-
 jobs:
-  upgrade-customer:
+  patch:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Install professional customer UX
+      - name: Patch vendor provisioning
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re
-          p=Path('index.html')
-          t=p.read_text(encoding='utf-8')
-          # Secure vendor provisioning: patch the real saveVendor function in index.html.
-          old='''    resetVendorForm();$("vendorForm").classList.add("hidden");
-    $("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
+          p=Path("index.html")
+          t=p.read_text(encoding="utf-8")
+          old='''    resetVendorForm();$("vendorForm").classList.add("hidden");$("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
     await loadAdminMenu();await load();'''
           new='''    if(password){
       $("vendorMessage").textContent="Creating vendor login…";
       const token=localStorage.getItem("megjet_access_token");
       if(!token)throw new Error("Admin sign-in required to create vendor login.");
-      const provision=await fetchJson(cfg.url.replace(/\\/+$/,'')+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:String(result?.vendor_id||id||""),phone,password})},30000);
+      const provision=await fetchJson(cfg.url.replace(/\\/+$/,"")+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:String(result?.vendor_id||id||""),phone,password})},30000);
       if(!provision?.success)throw new Error(provision?.error||"Vendor login could not be created.");
     }
-    resetVendorForm();$("vendorForm").classList.add("hidden");
-    $("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
+    resetVendorForm();$("vendorForm").classList.add("hidden");$("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
     await loadAdminMenu();await load();'''
-          # The phrase can appear elsewhere in the app, so decide from the actual
-          # saveVendor target instead of a global marker.
-          if old in t:
+          if "admin-provision-vendor" not in t:
+              if old not in t:
+                  raise SystemExit("saveVendor target not found")
               t=t.replace(old,new,1)
-          elif 'Creating vendor login…' not in t:
-              raise SystemExit('saveVendor target not found and provisioning patch absent')
-          assert 'admin-provision-vendor' in t, 'vendor provisioning patch missing after replacement'
-          t=t.replace('p_vendor_id:vendor_id','p_vendor_id:vendorId')
-          for tag,id_ in [('style','megjet-customer-pro-css'),('script','megjet-customer-pro-js')]:
-              t=re.sub(r'<'+tag+r'[^>]*id=["\']'+id_+r'["\'][^>]*>.*?</'+tag+r'>','',t,flags=re.S|re.I)
-          css=r'''<style id="megjet-customer-pro-css">
-          :root{--mj-pro-blue:#0eaee8;--mj-pro-navy:#0b2748}
-          #mjCustomerNav{display:none}
-          #mjCustomerToast{position:fixed;left:50%;bottom:154px;transform:translate(-50%,16px);z-index:2147483000;background:#0b2748;color:#fff;padding:10px 16px;border-radius:999px;font-weight:800;font-size:13px;box-shadow:0 12px 34px rgba(11,39,72,.25);opacity:0;pointer-events:none;transition:.2s ease;white-space:nowrap}
-          #mjCustomerToast.show{opacity:1;transform:translate(-50%,0)}
-          #mjCustomerStatus{position:fixed;right:16px;bottom:18px;z-index:2147482400;display:flex;align-items:center;gap:7px;padding:8px 11px;border-radius:999px;background:#fff;color:#36536b;border:1px solid #dcecf4;box-shadow:0 8px 24px rgba(11,39,72,.12);font-size:12px;font-weight:800}
-          #mjCustomerStatus i{width:8px;height:8px;border-radius:50%;background:#20a464;display:block}
-          #mjCustomerStatus.offline i{background:#e5484d}
-          #mjCustomerStatus.offline{color:#a12b30}
-          #customerSearch{transition:border-color .2s,box-shadow .2s}
-          #customerSearch:focus{border-color:#0eaee8!important;box-shadow:0 0 0 4px rgba(14,174,232,.12)!important}
-          .megjet-add-button{min-height:40px!important;height:auto!important;padding:9px 14px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;line-height:1.1!important;overflow:visible!important}
-          .account-mini-actions{min-height:42px!important;align-items:center!important}
-          @media(max-width:600px){.megjet-add-button{min-height:42px!important;padding:10px 14px!important;font-size:14px!important}.vendor-profile-cats .item{min-height:108px!important;height:auto!important}}
-          button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(14,174,232,.35)!important;outline-offset:2px!important}
-          #cartBox.mj-clean-cart #cartItems .row{padding:12px 0!important;border-bottom:1px solid #edf3f7!important;align-items:center!important}
-          #cartBox.mj-clean-cart #cartItems .row:last-child{border-bottom:0!important}
-          #cartBox.mj-clean-cart{color:#0b2748!important;background:#fff!important}
-          #cartBox.mj-clean-cart,#cartBox.mj-clean-cart *{text-shadow:none!important}
-          #cartBox.mj-clean-cart .cart-head{background:#fff!important}
-          #cartBox.mj-clean-cart .cart-label,
-          #cartBox.mj-clean-cart #count,
-          #cartBox.mj-clean-cart #cartItems,
-          #cartBox.mj-clean-cart #cartItems .row,
-          #cartBox.mj-clean-cart #cartItems .row span,
-          #cartBox.mj-clean-cart #cartItems .row b,
-          #cartBox.mj-clean-cart .cart-vendor,
-          #cartBox.mj-clean-cart .cart-total-row,
-          #cartBox.mj-clean-cart .cart-total-row span{color:#0b2748!important;-webkit-text-fill-color:#0b2748!important;opacity:1!important}
-          #cartBox.mj-clean-cart #cartItems .row>span:last-child,
-          #cartBox.mj-clean-cart #cartTotal,
-          #cartBox.mj-clean-cart .cart-header-subtotal{color:#0878bd!important;-webkit-text-fill-color:#0878bd!important;opacity:1!important}
-          #cartBox.mj-clean-cart #cartItems .row>span:first-child{display:flex!important;flex-wrap:wrap!important;align-items:center!important;gap:8px!important;min-width:0!important}
-          #cartBox.mj-clean-cart #cartItems .row>span:first-child>b{flex:0 0 100%!important;font-size:15px!important;line-height:1.25!important;color:#0b2748!important;-webkit-text-fill-color:#0b2748!important;overflow-wrap:anywhere!important}
-          #cartBox.mj-clean-cart #cartItems .cart-vendor{flex:0 0 100%!important;font-size:12px!important;color:#64788c!important;-webkit-text-fill-color:#64788c!important}
-          #cartBox.mj-clean-cart #cartItems .row>span:last-child{font-weight:900!important;color:#0878bd!important;-webkit-text-fill-color:#0878bd!important;white-space:nowrap!important}
-          #cartBox.mj-clean-cart #cartItems .row{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:12px!important}
-          #cartBox.mj-clean-cart .cart-actions{position:sticky!important;bottom:0!important;background:#fff!important;padding-top:10px!important}
-          #cartBox.mj-clean-cart #checkoutBtn{width:100%!important;min-height:48px!important;border-radius:14px!important;font-weight:900!important;color:#fff!important;-webkit-text-fill-color:#fff!important;background:#0878bd!important}
-          #cartBox.mj-clean-cart button{opacity:1!important}
-          @media(max-width:760px){
-            body{padding-bottom:82px!important}
-            #mjCustomerStatus{display:none!important}
-            #mjCustomerNav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:10px;right:10px;bottom:10px;height:64px;z-index:2147482500;background:rgba(255,255,255,.97);border:1px solid #dcecf4;border-radius:20px;box-shadow:0 14px 40px rgba(11,39,72,.20);backdrop-filter:blur(14px);overflow:hidden}
-            #mjCustomerNav.mj-hide{display:none!important}
-            #mjCustomerNav button{position:relative;border:0!important;background:transparent!important;color:#587086!important;padding:7px 2px 5px!important;min-width:0!important;border-radius:0!important;font-size:10px!important;font-weight:800!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:none!important}
-            #mjCustomerNav button .mj-i{font-size:20px;line-height:1}
-            #mjCustomerNav button:active{background:#eef9fe!important;color:var(--mj-pro-blue)!important}
-            #mjNavCartBadge{position:absolute;top:5px;left:calc(50% + 7px);min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:#e5484d;color:#fff;font-size:10px;line-height:17px;text-align:center}
-            #cartBox.mj-clean-cart{bottom:84px!important;left:10px!important;right:10px!important;border-radius:18px!important}
-            #cartBox.mj-clean-cart .cart-body{max-height:min(58vh,520px)!important;padding:10px 14px 14px!important}
-            #cartBox.mj-clean-cart #cartItems .row{grid-template-columns:1fr auto!important;gap:10px!important}
-            #cartBox.mj-clean-cart .mj-qty button{min-width:36px!important;width:36px!important;height:36px!important;font-size:18px!important}
-            #cartBox.mj-clean-cart [data-mj-remove]{min-height:36px!important;padding:6px 10px!important}
-            #cartBox.mj-clean-cart .cart-head{padding:12px!important}
-            #customerSearch{min-height:46px!important;font-size:16px!important}
-            button{touch-action:manipulation}
-          }
-          @media(prefers-reduced-motion:reduce){#mjCustomerToast{transition:none!important}}
-          </style>'''
-          js=r'''<script id="megjet-customer-pro-js">
-          (function(){
-            'use strict';
-            const $=id=>document.getElementById(id);
-            function portalOpen(){return ['admin','vendor','rider'].some(id=>{const e=$(id);if(!e)return false;const s=getComputedStyle(e);return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden'})}
-            function toast(msg){let e=$('mjCustomerToast');if(!e){e=document.createElement('div');e.id='mjCustomerToast';e.setAttribute('role','status');e.setAttribute('aria-live','polite');document.body.appendChild(e)}e.textContent=msg;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),1400)}
-            function scrollToEl(el){if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>{try{el.focus({preventScroll:true})}catch(e){}},350)}
-            function makeNav(){if($('mjCustomerNav'))return;const n=document.createElement('nav');n.id='mjCustomerNav';n.setAttribute('aria-label','Customer navigation');n.innerHTML='<button type="button" data-mj-nav="home"><span class="mj-i">⌂</span><span>Home</span></button><button type="button" data-mj-nav="search"><span class="mj-i">⌕</span><span>Search</span></button><button type="button" data-mj-nav="orders"><span class="mj-i">▤</span><span>Orders</span></button><button type="button" data-mj-nav="account"><span class="mj-i">♙</span><span>Account</span></button><button type="button" data-mj-nav="cart"><span class="mj-i">🛒</span><span>Cart</span><b id="mjNavCartBadge" hidden>0</b></button>';document.body.appendChild(n)}
-            function net(){let e=$('mjCustomerStatus');if(!e){e=document.createElement('div');e.id='mjCustomerStatus';e.innerHTML='<i></i><span></span>';document.body.appendChild(e)}const on=navigator.onLine;e.classList.toggle('offline',!on);e.querySelector('span').textContent=on?'Online':'Offline'}
-            function menuUX(){const ds=document.querySelectorAll('details.menu-category');if(ds.length&&!Array.from(ds).some(d=>d.open))ds[0].open=true;document.querySelectorAll('.megjet-add-button').forEach(b=>{b.style.setProperty('min-height','42px','important');b.style.setProperty('min-width','58px','important')})}
-            function checkoutUX(){const n=$('customerName'),p=$('phone'),a=$('address'),pay=$('paymentMethod');if(n){n.required=true;n.autocomplete='name'}if(p){p.required=true;p.inputMode='tel';p.autocomplete='tel'}if(a){a.required=true;a.autocomplete='street-address'}if(pay)pay.required=true;const btn=$('placeOrder');if(btn){btn.setAttribute('aria-label','Place your Megjet order');btn.style.minHeight='48px'}}
-            function sync(){makeNav();net();menuUX();checkoutUX();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
-            document.addEventListener('click',e=>{if(e.target.closest('.vendor-view'))setTimeout(menuUX,500);const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
-            let syncQueued=false;const mo=new MutationObserver(()=>{if(syncQueued)return;syncQueued=true;requestAnimationFrame(()=>{syncQueued=false;sync()})});
-            function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync);window.addEventListener('online',sync);window.addEventListener('offline',sync)}
-            if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
-          })();
-          </script>'''
-          t=t.replace('</head>',css+'\n</head>')
-          t=t.replace('</body>',js+'\n</body>')
-          p.write_text(t,encoding='utf-8')
+          t=t.replace("p_vendor_id:vendor_id","p_vendor_id:vendorId")
+          assert "admin-provision-vendor" in t
+          p.write_text(t,encoding="utf-8")
           PY
-      - name: Validate professional UX and all inline JavaScript
+      - name: Validate JavaScript
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import re,subprocess
-          t=Path('index.html').read_text(encoding='utf-8')
-          assert t.count('id="megjet-customer-pro-css"')==1
-          assert t.count('id="megjet-customer-pro-js"')==1
-          for marker in ['mjCustomerNav','mjNavCartBadge','data-mj-nav="search"','Added to cart','megjet-clean-cart-js','checkoutUX','street-address','.megjet-add-button{min-height:40px','menuUX','syncQueued','.vendor-view']:
-              assert marker in t, marker
-          scripts=re.findall(r'<script(?![^>]*\bsrc=)[^>]*>(.*?)</script>',t,re.I|re.S)
-          for i,code in enumerate(scripts):
-              f=Path('/tmp')/f'megjet_{i}.js';f.write_text(code,encoding='utf-8')
-              r=subprocess.run(['node','--check',str(f)],capture_output=True,text=True)
-              if r.returncode: raise SystemExit(f'Inline JS {i} failed: '+r.stderr)
-          print('PASS: professional customer UX + all inline JavaScript')
+          import re
+          t=Path("index.html").read_text(encoding="utf-8")
+          scripts=re.findall(r'<script(?:\\s[^>]*)?>(.*?)</script>',t,flags=re.S|re.I)
+          Path("/tmp/megjet-inline.js").write_text("\n".join(scripts),encoding="utf-8")
           PY
-      - name: Commit customer UX
+          node --check /tmp/megjet-inline.js
+      - name: Commit app fix
         shell: bash
         run: |
-          if git diff --quiet -- index.html; then echo "No changes"; exit 0; fi
-          git config user.name "Megjet UX Bot"
-          git config user.email "actions@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add index.html
-          git commit -m "Upgrade professional customer experience"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Fix vendor authentication provisioning"
           git push
