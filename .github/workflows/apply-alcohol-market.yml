@@ -14,9 +14,10 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 2
       - name: Apply tested update
         run: |
-          git apply megjet-alcohol-market.patch
+          git apply --3way megjet-alcohol-market.patch
           rm megjet-alcohol-market.patch
           rm .github/workflows/apply-alcohol-market.yml
           git config user.name "github-actions[bot]"
