@@ -3120,9 +3120,10 @@ function renderAdminMenu(){
   }
   const search=($("adminMenuSearch")?.value||"").trim().toLocaleLowerCase(),vendorFilter=$("adminMenuVendorFilter")?.value||"";
   const matches=adminMenuCache.filter(p=>(!vendorFilter||String(p.vendor_id)===vendorFilter)&&(!search||[p.name,p.description,adminVendorsCache.find(v=>String(v.id)===String(p.vendor_id))?.name].some(value=>String(value||"").toLocaleLowerCase().includes(search))));
-  $("adminMenuCount").textContent=`${matches.length} of ${adminMenuCache.length} items`;
+  const visible=matches.slice(0,80);
+  $("adminMenuCount").textContent=`${matches.length} of ${adminMenuCache.length} items${matches.length>80?' • Showing the first 80. Search by item name to narrow the list.':''}`;
   if(!matches.length){$("menuList").innerHTML='<div class="muted">No menu items match your search.</div>';return;}
-  $("menuList").innerHTML=matches.map(p=>{
+  $("menuList").innerHTML=visible.map(p=>{
     const vendor=adminVendorsCache.find(v=>String(v.id)===String(p.vendor_id));
     const available=p.available!==false;
     const pid=escapeJsString(p.id);
