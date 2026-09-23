@@ -124,8 +124,10 @@
     if (!button || button.dataset.megjetProtected === "true" || typeof button.onclick !== "function") return;
 
     const originalPlaceOrder = button.onclick;
+    let submitting = false;
     button.dataset.megjetProtected = "true";
     button.onclick = async function(event) {
+      if (submitting) return;
       const name = document.getElementById("customerName")?.value.trim() || "";
       const rawPhone = document.getElementById("phone")?.value.trim() || "";
       const phone = rawPhone.replace(/[^0-9]/g, "");
@@ -152,7 +154,10 @@
         return;
       }
 
-      configurePayments();
+      if (document.getElementById("paymentMethod")?.value !== "Cash on Delivery") {
+        checkoutMessage("Card payment is coming soon. Please choose Cash on Delivery.");
+        return;
+      }
       const fingerprint = checkoutFingerprint(name, phone, address);
       const previous = sessionStorage.getItem("megjet_checkout_fingerprint");
       const previousAt = Number(sessionStorage.getItem("megjet_checkout_time") || 0);
@@ -165,6 +170,8 @@
       sessionStorage.setItem("megjet_checkout_fingerprint", fingerprint);
       sessionStorage.setItem("megjet_checkout_time", String(Date.now()));
 
+      submitting = true;
+      button.disabled = true;
       try {
         await originalPlaceOrder.call(this, event);
         const newOrderId = String(window.trackedOrderId || localStorage.getItem("megjet_last_order_id") || "");
@@ -176,6 +183,9 @@
         sessionStorage.removeItem("megjet_checkout_fingerprint");
         sessionStorage.removeItem("megjet_checkout_time");
         throw error;
+      } finally {
+        submitting = false;
+        button.disabled = false;
       }
     };
   }
