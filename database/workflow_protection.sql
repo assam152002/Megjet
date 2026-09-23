@@ -49,3 +49,31 @@ for each row execute function public.megjet_enforce_order_status();
 -- as a definer, after checking the PIN and rider assignment.
 revoke execute on function public.rider_complete_delivery(uuid) from public, anon, authenticated;
 revoke execute on function public.rider_mark_order_delivered(uuid) from public, anon, authenticated;
+
+-- Match live checkout rules even when the REST endpoint is called directly.
+create or replace function public.megjet_validate_order_checkout()
+returns trigger
+language plpgsql
+set search_path = ''
+as $$
+begin
+  if length(trim(coalesce(new.customer_name,''))) < 2 then
+    raise exception 'Please enter your full name';
+  end if;
+  if length(regexp_replace(coalesce(new.customer_phone,''),'[^0-9]','','g')) not between 8 and 15 then
+    raise exception 'Please enter a valid phone number';
+  end if;
+  if length(trim(coalesce(new.delivery_address,''))) < 8 then
+    raise exception 'Please enter a complete delivery address';
+  end if;
+  if new.payment_method is distinct from 'Cash on Delivery' then
+    raise exception 'Only Cash on Delivery is available';
+  end if;
+  return new;
+end;
+$$;
+
+drop trigger if exists megjet_validate_order_checkout on public.orders;
+create trigger megjet_validate_order_checkout
+before insert on public.orders
+for each row execute function public.megjet_validate_order_checkout();
