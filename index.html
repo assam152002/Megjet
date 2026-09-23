@@ -1809,7 +1809,7 @@ async function fetchJson(url,options={},timeout=9000){
     const r=await fetch(url,{...options,signal:controller.signal});
     const text=await r.text();
     let data; try{data=text?JSON.parse(text):null}catch{data=text;}
-    if(!r.ok) throw new Error((data&&data.message)||("HTTP "+r.status));
+    if(!r.ok) throw new Error((data && (data.message || data.msg || data.error_description || (typeof data.error === "string" ? data.error : ""))) || ("HTTP " + r.status));
     return data;
   }catch(e){
     if(e.name==="AbortError") throw new Error("Request timed out. Check your internet connection or Supabase API.");
@@ -3837,7 +3837,7 @@ async function printOrderReceipt(id){
     }).join("");
     const status=normalizedStatus(order.status).replaceAll("_"," ");
     $("receiptContent").innerHTML=`
-      <div><b>Order #${escapeHtml(String(order.id).slice(0,8).toUpperCase())}</b></div>
+      <div><b>Order #${escapeHtml(displayOrderId(order.id))}</b></div>
       <div class="muted">${escapeHtml(new Date(order.created_at).toLocaleString("en-GB"))}</div>
       <div class="receipt-line"></div>
       <div><b>Customer:</b> ${escapeHtml(order.customer_name||"Customer")}</div>
