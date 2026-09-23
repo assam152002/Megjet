@@ -2150,18 +2150,21 @@ $("placeOrder").onclick=async()=>{
   const subtotal=cart.reduce((a,p)=>a+Number(p.price),0);
   try{
     $("placeOrder").disabled=true;$("orderMessage").textContent="Sending order…";
-    // Generate the order UUID in the browser so checkout does not need
-    // SELECT permission to retrieve the inserted row.
-    const orderId=crypto.randomUUID();
     const totals=checkoutTotals();
     const paymentMethod=$("paymentMethod")?.value||"Cash on Delivery";
     const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1)}));
+    // Keep the same ID if a request reaches the server but its reply is lost.
+    const checkoutKey=JSON.stringify([name,phone,address,paymentMethod,appliedCoupon?.code||null,customerAuthUser?.id||null,items]);
+    let pending;try{pending=JSON.parse(localStorage.getItem("megjet_pending_checkout")||"null")}catch{}
+    const orderId=pending?.key===checkoutKey&&pending?.id?pending.id:crypto.randomUUID();
+    localStorage.setItem("megjet_pending_checkout",JSON.stringify({key:checkoutKey,id:orderId}));
     const orderHeaders=await customerAuthHeaders();
-    await fetchJson(base+"/rest/v1/rpc/create_customer_order_account",{
+    const placed=await fetchJson(base+"/rest/v1/rpc/create_customer_order_retry",{
       method:"POST",
       headers:orderHeaders,
       body:JSON.stringify({p_order_id:orderId,p_customer_name:name,p_customer_phone:phone,p_delivery_address:address,p_payment_method:paymentMethod,p_coupon_code:appliedCoupon?.code||null,p_items:items})
     });
+    localStorage.removeItem("megjet_pending_checkout");
     const displayId=String(orderId||"").replace(/-/g,"").slice(-8).toUpperCase();
     trackedOrderId=String(orderId||"");
     localStorage.setItem("megjet_last_order_id",trackedOrderId);
@@ -2169,7 +2172,7 @@ $("placeOrder").onclick=async()=>{
     cart=[];renderCart();
     $("checkout").classList.add("hidden");
     $("confirmationOrderNumber").textContent="Your order number is #"+displayId;
-    $("confirmationStatus").textContent="Pending";
+    $("confirmationStatus").textContent=String(placed?.status||"Pending").replaceAll("_"," ");
     $("orderConfirmation").classList.remove("hidden");
     $("orderMessage").textContent="";
     $("customerName").value=$("phone").value=$("address").value="";$("couponCode").value="";$("couponMessage").textContent="";appliedCoupon=null;renderCheckoutTotals();
