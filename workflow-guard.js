@@ -12,8 +12,39 @@
   };
 
   function currentAdminOrder(orderId) {
-    return (window.adminOrdersCache || []).find(order => String(order.id) === String(orderId));
+    return (typeof adminOrdersCache !== "undefined" ? adminOrdersCache : []).find(order => String(order.id) === String(orderId));
   }
+
+  const originalSaveOrderStatus = window.saveOrderStatus;
+  if (typeof originalSaveOrderStatus === "function") {
+    window.saveOrderStatus = async function(orderId, nextStatus) {
+      const order = currentAdminOrder(orderId);
+      if (!order) {
+        alert("Refresh Admin orders before changing this order's status.");
+        return;
+      }
+      const current = typeof window.normalizedStatus === "function"
+        ? window.normalizedStatus(order.status)
+        : String(order.status || "pending").toLowerCase();
+      const next = String(nextStatus || "").toLowerCase();
+      if (!allowedTransitions[current]?.has(next)) {
+        alert("Status changes must follow Pending → Confirmed → Preparing → Ready for Pickup → Out for Delivery → Delivered.");
+        return;
+      }
+      if (next === "delivered") {
+        alert("The assigned rider must verify the customer's 4-digit PIN to complete delivery.");
+        return;
+      }
+      if (next === "out_for_delivery" && !(typeof adminOrderRiderMap !== "undefined" && adminOrderRiderMap[String(orderId)])) {
+        alert("Assign a rider before sending this order out for delivery.");
+        return;
+      }
+      return originalSaveOrderStatus(orderId, nextStatus);
+    };
+  }
+  window.changeAdminOrderStatus = function(orderId, nextStatus) {
+    return window.saveOrderStatus(orderId, nextStatus);
+  };
 
   function removeDeliveryBypasses() {
     document.querySelectorAll('#riderOrders button[onclick*="riderMarkDelivered"]').forEach(button => {
@@ -41,7 +72,7 @@
         return;
       }
 
-      if (next === "out_for_delivery" && !window.adminOrderRiderMap?.[String(orderId)]) {
+      if (next === "out_for_delivery" && !(typeof adminOrderRiderMap !== "undefined" && adminOrderRiderMap[String(orderId)])) {
         alert("Assign a rider before sending this order out for delivery.");
         return;
       }
@@ -72,7 +103,7 @@
         return;
       }
 
-      if (next === "out_for_delivery" && !window.adminOrderRiderMap?.[String(orderId)]) {
+      if (next === "out_for_delivery" && !(typeof adminOrderRiderMap !== "undefined" && adminOrderRiderMap[String(orderId)])) {
         alert("Assign a rider before sending this order out for delivery.");
         if (typeof window.renderAdminOrders === "function") window.renderAdminOrders();
         return;
