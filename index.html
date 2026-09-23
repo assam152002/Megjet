@@ -3156,26 +3156,31 @@ async function uploadAdminMenuPhoto(productId,input){
   if(!file)return;
   const status=$("menu-photo-status-"+String(productId));
   try{
-    if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error("Choose a JPG, PNG or WebP image.");
-    if(file.size>5*1024*1024)throw new Error("Photo must be 5 MB or smaller.");
-    if(status)status.textContent="Uploading…";
-    const token=localStorage.getItem("megjet_access_token");
-    if(!token)throw new Error("Admin sign-in required.");
-    const safeName=file.name.toLowerCase().replace(/[^a-z0-9._-]/g,"-");
-    const path=String(productId)+"/"+Date.now()+"-"+safeName;
-    await fetchJson(cfg.url.replace(/\/+$/,'')+"/storage/v1/object/product-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type},body:file},60000);
-    const imageUrl=cfg.url.replace(/\/+$/,'')+"/storage/v1/object/public/product-images/"+path.split('/').map(encodeURIComponent).join('/');
-    await adminRequest("/rest/v1/rpc/admin_set_product_image",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:String(productId),p_image_url:imageUrl})});
+    const imageUrl=await storeAdminProductPhoto(productId,file,status);
     const cached=adminMenuCache.find(x=>String(x.id)===String(productId));
     if(cached)cached.image_url=imageUrl;
     renderAdminMenu();
-    await load();
+    if(cached)renderVendorMenuPanel(cached.vendor_id);
   }catch(e){
     if(status)status.textContent="Upload failed: "+e.message;
     else alert("Could not upload photo: "+e.message);
   }finally{
     if(input)input.value="";
   }
+}
+async function storeAdminProductPhoto(productId,file,status){
+  if(!['image/jpeg','image/png','image/webp'].includes(file?.type))throw new Error("Choose a JPG, PNG or WebP image.");
+  if(file.size>5*1024*1024)throw new Error("Photo must be 5 MB or smaller.");
+  const token=localStorage.getItem("megjet_access_token");
+  if(!token)throw new Error("Admin sign-in required.");
+  if(status)status.textContent="Uploading photo…";
+  const safeName=file.name.toLowerCase().replace(/[^a-z0-9._-]/g,"-");
+  const path=String(productId)+"/"+Date.now()+"-"+safeName;
+  await fetchJson(cfg.url.replace(/\/+$/,'')+"/storage/v1/object/product-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type},body:file},60000);
+  const imageUrl=cfg.url.replace(/\/+$/,'')+"/storage/v1/object/public/product-images/"+path.split('/').map(encodeURIComponent).join('/');
+  if(status)status.textContent="Saving photo…";
+  await adminRequest("/rest/v1/rpc/admin_set_product_image",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:String(productId),p_image_url:imageUrl})});
+  return imageUrl;
 }
 
 function resetVendorForm(){
@@ -3204,12 +3209,18 @@ function renderVendorMenuPanel(vendorId){
   const key=vendorMenuId(vendorId);
   const list=$("vendor-menu-list-"+key);
   if(!list)return;
-  const items=vendorMenuItems(vendorId);
-  list.innerHTML=items.length ? items.map(p=>{
+  const search=($("vendor-menu-search-"+key)?.value||"").trim().toLocaleLowerCase();
+  const all=vendorMenuItems(vendorId),items=all.filter(p=>!search||[p.name,p.description].some(value=>String(value||"").toLocaleLowerCase().includes(search)));
+  const count=$("vendor-menu-count-"+key);
+  if(count)count.textContent=`${items.length} of ${all.length} items${items.length>80?' • Showing the first 80. Search for more.':''}`;
+  list.innerHTML=items.length ? items.slice(0,80).map(p=>{
     const available=p.available!==false;
     const id=escapeJsString(p.id);
+    const photo=p.image_url||"";
     return `<div class="vendor-menu-row">
-      <div style="min-width:0;flex:1"><b>${escapeHtml(p.name||"Unnamed item")}</b><div class="muted">${escapeHtml(p.description||"No description")}</div><div><b>${money(p.price)}</b> <span class="${available?"pill-available":"pill-unavailable"}">${available?"Available":"Sold Out"}</span></div></div>
+      <div style="min-width:0;flex:1"><b>${escapeHtml(p.name||"Unnamed item")}</b><div class="muted">${escapeHtml(p.description||"No description")}</div><div><b>${money(p.price)}</b> <span class="${available?"pill-available":"pill-unavailable"}">${available?"Available":"Sold Out"}</span></div>
+        <div class="vendor-photo-box">${photo?`<img class="vendor-photo-thumb" src="${escapeHtml(photo)}" alt="${escapeHtml(p.name||"Item")} photo">`:`<div class="vendor-photo-thumb" style="display:flex;align-items:center;justify-content:center;font-size:22px">🍽️</div>`}<label class="vendor-photo-upload">📷 ${photo?'Change Photo':'Upload Photo'}<input type="file" accept="image/png,image/jpeg,image/webp" onchange="uploadVendorPanelPhoto('${id}',this)"></label><span id="vendor-panel-photo-status-${escapeHtml(String(p.id))}" class="vendor-photo-status">${photo?'Photo added':'No photo yet'}</span></div>
+      </div>
       <div class="menu-actions">
         <button type="button" onclick="editVendorMenuItem('${id}')">Edit</button>
         <button type="button" class="secondary" onclick="toggleMenuItem('${id}',${available})">${available?"Sold Out":"Make Available"}</button>
@@ -3242,6 +3253,7 @@ function renderAdminVendors(){
       <button type="button" class="vendor-menu-open" onclick="toggleVendorMenu('${vid}')">🍵 Open ${escapeHtml(v.name||"Vendor")} Menu</button>
       <div id="vendor-menu-panel-${key}" class="vendor-menu-panel hidden">
         <div class="vendor-menu-head"><div><b>🍵 ${escapeHtml(v.name||"Vendor")} Menu</b><div class="muted">Manage this vendor's menu here.</div></div><button type="button" onclick="showVendorMenuForm('${vid}')">+ Add Menu Item</button></div>
+        <div class="vendor-menu-search"><input id="vendor-menu-search-${key}" type="search" placeholder="Search ${escapeHtml(v.name||"vendor")} items…" aria-label="Search ${escapeHtml(v.name||"vendor")} menu" oninput="renderVendorMenuPanel('${vid}')"></div><div id="vendor-menu-count-${key}" class="small"></div>
         <div id="vendor-menu-form-${key}"></div>
         <div id="vendor-menu-list-${key}" class="vendor-menu-list"></div>
       </div>
@@ -3269,6 +3281,7 @@ function showVendorMenuForm(vendorId,productId=""){
       <div class="full"><textarea id="vm-desc-${key}" rows="2" placeholder="Short description">${escapeHtml(product?.description||"")}</textarea></div>
       <div><input id="vm-price-${key}" type="number" min="0" step="1" placeholder="Price (₺)" value="${escapeHtml(product?.price??"")}"></div>
       <div><select id="vm-available-${key}"><option value="true" ${product?.available!==false?"selected":""}>Available</option><option value="false" ${product?.available===false?"selected":""}>Sold Out</option></select></div>
+      <div class="full"><b>📷 Product Photo</b><div id="vm-photo-preview-${key}" class="vendor-photo-box">${product?.image_url?`<img class="vendor-photo-thumb" src="${escapeHtml(product.image_url)}" alt="Current product photo">`:'No photo yet'}</div><input id="vm-photo-${key}" type="file" accept="image/png,image/jpeg,image/webp"><div class="small">${product?.image_url?'Choose a new photo to replace it.':'Choose a JPG, PNG or WebP photo (up to 5 MB).'}</div></div>
     </div>
     <div class="vendor-menu-form-actions">
       <button type="button" onclick="saveVendorMenuItem('${escapeJsString(vendor.id)}','${pid}')">${product?"Save Changes":"Add Item"}</button>
@@ -3290,23 +3303,32 @@ function editVendorMenuItem(productId){
   if(panel)panel.classList.remove("hidden");
   showVendorMenuForm(product.vendor_id,product.id);
 }
+async function uploadVendorPanelPhoto(productId,input){
+  const file=input?.files?.[0];if(!file)return;
+  const status=$("vendor-panel-photo-status-"+String(productId));
+  try{
+    const imageUrl=await storeAdminProductPhoto(productId,file,status);
+    const product=adminMenuCache.find(p=>String(p.id)===String(productId));
+    if(product){product.image_url=imageUrl;renderVendorMenuPanel(product.vendor_id);renderAdminMenu();}
+  }catch(e){if(status)status.textContent='Upload failed: '+e.message;}
+  finally{input.value='';}
+}
 async function saveVendorMenuItem(vendorId,productId=""){
   const key=vendorMenuId(vendorId);
   const name=$("vm-name-"+key)?.value.trim();
   const description=$("vm-desc-"+key)?.value.trim();
   const price=Number($("vm-price-"+key)?.value);
   const available=$("vm-available-"+key)?.value!=="false";
+  const photo=$("vm-photo-"+key)?.files?.[0]||null;
   const msg=$("vm-msg-"+key);
   if(!name){if(msg)msg.textContent="Please enter an item name.";return;}
   if(!Number.isFinite(price)||price<0){if(msg)msg.textContent="Please enter a valid price.";return;}
   try{
     if(msg)msg.textContent="Saving…";
-    const payload={name,description,price,available,vendor_id:vendorId};
-    if(productId){
-      await adminRequest("/rest/v1/rpc/admin_save_product",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:productId,p_vendor_id:vendorId,p_name:name,p_description:description,p_price:price,p_available:available})});
-    }else{
-      await adminRequest("/rest/v1/rpc/admin_save_product",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:null,p_vendor_id:vendorId,p_name:name,p_description:description,p_price:price,p_available:available})});
-    }
+    if(photo&&(!['image/jpeg','image/png','image/webp'].includes(photo.type)||photo.size>5*1024*1024))throw new Error('Choose a JPG, PNG or WebP photo under 5 MB.');
+    const saved=await adminRequest("/rest/v1/rpc/admin_save_product",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:productId||null,p_vendor_id:vendorId,p_name:name,p_description:description,p_price:price,p_available:available})});
+    const savedId=String(saved?.id||saved?.product_id||productId||"");
+    if(photo){if(!savedId)throw new Error('Item saved, but no product ID was returned for its photo.');await storeAdminProductPhoto(savedId,photo,msg);}
     await loadAdminMenu();
     const panel=$("vendor-menu-panel-"+key);
     if(panel)panel.classList.remove("hidden");
