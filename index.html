@@ -3635,7 +3635,8 @@ async function saveRiderAdmin(){
   const id=$("riderItemId").value.trim(), name=$("riderNewName").value.trim(), phone=$("riderNewPhone").value.trim(), password=$("riderNewPassword").value;
   if(!name){$("riderMessage").textContent="Please enter the rider name.";return;}
   if(!phone){$("riderMessage").textContent="Please enter the rider phone number.";return;}
-  if(!id && password.length<6){$("riderMessage").textContent="New rider password must be at least 6 characters.";return;}
+  if(password && password.length<6){$("riderMessage").textContent="Rider password must be at least 6 characters. No changes were saved.";return;}
+  if(!id && !password){$("riderMessage").textContent="New rider password must be at least 6 characters.";return;}
   try{
     $("riderSaveBtn").disabled=true; $("riderMessage").textContent="Saving rider…";
     await adminRequest("/rest/v1/rpc/admin_save_rider",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_rider_id:id||null,p_name:name,p_phone:phone,p_active:$("riderNewActive").checked,p_available:$("riderNewAvailable").checked,p_password:password||null})});
