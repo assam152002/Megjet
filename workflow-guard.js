@@ -137,7 +137,9 @@
     const card = Array.from(payment.options).find(option => option.value === "Credit / Debit Card");
     if (card) {
       card.disabled = true;
-      card.textContent = "Credit / Debit Card — Coming Soon";
+      if (card.textContent !== "Credit / Debit Card — Coming Soon") {
+        card.textContent = "Credit / Debit Card — Coming Soon";
+      }
     }
     if (payment.value === "Credit / Debit Card") payment.value = "Cash on Delivery";
   }
