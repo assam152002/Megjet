@@ -1879,6 +1879,17 @@ async function loadDeliveryFee(){
   }
 }
 
+async function megjetFetchPages(path,request){
+  const pageSize=500,all=[];
+  for(let offset=0;offset<20000;offset+=pageSize){
+    const rows=await request(`${path}&limit=${pageSize}&offset=${offset}`);
+    if(!Array.isArray(rows))throw new Error("Could not load menu page.");
+    all.push(...rows);
+    if(rows.length<pageSize)return all;
+  }
+  throw new Error("Menu has more than 20,000 rows.");
+}
+
 async function load(){
   // Never block the customer-facing app while Supabase is connecting.
   renderDemoMenu();
@@ -1898,13 +1909,13 @@ async function load(){
       fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       }),
-      fetchJson(base+"/rest/v1/products?select=id,vendor_id,name,description,price,image_url&available=eq.true&order=name",{
+      megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url&available=eq.true&order=name,id",path=>fetchJson(base+path,{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
-      })
+      }))
     ]);
     setStatus("Connected ✓ Live vendors from Supabase","ok");
     hideSetup();
-    renderVendors([...vendors, MEGJET_COMING_SOON_ALCOHOL_VENDOR, MEGJET_LOCAL_DOLCE_VENDOR, MEGJET_LOCAL_HELVACI_VENDOR, MEGJET_LOCAL_NO33_VENDOR],[...products, ...MEGJET_COMING_SOON_ALCOHOL_PRODUCTS, ...MEGJET_LOCAL_DOLCE_PRODUCTS, ...MEGJET_LOCAL_HELVACI_PRODUCTS, ...MEGJET_LOCAL_NO33_PRODUCTS]);
+    renderVendors([...vendors, MEGJET_COMING_SOON_ALCOHOL_VENDOR],[...products, ...MEGJET_COMING_SOON_ALCOHOL_PRODUCTS]);
     loadGrowthHome().catch(()=>{});
   }catch(e){
     setStatus("Supabase connected, but the Megjet tables could not be loaded.","bad");
@@ -3397,7 +3408,7 @@ async function loadAdminMenu(){
   // Load vendors and products concurrently. Render whichever finishes first
   // so the Menu tab never waits unnecessarily for the Vendors query.
   const vendorsPromise=adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active&order=name");
-  const productsPromise=adminRequest("/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&order=name");
+  const productsPromise=megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&order=name,id",path=>adminRequest(path));
 
   // Render cached menu immediately when available.
   if(adminMenuCache && adminMenuCache.length) renderAdminMenu();
