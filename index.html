@@ -2007,7 +2007,18 @@ Object.assign(window.MEGJET_PRODUCT_PHOTOS=window.MEGJET_PRODUCT_PHOTOS||{}, {'B
 (window.MEGJET_VENDOR_LOGOS=window.MEGJET_VENDOR_LOGOS||{})['Alcohol Market']=MEGJET_ALCOHOL_IMAGES.market;
 (window.MEGJET_VENDOR_HEROES=window.MEGJET_VENDOR_HEROES||{})['Alcohol Market']=MEGJET_ALCOHOL_IMAGES.market;
 
+function megjetUniqueProducts(products){
+  const unique=new Map();
+  for(const product of products||[]){
+    const key=[product.vendor_id,String(product.name||'').trim().toLocaleLowerCase(),String(product.description||'').trim().toLocaleLowerCase(),Number(product.price||0).toFixed(2)].join('|');
+    const previous=unique.get(key);
+    const photoTime=p=>Number(String(p?.image_url||'').match(/\/(\d{13})-/)?.[1]||0);
+    if(!previous || (!!product.image_url&&!previous.image_url) || (!!product.image_url&&!!previous.image_url&&photoTime(product)>photoTime(previous)))unique.set(key,product);
+  }
+  return [...unique.values()];
+}
 function renderVendors(vendors,products){
+  products=megjetUniqueProducts(products);
   const categoryOrder=["Sweets Menu","Hot Drinks Menu","Hot Chocolates Menu","Cold Drinks Menu","Hot Coffees Menu","Milkshake-Frozen-Lemonade Menu","Turkish Coffees Menu","Iced Coffees Menu","Myra Special Menu","Ice Creams Menu","Extra Products Menu","Başlangıçlar / Starters","Çorbalar / Soups","Salatalar / Salads","Risotto","Makarnalar / Pasta","Pizzalar / Pizzas","Şefin Özel Izgara Lezzetleri / Chef's Special Grilled Flavors","Burgerler / Burgers","Desserts / Tatlılar","İçecekler / Drinks • Meşrubatlar / Soft Drinks","İçecekler / Drinks • Kahveler / Coffees","Alkollü İçecekler / Alcoholic Beverages • Biralar / Beers","Alkollü İçecekler / Alcoholic Beverages • Şaraplar / Wines","Alkollü İçecekler / Alcoholic Beverages • Alkollü Kokteyler / Cocktails","Klasikler / Classics","Özel Lezzetler","İstantuni & Servis","Peynir Severlere","Yan Ürünler / Sides","İçecekler / Beverages","İrmik Helvaları","Belçika Çikolatalı Kovada Waffle","Belçika Çikolatalı Bubble Tabakta Waffle","Krep Sarma","Bardak Waffle","Magnolia","Belçika Çikolatalı Kruvasan","Pastalar","Sıcak İçecekler","Soğuk İçecekler","Dünya Kahveleri (Sıcak)","Dünya Kahveleri (Soğuk)","Milkshake","Frozen"];
   const catIcons={"ATIŞTIRMALIKLAR":"🍟","PATATES DURAĞI":"🍟","MEAL DEAL":"🍱","EV YAPIMI BURGER DURAĞI":"🍔","SOSLAR":"🥫","BURGER STATION EKSTRALARI":"➕","SOĞUK İÇECEKLER":"🥤","SICAK İÇECEKLER":"☕","BİRALAR":"🍺","KOKTEYLLER":"🍸","ŞARAPLAR":"🍷","BOWL":"🥗"};
   function productCategory(p){const m=String(p.description||'').match(/^\[([^\]]+)\]/);return m?m[1]:"Other Items";}
@@ -2040,7 +2051,7 @@ function renderVendors(vendors,products){
   function renderProduct(p,v){
     const item={...p,vendor_name:v.name};
     const photoKey=Object.keys(window.MEGJET_PRODUCT_PHOTOS || {}).find(k=>k.trim().toLowerCase()===String(p.name||"").trim().toLowerCase());
-    const productImage=(photoKey?(window.MEGJET_PRODUCT_PHOTOS || {})[photoKey]:"")||p.image_url||"https://placehold.co/96x96?text=Food";
+    const productImage=p.image_url||(photoKey?(window.MEGJET_PRODUCT_PHOTOS || {})[photoKey]:"")||"https://placehold.co/96x96?text=Food";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
     const isCafe5=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='cafe5';
     const photoClass=isSweetHoles?'product-image-admin sweetholes-product-photo':(isCafe5?'product-image-admin cafe5-product-photo':'product-image-admin');
@@ -2067,9 +2078,7 @@ function renderVendors(vendors,products){
   }).join(''):`<div class='card'><h2>No vendors yet</h2><p class='muted'>Your Supabase connection works, but no active vendors have been added yet.</p></div>`;
   window.openVendorProfile=function(vendorId){
     const v=vendors.find(x=>String(x.id)===String(vendorId)); if(!v)return;
-    const rawPs=products.filter(p=>String(p.vendor_id)===String(v.id));
-    const seenProducts=new Set();
-    const ps=rawPs.filter(p=>{const key=String(p.name||'').trim().toLowerCase()+'|'+Number(p.price||0).toFixed(2);if(seenProducts.has(key))return false;seenProducts.add(key);return true;});
+    const ps=products.filter(p=>String(p.vendor_id)===String(v.id));
     const groups={}; ps.forEach(p=>{const c=productCategory(p);(groups[c] ||= []).push(p);});
     const cats=[...categoryOrder.filter(c=>groups[c]),...Object.keys(groups).filter(c=>!categoryOrder.includes(c))];
     const hero=heroFor(v)||MEGJET_CATEGORY_IMAGES['Sweets Menu']||'';
@@ -2760,7 +2769,7 @@ function previewVendorMenuPhoto(input){
 }
 function cancelVendorPortalMenuForm(){vendorMenuEditingId=null;if($("vendorMenuFormHost"))$("vendorMenuFormHost").innerHTML="";}
 function editVendorPortalMenu(id){const p=vendorMenuCache.find(x=>String(x.id)===String(id));if(p)showVendorPortalMenuForm(p);}
-async function loadVendorMenu(){try{const token=localStorage.getItem('megjet_vendor_access_token');if(!token||!vendorProfile?.id)return;vendorMenuCache=await vendorRequest('/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&vendor_id=eq.'+encodeURIComponent(vendorProfile.id)+'&order=name');renderVendorMenu();}catch(e){if($("vendorMenuList"))$("vendorMenuList").innerHTML='<div class="muted">Could not load menu: '+escapeHtml(e.message)+'</div>';}}
+async function loadVendorMenu(){try{const token=localStorage.getItem('megjet_vendor_access_token');if(!token||!vendorProfile?.id)return;vendorMenuCache=megjetUniqueProducts(await vendorRequest('/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&vendor_id=eq.'+encodeURIComponent(vendorProfile.id)+'&order=name'));renderVendorMenu();}catch(e){if($("vendorMenuList"))$("vendorMenuList").innerHTML='<div class="muted">Could not load menu: '+escapeHtml(e.message)+'</div>';}}
 async function uploadVendorMenuPhoto(productId,input){
   const file=input?.files?.[0]; if(!file)return;
   const status=$("vendor-photo-status-"+String(productId));
@@ -3393,7 +3402,7 @@ async function loadAdminMenu(){
 
   try{
     const products=await productsPromise;
-    adminMenuCache=products||[];
+    adminMenuCache=megjetUniqueProducts(products||[]);
     renderAdminMenu();
     renderAdminVendors();
   }catch(e){
@@ -4616,8 +4625,7 @@ async function megjetAutoSetupAfterLogin(){
   addMegjetAutoSetupUI();
   await megjetAutoInstallRestaurant();
 }
-setTimeout(()=>{megjetAutoSetupAfterLogin().catch(e=>console.error(e));},2500);
-setInterval(()=>{if(localStorage.getItem("megjet_access_token") && localStorage.getItem("megjet_auto_chikolata_v1")!=="done") megjetAutoSetupAfterLogin().catch(()=>{});},5000);
+// Initial menu import is complete. Do not repeat it on Admin sign-in.
 setTimeout(addMegjetAutoSetupUI,1500);
 </script>
 <script>
@@ -4907,11 +4915,7 @@ async function megjetCafe5Install(){
     console.error("Cafe 5 install failed:",e);
   }
 }
-setTimeout(()=>megjetCafe5Install().catch(()=>{}),3000);
-setInterval(()=>{
-  if(localStorage.getItem("megjet_access_token") && localStorage.getItem("megjet_auto_cafe5_v1")!=="done")
-    megjetCafe5Install().catch(()=>{});
-},7000);
+// Cafe 5 is already installed. Re-importing on each browser creates duplicate items.
 
 /* ===== MEGJET PHASE 1 ENHANCEMENTS ===== */
 (function(){
