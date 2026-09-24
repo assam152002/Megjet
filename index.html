@@ -1219,6 +1219,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
             <div><input id="vendorArea" placeholder="Area"></div>
             <div><input id="adminVendorPhone" type="tel" placeholder="Vendor phone" inputmode="tel"></div>
             <div class="full"><input id="vendorAddress" placeholder="Full vendor address"></div>
+            <div class="full"><label for="vendorBio"><b>Restaurant bio</b></label><textarea id="vendorBio" rows="3" maxlength="600" placeholder="Tell customers about this restaurant…" style="width:100%;resize:vertical"></textarea><div class="small muted">Shown below the restaurant banner. Up to 600 characters.</div></div>
             <div><input id="vendorRating" placeholder="Rating (e.g. 4.8)"></div>
             <div><input id="vendorPrep" type="number" min="0" step="1" placeholder="Preparation time (minutes)"></div>
             <div class="full"><input id="adminVendorPassword" type="password" placeholder="Portal password (6+ characters)"></div>
@@ -1913,7 +1914,7 @@ async function load(){
   try{
     await loadDeliveryFee();
     const [vendors,products]=await Promise.all([
-      fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url&active=eq.true&order=name",{
+      fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url,bio&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       }),
       megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url&available=eq.true&order=name,id",path=>fetchJson(base+path,{
@@ -2062,6 +2063,7 @@ function renderVendors(vendors,products){
     return k?window.MEGJET_VENDOR_LINKS[k]:'';
   }
   function descriptionFor(v){
+    if(v.bio!==null&&v.bio!==undefined)return String(v.bio);
     const n=String(v.name||'').trim();
     const k=Object.keys(window.MEGJET_VENDOR_DESCRIPTIONS||{}).find(x=>x.trim().toLowerCase()===n.toLowerCase());
     return k?window.MEGJET_VENDOR_DESCRIPTIONS[k]:'';
@@ -3237,7 +3239,7 @@ async function storeAdminVendorArt(vendorId,kind,file){
 }
 
 function resetVendorForm(){
-  ["vendorItemId","vendorName","vendorArea","vendorAddress","adminVendorPhone","vendorRating","vendorPrep","adminVendorPassword","vendorLogoFile","vendorBannerFile"].forEach(id=>{if($(id))$(id).value="";});
+  ["vendorItemId","vendorName","vendorArea","vendorAddress","vendorBio","adminVendorPhone","vendorRating","vendorPrep","adminVendorPassword","vendorLogoFile","vendorBannerFile"].forEach(id=>{if($(id))$(id).value="";});
   ["vendorRemoveLogo","vendorRemoveBanner"].forEach(id=>{if($(id))$(id).checked=false;});
   if($("vendorActive"))$("vendorActive").checked=true;
   if($("vendorFormTitle"))$("vendorFormTitle").textContent="Add Vendor";
@@ -3266,6 +3268,7 @@ function showVendorForm(v=null){
     $("vendorPhotoSaveBtn")?.classList.remove("hidden");
     $("vendorItemId").value=v.id||"";$("vendorName").value=v.name||"";$("vendorArea").value=v.area||"";
     $("vendorAddress").value=v.address||"";$("adminVendorPhone").value=v.phone||"";$("vendorRating").value=v.rating??"";
+    $("vendorBio").value=v.bio??(window.MEGJET_VENDOR_DESCRIPTIONS||{})[v.name]??"";
     $("vendorPrep").value=v.preparation_minutes??20;$("vendorActive").checked=v.active!==false;
     $("adminVendorPassword").placeholder="New password (optional; 6+ characters)";
   }else{$("vendorArea").value="Gazimagusa";$("vendorPrep").value=20;}
@@ -3319,6 +3322,7 @@ function renderAdminVendors(){
         <div style="text-align:right"><span class="${active?"vendor-active":"vendor-inactive"}">${active?"Active":"Inactive"}</span></div>
       </div>
       <div class="muted">⭐ ${escapeHtml(v.rating||"New")} • ⏱️ ${escapeHtml(String(v.preparation_minutes||20))} mins • 🍵 ${count} menu item${count===1?"":"s"}</div>
+      <div class="muted">${escapeHtml(v.bio??(window.MEGJET_VENDOR_DESCRIPTIONS||{})[v.name]??"Local restaurant on Megjet")}</div>
       <div class="feature-small">📞 ${escapeHtml(v.phone||"No phone")} • 📍 ${escapeHtml(v.address||v.area||"Gazimagusa")}</div>
       <div class="vendor-actions">
         <button type="button" onclick="editVendor('${vid}')">Edit Vendor</button>
@@ -3427,6 +3431,7 @@ async function saveVendor(){
   const name=$("vendorName").value.trim();
   const area=$("vendorArea").value.trim();
   const address=$("vendorAddress").value.trim();
+  const bio=$("vendorBio").value.trim();
   const phone=$("adminVendorPhone").value.trim();
   const rating=$("vendorRating").value.trim();
   const prep=Number($("vendorPrep").value);
@@ -3438,6 +3443,7 @@ async function saveVendor(){
   const clearBanner=!!$("vendorRemoveBanner")?.checked&&!bannerFile;
   if(!name||!phone||!address){$("vendorMessage").textContent="Name, phone and address are required.";return;}
   if(!Number.isFinite(prep)||prep<0){$("vendorMessage").textContent="Please enter a valid preparation time.";return;}
+  if(bio.length>600){$("vendorMessage").textContent="Keep the restaurant bio under 600 characters.";return;}
   if(!id&&password.length<6){$("vendorMessage").textContent="A new vendor needs a password of at least 6 characters.";return;}
   if([logoFile,bannerFile].some(f=>f&&(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>5*1024*1024))){$("vendorMessage").textContent="Choose JPG, PNG or WebP artwork under 5 MB each.";return;}
   try{
@@ -3459,6 +3465,7 @@ async function saveVendor(){
     if(logoUrl||bannerUrl||clearLogo||clearBanner){
       await adminRequest("/rest/v1/rpc/admin_set_vendor_branding",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:vendorId,p_logo_url:logoUrl,p_banner_url:bannerUrl,p_clear_logo:clearLogo,p_clear_banner:clearBanner})});
     }
+    await adminRequest("/rest/v1/rpc/admin_set_vendor_bio",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:vendorId,p_bio:bio})});
     resetVendorForm();$("vendorForm").classList.add("hidden");
     await loadAdminMenu();await load();
     if($("vendorSavedMessage"))$("vendorSavedMessage").textContent="Vendor saved ✓"+(!id?" Add its menu items below.":"");
@@ -3498,7 +3505,7 @@ async function toggleVendor(id,current){
 async function loadAdminMenu(){
   // Load vendors and products concurrently. Render whichever finishes first
   // so the Menu tab never waits unnecessarily for the Vendors query.
-  const vendorsPromise=adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active,logo_url,banner_url&order=name");
+  const vendorsPromise=adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active,logo_url,banner_url,bio&order=name");
   const productsPromise=megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&order=name,id",path=>adminRequest(path));
 
   // Render cached menu immediately when available.
