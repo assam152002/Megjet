@@ -113,6 +113,7 @@ button.secondary{background:#eee;color:#25170f}
 .vendor-form{background:#fff8ef;border:1px solid #f0e1d2;border-radius:16px;padding:14px;margin:12px 0}
 .vendor-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .vendor-form-grid .full{grid-column:1/-1}
+.vendor-art-preview{display:flex;align-items:center;gap:10px;min-height:54px;margin:7px 0;color:#597486;font-size:12px}.vendor-art-preview img{width:60px;height:60px;object-fit:contain;border-radius:10px;border:1px solid #d8ebf3}.vendor-art-preview img.banner{width:130px;height:60px;object-fit:cover}.vendor-brand-row{display:flex;align-items:center;gap:10px}.vendor-brand-row img{width:42px;height:42px;object-fit:contain;border-radius:8px}.vendor-brand-row img.banner{width:68px;object-fit:cover}
 .vendor-list{display:grid;gap:10px}
 .vendor-item-admin{border:1px solid #eadfd6;border-radius:16px;padding:14px;background:#fff}
 .vendor-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
@@ -1220,6 +1221,8 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
             <div><input id="vendorRating" placeholder="Rating (e.g. 4.8)"></div>
             <div><input id="vendorPrep" type="number" min="0" step="1" placeholder="Preparation time (minutes)"></div>
             <div class="full"><input id="adminVendorPassword" type="password" placeholder="Portal password (6+ characters)"></div>
+            <div><label for="vendorLogoFile"><b>Vendor logo</b></label><div id="vendorLogoPreview" class="vendor-art-preview">Choose a JPG, PNG or WebP logo.</div><input id="vendorLogoFile" type="file" accept="image/jpeg,image/png,image/webp"><label class="small"><input id="vendorRemoveLogo" type="checkbox"> Remove uploaded logo</label></div>
+            <div><label for="vendorBannerFile"><b>Vendor banner</b></label><div id="vendorBannerPreview" class="vendor-art-preview">Choose a wide JPG, PNG or WebP banner.</div><input id="vendorBannerFile" type="file" accept="image/jpeg,image/png,image/webp"><label class="small"><input id="vendorRemoveBanner" type="checkbox"> Remove uploaded banner</label></div>
           </div>
           <label style="display:flex;align-items:center;gap:8px;margin:10px 0"><input id="vendorActive" type="checkbox" checked style="width:auto;margin:0"> Active for customers</label>
           <div class="vendor-actions">
@@ -1228,6 +1231,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
           </div>
           <div id="vendorMessage" class="small"></div>
         </div>
+        <div id="vendorSavedMessage" class="small" aria-live="polite"></div>
         <div id="vendorList" class="vendor-list"><div class="muted">Loading vendors…</div></div>
       </div>
 
@@ -1268,6 +1272,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
           <input id="menuItemId" type="hidden">
           <div class="menu-form-grid">
             <div class="full"><input id="menuName" placeholder="Item name"></div>
+            <div class="full"><input id="menuCategory" placeholder="Category (e.g. Burgers, Desserts)"></div>
             <div class="full"><textarea id="menuDescription" rows="2" placeholder="Short description"></textarea></div>
             <div><input id="menuPrice" type="number" min="0" step="1" placeholder="Price (₺)"></div>
             <div><select id="menuVendor" style="width:100%;padding:13px;border:1px solid #ddd;border-radius:11px;font:inherit"></select></div>
@@ -1906,7 +1911,7 @@ async function load(){
   try{
     await loadDeliveryFee();
     const [vendors,products]=await Promise.all([
-      fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes&active=eq.true&order=name",{
+      fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       }),
       megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url&available=eq.true&order=name,id",path=>fetchJson(base+path,{
@@ -2037,11 +2042,13 @@ function renderVendors(vendors,products){
   function productCategory(p){const m=String(p.description||'').match(/^\[([^\]]+)\]/);return m?m[1]:"Other Items";}
   function cleanDesc(p){return String(p.description||'').replace(/^\[[^\]]+\]\s*/, '');}
   function logoFor(v){
+    if(v.logo_url)return v.logo_url;
     const n=String(v.name||'').trim();
     const k=Object.keys(window.MEGJET_VENDOR_LOGOS||{}).find(x=>x.trim().toLowerCase()===n.toLowerCase());
     return k?window.MEGJET_VENDOR_LOGOS[k]:'';
   }
   function heroFor(v){
+    if(v.banner_url)return v.banner_url;
     const n=String(v.name||'').trim();
     const k=Object.keys(window.MEGJET_VENDOR_HEROES||{}).find(x=>x.trim().toLowerCase()===n.toLowerCase());
     return k?window.MEGJET_VENDOR_HEROES[k]:'';
@@ -2087,7 +2094,7 @@ function renderVendors(vendors,products){
     const rating=v.rating||'New';
     const area=v.area||'Gazimagusa';
     const prep=v.preparation_minutes;
-    return `<div class="card vendor vendor-profile-list-card" onclick="openVendorProfile('${escapeHtml(v.id)}')"><div class="vendor-head"><div class="vendor-logo-wrap">${logo?`<img class="vendor-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-logo" style="display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900;color:#0878bd">${v.coming_soon?'🍺':escapeHtml(String(v.name||'M').slice(0,1))}</div>`}</div><div class="vendor-card-body"><div class="vendor-card-title">${escapeHtml(v.name)}</div><div class="vendor-card-meta"><span class="vendor-rating"><span class="star">★</span> ${escapeHtml(rating)}</span> • ${escapeHtml(area)}<br>${v.coming_soon?'🔒 Browsing preview only':`🕐 ${prep?escapeHtml(prep)+' min preparation':'Prep time not provided'}`}</div>${v.coming_soon?'<span class="coming-soon-badge">● COMING SOON</span>':''}<button class="vendor-view" type="button" onclick="event.stopPropagation();openVendorProfile('${escapeHtml(v.id)}')">${v.coming_soon?'Browse Preview':'View Menu'}&nbsp; →</button></div></div></div>`;
+    return `<div class="card vendor vendor-profile-list-card" onclick="openVendorProfile('${escapeHtml(v.id)}')"><div class="vendor-head"><div class="vendor-logo-wrap">${logo?`<img class="vendor-logo" src="${escapeHtml(logo)}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-logo" style="display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900;color:#0878bd">${v.coming_soon?'🍺':escapeHtml(String(v.name||'M').slice(0,1))}</div>`}</div><div class="vendor-card-body"><div class="vendor-card-title">${escapeHtml(v.name)}</div><div class="vendor-card-meta"><span class="vendor-rating"><span class="star">★</span> ${escapeHtml(rating)}</span> • ${escapeHtml(area)}<br>${v.coming_soon?'🔒 Browsing preview only':`🕐 ${prep?escapeHtml(prep)+' min preparation':'Prep time not provided'}`}</div>${v.coming_soon?'<span class="coming-soon-badge">● COMING SOON</span>':''}<button class="vendor-view" type="button" onclick="event.stopPropagation();openVendorProfile('${escapeHtml(v.id)}')">${v.coming_soon?'Browse Preview':'View Menu'}&nbsp; →</button></div></div></div>`;
   }).join(''):`<div class='card'><h2>No vendors yet</h2><p class='muted'>Your Supabase connection works, but no active vendors have been added yet.</p></div>`;
   window.openVendorProfile=function(vendorId){
     const v=vendors.find(x=>String(x.id)===String(vendorId)); if(!v)return;
@@ -2101,7 +2108,7 @@ function renderVendors(vendors,products){
     const hours=hoursFor(v);
     const phone=String(v.phone||'');
     const rating=v.rating||'New';
-    profile.innerHTML=`<div class="vendor-profile-hero" style="background-image:url('${hero}')"><button class="vendor-profile-back" onclick="closeVendorProfile()">‹</button><div class="vendor-profile-actions"><button title="Search" onclick="document.getElementById('vendorProfileSearch').focus()">⌕</button><button title="Cart" onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">🛒</button></div><div class="vendor-profile-info"><h1>${escapeHtml(v.name)}</h1><div class="vendor-profile-meta"><span>⭐ ${escapeHtml(rating)}</span><span>📍 ${escapeHtml(v.area||'Gazimagusa')}</span><span>🕐 ${v.preparation_minutes?escapeHtml(v.preparation_minutes)+' min':'Prep time not provided'}</span></div></div></div><div class="vendor-profile-body">${(logo||desc||map||phone||hours)?`<div class="vendor-profile-intro">${logo?`<img class="vendor-profile-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-profile-logo" style="display:flex;align-items:center;justify-content:center;background:#edf9fd;font-size:25px;font-weight:900;color:#0878bd">${escapeHtml(String(v.name||'M').slice(0,1))}</div>`}<div><div class="vendor-profile-description">${escapeHtml(desc||'Local restaurant on Megjet.')}</div><div class="vendor-profile-links">${map?`<a href="${map}" target="_blank" rel="noopener">📍 Maps</a>`:''}${phone?`<a href="tel:${escapeHtml(phone)}">☎ ${escapeHtml(phone)}</a>`:''}${hours?`<span class="vendor-profile-links" style="margin:0"><a href="#">🕐 ${escapeHtml(hours)}</a></span>`:''}</div></div></div>`:''}<div class="vendor-profile-toolbar"><input id="vendorProfileSearch" placeholder="Search this menu…"><button class="secondary" onclick="closeVendorProfile()">All restaurants</button></div><div class="vendor-profile-cats">${cats.map(c=>renderCategory(c,groups[c],v)).join('')||'<div class="vendor-profile-empty muted">No available products yet.</div>'}</div></div>`;
+    profile.innerHTML=`<div class="vendor-profile-hero" style="background-image:url('${escapeHtml(hero)}')"><button class="vendor-profile-back" onclick="closeVendorProfile()">‹</button><div class="vendor-profile-actions"><button title="Search" onclick="document.getElementById('vendorProfileSearch').focus()">⌕</button><button title="Cart" onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">🛒</button></div><div class="vendor-profile-info"><h1>${escapeHtml(v.name)}</h1><div class="vendor-profile-meta"><span>⭐ ${escapeHtml(rating)}</span><span>📍 ${escapeHtml(v.area||'Gazimagusa')}</span><span>🕐 ${v.preparation_minutes?escapeHtml(v.preparation_minutes)+' min':'Prep time not provided'}</span></div></div></div><div class="vendor-profile-body">${(logo||desc||map||phone||hours)?`<div class="vendor-profile-intro">${logo?`<img class="vendor-profile-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-profile-logo" style="display:flex;align-items:center;justify-content:center;background:#edf9fd;font-size:25px;font-weight:900;color:#0878bd">${escapeHtml(String(v.name||'M').slice(0,1))}</div>`}<div><div class="vendor-profile-description">${escapeHtml(desc||'Local restaurant on Megjet.')}</div><div class="vendor-profile-links">${map?`<a href="${map}" target="_blank" rel="noopener">📍 Maps</a>`:''}${phone?`<a href="tel:${escapeHtml(phone)}">☎ ${escapeHtml(phone)}</a>`:''}${hours?`<span class="vendor-profile-links" style="margin:0"><a href="#">🕐 ${escapeHtml(hours)}</a></span>`:''}</div></div></div>`:''}<div class="vendor-profile-toolbar"><input id="vendorProfileSearch" placeholder="Search this menu…"><button class="secondary" onclick="closeVendorProfile()">All restaurants</button></div><div class="vendor-profile-cats">${cats.map(c=>renderCategory(c,groups[c],v)).join('')||'<div class="vendor-profile-empty muted">No available products yet.</div>'}</div></div>`;
     if(v.coming_soon){const body=profile.querySelector('.vendor-profile-body');if(body)body.insertAdjacentHTML('afterbegin','<div class="coming-soon-notice"><b>🍺 Alcohol Market is coming soon</b><br>You can browse the planned categories, but ordering and checkout are disabled until Megjet connects a licensed Gazimagusa market. Age and ID verification will be required when ordering is activated.</div>');}
     list.classList.add('hidden'); profile.classList.remove('hidden'); profile.scrollIntoView({behavior:'smooth',block:'start'});
     const si=$("vendorProfileSearch"); if(si)si.addEventListener('input',function(){const q=this.value.trim().toLowerCase();profile.querySelectorAll('.menu-category').forEach(cat=>{let any=false;cat.querySelectorAll('.item').forEach(item=>{const hit=!q||(item.textContent||'').toLowerCase().includes(q);item.style.display=hit?'flex':'none';if(hit)any=true;});cat.style.display=any||!q?'block':'none';if(q&&any)cat.open=true;});});
@@ -3098,6 +3105,7 @@ let adminVendorsCache=[];
 function resetMenuForm(){
   $("menuItemId").value="";
   $("menuName").value="";
+  $("menuCategory").value="";
   $("menuDescription").value="";
   $("menuPrice").value="";
   $("menuAvailable").checked=true;
@@ -3114,7 +3122,8 @@ function showMenuForm(product=null){
   if(product){
     $("menuItemId").value=product.id;
     $("menuName").value=product.name||"";
-    $("menuDescription").value=product.description||"";
+    $("menuCategory").value=megjetMenuCategory(product.description);
+    $("menuDescription").value=megjetMenuPlainDescription(product.description);
     $("menuPrice").value=product.price??"";
     $("menuAvailable").checked=product.available!==false;
     $("menuVendor").value=product.vendor_id||"";
@@ -3125,6 +3134,13 @@ function showMenuForm(product=null){
     if(adminVendorsCache[0])$("menuVendor").value=adminVendorsCache[0].id;
   }
   $("menuForm").scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+function megjetMenuCategory(description){return String(description||"").match(/^\[([^\]]+)\]/)?.[1]||"";}
+function megjetMenuPlainDescription(description){return String(description||"").replace(/^\[[^\]]+\]\s*/,"");}
+function megjetMenuDescription(category,description){
+  const value=String(category||"").trim().replace(/[\[\]]/g,"").slice(0,80);
+  const detail=megjetMenuPlainDescription(description).trim();
+  return value?`[${value}] ${detail}`.trim():detail;
 }
 function renderMenuVendors(){
   $("menuVendor").innerHTML=adminVendorsCache.length
@@ -3204,13 +3220,39 @@ async function storeAdminProductPhoto(productId,file,status){
   await adminRequest("/rest/v1/rpc/admin_set_product_image",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:String(productId),p_image_url:imageUrl})});
   return imageUrl;
 }
+async function storeAdminVendorArt(vendorId,kind,file){
+  if(!['image/jpeg','image/png','image/webp'].includes(file?.type))throw new Error("Choose a JPG, PNG or WebP image.");
+  if(file.size>5*1024*1024)throw new Error("Logo and banner files must be 5 MB or smaller.");
+  const token=localStorage.getItem("megjet_access_token");
+  if(!token)throw new Error("Admin sign-in required.");
+  const safeName=(file.name||"photo").toLowerCase().replace(/[^a-z0-9._-]/g,"-");
+  const path=`${vendorId}/${kind}/${Date.now()}-${Math.random().toString(36).slice(2,8)}-${safeName}`;
+  const base=cfg.url.replace(/\/+$/,'');
+  await fetchJson(base+"/storage/v1/object/vendor-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type},body:file},60000);
+  return base+"/storage/v1/object/public/vendor-images/"+path.split('/').map(encodeURIComponent).join('/');
+}
 
 function resetVendorForm(){
-  ["vendorItemId","vendorName","vendorArea","vendorAddress","adminVendorPhone","vendorRating","vendorPrep","adminVendorPassword"].forEach(id=>{if($(id))$(id).value="";});
+  ["vendorItemId","vendorName","vendorArea","vendorAddress","adminVendorPhone","vendorRating","vendorPrep","adminVendorPassword","vendorLogoFile","vendorBannerFile"].forEach(id=>{if($(id))$(id).value="";});
+  ["vendorRemoveLogo","vendorRemoveBanner"].forEach(id=>{if($(id))$(id).checked=false;});
   if($("vendorActive"))$("vendorActive").checked=true;
   if($("vendorFormTitle"))$("vendorFormTitle").textContent="Add Vendor";
   if($("vendorSaveBtn"))$("vendorSaveBtn").textContent="Save Vendor";
   if($("vendorMessage"))$("vendorMessage").textContent="";
+  renderVendorArtPreview();
+}
+let vendorArtObjectUrls=[];
+function renderVendorArtPreview(){
+  vendorArtObjectUrls.forEach(url=>URL.revokeObjectURL(url));vendorArtObjectUrls=[];
+  const v=adminVendorsCache.find(row=>String(row.id)===String($("vendorItemId")?.value))||{};
+  for(const kind of ["Logo","Banner"]){
+    const file=$("vendor"+kind+"File")?.files?.[0];
+    const remove=$("vendorRemove"+kind)?.checked;
+    const fallback=(window[kind==="Logo"?"MEGJET_VENDOR_LOGOS":"MEGJET_VENDOR_HEROES"]||{})[v.name]||"";
+    const url=file?URL.createObjectURL(file):(remove?fallback:(v[kind==="Logo"?"logo_url":"banner_url"]||fallback));
+    if(file)vendorArtObjectUrls.push(url);
+    const host=$("vendor"+kind+"Preview");if(host)host.innerHTML=url?`<img class="${kind==="Banner"?"banner":""}" src="${escapeHtml(url)}" alt="${kind} preview"> ${file?"New "+kind.toLowerCase()+" selected":remove?"Uploaded "+kind.toLowerCase()+" will be removed":"Current "+kind.toLowerCase()}`:`No ${kind.toLowerCase()} selected yet.`;
+  }
 }
 function showVendorForm(v=null){
   resetVendorForm();$("vendorForm").classList.remove("hidden");
@@ -3221,6 +3263,7 @@ function showVendorForm(v=null){
     $("vendorPrep").value=v.preparation_minutes??20;$("vendorActive").checked=v.active!==false;
     $("adminVendorPassword").placeholder="New password (optional; 6+ characters)";
   }else{$("vendorArea").value="Gazimagusa";$("vendorPrep").value=20;}
+  renderVendorArtPreview();
   $("vendorName")?.focus();
 }
 function vendorMenuId(vendorId){return String(vendorId||"").replace(/[^a-zA-Z0-9_-]/g,"_");}
@@ -3261,9 +3304,11 @@ function renderAdminVendors(){
     const key=vendorMenuId(v.id);
     const count=vendorMenuItems(v.id).length;
     const vid=escapeJsString(v.id);
+    const logo=v.logo_url||(window.MEGJET_VENDOR_LOGOS||{})[v.name]||"";
+    const banner=v.banner_url||(window.MEGJET_VENDOR_HEROES||{})[v.name]||"";
     return `<div class="vendor-item-admin">
       <div class="row">
-        <div><b>${escapeHtml(v.name||"Unnamed vendor")}</b><div class="muted">📍 ${escapeHtml(v.area||"Gazimagusa")}</div></div>
+        <div><div class="vendor-brand-row">${logo?`<img src="${escapeHtml(logo)}" alt="Vendor logo">`:""}${banner?`<img class="banner" src="${escapeHtml(banner)}" alt="Vendor banner">`:""}<b>${escapeHtml(v.name||"Unnamed vendor")}</b></div><div class="muted">📍 ${escapeHtml(v.area||"Gazimagusa")}</div></div>
         <div style="text-align:right"><span class="${active?"vendor-active":"vendor-inactive"}">${active?"Active":"Inactive"}</span></div>
       </div>
       <div class="muted">⭐ ${escapeHtml(v.rating||"New")} • ⏱️ ${escapeHtml(String(v.preparation_minutes||20))} mins • 🍵 ${count} menu item${count===1?"":"s"}</div>
@@ -3300,7 +3345,8 @@ function showVendorMenuForm(vendorId,productId=""){
   host.innerHTML=`<div class="vendor-menu-form">
     <div class="vendor-menu-form-grid">
       <div class="full"><input id="vm-name-${key}" placeholder="Item name" value="${escapeHtml(product?.name||"")}"></div>
-      <div class="full"><textarea id="vm-desc-${key}" rows="2" placeholder="Short description">${escapeHtml(product?.description||"")}</textarea></div>
+      <div class="full"><input id="vm-category-${key}" placeholder="Category (e.g. Burgers, Desserts)" value="${escapeHtml(megjetMenuCategory(product?.description))}"></div>
+      <div class="full"><textarea id="vm-desc-${key}" rows="2" placeholder="Short description">${escapeHtml(megjetMenuPlainDescription(product?.description))}</textarea></div>
       <div><input id="vm-price-${key}" type="number" min="0" step="1" placeholder="Price (₺)" value="${escapeHtml(product?.price??"")}"></div>
       <div><select id="vm-available-${key}"><option value="true" ${product?.available!==false?"selected":""}>Available</option><option value="false" ${product?.available===false?"selected":""}>Sold Out</option></select></div>
       <div class="full"><b>📷 Product Photo</b><div id="vm-photo-preview-${key}" class="vendor-photo-box">${product?.image_url?`<img class="vendor-photo-thumb" src="${escapeHtml(product.image_url)}" alt="Current product photo">`:'No photo yet'}</div><input id="vm-photo-${key}" type="file" accept="image/png,image/jpeg,image/webp"><div class="small">${product?.image_url?'Choose a new photo to replace it.':'Choose a JPG, PNG or WebP photo (up to 5 MB).'}</div></div>
@@ -3338,7 +3384,7 @@ async function uploadVendorPanelPhoto(productId,input){
 async function saveVendorMenuItem(vendorId,productId=""){
   const key=vendorMenuId(vendorId);
   const name=$("vm-name-"+key)?.value.trim();
-  const description=$("vm-desc-"+key)?.value.trim();
+  const description=megjetMenuDescription($("vm-category-"+key)?.value,$("vm-desc-"+key)?.value);
   const price=Number($("vm-price-"+key)?.value);
   const available=$("vm-available-"+key)?.value!=="false";
   const photo=$("vm-photo-"+key)?.files?.[0]||null;
@@ -3379,22 +3425,38 @@ async function saveVendor(){
   const prep=Number($("vendorPrep").value);
   const active=$("vendorActive").checked;
   const password=$("adminVendorPassword").value;
+  const logoFile=$("vendorLogoFile")?.files?.[0]||null;
+  const bannerFile=$("vendorBannerFile")?.files?.[0]||null;
+  const clearLogo=!!$("vendorRemoveLogo")?.checked&&!logoFile;
+  const clearBanner=!!$("vendorRemoveBanner")?.checked&&!bannerFile;
   if(!name||!phone||!address){$("vendorMessage").textContent="Name, phone and address are required.";return;}
   if(!Number.isFinite(prep)||prep<0){$("vendorMessage").textContent="Please enter a valid preparation time.";return;}
-  if(!id && password.length<6){$("vendorMessage").textContent="A new vendor needs a password of at least 6 characters.";return;}
+  if(!id&&password.length<6){$("vendorMessage").textContent="A new vendor needs a password of at least 6 characters.";return;}
+  if([logoFile,bannerFile].some(f=>f&&(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>5*1024*1024))){$("vendorMessage").textContent="Choose JPG, PNG or WebP artwork under 5 MB each.";return;}
   try{
     $("vendorSaveBtn").disabled=true;$("vendorMessage").textContent="Saving vendor…";
     const result=await adminRequest("/rest/v1/rpc/admin_save_vendor_full",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:id||null,p_name:name,p_area:area,p_address:address,p_phone:phone,p_rating:rating||null,p_preparation_minutes:prep,p_active:active,p_password:password||null})});
+    const vendorId=String(result?.vendor_id||id||"");
+    if(!vendorId)throw new Error("Vendor saved, but its ID was not returned.");
+    $("vendorItemId").value=vendorId;
     if(password){
       $("vendorMessage").textContent="Creating vendor login…";
       const token=localStorage.getItem("megjet_access_token");
       if(!token)throw new Error("Admin sign-in required to create vendor login.");
-      const provision=await fetchJson(cfg.url.replace(/\/+$/,"")+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:String(result?.vendor_id||id||""),phone,password})},30000);
+      const provision=await fetchJson(cfg.url.replace(/\/+$/,'')+"/functions/v1/admin-provision-vendor",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":"application/json"},body:JSON.stringify({vendor_id:vendorId,phone,password})},30000);
       if(!provision?.success)throw new Error(provision?.error||"Vendor login could not be created.");
     }
-    resetVendorForm();$("vendorForm").classList.add("hidden");$("vendorMessage").textContent=(result?.message||"Vendor saved successfully")+" ✓";
+    let logoUrl=null,bannerUrl=null;
+    if(logoFile){$("vendorMessage").textContent="Uploading logo…";logoUrl=await storeAdminVendorArt(vendorId,"logo",logoFile);}
+    if(bannerFile){$("vendorMessage").textContent="Uploading banner…";bannerUrl=await storeAdminVendorArt(vendorId,"banner",bannerFile);}
+    if(logoUrl||bannerUrl||clearLogo||clearBanner){
+      await adminRequest("/rest/v1/rpc/admin_set_vendor_branding",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:vendorId,p_logo_url:logoUrl,p_banner_url:bannerUrl,p_clear_logo:clearLogo,p_clear_banner:clearBanner})});
+    }
+    resetVendorForm();$("vendorForm").classList.add("hidden");
     await loadAdminMenu();await load();
-  }catch(e){$("vendorMessage").textContent="Could not save vendor: "+e.message;}finally{$("vendorSaveBtn").disabled=false;}
+    if($("vendorSavedMessage"))$("vendorSavedMessage").textContent="Vendor saved ✓"+(!id?" Add its menu items below.":"");
+    if(!id)addMenuForVendor(vendorId);
+  }catch(e){$("vendorMessage").textContent=($("vendorItemId").value&&!id?"Vendor details saved. ":"")+"Could not finish setup: "+e.message;}finally{$("vendorSaveBtn").disabled=false;}
 }
 async function toggleVendor(id,current){
   try{
@@ -3407,7 +3469,7 @@ async function toggleVendor(id,current){
 async function loadAdminMenu(){
   // Load vendors and products concurrently. Render whichever finishes first
   // so the Menu tab never waits unnecessarily for the Vendors query.
-  const vendorsPromise=adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active&order=name");
+  const vendorsPromise=adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active,logo_url,banner_url&order=name");
   const productsPromise=megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&order=name,id",path=>adminRequest(path));
 
   // Render cached menu immediately when available.
@@ -3442,7 +3504,7 @@ function editMenuItem(id){
 async function saveMenuItem(){
   const id=$("menuItemId").value.trim();
   const name=$("menuName").value.trim();
-  const description=$("menuDescription").value.trim();
+  const description=megjetMenuDescription($("menuCategory").value,$("menuDescription").value);
   const price=Number($("menuPrice").value);
   const vendor_id=$("menuVendor").value;
   const available=$("menuAvailable").checked;
@@ -4147,6 +4209,8 @@ $("openPreviousOrder").onclick=showTracking;
 $("vendorAddBtn").onclick=()=>showVendorForm();
 $("vendorCancelBtn").onclick=()=>{$("vendorForm").classList.add("hidden");resetVendorForm();};
 $("vendorSaveBtn").onclick=saveVendor;
+["vendorLogoFile","vendorBannerFile"].forEach(id=>{$(id).onchange=()=>{if($(id).files?.length)$(id==="vendorLogoFile"?"vendorRemoveLogo":"vendorRemoveBanner").checked=false;renderVendorArtPreview();};});
+["vendorRemoveLogo","vendorRemoveBanner"].forEach(id=>{$(id).onchange=renderVendorArtPreview;});
 $("menuAddBtn").onclick=()=>showMenuForm();
 $("menuCancelBtn").onclick=()=>{$("menuForm").classList.add("hidden");resetMenuForm();};
 $("menuSaveBtn").onclick=saveMenuItem;
