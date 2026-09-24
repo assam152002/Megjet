@@ -1227,6 +1227,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
           <label style="display:flex;align-items:center;gap:8px;margin:10px 0"><input id="vendorActive" type="checkbox" checked style="width:auto;margin:0"> Active for customers</label>
           <div class="vendor-actions">
             <button id="vendorSaveBtn" type="button">Save Vendor</button>
+            <button id="vendorPhotoSaveBtn" class="secondary hidden" type="button">Save Photos</button>
             <button id="vendorCancelBtn" class="secondary" type="button">Cancel</button>
           </div>
           <div id="vendorMessage" class="small"></div>
@@ -3238,6 +3239,7 @@ function resetVendorForm(){
   if($("vendorActive"))$("vendorActive").checked=true;
   if($("vendorFormTitle"))$("vendorFormTitle").textContent="Add Vendor";
   if($("vendorSaveBtn"))$("vendorSaveBtn").textContent="Save Vendor";
+  $("vendorPhotoSaveBtn")?.classList.add("hidden");
   if($("vendorMessage"))$("vendorMessage").textContent="";
   renderVendorArtPreview();
 }
@@ -3258,6 +3260,7 @@ function showVendorForm(v=null){
   resetVendorForm();$("vendorForm").classList.remove("hidden");
   if(v){
     $("vendorFormTitle").textContent="Edit Vendor";$("vendorSaveBtn").textContent="Save Changes";
+    $("vendorPhotoSaveBtn")?.classList.remove("hidden");
     $("vendorItemId").value=v.id||"";$("vendorName").value=v.name||"";$("vendorArea").value=v.area||"";
     $("vendorAddress").value=v.address||"";$("adminVendorPhone").value=v.phone||"";$("vendorRating").value=v.rating??"";
     $("vendorPrep").value=v.preparation_minutes??20;$("vendorActive").checked=v.active!==false;
@@ -3457,6 +3460,28 @@ async function saveVendor(){
     if($("vendorSavedMessage"))$("vendorSavedMessage").textContent="Vendor saved ✓"+(!id?" Add its menu items below.":"");
     if(!id)addMenuForVendor(vendorId);
   }catch(e){$("vendorMessage").textContent=($("vendorItemId").value&&!id?"Vendor details saved. ":"")+"Could not finish setup: "+e.message;}finally{$("vendorSaveBtn").disabled=false;}
+}
+async function saveVendorPhotos(){
+  const vendorId=$("vendorItemId").value.trim();
+  if(!vendorId)return;
+  const logoFile=$("vendorLogoFile")?.files?.[0]||null;
+  const bannerFile=$("vendorBannerFile")?.files?.[0]||null;
+  const clearLogo=!!$("vendorRemoveLogo")?.checked&&!logoFile;
+  const clearBanner=!!$("vendorRemoveBanner")?.checked&&!bannerFile;
+  if(!logoFile&&!bannerFile&&!clearLogo&&!clearBanner){$("vendorMessage").textContent="Choose a logo or banner, or select a photo to remove.";return;}
+  if([logoFile,bannerFile].some(f=>f&&(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>5*1024*1024))){$("vendorMessage").textContent="Choose JPG, PNG or WebP artwork under 5 MB each.";return;}
+  try{
+    $("vendorPhotoSaveBtn").disabled=true;
+    $("vendorMessage").textContent="Uploading vendor photos…";
+    const logoUrl=logoFile?await storeAdminVendorArt(vendorId,"logo",logoFile):null;
+    const bannerUrl=bannerFile?await storeAdminVendorArt(vendorId,"banner",bannerFile):null;
+    await adminRequest("/rest/v1/rpc/admin_set_vendor_branding",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:vendorId,p_logo_url:logoUrl,p_banner_url:bannerUrl,p_clear_logo:clearLogo,p_clear_banner:clearBanner})});
+    await loadAdminMenu();await load();
+    const vendor=adminVendorsCache.find(v=>String(v.id)===vendorId);
+    if(vendor)showVendorForm(vendor);
+    $("vendorMessage").textContent="Photos saved ✓";
+  }catch(e){$("vendorMessage").textContent="Could not save photos: "+e.message;}
+  finally{$("vendorPhotoSaveBtn").disabled=false;}
 }
 async function toggleVendor(id,current){
   try{
@@ -4209,6 +4234,7 @@ $("openPreviousOrder").onclick=showTracking;
 $("vendorAddBtn").onclick=()=>showVendorForm();
 $("vendorCancelBtn").onclick=()=>{$("vendorForm").classList.add("hidden");resetVendorForm();};
 $("vendorSaveBtn").onclick=saveVendor;
+$("vendorPhotoSaveBtn").onclick=saveVendorPhotos;
 ["vendorLogoFile","vendorBannerFile"].forEach(id=>{$(id).onchange=()=>{if($(id).files?.length)$(id==="vendorLogoFile"?"vendorRemoveLogo":"vendorRemoveBanner").checked=false;renderVendorArtPreview();};});
 ["vendorRemoveLogo","vendorRemoveBanner"].forEach(id=>{$(id).onchange=renderVendorArtPreview;});
 $("menuAddBtn").onclick=()=>showMenuForm();
