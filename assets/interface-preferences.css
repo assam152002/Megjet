@@ -8,6 +8,10 @@ html[data-theme="dark"]{color-scheme:dark;--page:#0b1624;--ink:#eaf4fb;--line:#3
 html[data-theme="dark"],html[data-theme="dark"] body{background:#0b1624!important;color:#eaf4fb!important}
 html[data-theme="dark"] body>header{background:linear-gradient(135deg,#113c61,#08233c)!important;box-shadow:0 8px 28px #0008!important}
 html[data-theme="dark"] .customer-hero{background:linear-gradient(135deg,#112b47,#0a527a)!important;color:#fff!important}
+html[data-theme="dark"] .vendor-profile-body{background:#102335!important;color:#eaf4fb!important}
+html[data-theme="dark"] .vendor-profile-intro{background:#15283b!important;color:#eaf4fb!important;border-color:#38536a!important}
+html[data-theme="dark"] .vendor-profile-description{color:#b9cddd!important}
+html[data-theme="dark"] .vendor-profile-links a{background:#25445c!important;color:#d7efff!important;border-color:#476c86!important}
 html[data-theme="dark"] :is(.card,.vendor-profile,.menu-category,.menu-category summary,.menu-item-admin,.vendor-item-admin,.vendor-menu-row,.vendor-menu-panel,.vendor-form,.menu-form,.feature-panel,.admin-ops-card,.stat,.history-box,.history-order,.lookup-box,.customer-account-sheet,.customer-account-form,.customer-profile-panel,.customer-growth-panel,.customer-addresses,.customer-address-row,.vendor-order,.rider-order,.rider-stat,.order-card,.tracking-card,.track-items,.phase3-ops-bar,.phase3b-delivery-box,.phase3b-customer-pin,.phase3b-proof-label,.coming-soon-notice,.receipt-box,#cartBox,#vendors .card.vendor,#status){background:#15283b!important;color:#eaf4fb!important;border-color:#38536a!important;box-shadow:0 4px 18px #0005!important}
 html[data-theme="dark"] :is(.vendor-profile .menu-category summary,.menu-category[open] summary,#vendors .vendor-head,.customer-search,.vendor-photo-box,.admin-tools,.quick-chip,.vendor-profile-toolbar,.phase3b-admin-table th,.history-details,.rider-location-status,.lookup-result,.saved-address-card){background:#1c354a!important;color:#eaf4fb!important;border-color:#38536a!important}
 html[data-theme="dark"] :is(input,textarea,select){background:#102335!important;color:#f3f8fc!important;border-color:#4a6479!important}
