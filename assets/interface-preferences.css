@@ -1,0 +1,26 @@
+.megjet-preferences{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;position:relative;z-index:1}
+.megjet-preferences label{display:flex;align-items:center;gap:6px;color:#fff;font-size:12px;font-weight:800}
+.megjet-preferences select{width:auto;min-width:92px;min-height:36px;margin:0;padding:5px 8px;border:1px solid rgba(255,255,255,.4);border-radius:10px;background:#fff;color:#0b2748;font-size:13px;font-weight:700;cursor:pointer}
+.megjet-preferences select:focus-visible{outline:3px solid #ffd34d;outline-offset:2px}
+@media(max-width:410px){.megjet-preferences label{font-size:11px}.megjet-preferences select{min-width:82px}}
+
+html[data-theme="dark"]{color-scheme:dark;--page:#0b1624;--ink:#eaf4fb;--line:#344f66;--soft:#1d3448;--cream:#0f2234;--food:#eaf4fb;--food2:#37bfea;--brand-dark:#eaf4fb}
+html[data-theme="dark"],html[data-theme="dark"] body{background:#0b1624!important;color:#eaf4fb!important}
+html[data-theme="dark"] body>header{background:linear-gradient(135deg,#113c61,#08233c)!important;box-shadow:0 8px 28px #0008!important}
+html[data-theme="dark"] .customer-hero{background:linear-gradient(135deg,#112b47,#0a527a)!important;color:#fff!important}
+html[data-theme="dark"] :is(.card,.vendor-profile,.menu-category,.menu-category summary,.menu-item-admin,.vendor-item-admin,.vendor-menu-row,.vendor-menu-panel,.vendor-form,.menu-form,.feature-panel,.admin-ops-card,.stat,.history-box,.history-order,.lookup-box,.customer-account-sheet,.customer-account-form,.customer-profile-panel,.customer-growth-panel,.customer-addresses,.customer-address-row,.vendor-order,.rider-order,.rider-stat,.order-card,.tracking-card,.track-items,.phase3-ops-bar,.phase3b-delivery-box,.phase3b-customer-pin,.phase3b-proof-label,.coming-soon-notice,.receipt-box,#cartBox,#vendors .card.vendor,#status){background:#15283b!important;color:#eaf4fb!important;border-color:#38536a!important;box-shadow:0 4px 18px #0005!important}
+html[data-theme="dark"] :is(.vendor-profile .menu-category summary,.menu-category[open] summary,#vendors .vendor-head,.customer-search,.vendor-photo-box,.admin-tools,.quick-chip,.vendor-profile-toolbar,.phase3b-admin-table th,.history-details,.rider-location-status,.lookup-result,.saved-address-card){background:#1c354a!important;color:#eaf4fb!important;border-color:#38536a!important}
+html[data-theme="dark"] :is(input,textarea,select){background:#102335!important;color:#f3f8fc!important;border-color:#4a6479!important}
+html[data-theme="dark"] :is(input,textarea)::placeholder{color:#a8c0d1!important;opacity:1}
+html[data-theme="dark"] :is(.muted,.small,.feature-small,.category-count,.menu-id,.section-title span,.vendor-profile .category-count,.live-rider-meta,.track-vendor,.cart-vendor,.phase3b-help){color:#b9cddd!important}
+html[data-theme="dark"] :is(.menu-category .category-title strong,.vendor-profile .category-title strong,.item-info b,.price,.cart-total,.vendor-profile-body h2,.section-title h2){color:#f0f7fc!important}
+html[data-theme="dark"] :is(button.secondary,.admin-tab,.quick-chip,.cart-toggle,.vendor-photo-upload){background:#25445c!important;color:#edf6fc!important;border-color:#476c86!important}
+html[data-theme="dark"] .admin-tab.active{background:#148aca!important;color:#fff!important}
+html[data-theme="dark"] :is(.notice,.notice.ok,.notice.bad,.new-order-alert,.pill-available,.pill-unavailable,.track-status,.phase3-step,.growth-badge){color:#eaf4fb!important;border-color:#4b6680!important}
+html[data-theme="dark"] :is(a,.live-rider-link){color:#74d7ff}
+html[data-theme="dark"] :is(.vendor-profile-info,.vendor-profile-info *,.customer-hero *,.customer-hero input,.customer-hero input::placeholder){color:#fff!important}
+html[data-theme="dark"] .customer-hero input{background:transparent!important;color:#fff!important}
+html[data-theme="dark"] .megjet-preferences select{background:#1c354a!important;color:#fff!important;border-color:#7ca6bd!important}
+html[data-theme="dark"] .product-image-admin{background:#fff!important}
+html[data-theme="dark"] :is(.menu-category,.menu-item-admin,.vendor-item-admin,.vendor-menu-row,.card,.vendor-profile){border-color:#38536a!important}
+@media print{html[data-theme="dark"] #printReceipt,html[data-theme="dark"] #printReceipt *{background:#fff!important;color:#000!important;box-shadow:none!important}}
