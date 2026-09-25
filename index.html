@@ -1282,6 +1282,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
           <button id="menuAddBtn" type="button">+ Add Item</button>
         </div>
         <div class="vendor-menu-search"><input id="adminMenuSearch" type="search" placeholder="Search existing menu items…" aria-label="Search menu items"><select id="adminMenuVendorFilter" aria-label="Filter menu by vendor" style="padding:10px;border:1px solid #ddd;border-radius:10px"><option value="">All vendors</option></select></div>
+        <div class="menu-form" style="margin:12px 0"><h3 style="margin:0 0 8px">Category Photos</h3><div class="muted">Choose a vendor and an existing menu category, then upload its picture.</div><div class="menu-form-grid"><select id="categoryPhotoVendor" aria-label="Category photo vendor"></select><select id="categoryPhotoName" aria-label="Category photo name"></select><div class="full"><input id="categoryPhotoFile" type="file" accept="image/png,image/jpeg,image/webp"></div></div><div class="menu-actions"><button id="categoryPhotoSave" type="button">Save Category Photo</button><span id="categoryPhotoStatus" class="small" role="status"></span></div><div id="categoryPhotoPreview" class="small"></div></div>
         <div id="adminMenuCount" class="small" aria-live="polite"></div>
         <div id="menuForm" class="menu-form hidden">
           <h3 id="menuFormTitle" style="margin-top:0">Add Menu Item</h3>
@@ -1926,14 +1927,16 @@ async function load(){
   const base=cfg.url.replace(/\/+$/,"" );
   try{
     await loadDeliveryFee();
-    const [vendors,products]=await Promise.all([
+    const [vendors,products,categoryMeta]=await Promise.all([
       fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url,bio&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       }),
-      megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url&available=eq.true&order=name,id",path=>fetchJson(base+path,{
+      megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url,menu_sort_order&available=eq.true&order=name,id",path=>fetchJson(base+path,{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
-      }))
+      })),
+      fetchJson(base+"/rest/v1/vendor_menu_categories?select=vendor_id,name,image_url,sort_order",{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}}).catch(()=>[])
     ]);
+    window.MEGJET_VENDOR_CATEGORY_META=categoryMeta||[];
     setStatus("Connected ✓ Live vendors from Supabase","ok");
     hideSetup();
     renderVendors([...vendors, MEGJET_COMING_SOON_ALCOHOL_VENDOR],[...products, ...MEGJET_COMING_SOON_ALCOHOL_PRODUCTS]);
@@ -2099,7 +2102,7 @@ function renderVendors(vendors,products){
   }
   function renderCategory(name,items,v){
     if(!items.length)return "";
-    const categoryImage=MEGJET_CATEGORY_IMAGES[name]||MEGJET_CATEGORY_IMAGES[name.normalize('NFC')]||"";
+    const categoryImage=(window.MEGJET_VENDOR_CATEGORY_META||[]).find(c=>String(c.vendor_id)===String(v.id)&&c.name===name)?.image_url||MEGJET_CATEGORY_IMAGES[name]||MEGJET_CATEGORY_IMAGES[name.normalize('NFC')]||"";
     const icon=catIcons[name]||"🍽️";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
     const categoryClass=isSweetHoles?'menu-category sweetholes-category':'menu-category';
@@ -2118,7 +2121,9 @@ function renderVendors(vendors,products){
     const v=vendors.find(x=>String(x.id)===String(vendorId)); if(!v)return;
     const ps=products.filter(p=>String(p.vendor_id)===String(v.id));
     const groups={}; ps.forEach(p=>{const c=productCategory(p);(groups[c] ||= []).push(p);});
-    const cats=[...categoryOrder.filter(c=>groups[c]),...Object.keys(groups).filter(c=>!categoryOrder.includes(c))];
+    const vendorCats=(window.MEGJET_VENDOR_CATEGORY_META||[]).filter(c=>String(c.vendor_id)===String(v.id)).sort((a,b)=>a.sort_order-b.sort_order).map(c=>c.name);
+    const cats=[...vendorCats.filter(c=>groups[c]),...categoryOrder.filter(c=>groups[c]&&!vendorCats.includes(c)),...Object.keys(groups).filter(c=>!categoryOrder.includes(c)&&!vendorCats.includes(c))];
+    for(const group of Object.values(groups))group.sort((a,b)=>(a.menu_sort_order??100000)-(b.menu_sort_order??100000));
     const hero=heroFor(v)||MEGJET_CATEGORY_IMAGES['Sweets Menu']||'';
     const logo=logoFor(v);
     const map=mapFor(v);
@@ -3168,7 +3173,38 @@ function renderMenuVendors(){
   const filter=$("adminMenuVendorFilter"),current=filter.value;
   filter.innerHTML='<option value="">All vendors</option>'+adminVendorsCache.map(v=>`<option value="${escapeHtml(v.id)}">${escapeHtml(v.name||"Vendor")}</option>`).join("");
   filter.value=current;
+  const photoVendor=$("categoryPhotoVendor"),selected=photoVendor.value;
+  photoVendor.innerHTML=adminVendorsCache.map(v=>`<option value="${escapeHtml(v.id)}">${escapeHtml(v.name||"Vendor")}</option>`).join("");
+  if(adminVendorsCache.some(v=>String(v.id)===selected))photoVendor.value=selected;
+  renderCategoryPhotoOptions();
   renderAdminMenu();
+}
+function renderCategoryPhotoOptions(){
+  const vendorId=$("categoryPhotoVendor").value,categorySelect=$("categoryPhotoName"),previous=categorySelect.value;
+  const names=[...new Set(adminMenuCache.filter(p=>String(p.vendor_id)===vendorId).map(p=>megjetMenuCategory(p.description)).filter(Boolean))];
+  categorySelect.innerHTML=names.length?names.map(name=>`<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join(""):'<option value="">Add a menu item with a category first</option>';
+  if(names.includes(previous))categorySelect.value=previous;
+  $("categoryPhotoSave").disabled=!names.length;
+  const existing=(window.MEGJET_VENDOR_CATEGORY_META||[]).find(c=>String(c.vendor_id)===vendorId&&c.name===categorySelect.value);
+  $("categoryPhotoPreview").innerHTML=existing?.image_url?`<img class="menu-photo-thumb" src="${escapeHtml(existing.image_url)}" alt="Category photo"> Current category photo`:"";
+}
+async function saveCategoryPhoto(){
+  const vendor_id=$("categoryPhotoVendor").value,name=$("categoryPhotoName").value,file=$("categoryPhotoFile").files?.[0],status=$("categoryPhotoStatus");
+  if(!vendor_id||!name||!file){status.textContent="Select a vendor, category and photo.";return;}
+  if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5*1024*1024){status.textContent="Choose a JPG, PNG or WebP photo under 5 MB.";return;}
+  try{
+    $("categoryPhotoSave").disabled=true;status.textContent="Uploading category photo…";
+    const token=localStorage.getItem("megjet_access_token");if(!token)throw new Error("Admin sign-in required.");
+    const path=vendor_id+"/"+Date.now()+"-"+Math.random().toString(36).slice(2,8)+"-"+file.name.toLowerCase().replace(/[^a-z0-9._-]/g,"-");
+    const base=cfg.url.replace(/\/+$/,'');
+    await fetchJson(base+"/storage/v1/object/category-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type},body:file},60000);
+    const image_url=base+"/storage/v1/object/public/category-images/"+path.split('/').map(encodeURIComponent).join('/');
+    const existing=(window.MEGJET_VENDOR_CATEGORY_META||[]).find(c=>String(c.vendor_id)===vendor_id&&c.name===name);
+    await adminRequest('/rest/v1/vendor_menu_categories?on_conflict=vendor_id,name',{method:'POST',headers:{Prefer:'resolution=merge-duplicates'},body:JSON.stringify({vendor_id,name,image_url,sort_order:existing?.sort_order??0})});
+    window.MEGJET_VENDOR_CATEGORY_META=(window.MEGJET_VENDOR_CATEGORY_META||[]).filter(c=>!(String(c.vendor_id)===vendor_id&&c.name===name)).concat({vendor_id,name,image_url,sort_order:existing?.sort_order??0});
+    $("categoryPhotoFile").value="";status.textContent="Category photo saved.";renderCategoryPhotoOptions();await load();
+  }catch(e){status.textContent="Upload failed: "+e.message;}
+  finally{$("categoryPhotoSave").disabled=false;}
 }
 function renderAdminMenu(){
   if(!adminMenuCache.length){
@@ -3528,6 +3564,7 @@ async function loadAdminMenu(){
   try{
     const products=await productsPromise;
     adminMenuCache=megjetUniqueProducts(products||[]);
+    renderCategoryPhotoOptions();
     renderAdminMenu();
     renderAdminVendors();
   }catch(e){
@@ -4265,6 +4302,9 @@ $("vendorPhotoSaveBtn").onclick=saveVendorPhotos;
 $("menuAddBtn").onclick=()=>showMenuForm();
 $("menuCancelBtn").onclick=()=>{$("menuForm").classList.add("hidden");resetMenuForm();};
 $("menuSaveBtn").onclick=saveMenuItem;
+$("categoryPhotoVendor").onchange=renderCategoryPhotoOptions;
+$("categoryPhotoName").onchange=renderCategoryPhotoOptions;
+$("categoryPhotoSave").onclick=saveCategoryPhoto;
 $("adminMenuSearch").addEventListener("input",renderAdminMenu);
 $("adminMenuVendorFilter").addEventListener("change",renderAdminMenu);
 $("menuImageFile").addEventListener("change",function(){const f=this.files?.[0],preview=$("menuImagePreviewWrap");if(!f){preview.textContent="";return;}if(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>5*1024*1024){preview.textContent="Choose a JPG, PNG or WebP image under 5 MB.";this.value="";return;}const url=URL.createObjectURL(f);preview.innerHTML='<img class="menu-photo-thumb" alt="Selected product photo"> Photo ready to save.';preview.querySelector("img").src=url;preview.querySelector("img").onload=()=>URL.revokeObjectURL(url);});
@@ -5332,6 +5372,6 @@ document.addEventListener("DOMContentLoaded",function(){
 })();
 </script>
 <script src="./workflow-guard.js?v=7"></script>
-<script src="./interface-preferences.js?v=3"></script>
+<script src="./interface-preferences.js?v=4"></script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+[
+  {"category":"İçecek Menüsü","items":[["Portakal suyu (200 ml)",200,"beverages"],["Nar suyu (200 ml)",220,"beverages"],["Ginger shot",140,"beverages"],["Meşrubat",100,"beverages"],["Soda / Maden suyu",80,"beverages"],["Su (500 ml)",50,"beverages"]]},
+  {"category":"Specials","items":[["Soyalı ballı Tavuk Kase",830,"chicken"],["Portakal soslu Tavuk Kase",830,"chicken"]]},
+  {"category":"Kase Çeşitleri","items":[["Falafel Kase",730,"falafel"],["Mercimek Köfte Kase",730,"falafel"],["Mücver Kase",730,"falafel"],["Hellimli / Peynirli Kase",730,"salad"],["Tavuklu Kase",810,"chicken"],["Kinoa Tavuk Kase",820,"chicken"],["Köfteli Kase",850,"meatball"],["Kinoa ile Köfteli Kase",860,"meatball"],["Tavuklu Sportif Kase",870,"chicken"],["Köfteli Sportif Kase",890,"meatball"],["Tavuk Fajita Kase",830,"chicken"],["Dana Fajita Kase",880,"meatball"]]},
+  {"category":"Günün Kaseleri","items":[["Dolma Kaseler",860,"falafel"],["Güne Özel Hazırlanan Sebze ve Fırın Yemekleri",850,"falafel"]]},
+  {"category":"Salata Çeşitleri","items":[["Hellimli / Beyaz Peynirli Salata",610,"salad"],["Tavuklu Salata",730,"salad"],["Köfteli Salata",760,"salad"],["Falafel / Mücver / Mercimek Köfte Salata",700,"salad"],["Somon Salata",900,"salad"]]},
+  {"category":"Burger Çeşitleri","items":[["Dana burger menü",850,"burger"],["Tavuklu avokado soslu burger menü",840,"burger"],["Mercimek burger menü",820,"burger"]]},
+  {"category":"Wrap Çeşitleri","items":[["Hellimli Wrap",760,"wrap"],["Mercimek Köfteli Wrap",760,"wrap"],["Tavuklu wrap",820,"wrap"],["Köfteli wrap",840,"wrap"],["Tavuk fajita wrap",840,"wrap"],["Dana Fajita wrap",880,"wrap"]]}
+]
