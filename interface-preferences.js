@@ -11,6 +11,10 @@
     "My Account":"Hesabım","Admin":"Yönetici","Vendor Login":"İşletme Girişi","Rider Login":"Kurye Girişi",
     "Language":"Dil","Appearance":"Görünüm","Light":"Açık","Dark":"Koyu",
     "Category Photos":"Kategori Fotoğrafları","Choose a vendor and an existing menu category, then upload its picture.":"İşletmeyi ve mevcut menü kategorisini seçip fotoğrafını yükleyin.",
+    "Category Photos & Translations":"Kategori Fotoğrafları ve Çevirileri","Choose a vendor and an existing menu category, then add its picture and language labels.":"İşletmeyi ve mevcut menü kategorisini seçip fotoğrafını ve dil adlarını ekleyin.",
+    "English / Turkish menu translations":"İngilizce / Türkçe menü çevirileri","English item name":"İngilizce ürün adı","Turkish item name":"Türkçe ürün adı",
+    "English description":"İngilizce açıklama","Turkish description":"Türkçe açıklama","English category name":"İngilizce kategori adı","Turkish category name":"Türkçe kategori adı",
+    "Optional. Leave a field empty to keep the original text in that language.":"İsteğe bağlı. Boş bıraktığınız dilde özgün metin görünür.","Save Category":"Kategoriyi Kaydet",
     "Save Category Photo":"Kategori Fotoğrafını Kaydet","Category photo vendor":"Kategori fotoğrafı işletmesi","Category photo name":"Kategori adı",
     "Add a menu item with a category first":"Önce kategori adıyla menü ürünü ekleyin","Current category photo":"Mevcut kategori fotoğrafı",
     "Category photo saved.":"Kategori fotoğrafı kaydedildi.","Uploading category photo…":"Kategori fotoğrafı yükleniyor…",
@@ -203,7 +207,7 @@
   }
   function excluded(node){
     const el=node.nodeType===Node.ELEMENT_NODE?node:node.parentElement;
-    return !el||!!el.closest('script,style,template,[data-no-translate],.item-info,.category-title strong,.vendor-profile-info h1,.vendor-brand-row b,.menu-item-admin .row b,.vendor-menu-main > b');
+    return !el||!!el.closest('script,style,template,[data-no-translate],.item-info,.category-title strong,.vendor-profile-info h1,.vendor-brand-row b,#vendors .vendor-card-title,.growth-feature-vendor .growth-feature-name,.menu-item-admin .row b,.vendor-menu-main > b');
   }
   function translateText(node){
     if(!node.nodeValue||!node.nodeValue.trim()||excluded(node))return;
@@ -246,6 +250,8 @@
     document.title=language==="tr"?tr["Megjet — Gazimagusa • Food Delivery"]:"Megjet — Gazimagusa • Food Delivery";
     savePreference("megjet_language",language);
     translateTree(document.body);
+    window.MEGJET_MENU_LOCALE?.refresh();
+    window.renderCart?.();
   }
   function setTheme(next){
     const theme=next==="dark"?"dark":"light";

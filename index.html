@@ -1282,7 +1282,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
           <button id="menuAddBtn" type="button">+ Add Item</button>
         </div>
         <div class="vendor-menu-search"><input id="adminMenuSearch" type="search" placeholder="Search existing menu items…" aria-label="Search menu items"><select id="adminMenuVendorFilter" aria-label="Filter menu by vendor" style="padding:10px;border:1px solid #ddd;border-radius:10px"><option value="">All vendors</option></select></div>
-        <div class="menu-form" style="margin:12px 0"><h3 style="margin:0 0 8px">Category Photos</h3><div class="muted">Choose a vendor and an existing menu category, then upload its picture.</div><div class="menu-form-grid"><select id="categoryPhotoVendor" aria-label="Category photo vendor"></select><select id="categoryPhotoName" aria-label="Category photo name"></select><div class="full"><input id="categoryPhotoFile" type="file" accept="image/png,image/jpeg,image/webp"></div></div><div class="menu-actions"><button id="categoryPhotoSave" type="button">Save Category Photo</button><span id="categoryPhotoStatus" class="small" role="status"></span></div><div id="categoryPhotoPreview" class="small"></div></div>
+        <div class="menu-form" style="margin:12px 0"><h3 style="margin:0 0 8px">Category Photos &amp; Translations</h3><div class="muted">Choose a vendor and an existing menu category, then add its picture and language labels.</div><div class="menu-form-grid"><select id="categoryPhotoVendor" aria-label="Category photo vendor"></select><select id="categoryPhotoName" aria-label="Category photo name"></select><input id="categoryNameEn" placeholder="English category name"><input id="categoryNameTr" placeholder="Turkish category name"><div class="full"><input id="categoryPhotoFile" type="file" accept="image/png,image/jpeg,image/webp"></div></div><div class="menu-actions"><button id="categoryPhotoSave" type="button">Save Category</button><span id="categoryPhotoStatus" class="small" role="status"></span></div><div id="categoryPhotoPreview" class="small"></div></div>
         <div id="adminMenuCount" class="small" aria-live="polite"></div>
         <div id="menuForm" class="menu-form hidden">
           <h3 id="menuFormTitle" style="margin-top:0">Add Menu Item</h3>
@@ -1291,6 +1291,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
             <div class="full"><input id="menuName" placeholder="Item name"></div>
             <div class="full"><input id="menuCategory" placeholder="Category (e.g. Burgers, Desserts)"></div>
             <div class="full"><textarea id="menuDescription" rows="2" placeholder="Short description"></textarea></div>
+            <div class="full"><details><summary>English / Turkish menu translations</summary><div class="menu-form-grid" style="margin-top:10px"><input id="menuNameEn" placeholder="English item name"><input id="menuNameTr" placeholder="Turkish item name"><textarea id="menuDescriptionEn" rows="2" placeholder="English description"></textarea><textarea id="menuDescriptionTr" rows="2" placeholder="Turkish description"></textarea></div><div class="small">Optional. Leave a field empty to keep the original text in that language.</div></details></div>
             <div><input id="menuPrice" type="number" min="0" step="1" placeholder="Price (₺)"></div>
             <div><select id="menuVendor" style="width:100%;padding:13px;border:1px solid #ddd;border-radius:11px;font:inherit"></select></div>
             <div class="full"><label style="display:block;font-weight:700;margin-bottom:7px">Product Picture</label><input id="menuImageFile" type="file" accept="image/png,image/jpeg,image/webp,image/*"><div id="menuImagePreviewWrap" class="small" style="margin-top:8px"></div></div>
@@ -1738,7 +1739,7 @@ function renderCart(){
   if(badgeEl)badgeEl.textContent=itemCount;
   if(itemsEl)itemsEl.innerHTML=cart.map((p,i)=>{
     const q=Math.max(1,Number(p.quantity||1));
-    return `<div class="row"><span><b>${escapeHtml(p.name)}</b>${p.vendor_name?`<div class="cart-vendor">${escapeHtml(p.vendor_name)}</div>`:""}${q>1?` <small>×${q}</small>`:""} <button class="secondary" style="padding:4px 8px" type="button" onclick="removeItem(${i})">×</button></span><span>${money(Number(p.price||0)*q)}</span></div>`;
+    return `<div class="row"><span><b>${escapeHtml(window.MEGJET_MENU_LOCALE?.name(p)||p.name)}</b>${p.vendor_name?`<div class="cart-vendor" data-no-translate>${escapeHtml(p.vendor_name)}</div>`:""}${q>1?` <small>×${q}</small>`:""} <button class="secondary" style="padding:4px 8px" type="button" onclick="removeItem(${i})">×</button></span><span>${money(Number(p.price||0)*q)}</span></div>`;
   }).join("");
   const subtotal=cart.reduce((a,p)=>a+(Number(p.price||0)*Math.max(1,Number(p.quantity||1))),0);
   const total=subtotal+DELIVERY;
@@ -1927,16 +1928,18 @@ async function load(){
   const base=cfg.url.replace(/\/+$/,"" );
   try{
     await loadDeliveryFee();
-    const [vendors,products,categoryMeta]=await Promise.all([
+    const [vendors,products,categoryMeta,translations]=await Promise.all([
       fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url,bio&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       }),
       megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url,menu_sort_order&available=eq.true&order=name,id",path=>fetchJson(base+path,{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       })),
-      fetchJson(base+"/rest/v1/vendor_menu_categories?select=vendor_id,name,image_url,sort_order",{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}}).catch(()=>[])
+      fetchJson(base+"/rest/v1/vendor_menu_categories?select=vendor_id,name,name_en,name_tr,image_url,sort_order",{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}}).catch(()=>[]),
+      megjetFetchPages("/rest/v1/product_translations?select=product_id,name_en,name_tr,description_en,description_tr&order=product_id",path=>fetchJson(base+path,{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}})).catch(()=>[])
     ]);
     window.MEGJET_VENDOR_CATEGORY_META=categoryMeta||[];
+    window.MEGJET_PRODUCT_TRANSLATIONS=Object.fromEntries((translations||[]).map(t=>[String(t.product_id),t]));
     setStatus("Connected ✓ Live vendors from Supabase","ok");
     hideSetup();
     renderVendors([...vendors, MEGJET_COMING_SOON_ALCOHOL_VENDOR],[...products, ...MEGJET_COMING_SOON_ALCOHOL_PRODUCTS]);
@@ -2091,14 +2094,17 @@ function renderVendors(vendors,products){
   }
   function renderProduct(p,v){
     const item={...p,vendor_name:v.name};
+    const menuLocale=window.MEGJET_MENU_LOCALE;
+    const visibleName=menuLocale?.name(p)||p.name;
+    const visibleDescription=menuLocale?.description(p)??cleanDesc(p);
     const photoKey=Object.keys(window.MEGJET_PRODUCT_PHOTOS || {}).find(k=>k.trim().toLowerCase()===String(p.name||"").trim().toLowerCase());
     const productImage=p.image_url||(window.MEGJET_VENDOR_PRODUCT_IMAGES||{})[String(p.id)]||(String(v.name||"").toLocaleLowerCase().includes("çikolata evim")?((window.MEGJET_CIKOLATA_SWEETS||{})[p.name]||(window.MEGJET_CIKOLATA_MENU||{})[`${p.name}|${Number(p.price)}`]):"")||(photoKey?(window.MEGJET_PRODUCT_PHOTOS || {})[photoKey]:"")||"https://placehold.co/96x96?text=Food";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
     const isCafe5=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='cafe5';
     const photoClass=isSweetHoles?'product-image-admin sweetholes-product-photo':(isCafe5?'product-image-admin cafe5-product-photo':'product-image-admin');
     const infoClass=isSweetHoles?'item-info sweetholes-product-info':'item-info';
-    if(v.coming_soon)return `<div class="item"><div class="${infoClass}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(p.name||'Product')}"><div><b>${escapeHtml(p.name)}</b><div class="muted">${escapeHtml(cleanDesc(p))}</div><div class="coming-soon-price">Products and prices coming soon</div></div></div><button type="button" class="coming-soon-button" disabled>Coming Soon</button></div>`;
-    return `<div class="item"><div class="${infoClass}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(p.name||'Product')}"><div><b>${escapeHtml(p.name)}</b><div class="muted">${escapeHtml(cleanDesc(p))}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-button" data-megjet-add-id="${registerMegjetCartProduct(item)}" onclick="return window.MEGJET_ADD_FROM_BUTTON(this,event);">Add</button></div></div>`;
+    if(v.coming_soon)return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(visibleName||'Product')}"><div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="coming-soon-price">Products and prices coming soon</div></div></div><button type="button" class="coming-soon-button" disabled>Coming Soon</button></div>`;
+    return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0"><img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml(visibleName||'Product')}"><div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-button" data-megjet-add-id="${registerMegjetCartProduct(item)}" onclick="return window.MEGJET_ADD_FROM_BUTTON(this,event);">Add</button></div></div>`;
   }
   function renderCategory(name,items,v){
     if(!items.length)return "";
@@ -2106,7 +2112,8 @@ function renderVendors(vendors,products){
     const icon=catIcons[name]||"🍽️";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
     const categoryClass=isSweetHoles?'menu-category sweetholes-category':'menu-category';
-    return `<details class="${categoryClass}"><summary>${categoryImage?`<img class="category-photo" src="${categoryImage}" alt="${escapeHtml(name)}">`:`<span class="category-photo category-icon-fallback">${icon}</span>`}<span class="category-title"><strong>${escapeHtml(name)}</strong><span class="category-count">${items.length} ${items.length===1?'item':'items'}</span></span><span class="category-arrow">▼</span></summary><div class="category-items">${items.map(p=>renderProduct(p,v)).join('')}</div></details>`;
+    const visibleCategory=window.MEGJET_MENU_LOCALE?.category(name,v.id)||name;
+    return `<details class="${categoryClass}"><summary>${categoryImage?`<img class="category-photo" src="${categoryImage}" alt="${escapeHtml(visibleCategory)}">`:`<span class="category-photo category-icon-fallback">${icon}</span>`}<span class="category-title"><strong data-menu-category="${escapeHtml(name)}" data-menu-vendor="${escapeHtml(v.id)}">${escapeHtml(visibleCategory)}</strong><span class="category-count">${items.length} ${items.length===1?'item':'items'}</span></span><span class="category-arrow">▼</span></summary><div class="category-items">${items.map(p=>renderProduct(p,v)).join('')}</div></details>`;
   }
   window.MEGJET_VENDOR_DATA={vendors,products,categoryOrder,productCategory,renderCategory};
   const profile=$("vendorProfile"), list=$("vendors");
@@ -3131,6 +3138,7 @@ function resetMenuForm(){
   $("menuName").value="";
   $("menuCategory").value="";
   $("menuDescription").value="";
+  ["menuNameEn","menuNameTr","menuDescriptionEn","menuDescriptionTr"].forEach(id=>$(id).value="");
   $("menuPrice").value="";
   $("menuAvailable").checked=true;
   if($("menuImageFile")) $("menuImageFile").value="";
@@ -3144,10 +3152,12 @@ function showMenuForm(product=null){
   if($("menuImageFile"))$("menuImageFile").value="";
   if($("menuImagePreviewWrap"))$("menuImagePreviewWrap").innerHTML=product?.image_url?`<img class="menu-photo-thumb" src="${escapeHtml(product.image_url)}" alt="Current product photo"> Current photo remains unless you choose another.`:"Choose a photo to add to this item.";
   if(product){
+    const localized=(window.MEGJET_PRODUCT_TRANSLATIONS||{})[String(product.id)]||{};
     $("menuItemId").value=product.id;
     $("menuName").value=product.name||"";
     $("menuCategory").value=megjetMenuCategory(product.description);
     $("menuDescription").value=megjetMenuPlainDescription(product.description);
+    ["menuNameEn","menuNameTr","menuDescriptionEn","menuDescriptionTr"].forEach(id=>$(id).value=localized[{menuNameEn:"name_en",menuNameTr:"name_tr",menuDescriptionEn:"description_en",menuDescriptionTr:"description_tr"}[id]]||"");
     $("menuPrice").value=product.price??"";
     $("menuAvailable").checked=product.available!==false;
     $("menuVendor").value=product.vendor_id||"";
@@ -3186,23 +3196,29 @@ function renderCategoryPhotoOptions(){
   if(names.includes(previous))categorySelect.value=previous;
   $("categoryPhotoSave").disabled=!names.length;
   const existing=(window.MEGJET_VENDOR_CATEGORY_META||[]).find(c=>String(c.vendor_id)===vendorId&&c.name===categorySelect.value);
+  $("categoryNameEn").value=existing?.name_en||"";
+  $("categoryNameTr").value=existing?.name_tr||"";
   $("categoryPhotoPreview").innerHTML=existing?.image_url?`<img class="menu-photo-thumb" src="${escapeHtml(existing.image_url)}" alt="Category photo"> Current category photo`:"";
 }
 async function saveCategoryPhoto(){
   const vendor_id=$("categoryPhotoVendor").value,name=$("categoryPhotoName").value,file=$("categoryPhotoFile").files?.[0],status=$("categoryPhotoStatus");
-  if(!vendor_id||!name||!file){status.textContent="Select a vendor, category and photo.";return;}
-  if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5*1024*1024){status.textContent="Choose a JPG, PNG or WebP photo under 5 MB.";return;}
+  if(!vendor_id||!name){status.textContent="Select a vendor and category.";return;}
+  if(file&&(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5*1024*1024)){status.textContent="Choose a JPG, PNG or WebP photo under 5 MB.";return;}
   try{
-    $("categoryPhotoSave").disabled=true;status.textContent="Uploading category photo…";
+    $("categoryPhotoSave").disabled=true;status.textContent=file?"Uploading category photo…":"Saving category translations…";
     const token=localStorage.getItem("megjet_access_token");if(!token)throw new Error("Admin sign-in required.");
-    const path=vendor_id+"/"+Date.now()+"-"+Math.random().toString(36).slice(2,8)+"-"+file.name.toLowerCase().replace(/[^a-z0-9._-]/g,"-");
-    const base=cfg.url.replace(/\/+$/,'');
-    await fetchJson(base+"/storage/v1/object/category-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type},body:file},60000);
-    const image_url=base+"/storage/v1/object/public/category-images/"+path.split('/').map(encodeURIComponent).join('/');
     const existing=(window.MEGJET_VENDOR_CATEGORY_META||[]).find(c=>String(c.vendor_id)===vendor_id&&c.name===name);
-    await adminRequest('/rest/v1/vendor_menu_categories?on_conflict=vendor_id,name',{method:'POST',headers:{Prefer:'resolution=merge-duplicates'},body:JSON.stringify({vendor_id,name,image_url,sort_order:existing?.sort_order??0})});
-    window.MEGJET_VENDOR_CATEGORY_META=(window.MEGJET_VENDOR_CATEGORY_META||[]).filter(c=>!(String(c.vendor_id)===vendor_id&&c.name===name)).concat({vendor_id,name,image_url,sort_order:existing?.sort_order??0});
-    $("categoryPhotoFile").value="";status.textContent="Category photo saved.";renderCategoryPhotoOptions();await load();
+    let image_url=existing?.image_url||null;
+    if(file){
+      const path=vendor_id+"/"+Date.now()+"-"+Math.random().toString(36).slice(2,8)+"-"+file.name.toLowerCase().replace(/[^a-z0-9._-]/g,"-");
+      const base=cfg.url.replace(/\/+$/,'');
+      await fetchJson(base+"/storage/v1/object/category-images/"+path,{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+token,"Content-Type":file.type},body:file},60000);
+      image_url=base+"/storage/v1/object/public/category-images/"+path.split('/').map(encodeURIComponent).join('/');
+    }
+    const name_en=$("categoryNameEn").value.trim()||null,name_tr=$("categoryNameTr").value.trim()||null;
+    await adminRequest('/rest/v1/vendor_menu_categories?on_conflict=vendor_id,name',{method:'POST',headers:{Prefer:'resolution=merge-duplicates'},body:JSON.stringify({vendor_id,name,image_url,name_en,name_tr,sort_order:existing?.sort_order??0})});
+    window.MEGJET_VENDOR_CATEGORY_META=(window.MEGJET_VENDOR_CATEGORY_META||[]).filter(c=>!(String(c.vendor_id)===vendor_id&&c.name===name)).concat({vendor_id,name,image_url,name_en,name_tr,sort_order:existing?.sort_order??0});
+    $("categoryPhotoFile").value="";status.textContent="Category saved.";renderCategoryPhotoOptions();await load();
   }catch(e){status.textContent="Upload failed: "+e.message;}
   finally{$("categoryPhotoSave").disabled=false;}
 }
@@ -3603,6 +3619,11 @@ async function saveMenuItem(){
     $("menuMessage").textContent="Saving item…";
     const result=await adminRequest("/rest/v1/rpc/admin_save_product_full",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_product_id:id||null,p_vendor_id:vendor_id,p_name:name,p_description:description,p_price:price,p_available:available})});
     const savedId=String(result?.id||result?.product_id||id||"");
+    const translation={product_id:savedId,name_en:$("menuNameEn").value.trim()||null,name_tr:$("menuNameTr").value.trim()||null,description_en:$("menuDescriptionEn").value.trim()||null,description_tr:$("menuDescriptionTr").value.trim()||null};
+    if(savedId&&(translation.name_en||translation.name_tr||translation.description_en||translation.description_tr||(window.MEGJET_PRODUCT_TRANSLATIONS||{})[savedId])){
+      await adminRequest('/rest/v1/product_translations?on_conflict=product_id',{method:'POST',headers:{Prefer:'resolution=merge-duplicates'},body:JSON.stringify(translation)});
+      (window.MEGJET_PRODUCT_TRANSLATIONS||={})[savedId]=translation;
+    }
     const imageFile=$("menuImageFile")?.files?.[0];
     if(imageFile){
       if(!savedId)throw new Error("Product was saved but no product ID was returned for the picture.");
@@ -5372,6 +5393,7 @@ document.addEventListener("DOMContentLoaded",function(){
 })();
 </script>
 <script src="./workflow-guard.js?v=7"></script>
-<script src="./interface-preferences.js?v=5"></script>
+<script src="./assets/menu-language.js?v=1"></script>
+<script src="./interface-preferences.js?v=6"></script>
 </body>
 </html>
