@@ -10,6 +10,12 @@
     "📱 WhatsApp support uses secure click-to-chat links. 🔔 Browser/in-app order alerts are enabled for Admin. 💳 Online payments remain OFF until you request them.":"📱 WhatsApp desteği güvenli bağlantılarla çalışır. 🔔 Yönetici için tarayıcı ve uygulama içi sipariş bildirimleri açıktır. 💳 Talep edene kadar çevrim içi ödeme kapalıdır.",
     "My Account":"Hesabım","Admin":"Yönetici","Vendor Login":"İşletme Girişi","Rider Login":"Kurye Girişi",
     "Language":"Dil","Appearance":"Görünüm","Light":"Açık","Dark":"Koyu",
+    "Connected ✓ Live vendors from Supabase":"Bağlandı ✓ İşletmeler yüklendi",
+    "🏪 Featured vendors":"🏪 Öne çıkan işletmeler","⭐ Featured picks":"⭐ Öne çıkan ürünler","View all →":"Tümünü gör →",
+    "View Menu →":"Menüyü Gör →","Browse Preview →":"Ön İzlemeye Bak →",
+    "Coming Soon":"Yakında","● COMING SOON":"● YAKINDA","🔒 Browsing preview only":"🔒 Yalnızca ön izleme",
+    "Prep time not provided":"Hazırlık süresi belirtilmedi",
+    "🆘 Need Help?":"🆘 Yardıma mı ihtiyacınız var?","We're here to help with your Megjet order.":"Megjet siparişinizde size yardımcı olmak için buradayız.","📞 Call Megjet":"📞 Megjet'i Ara",
     "delivery":"teslimat","Megjet is ready • Checking live connection…":"Megjet hazır • Canlı bağlantı kontrol ediliyor…",
     "Fresh food. Great taste. Delivered to you. 🍽️":"Taze yemek. Harika lezzet. Kapınıza gelsin. 🍽️",
     "Fresh food from local restaurants and vendors — delivered across your Megjet service area.":"Yerel restoranlardan taze yemekler Megjet hizmet bölgenizde kapınıza gelsin.",
@@ -161,6 +167,12 @@
     if(Object.prototype.hasOwnProperty.call(tr,source))return tr[source];
     let m=source.match(/^(\d+) items?$/i);
     if(m)return m[1]+" ürün";
+    if(/^View Menu\s*→$/.test(source))return "Menüyü Gör →";
+    if(/^Browse Preview\s*→$/.test(source))return "Ön İzlemeye Bak →";
+    m=source.match(/^(🕐\s*)?(\d+) min preparation$/);
+    if(m)return (m[1]||"")+m[2]+" dk hazırlık";
+    m=source.match(/^Order #(.+) is included in your WhatsApp message\.$/);
+    if(m)return "#"+m[1]+" numaralı sipariş WhatsApp mesajınıza eklendi.";
     m=source.match(/^(\d+) menu items?$/i);
     if(m)return m[1]+" menü ürünü";
     m=source.match(/^(\d+) of (\d+) items?$/i);
