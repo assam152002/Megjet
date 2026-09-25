@@ -987,7 +987,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
       <div class="small">Choose a saved address or enter a new one below.</div>
     </div>
     <textarea id="address" rows="3" placeholder="Delivery address in Gazimagusa"></textarea>
-    <div class="payment-box"><b>💳 Payment</b><select id="paymentMethod"><option value="Cash on Delivery">Cash on Delivery</option><option value="Credit / Debit Card">Credit / Debit Card</option></select><div class="feature-small">Choose Cash on Delivery or Credit / Debit Card. Online card payment requires a connected payment gateway.</div></div>
+    <div class="payment-box"><b>💳 Payment</b><select id="paymentMethod"><option value="Cash on Delivery">Cash on Delivery</option><option value="Credit / Debit Card" disabled>Credit / Debit Card — coming soon</option></select><div class="feature-small">Cash on Delivery is available. Card payment will be added when a payment gateway is connected.</div></div>
     <div class="payment-box"><b>🎟️ Coupon</b><div class="coupon-box"><input id="couponCode" placeholder="Coupon code" autocomplete="off"><button id="applyCoupon" class="secondary" type="button">Apply</button></div><div id="couponMessage" class="coupon-message"></div></div>
     <div class="row"><span>Discount</span><span id="checkoutDiscount">₺ 0</span></div>
     <div class="row"><span>Delivery</span><span id="checkoutDelivery">₺0</span></div>
@@ -2188,6 +2188,7 @@ $("placeOrder").onclick=async()=>{
     $("placeOrder").disabled=true;$("orderMessage").textContent="Sending order…";
     const totals=checkoutTotals();
     const paymentMethod=$("paymentMethod")?.value||"Cash on Delivery";
+    if(paymentMethod!=="Cash on Delivery"){ $("orderMessage").textContent="Card payment is not available yet. Choose Cash on Delivery.";return; }
     const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1)}));
     // Keep the same ID if a request reaches the server but its reply is lost.
     const checkoutKey=JSON.stringify([name,phone,address,paymentMethod,appliedCoupon?.code||null,customerAuthUser?.id||null,items]);
