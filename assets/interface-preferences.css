@@ -22,5 +22,8 @@ html[data-theme="dark"] :is(.vendor-profile-info,.vendor-profile-info *,.custome
 html[data-theme="dark"] .customer-hero input{background:transparent!important;color:#fff!important}
 html[data-theme="dark"] .megjet-preferences select{background:#1c354a!important;color:#fff!important;border-color:#7ca6bd!important}
 html[data-theme="dark"] .product-image-admin{background:#fff!important}
+html[data-theme="dark"] :is(.growth-feature-row,.growth-card){background:#15283b!important;color:#eaf4fb!important;border-color:#38536a!important;box-shadow:0 4px 18px #0005!important}
+html[data-theme="dark"] :is(.growth-feature-name,.growth-feature-row b,.growth-card h3){color:#f0f7fc!important}
+html[data-theme="dark"] :is(.growth-feature-meta,.growth-feature-arrow){color:#b9cddd!important}
 html[data-theme="dark"] :is(.menu-category,.menu-item-admin,.vendor-item-admin,.vendor-menu-row,.card,.vendor-profile){border-color:#38536a!important}
 @media print{html[data-theme="dark"] #printReceipt,html[data-theme="dark"] #printReceipt *{background:#fff!important;color:#000!important;box-shadow:none!important}}
