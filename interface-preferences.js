@@ -15,6 +15,7 @@
     "View Menu →":"Menüyü Gör →","Browse Preview →":"Ön İzlemeye Bak →",
     "Coming Soon":"Yakında","● COMING SOON":"● YAKINDA","🔒 Browsing preview only":"🔒 Yalnızca ön izleme",
     "Prep time not provided":"Hazırlık süresi belirtilmedi",
+    "Search this menu…":"Bu menüde ara…","All restaurants":"Tüm restoranlar","📍 Maps":"📍 Harita",
     "🆘 Need Help?":"🆘 Yardıma mı ihtiyacınız var?","We're here to help with your Megjet order.":"Megjet siparişinizde size yardımcı olmak için buradayız.","📞 Call Megjet":"📞 Megjet'i Ara",
     "delivery":"teslimat","Megjet is ready • Checking live connection…":"Megjet hazır • Canlı bağlantı kontrol ediliyor…",
     "Fresh food. Great taste. Delivered to you. 🍽️":"Taze yemek. Harika lezzet. Kapınıza gelsin. 🍽️",
@@ -171,6 +172,8 @@
     if(/^Browse Preview\s*→$/.test(source))return "Ön İzlemeye Bak →";
     m=source.match(/^(🕐\s*)?(\d+) min preparation$/);
     if(m)return (m[1]||"")+m[2]+" dk hazırlık";
+    m=source.match(/^🕐\s*(\d+) min$/);
+    if(m)return "🕐 "+m[1]+" dk";
     m=source.match(/^Order #(.+) is included in your WhatsApp message\.$/);
     if(m)return "#"+m[1]+" numaralı sipariş WhatsApp mesajınıza eklendi.";
     m=source.match(/^(\d+) menu items?$/i);
