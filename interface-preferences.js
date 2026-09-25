@@ -252,6 +252,7 @@
     translateTree(document.body);
     window.MEGJET_MENU_LOCALE?.refresh();
     window.renderCart?.();
+    window.dispatchEvent(new Event("megjet:languagechange"));
   }
   function setTheme(next){
     const theme=next==="dark"?"dark":"light";

@@ -5303,7 +5303,7 @@ document.addEventListener("DOMContentLoaded",function(){
     const items=$('cartItems');
     if(items)items.innerHTML=state().map((x,i)=>{
       const q=Math.max(1,Number(x.quantity||1));
-      return '<div class="row"><span><b>'+esc(x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor">'+esc(x.vendor_name)+'</div>':'')+
+      return '<div class="row"><span><b>'+esc(window.MEGJET_MENU_LOCALE?.name(x)||x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor" data-no-translate>'+esc(x.vendor_name)+'</div>':'')+
       '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
       ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
     }).join('');
@@ -5360,6 +5360,7 @@ document.addEventListener("DOMContentLoaded",function(){
     draw();
     window.addEventListener('hashchange',draw);
     window.addEventListener('pageshow',draw);
+    window.addEventListener('megjet:languagechange',draw);
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
 })();
@@ -5394,6 +5395,6 @@ document.addEventListener("DOMContentLoaded",function(){
 </script>
 <script src="./workflow-guard.js?v=7"></script>
 <script src="./assets/menu-language.js?v=1"></script>
-<script src="./interface-preferences.js?v=6"></script>
+<script src="./interface-preferences.js?v=7"></script>
 </body>
 </html>
