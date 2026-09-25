@@ -646,17 +646,20 @@ function megjetSupportHTML(orderId=""){
 </script>
 
 
-<link rel="manifest" href="manifest.webmanifest">
-<meta name="theme-color" content="#6b3f22">
+<link rel="manifest" href="manifest.webmanifest?v=2">
+<meta name="theme-color" content="#0b5f9c">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Megjet">
-<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/megjet-192.png">
 
 <!-- Megjet V1 Production Hardening Step 175 -->
 
 <style>
+.megjet-install{margin-top:10px;padding:8px 14px;border:1px solid rgba(255,255,255,.65);border-radius:999px;background:#fff;color:#0b5f9c;font-size:14px;font-weight:700;cursor:pointer}
+.megjet-install[hidden],.megjet-install-help[hidden]{display:none!important}
+.megjet-install-help{max-width:330px;margin-top:8px;padding:10px 12px;border-radius:10px;background:#fff;color:#133d59;font-size:13px;line-height:1.4;box-shadow:0 3px 12px #0002}
 .growth-home{display:grid;gap:18px;margin:18px 0}
 .growth-strip{display:flex;gap:12px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none;scroll-snap-type:x proximity}
 .growth-strip::-webkit-scrollbar{display:none}
@@ -870,6 +873,8 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
     <label><span>Language</span><select id="megjetLanguage" aria-label="Language"><option value="en">English</option><option value="tr">Türkçe</option></select></label>
     <label><span>Appearance</span><select id="megjetTheme" aria-label="Appearance"><option value="light">Light</option><option value="dark">Dark</option></select></label>
   </div>
+  <button id="megjetInstall" class="megjet-install" type="button" hidden>⬇ Install App</button>
+  <div id="megjetInstallHelp" class="megjet-install-help" role="status" hidden></div>
 </header>
 <main>
   <div id="status" class="notice">Megjet is ready • Checking live connection…</div>
@@ -5396,5 +5401,6 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./workflow-guard.js?v=7"></script>
 <script src="./assets/menu-language.js?v=1"></script>
 <script src="./interface-preferences.js?v=7"></script>
+<script src="./assets/install-app.js?v=1"></script>
 </body>
 </html>

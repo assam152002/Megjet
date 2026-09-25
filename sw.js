@@ -1,12 +1,16 @@
-const CACHE_NAME = "megjet-app-v10";
+const CACHE_NAME = "megjet-app-v11";
 const GUARD_URL = "./workflow-guard.js?v=7";
 const APP_SHELL = [
   "./",
   "./index.html",
   "./manifest.webmanifest",
   GUARD_URL,
-  "./icons/megjet-192.svg",
-  "./icons/megjet-512.svg"
+  "./interface-preferences.js?v=7",
+  "./assets/menu-language.js?v=1",
+  "./assets/install-app.js?v=1",
+  "./icons/megjet-192.png",
+  "./icons/megjet-512.png",
+  "./icons/megjet-maskable-512.png"
 ];
 
 self.addEventListener("install", event => {
