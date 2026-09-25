@@ -2124,7 +2124,7 @@ function renderVendors(vendors,products){
     const vendorCats=(window.MEGJET_VENDOR_CATEGORY_META||[]).filter(c=>String(c.vendor_id)===String(v.id)).sort((a,b)=>a.sort_order-b.sort_order).map(c=>c.name);
     const cats=[...vendorCats.filter(c=>groups[c]),...categoryOrder.filter(c=>groups[c]&&!vendorCats.includes(c)),...Object.keys(groups).filter(c=>!categoryOrder.includes(c)&&!vendorCats.includes(c))];
     for(const group of Object.values(groups))group.sort((a,b)=>(a.menu_sort_order??100000)-(b.menu_sort_order??100000));
-    const hero=heroFor(v)||MEGJET_CATEGORY_IMAGES['Sweets Menu']||'';
+    const hero=heroFor(v)||(window.MEGJET_VENDOR_CATEGORY_META||[]).find(c=>String(c.vendor_id)===String(v.id)&&c.image_url)?.image_url||MEGJET_CATEGORY_IMAGES['Sweets Menu']||'';
     const logo=logoFor(v);
     const map=mapFor(v);
     const desc=descriptionFor(v);
@@ -5372,6 +5372,6 @@ document.addEventListener("DOMContentLoaded",function(){
 })();
 </script>
 <script src="./workflow-guard.js?v=7"></script>
-<script src="./interface-preferences.js?v=4"></script>
+<script src="./interface-preferences.js?v=5"></script>
 </body>
 </html>

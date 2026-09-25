@@ -19,6 +19,7 @@
     "View Menu →":"Menüyü Gör →","Browse Preview →":"Ön İzlemeye Bak →",
     "Coming Soon":"Yakında","● COMING SOON":"● YAKINDA","🔒 Browsing preview only":"🔒 Yalnızca ön izleme",
     "Prep time not provided":"Hazırlık süresi belirtilmedi",
+    "🕐 Prep time not provided":"🕐 Hazırlık süresi belirtilmedi",
     "Search this menu…":"Bu menüde ara…","All restaurants":"Tüm restoranlar","📍 Maps":"📍 Harita",
     "🆘 Need Help?":"🆘 Yardıma mı ihtiyacınız var?","We're here to help with your Megjet order.":"Megjet siparişinizde size yardımcı olmak için buradayız.","📞 Call Megjet":"📞 Megjet'i Ara",
     "delivery":"teslimat","Megjet is ready • Checking live connection…":"Megjet hazır • Canlı bağlantı kontrol ediliyor…",
