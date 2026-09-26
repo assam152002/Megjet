@@ -4347,6 +4347,7 @@ if($("vendorStatusFilter")) $("vendorStatusFilter").onchange=renderVendorDashboa
 $("vendorLogout").onclick=()=>{localStorage.removeItem("megjet_vendor_access_token");vendorProfile=null;$("vendorPanel").classList.add("hidden");$("vendorAuth").classList.remove("hidden");$("vendorAuthMessage").textContent="Signed out.";};
 $("adminLogin").onclick=adminLogin;
 $("deliveryFeeSave").onclick=saveDeliveryFeeAdmin;
+$("launchSettingsSave").onclick=saveLaunchSettingsAdmin;
 $("adminLogout").onclick=()=>{localStorage.removeItem("megjet_access_token");if(adminNotificationTimer)clearInterval(adminNotificationTimer);adminNotificationTimer=null;$("adminPanel").classList.add("hidden");$("adminAuth").classList.remove("hidden");};
 $("salesRefresh").onclick=async()=>{renderSalesDashboard(adminOrdersCache);await loadSalesDashboard();};
 $("adminRefresh").onclick=loadAdminOrders;
