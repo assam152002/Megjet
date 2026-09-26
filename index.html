@@ -4969,7 +4969,7 @@ Object.assign(MEGJET_PRODUCT_PHOTOS, {"BİRA TABAĞI (2 Kişilik)":"./assets/img
       let proof='';
       if(file){if(msg)msg.textContent='Uploading proof photo…';proof=await uploadProof(orderId,file);}
       if(msg)msg.textContent='Completing delivery…';
-      const result=await riderRpc('rider_complete_delivery',{p_order_id:String(orderId),p_pin:pin,p_proof_photo_url:proof||null});
+      const result=await riderRpc('rider_complete_delivery',{p_order_id:String(orderId),p_pin:pin,p_proof_photo_url:proof||null,p_pos_paid:order.payment_method==='Card at Doorstep (POS)'&&!!document.getElementById('phase3b-pos-'+safe)?.checked});
       if(msg)msg.textContent='✓ Delivery completed. Earning recorded: '+money(result?.earning||0);
       await loadRiderDashboard();
       await loadRiderEarnings();
