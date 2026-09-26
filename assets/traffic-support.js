@@ -98,9 +98,12 @@
 
   function renderInbox(){
     const box=$('supportInbox');if(!box)return;
-    box.innerHTML=adminInbox.length?adminInbox.map(t=>`<button type="button" class="support-thread-choice ${t.id===selectedThread?'selected':''}" data-support-thread="${escape(t.id)}"><strong data-no-translate>${escape(t.name)}</strong>${t.unread?`<b class="support-unread">${Number(t.unread)}</b>`:''}<small>${escape(t.order_reference?`#${t.order_reference} · `:'')}${escape(t.status)} · ${escape(new Date(t.last_message_at).toLocaleString())}</small></button>`).join(''):`<div class="muted">${phrase('No customer chats yet.','Henüz müşteri sohbeti yok.')}</div>`;
+    if($('adminSectionSupport').classList.contains('active')){
+      const html=adminInbox.length?adminInbox.map(t=>`<button type="button" class="support-thread-choice ${t.id===selectedThread?'selected':''}" data-support-thread="${escape(t.id)}"><strong data-no-translate>${escape(t.name)}</strong>${t.unread?`<b class="support-unread">${Number(t.unread)}</b>`:''}<small>${escape(t.order_reference?`#${t.order_reference} · `:'')}${escape(t.status)} · ${escape(new Date(t.last_message_at).toLocaleString())}</small></button>`).join(''):`<div class="muted">${phrase('No customer chats yet.','Henüz müşteri sohbeti yok.')}</div>`;
+      if(box.innerHTML!==html)box.innerHTML=html;
+    }
     const unread=adminInbox.reduce((n,t)=>n+Number(t.unread||0),0),badge=$('supportUnreadBadge');
-    if(badge){badge.hidden=!unread;badge.textContent=unread>99?'99':String(unread);}
+    if(badge){if(badge.hidden===!!unread)badge.hidden=!unread;const label=unread>99?'99':String(unread);if(badge.textContent!==label)badge.textContent=label;}
   }
   async function loadInbox(){
     if(!localStorage.getItem('megjet_access_token')||!$('adminPanel')||$('adminPanel').classList.contains('hidden')||adminBusy)return;
@@ -115,7 +118,8 @@
     const t=await rpc('admin_support_thread',{p_thread_id:id},true);if(!t)return;
     selectedThread=t.id;
     $('supportAdminHeader').textContent=`${t.name}${t.order_reference?' · #'+t.order_reference:''} · ${t.status}`;
-    $('supportAdminMessages').innerHTML=messagesHTML(t.messages);
+    const html=messagesHTML(t.messages);
+    if($('supportAdminMessages').innerHTML!==html)$('supportAdminMessages').innerHTML=html;
     $('supportAdminForm').hidden=false;$('supportCloseThread').hidden=t.status==='closed';
     $('supportAdminMessages').scrollTop=$('supportAdminMessages').scrollHeight;
     renderInbox();
