@@ -843,6 +843,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(
 .coming-soon-price{color:#7a5200;font-size:12px;font-weight:800}
 </style>
 <link rel="stylesheet" href="./assets/interface-preferences.css?v=3">
+<style>.rider-route-stops{display:grid;gap:9px;margin:12px 0}.rider-route-stop{padding:11px 12px;border:1px solid #d6ebf4;border-radius:11px;background:var(--soft,#f4fbfe);overflow-wrap:anywhere}.rider-route-stop b{display:block;margin-bottom:4px}.rider-route-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.rider-route-links a{display:inline-block;padding:8px 11px;border-radius:9px;background:#087eaf;color:#fff;text-decoration:none;font-weight:700;font-size:13px}.rider-route-links a:focus-visible{outline:3px solid #ffb347;outline-offset:2px}html[data-theme="dark"] .rider-route-stop{background:#1c354a;color:#eaf4fb;border-color:#38536a}html[data-theme="dark"] .rider-route-links a{color:#fff}</style>
 <script>
 try{
   const language=localStorage.getItem("megjet_language");
@@ -2931,6 +2932,33 @@ function startRiderNotifications(){if(riderNotificationTimer)clearInterval(rider
 
 let riderProfile=null;
 let riderOrdersCache=[];
+let riderPickupStops={};
+
+function riderMapsDirections(address){
+  return 'https://www.google.com/maps/dir/?api=1&travelmode=driving&destination='+encodeURIComponent(address);
+}
+
+async function loadRiderPickupStops(ids){
+  riderPickupStops={};
+  if(!ids.length)return;
+  const inList=ids.map(id=>id.replace(/[^a-zA-Z0-9-]/g,'')).join(',');
+  const items=await riderRequest('/rest/v1/order_items?select=order_id,vendor_id,vendor_name&order_id=in.('+encodeURIComponent(inList)+')');
+  const vendorIds=[...new Set((items||[]).map(item=>item.vendor_id).filter(Boolean))];
+  const vendors=vendorIds.length?await riderRequest('/rest/v1/vendors?select=id,name,address,area,city,phone&id=in.('+encodeURIComponent(vendorIds.join(','))+')'):[];
+  const vendorById=new Map(vendors.map(v=>[String(v.id),v]));
+  const seen=new Set();
+  for(const item of items||[]){
+    const key=String(item.order_id)+'|'+String(item.vendor_id||item.vendor_name||'');
+    if(seen.has(key))continue;
+    seen.add(key);
+    const vendor=vendorById.get(String(item.vendor_id))||{};
+    (riderPickupStops[String(item.order_id)]??=[]).push({
+      name:vendor.name||item.vendor_name||'Restaurant',
+      address:[vendor.address,vendor.area,vendor.city].filter(Boolean).join(', '),
+      phone:vendor.phone||''
+    });
+  }
+}
 
 function stopRiderLocationSharing(){
   if(riderLocationWatchId!==null){
@@ -3034,6 +3062,7 @@ async function loadRiderDashboard(){
       orders=await riderRequest('/rest/v1/orders?select=id,customer_name,customer_phone,delivery_address,subtotal,delivery_fee,total,payment_method,status,created_at&id=in.('+encodeURIComponent(inList)+')&order=created_at.desc');
     }
     riderOrdersCache=orders||[];
+    try{await loadRiderPickupStops(ids);}catch(e){riderPickupStops={};console.warn('Pickup addresses unavailable:',e);}
     renderRiderDashboard();
     startRiderLocationSharing();
     $('riderAuth').classList.add('hidden');
@@ -3070,16 +3099,23 @@ function renderRiderDashboard(){
     const st=normalizedStatus(o.status),label=st.replaceAll('_',' ');
     const canDeliver=st==='out_for_delivery';
     const waiting=st==='ready_for_pickup';
+    const pickups=riderPickupStops[String(o.id)]||[];
+    const customerAddress=String(o.delivery_address||'').trim();
+    const showStops=['ready_for_pickup','out_for_delivery'].includes(st);
+    const locationCards=showStops?`<div class="rider-route-stops">
+      ${pickups.length?pickups.map((vendor,i)=>`<div class="rider-route-stop"><b><span>🏪 Pickup</span> ${pickups.length>1?i+1+' · ':'· '}<span data-no-translate>${escapeHtml(vendor.name)}</span></b><div data-no-translate>${escapeHtml(vendor.address||'Address unavailable — contact the restaurant')}</div><div class="rider-route-links">${vendor.address?`<a target="_blank" rel="noopener noreferrer" href="${escapeHtml(riderMapsDirections(vendor.address))}">🗺️ Directions to pickup</a>`:''}${vendor.phone?`<a href="tel:${escapeHtml(phoneForCall(vendor.phone))}">📞 Call Restaurant</a>`:''}</div></div>`).join(''):'<div class="rider-route-stop">🏪 Restaurant pickup address unavailable. Contact the admin.</div>'}
+      <div class="rider-route-stop"><b>🏠 Customer drop-off</b><div data-no-translate>${escapeHtml(customerAddress||'No delivery address')}</div>${customerAddress?`<div class="rider-route-links"><a target="_blank" rel="noopener noreferrer" href="${escapeHtml(riderMapsDirections(customerAddress))}">🗺️ Directions to customer</a></div>`:''}</div>
+    </div>`:'';
     return `<div class="card rider-order" style="margin:12px 0">
       <div class="row"><div><b>Order #${escapeHtml(displayOrderId(o.id))}</b><br><span class="order-status ${escapeHtml(st)}">${escapeHtml(label)}</span></div><span>${escapeHtml(new Date(o.created_at).toLocaleString('en-GB'))}</span></div>
       <div style="margin-top:10px"><b>${escapeHtml(o.customer_name||'Customer')}</b> • ${escapeHtml(o.customer_phone||'No phone')}</div>
-      <div class="muted">📍 ${escapeHtml(o.delivery_address||'No address')}</div>
+      ${locationCards}
       ${o.customer_phone?`<div class="order-customer-actions"><a href="tel:${escapeHtml(phoneForCall(o.customer_phone))}">📞 Call Customer</a><a target="_blank" rel="noopener" href="https://wa.me/${escapeHtml(phoneForWhatsApp(o.customer_phone))}">💬 WhatsApp</a></div>`:''}
       <div class="row"><span>Order Total</span><b>${money(o.total)}</b></div>
       <div class="rider-note">💳 ${escapeHtml(o.payment_method||'Cash on Delivery')}${o.payment_method==='Card at Doorstep (POS)'?' — Bring the POS terminal and take payment at the door.':' — Collect cash at the door.'}</div>
       ${renderRiderPhase3Workflow(o)}
-      ${waiting?`<div class="rider-note">📦 Order is ready for pickup.</div><div class="rider-order-actions"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.delivery_address||'Gazimagusa')}">🗺️ View Route</a><button type="button" onclick="riderAcceptDelivery('${String(o.id).replaceAll("'","\\'")}')">🚚 Accept Delivery</button></div>`:''}
-      ${canDeliver?`<div class="rider-order-actions"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.delivery_address||'Gazimagusa')}">🗺️ Navigate</a><button type="button" onclick="riderMarkDelivered('${String(o.id).replaceAll("'","\\'")}')">✅ Mark Delivered</button></div>`:''}
+      ${waiting?`<div class="rider-note">📦 Order is ready for pickup.</div><div class="rider-order-actions"><button type="button" onclick="riderAcceptDelivery('${String(o.id).replaceAll("'","\\'")}')">🚚 Accept Delivery</button></div>`:''}
+      ${canDeliver?`<div class="rider-order-actions"><button type="button" onclick="riderMarkDelivered('${String(o.id).replaceAll("'","\\'")}')">✅ Mark Delivered</button></div>`:''}
       ${st==='delivered'?`<div class="rider-note">🏠 Delivery completed. You are available for another order.</div>`:''}
       ${st==='cancelled'?`<div class="rider-note">❌ This order was cancelled.</div>`:''}
     </div>`;
@@ -5431,7 +5467,7 @@ document.addEventListener("DOMContentLoaded",function(){
 </script>
 <script src="./workflow-guard.js?v=8"></script>
 <script src="./assets/menu-language.js?v=1"></script>
-<script src="./interface-preferences.js?v=9"></script>
+<script src="./interface-preferences.js?v=10"></script>
 <script src="./assets/install-app.js?v=1"></script>
 <style>
 #supportFloatButton{position:fixed;right:16px;bottom:68px;z-index:1090;border:0;border-radius:999px;background:#075b91;color:#fff;padding:12px 17px;box-shadow:0 6px 22px #00253c55;font-weight:800;cursor:pointer}
