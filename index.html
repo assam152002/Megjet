@@ -844,6 +844,7 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid rgba(
 </style>
 <link rel="stylesheet" href="./assets/interface-preferences.css?v=3">
 <style>.rider-route-stops{display:grid;gap:9px;margin:12px 0}.rider-route-stop{padding:11px 12px;border:1px solid #d6ebf4;border-radius:11px;background:var(--soft,#f4fbfe);overflow-wrap:anywhere}.rider-route-stop b{display:block;margin-bottom:4px}.rider-route-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.rider-route-links a{display:inline-block;padding:8px 11px;border-radius:9px;background:#087eaf;color:#fff;text-decoration:none;font-weight:700;font-size:13px}.rider-route-links a:focus-visible{outline:3px solid #ffb347;outline-offset:2px}html[data-theme="dark"] .rider-route-stop{background:#1c354a;color:#eaf4fb;border-color:#38536a}html[data-theme="dark"] .rider-route-links a{color:#fff}</style>
+<style>#vendorPickupMap{height:290px;margin:10px 0;border-radius:12px;background:#d9e7ed;z-index:0}.vendor-pin-coordinates{display:flex;gap:8px;flex-wrap:wrap}.vendor-pin-coordinates input{flex:1;min-width:130px}.vendor-pin-coordinates button{width:auto}#vendorPinStatus{margin-top:7px}</style>
 <script>
 try{
   const language=localStorage.getItem("megjet_language");
@@ -1242,6 +1243,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
             <div><input id="vendorArea" placeholder="Area"></div>
             <div><input id="adminVendorPhone" type="tel" placeholder="Vendor phone" inputmode="tel"></div>
             <div class="full"><input id="vendorAddress" placeholder="Full vendor address"></div>
+            <div class="full"><label for="vendorPickupMap"><b>📍 Exact pickup pin for riders</b></label><div class="small muted">Zoom in and tap the restaurant entrance, or paste its coordinates below. Drag the pin to adjust it. Only assigned riders and Admin can open this exact pin.</div><div id="vendorPickupMap" role="application" aria-label="Choose restaurant pickup on map"></div><div class="vendor-pin-coordinates"><input id="vendorPickupLatitude" type="number" step="any" min="-90" max="90" placeholder="Latitude" aria-label="Pickup latitude"><input id="vendorPickupLongitude" type="number" step="any" min="-180" max="180" placeholder="Longitude" aria-label="Pickup longitude"><button id="vendorPinClear" class="secondary" type="button">Remove Pin</button></div><div id="vendorPinStatus" class="small muted">No exact pin selected yet.</div></div>
             <div class="full"><label for="vendorBio"><b>Restaurant bio</b></label><textarea id="vendorBio" rows="3" maxlength="600" placeholder="Tell customers about this restaurant…" style="width:100%;resize:vertical"></textarea><div class="small muted">Shown below the restaurant banner. Up to 600 characters.</div></div>
             <div><input id="vendorRating" placeholder="Rating (e.g. 4.8)"></div>
             <div><input id="vendorPrep" type="number" min="0" step="1" placeholder="Preparation time (minutes)"></div>
@@ -2945,6 +2947,9 @@ async function loadRiderPickupStops(ids){
   const items=await riderRequest('/rest/v1/order_items?select=order_id,vendor_id,vendor_name&order_id=in.('+encodeURIComponent(inList)+')');
   const vendorIds=[...new Set((items||[]).map(item=>item.vendor_id).filter(Boolean))];
   const vendors=vendorIds.length?await riderRequest('/rest/v1/vendors?select=id,name,address,area,city,phone&id=in.('+encodeURIComponent(vendorIds.join(','))+')'):[];
+  let pins=[];
+  if(vendorIds.length){try{pins=await riderRequest('/rest/v1/vendor_pickup_pins?select=vendor_id,latitude,longitude&vendor_id=in.('+encodeURIComponent(vendorIds.join(','))+')');}catch(e){console.warn('Exact pickup pins unavailable:',e);}}
+  const pinById=new Map(pins.map(pin=>[String(pin.vendor_id),pin]));
   const vendorById=new Map(vendors.map(v=>[String(v.id),v]));
   const seen=new Set();
   for(const item of items||[]){
@@ -2952,10 +2957,12 @@ async function loadRiderPickupStops(ids){
     if(seen.has(key))continue;
     seen.add(key);
     const vendor=vendorById.get(String(item.vendor_id))||{};
+    const pin=pinById.get(String(item.vendor_id));
     (riderPickupStops[String(item.order_id)]??=[]).push({
       name:vendor.name||item.vendor_name||'Restaurant',
       address:[vendor.address,vendor.area,vendor.city].filter(Boolean).join(', '),
-      phone:vendor.phone||''
+      phone:vendor.phone||'',
+      latitude:pin?.latitude,longitude:pin?.longitude
     });
   }
 }
@@ -3103,7 +3110,7 @@ function renderRiderDashboard(){
     const customerAddress=String(o.delivery_address||'').trim();
     const showStops=['ready_for_pickup','out_for_delivery'].includes(st);
     const locationCards=showStops?`<div class="rider-route-stops">
-      ${pickups.length?pickups.map((vendor,i)=>`<div class="rider-route-stop"><b><span>🏪 Pickup</span> ${pickups.length>1?i+1+' · ':'· '}<span data-no-translate>${escapeHtml(vendor.name)}</span></b><div data-no-translate>${escapeHtml(vendor.address||'Address unavailable — contact the restaurant')}</div><div class="rider-route-links">${vendor.address?`<a target="_blank" rel="noopener noreferrer" href="${escapeHtml(riderMapsDirections(vendor.address))}">🗺️ Directions to pickup</a>`:''}${vendor.phone?`<a href="tel:${escapeHtml(phoneForCall(vendor.phone))}">📞 Call Restaurant</a>`:''}</div></div>`).join(''):'<div class="rider-route-stop">🏪 Restaurant pickup address unavailable. Contact the admin.</div>'}
+      ${pickups.length?pickups.map((vendor,i)=>{const hasPin=Number.isFinite(Number(vendor.latitude))&&Number.isFinite(Number(vendor.longitude))&&vendor.latitude!=null&&vendor.longitude!=null;const destination=hasPin?`${vendor.latitude},${vendor.longitude}`:vendor.address;return `<div class="rider-route-stop"><b><span>🏪 Pickup</span> ${pickups.length>1?i+1+' · ':'· '}<span data-no-translate>${escapeHtml(vendor.name)}</span></b><div data-no-translate>${escapeHtml(vendor.address||'Address unavailable — contact the restaurant')}</div>${hasPin?'<div class="small">📍 Exact pickup pin set</div>':'<div class="small">📍 Directions use the written address until Admin sets a pin.</div>'}<div class="rider-route-links">${destination?`<a target="_blank" rel="noopener noreferrer" href="${escapeHtml(riderMapsDirections(destination))}">🗺️ Directions to pickup</a>`:''}${vendor.phone?`<a href="tel:${escapeHtml(phoneForCall(vendor.phone))}">📞 Call Restaurant</a>`:''}</div></div>`;}).join(''):'<div class="rider-route-stop">🏪 Restaurant pickup address unavailable. Contact the admin.</div>'}
       <div class="rider-route-stop"><b>🏠 Customer drop-off</b><div data-no-translate>${escapeHtml(customerAddress||'No delivery address')}</div>${customerAddress?`<div class="rider-route-links"><a target="_blank" rel="noopener noreferrer" href="${escapeHtml(riderMapsDirections(customerAddress))}">🗺️ Directions to customer</a></div>`:''}</div>
     </div>`:'';
     return `<div class="card rider-order" style="margin:12px 0">
@@ -3381,7 +3388,41 @@ function resetVendorForm(){
   if($("vendorSaveBtn"))$("vendorSaveBtn").textContent="Save Vendor";
   $("vendorPhotoSaveBtn")?.classList.add("hidden");
   if($("vendorMessage"))$("vendorMessage").textContent="";
+  vendorPinDirty=false;
+  if(vendorPinMap){vendorPinMap.remove();vendorPinMap=null;vendorPinMarker=null;}
+  if($("vendorPinStatus"))$("vendorPinStatus").textContent="No exact pin selected yet.";
   renderVendorArtPreview();
+}
+let vendorPinMap=null,vendorPinMarker=null,vendorPinDirty=false;
+function vendorPinCoordinates(){
+  const rawLat=$('vendorPickupLatitude')?.value.trim(),rawLng=$('vendorPickupLongitude')?.value.trim();
+  if(!rawLat&&!rawLng)return null;
+  const latitude=Number(rawLat),longitude=Number(rawLng);
+  if(!rawLat||!rawLng||!Number.isFinite(latitude)||!Number.isFinite(longitude)||Math.abs(latitude)>90||Math.abs(longitude)>180)throw new Error('Enter a valid latitude and longitude, or remove the pin.');
+  return {latitude,longitude};
+}
+function setVendorPin(lat,lng){
+  const latitude=Number(lat),longitude=Number(lng);
+  if(!Number.isFinite(latitude)||!Number.isFinite(longitude)||Math.abs(latitude)>90||Math.abs(longitude)>180)return;
+  $('vendorPickupLatitude').value=latitude.toFixed(7);
+  $('vendorPickupLongitude').value=longitude.toFixed(7);
+  vendorPinDirty=true;
+  $('vendorPinStatus').textContent='Pickup pin selected. Save Vendor to keep it.';
+  if(vendorPinMap&&window.L){
+    if(!vendorPinMarker){vendorPinMarker=L.marker([latitude,longitude],{draggable:true}).addTo(vendorPinMap);vendorPinMarker.on('dragend',()=>{const p=vendorPinMarker.getLatLng();setVendorPin(p.lat,p.lng);});}
+    else vendorPinMarker.setLatLng([latitude,longitude]);
+    vendorPinMap.setView([latitude,longitude],Math.max(vendorPinMap.getZoom(),16));
+  }
+}
+function initVendorPinMap(){
+  const host=$('vendorPickupMap');if(!host||!window.L){if($('vendorPinStatus'))$('vendorPinStatus').textContent='Map unavailable. Paste latitude and longitude to set the pin.';return;}
+  const lat=Number($('vendorPickupLatitude').value),lng=Number($('vendorPickupLongitude').value);
+  const hasPin=$('vendorPickupLatitude').value!==''&&$('vendorPickupLongitude').value!=='';
+  vendorPinMap=L.map(host).setView(hasPin?[lat,lng]:[35.125,33.94],hasPin?17:13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(vendorPinMap);
+  vendorPinMap.on('click',e=>setVendorPin(e.latlng.lat,e.latlng.lng));
+  if(hasPin){vendorPinMarker=L.marker([lat,lng],{draggable:true}).addTo(vendorPinMap);vendorPinMarker.on('dragend',()=>{const p=vendorPinMarker.getLatLng();setVendorPin(p.lat,p.lng);});}
+  setTimeout(()=>vendorPinMap?.invalidateSize(),100);
 }
 let vendorArtObjectUrls=[];
 function renderVendorArtPreview(){
@@ -3403,11 +3444,13 @@ function showVendorForm(v=null){
     $("vendorPhotoSaveBtn")?.classList.remove("hidden");
     $("vendorItemId").value=v.id||"";$("vendorName").value=v.name||"";$("vendorArea").value=v.area||"";
     $("vendorAddress").value=v.address||"";$("adminVendorPhone").value=v.phone||"";$("vendorRating").value=v.rating??"";
+    if(v.pickup_pin){$('vendorPickupLatitude').value=v.pickup_pin.latitude;$('vendorPickupLongitude').value=v.pickup_pin.longitude;$('vendorPinStatus').textContent='Exact pickup pin saved. Drag it or tap the map to change it.';}
     $("vendorBio").value=v.bio??(window.MEGJET_VENDOR_DESCRIPTIONS||{})[v.name]??"";
     $("vendorPrep").value=v.preparation_minutes??20;$("vendorActive").checked=v.active!==false;
     $("adminVendorPassword").placeholder="New password (optional; 6+ characters)";
   }else{$("vendorArea").value="Gazimagusa";$("vendorPrep").value=20;}
   renderVendorArtPreview();
+  setTimeout(initVendorPinMap,50);
   $("vendorName")?.focus();
 }
 function vendorMenuId(vendorId){return String(vendorId||"").replace(/[^a-zA-Z0-9_-]/g,"_");}
@@ -3459,6 +3502,7 @@ function renderAdminVendors(){
       <div class="muted">⭐ ${escapeHtml(v.rating||"New")} • ⏱️ ${escapeHtml(String(v.preparation_minutes||20))} mins • 🍵 ${count} menu item${count===1?"":"s"}</div>
       <div class="muted">${escapeHtml(v.bio??(window.MEGJET_VENDOR_DESCRIPTIONS||{})[v.name]??"Local restaurant on Megjet")}</div>
       <div class="feature-small">📞 ${escapeHtml(v.phone||"No phone")} • 📍 ${escapeHtml(v.address||v.area||"Gazimagusa")}</div>
+      <div class="small">${v.pickup_pin?'📍 Exact rider pickup pin set':'📍 Exact rider pickup pin needed'}</div>
       <div class="vendor-actions">
         <button type="button" onclick="editVendor('${vid}')">Edit Vendor</button>
         <button type="button" class="secondary" onclick="toggleVendor('${vid}',${active})">${active?"Deactivate":"Activate"}</button>
@@ -3581,6 +3625,8 @@ async function saveVendor(){
   if(bio.length>600){$("vendorMessage").textContent="Keep the restaurant bio under 600 characters.";return;}
   if(!id&&password.length<6){$("vendorMessage").textContent="A new vendor needs a password of at least 6 characters.";return;}
   if([logoFile,bannerFile].some(f=>f&&(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>5*1024*1024))){$("vendorMessage").textContent="Choose JPG, PNG or WebP artwork under 5 MB each.";return;}
+  let pickupPin;
+  try{pickupPin=vendorPinCoordinates();}catch(e){$("vendorMessage").textContent=e.message;return;}
   try{
     $("vendorSaveBtn").disabled=true;$("vendorMessage").textContent="Saving vendor…";
     const result=await adminRequest("/rest/v1/rpc/admin_save_vendor_full",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:id||null,p_name:name,p_area:area,p_address:address,p_phone:phone,p_rating:rating||null,p_preparation_minutes:prep,p_active:active,p_password:password||null})});
@@ -3601,6 +3647,11 @@ async function saveVendor(){
       await adminRequest("/rest/v1/rpc/admin_set_vendor_branding",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:vendorId,p_logo_url:logoUrl,p_banner_url:bannerUrl,p_clear_logo:clearLogo,p_clear_banner:clearBanner})});
     }
     await adminRequest("/rest/v1/rpc/admin_set_vendor_bio",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({p_vendor_id:vendorId,p_bio:bio})});
+    if(vendorPinDirty&&pickupPin){
+      await adminRequest("/rest/v1/vendor_pickup_pins?on_conflict=vendor_id",{method:"POST",headers:{"Prefer":"resolution=merge-duplicates"},body:JSON.stringify({vendor_id:vendorId,...pickupPin,updated_at:new Date().toISOString()})});
+    }else if(vendorPinDirty&&id){
+      await adminRequest("/rest/v1/vendor_pickup_pins?vendor_id=eq."+encodeURIComponent(vendorId),{method:"DELETE"});
+    }
     resetVendorForm();$("vendorForm").classList.add("hidden");
     await loadAdminMenu();await load();
     if($("vendorSavedMessage"))$("vendorSavedMessage").textContent="Vendor saved ✓"+(!id?" Add its menu items below.":"");
@@ -3640,7 +3691,10 @@ async function toggleVendor(id,current){
 async function loadAdminMenu(){
   // Load vendors and products concurrently. Render whichever finishes first
   // so the Menu tab never waits unnecessarily for the Vendors query.
-  const vendorsPromise=adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active,logo_url,banner_url,bio&order=name");
+  const vendorsPromise=Promise.all([
+    adminRequest("/rest/v1/vendors?select=id,name,area,address,phone,rating,preparation_minutes,active,logo_url,banner_url,bio&order=name"),
+    adminRequest("/rest/v1/vendor_pickup_pins?select=vendor_id,latitude,longitude")
+  ]);
   const productsPromise=megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&order=name,id",path=>adminRequest(path));
 
   // Render cached menu immediately when available.
@@ -3659,8 +3713,9 @@ async function loadAdminMenu(){
   }
 
   try{
-    const vendors=await vendorsPromise;
-    adminVendorsCache=vendors||[];
+    const [vendors,pins]=await vendorsPromise;
+    const pinsByVendor=new Map((pins||[]).map(pin=>[String(pin.vendor_id),pin]));
+    adminVendorsCache=(vendors||[]).map(v=>({...v,pickup_pin:pinsByVendor.get(String(v.id))||null}));
     renderAdminVendors();
     renderMenuVendors();
   }catch(e){
@@ -4385,6 +4440,8 @@ $("lookupOrderBtn").onclick=lookupExistingOrder;
 $("trackingRefresh").onclick=fetchTrackedOrder;
 $("openPreviousOrder").onclick=showTracking;
 $("vendorAddBtn").onclick=()=>showVendorForm();
+$("vendorPinClear").onclick=()=>{vendorPinDirty=true;$("vendorPickupLatitude").value="";$("vendorPickupLongitude").value="";if(vendorPinMarker){vendorPinMarker.remove();vendorPinMarker=null;}$("vendorPinStatus").textContent="Pin removed. Save Vendor to confirm.";};
+["vendorPickupLatitude","vendorPickupLongitude"].forEach(id=>$(id).addEventListener("change",()=>{try{const pin=vendorPinCoordinates();if(pin)setVendorPin(pin.latitude,pin.longitude);else{vendorPinDirty=true;if(vendorPinMarker){vendorPinMarker.remove();vendorPinMarker=null;}}}catch(e){$("vendorPinStatus").textContent=e.message;}}));
 $("vendorCancelBtn").onclick=()=>{$("vendorForm").classList.add("hidden");resetVendorForm();};
 $("vendorSaveBtn").onclick=saveVendor;
 $("vendorPhotoSaveBtn").onclick=saveVendorPhotos;
@@ -5467,7 +5524,7 @@ document.addEventListener("DOMContentLoaded",function(){
 </script>
 <script src="./workflow-guard.js?v=8"></script>
 <script src="./assets/menu-language.js?v=1"></script>
-<script src="./interface-preferences.js?v=10"></script>
+<script src="./interface-preferences.js?v=11"></script>
 <script src="./assets/install-app.js?v=1"></script>
 <style>
 #supportFloatButton{position:fixed;right:16px;bottom:68px;z-index:1090;border:0;border-radius:999px;background:#075b91;color:#fff;padding:12px 17px;box-shadow:0 6px 22px #00253c55;font-weight:800;cursor:pointer}
