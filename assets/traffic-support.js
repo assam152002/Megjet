@@ -133,6 +133,17 @@
     finally{btn.disabled=false;}
   }
 
+  function updateLanguage(){
+    $('supportFloatButton').textContent='💬 '+phrase('Help','Yardım');
+    $('supportPanel').querySelector('header strong').textContent='💬 '+phrase('Megjet Support','Megjet Destek');
+    $('supportCustomerName').placeholder=phrase('Your name (optional)','Adınız (isteğe bağlı)');
+    $('supportOrderRef').placeholder=phrase('Order number (optional)','Sipariş numarası (isteğe bağlı)');
+    $('supportCustomerText').placeholder=phrase('How can we help?','Size nasıl yardımcı olabiliriz?');
+    $('supportCustomerSend').textContent=phrase('Send','Gönder');
+    renderCustomer();
+    if(adminInbox.length)renderInbox();
+  }
+
   function init(){
     const host=document.createElement('div');host.innerHTML=`
       <button id="supportFloatButton" type="button" aria-label="Chat with Megjet">💬 ${phrase('Help','Yardım')}</button>
@@ -160,6 +171,7 @@
     document.querySelector('[data-admin-tab="traffic"]')?.addEventListener('click',loadTraffic);
     document.querySelector('[data-admin-tab="support"]')?.addEventListener('click',loadInbox);
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&customerOpen)closeChat();});
+    window.addEventListener('megjet:languagechange',updateLanguage);
     trackVisit();
     setInterval(()=>{if(customerOpen&&document.visibilityState==='visible')loadCustomer();},6000);
     setInterval(()=>{if(document.visibilityState==='visible')loadInbox();},12000);
