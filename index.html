@@ -1006,7 +1006,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
       <div class="small">Choose a saved address or enter a new one below.</div>
     </div>
     <textarea id="address" rows="3" placeholder="Delivery address in Gazimagusa"></textarea>
-    <div class="payment-box"><b>💳 Payment</b><select id="paymentMethod"><option value="Cash on Delivery">Cash on Delivery</option><option value="Credit / Debit Card" disabled>Credit / Debit Card — coming soon</option></select><div class="feature-small">Cash on Delivery is available. Card payment will be added when a payment gateway is connected.</div></div>
+    <div class="payment-box"><b>💳 Payment</b><select id="paymentMethod"><option value="Cash on Delivery">Cash on Delivery</option><option value="Card at Doorstep (POS)">Card at Doorstep (POS)</option></select><div class="feature-small">Pay the rider at your door. For card, the rider brings a physical POS terminal; no card details are entered in the app.</div></div>
     <div class="payment-box"><b>🎟️ Coupon</b><div class="coupon-box"><input id="couponCode" placeholder="Coupon code" autocomplete="off"><button id="applyCoupon" class="secondary" type="button">Apply</button></div><div id="couponMessage" class="coupon-message"></div></div>
     <div class="row"><span>Discount</span><span id="checkoutDiscount">₺ 0</span></div>
     <div class="row"><span>Delivery</span><span id="checkoutDelivery">₺0</span></div>
@@ -2219,7 +2219,7 @@ $("placeOrder").onclick=async()=>{
     $("placeOrder").disabled=true;$("orderMessage").textContent="Sending order…";
     const totals=checkoutTotals();
     const paymentMethod=$("paymentMethod")?.value||"Cash on Delivery";
-    if(paymentMethod!=="Cash on Delivery"){ $("orderMessage").textContent="Card payment is not available yet. Choose Cash on Delivery.";return; }
+    if(!["Cash on Delivery","Card at Doorstep (POS)"].includes(paymentMethod)){ $("orderMessage").textContent="Choose a supported pay-on-delivery method.";return; }
     const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1)}));
     // Keep the same ID if a request reaches the server but its reply is lost.
     const checkoutKey=JSON.stringify([name,phone,address,paymentMethod,appliedCoupon?.code||null,customerAuthUser?.id||null,items]);
@@ -2652,7 +2652,7 @@ async function loadVendorDashboard(){
     let orders=[];
     if(orderIds.length){
       const inList=orderIds.map(id=>id.replace(/[^a-zA-Z0-9-]/g,'' )).join(',');
-      orders=await vendorRequest('/rest/v1/orders?select=id,customer_name,customer_phone,delivery_address,subtotal,delivery_fee,total,status,created_at&id=in.('+encodeURIComponent(inList)+')&order=created_at.desc');
+      orders=await vendorRequest('/rest/v1/orders?select=id,customer_name,customer_phone,delivery_address,subtotal,delivery_fee,total,payment_method,status,created_at&id=in.('+encodeURIComponent(inList)+')&order=created_at.desc');
     }
     const itemMap={};
     for(const i of (items||[])){(itemMap[i.order_id]??=[]).push(i);}
@@ -2758,6 +2758,7 @@ function renderVendorDashboard(){
       <div class="muted">📍 ${escapeHtml(o.delivery_address||'No address')}</div>
       ${o.customer_phone?`<div class="order-customer-actions"><a href="tel:${escapeHtml(phoneForCall(o.customer_phone))}">📞 Call Customer</a><a target="_blank" rel="noopener" href="https://wa.me/${escapeHtml(phoneForWhatsApp(o.customer_phone))}">💬 WhatsApp</a></div>`:''}
       <div class="vendor-items"><b>🛍️ Your Items</b>${o.items.map(i=>`<div class="vendor-item-row"><span>${escapeHtml(i.product_name||'Item')} × ${escapeHtml(String(i.quantity||1))}</span><b>${money(i.total_price ?? Number(i.unit_price ?? i.price ?? 0)*Number(i.quantity||1))}</b></div>`).join('')}</div>
+      <div class="muted">Payment at doorstep: ${escapeHtml(o.payment_method||'Cash on Delivery')}</div>
       <div class="row"><span>Your item sales</span><b>${money(itemTotal)}</b></div>
       ${vendorStatusActionsHTML(o)}
       <div id="vendor-status-message-${escapeHtml(o.id)}" class="small vendor-status-message"></div>
@@ -3005,7 +3006,7 @@ async function loadRiderDashboard(){
     let orders=[];
     if(ids.length){
       const inList=ids.map(id=>id.replace(/[^a-zA-Z0-9-]/g,'')).join(',');
-      orders=await riderRequest('/rest/v1/orders?select=id,customer_name,customer_phone,delivery_address,subtotal,delivery_fee,total,status,created_at&id=in.('+encodeURIComponent(inList)+')&order=created_at.desc');
+      orders=await riderRequest('/rest/v1/orders?select=id,customer_name,customer_phone,delivery_address,subtotal,delivery_fee,total,payment_method,status,created_at&id=in.('+encodeURIComponent(inList)+')&order=created_at.desc');
     }
     riderOrdersCache=orders||[];
     renderRiderDashboard();
@@ -3050,6 +3051,7 @@ function renderRiderDashboard(){
       <div class="muted">📍 ${escapeHtml(o.delivery_address||'No address')}</div>
       ${o.customer_phone?`<div class="order-customer-actions"><a href="tel:${escapeHtml(phoneForCall(o.customer_phone))}">📞 Call Customer</a><a target="_blank" rel="noopener" href="https://wa.me/${escapeHtml(phoneForWhatsApp(o.customer_phone))}">💬 WhatsApp</a></div>`:''}
       <div class="row"><span>Order Total</span><b>${money(o.total)}</b></div>
+      <div class="rider-note">💳 ${escapeHtml(o.payment_method||'Cash on Delivery')}${o.payment_method==='Card at Doorstep (POS)'?' — Bring the POS terminal and take payment at the door.':' — Collect cash at the door.'}</div>
       ${renderRiderPhase3Workflow(o)}
       ${waiting?`<div class="rider-note">📦 Order is ready for pickup.</div><div class="rider-order-actions"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.delivery_address||'Gazimagusa')}">🗺️ View Route</a><button type="button" onclick="riderAcceptDelivery('${String(o.id).replaceAll("'","\\'")}')">🚚 Accept Delivery</button></div>`:''}
       ${canDeliver?`<div class="rider-order-actions"><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(o.delivery_address||'Gazimagusa')}">🗺️ Navigate</a><button type="button" onclick="riderMarkDelivered('${String(o.id).replaceAll("'","\\'")}')">✅ Mark Delivered</button></div>`:''}
@@ -4023,6 +4025,7 @@ function renderAdminOrders(){
       <div class="row"><span>Subtotal</span><span>${money(o.subtotal)}</span></div>
       <div class="row"><span>Delivery</span><span>${money(o.delivery_fee)}</span></div>
       <div class="row total"><span>Total</span><span>${money(o.total)}</span></div>
+      <div class="order-note">Payment at doorstep: ${escapeHtml(o.payment_method||'Cash on Delivery')}</div>
       ${renderRiderAssignment(o)}
       ${st==="ready_for_pickup" ? renderQuickRiderPanel(o, assignment) : ""}
       ${st==="ready_for_pickup" && !assignment ? `<div class="order-note">🚨 This order is ready but has no rider assigned yet.</div>` : ""}
@@ -4925,7 +4928,7 @@ Object.assign(MEGJET_PRODUCT_PHOTOS, {"BİRA TABAĞI (2 Kişilik)":"./assets/img
     card.querySelector('.phase3b-delivery-box')?.remove();
     const id=String(order.id),safe=id.replace(/[^a-zA-Z0-9_-]/g,'');
     const box=document.createElement('div');box.className='phase3b-delivery-box';
-    box.innerHTML='<h4>🔐 Complete Delivery</h4><div class="muted">Ask the customer for the 4-digit delivery PIN. A photo is optional.</div><div class="phase3b-delivery-grid"><input id="phase3b-pin-'+safe+'" inputmode="numeric" maxlength="4" placeholder="Customer PIN"><label class="phase3b-proof-label">📷 Add proof photo <input id="phase3b-proof-'+safe+'" type="file" accept="image/*" capture="environment"></label></div><img id="phase3b-preview-'+safe+'" class="phase3b-proof-preview" alt="Delivery proof preview"><div class="phase3b-delivery-actions"><button id="phase3b-complete-'+safe+'" type="button">🔢 Verify PIN & Mark Delivered</button></div><div id="phase3b-msg-'+safe+'" class="phase3b-help">The order will not be completed until the PIN is correct.</div>';
+    box.innerHTML='<h4>🔐 Complete Delivery</h4><div class="muted">Ask the customer for the 4-digit delivery PIN. A photo is optional.</div><div class="phase3b-delivery-grid"><input id="phase3b-pin-'+safe+'" inputmode="numeric" maxlength="4" placeholder="Customer PIN"><label class="phase3b-proof-label">📷 Add proof photo <input id="phase3b-proof-'+safe+'" type="file" accept="image/*" capture="environment"></label></div><img id="phase3b-preview-'+safe+'" class="phase3b-proof-preview" alt="Delivery proof preview">'+(order.payment_method==='Card at Doorstep (POS)'?'<label class="rider-note"><input id="phase3b-pos-'+safe+'" type="checkbox"> I charged the customer on the physical POS terminal.</label>':'')+'<div class="phase3b-delivery-actions"><button id="phase3b-complete-'+safe+'" type="button">🔢 Verify PIN & Mark Delivered</button></div><div id="phase3b-msg-'+safe+'" class="phase3b-help">The order will not be completed until the PIN is correct.</div>';
     const file=box.querySelector('input[type=file]'),preview=box.querySelector('img');
     file.addEventListener('change',()=>{const f=file.files?.[0];if(!f){preview.style.display='none';preview.removeAttribute('src');return;}preview.src=URL.createObjectURL(f);preview.style.display='block';});
     box.querySelector('#phase3b-complete-'+safe)?.addEventListener('click',()=>window.megjetPhase3BCompleteDelivery(id));
@@ -4959,6 +4962,7 @@ Object.assign(MEGJET_PRODUCT_PHOTOS, {"BİRA TABAĞI (2 Kişilik)":"./assets/img
     if(!/^\d{4}$/.test(pin)){if(msg)msg.textContent='Enter the customer\'s 4-digit PIN.';return;}
     const order=(riderOrdersCache||[]).find(o=>String(o.id)===String(orderId));
     if(!order||normalizedStatus(order.status)!=='out_for_delivery'){if(msg)msg.textContent='This order is no longer ready for delivery completion.';return;}
+    if(order.payment_method==='Card at Doorstep (POS)'&&!document.getElementById('phase3b-pos-'+safe)?.checked){if(msg)msg.textContent='Charge the customer on the POS terminal and confirm payment before completing delivery.';return;}
     try{
       if(msg)msg.textContent='Verifying PIN…';
       const file=fileEl?.files?.[0]||null;
@@ -5400,9 +5404,9 @@ document.addEventListener("DOMContentLoaded",function(){
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
 })();
 </script>
-<script src="./workflow-guard.js?v=7"></script>
+<script src="./workflow-guard.js?v=8"></script>
 <script src="./assets/menu-language.js?v=1"></script>
-<script src="./interface-preferences.js?v=7"></script>
+<script src="./interface-preferences.js?v=8"></script>
 <script src="./assets/install-app.js?v=1"></script>
 </body>
 </html>

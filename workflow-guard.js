@@ -134,14 +134,7 @@
   function configurePayments() {
     const payment = document.getElementById("paymentMethod");
     if (!payment) return;
-    const card = Array.from(payment.options).find(option => option.value === "Credit / Debit Card");
-    if (card) {
-      card.disabled = true;
-      if (card.textContent !== "Credit / Debit Card — Coming Soon") {
-        card.textContent = "Credit / Debit Card — Coming Soon";
-      }
-    }
-    if (payment.value === "Credit / Debit Card") payment.value = "Cash on Delivery";
+    if (!Array.from(payment.options).some(option => option.value === payment.value)) payment.value = "Cash on Delivery";
   }
 
   function checkoutFingerprint(name, phone, address) {
@@ -187,8 +180,8 @@
         return;
       }
 
-      if (document.getElementById("paymentMethod")?.value !== "Cash on Delivery") {
-        checkoutMessage("Card payment is coming soon. Please choose Cash on Delivery.");
+      if (!["Cash on Delivery", "Card at Doorstep (POS)"].includes(document.getElementById("paymentMethod")?.value)) {
+        checkoutMessage("Choose cash or a physical POS terminal at your door.");
         return;
       }
       const fingerprint = checkoutFingerprint(name, phone, address);
