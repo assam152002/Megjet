@@ -24,7 +24,7 @@
     dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close();}});
     dialog.addEventListener('change',updateTotal);
     dialog.querySelector('form').addEventListener('submit',e=>{
-      e.preventDefault();const {product,config}=current;const selections={},labels=[];let extra=0;
+      e.preventDefault();if(current.preview)return;const {product,config}=current;const selections={},labels=[];let extra=0;
       for(const group of config.groups){
         const selected=[...dialog.querySelectorAll('input[data-group="'+group.id+'"]:checked')].map(input=>input.value);
         if(selected.length<group.min||selected.length>group.max){dialog.querySelector('#megjetOptionsError').textContent=text('Please choose the required options for ','Lütfen gerekli seçenekleri seçin: ')+label(group);return;}
@@ -42,10 +42,11 @@
     dialog.querySelector('#megjetOptionsTotal').textContent=money(Number(current.config.products?.price??current.product.price)+extra);
     dialog.querySelector('#megjetOptionsError').textContent='';
   }
-  function open(product,config,add){
-    mount();current={product,config,add};previousFocus=document.activeElement;
+  function open(product,config,add,preview=false){
+    mount();current={product,config,add,preview};previousFocus=document.activeElement;
     dialog.querySelector('#megjetOptionsTitle').textContent=window.MEGJET_MENU_LOCALE?.name(product)||product.name;
     dialog.querySelector('#megjetOptionsAdd').textContent=text('Add to cart','Sepete ekle');
+    dialog.querySelector('#megjetOptionsAdd').hidden=preview;
     dialog.querySelector('#megjetOptionsClose').setAttribute('aria-label',text('Close','Kapat'));
     dialog.querySelector('#megjetOptionsGroups').innerHTML=config.groups.map(group=>'<fieldset><legend>'+esc(label(group))+(group.min?' <span>'+text('Required','Zorunlu')+'</span>':'')+'</legend>'+(group.id==='ingredients'?'<p>'+text("Uncheck anything you do not want.","İstemediğiniz malzemelerin işaretini kaldırın.")+'</p>':'')+group.choices.map(choice=>'<label class="megjet-option-choice"><input data-group="'+esc(group.id)+'" name="'+esc(group.id)+'" value="'+esc(choice.id)+'" type="'+(group.max===1?'radio':'checkbox')+'" '+(group.defaults?.includes(choice.id)?'checked':'')+'><span>'+esc(label(choice))+'</span><small>'+(Number(choice.extra)?'+'+money(choice.extra):'')+'</small></label>').join('')+'</fieldset>').join('');
     updateTotal();dialog.showModal();
@@ -62,7 +63,11 @@
     }catch(e){alert(text('Could not load item choices: ','Ürün seçenekleri yüklenemedi: ')+e.message);}
     return false;
   };
-  window.MEGJET_ITEM_OPTIONS={load,summary};
+  window.MEGJET_ITEM_OPTIONS={load,summary,has:id=>configs?.has(String(id))||false,preview:async product=>{
+    if(!product)return;
+    try{const config=(await load()).get(String(product.id));if(config)open(product,config,()=>{},true);}
+    catch(e){alert(e.message);}
+  }};
   window.addEventListener('megjet:languagechange',()=>{if(dialog?.open)dialog.close();});
   load().catch(()=>{});
 })();

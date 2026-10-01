@@ -122,6 +122,7 @@
     "Add, edit, enable or disable customer menu items. Duplicate item names are allowed when they belong to different vendors.":"Menü ürünlerini ekleyin, düzenleyin veya kapatın. Farklı işletmelerde aynı ürün adı kullanılabilir.",
     "All vendors":"Tüm işletmeler","Add Menu Item":"Menü Ürünü Ekle","+ Add Menu Item":"+ Menü Ürünü Ekle",
     "Product Picture":"Ürün Fotoğrafı","Available to customers":"Müşterilere sunuluyor","Save Item":"Ürünü Kaydet","+ Add Item":"+ Ürün Ekle",
+    "Preview Choices":"Seçenekleri Ön İzle",
     "Each menu item has its own internal Product ID. Items with the same name from different vendors remain separate.":"Her menü ürününün ayrı bir ürün kimliği vardır. Farklı işletmelerdeki aynı adlı ürünler ayrı tutulur.",
     "💰 Sales & Finance":"💰 Satış ve Finans","Only Delivered orders count as completed sales.":"Yalnızca teslim edilen siparişler tamamlanan satış sayılır.",
     "Product sales and delivery revenue are tracked separately.":"Ürün satışları ve teslimat gelirleri ayrı izlenir.",

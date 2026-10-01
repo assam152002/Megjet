@@ -3477,6 +3477,7 @@ function renderVendorMenuPanel(vendorId){
       </div>
       <div class="menu-actions">
         <button type="button" onclick="editVendorMenuItem('${id}')">Edit</button>
+        ${window.MEGJET_ITEM_OPTIONS?.has(p.id)?`<button type="button" class="secondary" onclick="window.MEGJET_ITEM_OPTIONS.preview(adminMenuCache.find(item=>String(item.id)==='${id}'))">Preview Choices</button>`:''}
         <button type="button" class="secondary" onclick="toggleMenuItem('${id}',${available})">${available?"Sold Out":"Make Available"}</button>
         <button type="button" class="secondary" onclick="deleteMenuItem('${id}')">Delete</button>
       </div>
@@ -5526,7 +5527,7 @@ document.addEventListener("DOMContentLoaded",function(){
 </script>
 <script src="./workflow-guard.js?v=9"></script>
 <script src="./assets/menu-language.js?v=1"></script>
-<script src="./interface-preferences.js?v=11"></script>
+<script src="./interface-preferences.js?v=12"></script>
 <script src="./assets/install-app.js?v=1"></script>
 <style>
 #supportFloatButton{position:fixed;right:16px;bottom:68px;z-index:1090;border:0;border-radius:999px;background:#075b91;color:#fff;padding:12px 17px;box-shadow:0 6px 22px #00253c55;font-weight:800;cursor:pointer}
@@ -5550,7 +5551,7 @@ document.addEventListener("DOMContentLoaded",function(){
 @media(max-width:650px){.support-admin-layout{grid-template-columns:1fr}.support-inbox{max-height:220px}.support-panel{right:12px;bottom:78px}#supportFloatButton{bottom:80px}}
 </style>
 <script src="./assets/traffic-support.js?v=3"></script>
-<link rel="stylesheet" href="./assets/item-options.css?v=1">
-<script src="./assets/item-options.js?v=1"></script>
+<link rel="stylesheet" href="./assets/item-options.css?v=2">
+<script src="./assets/item-options.js?v=2"></script>
 </body>
 </html>

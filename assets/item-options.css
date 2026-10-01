@@ -8,6 +8,7 @@
 #megjetItemOptions input{width:19px;height:19px;flex:0 0 19px;margin:0;accent-color:#087eaf}#megjetItemOptions small{margin-left:auto;font-weight:700}
 #megjetItemOptions footer{display:flex;gap:10px;justify-content:space-between;align-items:center;padding:15px 18px;position:sticky;bottom:0;background:inherit;border-top:1px solid #d4e8f0}
 #megjetOptionsError{color:#b51f25;padding:0 18px}.cart-options{font-size:12px;color:inherit;opacity:.8;max-width:350px;overflow-wrap:anywhere;margin-top:4px}
+#megjetOptionsAdd[hidden]{display:none!important}
 html[data-theme="dark"] #megjetItemOptions{background:#15283b;color:#eaf4fb;border-color:#38536a}
 html[data-theme="dark"] #megjetItemOptions fieldset,html[data-theme="dark"] #megjetItemOptions footer{border-color:#38536a}
 html[data-theme="dark"] #megjetItemOptions legend span{color:#74d7ff}
