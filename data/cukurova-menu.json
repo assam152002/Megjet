@@ -1,0 +1,843 @@
+{
+  "vendor_id": "5792a8da-aa87-5a06-8421-657261c3800c",
+  "name": "Çukurova Restorant (Gülseren)",
+  "area": "Gülseren",
+  "source": "Uploaded Çukurova Restorant (Gülseren).html",
+  "categories": [
+    {
+      "name": "Wraps",
+      "name_tr": "Dürümler"
+    },
+    {
+      "name": "Kebabs & Grills",
+      "name_tr": "Kebaplar ve Izgaralar"
+    },
+    {
+      "name": "Salads",
+      "name_tr": "Salatalar"
+    },
+    {
+      "name": "Side Dishes",
+      "name_tr": "Yan Ürünler"
+    },
+    {
+      "name": "Drinks",
+      "name_tr": "İçecekler"
+    }
+  ],
+  "items": [
+    {
+      "id": "26eae141-366a-5ecd-aaa2-0625671be7de",
+      "category": "Wraps",
+      "name": "Chicken Skewer Wrap + Ayran",
+      "name_tr": "Tavuk Şiş Dürüm + Ayran",
+      "description_en": "Tomato, parsley, optional onion, pickles",
+      "description_tr": "Domates, maydanoz, isteğe bağlı soğan, turşu",
+      "price": 350.0,
+      "groups": [
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        },
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "with-onion"
+          ]
+        },
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "lavash",
+          "label_en": "Lavash",
+          "label_tr": "Lavaş",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "single",
+              "label_en": "Single Lavash",
+              "label_tr": "Tek Lavaş",
+              "extra": 0
+            },
+            {
+              "id": "double",
+              "label_en": "Double Lavash",
+              "label_tr": "Çift Lavaş",
+              "extra": 25.0
+            }
+          ],
+          "defaults": [
+            "single"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "334f8021-2337-56f8-9429-2ff5075632f5",
+      "category": "Wraps",
+      "name": "Adana Wrap + Ayran",
+      "name_tr": "Adana Dürüm + Ayran",
+      "description_en": "Tomato, parsley, optional onion, pickles",
+      "description_tr": "Domates, maydanoz, isteğe bağlı soğan, turşu",
+      "price": 350.0,
+      "groups": [
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        },
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "with-onion"
+          ]
+        },
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "lavash",
+          "label_en": "Lavash",
+          "label_tr": "Lavaş",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "single",
+              "label_en": "Single Lavash",
+              "label_tr": "Tek Lavaş",
+              "extra": 0
+            },
+            {
+              "id": "double",
+              "label_en": "Double Lavash",
+              "label_tr": "Çift Lavaş",
+              "extra": 25.0
+            }
+          ],
+          "defaults": [
+            "single"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c41d3901-0a10-5ff8-8614-14a155e0e7d3",
+      "category": "Wraps",
+      "name": "Lamb Liver Wrap + Ayran",
+      "name_tr": "Kuzu Ciğer Dürüm + Ayran",
+      "description_en": "Tomato, parsley, optional onion, pickles",
+      "description_tr": "Domates, maydanoz, isteğe bağlı soğan, turşu",
+      "price": 350.0,
+      "groups": [
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        },
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "with-onion"
+          ]
+        },
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "lavash",
+          "label_en": "Lavash",
+          "label_tr": "Lavaş",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "single",
+              "label_en": "Single Lavash",
+              "label_tr": "Tek Lavaş",
+              "extra": 0
+            },
+            {
+              "id": "double",
+              "label_en": "Double Lavash",
+              "label_tr": "Çift Lavaş",
+              "extra": 25.0
+            }
+          ],
+          "defaults": [
+            "single"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0dc9857d-16d3-5db9-864e-517988092d69",
+      "category": "Wraps",
+      "name": "Meat Skewer Wrap + Ayran",
+      "name_tr": "Et Şiş Dürüm + Ayran",
+      "description_en": "Tomato, parsley, optional onion, pickles",
+      "description_tr": "Domates, maydanoz, isteğe bağlı soğan, turşu",
+      "price": 450.0,
+      "groups": [
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        },
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "with-onion"
+          ]
+        },
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "lavash",
+          "label_en": "Lavash",
+          "label_tr": "Lavaş",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "single",
+              "label_en": "Single Lavash",
+              "label_tr": "Tek Lavaş",
+              "extra": 0
+            },
+            {
+              "id": "double",
+              "label_en": "Double Lavash",
+              "label_tr": "Çift Lavaş",
+              "extra": 25.0
+            }
+          ],
+          "defaults": [
+            "single"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "67b6d9cc-535f-5f50-bc99-ba6338d5581f",
+      "category": "Kebabs & Grills",
+      "name": "Adana Service + Ayran",
+      "name_tr": "Adana Porsiyon + Ayran",
+      "description_en": "Seasonal Salad, Salad, dip sauce, onion salad, yoghurt, pickles + Ayran",
+      "description_tr": "Mevsim salatası, salata, dip sos, soğan salatası, yoğurt, turşu + Ayran",
+      "price": 700.0,
+      "groups": [
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7c9b2bfb-1880-57b4-b007-ec2374260d53",
+      "category": "Kebabs & Grills",
+      "name": "Chicken Skewer Service + Ayran",
+      "name_tr": "Tavuk Şiş Porsiyon + Ayran",
+      "description_en": "Seasonal Salad, Salad, dip sauce, onion salad, yoghurt, pickles + Ayran",
+      "description_tr": "Mevsim salatası, salata, dip sos, soğan salatası, yoğurt, turşu + Ayran",
+      "price": 700.0,
+      "groups": [
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "63e0bd69-a5ee-5c4c-bd26-aa8e7d6933d2",
+      "category": "Kebabs & Grills",
+      "name": "Lamb Liver Service + Ayran",
+      "name_tr": "Kuzu Ciğer Porsiyon + Ayran",
+      "description_en": "Seasonal Salad, Salad, dip sauce, onion salad, yoghurt, pickles + Ayran",
+      "description_tr": "Mevsim salatası, salata, dip sos, soğan salatası, yoğurt, turşu + Ayran",
+      "price": 700.0,
+      "groups": [
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "d3e28863-54c6-52b6-b0b1-a5c198fec3d0",
+      "category": "Kebabs & Grills",
+      "name": "Chicken Wings Service + Ayran",
+      "name_tr": "Tavuk Kanat Porsiyon + Ayran",
+      "description_en": "Seasonal Salad, Salad, dip sauce, onion salad, yoghurt, pickles + Ayran",
+      "description_tr": "Mevsim salatası, salata, dip sos, soğan salatası, yoğurt, turşu + Ayran",
+      "price": 700.0,
+      "groups": [
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2b7d0de7-6146-53eb-832a-9e2aedb91fbf",
+      "category": "Kebabs & Grills",
+      "name": "Meat Skewer Service + Ayran",
+      "name_tr": "Et Şiş Porsiyon + Ayran",
+      "description_en": "Seasonal Salad, Salad, dip sauce, onion salad, yoghurt, pickles + Ayran",
+      "description_tr": "Mevsim salatası, salata, dip sos, soğan salatası, yoğurt, turşu + Ayran",
+      "price": 800.0,
+      "groups": [
+        {
+          "id": "promotion-drink",
+          "label_en": "Promotion Drink",
+          "label_tr": "Promosyon İçeceği",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "ayran",
+              "label_en": "Ayran",
+              "label_tr": "Ayran",
+              "extra": 0
+            },
+            {
+              "id": "no-drink",
+              "label_en": "I Don't Want Promotion Drink",
+              "label_tr": "Promosyon İçeceği İstemiyorum",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "ayran"
+          ]
+        },
+        {
+          "id": "portion",
+          "label_en": "Portion",
+          "label_tr": "Porsiyon",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "one",
+              "label_en": "1 Portion",
+              "label_tr": "1 Porsiyon",
+              "extra": 0
+            },
+            {
+              "id": "one-and-half",
+              "label_en": "1.5 Portion",
+              "label_tr": "1,5 Porsiyon",
+              "extra": 450.0
+            }
+          ],
+          "defaults": [
+            "one"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "71a0fbce-47fc-587e-9222-7b7f0461c231",
+      "category": "Salads",
+      "name": "Paste Salad",
+      "name_tr": "Ezme Salata",
+      "description_en": "",
+      "description_tr": "",
+      "price": 60.0,
+      "groups": []
+    },
+    {
+      "id": "b12e3db3-3050-5f23-b0e3-7a78d94d1b67",
+      "category": "Salads",
+      "name": "Shepherd's Salad",
+      "name_tr": "Çoban Salata",
+      "description_en": "",
+      "description_tr": "",
+      "price": 60.0,
+      "groups": []
+    },
+    {
+      "id": "a95ba736-c894-5522-a8b9-80d658e8ffb5",
+      "category": "Salads",
+      "name": "Onion Salad",
+      "name_tr": "Soğan Salatası",
+      "description_en": "",
+      "description_tr": "",
+      "price": 60.0,
+      "groups": []
+    },
+    {
+      "id": "0bd4dc23-dbfb-5eb5-84ed-9f4f448e4716",
+      "category": "Side Dishes",
+      "name": "Bread",
+      "name_tr": "Ekmek",
+      "description_en": "",
+      "description_tr": "",
+      "price": 25.0,
+      "groups": []
+    },
+    {
+      "id": "38b2ef34-8514-5c1c-9b48-fd99c2e8cd52",
+      "category": "Drinks",
+      "name": "Coca-Cola (33 cl.)",
+      "name_tr": "Coca-Cola (33 cl.)",
+      "description_en": "",
+      "description_tr": "",
+      "price": 60.0,
+      "groups": []
+    },
+    {
+      "id": "831c7d03-650b-5c58-b8cc-3930aac55d93",
+      "category": "Drinks",
+      "name": "Coca-Cola Zero (33 cl.)",
+      "name_tr": "Coca-Cola Zero (33 cl.)",
+      "description_en": "",
+      "description_tr": "",
+      "price": 60.0,
+      "groups": []
+    },
+    {
+      "id": "65896a75-ded2-5d42-8b1f-a803a97aa7b2",
+      "category": "Drinks",
+      "name": "Turnip Juice",
+      "name_tr": "Şalgam Suyu",
+      "description_en": "",
+      "description_tr": "",
+      "price": 60.0,
+      "groups": []
+    },
+    {
+      "id": "d3245412-da89-5b17-b06a-8fa26a80bf28",
+      "category": "Drinks",
+      "name": "Ayran",
+      "name_tr": "Ayran",
+      "description_en": "",
+      "description_tr": "",
+      "price": 20.0,
+      "groups": []
+    },
+    {
+      "id": "1a923b31-509c-5464-80c3-d01b452f9b44",
+      "category": "Drinks",
+      "name": "Water",
+      "name_tr": "Su",
+      "description_en": "",
+      "description_tr": "",
+      "price": 20.0,
+      "groups": []
+    }
+  ]
+}
