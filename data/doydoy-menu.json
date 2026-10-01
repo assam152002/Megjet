@@ -1,0 +1,1874 @@
+{
+  "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+  "name": "Doy Doy Kebap - Künefe (Baykal)",
+  "area": "Baykal",
+  "source": "Uploaded doydoy.html",
+  "source_entries": [
+    {
+      "category": "Best Selling Meals",
+      "name": "Kunafah",
+      "price": 350.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Best Selling Meals",
+      "name": "Lahmacun",
+      "price": 220.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Best Selling Meals",
+      "name": "Adana Wrap",
+      "price": 500.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Best Selling Meals",
+      "name": "Mini Lahmacun (4 Pieces)",
+      "price": 440.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Best Selling Meals",
+      "name": "Chicken Skewer Portion",
+      "price": 800.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana Portion",
+      "price": 900.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Lamb Skewer Portion",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Chicken Skewer Portion",
+      "price": 800.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Chicken Wings Portion",
+      "price": 800.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana & Chicken Mix Portion",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana & Meat & Chicken Mix Portion",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Beyti Portion",
+      "price": 950.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Rolled Beyti Portion",
+      "price": 1000.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Beyti With Yogurt Portion",
+      "price": 1000.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Eggplant Kebab",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Ali Nazik Kebab",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Bagel Kebab",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Doy Doy Mix Kebab (4 Persons)",
+      "price": 5250.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana & Lamb Shish",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Kebabs",
+      "name": "Chicken & Lamb Shish",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": []
+    },
+    {
+      "category": "Wraps",
+      "name": "Adana Wrap",
+      "price": 500.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "name": "Adana & Chicken Shish Mixed Wrap",
+      "price": 725.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "name": "Lamb Skewer Wrap",
+      "price": 650.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "name": "Chicken Skewer Wrap",
+      "price": 450.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "name": "Beyti Wrap",
+      "price": 550.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "name": "Çiğ Köfte Wrap",
+      "price": 300.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Wraps",
+      "name": "Adana & Lamb Shish Wrap",
+      "price": 800.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Lahmacun",
+      "price": 220.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Mini Lahmacun (4 Pieces)",
+      "price": 440.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Minced Meat Pita",
+      "price": 500.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Diced Meat & Cheese Pita",
+      "price": 600.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Mix Pita",
+      "price": 600.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Minced Meat & Cheese Pita",
+      "price": 550.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Pepperoni Kasseri Cheese Pita",
+      "price": 550.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Kasseri Cheese Pita",
+      "price": 500.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Minced Meat & Egg Pita",
+      "price": 550.0,
+      "description_en": "With pickles and lemon",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Raw Meatball Half Portion",
+      "price": 300.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Raw Meatball Full Portion",
+      "price": 450.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Salad",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Shepherd Salad",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Spicy Dip Sauce Salad",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Humus",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Yogurt",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Yogurt With Eggplant",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Roasted Eggplant",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Fries",
+      "price": 250.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Soups",
+      "name": "Kelle Paça Soup",
+      "price": 500.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Soups",
+      "name": "Lentil Soup",
+      "price": 300.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Desserts",
+      "name": "Kunafah",
+      "price": 350.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Desserts",
+      "name": "Pistachio Kadayif",
+      "price": 400.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Desserts",
+      "name": "Pistachio & Cheese Pasa",
+      "price": 400.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Desserts",
+      "name": "Ice Cream (1 scoop)",
+      "price": 50.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola Zero (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Fanta (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Sprite (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Ice Tea (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Turnip Juice (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Soda",
+      "price": 70.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Fruit Soda",
+      "price": 70.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (50 cl.)",
+      "price": 50.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (1.5 L.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Efes",
+      "price": 200.0,
+      "description_en": "",
+      "source_options": []
+    },
+    {
+      "category": "Drinks",
+      "name": "Ayran",
+      "price": 70.0,
+      "description_en": "",
+      "source_options": []
+    }
+  ],
+  "categories": [
+    {
+      "name": "Kebabs",
+      "name_tr": "Kebaplar"
+    },
+    {
+      "name": "Wraps",
+      "name_tr": "Dürümler"
+    },
+    {
+      "name": "Oven Meals",
+      "name_tr": "Fırın Yemekleri"
+    },
+    {
+      "name": "Salads & Mezes",
+      "name_tr": "Salatalar ve Mezeler"
+    },
+    {
+      "name": "Soups",
+      "name_tr": "Çorbalar"
+    },
+    {
+      "name": "Desserts",
+      "name_tr": "Tatlılar"
+    },
+    {
+      "name": "Drinks",
+      "name_tr": "İçecekler"
+    }
+  ],
+  "items": [
+    {
+      "category": "Kebabs",
+      "name": "Adana Portion",
+      "price": 900.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "94806122-04fc-5cec-85fe-54f6ca48a57b",
+      "name_tr": "Adana Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Lamb Skewer Portion",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "90292073-4976-56ce-9b55-67716a955ed3",
+      "name_tr": "Kuzu Şiş Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Chicken Skewer Portion",
+      "price": 800.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "96c1fe94-a97a-50a4-afb6-4511da13264b",
+      "name_tr": "Tavuk Şiş Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Chicken Wings Portion",
+      "price": 800.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "90d25ce2-ae16-5d80-9b33-bdfc9ff6abbc",
+      "name_tr": "Tavuk Kanat Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana & Chicken Mix Portion",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "d24ba1f8-a9e3-5c56-a586-90d23cc3d5c4",
+      "name_tr": "Adana ve Tavuk Karışık Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana & Meat & Chicken Mix Portion",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "88d35ec9-0d8f-5ce2-8ae0-45dc81c35712",
+      "name_tr": "Adana, Et ve Tavuk Karışık Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Beyti Portion",
+      "price": 950.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "075ba737-6864-53cd-8728-76fb3751d02a",
+      "name_tr": "Beyti Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Rolled Beyti Portion",
+      "price": 1000.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "bd8690b8-caf3-5bf6-a82c-5b6d76efc0f9",
+      "name_tr": "Sarma Beyti Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Beyti With Yogurt Portion",
+      "price": 1000.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "97e96ad9-f74d-514d-b1df-89805dedccfe",
+      "name_tr": "Yoğurtlu Beyti Porsiyon",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Eggplant Kebab",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "ae1ac191-6f03-58be-8100-2352629f88f6",
+      "name_tr": "Patlıcan Kebabı",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Ali Nazik Kebab",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "7890e429-6ef1-590d-855f-26d74173ca0d",
+      "name_tr": "Ali Nazik Kebabı",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Bagel Kebab",
+      "price": 1050.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "14ca8c07-111e-5738-ab67-92b2cac35fa6",
+      "name_tr": "Simit Kebabı",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Doy Doy Mix Kebab (4 Persons)",
+      "price": 5250.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "7a4fb082-7c9d-57d6-a386-d701ebb894a4",
+      "name_tr": "Doy Doy Karışık Kebap (4 kişilik)",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Adana & Lamb Shish",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "d5aad885-8b03-5b62-a0ea-18982ff41d95",
+      "name_tr": "Adana ve Kuzu Şiş",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Kebabs",
+      "name": "Chicken & Lamb Shish",
+      "price": 1150.0,
+      "description_en": "Hummus, mashed salad, yoghurt, lettuce salad, çiğ köfte, onion cold cuts, roasted vegetables",
+      "source_options": [],
+      "id": "8f87817c-1300-5dae-b1f3-ebf587942859",
+      "name_tr": "Tavuk ve Kuzu Şiş",
+      "groups": [],
+      "description_tr": "Humus, ezme salata, yoğurt, marul salatası, çiğ köfte, söğüş soğan, közlenmiş sebzeler"
+    },
+    {
+      "category": "Wraps",
+      "name": "Adana Wrap",
+      "price": 500.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "e07fa664-aa1d-5cf5-b710-cd239b8a533a",
+      "name_tr": "Adana Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Wraps",
+      "name": "Adana & Chicken Shish Mixed Wrap",
+      "price": 725.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "2cf1b3e6-88d3-5d96-8b18-a23d817ba31e",
+      "name_tr": "Adana ve Tavuk Şiş Karışık Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Wraps",
+      "name": "Lamb Skewer Wrap",
+      "price": 650.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "948ffba9-ec85-536d-919f-ce203490a905",
+      "name_tr": "Kuzu Şiş Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Wraps",
+      "name": "Chicken Skewer Wrap",
+      "price": 450.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "1fe68f41-22e3-57ef-9341-226bcb9bea39",
+      "name_tr": "Tavuk Şiş Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Wraps",
+      "name": "Beyti Wrap",
+      "price": 550.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "0c178a5f-cdd6-56cf-aa41-57c9ef6425ca",
+      "name_tr": "Beyti Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Wraps",
+      "name": "Çiğ Köfte Wrap",
+      "price": 300.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "696210a7-ea88-587c-a3bc-a513f3c34175",
+      "name_tr": "Çiğ Köfte Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Wraps",
+      "name": "Adana & Lamb Shish Wrap",
+      "price": 800.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Onion Selection (Required)",
+          "choices": [
+            "With Onion",
+            "Without Onion"
+          ]
+        },
+        {
+          "label": "Extras",
+          "choices": [
+            "Fries – +40.00 TL",
+            "Roasted Vegetables – +50.00 TL",
+            "Extra Lavash – +20.00 TL"
+          ]
+        }
+      ],
+      "id": "3abaf58c-da47-5859-ba97-c0934be24497",
+      "name_tr": "Adana ve Kuzu Şiş Dürüm",
+      "groups": [
+        {
+          "id": "onion",
+          "label_en": "Onion Selection",
+          "label_tr": "Soğan Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "with-onion",
+              "label_en": "With Onion",
+              "label_tr": "Soğanlı",
+              "extra": 0
+            },
+            {
+              "id": "without-onion",
+              "label_en": "Without Onion",
+              "label_tr": "Soğansız",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 3,
+          "choices": [
+            {
+              "id": "fries",
+              "label_en": "Fries",
+              "label_tr": "Patates Kızartması",
+              "extra": 40.0
+            },
+            {
+              "id": "roasted-vegetables",
+              "label_en": "Roasted Vegetables",
+              "label_tr": "Közlenmiş Sebzeler",
+              "extra": 50.0
+            },
+            {
+              "id": "extra-lavash",
+              "label_en": "Extra Lavash",
+              "label_tr": "Ekstra Lavaş",
+              "extra": 20.0
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Lahmacun",
+      "price": 220.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "d8dc62a0-038e-56ed-964f-73d6146e0274",
+      "name_tr": "Lahmacun",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Mini Lahmacun (4 Pieces)",
+      "price": 440.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "f364140b-6ace-5efb-b789-78246942b602",
+      "name_tr": "Mini Lahmacun (4 adet)",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Minced Meat Pita",
+      "price": 500.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "53aa5d7b-2d45-5755-9d7a-a3b169079fe9",
+      "name_tr": "Kıymalı Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Diced Meat & Cheese Pita",
+      "price": 600.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "0f8c6c75-0e09-55e4-b2ad-4d5484f5e2b9",
+      "name_tr": "Kuşbaşılı Kaşarlı Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Mix Pita",
+      "price": 600.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "b8b801e8-67be-5cd3-a8cd-adb4d20a9e8e",
+      "name_tr": "Karışık Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Minced Meat & Cheese Pita",
+      "price": 550.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "91eed8f5-65a8-5a4e-97df-49a6a1ae3148",
+      "name_tr": "Kıymalı Kaşarlı Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Pepperoni Kasseri Cheese Pita",
+      "price": 550.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "49da1012-749b-5016-b2e6-84beb0911d78",
+      "name_tr": "Pepperoni Kaşarlı Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Kasseri Cheese Pita",
+      "price": 500.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "65d6fb91-2d9a-5a25-94ed-3dee078e6ed2",
+      "name_tr": "Kaşarlı Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Oven Meals",
+      "name": "Minced Meat & Egg Pita",
+      "price": 550.0,
+      "description_en": "With pickles and lemon",
+      "source_options": [],
+      "id": "38a7e853-3cbc-5f78-b5c1-bf0e0ffa7165",
+      "name_tr": "Kıymalı Yumurtalı Pide",
+      "groups": [],
+      "description_tr": "Turşu ve limon ile"
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Raw Meatball Half Portion",
+      "price": 300.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "7ca3e250-70f3-517b-b6bf-56e785f99ea9",
+      "name_tr": "Çiğ Köfte Yarım Porsiyon",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Raw Meatball Full Portion",
+      "price": 450.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "9b70dff1-3c00-56a0-ac0d-bd1779b3690c",
+      "name_tr": "Çiğ Köfte Tam Porsiyon",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Salad",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "7b41181e-b38c-5659-8a60-66cbf95285e7",
+      "name_tr": "Salata",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Shepherd Salad",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "b6e7f06f-1a34-5fbf-a303-9dba9a1ebc7c",
+      "name_tr": "Çoban Salata",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Spicy Dip Sauce Salad",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "560198d3-a4ec-5ec0-a61b-d0342116512d",
+      "name_tr": "Acılı Ezme",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Humus",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "4d3e0990-73f7-5963-801d-69588207f491",
+      "name_tr": "Humus",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Yogurt",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "0cd71f56-c964-5dc8-b1d8-9245ddc6ffda",
+      "name_tr": "Yoğurt",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Yogurt With Eggplant",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "534471fa-f4a4-5ad1-ae89-9180837cc35c",
+      "name_tr": "Patlıcanlı Yoğurt",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Roasted Eggplant",
+      "price": 220.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "c7d04fec-e831-574d-a247-b97f3428ea73",
+      "name_tr": "Köz Patlıcan",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Salads & Mezes",
+      "name": "Fries",
+      "price": 250.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "4ccb4350-c9de-53b0-acba-57d019ffc335",
+      "name_tr": "Patates Kızartması",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Soups",
+      "name": "Kelle Paça Soup",
+      "price": 500.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "866389f4-bace-5bff-b6f2-d1476602fe04",
+      "name_tr": "Kelle Paça Çorbası",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Soups",
+      "name": "Lentil Soup",
+      "price": 300.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "c6ed979d-87a2-5745-9239-b859b76bbad5",
+      "name_tr": "Mercimek Çorbası",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Desserts",
+      "name": "Kunafah",
+      "price": 350.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ],
+      "id": "788b297f-4cac-5386-afea-51434dd43c33",
+      "name_tr": "Künefe",
+      "groups": [
+        {
+          "id": "cream",
+          "label_en": "Extra cream",
+          "label_tr": "Ekstra Kaymak",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "no-cream",
+              "label_en": "No extra cream",
+              "label_tr": "Ekstra kaymak istemiyorum",
+              "extra": 0
+            },
+            {
+              "id": "cream",
+              "label_en": "Cream",
+              "label_tr": "Kaymak",
+              "extra": 50.0
+            }
+          ],
+          "defaults": [
+            "no-cream"
+          ]
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Desserts",
+      "name": "Pistachio Kadayif",
+      "price": 400.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ],
+      "id": "40c47e23-48f7-514a-9380-a6baaf68005b",
+      "name_tr": "Fıstıklı Kadayıf",
+      "groups": [
+        {
+          "id": "cream",
+          "label_en": "Extra cream",
+          "label_tr": "Ekstra Kaymak",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "no-cream",
+              "label_en": "No extra cream",
+              "label_tr": "Ekstra kaymak istemiyorum",
+              "extra": 0
+            },
+            {
+              "id": "cream",
+              "label_en": "Cream",
+              "label_tr": "Kaymak",
+              "extra": 50.0
+            }
+          ],
+          "defaults": [
+            "no-cream"
+          ]
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Desserts",
+      "name": "Pistachio & Cheese Pasa",
+      "price": 400.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ],
+      "id": "a77ee32e-cdda-5c20-9730-8303d23324dc",
+      "name_tr": "Fıstıklı Peynirli Paşa",
+      "groups": [
+        {
+          "id": "cream",
+          "label_en": "Extra cream",
+          "label_tr": "Ekstra Kaymak",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "no-cream",
+              "label_en": "No extra cream",
+              "label_tr": "Ekstra kaymak istemiyorum",
+              "extra": 0
+            },
+            {
+              "id": "cream",
+              "label_en": "Cream",
+              "label_tr": "Kaymak",
+              "extra": 50.0
+            }
+          ],
+          "defaults": [
+            "no-cream"
+          ]
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Desserts",
+      "name": "Ice Cream (1 scoop)",
+      "price": 50.0,
+      "description_en": "",
+      "source_options": [
+        {
+          "label": "Extras",
+          "choices": [
+            "Cream – +50.00 TL"
+          ]
+        }
+      ],
+      "id": "9bfdcd0f-e686-56b6-9131-5238eb3bd4f7",
+      "name_tr": "Dondurma (1 top)",
+      "groups": [
+        {
+          "id": "cream",
+          "label_en": "Extra cream",
+          "label_tr": "Ekstra Kaymak",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "no-cream",
+              "label_en": "No extra cream",
+              "label_tr": "Ekstra kaymak istemiyorum",
+              "extra": 0
+            },
+            {
+              "id": "cream",
+              "label_en": "Cream",
+              "label_tr": "Kaymak",
+              "extra": 50.0
+            }
+          ],
+          "defaults": [
+            "no-cream"
+          ]
+        }
+      ],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "42d2ebc4-c2d2-556f-8b7d-1895fb25b33c",
+      "name_tr": "Coca-Cola (33 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola Zero (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "48cab901-3f94-5918-8f46-69c64c19849b",
+      "name_tr": "Coca-Cola Zero (33 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Fanta (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "d543364e-3b09-5777-a034-beca3f1672b4",
+      "name_tr": "Fanta (33 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Sprite (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "5ec78ba0-cc9d-5980-a58a-478b278f4ad9",
+      "name_tr": "Sprite (33 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Ice Tea (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "b4e07a8b-1834-538d-a15b-7d69c367dedf",
+      "name_tr": "Buzlu Çay (33 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Turnip Juice (33 cl.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "c27192cc-f88f-5a9b-8908-832e38f77181",
+      "name_tr": "Şalgam Suyu (33 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Soda",
+      "price": 70.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "7bddfca3-b7e6-590f-8089-ad208511b070",
+      "name_tr": "Soda",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Fruit Soda",
+      "price": 70.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "3fd474d6-9995-504c-8951-79558f27793d",
+      "name_tr": "Meyveli Soda",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (50 cl.)",
+      "price": 50.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "27e537b8-4dc0-5cd5-a350-054dc7f95686",
+      "name_tr": "Su (50 cl.)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (1.5 L.)",
+      "price": 90.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "7672d555-ae8d-5077-8fa5-7867f224235c",
+      "name_tr": "Su (1,5 L)",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Efes",
+      "price": 200.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "a639ef1b-a25d-5967-bcb6-247857eb1f9d",
+      "name_tr": "Efes",
+      "groups": [],
+      "description_tr": ""
+    },
+    {
+      "category": "Drinks",
+      "name": "Ayran",
+      "price": 70.0,
+      "description_en": "",
+      "source_options": [],
+      "id": "72ce480c-a364-575c-8602-725fccf4f467",
+      "name_tr": "Ayran",
+      "groups": [],
+      "description_tr": ""
+    }
+  ]
+}
