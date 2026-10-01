@@ -1,0 +1,2654 @@
+{
+  "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+  "name": "Crispy House (Sakarya)",
+  "area": "Sakarya",
+  "source": "Uploaded crispy house.html",
+  "source_entries": [
+    {
+      "category": "Most Preferred",
+      "name": "Zinger Burger",
+      "description_en": "Bun Bread, Burger Sauce, Chicken Breast, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise (+10.00 TL), Ketchup (+10.00 TL), Chili Sauce (+15.00 TL), Garlic Sauce (+15.00 TL), Tartar Sauce (+15.00 TL), BBQ (+15.00 TL), Extra Cheese (+20.00 TL), Extra Egg (+40.00 TL) | Cutlet Option: Available",
+      "raw_price": "500.00 TL",
+      "price": 500.0,
+      "prices": [
+        500.0
+      ]
+    },
+    {
+      "category": "Most Preferred",
+      "name": "Mix Pizza (Big)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Salami, Sujuk, Sausage, Corn, Olive, Pepper, Mushroom, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "740.00 TL",
+      "price": 740.0,
+      "prices": [
+        740.0
+      ]
+    },
+    {
+      "category": "Most Preferred",
+      "name": "Mix Pizza (Medium)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Salami, Sujuk, Sausage, Corn, Olive, Pepper, Mushroom, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "590.00 TL",
+      "price": 590.0,
+      "prices": [
+        590.0
+      ]
+    },
+    {
+      "category": "Most Preferred",
+      "name": "Flamer Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Piece Chicken Tenderloin, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ]
+    },
+    {
+      "category": "Most Preferred",
+      "name": "Cheese Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Crispy Mushroom",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "360.00 TL",
+      "price": 360.0,
+      "prices": [
+        360.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Crispy Onion Rings (10 Pieces.)",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "250.00 TL",
+      "price": 250.0,
+      "prices": [
+        250.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Tornado",
+      "description_en": "Fries, Mushroom Sauce, Ketchup, Sesame",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "360.00 TL",
+      "price": 360.0,
+      "prices": [
+        360.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Garlic Bread",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "340.00 TL",
+      "price": 340.0,
+      "prices": [
+        340.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Fries",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "280.00 TL",
+      "price": 280.0,
+      "prices": [
+        280.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Cheesy Potato",
+      "description_en": "Fries, Mixed Cheese, Ham, Mushroom, Green Pepper, Olive, Sesame",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "420.00 TL",
+      "price": 420.0,
+      "prices": [
+        420.0
+      ]
+    },
+    {
+      "category": "Appetizer",
+      "name": "Crispy Popcorn (10 Pcs.)",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "380.00 TL",
+      "price": 380.0,
+      "prices": [
+        380.0
+      ]
+    },
+    {
+      "category": "Healthy Menu",
+      "name": "Grilled Meatball",
+      "description_en": "3 Piece Grilled Meatball with 2 Meze of your Choice.",
+      "raw_options": "Free Meze Options (Choose 2): Rice, Bulgur Rice, Boiled Pasta, Baked Potato, Salad, Boiled Vegetables, Yoghurt Extras: Extra Meatball (+80 TL), Extra Chicken (+100 TL), Extra Meze (+40 TL each) | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ]
+    },
+    {
+      "category": "Healthy Menu",
+      "name": "Grilled Chicken",
+      "description_en": "2 Piece Grilled Chicken with 2 Meze of your Choice.",
+      "raw_options": "Free Meze Options (Choose 2): Rice, Bulgur Rice, Boiled Pasta, Baked Potato, Salad, Boiled Vegetables, Yoghurt Extras: Extra Meatball (+80 TL), Extra Chicken (+100 TL), Extra Meze (+40 TL each) | Cutlet Option: Available",
+      "raw_price": "400.00 TL",
+      "price": 400.0,
+      "prices": [
+        400.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "3 Pieces Crispy Tenderloin",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "480.00 TL",
+      "price": 480.0,
+      "prices": [
+        480.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "4 Pieces Crispy Tenderloin",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "560.00 TL",
+      "price": 560.0,
+      "prices": [
+        560.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "5 Pieces Crispy Tenderloin",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "640.00 TL",
+      "price": 640.0,
+      "prices": [
+        640.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "6 Pieces Hot Wings",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "540.00 TL",
+      "price": 540.0,
+      "prices": [
+        540.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "9 Pieces Hot Wings",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "630.00 TL",
+      "price": 630.0,
+      "prices": [
+        630.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "Double Down",
+      "description_en": "2 Zinger, Lettuce, Cheese, Ham. Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "670.00 TL",
+      "price": 670.0,
+      "prices": [
+        670.0
+      ]
+    },
+    {
+      "category": "Crispy",
+      "name": "Crispy Bowl",
+      "description_en": "Chicken Bites, Fries, Mushroom Sauce, Ketchup",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "600.00 TL",
+      "price": 600.0,
+      "prices": [
+        600.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Zinger Burger",
+      "description_en": "Bun Bread, Burger Sauce, Chicken Breast, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "500.00 TL",
+      "price": 500.0,
+      "prices": [
+        500.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Flamer Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Piece Chicken Tenderloin, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Chicken Grill Burger",
+      "description_en": "Bun Bread, Grilled Chicken, Lettuce, Tomato, Pickles. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Cheese Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Double Cheese Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Burger Patty, Lettuce, Tomato, Pickles, 2 Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "700.00 TL",
+      "price": 700.0,
+      "prices": [
+        700.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Special Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Grilled Chicken, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "690.00 TL",
+      "price": 690.0,
+      "prices": [
+        690.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Mushroom Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Mushroom Sauce, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "640.00 TL",
+      "price": 640.0,
+      "prices": [
+        640.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Double Mushroom Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Burger Patty, Mushroom Sauce, Lettuce, Tomato, Pickles, 2 Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "780.00 TL",
+      "price": 780.0,
+      "prices": [
+        780.0
+      ]
+    },
+    {
+      "category": "Burgers",
+      "name": "Roast Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Roast Beef, Lettuce, Tomato, Pickles, 2 Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "760.00 TL",
+      "price": 760.0,
+      "prices": [
+        760.0
+      ]
+    },
+    {
+      "category": "Meatballs",
+      "name": "Meatball Sandwich + Ayran",
+      "description_en": "Meatball (150 gr.), Pita Bread, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley",
+      "raw_options": "",
+      "raw_price": "400.00 TL",
+      "price": 400.0,
+      "prices": [
+        400.0
+      ]
+    },
+    {
+      "category": "Meatballs",
+      "name": "Halloumi Meatball Sandwich + Ayran",
+      "description_en": "Meatball (150 gr.), Pita Bread, Grilled Halloumi, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley",
+      "raw_options": "",
+      "raw_price": "470.00 TL",
+      "price": 470.0,
+      "prices": [
+        470.0
+      ]
+    },
+    {
+      "category": "Meatballs",
+      "name": "Kasseri Meatball Sandwich + Ayran",
+      "description_en": "Meatball (150 gr.), Pita Bread, Kasseri, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley",
+      "raw_options": "",
+      "raw_price": "470.00 TL",
+      "price": 470.0,
+      "prices": [
+        470.0
+      ]
+    },
+    {
+      "category": "Meatballs",
+      "name": "Sanayi Meatball Sandwich + Ayran",
+      "description_en": "Meatballs (225 gr.), Loaf of Bread, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley, Special Sauce",
+      "raw_options": "",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ]
+    },
+    {
+      "category": "Pizzas",
+      "name": "Mix Pizza (Small / Medium / Big)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Salami, Sujuk, Sausage, Corn, Olive, Pepper, Mushroom, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "440.00 - 740.00 TL",
+      "price": 440.0,
+      "prices": [
+        440.0,
+        740.0
+      ]
+    },
+    {
+      "category": "Pizzas",
+      "name": "Margherita Pizza (Small / Medium / Big)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Tomato, Corn, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "390.00 - 650.00 TL",
+      "price": 390.0,
+      "prices": [
+        390.0,
+        650.0
+      ]
+    },
+    {
+      "category": "Pizzas",
+      "name": "Mushroom Pizza (Small / Medium / Big)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Mushroom, Corn, Tomato, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "390.00 - 650.00 TL",
+      "price": 390.0,
+      "prices": [
+        390.0,
+        650.0
+      ]
+    },
+    {
+      "category": "Pizzas",
+      "name": "Vegetarian Pizza (Small / Medium / Big)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Seasonal Vegetables, Corn, Olive, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "420.00 - 700.00 TL",
+      "price": 420.0,
+      "prices": [
+        420.0,
+        700.0
+      ]
+    },
+    {
+      "category": "Pizzas",
+      "name": "Pepperoni Pizza (Small / Medium / Big)",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Pepperoni, Olive, Green Pepper, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "500.00 - 970.00 TL",
+      "price": 500.0,
+      "prices": [
+        500.0,
+        970.0
+      ]
+    },
+    {
+      "category": "Pastas",
+      "name": "Fettuccine Alfredo",
+      "description_en": "Creamy Mushroom Sauce, Chicken, Fettuccine Pasta, Parmesan",
+      "raw_options": "",
+      "raw_price": "470.00 TL",
+      "price": 470.0,
+      "prices": [
+        470.0
+      ]
+    },
+    {
+      "category": "Pastas",
+      "name": "Creamy Mushroom Fettuccine",
+      "description_en": "Creamy Mushroom Sauce, Fettuccine Pasta, Parmesan",
+      "raw_options": "",
+      "raw_price": "390.00 TL",
+      "price": 390.0,
+      "prices": [
+        390.0
+      ]
+    },
+    {
+      "category": "Pastas",
+      "name": "Spaghetti Bolognese",
+      "description_en": "Bolognese Sauce, Spaghetti, Parmesan",
+      "raw_options": "",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ]
+    },
+    {
+      "category": "Pastas",
+      "name": "Spaghetti Napolitan",
+      "description_en": "Tomato Sauce, Spaghetti, Parmesan",
+      "raw_options": "",
+      "raw_price": "370.00 TL",
+      "price": 370.0,
+      "prices": [
+        370.0
+      ]
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Spinach Soup",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "240.00 TL",
+      "price": 240.0,
+      "prices": [
+        240.0
+      ]
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Cream Soup",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "240.00 TL",
+      "price": 240.0,
+      "prices": [
+        240.0
+      ]
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Caesar Salad",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ]
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Coleslaw",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "60.00 TL",
+      "price": 60.0,
+      "prices": [
+        60.0
+      ]
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Pasta Salad",
+      "description_en": "Pasta, Ham, Olive, Corn, Carrot, Tomato, Pickles",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "350.00 TL",
+      "price": 350.0,
+      "prices": [
+        350.0
+      ]
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (50 cl.)",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "30.00 TL",
+      "price": 30.0,
+      "prices": [
+        30.0
+      ]
+    },
+    {
+      "category": "Drinks",
+      "name": "Soda / Fruit Soda",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "30.00 TL",
+      "price": 30.0,
+      "prices": [
+        30.0
+      ]
+    },
+    {
+      "category": "Drinks",
+      "name": "Ayran",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "30.00 TL",
+      "price": 30.0,
+      "prices": [
+        30.0
+      ]
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola / Fanta / Sprite / Fuse Tea (33 cl.)",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "60.00 TL",
+      "price": 60.0,
+      "prices": [
+        60.0
+      ]
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola / Pepsi / Fanta / Sprite (1 Lt.)",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "80.00 TL",
+      "price": 80.0,
+      "prices": [
+        80.0
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Single Espresso",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "117.00 TL 130.00 TL",
+      "price": 117.0,
+      "prices": [
+        117.0,
+        130.0
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Double Espresso",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "130.50 TL 145.00 TL",
+      "price": 130.5,
+      "prices": [
+        130.5,
+        145.0
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Turkish Coffee",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "90.00 TL 100.00 TL",
+      "price": 90.0,
+      "prices": [
+        90.0,
+        100.0
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Americano / Iced Americano",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "162.00 TL / 166.50 TL",
+      "price": 162.0,
+      "prices": [
+        162.0,
+        166.5
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Latte / Cappuccino / Iced Latte",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "180.00 TL - 189.00 TL",
+      "price": 180.0,
+      "prices": [
+        180.0,
+        189.0
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Mocha / Caramel Macchiato / Hot Chocolate",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "207.00 TL",
+      "price": 207.0,
+      "prices": [
+        207.0
+      ]
+    },
+    {
+      "category": "Coffees",
+      "name": "Iced Mocha / Iced Caramel Latte",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "216.00 TL",
+      "price": 216.0,
+      "prices": [
+        216.0
+      ]
+    }
+  ],
+  "deduplicated_items": 55,
+  "categories": [
+    {
+      "name": "Appetizer",
+      "name_tr": "Başlangıçlar"
+    },
+    {
+      "name": "Healthy Menu",
+      "name_tr": "Sağlıklı Menü"
+    },
+    {
+      "name": "Crispy",
+      "name_tr": "Çıtır Lezzetler"
+    },
+    {
+      "name": "Burgers",
+      "name_tr": "Burgerler"
+    },
+    {
+      "name": "Meatballs",
+      "name_tr": "Köfteler"
+    },
+    {
+      "name": "Pizzas",
+      "name_tr": "Pizzalar"
+    },
+    {
+      "name": "Pastas",
+      "name_tr": "Makarnalar"
+    },
+    {
+      "name": "Soups & Salads",
+      "name_tr": "Çorbalar ve Salatalar"
+    },
+    {
+      "name": "Drinks",
+      "name_tr": "İçecekler"
+    },
+    {
+      "name": "Coffees",
+      "name_tr": "Kahveler"
+    }
+  ],
+  "pending_review": [
+    {
+      "name": "Zinger Burger",
+      "issues": [
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Flamer Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Cheese Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Crispy Mushroom",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Crispy Onion Rings (10 Pieces.)",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Tornado",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Garlic Bread",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Fries",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Cheesy Potato",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Crispy Popcorn (10 Pcs.)",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Grilled Meatball",
+      "issues": [
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Grilled Chicken",
+      "issues": [
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "3 Pieces Crispy Tenderloin",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "4 Pieces Crispy Tenderloin",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "5 Pieces Crispy Tenderloin",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "6 Pieces Hot Wings",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "9 Pieces Hot Wings",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Double Down",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Crispy Bowl",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Chicken Grill Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Double Cheese Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Special Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Mushroom Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Double Mushroom Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Roast Burger",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Mix Pizza",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Margherita Pizza",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ]
+    },
+    {
+      "name": "Mushroom Pizza",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ]
+    },
+    {
+      "name": "Vegetarian Pizza",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ]
+    },
+    {
+      "name": "Pepperoni Pizza",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ]
+    },
+    {
+      "name": "Spinach Soup",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Cream Soup",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Caesar Salad",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Coleslaw",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Pasta Salad",
+      "issues": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ]
+    },
+    {
+      "name": "Latte / Cappuccino / Iced Latte",
+      "issues": [
+        "180–189 TL range does not specify each drink price; item unavailable until confirmed."
+      ]
+    }
+  ],
+  "items": [
+    {
+      "category": "Burgers",
+      "name": "Zinger Burger",
+      "description_en": "Bun Bread, Burger Sauce, Chicken Breast, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise (+10.00 TL), Ketchup (+10.00 TL), Chili Sauce (+15.00 TL), Garlic Sauce (+15.00 TL), Tartar Sauce (+15.00 TL), BBQ (+15.00 TL), Extra Cheese (+20.00 TL), Extra Egg (+40.00 TL) | Cutlet Option: Available",
+      "raw_price": "500.00 TL",
+      "price": 500.0,
+      "prices": [
+        500.0
+      ],
+      "id": "a6733ee1-90e8-5944-9eeb-18e899723908",
+      "name_tr": "Zinger Burger",
+      "description_tr": "Burger ekmeği, burger sosu, tavuk göğsü, marul, domates, turşu, peynir. Patates kızartması ile servis edilir.",
+      "groups": [
+        {
+          "id": "extras",
+          "label_en": "Extras",
+          "label_tr": "Ekstralar",
+          "min": 0,
+          "max": 8,
+          "choices": [
+            {
+              "id": "mayo",
+              "label_en": "Mayonnaise",
+              "label_tr": "Mayonez",
+              "extra": 10
+            },
+            {
+              "id": "ketchup",
+              "label_en": "Ketchup",
+              "label_tr": "Ketçap",
+              "extra": 10
+            },
+            {
+              "id": "chili",
+              "label_en": "Chili Sauce",
+              "label_tr": "Acı Sos",
+              "extra": 15
+            },
+            {
+              "id": "garlic",
+              "label_en": "Garlic Sauce",
+              "label_tr": "Sarımsak Sosu",
+              "extra": 15
+            },
+            {
+              "id": "tartar",
+              "label_en": "Tartar Sauce",
+              "label_tr": "Tartar Sos",
+              "extra": 15
+            },
+            {
+              "id": "bbq",
+              "label_en": "BBQ",
+              "label_tr": "Barbekü Sos",
+              "extra": 15
+            },
+            {
+              "id": "cheese",
+              "label_en": "Extra Cheese",
+              "label_tr": "Ekstra Peynir",
+              "extra": 20
+            },
+            {
+              "id": "egg",
+              "label_en": "Extra Egg",
+              "label_tr": "Ekstra Yumurta",
+              "extra": 40
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "pending": [
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Flamer Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Piece Chicken Tenderloin, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ],
+      "id": "431fe0ec-89e8-54e1-b695-c594cd675db4",
+      "name_tr": "Flamer Burger",
+      "description_tr": "Burger ekmeği, burger sosu, 2 adet tavuk bonfile, marul, domates, turşu, peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Cheese Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ],
+      "id": "400c4e4f-309d-596a-86c9-19a8c6249ef7",
+      "name_tr": "Cheeseburger",
+      "description_tr": "Burger ekmeği, burger sosu, burger köftesi, marul, domates, turşu, peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Crispy Mushroom",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "360.00 TL",
+      "price": 360.0,
+      "prices": [
+        360.0
+      ],
+      "id": "231153a9-ee61-5e3e-b18f-f74c95ef498e",
+      "name_tr": "Çıtır Mantar",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Crispy Onion Rings (10 Pieces.)",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "250.00 TL",
+      "price": 250.0,
+      "prices": [
+        250.0
+      ],
+      "id": "f8e39a51-bb74-509e-bc38-16847deb6c17",
+      "name_tr": "Çıtır Soğan Halkası (10 adet)",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Tornado",
+      "description_en": "Fries, Mushroom Sauce, Ketchup, Sesame",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "360.00 TL",
+      "price": 360.0,
+      "prices": [
+        360.0
+      ],
+      "id": "fb50d519-5124-517c-8dc9-e5df3f67868f",
+      "name_tr": "Tornado",
+      "description_tr": "Patates kızartması, mantar sosu, ketçap, susam",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Garlic Bread",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "340.00 TL",
+      "price": 340.0,
+      "prices": [
+        340.0
+      ],
+      "id": "c34bb455-8558-56cb-bc78-39a7ec7b7607",
+      "name_tr": "Sarımsaklı Ekmek",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Fries",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "280.00 TL",
+      "price": 280.0,
+      "prices": [
+        280.0
+      ],
+      "id": "7b06ab22-4e05-56da-bc0c-66df6574670e",
+      "name_tr": "Patates Kızartması",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Cheesy Potato",
+      "description_en": "Fries, Mixed Cheese, Ham, Mushroom, Green Pepper, Olive, Sesame",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "420.00 TL",
+      "price": 420.0,
+      "prices": [
+        420.0
+      ],
+      "id": "7160e056-6e71-515f-9f72-9066548b0895",
+      "name_tr": "Peynirli Patates",
+      "description_tr": "Patates kızartması, karışık peynir, jambon, mantar, yeşil biber, zeytin, susam",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Appetizer",
+      "name": "Crispy Popcorn (10 Pcs.)",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "380.00 TL",
+      "price": 380.0,
+      "prices": [
+        380.0
+      ],
+      "id": "79c7eb01-dbce-5c9c-b169-6b4c1e4a9c42",
+      "name_tr": "Çıtır Popcorn (10 adet)",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Healthy Menu",
+      "name": "Grilled Meatball",
+      "description_en": "3 Piece Grilled Meatball with 2 Meze of your Choice.",
+      "raw_options": "Free Meze Options (Choose 2): Rice, Bulgur Rice, Boiled Pasta, Baked Potato, Salad, Boiled Vegetables, Yoghurt Extras: Extra Meatball (+80 TL), Extra Chicken (+100 TL), Extra Meze (+40 TL each) | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ],
+      "id": "d0d94406-9555-548e-8888-921e256b8d06",
+      "name_tr": "Izgara Köfte",
+      "description_tr": "Seçeceğiniz 2 meze ile 3 adet ızgara köfte.",
+      "groups": [
+        {
+          "id": "included-meze",
+          "label_en": "Choose 2 included meze",
+          "label_tr": "Dahil olan 2 mezeyi seçin",
+          "min": 2,
+          "max": 2,
+          "choices": [
+            {
+              "id": "rice",
+              "label_en": "Rice",
+              "label_tr": "Pilav",
+              "extra": 0
+            },
+            {
+              "id": "bulgur",
+              "label_en": "Bulgur Rice",
+              "label_tr": "Bulgur Pilavı",
+              "extra": 0
+            },
+            {
+              "id": "pasta",
+              "label_en": "Boiled Pasta",
+              "label_tr": "Haşlanmış Makarna",
+              "extra": 0
+            },
+            {
+              "id": "potato",
+              "label_en": "Baked Potato",
+              "label_tr": "Fırında Patates",
+              "extra": 0
+            },
+            {
+              "id": "salad",
+              "label_en": "Salad",
+              "label_tr": "Salata",
+              "extra": 0
+            },
+            {
+              "id": "vegetables",
+              "label_en": "Boiled Vegetables",
+              "label_tr": "Haşlanmış Sebzeler",
+              "extra": 0
+            },
+            {
+              "id": "yogurt",
+              "label_en": "Yoghurt",
+              "label_tr": "Yoğurt",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extra-protein",
+          "label_en": "Extra protein",
+          "label_tr": "Ekstra Et / Tavuk",
+          "min": 0,
+          "max": 2,
+          "choices": [
+            {
+              "id": "meatball",
+              "label_en": "Extra Meatball",
+              "label_tr": "Ekstra Köfte",
+              "extra": 80
+            },
+            {
+              "id": "chicken",
+              "label_en": "Extra Chicken",
+              "label_tr": "Ekstra Tavuk",
+              "extra": 100
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extra-meze",
+          "label_en": "Extra meze (+40 TL each)",
+          "label_tr": "Ekstra meze (her biri +40 TL)",
+          "min": 0,
+          "max": 7,
+          "choices": [
+            {
+              "id": "rice",
+              "label_en": "Rice",
+              "label_tr": "Pilav",
+              "extra": 40
+            },
+            {
+              "id": "bulgur",
+              "label_en": "Bulgur Rice",
+              "label_tr": "Bulgur Pilavı",
+              "extra": 40
+            },
+            {
+              "id": "pasta",
+              "label_en": "Boiled Pasta",
+              "label_tr": "Haşlanmış Makarna",
+              "extra": 40
+            },
+            {
+              "id": "potato",
+              "label_en": "Baked Potato",
+              "label_tr": "Fırında Patates",
+              "extra": 40
+            },
+            {
+              "id": "salad",
+              "label_en": "Salad",
+              "label_tr": "Salata",
+              "extra": 40
+            },
+            {
+              "id": "vegetables",
+              "label_en": "Boiled Vegetables",
+              "label_tr": "Haşlanmış Sebzeler",
+              "extra": 40
+            },
+            {
+              "id": "yogurt",
+              "label_en": "Yoghurt",
+              "label_tr": "Yoğurt",
+              "extra": 40
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "pending": [
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Healthy Menu",
+      "name": "Grilled Chicken",
+      "description_en": "2 Piece Grilled Chicken with 2 Meze of your Choice.",
+      "raw_options": "Free Meze Options (Choose 2): Rice, Bulgur Rice, Boiled Pasta, Baked Potato, Salad, Boiled Vegetables, Yoghurt Extras: Extra Meatball (+80 TL), Extra Chicken (+100 TL), Extra Meze (+40 TL each) | Cutlet Option: Available",
+      "raw_price": "400.00 TL",
+      "price": 400.0,
+      "prices": [
+        400.0
+      ],
+      "id": "2d23c888-ec57-56d5-b29a-c58657dd8660",
+      "name_tr": "Izgara Tavuk",
+      "description_tr": "Seçeceğiniz 2 meze ile 2 adet ızgara tavuk.",
+      "groups": [
+        {
+          "id": "included-meze",
+          "label_en": "Choose 2 included meze",
+          "label_tr": "Dahil olan 2 mezeyi seçin",
+          "min": 2,
+          "max": 2,
+          "choices": [
+            {
+              "id": "rice",
+              "label_en": "Rice",
+              "label_tr": "Pilav",
+              "extra": 0
+            },
+            {
+              "id": "bulgur",
+              "label_en": "Bulgur Rice",
+              "label_tr": "Bulgur Pilavı",
+              "extra": 0
+            },
+            {
+              "id": "pasta",
+              "label_en": "Boiled Pasta",
+              "label_tr": "Haşlanmış Makarna",
+              "extra": 0
+            },
+            {
+              "id": "potato",
+              "label_en": "Baked Potato",
+              "label_tr": "Fırında Patates",
+              "extra": 0
+            },
+            {
+              "id": "salad",
+              "label_en": "Salad",
+              "label_tr": "Salata",
+              "extra": 0
+            },
+            {
+              "id": "vegetables",
+              "label_en": "Boiled Vegetables",
+              "label_tr": "Haşlanmış Sebzeler",
+              "extra": 0
+            },
+            {
+              "id": "yogurt",
+              "label_en": "Yoghurt",
+              "label_tr": "Yoğurt",
+              "extra": 0
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extra-protein",
+          "label_en": "Extra protein",
+          "label_tr": "Ekstra Et / Tavuk",
+          "min": 0,
+          "max": 2,
+          "choices": [
+            {
+              "id": "meatball",
+              "label_en": "Extra Meatball",
+              "label_tr": "Ekstra Köfte",
+              "extra": 80
+            },
+            {
+              "id": "chicken",
+              "label_en": "Extra Chicken",
+              "label_tr": "Ekstra Tavuk",
+              "extra": 100
+            }
+          ],
+          "defaults": []
+        },
+        {
+          "id": "extra-meze",
+          "label_en": "Extra meze (+40 TL each)",
+          "label_tr": "Ekstra meze (her biri +40 TL)",
+          "min": 0,
+          "max": 7,
+          "choices": [
+            {
+              "id": "rice",
+              "label_en": "Rice",
+              "label_tr": "Pilav",
+              "extra": 40
+            },
+            {
+              "id": "bulgur",
+              "label_en": "Bulgur Rice",
+              "label_tr": "Bulgur Pilavı",
+              "extra": 40
+            },
+            {
+              "id": "pasta",
+              "label_en": "Boiled Pasta",
+              "label_tr": "Haşlanmış Makarna",
+              "extra": 40
+            },
+            {
+              "id": "potato",
+              "label_en": "Baked Potato",
+              "label_tr": "Fırında Patates",
+              "extra": 40
+            },
+            {
+              "id": "salad",
+              "label_en": "Salad",
+              "label_tr": "Salata",
+              "extra": 40
+            },
+            {
+              "id": "vegetables",
+              "label_en": "Boiled Vegetables",
+              "label_tr": "Haşlanmış Sebzeler",
+              "extra": 40
+            },
+            {
+              "id": "yogurt",
+              "label_en": "Yoghurt",
+              "label_tr": "Yoğurt",
+              "extra": 40
+            }
+          ],
+          "defaults": []
+        }
+      ],
+      "pending": [
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "3 Pieces Crispy Tenderloin",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "480.00 TL",
+      "price": 480.0,
+      "prices": [
+        480.0
+      ],
+      "id": "6226f3ee-3b7f-55fd-b1e2-bf10033ed896",
+      "name_tr": "3 Adet Çıtır Tavuk Bonfile",
+      "description_tr": "Patates kızartması ve coleslaw ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "4 Pieces Crispy Tenderloin",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "560.00 TL",
+      "price": 560.0,
+      "prices": [
+        560.0
+      ],
+      "id": "c76d37bb-0d6a-5039-ba02-c4fdfb20ba06",
+      "name_tr": "4 Adet Çıtır Tavuk Bonfile",
+      "description_tr": "Patates kızartması ve coleslaw ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "5 Pieces Crispy Tenderloin",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "640.00 TL",
+      "price": 640.0,
+      "prices": [
+        640.0
+      ],
+      "id": "a4918456-2039-53e5-be2d-6fcb82b3a794",
+      "name_tr": "5 Adet Çıtır Tavuk Bonfile",
+      "description_tr": "Patates kızartması ve coleslaw ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "6 Pieces Hot Wings",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "540.00 TL",
+      "price": 540.0,
+      "prices": [
+        540.0
+      ],
+      "id": "4f764cf0-0254-5fd2-9197-278cee5c2af0",
+      "name_tr": "6 Adet Acılı Kanat",
+      "description_tr": "Patates kızartması ve coleslaw ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "9 Pieces Hot Wings",
+      "description_en": "Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "630.00 TL",
+      "price": 630.0,
+      "prices": [
+        630.0
+      ],
+      "id": "46616ad6-4aad-5537-9ee2-73d718e90e1f",
+      "name_tr": "9 Adet Acılı Kanat",
+      "description_tr": "Patates kızartması ve coleslaw ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "Double Down",
+      "description_en": "2 Zinger, Lettuce, Cheese, Ham. Served with Fries and Coleslaw",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "670.00 TL",
+      "price": 670.0,
+      "prices": [
+        670.0
+      ],
+      "id": "59d009d4-aad1-589d-a8be-eab90f25d97a",
+      "name_tr": "Double Down",
+      "description_tr": "2 Zinger, marul, peynir, jambon. Patates kızartması ve coleslaw ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Crispy",
+      "name": "Crispy Bowl",
+      "description_en": "Chicken Bites, Fries, Mushroom Sauce, Ketchup",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "600.00 TL",
+      "price": 600.0,
+      "prices": [
+        600.0
+      ],
+      "id": "37d42c58-dd03-5c97-a96e-2776c34ab189",
+      "name_tr": "Çıtır Kase",
+      "description_tr": "Tavuk parçaları, patates kızartması, mantar sosu, ketçap",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Chicken Grill Burger",
+      "description_en": "Bun Bread, Grilled Chicken, Lettuce, Tomato, Pickles. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ],
+      "id": "b7193dcd-7775-5367-b75c-7efc2d3758af",
+      "name_tr": "Izgara Tavuk Burger",
+      "description_tr": "Burger ekmeği, ızgara tavuk, marul, domates, turşu. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Double Cheese Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Burger Patty, Lettuce, Tomato, Pickles, 2 Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "700.00 TL",
+      "price": 700.0,
+      "prices": [
+        700.0
+      ],
+      "id": "8fc6fefc-1c7f-514a-b2cf-e07a47375c1f",
+      "name_tr": "Double Cheeseburger",
+      "description_tr": "Burger ekmeği, burger sosu, 2 burger köftesi, marul, domates, turşu, 2 peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Special Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Grilled Chicken, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "690.00 TL",
+      "price": 690.0,
+      "prices": [
+        690.0
+      ],
+      "id": "8846ef7a-cc50-56c6-8527-6d89c6e7b99a",
+      "name_tr": "Özel Burger",
+      "description_tr": "Burger ekmeği, burger sosu, burger köftesi, ızgara tavuk, marul, domates, turşu, peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Mushroom Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Mushroom Sauce, Lettuce, Tomato, Pickles, Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "640.00 TL",
+      "price": 640.0,
+      "prices": [
+        640.0
+      ],
+      "id": "6c2b0942-7811-5118-92fe-05fbb1530c9d",
+      "name_tr": "Mantarlı Burger",
+      "description_tr": "Burger ekmeği, burger sosu, burger köftesi, mantar sosu, marul, domates, turşu, peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Double Mushroom Burger",
+      "description_en": "Bun Bread, Burger Sauce, 2 Burger Patty, Mushroom Sauce, Lettuce, Tomato, Pickles, 2 Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "780.00 TL",
+      "price": 780.0,
+      "prices": [
+        780.0
+      ],
+      "id": "d681389e-649f-5694-bce1-472adf7aabca",
+      "name_tr": "Double Mantarlı Burger",
+      "description_tr": "Burger ekmeği, burger sosu, 2 burger köftesi, mantar sosu, marul, domates, turşu, 2 peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Burgers",
+      "name": "Roast Burger",
+      "description_en": "Bun Bread, Burger Sauce, Burger Patty, Roast Beef, Lettuce, Tomato, Pickles, 2 Cheese. Served with Fries.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce, Extra Cheese, Extra Egg | Cutlet Option: Available",
+      "raw_price": "760.00 TL",
+      "price": 760.0,
+      "prices": [
+        760.0
+      ],
+      "id": "fe4cfa80-fefc-5748-8142-f814a37af36d",
+      "name_tr": "Kavurmalı Burger",
+      "description_tr": "Burger ekmeği, burger sosu, burger köftesi, dana kavurma, marul, domates, turşu, 2 peynir. Patates kızartması ile servis edilir.",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Meatballs",
+      "name": "Meatball Sandwich + Ayran",
+      "description_en": "Meatball (150 gr.), Pita Bread, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley",
+      "raw_options": "",
+      "raw_price": "400.00 TL",
+      "price": 400.0,
+      "prices": [
+        400.0
+      ],
+      "id": "ee2259d6-3f6e-5bbb-be41-a323662934f4",
+      "name_tr": "Köfte Sandviç + Ayran",
+      "description_tr": "Köfte (150 g), pide ekmeği, marul, domates, turşu, soğan, sumak, maydanoz",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Meatballs",
+      "name": "Halloumi Meatball Sandwich + Ayran",
+      "description_en": "Meatball (150 gr.), Pita Bread, Grilled Halloumi, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley",
+      "raw_options": "",
+      "raw_price": "470.00 TL",
+      "price": 470.0,
+      "prices": [
+        470.0
+      ],
+      "id": "f58a59e6-f120-5690-9cc5-f87807308d5e",
+      "name_tr": "Hellimli Köfte Sandviç + Ayran",
+      "description_tr": "Köfte (150 g), pide ekmeği, ızgara hellim, marul, domates, turşu, soğan, sumak, maydanoz",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Meatballs",
+      "name": "Kasseri Meatball Sandwich + Ayran",
+      "description_en": "Meatball (150 gr.), Pita Bread, Kasseri, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley",
+      "raw_options": "",
+      "raw_price": "470.00 TL",
+      "price": 470.0,
+      "prices": [
+        470.0
+      ],
+      "id": "bd69b204-1572-57d2-b4c1-ac3a596bb865",
+      "name_tr": "Kaşarlı Köfte Sandviç + Ayran",
+      "description_tr": "Köfte (150 g), pide ekmeği, kaşar, marul, domates, turşu, soğan, sumak, maydanoz",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Meatballs",
+      "name": "Sanayi Meatball Sandwich + Ayran",
+      "description_en": "Meatballs (225 gr.), Loaf of Bread, Lettuce, Tomato, Pickles, Onion, Sumac, Parsley, Special Sauce",
+      "raw_options": "",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ],
+      "id": "9434166f-4b69-5fdb-ba57-300fcbfa7102",
+      "name_tr": "Sanayi Köfte Sandviç + Ayran",
+      "description_tr": "Köfte (225 g), somun ekmek, marul, domates, turşu, soğan, sumak, maydanoz, özel sos",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Pizzas",
+      "name": "Mix Pizza",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Salami, Sujuk, Sausage, Corn, Olive, Pepper, Mushroom, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "440.00 - 740.00 TL",
+      "price": 440.0,
+      "prices": [
+        440.0,
+        740.0
+      ],
+      "id": "72a2668c-6cd7-58a3-a902-7b671fbfce38",
+      "name_tr": "Karışık Pizza",
+      "description_tr": "Crispy House özel sosu, karışık peynir, salam, sucuk, sosis, mısır, zeytin, biber, mantar, susam.",
+      "groups": [
+        {
+          "id": "size",
+          "label_en": "Size",
+          "label_tr": "Boy",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "small",
+              "label_en": "Small",
+              "label_tr": "Küçük",
+              "extra": 0
+            },
+            {
+              "id": "medium",
+              "label_en": "Medium",
+              "label_tr": "Orta",
+              "extra": 150.0
+            },
+            {
+              "id": "big",
+              "label_en": "Big",
+              "label_tr": "Büyük",
+              "extra": 300.0
+            }
+          ],
+          "defaults": [
+            "small"
+          ]
+        }
+      ],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Pizzas",
+      "name": "Margherita Pizza",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Tomato, Corn, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "390.00 - 650.00 TL",
+      "price": 390.0,
+      "prices": [
+        390.0,
+        650.0
+      ],
+      "id": "f7b934bd-991c-5fe1-a97b-f28fab1c4a52",
+      "name_tr": "Margherita Pizza",
+      "description_tr": "Crispy House özel sosu, karışık peynir, domates, mısır, susam.",
+      "groups": [
+        {
+          "id": "size",
+          "label_en": "Size",
+          "label_tr": "Boy",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "small",
+              "label_en": "Small",
+              "label_tr": "Küçük",
+              "extra": 0
+            },
+            {
+              "id": "big",
+              "label_en": "Big",
+              "label_tr": "Büyük",
+              "extra": 260.0
+            }
+          ],
+          "defaults": [
+            "small"
+          ]
+        }
+      ],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ],
+      "available": true
+    },
+    {
+      "category": "Pizzas",
+      "name": "Mushroom Pizza",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Mushroom, Corn, Tomato, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "390.00 - 650.00 TL",
+      "price": 390.0,
+      "prices": [
+        390.0,
+        650.0
+      ],
+      "id": "f94d87c6-4eef-55e0-91bc-e13ba79c2b69",
+      "name_tr": "Mantarlı Pizza",
+      "description_tr": "Crispy House özel sosu, karışık peynir, mantar, mısır, domates, susam.",
+      "groups": [
+        {
+          "id": "size",
+          "label_en": "Size",
+          "label_tr": "Boy",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "small",
+              "label_en": "Small",
+              "label_tr": "Küçük",
+              "extra": 0
+            },
+            {
+              "id": "big",
+              "label_en": "Big",
+              "label_tr": "Büyük",
+              "extra": 260.0
+            }
+          ],
+          "defaults": [
+            "small"
+          ]
+        }
+      ],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ],
+      "available": true
+    },
+    {
+      "category": "Pizzas",
+      "name": "Vegetarian Pizza",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Seasonal Vegetables, Corn, Olive, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "420.00 - 700.00 TL",
+      "price": 420.0,
+      "prices": [
+        420.0,
+        700.0
+      ],
+      "id": "65d65f7d-055c-5109-8ff0-7155abc3a669",
+      "name_tr": "Vejetaryen Pizza",
+      "description_tr": "Crispy House özel sosu, karışık peynir, mevsim sebzeleri, mısır, zeytin, susam.",
+      "groups": [
+        {
+          "id": "size",
+          "label_en": "Size",
+          "label_tr": "Boy",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "small",
+              "label_en": "Small",
+              "label_tr": "Küçük",
+              "extra": 0
+            },
+            {
+              "id": "big",
+              "label_en": "Big",
+              "label_tr": "Büyük",
+              "extra": 280.0
+            }
+          ],
+          "defaults": [
+            "small"
+          ]
+        }
+      ],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ],
+      "available": true
+    },
+    {
+      "category": "Pizzas",
+      "name": "Pepperoni Pizza",
+      "description_en": "Crispy House Special Sauce, Mix Cheese, Pepperoni, Olive, Green Pepper, Sesame.",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "500.00 - 970.00 TL",
+      "price": 500.0,
+      "prices": [
+        500.0,
+        970.0
+      ],
+      "id": "fa3d22c0-b8fb-5ac5-a5de-485e1dea3c3a",
+      "name_tr": "Pepperoni Pizza",
+      "description_tr": "Crispy House özel sosu, karışık peynir, pepperoni, zeytin, yeşil biber, susam.",
+      "groups": [
+        {
+          "id": "size",
+          "label_en": "Size",
+          "label_tr": "Boy",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "small",
+              "label_en": "Small",
+              "label_tr": "Küçük",
+              "extra": 0
+            },
+            {
+              "id": "big",
+              "label_en": "Big",
+              "label_tr": "Büyük",
+              "extra": 470.0
+            }
+          ],
+          "defaults": [
+            "small"
+          ]
+        }
+      ],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price.",
+        "Medium pizza price not provided; small/big prices confirmed by listed range."
+      ],
+      "available": true
+    },
+    {
+      "category": "Pastas",
+      "name": "Fettuccine Alfredo",
+      "description_en": "Creamy Mushroom Sauce, Chicken, Fettuccine Pasta, Parmesan",
+      "raw_options": "",
+      "raw_price": "470.00 TL",
+      "price": 470.0,
+      "prices": [
+        470.0
+      ],
+      "id": "eb4560d7-daeb-5bd5-826c-167218640d3a",
+      "name_tr": "Fettuccine Alfredo",
+      "description_tr": "Kremalı mantar sosu, tavuk, fettuccine makarna, parmesan",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Pastas",
+      "name": "Creamy Mushroom Fettuccine",
+      "description_en": "Creamy Mushroom Sauce, Fettuccine Pasta, Parmesan",
+      "raw_options": "",
+      "raw_price": "390.00 TL",
+      "price": 390.0,
+      "prices": [
+        390.0
+      ],
+      "id": "9f9d7454-fd02-55a6-b734-fb03ce8102f7",
+      "name_tr": "Kremalı Mantarlı Fettuccine",
+      "description_tr": "Kremalı mantar sosu, fettuccine makarna, parmesan",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Pastas",
+      "name": "Spaghetti Bolognese",
+      "description_en": "Bolognese Sauce, Spaghetti, Parmesan",
+      "raw_options": "",
+      "raw_price": "550.00 TL",
+      "price": 550.0,
+      "prices": [
+        550.0
+      ],
+      "id": "fe6de39d-6157-544e-b8e3-9e760b67417e",
+      "name_tr": "Spagetti Bolonez",
+      "description_tr": "Bolonez sos, spagetti, parmesan",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Pastas",
+      "name": "Spaghetti Napolitan",
+      "description_en": "Tomato Sauce, Spaghetti, Parmesan",
+      "raw_options": "",
+      "raw_price": "370.00 TL",
+      "price": 370.0,
+      "prices": [
+        370.0
+      ],
+      "id": "1abd9352-37e6-5d87-980b-3fded7c66918",
+      "name_tr": "Spagetti Napoliten",
+      "description_tr": "Domates sosu, spagetti, parmesan",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Spinach Soup",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "240.00 TL",
+      "price": 240.0,
+      "prices": [
+        240.0
+      ],
+      "id": "8af32a1c-7c1e-5bc9-aa33-8f1cd8bd8f83",
+      "name_tr": "Ispanak Çorbası",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Cream Soup",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "240.00 TL",
+      "price": 240.0,
+      "prices": [
+        240.0
+      ],
+      "id": "71310cf4-f9bc-5f08-8679-42d21724da1e",
+      "name_tr": "Kremalı Çorba",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Caesar Salad",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "450.00 TL",
+      "price": 450.0,
+      "prices": [
+        450.0
+      ],
+      "id": "ba54f622-15e2-5ce7-b70c-22008645cef1",
+      "name_tr": "Sezar Salata",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Coleslaw",
+      "description_en": "",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "60.00 TL",
+      "price": 60.0,
+      "prices": [
+        60.0
+      ],
+      "id": "61cb021c-065c-5e6a-a741-58ddab5a8969",
+      "name_tr": "Coleslaw",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Soups & Salads",
+      "name": "Pasta Salad",
+      "description_en": "Pasta, Ham, Olive, Corn, Carrot, Tomato, Pickles",
+      "raw_options": "Extras: Mayonnaise, Ketchup, Chili Sauce, Garlic Sauce, Tartar Sauce, BBQ Sauce | Cutlet Option: Available",
+      "raw_price": "350.00 TL",
+      "price": 350.0,
+      "prices": [
+        350.0
+      ],
+      "id": "4eba3919-30c7-5f1c-b993-4af1b91874bc",
+      "name_tr": "Makarna Salatası",
+      "description_tr": "Makarna, jambon, zeytin, mısır, havuç, domates, turşu",
+      "groups": [],
+      "pending": [
+        "Extra prices not provided; not offered until confirmed.",
+        "Cutlet option is undefined in source; needs choices and price."
+      ],
+      "available": true
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (50 cl.)",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "30.00 TL",
+      "price": 30.0,
+      "prices": [
+        30.0
+      ],
+      "id": "47be657e-c8d9-587e-9e21-1cfb74c169ef",
+      "name_tr": "Su (50 cl.)",
+      "description_tr": "",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Drinks",
+      "name": "Soda / Fruit Soda",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "30.00 TL",
+      "price": 30.0,
+      "prices": [
+        30.0
+      ],
+      "id": "1ce3690d-5d73-5283-98e1-bb817b416e0c",
+      "name_tr": "Soda / Meyveli Soda",
+      "description_tr": "",
+      "groups": [
+        {
+          "id": "drink",
+          "label_en": "Drink choice",
+          "label_tr": "İçecek Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "0",
+              "label_en": "Soda",
+              "label_tr": "Soda",
+              "extra": 0
+            },
+            {
+              "id": "1",
+              "label_en": "Fruit Soda",
+              "label_tr": "Meyveli Soda",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "0"
+          ]
+        }
+      ],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Drinks",
+      "name": "Ayran",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "30.00 TL",
+      "price": 30.0,
+      "prices": [
+        30.0
+      ],
+      "id": "b56246d4-7731-5c1b-a323-5214555f4823",
+      "name_tr": "Ayran",
+      "description_tr": "",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola / Fanta / Sprite / Fuse Tea (33 cl.)",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "60.00 TL",
+      "price": 60.0,
+      "prices": [
+        60.0
+      ],
+      "id": "86d93f6b-aea6-58a3-9448-d0b10263729c",
+      "name_tr": "Coca-Cola / Fanta / Sprite / Fuse Tea (33 cl.)",
+      "description_tr": "",
+      "groups": [
+        {
+          "id": "drink",
+          "label_en": "Drink choice",
+          "label_tr": "İçecek Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "0",
+              "label_en": "Coca-Cola",
+              "label_tr": "Coca-Cola",
+              "extra": 0
+            },
+            {
+              "id": "1",
+              "label_en": "Fanta",
+              "label_tr": "Fanta",
+              "extra": 0
+            },
+            {
+              "id": "2",
+              "label_en": "Sprite",
+              "label_tr": "Sprite",
+              "extra": 0
+            },
+            {
+              "id": "3",
+              "label_en": "Fuse Tea",
+              "label_tr": "Fuse Tea",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "0"
+          ]
+        }
+      ],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola / Pepsi / Fanta / Sprite (1 Lt.)",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "80.00 TL",
+      "price": 80.0,
+      "prices": [
+        80.0
+      ],
+      "id": "130c5587-fe3d-5c8a-8d1b-22a731a55ee1",
+      "name_tr": "Coca-Cola / Pepsi / Fanta / Sprite (1 L)",
+      "description_tr": "",
+      "groups": [
+        {
+          "id": "drink",
+          "label_en": "Drink choice",
+          "label_tr": "İçecek Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "0",
+              "label_en": "Coca-Cola",
+              "label_tr": "Coca-Cola",
+              "extra": 0
+            },
+            {
+              "id": "1",
+              "label_en": "Pepsi",
+              "label_tr": "Pepsi",
+              "extra": 0
+            },
+            {
+              "id": "2",
+              "label_en": "Fanta",
+              "label_tr": "Fanta",
+              "extra": 0
+            },
+            {
+              "id": "3",
+              "label_en": "Sprite",
+              "label_tr": "Sprite",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "0"
+          ]
+        }
+      ],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Coffees",
+      "name": "Single Espresso",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "117.00 TL 130.00 TL",
+      "price": 117.0,
+      "prices": [
+        117.0,
+        130.0
+      ],
+      "id": "5ee55188-8e93-5759-a369-3da1d65f82c4",
+      "name_tr": "Tek Espresso",
+      "description_tr": "",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Coffees",
+      "name": "Double Espresso",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "130.50 TL 145.00 TL",
+      "price": 130.5,
+      "prices": [
+        130.5,
+        145.0
+      ],
+      "id": "2bf4eac0-4f76-5299-92f9-c9c93131c41b",
+      "name_tr": "Double Espresso",
+      "description_tr": "",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Coffees",
+      "name": "Turkish Coffee",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "90.00 TL 100.00 TL",
+      "price": 90.0,
+      "prices": [
+        90.0,
+        100.0
+      ],
+      "id": "a6db16ab-c774-563b-b7e0-6a98f0ee3072",
+      "name_tr": "Türk Kahvesi",
+      "description_tr": "",
+      "groups": [],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Coffees",
+      "name": "Americano / Iced Americano",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "162.00 TL / 166.50 TL",
+      "price": 162.0,
+      "prices": [
+        162.0,
+        166.5
+      ],
+      "id": "1e4f6ff5-e5d6-5a6a-be25-5d2660481171",
+      "name_tr": "Americano / Buzlu Americano",
+      "description_tr": "",
+      "groups": [
+        {
+          "id": "drink",
+          "label_en": "Drink choice",
+          "label_tr": "İçecek Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "hot",
+              "label_en": "Americano",
+              "label_tr": "Americano",
+              "extra": 0
+            },
+            {
+              "id": "iced",
+              "label_en": "Iced Americano",
+              "label_tr": "Buzlu Americano",
+              "extra": 4.5
+            }
+          ],
+          "defaults": [
+            "hot"
+          ]
+        }
+      ],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Coffees",
+      "name": "Latte / Cappuccino / Iced Latte",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "180.00 TL - 189.00 TL",
+      "price": 180.0,
+      "prices": [
+        180.0,
+        189.0
+      ],
+      "id": "464cb195-f94f-52f2-857e-07bd2836b855",
+      "name_tr": "Latte / Cappuccino / Buzlu Latte",
+      "description_tr": "",
+      "groups": [],
+      "pending": [
+        "180–189 TL range does not specify each drink price; item unavailable until confirmed."
+      ],
+      "available": false
+    },
+    {
+      "category": "Coffees",
+      "name": "Mocha / Caramel Macchiato / Hot Chocolate",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "207.00 TL",
+      "price": 207.0,
+      "prices": [
+        207.0
+      ],
+      "id": "6b35f915-1ebb-589f-971b-14566d8df59f",
+      "name_tr": "Mocha / Karamelli Macchiato / Sıcak Çikolata",
+      "description_tr": "",
+      "groups": [
+        {
+          "id": "drink",
+          "label_en": "Drink choice",
+          "label_tr": "İçecek Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "0",
+              "label_en": "Mocha",
+              "label_tr": "Mocha",
+              "extra": 0
+            },
+            {
+              "id": "1",
+              "label_en": "Caramel Macchiato",
+              "label_tr": "Karamelli Macchiato",
+              "extra": 0
+            },
+            {
+              "id": "2",
+              "label_en": "Hot Chocolate",
+              "label_tr": "Sıcak Çikolata",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "0"
+          ]
+        }
+      ],
+      "pending": [],
+      "available": true
+    },
+    {
+      "category": "Coffees",
+      "name": "Iced Mocha / Iced Caramel Latte",
+      "description_en": "",
+      "raw_options": "",
+      "raw_price": "216.00 TL",
+      "price": 216.0,
+      "prices": [
+        216.0
+      ],
+      "id": "92ef5de7-6b8e-57cb-b20d-1b93e5642725",
+      "name_tr": "Buzlu Mocha / Buzlu Karamelli Latte",
+      "description_tr": "",
+      "groups": [
+        {
+          "id": "drink",
+          "label_en": "Drink choice",
+          "label_tr": "İçecek Seçimi",
+          "min": 1,
+          "max": 1,
+          "choices": [
+            {
+              "id": "0",
+              "label_en": "Iced Mocha",
+              "label_tr": "Buzlu Mocha",
+              "extra": 0
+            },
+            {
+              "id": "1",
+              "label_en": "Iced Caramel Latte",
+              "label_tr": "Buzlu Karamelli Latte",
+              "extra": 0
+            }
+          ],
+          "defaults": [
+            "0"
+          ]
+        }
+      ],
+      "pending": [],
+      "available": true
+    }
+  ]
+}
