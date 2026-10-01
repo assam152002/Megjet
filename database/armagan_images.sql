@@ -1,0 +1,43 @@
+-- AI-generated representative menu photos for Armağan Döner.
+BEGIN;
+UPDATE public.products AS p SET image_url = v.image_url FROM (VALUES
+  ('Meat Doner Wrap', 'https://assam152002.github.io/Megjet/assets/armagan/01-meat-doner-wrap.webp'),
+  ('Chicken Doner Wrap', 'https://assam152002.github.io/Megjet/assets/armagan/02-chicken-doner-wrap.webp'),
+  ('Mix Doner Wrap', 'https://assam152002.github.io/Megjet/assets/armagan/03-mix-doner-wrap.webp'),
+  ('Meat Doner in Special Bread', 'https://assam152002.github.io/Megjet/assets/armagan/04-meat-doner-in-special-bread.webp'),
+  ('Chicken Doner in Special Bread', 'https://assam152002.github.io/Megjet/assets/armagan/05-chicken-doner-in-special-bread.webp'),
+  ('Mix Doner in Special Bread', 'https://assam152002.github.io/Megjet/assets/armagan/06-mix-doner-in-special-bread.webp'),
+  ('Hatay Style Chicken Doner Wrap', 'https://assam152002.github.io/Megjet/assets/armagan/07-hatay-style-chicken-doner-wrap.webp'),
+  ('Meat Iskender', 'https://assam152002.github.io/Megjet/assets/armagan/08-meat-iskender.webp'),
+  ('Mix Iskender', 'https://assam152002.github.io/Megjet/assets/armagan/09-mix-iskender.webp'),
+  ('Chicken Iskender', 'https://assam152002.github.io/Megjet/assets/armagan/10-chicken-iskender.webp'),
+  ('Meat Doner Service', 'https://assam152002.github.io/Megjet/assets/armagan/11-meat-doner-service.webp'),
+  ('Double Meat Doner', 'https://assam152002.github.io/Megjet/assets/armagan/12-double-meat-doner.webp'),
+  ('Chicken Doner Service', 'https://assam152002.github.io/Megjet/assets/armagan/13-chicken-doner-service.webp'),
+  ('Mix Doner Service', 'https://assam152002.github.io/Megjet/assets/armagan/14-mix-doner-service.webp'),
+  ('Double Chicken Doner', 'https://assam152002.github.io/Megjet/assets/armagan/15-double-chicken-doner.webp'),
+  ('Double Mix Doner', 'https://assam152002.github.io/Megjet/assets/armagan/16-double-mix-doner.webp'),
+  ('Serpme İskender', 'https://assam152002.github.io/Megjet/assets/armagan/17-serpme-iskender.webp'),
+  ('Lahmacun', 'https://assam152002.github.io/Megjet/assets/armagan/18-lahmacun.webp'),
+  ('Mix Pita', 'https://assam152002.github.io/Megjet/assets/armagan/19-mix-pita.webp'),
+  ('Cheese Pita', 'https://assam152002.github.io/Megjet/assets/armagan/20-cheese-pita.webp'),
+  ('Minced Meat Pita', 'https://assam152002.github.io/Megjet/assets/armagan/21-minced-meat-pita.webp'),
+  ('Cubed Meat Pita', 'https://assam152002.github.io/Megjet/assets/armagan/22-cubed-meat-pita.webp'),
+  ('Mini Lahmacun (6 pcs.)', 'https://assam152002.github.io/Megjet/assets/armagan/23-mini-lahmacun-6-pcs.webp'),
+  ('Veggie Pita', 'https://assam152002.github.io/Megjet/assets/armagan/24-veggie-pita.webp'),
+  ('Fries', 'https://assam152002.github.io/Megjet/assets/armagan/25-fries.webp'),
+  ('Rice', 'https://assam152002.github.io/Megjet/assets/armagan/26-rice.webp'),
+  ('Salad', 'https://assam152002.github.io/Megjet/assets/armagan/27-salad.webp'),
+  ('Yogurt', 'https://assam152002.github.io/Megjet/assets/armagan/28-yogurt.webp'),
+  ('Coca-Cola (33 cl.)', 'https://assam152002.github.io/Megjet/assets/armagan/29-coca-cola-33-cl.webp'),
+  ('Coca-Cola Zero (33 cl.)', 'https://assam152002.github.io/Megjet/assets/armagan/30-coca-cola-zero-33-cl.webp'),
+  ('Fanta (33 cl.)', 'https://assam152002.github.io/Megjet/assets/armagan/31-fanta-33-cl.webp'),
+  ('Sprite (33 cl.)', 'https://assam152002.github.io/Megjet/assets/armagan/32-sprite-33-cl.webp'),
+  ('Fruit Juice', 'https://assam152002.github.io/Megjet/assets/armagan/33-fruit-juice.webp'),
+  ('Turnip Juice', 'https://assam152002.github.io/Megjet/assets/armagan/34-turnip-juice.webp'),
+  ('Fruity Soda', 'https://assam152002.github.io/Megjet/assets/armagan/35-fruity-soda.webp'),
+  ('Ayran', 'https://assam152002.github.io/Megjet/assets/armagan/36-ayran.webp'),
+  ('Water (50 cl.)', 'https://assam152002.github.io/Megjet/assets/armagan/37-water-50-cl.webp')
+) AS v(name,image_url) WHERE p.vendor_id='c6f0e4cc-e5cc-58cd-8232-541e400bf6ea' AND p.name=v.name;
+DO $$ BEGIN IF (SELECT count(*) FROM public.products WHERE vendor_id='c6f0e4cc-e5cc-58cd-8232-541e400bf6ea' AND image_url LIKE 'https://assam152002.github.io/Megjet/assets/armagan/%') <> 37 THEN RAISE EXCEPTION 'Expected 37 Armagan images'; END IF; END $$;
+COMMIT;
