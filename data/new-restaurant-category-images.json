@@ -1,0 +1,159 @@
+{
+  "source": "Matching existing AI-generated menu photographs",
+  "items": [
+    {
+      "vendor_id": "5792a8da-aa87-5a06-8421-657261c3800c",
+      "restaurant": "Çukurova Restorant (Gülseren)",
+      "category": "Wraps",
+      "file": "assets/menu-photos/cukurova-01.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/cukurova-01.webp"
+    },
+    {
+      "vendor_id": "5792a8da-aa87-5a06-8421-657261c3800c",
+      "restaurant": "Çukurova Restorant (Gülseren)",
+      "category": "Kebabs & Grills",
+      "file": "assets/menu-photos/cukurova-05.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/cukurova-05.webp"
+    },
+    {
+      "vendor_id": "5792a8da-aa87-5a06-8421-657261c3800c",
+      "restaurant": "Çukurova Restorant (Gülseren)",
+      "category": "Salads",
+      "file": "assets/menu-photos/cukurova-11.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/cukurova-11.webp"
+    },
+    {
+      "vendor_id": "5792a8da-aa87-5a06-8421-657261c3800c",
+      "restaurant": "Çukurova Restorant (Gülseren)",
+      "category": "Side Dishes",
+      "file": "assets/menu-photos/cukurova-13.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/cukurova-13.webp"
+    },
+    {
+      "vendor_id": "5792a8da-aa87-5a06-8421-657261c3800c",
+      "restaurant": "Çukurova Restorant (Gülseren)",
+      "category": "Drinks",
+      "file": "assets/armagan/29-coca-cola-33-cl.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/armagan/29-coca-cola-33-cl.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Appetizer",
+      "file": "assets/menu-photos/crispy-house-05.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-05.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Healthy Menu",
+      "file": "assets/menu-photos/crispy-house-12.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-12.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Crispy",
+      "file": "assets/menu-photos/crispy-house-15.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-15.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Burgers",
+      "file": "assets/menu-photos/crispy-house-03.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-03.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Meatballs",
+      "file": "assets/menu-photos/crispy-house-11.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-11.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Pizzas",
+      "file": "assets/menu-photos/crispy-house-30.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-30.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Pastas",
+      "file": "assets/menu-photos/crispy-house-35.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-35.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Soups & Salads",
+      "file": "assets/menu-photos/crispy-house-41.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-41.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Drinks",
+      "file": "assets/menu-photos/crispy-house-47.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-47.webp"
+    },
+    {
+      "vendor_id": "6d7aeeee-0826-5888-ba1d-f46dcc7548c5",
+      "restaurant": "Crispy House (Sakarya)",
+      "category": "Coffees",
+      "file": "assets/menu-photos/crispy-house-53.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/crispy-house-53.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Kebabs",
+      "file": "assets/menu-photos/doydoy-01.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/doydoy-01.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Wraps",
+      "file": "assets/menu-photos/doydoy-16.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/doydoy-16.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Oven Meals",
+      "file": "assets/menu-photos/doydoy-26.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/doydoy-26.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Salads & Mezes",
+      "file": "assets/menu-photos/doydoy-37.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/doydoy-37.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Soups",
+      "file": "assets/menu-photos/doydoy-43.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/doydoy-43.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Desserts",
+      "file": "assets/menu-photos/doydoy-44.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/doydoy-44.webp"
+    },
+    {
+      "vendor_id": "a83e1b05-71fa-5b1f-ab35-1d8cca0c4ea9",
+      "restaurant": "Doy Doy Kebap - Künefe (Baykal)",
+      "category": "Drinks",
+      "file": "assets/armagan/29-coca-cola-33-cl.webp",
+      "image_url": "https://assam152002.github.io/Megjet/assets/armagan/29-coca-cola-33-cl.webp"
+    }
+  ]
+}
