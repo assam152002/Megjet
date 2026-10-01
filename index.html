@@ -3698,6 +3698,7 @@ async function loadAdminMenu(){
     adminRequest("/rest/v1/vendor_pickup_pins?select=vendor_id,latitude,longitude")
   ]);
   const productsPromise=megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,available,image_url&order=name,id",path=>adminRequest(path));
+  if(window.MEGJET_ITEM_OPTIONS){try{await window.MEGJET_ITEM_OPTIONS.load();}catch(e){console.warn("Menu choice previews unavailable:",e);}}
 
   // Render cached menu immediately when available.
   if(adminMenuCache && adminMenuCache.length) renderAdminMenu();
