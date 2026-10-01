@@ -1,0 +1,227 @@
+{
+  "vendor_id": "c6f0e4cc-e5cc-58cd-8232-541e400bf6ea",
+  "items": [
+    {
+      "category": "Wraps",
+      "name": "Meat Doner Wrap",
+      "name_tr": "Et Döner Dürüm",
+      "price": 350
+    },
+    {
+      "category": "Wraps",
+      "name": "Chicken Doner Wrap",
+      "name_tr": "Tavuk Döner Dürüm",
+      "price": 320
+    },
+    {
+      "category": "Wraps",
+      "name": "Mix Doner Wrap",
+      "name_tr": "Karışık Döner Dürüm",
+      "price": 350
+    },
+    {
+      "category": "Wraps",
+      "name": "Meat Doner in Special Bread",
+      "name_tr": "Özel Ekmekte Et Döner",
+      "price": 350
+    },
+    {
+      "category": "Wraps",
+      "name": "Chicken Doner in Special Bread",
+      "name_tr": "Özel Ekmekte Tavuk Döner",
+      "price": 350
+    },
+    {
+      "category": "Wraps",
+      "name": "Mix Doner in Special Bread",
+      "name_tr": "Özel Ekmekte Karışık Döner",
+      "price": 350
+    },
+    {
+      "category": "Wraps",
+      "name": "Hatay Style Chicken Doner Wrap",
+      "name_tr": "Hatay Usulü Tavuk Döner Dürüm",
+      "price": 320
+    },
+    {
+      "category": "Services",
+      "name": "Meat Iskender",
+      "name_tr": "Et İskender",
+      "price": 670
+    },
+    {
+      "category": "Services",
+      "name": "Mix Iskender",
+      "name_tr": "Karışık İskender",
+      "price": 670
+    },
+    {
+      "category": "Services",
+      "name": "Chicken Iskender",
+      "name_tr": "Tavuk İskender",
+      "price": 620
+    },
+    {
+      "category": "Services",
+      "name": "Meat Doner Service",
+      "name_tr": "Et Döner Porsiyon",
+      "price": 670
+    },
+    {
+      "category": "Services",
+      "name": "Double Meat Doner",
+      "name_tr": "Double Et Döner",
+      "price": 870
+    },
+    {
+      "category": "Services",
+      "name": "Chicken Doner Service",
+      "name_tr": "Tavuk Döner Porsiyon",
+      "price": 620
+    },
+    {
+      "category": "Services",
+      "name": "Mix Doner Service",
+      "name_tr": "Karışık Döner Porsiyon",
+      "price": 670
+    },
+    {
+      "category": "Services",
+      "name": "Double Chicken Doner",
+      "name_tr": "Double Tavuk Döner",
+      "price": 800
+    },
+    {
+      "category": "Services",
+      "name": "Double Mix Doner",
+      "name_tr": "Double Karışık Döner",
+      "price": 870
+    },
+    {
+      "category": "Services",
+      "name": "Serpme İskender",
+      "name_tr": "Serpme İskender",
+      "price": 670
+    },
+    {
+      "category": "Oven Products",
+      "name": "Lahmacun",
+      "name_tr": "Lahmacun",
+      "price": 180
+    },
+    {
+      "category": "Oven Products",
+      "name": "Mix Pita",
+      "name_tr": "Karışık Pide",
+      "price": 450
+    },
+    {
+      "category": "Oven Products",
+      "name": "Cheese Pita",
+      "name_tr": "Peynirli Pide",
+      "price": 400
+    },
+    {
+      "category": "Oven Products",
+      "name": "Minced Meat Pita",
+      "name_tr": "Kıymalı Pide",
+      "price": 400
+    },
+    {
+      "category": "Oven Products",
+      "name": "Cubed Meat Pita",
+      "name_tr": "Kuşbaşılı Pide",
+      "price": 450
+    },
+    {
+      "category": "Oven Products",
+      "name": "Mini Lahmacun (6 pcs.)",
+      "name_tr": "Mini Lahmacun (6 adet)",
+      "price": 600
+    },
+    {
+      "category": "Oven Products",
+      "name": "Veggie Pita",
+      "name_tr": "Sebzeli Pide",
+      "price": 350
+    },
+    {
+      "category": "Side Dishes",
+      "name": "Fries",
+      "name_tr": "Patates Kızartması",
+      "price": 300
+    },
+    {
+      "category": "Side Dishes",
+      "name": "Rice",
+      "name_tr": "Pilav",
+      "price": 250
+    },
+    {
+      "category": "Side Dishes",
+      "name": "Salad",
+      "name_tr": "Salata",
+      "price": 250
+    },
+    {
+      "category": "Side Dishes",
+      "name": "Yogurt",
+      "name_tr": "Yoğurt",
+      "price": 250
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola (33 cl.)",
+      "name_tr": "Coca-Cola (33 cl.)",
+      "price": 70
+    },
+    {
+      "category": "Drinks",
+      "name": "Coca-Cola Zero (33 cl.)",
+      "name_tr": "Coca-Cola Zero (33 cl.)",
+      "price": 70
+    },
+    {
+      "category": "Drinks",
+      "name": "Fanta (33 cl.)",
+      "name_tr": "Fanta (33 cl.)",
+      "price": 70
+    },
+    {
+      "category": "Drinks",
+      "name": "Sprite (33 cl.)",
+      "name_tr": "Sprite (33 cl.)",
+      "price": 70
+    },
+    {
+      "category": "Drinks",
+      "name": "Fruit Juice",
+      "name_tr": "Meyve Suyu",
+      "price": 70
+    },
+    {
+      "category": "Drinks",
+      "name": "Turnip Juice",
+      "name_tr": "Şalgam Suyu",
+      "price": 70
+    },
+    {
+      "category": "Drinks",
+      "name": "Fruity Soda",
+      "name_tr": "Meyveli Soda",
+      "price": 60
+    },
+    {
+      "category": "Drinks",
+      "name": "Ayran",
+      "name_tr": "Ayran",
+      "price": 50
+    },
+    {
+      "category": "Drinks",
+      "name": "Water (50 cl.)",
+      "name_tr": "Su (50 cl.)",
+      "price": 30
+    }
+  ]
+}

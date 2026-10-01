@@ -2248,7 +2248,7 @@ $("placeOrder").onclick=async()=>{
     const totals=checkoutTotals();
     const paymentMethod=$("paymentMethod")?.value||"Cash on Delivery";
     if(!["Cash on Delivery","Card at Doorstep (POS)"].includes(paymentMethod)){ $("orderMessage").textContent="Choose a supported pay-on-delivery method.";return; }
-    const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1)}));
+    const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1),customizations:p.customizations||{}}));
     // Keep the same ID if a request reaches the server but its reply is lost.
     const checkoutKey=JSON.stringify([name,phone,address,paymentMethod,appliedCoupon?.code||null,customerAuthUser?.id||null,items]);
     let pending;try{pending=JSON.parse(localStorage.getItem("megjet_pending_checkout")||"null")}catch{}
@@ -2315,10 +2315,11 @@ async function reorderCustomerOrder(idx){
         if(matches.length===1)p=matches[0];
       }
       if(!p)missing.push(i.product_name||"Item");
+      else if(window.MEGJET_ITEM_OPTIONS&&(await window.MEGJET_ITEM_OPTIONS.load()).has(String(p.id))){missing.push(p.name+" — choose options again");}
       else resolved.push({id:p.id,vendor_id:p.vendor_id,vendor_name:i.vendor_name||"",name:p.name,description:p.description||"",price:Number(p.price||0),quantity:Math.max(1,Number(i.quantity||1))});
     }
 
-    if(!resolved.length){alert("These order items are no longer available for reorder.");return;}
+    if(!resolved.length){alert("Please open the menu and choose the options again for these items.");return;}
     cart=[];
     resolved.forEach(item=>{
       const existing=cart.find(p=>String(p.id)===String(item.id));
@@ -5433,7 +5434,7 @@ document.addEventListener("DOMContentLoaded",function(){
     if(items)items.innerHTML=state().map((x,i)=>{
       const q=Math.max(1,Number(x.quantity||1));
       return '<div class="row"><span><b>'+esc(window.MEGJET_MENU_LOCALE?.name(x)||x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor" data-no-translate>'+esc(x.vendor_name)+'</div>':'')+
-      '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
+      (window.megjetCartOptionsHtml?.(x)||'')+'<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
       ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
     }).join('');
     // The cart belongs to the customer shopping flow and must never depend on
@@ -5450,7 +5451,7 @@ document.addEventListener("DOMContentLoaded",function(){
   function addProduct(product){
     if(!product)return false;
     const a=state(), id=String(product.id??''), vendor=String(product.vendor_id??'');
-    const found=a.find(x=>String(x.id??'')===id&&String(x.vendor_id??'')===vendor);
+    const found=a.find(x=>String(x.id??'')===id&&String(x.vendor_id??'')===vendor&&JSON.stringify(x.customizations||{})===JSON.stringify(product.customizations||{}));
     if(found)found.quantity=Math.max(1,Number(found.quantity||1))+1;
     else a.push({...product,price:Number(product.price||0),quantity:1});
     draw();
@@ -5516,13 +5517,14 @@ document.addEventListener("DOMContentLoaded",function(){
   function menuUX(){const ds=document.querySelectorAll('details.menu-category');if(ds.length&&!Array.from(ds).some(d=>d.open))ds[0].open=true;document.querySelectorAll('.megjet-add-button').forEach(b=>{b.style.setProperty('min-height','42px','important');b.style.setProperty('min-width','58px','important')})}
   function checkoutUX(){const n=$('customerName'),p=$('phone'),a=$('address'),pay=$('paymentMethod');if(n){n.required=true;n.autocomplete='name'}if(p){p.required=true;p.inputMode='tel';p.autocomplete='tel'}if(a){a.required=true;a.autocomplete='street-address'}if(pay)pay.required=true;const btn=$('placeOrder');if(btn){btn.setAttribute('aria-label','Place your Megjet order');btn.style.minHeight='48px'}}
   function sync(){makeNav();net();menuUX();checkoutUX();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
-  document.addEventListener('click',e=>{if(e.target.closest('.vendor-view'))setTimeout(menuUX,500);const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
+  document.addEventListener('click',e=>{if(e.target.closest('.vendor-view'))setTimeout(menuUX,500);const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}},true)
+  window.addEventListener('megjet:itemadded',()=>{sync();toast('Added to cart ✓')});
   let syncQueued=false;const mo=new MutationObserver(()=>{if(syncQueued)return;syncQueued=true;requestAnimationFrame(()=>{syncQueued=false;sync()})});
   function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync);window.addEventListener('online',sync);window.addEventListener('offline',sync)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
 })();
 </script>
-<script src="./workflow-guard.js?v=8"></script>
+<script src="./workflow-guard.js?v=9"></script>
 <script src="./assets/menu-language.js?v=1"></script>
 <script src="./interface-preferences.js?v=11"></script>
 <script src="./assets/install-app.js?v=1"></script>
@@ -5548,5 +5550,7 @@ document.addEventListener("DOMContentLoaded",function(){
 @media(max-width:650px){.support-admin-layout{grid-template-columns:1fr}.support-inbox{max-height:220px}.support-panel{right:12px;bottom:78px}#supportFloatButton{bottom:80px}}
 </style>
 <script src="./assets/traffic-support.js?v=3"></script>
+<link rel="stylesheet" href="./assets/item-options.css?v=1">
+<script src="./assets/item-options.js?v=1"></script>
 </body>
 </html>

@@ -140,7 +140,8 @@
   function checkoutFingerprint(name, phone, address) {
     const items = (window.cart || []).map(item => [
       String(item.id || ""),
-      Math.max(1, Number(item.quantity || 1))
+      Math.max(1, Number(item.quantity || 1)),
+      item.customizations || {}
     ]);
     return JSON.stringify([name.toLowerCase(), phone, address.toLowerCase(), items]);
   }
