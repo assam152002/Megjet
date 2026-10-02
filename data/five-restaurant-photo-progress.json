@@ -1,40 +1,8 @@
 {
   "total": 299,
-  "published_and_linked": 130,
-  "remaining": 169,
+  "published_and_linked": 134,
+  "remaining": 165,
   "remaining_items": [
-    {
-      "id": "ececaeb0-f49f-5743-bd2e-bb7315d5d3cb",
-      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
-      "name": "Tavuk Dolma",
-      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
-      "image_url": null,
-      "restaurant": "Coffeeholic Boutique Bakery House"
-    },
-    {
-      "id": "6ea16c18-37f9-59f3-9197-e667a619124f",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Grilled Halloumi Caesar Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "c18b3552-a592-53ce-85b1-bb491f93ae77",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Chicken Soup",
-      "description": "[Soups] Pita, olive, lemon, greens",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "e861e7e8-f446-5749-8995-bc3ad9192668",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Macaron (3 Adet)",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
     {
       "id": "da7c0570-2ac1-5db2-97f0-a8eb1318788d",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
