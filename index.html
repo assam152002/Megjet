@@ -1866,19 +1866,29 @@ window.MEGJET_ADD_FROM_BUTTON=function(button,event){
 
 // Add buttons use their direct onclick handler. Avoid a capture-phase interceptor on mobile browsers.
 
-async function fetchJson(url,options={},timeout=9000){
+async function fetchJson(url,options={},timeout=30000){
+  // Retry reads only. Writes and checkout RPCs retain their existing retry rules.
+  const attempts=String(options.method||"GET").toUpperCase()==="GET"?2:1;
+  for(let attempt=0;attempt<attempts;attempt++){
   const controller=new AbortController();
   const timer=setTimeout(()=>controller.abort(),timeout);
   try{
     const r=await fetch(url,{...options,signal:controller.signal});
     const text=await r.text();
     let data; try{data=text?JSON.parse(text):null}catch{data=text;}
-    if(!r.ok) throw new Error((data && (data.message || data.msg || data.error_description || (typeof data.error === "string" ? data.error : ""))) || ("HTTP " + r.status));
+    if(!r.ok){
+      const error=new Error((data && (data.message || data.msg || data.error_description || (typeof data.error === "string" ? data.error : ""))) || ("HTTP " + r.status));
+      error.status=r.status;
+      throw error;
+    }
     return data;
   }catch(e){
+    const temporary=e.name==="AbortError"||e instanceof TypeError||[502,503,504].includes(e.status);
+    if(temporary&&attempt+1<attempts)continue;
     if(e.name==="AbortError") throw new Error("Request timed out. Check your internet connection or Supabase API.");
     throw e;
   }finally{clearTimeout(timer);}
+  }
 }
 
 async function testConnection(){
@@ -1893,7 +1903,7 @@ async function testConnection(){
     return true;
   }catch(e){
     setStatus("Connection failed", "bad");
-    showSetup(e.message+" If the message says a table is missing, run the included schema.sql in Supabase.");
+    hideSetup();
     return false;
   }
 }
@@ -1950,7 +1960,22 @@ async function megjetFetchPages(path,request){
   throw new Error("Menu has more than 20,000 rows.");
 }
 
-async function load(){
+let restaurantLoadPromise=null;
+let restaurantLoadFailed=false;
+function load(){
+  if(restaurantLoadPromise)return restaurantLoadPromise;
+  restaurantLoadPromise=loadRestaurants().finally(()=>{restaurantLoadPromise=null;});
+  return restaurantLoadPromise;
+}
+function showRestaurantLoadError(){
+  restaurantLoadFailed=true;
+  hideSetup();
+  setStatus("Could not reach the live menu. Please retry.","bad");
+  $("vendors").innerHTML='<div class="card" role="alert"><h2>Restaurants could not load</h2><p>Check your internet connection, then tap Retry. If this keeps happening, try another Wi-Fi network or mobile data.</p><button type="button" onclick="load()">Retry</button></div>';
+}
+window.addEventListener("online",()=>{if(restaurantLoadFailed)load();});
+async function loadRestaurants(){
+  restaurantLoadFailed=false;
   $("vendors").innerHTML='<div class="card" role="status"><h2>Loading restaurants…</h2><p class="muted">Checking the live menu and prices.</p></div>';
   setStatus("Loading live restaurants…");
   if(!cfg?.url||!cfg?.key){
@@ -1958,12 +1983,10 @@ async function load(){
     showSetup();
     return;
   }
-  // Load verified live data before offering a menu.
-  const good=await testConnection();
-  if(!good){$("vendors").innerHTML='<div class="card" role="alert"><h2>Restaurants could not load</h2><p>Check your connection and try again.</p><button type="button" onclick="load()">Retry</button></div>';return;}
+  hideSetup();
   const base=cfg.url.replace(/\/+$/,"" );
   try{
-    await loadDeliveryFee();
+    const feeReady=loadDeliveryFee();
     const [vendors,products,categoryMeta,translations]=await Promise.all([
       fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url,bio,bio_en,bio_tr,bio_translation_source,accepting_orders&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
@@ -1974,6 +1997,7 @@ async function load(){
       fetchJson(base+"/rest/v1/vendor_menu_categories?select=vendor_id,name,name_en,name_tr,image_url,sort_order",{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}}).catch(()=>[]),
       megjetFetchPages("/rest/v1/product_translations?select=product_id,name_en,name_tr,description_en,description_tr&order=product_id",path=>fetchJson(base+path,{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}})).catch(()=>[])
     ]);
+    await feeReady;
     window.MEGJET_VENDOR_CATEGORY_META=categoryMeta||[];
     window.MEGJET_PRODUCT_TRANSLATIONS=Object.fromEntries((translations||[]).map(t=>[String(t.product_id),t]));
     setStatus("Connected ✓ Live vendors from Supabase","ok");
@@ -1981,9 +2005,8 @@ async function load(){
     renderVendors([...vendors, MEGJET_COMING_SOON_ALCOHOL_VENDOR],[...products, ...MEGJET_COMING_SOON_ALCOHOL_PRODUCTS]);
     loadGrowthHome().catch(()=>{});
   }catch(e){
-    setStatus("Supabase connected, but the Megjet tables could not be loaded.","bad");
-    showSetup(e.message);
-    $("vendors").innerHTML='<div class="card" role="alert"><h2>Restaurants could not load</h2><p>Please try again.</p><button type="button" onclick="load()">Retry</button></div>';
+    console.warn("Megjet live menu load failed:",e);
+    showRestaurantLoadError();
   }
 }
 
