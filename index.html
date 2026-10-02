@@ -1807,7 +1807,8 @@ function add(p){
   if(!p)return false;
   const id=String(p.id??"");
   const vendor=String(p.vendor_id??"");
-  const existing=cart.find(x=>String(x.id??"")===id && String(x.vendor_id??"")===vendor);
+  const choiceKey=x=>JSON.stringify(Object.entries(x.customizations||{}).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>[k,[...v].sort()]));
+  const existing=cart.find(x=>String(x.id??"")===id && String(x.vendor_id??"")===vendor && choiceKey(x)===choiceKey(p));
   if(existing) existing.quantity=Math.max(1,Number(existing.quantity||1))+Math.max(1,Number(p.quantity||1));
   else cart.push({...p,price:Number(p.price||0),quantity:Math.max(1,Number(p.quantity||1))});
   saveCart();renderCart();
@@ -2252,7 +2253,7 @@ $("placeOrder").onclick=async()=>{
     const totals=checkoutTotals();
     const paymentMethod=$("paymentMethod")?.value||"Cash on Delivery";
     if(!["Cash on Delivery","Card at Doorstep (POS)"].includes(paymentMethod)){ $("orderMessage").textContent="Choose a supported pay-on-delivery method.";return; }
-    const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1)}));
+    const items=cart.map(p=>({product_id:p.id,quantity:Number(p.quantity||1),customizations:p.customizations||{}}));
     // Keep the same ID if a request reaches the server but its reply is lost.
     const checkoutKey=JSON.stringify([name,phone,address,paymentMethod,appliedCoupon?.code||null,customerAuthUser?.id||null,items]);
     let pending;try{pending=JSON.parse(localStorage.getItem("megjet_pending_checkout")||"null")}catch{}
@@ -5563,5 +5564,6 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./assets/traffic-support.js?v=3"></script>
 <script src="./assets/operations.js?v=2"></script>
 <script src="./assets/menu-photo-preview.js?v=1"></script>
+<script src="./assets/menu-options.js?v=1"></script>
 </body>
 </html>
