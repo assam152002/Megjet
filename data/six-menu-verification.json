@@ -22,8 +22,8 @@
     },
     {
       "name": "O'Feel Du Grill",
-      "products": 93,
-      "available": 92,
+      "products": 97,
+      "available": 97,
       "categories": 12
     },
     {
@@ -42,47 +42,23 @@
   "checks": [
     "Every imported product matches extracted name, description, base price, availability, sequence, and option groups",
     "Anonymous customer access verified for all six restaurants",
-    "744 rollback-only checkout pricing cases passed; quantities, matching retries, invalid choice rejection",
+    "754 rollback-only checkout pricing cases passed; quantities, matching retries, invalid choice rejection",
     "Regular and large Latte in the same checkout retain distinct prices; subtotal 400 TL",
     "Live browser category and item counts match for all six restaurants",
     "Live browser: large Latte 210 TL, large Margherita 600 TL, 12 Tenders plus egg 595 TL",
     "Live browser: 3 independent pasta choices for 800 TL deal",
     "English/Turkish names, descriptions and category labels switch; restaurant name remains unchanged",
-    "373 bilingual database records match reviewed local translations",
+    "377 bilingual database records match reviewed local translations",
     "Published index.html, menu-options.js and sw.js hashes match tested files",
     "Repeat import produces no duplicate products; no admin data overwritten",
-    "Test browser cart cleared; all database test orders rolled back"
+    "Test browser cart cleared; all database test orders rolled back",
+    "Owner confirmed normal 415 TL and 1.5x 505 TL; all 14 extras, optional sauce 20 TL, cutlery 20 TL or free applied",
+    "Live cart verified: 1.5x plus egg, ketchup and cutlery subtotal 595 TL; dedicated checkout RPC check passed and rolled back"
   ],
-  "pending": [
-    {
-      "item": "Zereshk polo ba morgh",
-      "reason": "Two prices without size/portion labels",
-      "prices": [
-        415.0,
-        505.0
-      ]
-    },
-    {
-      "reason": "Sauces listed without prices; preserved in source record, not sold at an invented price",
-      "sauces": [
-        "Mayonnaise",
-        "Ketchup",
-        "Cheddar",
-        "Mexican Salsa",
-        "Hot Spicy",
-        "BBQ Ranch",
-        "Spicy Ranch",
-        "Mustard",
-        "Garlic Mayonnaise",
-        "Sweet Chilli",
-        "Thai Sweet & Sour",
-        "Cocktail Sauce"
-      ]
-    }
-  ],
+  "pending": [],
   "limitations": [
     "No generated photos requested in this import; restaurant branding remains editable in Admin",
-    "OFeel unlabelled two-price dish unavailable; unpriced sauce choices pending confirmation",
     "Live Admin sign-in not repeated; menu management uses existing database records"
-  ]
+  ],
+  "ofeel_cart_screenshot": "data/ofeel-confirmed-cart-20261002.jpg"
 }

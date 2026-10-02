@@ -41,7 +41,7 @@ BEGIN
   END;
   IF NOT blocked THEN RAISE EXCEPTION 'Invalid choices accepted for %',p.id; END IF;
  END LOOP;
- IF n<>744 THEN RAISE EXCEPTION 'Expected 744 pricing cases; tested %',n; END IF;
+ IF n<>754 THEN RAISE EXCEPTION 'Expected 754 pricing cases; tested %',n; END IF;
 END $test$;
 ROLLBACK;
-SELECT 'Passed: 744 checkouts, minimum/maximum option prices, quantity 2, matching retry, and invalid-choice rejection for every available imported product. No live test orders retained.' AS result;
+SELECT 'Passed: 754 checkouts, minimum/maximum option prices, quantity 2, matching retry, and invalid-choice rejection for every available imported product. No live test orders retained.' AS result;

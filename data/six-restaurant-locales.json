@@ -2609,5 +2609,33 @@
     "name_tr": "Ayran",
     "description_en": "",
     "description_tr": ""
+  },
+  {
+    "product_id": "bec38529-2715-5b0d-bad8-4603a877407f",
+    "name_en": "Jalapeno",
+    "name_tr": "Jalapeno",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "fbe9cc9b-71d9-5efd-ae79-5ee635d865e5",
+    "name_en": "Caramelized Onion",
+    "name_tr": "Karamelize Soğan",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "afad63b4-f204-5d6e-8d60-c5ec29f6fa55",
+    "name_en": "Extra Chicken Doner (50 gr.)",
+    "name_tr": "Ekstra Tavuk Döner (50 gr.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "dd7da262-ef6e-50fa-9ff9-23b3b6a10786",
+    "name_en": "Fries (100 gr.)",
+    "name_tr": "Patates Kızartması (100 gr.)",
+    "description_en": "",
+    "description_tr": ""
   }
 ]
