@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 166,
+  "generated": 176,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -1989,6 +1989,126 @@
       "path": "assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35.jpg",
       "generation_mode": "built-in",
       "blob_sha": "8efdfa466f780f3527cf9e61b173372d639d3718"
+    },
+    {
+      "id": "acc8dde5-8446-5b1a-9447-61a0f189df02",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Izgara Tavuk",
+      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
+      "image_url": "./assets/menu-generated/acc8dde5-8446-5b1a-9447-61a0f189df02.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Izgara Tavuk\",\"description\":\"Pilav, patates kızartması ve salata ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/acc8dde5-8446-5b1a-9447-61a0f189df02.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "3b5b364d9d09607daebf3ed10d6252d9809d973c"
+    },
+    {
+      "id": "92c3c51e-ec7c-5456-a733-6e981fe12581",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Quesadilla + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/92c3c51e-ec7c-5456-a733-6e981fe12581.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mexican Chicken Quesadilla + Chips\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/92c3c51e-ec7c-5456-a733-6e981fe12581.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "47dae8abb4999e36603e6e90f8f96f105e10bc40"
+    },
+    {
+      "id": "66446765-e8c7-5b7a-a8f8-b2b2c8f492a6",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kanat Kentucy",
+      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
+      "image_url": "./assets/menu-generated/66446765-e8c7-5b7a-a8f8-b2b2c8f492a6.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kanat Kentucy\",\"description\":\"Pilav, patates kızartması ve salata ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/66446765-e8c7-5b7a-a8f8-b2b2c8f492a6.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "e8ef94e329b56e8c642dd4490ca95c9bcc706bd6"
+    },
+    {
+      "id": "173e687a-f016-5f82-939a-acca4eeec1bf",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Minced Meat Quesadilla + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/173e687a-f016-5f82-939a-acca4eeec1bf.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mexican Minced Meat Quesadilla + Chips\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/173e687a-f016-5f82-939a-acca4eeec1bf.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "a74932d345c3658080853e38501f9ffcd031a9d5"
+    },
+    {
+      "id": "9bc75ca2-05b2-57ca-99f0-afc18f6ec01b",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Pilav Üstü Yaprak Döner",
+      "description": "[Dürüm & Kebap Çeşitleri] ",
+      "image_url": "./assets/menu-generated/9bc75ca2-05b2-57ca-99f0-afc18f6ec01b.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Pilav Üstü Yaprak Döner\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9bc75ca2-05b2-57ca-99f0-afc18f6ec01b.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "3ebe79feabb1954268e6239e93df31aa2942dea2"
+    },
+    {
+      "id": "6cb2e2ec-ff0e-5e70-be25-be5232faa18d",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Taquito + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/6cb2e2ec-ff0e-5e70-be25-be5232faa18d.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mexican Chicken Taquito + Chips\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/6cb2e2ec-ff0e-5e70-be25-be5232faa18d.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "ed5d6446b939475ed78bd1800a62ea7288d3a91c"
+    },
+    {
+      "id": "03e1e0e5-e2db-52bf-942e-027a52190c4e",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "İskender Yaprak Döner",
+      "description": "[Dürüm & Kebap Çeşitleri] ",
+      "image_url": "./assets/menu-generated/03e1e0e5-e2db-52bf-942e-027a52190c4e.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"İskender Yaprak Döner\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/03e1e0e5-e2db-52bf-942e-027a52190c4e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "db2021d191f18e59ccf2fc4507dbfb9b2e9f1879"
+    },
+    {
+      "id": "6f0396a1-e80a-5a4b-9f36-8601be20e472",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Minced Meat Taquito + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/6f0396a1-e80a-5a4b-9f36-8601be20e472.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mexican Minced Meat Taquito + Chips\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/6f0396a1-e80a-5a4b-9f36-8601be20e472.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "b1b22af9980b08df98e09e80758a235c149535f7"
+    },
+    {
+      "id": "40a90823-9287-52d2-a61f-112e31dae34e",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Yaprak Döner Servis",
+      "description": "[Dürüm & Kebap Çeşitleri] Süzme yoğurt, soğan-maydanoz söğüşü, patates kızartması, kızartılmış domates-biber ve lavaş ile",
+      "image_url": "./assets/menu-generated/40a90823-9287-52d2-a61f-112e31dae34e.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Yaprak Döner Servis\",\"description\":\"Süzme yoğurt, soğan-maydanoz söğüşü, patates kızartması, kızartılmış domates-biber ve lavaş ile\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/40a90823-9287-52d2-a61f-112e31dae34e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "89b5e7dc326f6ee5da99d5e86012b85c796f6c71"
+    },
+    {
+      "id": "22911aec-65cf-5489-b749-be97e35367fd",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Fajitas",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/22911aec-65cf-5489-b749-be97e35367fd.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Fajitas\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/22911aec-65cf-5489-b749-be97e35367fd.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "55200da415c0717e780f5101cf274cbf1acb4431"
     }
   ]
 }
