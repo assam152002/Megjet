@@ -1,6 +1,5 @@
 {
   "restaurant": "Kebap Dünyası (Sakarya)",
-  "category": "Doners",
   "items": [
     {
       "id": "f61bad4e-31a4-565d-b26d-92003ff876c4",
@@ -73,7 +72,61 @@
       "generation_mode": "built-in",
       "photo_type": "generic illustrative",
       "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "0bf94e39-3daa-5a64-aef8-82f672a65d0b",
+      "name": "Eco Menu Chicken + Ayran",
+      "description": "Salad, rice, fries, roasted pepper, bread + Ayran",
+      "category": "Back To City Menu",
+      "image_url": "./assets/menu-generated/0bf94e39-3daa-5a64-aef8-82f672a65d0b.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients; cream plate, neutral table, natural light, no text or logos."
+    },
+    {
+      "id": "e68248b8-49e5-5adb-8c96-efa3a51c495f",
+      "name": "Eco Menu Adana + Ayran",
+      "description": "Salad, rice, fries, roasted pepper, bread + Ayran",
+      "category": "Back To City Menu",
+      "image_url": "./assets/menu-generated/e68248b8-49e5-5adb-8c96-efa3a51c495f.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients; cream plate, neutral table, natural light, no text or logos."
+    },
+    {
+      "id": "c5078217-926f-53d1-8f0e-353622631f24",
+      "name": "Eco Menu Liver + Ayran",
+      "description": "Salad, rice, fries, roasted pepper, bread + Ayran",
+      "category": "Back To City Menu",
+      "image_url": "./assets/menu-generated/c5078217-926f-53d1-8f0e-353622631f24.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients; cream plate, neutral table, natural light, no text or logos."
+    },
+    {
+      "id": "3784217a-4776-5df2-ade4-7d41f49bc66d",
+      "name": "Eco Menu Meat + Ayran",
+      "description": "Salad, rice, fries, roasted pepper, bread + Ayran",
+      "category": "Back To City Menu",
+      "image_url": "./assets/menu-generated/3784217a-4776-5df2-ade4-7d41f49bc66d.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients; cream plate, neutral table, natural light, no text or logos."
+    },
+    {
+      "id": "38b50fc1-ee66-526a-ab23-d5d5bd57a7da",
+      "name": "Eco Menu Wings + Ayran",
+      "description": "Salad, rice, fries, roasted pepper, bread + Ayran",
+      "category": "Back To City Menu",
+      "image_url": "./assets/menu-generated/38b50fc1-ee66-526a-ab23-d5d5bd57a7da.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients; cream plate, neutral table, natural light, no text or logos."
     }
   ],
-  "next_category": "Back To City Menu"
+  "next_category": "Pita & Lahmacun",
+  "categories": [
+    "Doners",
+    "Back To City Menu"
+  ]
 }
