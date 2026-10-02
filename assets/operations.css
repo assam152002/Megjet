@@ -1,0 +1,14 @@
+body>header{padding:10px 16px!important;min-height:0!important;border-radius:0 0 18px 18px!important;overflow:visible!important}
+.megjet-header-bar{display:flex;align-items:center;gap:10px;max-width:1120px;margin:auto}
+body>header .brand{margin:0!important;display:flex!important;align-items:center;gap:8px;flex:1;min-width:0;font-size:20px!important}
+body>header .brand .megjet-logo{width:40px!important;height:40px!important;object-fit:contain}
+body>header .customer-account-btn{padding:8px 10px!important;min-height:40px;white-space:nowrap}
+#megjetHeaderToggle{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.6);color:white;min-height:40px;padding:8px 12px}
+#megjetHeaderDetails{max-width:1120px;margin:10px auto 0;display:flex;gap:10px 18px;align-items:center;flex-wrap:wrap}
+#megjetHeaderDetails[hidden]{display:none!important}
+#megjetHeaderDetails>div{margin:0!important}
+#megjetHeaderDetails .megjet-preferences{margin:0!important}
+.vendor-profile-description{white-space:pre-line}
+#vendorBioEn,#vendorBioTr{width:100%;resize:vertical}
+.megjet-push-message{font-size:12px;line-height:1.5;margin-top:8px}
+@media(max-width:420px){body>header{padding:8px 10px!important}.megjet-header-bar{gap:7px}body>header .brand{font-size:16px!important}.megjet-header-bar .account-dot{display:none}body>header .customer-account-btn{font-size:11px!important}#megjetHeaderToggle{font-size:12px;padding:8px}}
