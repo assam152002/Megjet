@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 188,
+  "generated": 198,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -2255,6 +2255,126 @@
       "path": "assets/menu-generated/05c79388-e89f-5ba5-8bf2-94b5180ccc61.jpg",
       "generation_mode": "built-in",
       "blob_sha": "d756d2a01a49ae2799abc70aec96173507a7bfba"
+    },
+    {
+      "id": "b1825fb7-8eb1-5738-aabf-6d33ccd356c1",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kentucy Tavuk Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/b1825fb7-8eb1-5738-aabf-6d33ccd356c1.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kentucy Tavuk Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/b1825fb7-8eb1-5738-aabf-6d33ccd356c1.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "45fe4586cf7b198c080a0ea1b915736f1482f9d9"
+    },
+    {
+      "id": "03953211-7694-5ca6-8e03-44464b5034d7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Wingers",
+      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
+      "image_url": "./assets/menu-generated/03953211-7694-5ca6-8e03-44464b5034d7.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Wingers\",\"description\":\"Served with sauce & Cajun fries\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/03953211-7694-5ca6-8e03-44464b5034d7.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "548df2cb5bdfac295a3e94a2086348d4d4f6e647"
+    },
+    {
+      "id": "24709a5b-e6b4-50b3-a8d7-4d014d6c3be9",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Köfte Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/24709a5b-e6b4-50b3-a8d7-4d014d6c3be9.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Köfte Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/24709a5b-e6b4-50b3-a8d7-4d014d6c3be9.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "267bfce8c792b4335337e1867bac58ee149281dc"
+    },
+    {
+      "id": "f112e663-3ad0-57be-bbd5-6585da76d79b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Wrap + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": "./assets/menu-generated/f112e663-3ad0-57be-bbd5-6585da76d79b.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Doner Wrap + Cajun Fries\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f112e663-3ad0-57be-bbd5-6585da76d79b.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "270b15b9fe426b64eaa2305dd3c657d2b53e56e9"
+    },
+    {
+      "id": "997f3111-601f-5b52-9f20-3dff39c08a55",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Steak Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/997f3111-601f-5b52-9f20-3dff39c08a55.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Steak Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/997f3111-601f-5b52-9f20-3dff39c08a55.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "08e9688102fc8e4b831c4f1854922ffdea0878d2"
+    },
+    {
+      "id": "1e425c08-e3b6-58b0-bc84-39e5cd1c9d63",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Sandwich + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": "./assets/menu-generated/1e425c08-e3b6-58b0-bc84-39e5cd1c9d63.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Doner Sandwich + Cajun Fries\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/1e425c08-e3b6-58b0-bc84-39e5cd1c9d63.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "949585a7f932a8586c2587c2d828e8af3306803f"
+    },
+    {
+      "id": "66e23296-c634-5433-9738-1a432309b23e",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Tavuk Şiş Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/66e23296-c634-5433-9738-1a432309b23e.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tavuk Şiş Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/66e23296-c634-5433-9738-1a432309b23e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "34c1da241cba022d8aef5654e7c53d2a58b8fb7b"
+    },
+    {
+      "id": "b1d1a3b5-4585-5d81-81ad-7ae3010c5c03",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Burger + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": "./assets/menu-generated/b1d1a3b5-4585-5d81-81ad-7ae3010c5c03.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Doner Burger + Cajun Fries\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/b1d1a3b5-4585-5d81-81ad-7ae3010c5c03.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "78bd7416bfe3bb37f2f0dc7656232e616fbfeee5"
+    },
+    {
+      "id": "d6d7b507-e46e-5e7a-ac92-2e2acf4dbf68",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Etli Pide",
+      "description": "[Pideler & Çorbalar] Domates, salatalık ve maydanoz ile servis edilir.",
+      "image_url": "./assets/menu-generated/d6d7b507-e46e-5e7a-ac92-2e2acf4dbf68.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Etli Pide\",\"description\":\"Domates, salatalık ve maydanoz ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/d6d7b507-e46e-5e7a-ac92-2e2acf4dbf68.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "fd87f09d0baa49d7f50df52c5edebdce229edfb1"
+    },
+    {
+      "id": "7a37bbcd-fb8c-51c5-a11b-c00374d93524",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Service",
+      "description": "[Doners Menu] ",
+      "image_url": "./assets/menu-generated/7a37bbcd-fb8c-51c5-a11b-c00374d93524.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Doner Service\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/7a37bbcd-fb8c-51c5-a11b-c00374d93524.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "7a18692fbcf0b0c0a5b3b8ab4fed37dea67c63b8"
     }
   ]
 }
