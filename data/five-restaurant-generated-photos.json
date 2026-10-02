@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 110,
+  "generated": 120,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -1315,6 +1315,126 @@
       "generation_mode": "built-in",
       "path": "assets/menu-generated/af9c861f-8e13-557c-ad27-8d9a86d1a755.jpg",
       "blob_sha": "99de41243b8a70a157bfb41ab61051cbfce94b57"
+    },
+    {
+      "id": "9218cb74-83ae-57a3-ba42-c6423bb32780",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Peynirli Salata",
+      "description": "[Salatalar] Kızartılmış hellim, özel salata sosu, beyaz peynir, mevsim yeşillikleri",
+      "image_url": "./assets/menu-generated/9218cb74-83ae-57a3-ba42-c6423bb32780.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Peynirli Salata\",\"description\":\"Kızartılmış hellim, özel salata sosu, beyaz peynir, mevsim yeşillikleri\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9218cb74-83ae-57a3-ba42-c6423bb32780.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c8f301f76b1fca6890b07ce2c8a5d7f0f26564ae"
+    },
+    {
+      "id": "07f0286b-3d30-5855-88fd-7f6cf1f9c40e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Smoky Hot Dog Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": "./assets/menu-generated/07f0286b-3d30-5855-88fd-7f6cf1f9c40e.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Smoky Hot Dog Sandwich & Cajun Fries\",\"description\":\"All sandwiches are served with Cajun fries\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/07f0286b-3d30-5855-88fd-7f6cf1f9c40e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "a76684094e29a4e90e9109d93b441e468644430e"
+    },
+    {
+      "id": "a09a3adb-4044-52fc-abee-50c9e7521b07",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Stuffed Chicken",
+      "description": "[Other Dishes] Fries, rice, salad, bread",
+      "image_url": "./assets/menu-generated/a09a3adb-4044-52fc-abee-50c9e7521b07.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Stuffed Chicken\",\"description\":\"Fries, rice, salad, bread\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/a09a3adb-4044-52fc-abee-50c9e7521b07.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "8714cdb2c7067e5426861830bea13df7bbe10186"
+    },
+    {
+      "id": "9057f722-83df-5d08-8a2d-08301fb6b055",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Lotus Cheesecake",
+      "description": "[Pastry] ",
+      "image_url": "./assets/menu-generated/9057f722-83df-5d08-8a2d-08301fb6b055.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Lotus Cheesecake\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9057f722-83df-5d08-8a2d-08301fb6b055.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "93d60728d6b0d5e049c62968de491900ea51f6ac"
+    },
+    {
+      "id": "51bb7b25-1a39-5384-8a56-9ccb23274007",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Sezar Salata",
+      "description": "[Salatalar] Kızartılmış tavuk, sezar sos, mevsim yeşillikleri",
+      "image_url": "./assets/menu-generated/51bb7b25-1a39-5384-8a56-9ccb23274007.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Sezar Salata\",\"description\":\"Kızartılmış tavuk, sezar sos, mevsim yeşillikleri\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/51bb7b25-1a39-5384-8a56-9ccb23274007.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d49569a63d81ddd1576a69d82634c4fadcb2c631"
+    },
+    {
+      "id": "0c5fc666-e307-5d36-a639-6e3d0da233f3",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Chicken & Mushroom Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": "./assets/menu-generated/0c5fc666-e307-5d36-a639-6e3d0da233f3.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cheesy Chicken & Mushroom Sandwich & Cajun Fries\",\"description\":\"All sandwiches are served with Cajun fries\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/0c5fc666-e307-5d36-a639-6e3d0da233f3.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "06ebf51733ac0aa8b6f54e5320d101448b8331bb"
+    },
+    {
+      "id": "308f189f-bb4f-56d4-83ae-b6c5a566e223",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Fries",
+      "description": "[Other Dishes] Ketchup, mayonnaise",
+      "image_url": "./assets/menu-generated/308f189f-bb4f-56d4-83ae-b6c5a566e223.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Fries\",\"description\":\"Ketchup, mayonnaise\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/308f189f-bb4f-56d4-83ae-b6c5a566e223.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "9c2ad8574600f7a5d88134858d9c1512d3ee0f04"
+    },
+    {
+      "id": "056c40f6-3844-5255-b7b1-95d8647e64dd",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Yanık Cheesecake",
+      "description": "[Pastry] ",
+      "image_url": "./assets/menu-generated/056c40f6-3844-5255-b7b1-95d8647e64dd.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Yanık Cheesecake\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/056c40f6-3844-5255-b7b1-95d8647e64dd.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "28996aaf87f3b258af687b870f1e4fe73907b2e1"
+    },
+    {
+      "id": "694a966d-abf2-5f2d-a815-461a016a8073",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Tavuklu Salata",
+      "description": "[Salatalar] Kızartılmış tavuk, özel salata sosu, mevsim yeşillikleri",
+      "image_url": "./assets/menu-generated/694a966d-abf2-5f2d-a815-461a016a8073.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tavuklu Salata\",\"description\":\"Kızartılmış tavuk, özel salata sosu, mevsim yeşillikleri\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/694a966d-abf2-5f2d-a815-461a016a8073.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "57b53327f09c7eccb53b71cf7a29f6593f7f1cf2"
+    },
+    {
+      "id": "f37cbcd5-49ee-5014-8e73-2ed7e6304656",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Butcher Meatball Salad",
+      "description": "[Salads] ",
+      "image_url": "./assets/menu-generated/f37cbcd5-49ee-5014-8e73-2ed7e6304656.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Butcher Meatball Salad\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f37cbcd5-49ee-5014-8e73-2ed7e6304656.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "53e54dbeed45cfda0a29c533297fb22429426627"
     }
   ]
 }
