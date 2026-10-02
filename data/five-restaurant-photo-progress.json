@@ -1,40 +1,8 @@
 {
   "total": 299,
-  "published_and_linked": 106,
-  "remaining": 193,
+  "published_and_linked": 110,
+  "remaining": 189,
   "remaining_items": [
-    {
-      "id": "9e4da78d-8229-5a6e-8101-f0ea6b57a11a",
-      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
-      "name": "Ton Balıklı Sandviç",
-      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
-      "image_url": null,
-      "restaurant": "Coffeeholic Boutique Bakery House"
-    },
-    {
-      "id": "b466938c-5160-5add-b265-46a142095f57",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Hot Dog Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "2852d7a3-d1c1-5999-8865-6e10805fc0bd",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Crispy Chicken Menu",
-      "description": "[Other Dishes] Fries, ketchup, mayonnaise + Drink",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "af9c861f-8e13-557c-ad27-8d9a86d1a755",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Tiramisu",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
     {
       "id": "9218cb74-83ae-57a3-ba42-c6423bb32780",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
