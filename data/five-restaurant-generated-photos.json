@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 176,
+  "generated": 188,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -1983,12 +1983,14 @@
       "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
       "name": "Turnip Juice",
       "description": "[Drinks] ",
-      "image_url": "./assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35.jpg",
+      "image_url": "./assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35-r2.jpg",
       "restaurant": "Garson Ali (Dumlupınar)",
-      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Turnip Juice\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
-      "path": "assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35.jpg",
+      "prompt": "One square photorealistic food delivery menu photo of Turkish ŞALGAM SUYU (Turnip Juice): a clear glass containing the traditional dark burgundy-red fermented purple-carrot and turnip drink, on pale neutral table, realistic soft daylight, centered close view. Deep opaque ruby-purple drink. Not white turnip juice. No vegetables, labels, text, logos, people or collage. Generic illustrative restaurant menu photograph.",
+      "path": "assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35-r2.jpg",
       "generation_mode": "built-in",
-      "blob_sha": "8efdfa466f780f3527cf9e61b173372d639d3718"
+      "blob_sha": "2a26f1324d6b7849a73a815f4d8b469951db6128",
+      "previous_image_url": "./assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35.jpg",
+      "revision": 2
     },
     {
       "id": "acc8dde5-8446-5b1a-9447-61a0f189df02",
@@ -2109,6 +2111,150 @@
       "path": "assets/menu-generated/22911aec-65cf-5489-b749-be97e35367fd.jpg",
       "generation_mode": "built-in",
       "blob_sha": "55200da415c0717e780f5101cf274cbf1acb4431"
+    },
+    {
+      "id": "ec41772c-5ffd-52e6-8795-12924bb30133",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kuzu Şiş Kebap Servis",
+      "description": "[Dürüm & Kebap Çeşitleri] ",
+      "image_url": "./assets/menu-generated/ec41772c-5ffd-52e6-8795-12924bb30133.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kuzu Şiş Kebap Servis\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/ec41772c-5ffd-52e6-8795-12924bb30133.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "958a93121691c41bb2cdab3e910d838f84105a1f"
+    },
+    {
+      "id": "f1835680-3db0-5e65-9ece-322d7a77e8f0",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Fajita Wrap + Cajun Fries",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/f1835680-3db0-5e65-9ece-322d7a77e8f0.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Fajita Wrap + Cajun Fries\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f1835680-3db0-5e65-9ece-322d7a77e8f0.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "287822780b722e534647f00a9794ba3274447b21"
+    },
+    {
+      "id": "31e2fee8-e582-57c9-a110-8e27579d2d04",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Adana Kebap Servis",
+      "description": "[Dürüm & Kebap Çeşitleri] ",
+      "image_url": "./assets/menu-generated/31e2fee8-e582-57c9-a110-8e27579d2d04.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Adana Kebap Servis\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/31e2fee8-e582-57c9-a110-8e27579d2d04.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "bb1ab084b0f71e293f2e825330bc6873c1a827f1"
+    },
+    {
+      "id": "3e4b8bf5-5161-55b3-8a0f-b22ee97f1792",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Nachos",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/3e4b8bf5-5161-55b3-8a0f-b22ee97f1792.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mexican Chicken Nachos\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/3e4b8bf5-5161-55b3-8a0f-b22ee97f1792.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "63cee80e448c2998bf87e9b5cd4f7cabc3168317"
+    },
+    {
+      "id": "1d6ca026-57b3-5829-aacf-f2347027f6c9",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Tavuk Şiş Servis",
+      "description": "[Dürüm & Kebap Çeşitleri] ",
+      "image_url": "./assets/menu-generated/1d6ca026-57b3-5829-aacf-f2347027f6c9.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tavuk Şiş Servis\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/1d6ca026-57b3-5829-aacf-f2347027f6c9.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "49d104a904df6c17a77c0969c927f33328be085e"
+    },
+    {
+      "id": "51e67dee-4d75-5c91-9aec-01254d51c778",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Minced Meat Nachos",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/51e67dee-4d75-5c91-9aec-01254d51c778.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mexican Minced Meat Nachos\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/51e67dee-4d75-5c91-9aec-01254d51c778.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "a369e4b50918a8ec12aa302371841da0f8c57639"
+    },
+    {
+      "id": "fc7c686e-2822-5f69-aa2e-f1aa6c981aa3",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Yaprak Döner Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/fc7c686e-2822-5f69-aa2e-f1aa6c981aa3.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Yaprak Döner Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/fc7c686e-2822-5f69-aa2e-f1aa6c981aa3.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "3b0a530555bd68b0771484a49464558a525787ea"
+    },
+    {
+      "id": "4d75d0c5-da85-5386-8684-3270746a4bd9",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Nachos",
+      "description": "[À La Mexicana] ",
+      "image_url": "./assets/menu-generated/4d75d0c5-da85-5386-8684-3270746a4bd9.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cheesy Nachos\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/4d75d0c5-da85-5386-8684-3270746a4bd9.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "8f7aab546c4fb925cfe00bbce3168e3b05e80966"
+    },
+    {
+      "id": "92da539b-28fa-5189-95cc-0ff009721f91",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kuzu Şiş Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/92da539b-28fa-5189-95cc-0ff009721f91.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kuzu Şiş Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/92da539b-28fa-5189-95cc-0ff009721f91.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "b7f29535b389e0ffeb25726e9ff10a82221e7adf"
+    },
+    {
+      "id": "c951557a-c4f3-5f20-a39e-5d1f4442fcbe",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Tenders",
+      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
+      "image_url": "./assets/menu-generated/c951557a-c4f3-5f20-a39e-5d1f4442fcbe.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tenders\",\"description\":\"Served with sauce & Cajun fries\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/c951557a-c4f3-5f20-a39e-5d1f4442fcbe.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "5534af6da920d058ac448afcd999b79a3b229276"
+    },
+    {
+      "id": "c66e429a-2b43-5892-9a8c-6aca0ee5fb9e",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Adana Dürüm",
+      "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
+      "image_url": "./assets/menu-generated/c66e429a-2b43-5892-9a8c-6aca0ee5fb9e.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Adana Dürüm\",\"description\":\"Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/c66e429a-2b43-5892-9a8c-6aca0ee5fb9e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "689090f7f1b161dd4d1ff3401fd0160a28b6ba2d"
+    },
+    {
+      "id": "05c79388-e89f-5ba5-8bf2-94b5180ccc61",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Wings",
+      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
+      "image_url": "./assets/menu-generated/05c79388-e89f-5ba5-8bf2-94b5180ccc61.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Wings\",\"description\":\"Served with sauce & Cajun fries\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/05c79388-e89f-5ba5-8bf2-94b5180ccc61.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d756d2a01a49ae2799abc70aec96173507a7bfba"
     }
   ]
 }
