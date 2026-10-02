@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "completed": 5,
+  "completed": 10,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -50,6 +50,56 @@
       "description": "[Sandwich & Toast & Wrap] ",
       "prompt": "Use case: product-mockup. One square photorealistic food delivery menu image. Food item: a Turkish lavash wrap filled with grilled liver pieces, onion and parsley, cut diagonally to show filling; small plain glass of white ayran alongside. Clean cream plate or appropriate white cup on a pale neutral tabletop, soft natural light, realistic appetizing food textures, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative food photograph; not an actual restaurant photograph.",
       "image_url": "./assets/menu-generated/396340b5-7a7c-5f24-93e3-cc6f33f139a5.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "8945e8b5-8101-556d-9cab-406175a61a32",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "restaurant": "Island Coffee",
+      "name": "Americano",
+      "description": "[Hot Coffees] ",
+      "prompt": "Use case: product-mockup. One square photorealistic menu photograph: hot black Americano coffee in a white ceramic cup and saucer; no milk. Cream plate or appropriate white cup on pale neutral tabletop, soft natural daylight, realistic appetizing texture, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative restaurant photo.",
+      "image_url": "./assets/menu-generated/8945e8b5-8101-556d-9cab-406175a61a32.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "f8813cda-0e88-5bdb-a8d4-58115cf48926",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "name": "Ada Lavash Wrap",
+      "description": "[Most Preferred] ",
+      "prompt": "Use case: product-mockup. One square photorealistic menu photograph: a Turkish lavash wrap filled with roasted shredded chicken, coleslaw and pickles, cut diagonally to show filling; no fries or drink. Cream plate or appropriate white cup on pale neutral tabletop, soft natural daylight, realistic appetizing texture, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative restaurant photo.",
+      "image_url": "./assets/menu-generated/f8813cda-0e88-5bdb-a8d4-58115cf48926.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "c7559cdf-1fcf-5d0c-84fc-c3942dcc8d1f",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "name": "Kıbrıs Kahvaltısı",
+      "description": "[Kahvaltılık] ",
+      "prompt": "Use case: product-mockup. One square photorealistic menu photograph: a Cypriot breakfast plate with grilled halloumi, black and green olives, sliced tomato and cucumber, egg and bread; no drink. Cream plate or appropriate white cup on pale neutral tabletop, soft natural daylight, realistic appetizing texture, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative restaurant photo.",
+      "image_url": "./assets/menu-generated/c7559cdf-1fcf-5d0c-84fc-c3942dcc8d1f.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "7c532bc0-000e-5dd5-ab7b-19630b54a909",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "restaurant": "A La Carte (Sakarya)",
+      "name": "Double Cheese Burger",
+      "description": "[Handmade Burgers] ",
+      "prompt": "Use case: product-mockup. One square photorealistic menu photograph: a double beef patty cheeseburger with melted cheese in a toasted bun; no fries or drink. Cream plate or appropriate white cup on pale neutral tabletop, soft natural daylight, realistic appetizing texture, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative restaurant photo.",
+      "image_url": "./assets/menu-generated/7c532bc0-000e-5dd5-ab7b-19630b54a909.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "222a8728-bdba-531c-b160-7b862abf3286",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "name": "Chicken Skewer Wrap + Ayran",
+      "description": "[Sandwich & Toast & Wrap] ",
+      "prompt": "Use case: product-mockup. One square photorealistic menu photograph: a Turkish lavash wrap with grilled chicken skewer pieces, onion and parsley, cut diagonally to show filling, small plain glass of white ayran beside it. Cream plate or appropriate white cup on pale neutral tabletop, soft natural daylight, realistic appetizing texture, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative restaurant photo.",
+      "image_url": "./assets/menu-generated/222a8728-bdba-531c-b160-7b862abf3286.jpg",
       "generation_mode": "built-in"
     }
   ]
