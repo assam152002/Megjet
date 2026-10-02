@@ -1,0 +1,56 @@
+{
+  "total": 299,
+  "completed": 5,
+  "items": [
+    {
+      "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "restaurant": "Island Coffee",
+      "name": "Espresso",
+      "description": "[Hot Coffees] ",
+      "prompt": "Use case: product-mockup. One square photorealistic food delivery menu image. Food item: a single shot of rich espresso with crema in a small white demitasse cup and saucer, no milk. Clean cream plate or appropriate white cup on a pale neutral tabletop, soft natural light, realistic appetizing food textures, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative food photograph; not an actual restaurant photograph.",
+      "image_url": "./assets/menu-generated/9ba46cf9-eedd-5271-b407-e62a095ada40.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "46282e51-6321-5166-be04-80ebd1d72a44",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "name": "Island Sandwich Menu",
+      "description": "[Most Preferred] Coleslaw, Roasted Mohair Chicken, Mixed Pickles with Turnips",
+      "prompt": "Use case: product-mockup. One square photorealistic food delivery menu image. Food item: a chicken sandwich filled with shredded roasted chicken, coleslaw and mixed pickles including turnip; no invented fries or drink. Clean cream plate or appropriate white cup on a pale neutral tabletop, soft natural light, realistic appetizing food textures, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative food photograph; not an actual restaurant photograph.",
+      "image_url": "./assets/menu-generated/46282e51-6321-5166-be04-80ebd1d72a44.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "72486a4c-a9ae-59f8-a0f0-f01e8066dbfa",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "name": "İngiliz Kahvaltısı",
+      "description": "[Kahvaltılık] ",
+      "prompt": "Use case: product-mockup. One square photorealistic food delivery menu image. Food item: a classic English breakfast on one plate with eggs, sausages, bacon, baked beans, grilled tomato, mushrooms and toast; no drink. Clean cream plate or appropriate white cup on a pale neutral tabletop, soft natural light, realistic appetizing food textures, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative food photograph; not an actual restaurant photograph.",
+      "image_url": "./assets/menu-generated/72486a4c-a9ae-59f8-a0f0-f01e8066dbfa.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "68808c3a-ac44-5067-af89-fa838ecf0978",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "restaurant": "A La Carte (Sakarya)",
+      "name": "Double King Burger",
+      "description": "[Handmade Burgers] ",
+      "prompt": "Use case: product-mockup. One square photorealistic food delivery menu image. Food item: a double beef patty burger in a toasted bun with cheese, lettuce and tomato; no fries or drink. Clean cream plate or appropriate white cup on a pale neutral tabletop, soft natural light, realistic appetizing food textures, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative food photograph; not an actual restaurant photograph.",
+      "image_url": "./assets/menu-generated/68808c3a-ac44-5067-af89-fa838ecf0978.jpg",
+      "generation_mode": "built-in"
+    },
+    {
+      "id": "396340b5-7a7c-5f24-93e3-cc6f33f139a5",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "name": "Liver Wrap + Ayran",
+      "description": "[Sandwich & Toast & Wrap] ",
+      "prompt": "Use case: product-mockup. One square photorealistic food delivery menu image. Food item: a Turkish lavash wrap filled with grilled liver pieces, onion and parsley, cut diagonally to show filling; small plain glass of white ayran alongside. Clean cream plate or appropriate white cup on a pale neutral tabletop, soft natural light, realistic appetizing food textures, centered three-quarter close view with safe square crop margins. No text, logos, watermarks, hands or people. Generic illustrative food photograph; not an actual restaurant photograph.",
+      "image_url": "./assets/menu-generated/396340b5-7a7c-5f24-93e3-cc6f33f139a5.jpg",
+      "generation_mode": "built-in"
+    }
+  ]
+}
