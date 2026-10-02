@@ -1,0 +1,79 @@
+{
+  "restaurant": "Kebap Dünyası (Sakarya)",
+  "category": "Doners",
+  "items": [
+    {
+      "id": "f61bad4e-31a4-565d-b26d-92003ff876c4",
+      "name": "Chicken Doner Wrap + Ayran",
+      "description": "Onion, Parsley, Tomato",
+      "image_url": "./assets/menu-generated/f61bad4e-31a4-565d-b26d-92003ff876c4.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "fa109306-6c86-58a8-8b6c-2b3812a19377",
+      "name": "Sauced Chicken Doner Wrap + Ayran",
+      "description": "Onion, Parsley, Tomato",
+      "image_url": "./assets/menu-generated/fa109306-6c86-58a8-8b6c-2b3812a19377.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "6a4b0e60-7602-523b-9c3c-742c1f67fc0d",
+      "name": "Chicken Doner Fries Wrap + Ayran",
+      "description": "Onion, Parsley, Tomato",
+      "image_url": "./assets/menu-generated/6a4b0e60-7602-523b-9c3c-742c1f67fc0d.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "b913b839-36ff-5cac-8988-5431223e6112",
+      "name": "Sauced Doner Service + Ayran",
+      "description": "Served with Rice, Fries, Salad",
+      "image_url": "./assets/menu-generated/b913b839-36ff-5cac-8988-5431223e6112.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "47152742-0944-5c8a-bb1c-486187008f47",
+      "name": "Doner Adana + Ayran",
+      "description": "Served with Rice, Fries, Salad",
+      "image_url": "./assets/menu-generated/47152742-0944-5c8a-bb1c-486187008f47.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "c0c9a1b7-2528-571d-b1f1-8733c025d62a",
+      "name": "Doner Liver + Ayran",
+      "description": "Served with Rice, Fries, Salad",
+      "image_url": "./assets/menu-generated/c0c9a1b7-2528-571d-b1f1-8733c025d62a.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "66a617b5-9b58-5deb-bd41-c29df398a541",
+      "name": "Doner Meat + Ayran",
+      "description": "Served with Rice, Fries, Salad",
+      "image_url": "./assets/menu-generated/66a617b5-9b58-5deb-bd41-c29df398a541.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    },
+    {
+      "id": "a7ae00c8-433a-5f99-bee1-11d86c45e2e5",
+      "name": "Chicken Doner Iskender + Ayran",
+      "description": "Served with Rice, Fries, Salad",
+      "image_url": "./assets/menu-generated/a7ae00c8-433a-5f99-bee1-11d86c45e2e5.jpg",
+      "generation_mode": "built-in",
+      "photo_type": "generic illustrative",
+      "visual_spec": "Square photorealistic food photograph matching item name and listed ingredients. Cream plate, pale neutral table, natural daylight, no text or logos."
+    }
+  ],
+  "next_category": "Back To City Menu"
+}
