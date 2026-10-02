@@ -1,0 +1,88 @@
+{
+  "date": "2026-10-02",
+  "frontend_commit": "8f246c2f726a28911d6e6544280aaa3cae93afe9",
+  "restaurants": [
+    {
+      "name": "Kebap Dünyası (Sakarya)",
+      "products": 78,
+      "available": 78,
+      "categories": 10
+    },
+    {
+      "name": "Köz Adası (Salamis Yolu)",
+      "products": 17,
+      "available": 17,
+      "categories": 4
+    },
+    {
+      "name": "Garson Ali (Dumlupınar)",
+      "products": 39,
+      "available": 39,
+      "categories": 8
+    },
+    {
+      "name": "O'Feel Du Grill",
+      "products": 93,
+      "available": 92,
+      "categories": 12
+    },
+    {
+      "name": "Island Coffee",
+      "products": 32,
+      "available": 32,
+      "categories": 5
+    },
+    {
+      "name": "Coffeeholic Boutique Bakery House",
+      "products": 114,
+      "available": 114,
+      "categories": 12
+    }
+  ],
+  "checks": [
+    "Every imported product matches extracted name, description, base price, availability, sequence, and option groups",
+    "Anonymous customer access verified for all six restaurants",
+    "744 rollback-only checkout pricing cases passed; quantities, matching retries, invalid choice rejection",
+    "Regular and large Latte in the same checkout retain distinct prices; subtotal 400 TL",
+    "Live browser category and item counts match for all six restaurants",
+    "Live browser: large Latte 210 TL, large Margherita 600 TL, 12 Tenders plus egg 595 TL",
+    "Live browser: 3 independent pasta choices for 800 TL deal",
+    "English/Turkish names, descriptions and category labels switch; restaurant name remains unchanged",
+    "373 bilingual database records match reviewed local translations",
+    "Published index.html, menu-options.js and sw.js hashes match tested files",
+    "Repeat import produces no duplicate products; no admin data overwritten",
+    "Test browser cart cleared; all database test orders rolled back"
+  ],
+  "pending": [
+    {
+      "item": "Zereshk polo ba morgh",
+      "reason": "Two prices without size/portion labels",
+      "prices": [
+        415.0,
+        505.0
+      ]
+    },
+    {
+      "reason": "Sauces listed without prices; preserved in source record, not sold at an invented price",
+      "sauces": [
+        "Mayonnaise",
+        "Ketchup",
+        "Cheddar",
+        "Mexican Salsa",
+        "Hot Spicy",
+        "BBQ Ranch",
+        "Spicy Ranch",
+        "Mustard",
+        "Garlic Mayonnaise",
+        "Sweet Chilli",
+        "Thai Sweet & Sour",
+        "Cocktail Sauce"
+      ]
+    }
+  ],
+  "limitations": [
+    "No generated photos requested in this import; restaurant branding remains editable in Admin",
+    "OFeel unlabelled two-price dish unavailable; unpriced sauce choices pending confirmation",
+    "Live Admin sign-in not repeated; menu management uses existing database records"
+  ]
+}

@@ -1,0 +1,5 @@
+BEGIN; DO $test$ DECLARE oid uuid:=gen_random_uuid(); rows_count integer; actual numeric; result json; BEGIN
+result:=public.create_customer_order_retry(oid,'Rollback variant test','0000000000','Rollback verification address','Cash on Delivery',NULL,'[{"product_id": "1dd15495-6048-52d3-9e30-a447132e4b2c", "quantity": 1, "customizations": {"size": ["option-1"]}}, {"product_id": "1dd15495-6048-52d3-9e30-a447132e4b2c", "quantity": 1, "customizations": {"size": ["option-2"]}}]'::jsonb);
+SELECT count(*),sum(total_price) INTO rows_count,actual FROM public.order_items WHERE order_id=oid;
+IF rows_count<>2 OR actual<>400 THEN RAISE EXCEPTION 'Different sizes did not preserve separate prices';END IF;
+END $test$; ROLLBACK; SELECT 'Passed: regular and large Latte in the same checkout remain separate, subtotal 400 TL' AS result;
