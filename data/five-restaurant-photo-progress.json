@@ -1,32 +1,8 @@
 {
   "total": 299,
-  "published_and_linked": 93,
-  "remaining": 206,
+  "published_and_linked": 96,
+  "remaining": 203,
   "remaining_items": [
-    {
-      "id": "ceeba4e5-e521-5288-beb4-b87cfb6c9f59",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Fuse Tea",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "43433a2d-f490-5a4a-8439-8d800bd8f365",
-      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
-      "name": "Tavuklu Sandviç",
-      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
-      "image_url": null,
-      "restaurant": "Coffeeholic Boutique Bakery House"
-    },
-    {
-      "id": "90778bb6-9ec6-5f07-b870-781f1839191c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Beef Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
     {
       "id": "f2c119da-2012-530b-a1a5-dc379d8d0e23",
       "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
