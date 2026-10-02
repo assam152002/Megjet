@@ -17,3 +17,18 @@ body>header .customer-account-btn{padding:8px 10px!important;min-height:40px;whi
 html{overflow-x:hidden;overflow-x:clip;overscroll-behavior-x:none}
 body{max-width:100%;overscroll-behavior-x:none}
 #vendors,.quick-row,.growth-strip,.growth-feature-list{max-width:100%;overscroll-behavior-x:contain}
+
+#vendorProfile .item img.product-image-admin,#vendors .item img.product-image-admin{cursor:zoom-in}
+#vendorProfile .item img.product-image-admin:focus-visible{outline:3px solid #0eaee8;outline-offset:3px}
+.megjet-photo-preview{width:min(92vw,680px);max-height:89vh;max-height:89dvh;padding:16px;border:0;border-radius:18px;background:#fff;color:#123452;overflow:auto;box-shadow:0 20px 80px #0006}
+.megjet-photo-preview::backdrop{background:rgba(0,12,24,.78)}
+.megjet-photo-heading{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.megjet-photo-heading h2{flex:1;min-width:0;margin:0;font-size:20px;overflow-wrap:anywhere}
+#megjetPhotoClose{flex:none;width:44px;height:44px;padding:0;font-size:20px;border-radius:50%;background:#eef7fc;color:#123452;border:1px solid #cfe3ef}
+#megjetPhotoLarge{display:block;width:100%;max-height:62vh;max-height:62dvh;object-fit:contain;border-radius:12px}
+#megjetPhotoLarge[hidden],#megjetPhotoError[hidden]{display:none}
+#megjetPhotoPrice{margin:12px 0 6px;font-weight:800}
+#megjetPhotoDescription{margin:0;white-space:pre-line;overflow-wrap:anywhere}
+html.megjet-photo-open,html.megjet-photo-open body{overflow-y:hidden!important}
+html[data-theme="dark"] .megjet-photo-preview{background:#112638;color:#e6f2fa}
+html[data-theme="dark"] #megjetPhotoClose{background:#223f52;color:#fff;border-color:#406075}
