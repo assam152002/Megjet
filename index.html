@@ -1885,7 +1885,14 @@ async function fetchJson(url,options={},timeout=30000){
   }catch(e){
     const temporary=e.name==="AbortError"||e instanceof TypeError||[502,503,504].includes(e.status);
     if(temporary&&attempt+1<attempts)continue;
-    if(e.name==="AbortError") throw new Error("Request timed out. Check your internet connection or Supabase API.");
+    const endpoint=String(url).split('/rest/v1/')[1]?.split('?')[0]||'connection';
+    const source=({vendors:'RESTAURANTS',products:'MENU',product_translations:'LANGUAGE',vendor_menu_categories:'CATEGORIES'})[endpoint]||'CONNECTION';
+    e.connectionReference=source+'-'+(e.name==="AbortError"?'TIMEOUT':e instanceof TypeError?'NETWORK':e.status?'HTTP-'+e.status:'RESPONSE');
+    if(e.name==="AbortError"){
+      const error=new Error("Request timed out. Check your internet connection or Supabase API.");
+      error.connectionReference=e.connectionReference;
+      throw error;
+    }
     throw e;
   }finally{clearTimeout(timer);}
   }
@@ -1967,11 +1974,12 @@ function load(){
   restaurantLoadPromise=loadRestaurants().finally(()=>{restaurantLoadPromise=null;});
   return restaurantLoadPromise;
 }
-function showRestaurantLoadError(){
+function showRestaurantLoadError(error){
   restaurantLoadFailed=true;
   hideSetup();
   setStatus("Could not reach the live menu. Please retry.","bad");
-  $("vendors").innerHTML='<div class="card" role="alert"><h2>Restaurants could not load</h2><p>Check your internet connection, then tap Retry. If this keeps happening, try another Wi-Fi network or mobile data.</p><button type="button" onclick="load()">Retry</button></div>';
+  const reference=error?.connectionReference||'DISPLAY-ERROR';
+  $("vendors").innerHTML='<div class="card" role="alert"><h2>Restaurants could not load</h2><p>Check your internet connection, then tap Retry. If this keeps happening, try another Wi-Fi network or mobile data.</p><p class="muted">Support reference: '+escapeHtml(reference)+'</p><button type="button" onclick="load()">Retry</button></div>';
 }
 window.addEventListener("online",()=>{if(restaurantLoadFailed)load();});
 async function loadRestaurants(){
@@ -2006,7 +2014,7 @@ async function loadRestaurants(){
     loadGrowthHome().catch(()=>{});
   }catch(e){
     console.warn("Megjet live menu load failed:",e);
-    showRestaurantLoadError();
+    showRestaurantLoadError(e);
   }
 }
 
