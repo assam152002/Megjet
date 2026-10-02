@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 156,
+  "generated": 166,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -1869,6 +1869,126 @@
       "path": "assets/menu-generated/bd541e16-a6dc-5d5e-8de1-8a619003c014.jpg",
       "generation_mode": "built-in",
       "blob_sha": "617d00eee8c17de424798fc5965d2c5f74d582e9"
+    },
+    {
+      "id": "c4fe2618-3c2a-563a-b58e-5d2869d645f1",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Water (50 cl.)",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/c4fe2618-3c2a-563a-b58e-5d2869d645f1.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Water (50 cl.)\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/c4fe2618-3c2a-563a-b58e-5d2869d645f1.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "a16bc68d3e6fd730a1b24a7678111ae412efabf6"
+    },
+    {
+      "id": "4e369dd9-b035-5218-b25c-8d9dea0e3308",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Tavuk Prenses",
+      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
+      "image_url": "./assets/menu-generated/4e369dd9-b035-5218-b25c-8d9dea0e3308.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tavuk Prenses\",\"description\":\"Pilav, patates kızartması ve salata ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/4e369dd9-b035-5218-b25c-8d9dea0e3308.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "32d36ffdf2914cc2cd9a2ec2a748364455f80090"
+    },
+    {
+      "id": "946f3118-5d07-52b3-8a95-9ee218daa7b4",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Plain Omelette",
+      "description": "[Breakfasts] Fried egg (2), bread (2 piece), fresh tomatoes, cucumbers",
+      "image_url": "./assets/menu-generated/946f3118-5d07-52b3-8a95-9ee218daa7b4.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Plain Omelette\",\"description\":\"Fried egg (2), bread (2 piece), fresh tomatoes, cucumbers\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/946f3118-5d07-52b3-8a95-9ee218daa7b4.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "dfa1227d600455db7d745f7a026d1eda9db31a1b"
+    },
+    {
+      "id": "3df5c282-bb24-53be-aaf9-1d16ad3ee0a3",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Ayran (30 cl.)",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/3df5c282-bb24-53be-aaf9-1d16ad3ee0a3.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Ayran (30 cl.)\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/3df5c282-bb24-53be-aaf9-1d16ad3ee0a3.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "7b94fc8aa2dba2535eb8130e8d0ed2b5ad977e27"
+    },
+    {
+      "id": "d2874958-65af-5caf-bfdc-03cda8fdd073",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Golden Tavuk",
+      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
+      "image_url": "./assets/menu-generated/d2874958-65af-5caf-bfdc-03cda8fdd073.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Golden Tavuk\",\"description\":\"Pilav, patates kızartması ve salata ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/d2874958-65af-5caf-bfdc-03cda8fdd073.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "ddb3af4d944adfa507d2b6427f8568b670f77ceb"
+    },
+    {
+      "id": "454d524d-5351-54b9-9dee-7e47cf2c94a9",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Omelette",
+      "description": "[Breakfasts] Fried egg (2), kasseri cheese, sweet green an red pepper",
+      "image_url": "./assets/menu-generated/454d524d-5351-54b9-9dee-7e47cf2c94a9.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cheesy Omelette\",\"description\":\"Fried egg (2), kasseri cheese, sweet green an red pepper\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/454d524d-5351-54b9-9dee-7e47cf2c94a9.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "ebcd48fa4b97c5ec24fced50325aaa5b189bc5f9"
+    },
+    {
+      "id": "9abc8cc3-0eb3-50b0-8958-cdff0c7348f2",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Soda",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/9abc8cc3-0eb3-50b0-8958-cdff0c7348f2.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Soda\",\"description\":\"\",\"clarification\":\"Turkish plain sparkling mineral water, colorless clear bubbly water, not cola\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9abc8cc3-0eb3-50b0-8958-cdff0c7348f2.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "96be25573578bb1ff09d7e4ebb7b74f5d6b4f8b8"
+    },
+    {
+      "id": "ba16eeb1-2c69-56f9-8dbc-a0f7a0c8ff50",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "BBQ Tavuk",
+      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
+      "image_url": "./assets/menu-generated/ba16eeb1-2c69-56f9-8dbc-a0f7a0c8ff50.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"BBQ Tavuk\",\"description\":\"Pilav, patates kızartması ve salata ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/ba16eeb1-2c69-56f9-8dbc-a0f7a0c8ff50.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "fbbc6132eb8bf9b20c8e30e06c6a599cd401d070"
+    },
+    {
+      "id": "a6e8e0cb-44be-58ac-baac-07ec04e6560b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Menemen",
+      "description": "[Breakfasts] Eggs, tomatoes, tomato paste, sweet green and red pepper",
+      "image_url": "./assets/menu-generated/a6e8e0cb-44be-58ac-baac-07ec04e6560b.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Menemen\",\"description\":\"Eggs, tomatoes, tomato paste, sweet green and red pepper\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/a6e8e0cb-44be-58ac-baac-07ec04e6560b.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "f982ce1d19108c39de98e79e73ee5891fd074352"
+    },
+    {
+      "id": "7cb2fc64-b12e-5aba-81a5-fdffe7747e35",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Turnip Juice",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Turnip Juice\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/7cb2fc64-b12e-5aba-81a5-fdffe7747e35.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "8efdfa466f780f3527cf9e61b173372d639d3718"
     }
   ]
 }
