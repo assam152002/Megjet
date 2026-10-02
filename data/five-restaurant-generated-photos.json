@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 96,
+  "generated": 106,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -1145,6 +1145,126 @@
       "generation_mode": "built-in",
       "path": "assets/menu-generated/90778bb6-9ec6-5f07-b870-781f1839191c.jpg",
       "blob_sha": "0f0d23228d8a8a3e980cfe4d20cfe94433b62df9"
+    },
+    {
+      "id": "f2c119da-2012-530b-a1a5-dc379d8d0e23",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Sausage Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": "./assets/menu-generated/f2c119da-2012-530b-a1a5-dc379d8d0e23.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Sausage Cheese Pita\",\"description\":\"[Pitas] Tomato, parsley\",\"clarification\":\"Turkish pide: elongated open boat-shaped oven-baked flatbread, raised edges, named topping visible; not pita pocket, not wrap\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/f2c119da-2012-530b-a1a5-dc379d8d0e23.jpg",
+      "blob_sha": "c4f610227cb622e513dd7a6f27b497526973da19"
+    },
+    {
+      "id": "961412bc-3285-52db-af04-c6ff184f73c5",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Cola-Cola",
+      "description": "[Cold Drinks] ",
+      "image_url": "./assets/menu-generated/961412bc-3285-52db-af04-c6ff184f73c5.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Cola-Cola\",\"description\":\"[Cold Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/961412bc-3285-52db-af04-c6ff184f73c5.jpg",
+      "blob_sha": "b61e6f4ca87aa37003441ef5e6f1cd56f03a5fb6"
+    },
+    {
+      "id": "c8f77928-10ea-598b-980e-9c9e3cfcd83f",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Boly Beef'li Sandviç",
+      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
+      "image_url": "./assets/menu-generated/c8f77928-10ea-598b-980e-9c9e3cfcd83f.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Boly Beef'li Sandviç\",\"description\":\"[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/c8f77928-10ea-598b-980e-9c9e3cfcd83f.jpg",
+      "blob_sha": "89038c4b71603d87d203e2d74b7b33bbc296d36b"
+    },
+    {
+      "id": "8596bd68-2baf-51b4-904a-2846599d94bd",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": "./assets/menu-generated/8596bd68-2baf-51b4-904a-2846599d94bd.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Mexican Chicken Sandwich & Cajun Fries\",\"description\":\"[Sandwiches] All sandwiches are served with Cajun fries\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/8596bd68-2baf-51b4-904a-2846599d94bd.jpg",
+      "blob_sha": "42c5270b1fe433958adadfd95cdaf94df75bad25"
+    },
+    {
+      "id": "caa319a6-37fc-57cd-87c5-353aaa877ab2",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Minced Meat Kasseri Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": "./assets/menu-generated/caa319a6-37fc-57cd-87c5-353aaa877ab2.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "Turkish minced meat kasseri cheese pide on cream plate, tomato parsley, pale table soft daylight.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/caa319a6-37fc-57cd-87c5-353aaa877ab2.jpg",
+      "blob_sha": "9d117300216edc2cc9c20735a7f8467e8260186c"
+    },
+    {
+      "id": "96730169-de0b-503c-a060-4d3af97961f7",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Fanta",
+      "description": "[Cold Drinks] ",
+      "image_url": "./assets/menu-generated/96730169-de0b-503c-a060-4d3af97961f7.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Fanta\",\"description\":\"[Cold Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/96730169-de0b-503c-a060-4d3af97961f7.jpg",
+      "blob_sha": "af755dcdbe483eb55ed8b6d2e6abb33bcce5d4af"
+    },
+    {
+      "id": "0f13dd8c-0876-5f51-8285-4329245ab7c6",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Karışık Sandviç",
+      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
+      "image_url": "./assets/menu-generated/0f13dd8c-0876-5f51-8285-4329245ab7c6.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Karışık Sandviç\",\"description\":\"[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/0f13dd8c-0876-5f51-8285-4329245ab7c6.jpg",
+      "blob_sha": "a20f366c3609ea8c81c6ffd8b53416709033c618"
+    },
+    {
+      "id": "b6ed1ed6-f3d6-5aae-8576-d5273e04e56e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Kumru Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": "./assets/menu-generated/b6ed1ed6-f3d6-5aae-8576-d5273e04e56e.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Kumru Sandwich & Cajun Fries\",\"description\":\"[Sandwiches] All sandwiches are served with Cajun fries\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/b6ed1ed6-f3d6-5aae-8576-d5273e04e56e.jpg",
+      "blob_sha": "677ada99b12d2b51b2619af06e444310d02eace6"
+    },
+    {
+      "id": "2844e9d0-4327-5e90-9c4d-acf90435457c",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Kasseri Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": "./assets/menu-generated/2844e9d0-4327-5e90-9c4d-acf90435457c.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Kasseri Cheese Pita\",\"description\":\"[Pitas] Tomato, parsley\",\"clarification\":\"Turkish pide: elongated open boat-shaped oven-baked flatbread, raised edges, named topping visible; not pita pocket, not wrap\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/2844e9d0-4327-5e90-9c4d-acf90435457c.jpg",
+      "blob_sha": "a2c9612025dfd6a872c3f4907c830911d22877cf"
+    },
+    {
+      "id": "aef71df5-7770-511c-828f-ee11e852e5eb",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Sprite",
+      "description": "[Cold Drinks] ",
+      "image_url": "./assets/menu-generated/aef71df5-7770-511c-828f-ee11e852e5eb.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Sprite\",\"description\":\"[Cold Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/aef71df5-7770-511c-828f-ee11e852e5eb.jpg",
+      "blob_sha": "f74238bf347e3fad755d5018aa34e5dc33faacf7"
     }
   ]
 }
