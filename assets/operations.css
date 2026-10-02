@@ -1,4 +1,4 @@
-body>header{padding:10px 16px!important;min-height:0!important;border-radius:0 0 18px 18px!important;overflow:visible!important}
+body>header{padding:10px 16px!important;min-height:0!important;border-radius:0 0 18px 18px!important;overflow:hidden!important}
 .megjet-header-bar{display:flex;align-items:center;gap:10px;max-width:1120px;margin:auto}
 body>header .brand{margin:0!important;display:flex!important;align-items:center;gap:8px;flex:1;min-width:0;font-size:20px!important}
 body>header .brand .megjet-logo{width:40px!important;height:40px!important;object-fit:contain}
@@ -12,3 +12,8 @@ body>header .customer-account-btn{padding:8px 10px!important;min-height:40px;whi
 #vendorBioEn,#vendorBioTr{width:100%;resize:vertical}
 .megjet-push-message{font-size:12px;line-height:1.5;margin-top:8px}
 @media(max-width:420px){body>header{padding:8px 10px!important}.megjet-header-bar{gap:7px}body>header .brand{font-size:16px!important}.megjet-header-bar .account-dot{display:none}body>header .customer-account-btn{font-size:11px!important}#megjetHeaderToggle{font-size:12px;padding:8px}}
+
+/* Keep decorative shapes inside the header and horizontal swipes inside their rows. */
+html{overflow-x:hidden;overflow-x:clip;overscroll-behavior-x:none}
+body{max-width:100%;overscroll-behavior-x:none}
+#vendors,.quick-row,.growth-strip,.growth-feature-list{max-width:100%;overscroll-behavior-x:contain}
