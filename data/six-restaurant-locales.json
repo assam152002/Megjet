@@ -1,0 +1,2613 @@
+[
+  {
+    "product_id": "f61bad4e-31a4-565d-b26d-92003ff876c4",
+    "name_en": "Chicken Doner Wrap + Ayran",
+    "name_tr": "Tavuk Döner Dürüm + Ayran",
+    "description_en": "Onion, Parsley, Tomato",
+    "description_tr": "Soğan, maydanoz, domates"
+  },
+  {
+    "product_id": "fa109306-6c86-58a8-8b6c-2b3812a19377",
+    "name_en": "Sauced Chicken Doner Wrap + Ayran",
+    "name_tr": "Soslu Tavuk Döner Dürüm + Ayran",
+    "description_en": "Onion, Parsley, Tomato",
+    "description_tr": "Soğan, maydanoz, domates"
+  },
+  {
+    "product_id": "6a4b0e60-7602-523b-9c3c-742c1f67fc0d",
+    "name_en": "Chicken Doner Fries Wrap + Ayran",
+    "name_tr": "Patatesli Tavuk Döner Dürüm + Ayran",
+    "description_en": "Onion, Parsley, Tomato",
+    "description_tr": "Soğan, maydanoz, domates"
+  },
+  {
+    "product_id": "b913b839-36ff-5cac-8988-5431223e6112",
+    "name_en": "Sauced Doner Service + Ayran",
+    "name_tr": "Soslu Döner Servis + Ayran",
+    "description_en": "Served with Rice, Fries, Salad",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir"
+  },
+  {
+    "product_id": "47152742-0944-5c8a-bb1c-486187008f47",
+    "name_en": "Doner Adana + Ayran",
+    "name_tr": "Döner Adana + Ayran",
+    "description_en": "Served with Rice, Fries, Salad",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir"
+  },
+  {
+    "product_id": "c0c9a1b7-2528-571d-b1f1-8733c025d62a",
+    "name_en": "Doner Liver + Ayran",
+    "name_tr": "Döner Ciğer + Ayran",
+    "description_en": "Served with Rice, Fries, Salad",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir"
+  },
+  {
+    "product_id": "66a617b5-9b58-5deb-bd41-c29df398a541",
+    "name_en": "Doner Meat + Ayran",
+    "name_tr": "Döner Et + Ayran",
+    "description_en": "Served with Rice, Fries, Salad",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir"
+  },
+  {
+    "product_id": "a7ae00c8-433a-5f99-bee1-11d86c45e2e5",
+    "name_en": "Chicken Doner Iskender + Ayran",
+    "name_tr": "Tavuk Döner İskender + Ayran",
+    "description_en": "Served with Rice, Fries, Salad",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir"
+  },
+  {
+    "product_id": "0bf94e39-3daa-5a64-aef8-82f672a65d0b",
+    "name_en": "Eco Menu Chicken + Ayran",
+    "name_tr": "Ekonomik Tavuk Menü + Ayran",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "e68248b8-49e5-5adb-8c96-efa3a51c495f",
+    "name_en": "Eco Menu Adana + Ayran",
+    "name_tr": "Ekonomik Adana Menü + Ayran",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "c5078217-926f-53d1-8f0e-353622631f24",
+    "name_en": "Eco Menu Liver + Ayran",
+    "name_tr": "Ekonomik Ciğer Menü + Ayran",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "3784217a-4776-5df2-ade4-7d41f49bc66d",
+    "name_en": "Eco Menu Meat + Ayran",
+    "name_tr": "Ekonomik Et Menü + Ayran",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "38b50fc1-ee66-526a-ab23-d5d5bd57a7da",
+    "name_en": "Eco Menu Wings + Ayran",
+    "name_tr": "Ekonomik Kanat Menü + Ayran",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "b85b8319-b35f-5314-a42a-75d0203847b7",
+    "name_en": "Lahmacun",
+    "name_tr": "Lahmacun",
+    "description_en": "Tomato, parsley, pickles, lemon",
+    "description_tr": "Domates, maydanoz, turşu, limon"
+  },
+  {
+    "product_id": "7606b465-b8de-5e4c-aa85-a7c9ee6d70c6",
+    "name_en": "Kasseri Cheese Lahmacun",
+    "name_tr": "Kaşarlı Lahmacun",
+    "description_en": "Tomato, parsley, pickles, lemon",
+    "description_tr": "Domates, maydanoz, turşu, limon"
+  },
+  {
+    "product_id": "296a2c95-1d88-528b-b550-7aafe5010270",
+    "name_en": "Cubed Meat Kasseri Cheese Pita",
+    "name_tr": "Kuşbaşı Kaşarlı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "135f7175-d0e3-5369-a4f7-bd596a9c6d87",
+    "name_en": "Minced Meat Kasseri Cheese Pita",
+    "name_tr": "Kıymalı Kaşarlı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "c61225de-f300-5c27-8367-b9bdaae8dd4c",
+    "name_en": "Kasseri Cheese Pita",
+    "name_tr": "Kaşarlı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "573b089f-b5fb-5f27-bb2b-51313d33e44d",
+    "name_en": "Sujuk Kasseri Cheese Pita",
+    "name_tr": "Sucuklu Kaşarlı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "66677a1b-fec8-58db-b618-9a4bf1788c0e",
+    "name_en": "Mix Pita",
+    "name_tr": "Karışık Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "4b2c7740-b13b-5919-9bee-8186db0c439b",
+    "name_en": "Cubed Meat Kasseri Cheese, Egg Pita",
+    "name_tr": "Kuşbaşı Kaşarlı Yumurtalı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "194c779b-e7e5-5024-8995-57b017586bbc",
+    "name_en": "Minced Meat Kasseri Cheese, Egg Pita",
+    "name_tr": "Kıymalı Kaşarlı Yumurtalı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "87bed378-a566-50f6-91a9-fc4b90416f5b",
+    "name_en": "Sujuk Egg Pita",
+    "name_tr": "Sucuklu Yumurtalı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "bee64697-1d0a-5e5d-9acd-4ae148a4f7f0",
+    "name_en": "Sujuk Kasseri Cheese Egg Pita",
+    "name_tr": "Sucuklu Kaşarlı Yumurtalı Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "b825ae3e-9797-540b-bb23-dbd9b069fb82",
+    "name_en": "Full Mix Pita",
+    "name_tr": "Tam Karışık Pide",
+    "description_en": "Salad + Ayran",
+    "description_tr": "Salata + ayran"
+  },
+  {
+    "product_id": "695c3bb7-31e1-5541-87cd-8ff762b968e8",
+    "name_en": "Mini Lahmacun",
+    "name_tr": "Mini Lahmacun",
+    "description_en": "Tomato, parsley, pickles, lemon",
+    "description_tr": "Domates, maydanoz, turşu, limon"
+  },
+  {
+    "product_id": "b00242c1-0602-5ead-a40c-4710e31ebc02",
+    "name_en": "Garlic Lahmacun",
+    "name_tr": "Sarımsaklı Lahmacun",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6029064c-f73a-5d77-89c5-170134059bb9",
+    "name_en": "Adana Wrap",
+    "name_tr": "Adana Dürüm",
+    "description_en": "Pickles + Ayran",
+    "description_tr": "Turşu + ayran"
+  },
+  {
+    "product_id": "bc86d2b6-c97b-5407-a6a5-10e2d2f8feff",
+    "name_en": "Chicken Skewer Wrap",
+    "name_tr": "Tavuk Şiş Dürüm",
+    "description_en": "Pickles + Ayran",
+    "description_tr": "Turşu + ayran"
+  },
+  {
+    "product_id": "f2cb7574-2d27-51d7-b11f-edbc9c070c2f",
+    "name_en": "Liver Wrap",
+    "name_tr": "Ciğer Dürüm",
+    "description_en": "Pickles + Ayran",
+    "description_tr": "Turşu + ayran"
+  },
+  {
+    "product_id": "85faffa0-a868-5e23-9108-430776f71fe1",
+    "name_en": "Meat Skewer Wrap",
+    "name_tr": "Et Şiş Dürüm",
+    "description_en": "Pickles + Ayran",
+    "description_tr": "Turşu + ayran"
+  },
+  {
+    "product_id": "96c8cb51-4236-53b6-99eb-eacb0eae0b7e",
+    "name_en": "Mix Wrap",
+    "name_tr": "Karışık Dürüm",
+    "description_en": "Pickles + Ayran",
+    "description_tr": "Turşu + ayran"
+  },
+  {
+    "product_id": "5a7739ef-c96e-58f7-a569-2aeb3095a7ce",
+    "name_en": "Çiğ Köfte Wrap",
+    "name_tr": "Çiğ Köfte Dürüm",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "42945040-7e59-52fc-9c9a-5be9e2297df0",
+    "name_en": "Çiğ Köfte (10 Pieces)",
+    "name_tr": "Çiğ Köfte (10 Adet)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "07329418-a22e-5ff0-b3f2-9cad717ba650",
+    "name_en": "Çiğ Köfte (15 Pieces)",
+    "name_tr": "Çiğ Köfte (15 Adet)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1e797900-bd0c-5541-98b4-ce2135aa759f",
+    "name_en": "Çiğ Köfte (1 Portion)",
+    "name_tr": "Çiğ Köfte (1 Porsiyon)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "aa82e72f-03ff-5010-a0f2-061215f342ec",
+    "name_en": "Adana Kebab",
+    "name_tr": "Adana Kebap",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "e4a8aa00-26f6-5880-a94f-eecad42fa508",
+    "name_en": "Chicken Skewer Service",
+    "name_tr": "Tavuk Şiş Servis",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "16e381b4-fdb4-5b4f-82aa-8784e1384216",
+    "name_en": "Liver Service",
+    "name_tr": "Ciğer Servis",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "ba5eb7af-ce2a-58c9-b264-2992178425b9",
+    "name_en": "Meat Skewer Service",
+    "name_tr": "Et Şiş Servis",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "0d8081e7-e792-5f22-a5af-8e3a0152d3aa",
+    "name_en": "Rolled Beyti",
+    "name_tr": "Beyti Sarma",
+    "description_en": "Salad, rice, fries, roasted pepper + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber + ayran"
+  },
+  {
+    "product_id": "91303451-9ab6-5032-a1e2-f2c13c604e08",
+    "name_en": "Grilled Wings",
+    "name_tr": "Izgara Kanat",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "d09cb67c-c91d-5309-ad7c-cc11097752ae",
+    "name_en": "Aubergine Kebab",
+    "name_tr": "Patlıcan Kebap",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "928c43dc-a8b9-5065-92f6-a862bd2bc689",
+    "name_en": "Adana - Chicken Mix",
+    "name_tr": "Adana - Tavuk Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "9591dce4-b8de-55bc-9482-4c061ddf1ae8",
+    "name_en": "Adana - Meat Skewer Mix",
+    "name_tr": "Adana - Et Şiş Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "6acd0f94-9bcb-5379-a5c7-1ff914accacc",
+    "name_en": "Adana - Liver Skewer Mix",
+    "name_tr": "Adana - Ciğer Şiş Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "7f1ec5bc-8904-5e4d-be92-1d6c266d50d5",
+    "name_en": "Adana - Grilled Wings Mix",
+    "name_tr": "Adana - Izgara Kanat Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "9ec55cb0-97e6-521d-a97e-02d1a0454712",
+    "name_en": "Chicken Skewer - Meat Skewer Mix",
+    "name_tr": "Tavuk Şiş - Et Şiş Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "22bf3004-5d7d-5460-8138-6ba2c8dbf854",
+    "name_en": "Meat Skewer - Liver Skewer Mix",
+    "name_tr": "Et Şiş - Ciğer Şiş Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "53aa633b-3d2a-5d41-b6e8-bae7b4b25014",
+    "name_en": "Meat Skewer - Wings Mix",
+    "name_tr": "Et Şiş - Kanat Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "95317426-2969-58b1-ba89-4c5a123f6123",
+    "name_en": "Meat Skewer - Adana - Chicken Skewer Mix",
+    "name_tr": "Et Şiş - Adana - Tavuk Şiş Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "b9a7d782-92d3-5e6b-950f-9fde7f1a8154",
+    "name_en": "Full Mix",
+    "name_tr": "Tam Karışık",
+    "description_en": "Salad, rice, fries, roasted pepper, bread + Ayran",
+    "description_tr": "Salata, pilav, patates kızartması, köz biber, ekmek + ayran"
+  },
+  {
+    "product_id": "f4416279-0eff-5fcf-a416-a724665bae5c",
+    "name_en": "Roasted Meat",
+    "name_tr": "Et Kavurma",
+    "description_en": "Served with Rice, Salad, Yoghurt and Bread",
+    "description_tr": "Pilav, salata, yoğurt ve ekmek ile servis edilir"
+  },
+  {
+    "product_id": "6ad29211-5047-500c-99be-c570cdca2346",
+    "name_en": "Roasted Chicken",
+    "name_tr": "Tavuk Kavurma",
+    "description_en": "Served with Rice, Salad, Yoghurt and Bread",
+    "description_tr": "Pilav, salata, yoğurt ve ekmek ile servis edilir"
+  },
+  {
+    "product_id": "242d39da-d9bb-53d4-962c-0129e1af906e",
+    "name_en": "Roasted Liver",
+    "name_tr": "Ciğer Kavurma",
+    "description_en": "Served with Rice, Salad, Yoghurt and Bread",
+    "description_tr": "Pilav, salata, yoğurt ve ekmek ile servis edilir"
+  },
+  {
+    "product_id": "0da34f64-d7fb-5a3f-bb00-e9d7f68fc11b",
+    "name_en": "Crispy Chicken",
+    "name_tr": "Çıtır Tavuk",
+    "description_en": "Served with Fries, Rice and Bread",
+    "description_tr": "Patates kızartması, pilav ve ekmek ile servis edilir"
+  },
+  {
+    "product_id": "466fb121-c98b-57c3-a8ca-a77ac9e564d4",
+    "name_en": "Kelle Paca Soup",
+    "name_tr": "Kelle Paça Çorbası",
+    "description_en": "Olive, pickles, lemon, bread",
+    "description_tr": "Zeytin, turşu, limon, ekmek"
+  },
+  {
+    "product_id": "eb7af690-d8e8-5827-908e-908b54d93f44",
+    "name_en": "Lentil Soup",
+    "name_tr": "Mercimek Çorbası",
+    "description_en": "Olive, pickles, lemon, bread",
+    "description_tr": "Zeytin, turşu, limon, ekmek"
+  },
+  {
+    "product_id": "aceda531-058b-5714-b7f1-06adc7d0d5fb",
+    "name_en": "Tomato Soup",
+    "name_tr": "Domates Çorbası",
+    "description_en": "Olive, pickles, lemon, bread",
+    "description_tr": "Zeytin, turşu, limon, ekmek"
+  },
+  {
+    "product_id": "151d42dd-1b3a-5f94-89f5-71b4cbf99fdb",
+    "name_en": "Ezo Gelin Soup",
+    "name_tr": "Ezogelin Çorbası",
+    "description_en": "Olive, pickles, lemon, bread",
+    "description_tr": "Zeytin, turşu, limon, ekmek"
+  },
+  {
+    "product_id": "b6493fcc-ceec-5a9f-9c2d-042222e5ee6d",
+    "name_en": "Kasseri Cheese Salad",
+    "name_tr": "Kaşarlı Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "35572f69-2340-5d3c-b265-192c7eb3c0d8",
+    "name_en": "Chicken Salad",
+    "name_tr": "Tavuklu Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "2721bd87-c362-5a46-9830-d94d496a0281",
+    "name_en": "Season Salad",
+    "name_tr": "Mevsim Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ecdd6b80-1f14-58e2-ab75-762caeb85742",
+    "name_en": "Shepherds Salad",
+    "name_tr": "Çoban Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ba8be9c2-c279-5ee3-85d8-41501aadf382",
+    "name_en": "Dip Salad",
+    "name_tr": "Dip Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c44caf29-e24d-53e4-8360-1dfb55233564",
+    "name_en": "Fries",
+    "name_tr": "Patates Kızartması",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "2bb1d839-06cf-5424-abc0-9950e954c390",
+    "name_en": "Double Portion Fries",
+    "name_tr": "Duble Porsiyon Patates Kızartması",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "92ee3869-ab1f-5ffe-9d7c-585552609d8a",
+    "name_en": "Ayran",
+    "name_tr": "Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6278d2c2-36ea-5dc9-a098-4a6ad11485ca",
+    "name_en": "Coca-Cola (25 cl.)",
+    "name_tr": "Coca-Cola (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "581d1af3-aafc-56f5-9251-98eed6ba05b8",
+    "name_en": "Sprite (25 cl.)",
+    "name_tr": "Sprite (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "342936ee-9fa3-5dbf-a775-c72782b26802",
+    "name_en": "7UP (25 cl.)",
+    "name_tr": "7UP (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "44d8370b-112f-5ca1-95cb-d4b059fa7f0c",
+    "name_en": "Fanta (25 cl.)",
+    "name_tr": "Fanta (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "b49e3ac1-ab1e-5db4-a064-e7a96379fa87",
+    "name_en": "Yedigün (25 cl.)",
+    "name_tr": "Yedigün (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "9ff07ddb-8d25-576e-9cc9-24f1c34b5b11",
+    "name_en": "Pepsi Max (25 cl.)",
+    "name_tr": "Pepsi Max (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "55905d2a-9bbc-5669-838b-f4e2c5152427",
+    "name_en": "Coca-Cola Diet (25 cl.)",
+    "name_tr": "Coca-Cola Diet (25 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4c8c9315-83b1-508a-80b6-6c8712ee7867",
+    "name_en": "Turnip Juice",
+    "name_tr": "Şalgam Suyu",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "18e4dea5-8be9-59fb-a428-2387d53886a3",
+    "name_en": "Fruit Soda",
+    "name_tr": "Meyveli Soda",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "8fdeab14-1825-5c29-b12e-1e2312a68cfc",
+    "name_en": "Water",
+    "name_tr": "Su",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "46282e51-6321-5166-be04-80ebd1d72a44",
+    "name_en": "Island Sandwich Menu",
+    "name_tr": "Ada Sandviç Menü",
+    "description_en": "Coleslaw, Roasted Mohair Chicken, Mixed Pickles with Turnips",
+    "description_tr": "Coleslaw, fırında tiftik tavuk, şalgamlı karışık turşu"
+  },
+  {
+    "product_id": "f8813cda-0e88-5bdb-a8d4-58115cf48926",
+    "name_en": "Ada Lavash Wrap",
+    "name_tr": "Ada Lavaş Dürüm",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "f619d028-b3e9-580a-9d17-83846759038e",
+    "name_en": "Whole Chicken Menu",
+    "name_tr": "Bütün Tavuk Menü",
+    "description_en": "Choice of Rice or Bulgur Pilaf, Mixed Pickles with Turnips, Bread",
+    "description_tr": "Pilav veya bulgur pilavı seçimi, şalgamlı karışık turşu, ekmek"
+  },
+  {
+    "product_id": "10f8c0c5-e168-57be-a18c-2b92ce146395",
+    "name_en": "Sports Menu (Half Chicken)",
+    "name_tr": "Spor Menü (Yarım Tavuk)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "9ffa02bd-f23d-5ed2-944e-fd9304c13580",
+    "name_en": "Half Kokoreç",
+    "name_tr": "Yarım Ekmek Kokoreç",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "fe6729f3-2ea1-5009-92fc-0c597748da28",
+    "name_en": "Adana Portion",
+    "name_tr": "Adana Porsiyon",
+    "description_en": "Served with Rice, Roasted Tomato, Roasted Pepper, Tablacı Salad, and Lavash",
+    "description_tr": "Pilav, köz domates, köz biber, tablacı salatası ve lavaş ile servis edilir"
+  },
+  {
+    "product_id": "9154e7b8-456b-5da9-9bd4-d222e8714425",
+    "name_en": "Butcher Meatball Portion",
+    "name_tr": "Kasap Köfte Porsiyon",
+    "description_en": "Served with Rice, Roasted Tomato, Roasted Pepper, Tablacı Salad, and Lavash",
+    "description_tr": "Pilav, köz domates, köz biber, tablacı salatası ve lavaş ile servis edilir"
+  },
+  {
+    "product_id": "94ca379b-96f5-5d40-b579-c6ca6dd4e507",
+    "name_en": "Lamb Chop Portion",
+    "name_tr": "Kuzu Pirzola Porsiyon",
+    "description_en": "Served with Rice, Roasted Tomato, Roasted Pepper, Tablacı Salad, and Lavash",
+    "description_tr": "Pilav, köz domates, köz biber, tablacı salatası ve lavaş ile servis edilir"
+  },
+  {
+    "product_id": "90b9ca51-9fbe-52d1-8a8d-4c1458c23d12",
+    "name_en": "Adana (1 Kg.)",
+    "name_tr": "Adana (1 Kg.)",
+    "description_en": "Served with Rice, Roasted Tomato, Roasted Pepper, Tablacı Salad, and Lavash",
+    "description_tr": "Pilav, köz domates, köz biber, tablacı salatası ve lavaş ile servis edilir"
+  },
+  {
+    "product_id": "0bd85bfc-3cae-52e4-a3f5-1bddb6d6562c",
+    "name_en": "Lamb Chop (1 Kg.)",
+    "name_tr": "Kuzu Pirzola (1 Kg.)",
+    "description_en": "Served with Rice, Roasted Tomato, Roasted Pepper, Tablacı Salad, and Lavash",
+    "description_tr": "Pilav, köz domates, köz biber, tablacı salatası ve lavaş ile servis edilir"
+  },
+  {
+    "product_id": "0195a8da-dfa3-508b-990e-cff79a02d7ca",
+    "name_en": "Quarter Bread Kokoreç",
+    "name_tr": "Çeyrek Ekmek Kokoreç",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "eddfa6b2-858a-5e9d-aaa3-dd255bb6ed80",
+    "name_en": "Kokoreç Service",
+    "name_tr": "Kokoreç Servis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4e434065-1d9a-59e7-b3d7-9b47579ed6df",
+    "name_en": "Atom Kokoreç",
+    "name_tr": "Atom Kokoreç",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "db512234-c27c-5d20-9a4b-fa9e007c313c",
+    "name_en": "Cup Ayran / Homemade Ayran",
+    "name_tr": "Bardak Ayran / Ev Yapımı Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ce4078a4-19e2-5b9f-abc1-aea3a5fb158c",
+    "name_en": "Soft Drinks & Juices (33 cl.)",
+    "name_tr": "Meşrubat ve Meyve Suları (33 cl.)",
+    "description_en": "Coca-Cola, Fanta, Sprite, Fuse Tea, Turnip Juice",
+    "description_tr": "Coca-Cola, Fanta, Sprite, Fuse Tea, şalgam suyu"
+  },
+  {
+    "product_id": "d2ec10af-d2e1-5555-9903-fec5dc8ce478",
+    "name_en": "Soda",
+    "name_tr": "Soda",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4eb698d8-f698-571a-95cf-b2f7432c394f",
+    "name_en": "Water",
+    "name_tr": "Su",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "396340b5-7a7c-5f24-93e3-cc6f33f139a5",
+    "name_en": "Liver Wrap + Ayran",
+    "name_tr": "Ciğer Dürüm + Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "222a8728-bdba-531c-b160-7b862abf3286",
+    "name_en": "Chicken Skewer Wrap + Ayran",
+    "name_tr": "Tavuk Şiş Dürüm + Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "30ef53f0-3212-57fb-b87a-01333a951574",
+    "name_en": "Adana Wrap + Ayran",
+    "name_tr": "Adana Dürüm + Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "9a98ba75-1ed2-59c7-9ccc-b449e9df76e8",
+    "name_en": "Lamb Skewer Wrap + Ayran",
+    "name_tr": "Kuzu Şiş Dürüm + Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "51b6a343-b2a7-5bbb-a887-7fdd18e01e94",
+    "name_en": "Chicken Curry + Drink",
+    "name_tr": "Köri Soslu Tavuk + İçecek",
+    "description_en": "Salad + Drink",
+    "description_tr": "Salata + içecek"
+  },
+  {
+    "product_id": "c4ba38e8-1c88-5fad-8929-461a379a356d",
+    "name_en": "Liver Service + Ayran",
+    "name_tr": "Ciğer Servis + Ayran",
+    "description_en": "Salad, pita + Ayran",
+    "description_tr": "Salata, pide + ayran"
+  },
+  {
+    "product_id": "b1e51c94-8c9d-5121-8214-f3677567f2cc",
+    "name_en": "Grilled Meatball + Ayran",
+    "name_tr": "Izgara Köfte + Ayran",
+    "description_en": "Salad, fries, rice, pita + Ayran",
+    "description_tr": "Salata, patates kızartması, pilav, pide + ayran"
+  },
+  {
+    "product_id": "00c2b8b8-343c-553d-b093-ff40b7d2a02d",
+    "name_en": "Roasted Beef + Ayran",
+    "name_tr": "Et Kavurma + Ayran",
+    "description_en": "Salad, yoghurt, pickles + Ayran",
+    "description_tr": "Salata, yoğurt, turşu + ayran"
+  },
+  {
+    "product_id": "8ccb9035-4bd7-501c-b358-e7f31d1b8e99",
+    "name_en": "Roasted Chicken + Ayran",
+    "name_tr": "Tavuk Kavurma + Ayran",
+    "description_en": "Salad, yoghurt, pickles + Ayran",
+    "description_tr": "Salata, yoğurt, turşu + ayran"
+  },
+  {
+    "product_id": "7e4e957a-3edd-5512-a178-50477f085b3c",
+    "name_en": "Beyti Sarma + Drink",
+    "name_tr": "Beyti Sarma + İçecek",
+    "description_en": "Salad, pita + Drink",
+    "description_tr": "Salata, pide + içecek"
+  },
+  {
+    "product_id": "75f1d6e3-7b43-5a4e-967f-e6d244ce23d3",
+    "name_en": "Mix Kebab + Ayran",
+    "name_tr": "Karışık Kebap + Ayran",
+    "description_en": "Adana kebab, chicken skewer, lamb skewer + Salad, pita + Ayran",
+    "description_tr": "Adana kebap, tavuk şiş, kuzu şiş + salata, pide + ayran"
+  },
+  {
+    "product_id": "c46c2152-dff1-5292-9469-68d67bc6c0c3",
+    "name_en": "Garson XXL Kebab + Ayran",
+    "name_tr": "Garson XXL Kebap + Ayran",
+    "description_en": "Adana kebab, chicken skewer, lamb skewer, chicken wing, grilled meatball, liver skewer + Salad, pita + Ayran",
+    "description_tr": "Adana kebap, tavuk şiş, kuzu şiş, tavuk kanat, ızgara köfte, ciğer şiş + salata, pide + ayran"
+  },
+  {
+    "product_id": "882c660a-3424-52e3-b5ab-957e05635b14",
+    "name_en": "Adana Service + Ayran",
+    "name_tr": "Adana Servis + Ayran",
+    "description_en": "Salad, pita + Ayran",
+    "description_tr": "Salata, pide + ayran"
+  },
+  {
+    "product_id": "ef403a05-8e09-503f-8938-42125fcd1623",
+    "name_en": "Lamb Skewer Service + Ayran",
+    "name_tr": "Kuzu Şiş Servis + Ayran",
+    "description_en": "Salad, pita + Ayran",
+    "description_tr": "Salata, pide + ayran"
+  },
+  {
+    "product_id": "e7474c35-95c7-56c4-a66e-20013151f91c",
+    "name_en": "Chicken Skewer Service + Ayran",
+    "name_tr": "Tavuk Şiş Servis + Ayran",
+    "description_en": "Salad, pita + Ayran",
+    "description_tr": "Salata, pide + ayran"
+  },
+  {
+    "product_id": "15338492-1a46-591f-bf4a-af95a7486388",
+    "name_en": "Chicken Wing Service + Ayran",
+    "name_tr": "Tavuk Kanat Servis + Ayran",
+    "description_en": "Wings + Salad, pita + Ayran",
+    "description_tr": "Kanat + salata, pide + ayran"
+  },
+  {
+    "product_id": "44518cb2-ec69-548e-b6e5-34639c25b3a2",
+    "name_en": "Lahmacun",
+    "name_tr": "Lahmacun",
+    "description_en": "Tomato, parsley",
+    "description_tr": "Domates, maydanoz"
+  },
+  {
+    "product_id": "a110b58f-ef16-5b81-88d7-992e27af7277",
+    "name_en": "Cubed Meat Kasseri Cheese Pita",
+    "name_tr": "Kuşbaşı Kaşarlı Pide",
+    "description_en": "Tomato, parsley",
+    "description_tr": "Domates, maydanoz"
+  },
+  {
+    "product_id": "bdb8240c-78db-572b-8d9b-b9eb46be687d",
+    "name_en": "Minced Meat Pita",
+    "name_tr": "Kıymalı Pide",
+    "description_en": "Tomato, parsley",
+    "description_tr": "Domates, maydanoz"
+  },
+  {
+    "product_id": "f2c119da-2012-530b-a1a5-dc379d8d0e23",
+    "name_en": "Sausage Cheese Pita",
+    "name_tr": "Sosisli Peynirli Pide",
+    "description_en": "Tomato, parsley",
+    "description_tr": "Domates, maydanoz"
+  },
+  {
+    "product_id": "caa319a6-37fc-57cd-87c5-353aaa877ab2",
+    "name_en": "Minced Meat Kasseri Cheese Pita",
+    "name_tr": "Kıymalı Kaşarlı Pide",
+    "description_en": "Tomato, parsley",
+    "description_tr": "Domates, maydanoz"
+  },
+  {
+    "product_id": "2844e9d0-4327-5e90-9c4d-acf90435457c",
+    "name_en": "Kasseri Cheese Pita",
+    "name_tr": "Kaşarlı Pide",
+    "description_en": "Tomato, parsley",
+    "description_tr": "Domates, maydanoz"
+  },
+  {
+    "product_id": "2852d7a3-d1c1-5999-8865-6e10805fc0bd",
+    "name_en": "Crispy Chicken Menu",
+    "name_tr": "Çıtır Tavuk Menü",
+    "description_en": "Fries, ketchup, mayonnaise + Drink",
+    "description_tr": "Patates kızartması, ketçap, mayonez + içecek"
+  },
+  {
+    "product_id": "a09a3adb-4044-52fc-abee-50c9e7521b07",
+    "name_en": "Stuffed Chicken",
+    "name_tr": "Tavuk Dolma",
+    "description_en": "Fries, rice, salad, bread",
+    "description_tr": "Patates kızartması, pilav, salata, ekmek"
+  },
+  {
+    "product_id": "308f189f-bb4f-56d4-83ae-b6c5a566e223",
+    "name_en": "Fries",
+    "name_tr": "Patates Kızartması",
+    "description_en": "Ketchup, mayonnaise",
+    "description_tr": "Ketçap, mayonez"
+  },
+  {
+    "product_id": "e38aa9de-638a-5e46-adde-a99b957487fa",
+    "name_en": "Cripy Chicken Salad",
+    "name_tr": "Çıtır Tavuk Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "82b99362-444b-5c0d-8e5a-b73783e28581",
+    "name_en": "Head Soup",
+    "name_tr": "Kelle Çorbası",
+    "description_en": "Pita, olive, lemon, greens",
+    "description_tr": "Pide, zeytin, limon, yeşillik"
+  },
+  {
+    "product_id": "16bc4359-7c85-5e27-b133-f48a6597d98a",
+    "name_en": "Lentil Soup",
+    "name_tr": "Mercimek Çorbası",
+    "description_en": "Pita, olive, lemon, greens",
+    "description_tr": "Pide, zeytin, limon, yeşillik"
+  },
+  {
+    "product_id": "c18b3552-a592-53ce-85b1-bb491f93ae77",
+    "name_en": "Chicken Soup",
+    "name_tr": "Tavuk Çorbası",
+    "description_en": "Pita, olive, lemon, greens",
+    "description_tr": "Pide, zeytin, limon, yeşillik"
+  },
+  {
+    "product_id": "456d89c8-e289-51b7-bb83-c1cfe26f7a36",
+    "name_en": "Çiğ Köfte Wrap",
+    "name_tr": "Çiğ Köfte Dürüm",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "cede754f-a0d9-5dde-be55-f0beebb0131d",
+    "name_en": "Çiğ Köfte Service",
+    "name_tr": "Çiğ Köfte Servis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "d6a58989-0d8b-5957-a6b9-9134ab756800",
+    "name_en": "Coca-Cola (33 cl.)",
+    "name_tr": "Coca-Cola (33 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "e422ffbd-cb5e-5946-b0ad-15e1cba3158f",
+    "name_en": "Coca-Cola Zero (33 cl.)",
+    "name_tr": "Coca-Cola Zero (33 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "10de15eb-191e-583e-b00c-0a2f0faa5f89",
+    "name_en": "Fanta (33 cl.)",
+    "name_tr": "Fanta (33 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "86b097b4-7753-5f68-a70c-237b17549ad5",
+    "name_en": "Sprite (33 cl.)",
+    "name_tr": "Sprite (33 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c4fe2618-3c2a-563a-b58e-5d2869d645f1",
+    "name_en": "Water (50 cl.)",
+    "name_tr": "Su (50 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "3df5c282-bb24-53be-aaf9-1d16ad3ee0a3",
+    "name_en": "Ayran (30 cl.)",
+    "name_tr": "Ayran (30 cl.)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "9abc8cc3-0eb3-50b0-8958-cdff0c7348f2",
+    "name_en": "Soda",
+    "name_tr": "Soda",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "7cb2fc64-b12e-5aba-81a5-fdffe7747e35",
+    "name_en": "Turnip Juice",
+    "name_tr": "Şalgam Suyu",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "68808c3a-ac44-5067-af89-fa838ecf0978",
+    "name_en": "Double King Burger",
+    "name_tr": "Double King Burger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "7c532bc0-000e-5dd5-ab7b-19630b54a909",
+    "name_en": "Double Cheese Burger",
+    "name_tr": "Duble Cheeseburger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4e16d6bd-379b-5c28-a7c2-6a21304cb5e5",
+    "name_en": "Smokey Beef Burger",
+    "name_tr": "Füme Dana Burger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "bb6ac4b7-d44d-54d9-855f-367ddaefb115",
+    "name_en": "Cheese Burger",
+    "name_tr": "Peynirli Burger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "7e215fca-9743-52b8-b155-0941cf3dc138",
+    "name_en": "Classic Burger",
+    "name_tr": "Klasik Burger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "d41798a8-8b55-53bc-8c0d-728d69b2b8e7",
+    "name_en": "Crispy Chicken Burger",
+    "name_tr": "Çıtır Tavuk Burger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "78835ffb-8cfe-580b-9fa1-eaf4bf7fde9c",
+    "name_en": "Grilled Chicken Burger",
+    "name_tr": "Izgara Tavuk Burger",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4dae1f43-559e-5c95-8ab0-3285c5151dd5",
+    "name_en": "Grill Chicken Wrap",
+    "name_tr": "Izgara Tavuk Dürüm",
+    "description_en": "150 g grilled chicken, cajun fries",
+    "description_tr": "150 g ızgara tavuk, Cajun patates kızartması"
+  },
+  {
+    "product_id": "a0eca131-752a-5582-aeef-a922f2c82ce5",
+    "name_en": "Ala Chickie Wrap & Cajun Fries",
+    "name_tr": "Ala Chickie Dürüm ve Cajun Patates",
+    "description_en": "150 g crispy chicken",
+    "description_tr": "150 g çıtır tavuk"
+  },
+  {
+    "product_id": "fd92247d-6485-5ae1-adbe-9641f88c50e1",
+    "name_en": "Chicken Fajita Wrap",
+    "name_tr": "Tavuk Fajita Dürüm",
+    "description_en": "150 g chicken, grilled vegetables",
+    "description_tr": "150 g tavuk, ızgara sebzeler"
+  },
+  {
+    "product_id": "c06511f6-cb20-5631-aa89-fb28f8fa2cbe",
+    "name_en": "Ayvalık Toast",
+    "name_tr": "Ayvalık Tost",
+    "description_en": "Salami, sucuk, sausage, kaşar cheese, sauce",
+    "description_tr": "Salam, sucuk, sosis, kaşar peyniri, sos"
+  },
+  {
+    "product_id": "3b6414a6-83c6-5c1a-9ab2-9980b011c326",
+    "name_en": "Mix Toast",
+    "name_tr": "Karışık Tost",
+    "description_en": "Salami, sucuk, kaşar cheese",
+    "description_tr": "Salam, sucuk, kaşar peyniri"
+  },
+  {
+    "product_id": "7a7481b8-5576-59b2-95d5-4222ca97fb22",
+    "name_en": "Triple Cheese Toast",
+    "name_tr": "Üç Peynirli Tost",
+    "description_en": "Grilled halloumi, kaşar, cheddar",
+    "description_tr": "Izgara hellim, kaşar, cheddar"
+  },
+  {
+    "product_id": "ead9f50e-220f-5d96-b5b1-ff96327bc2c7",
+    "name_en": "Cheesy Toast",
+    "name_tr": "Kaşarlı Tost",
+    "description_en": "Kaşar cheese only",
+    "description_tr": "Sadece kaşar peyniri"
+  },
+  {
+    "product_id": "1a68ec52-10d6-5847-a44c-e98a761906d1",
+    "name_en": "Mexican Beef Toast",
+    "name_tr": "Meksika Usulü Dana Tost",
+    "description_en": "Beef, corn, sweet pepper, kaşar",
+    "description_tr": "Dana eti, mısır, tatlı biber, kaşar"
+  },
+  {
+    "product_id": "39e83256-5320-5670-9ba1-1c86ed5ada44",
+    "name_en": "Mexican Chicken Toast",
+    "name_tr": "Meksika Usulü Tavuk Tost",
+    "description_en": "Chicken, corn, sweet pepper, kaşar",
+    "description_tr": "Tavuk, mısır, tatlı biber, kaşar"
+  },
+  {
+    "product_id": "b4452e4d-9281-5441-8f98-a857ae4f258e",
+    "name_en": "Doner Toast",
+    "name_tr": "Döner Tost",
+    "description_en": "Chicken doner, kaşar cheese, sauce",
+    "description_tr": "Tavuk döner, kaşar peyniri, sos"
+  },
+  {
+    "product_id": "0df6d607-3575-58bf-bda5-92b0407c8666",
+    "name_en": "Club Sandwich & Cajun Fries",
+    "name_tr": "Club Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "aa93ec93-9c69-55d7-b3fd-099851c58c31",
+    "name_en": "Tongue Sandwich & Cajun Fries",
+    "name_tr": "Dil Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "90778bb6-9ec6-5f07-b870-781f1839191c",
+    "name_en": "Mexican Beef Sandwich & Cajun Fries",
+    "name_tr": "Meksika Usulü Dana Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "8596bd68-2baf-51b4-904a-2846599d94bd",
+    "name_en": "Mexican Chicken Sandwich & Cajun Fries",
+    "name_tr": "Meksika Usulü Tavuk Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "b6ed1ed6-f3d6-5aae-8576-d5273e04e56e",
+    "name_en": "Kumru Sandwich & Cajun Fries",
+    "name_tr": "Kumru Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "b466938c-5160-5add-b265-46a142095f57",
+    "name_en": "Hot Dog Sandwich & Cajun Fries",
+    "name_tr": "Sosisli Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "07f0286b-3d30-5855-88fd-7f6cf1f9c40e",
+    "name_en": "Smoky Hot Dog Sandwich & Cajun Fries",
+    "name_tr": "Füme Sosisli Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "0c5fc666-e307-5d36-a639-6e3d0da233f3",
+    "name_en": "Cheesy Chicken & Mushroom Sandwich & Cajun Fries",
+    "name_tr": "Peynirli Tavuk ve Mantar Sandviç ve Cajun Patates",
+    "description_en": "All sandwiches are served with Cajun fries",
+    "description_tr": "Tüm sandviçler Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "f37cbcd5-49ee-5014-8e73-2ed7e6304656",
+    "name_en": "Butcher Meatball Salad",
+    "name_tr": "Kasap Köfte Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4e97928b-172b-5707-9305-39f33f91c31b",
+    "name_en": "Crispy Chicken Caesar Salad",
+    "name_tr": "Çıtır Tavuk Sezar Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1e9f9ceb-74e0-562c-be58-b12793832865",
+    "name_en": "Grilled Chicken Caesar Salad",
+    "name_tr": "Izgara Tavuk Sezar Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6ea16c18-37f9-59f3-9197-e667a619124f",
+    "name_en": "Grilled Halloumi Caesar Salad",
+    "name_tr": "Izgara Hellim Sezar Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "674a8407-0615-50b3-8d9b-d2a9df26e7e5",
+    "name_en": "À La Meaty Salad",
+    "name_tr": "À La Etli Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "5abd75c4-1314-512f-a683-0c85261321dd",
+    "name_en": "À La Chicky Salad",
+    "name_tr": "À La Tavuklu Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "0d9be271-df9f-5350-9b96-99c02401deb0",
+    "name_en": "Grilled Chicken Salad",
+    "name_tr": "Izgara Tavuk Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "cad6950c-402e-5f72-82d5-285381af3ef4",
+    "name_en": "Grilled Halloumi Salad",
+    "name_tr": "Izgara Hellim Salata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1c84c716-d320-5d9f-9b17-1b5199ff3e8b",
+    "name_en": "Breakfast Burrito + Chips",
+    "name_tr": "Kahvaltı Burrito + Patates",
+    "description_en": "Egg (2), sausage, sweet green & red pepper, kasseri cheese, optional sauce",
+    "description_tr": "Yumurta (2 adet), sosis, tatlı yeşil ve kırmızı biber, kaşar peyniri, isteğe bağlı sos"
+  },
+  {
+    "product_id": "ef0bb61c-bf0b-5983-adf1-8f1511665f44",
+    "name_en": "Smokey Breakfast Burrito + Chips",
+    "name_tr": "Füme Kahvaltı Burrito + Patates",
+    "description_en": "Egg, smoked beef slices, sausage, sweet green & red pepper, tomatoes, kasseri cheese-flavored chips",
+    "description_tr": "Yumurta, füme dana dilimleri, sosis, tatlı yeşil ve kırmızı biber, domates, kaşar peyniri aromalı patates"
+  },
+  {
+    "product_id": "bd541e16-a6dc-5d5e-8de1-8a619003c014",
+    "name_en": "Smokey Egg & Cheese Patty",
+    "name_tr": "Füme Yumurta ve Peynirli Burger",
+    "description_en": "Egg, burger bread, smoky beef, kassericher, cheddar cheese",
+    "description_tr": "Yumurta, burger ekmeği, füme dana eti, kaşar ve cheddar peyniri"
+  },
+  {
+    "product_id": "946f3118-5d07-52b3-8a95-9ee218daa7b4",
+    "name_en": "Plain Omelette",
+    "name_tr": "Sade Omlet",
+    "description_en": "Fried egg (2), bread (2 piece), fresh tomatoes, cucumbers",
+    "description_tr": "Yumurta (2 adet), ekmek (2 dilim), taze domates, salatalık"
+  },
+  {
+    "product_id": "454d524d-5351-54b9-9dee-7e47cf2c94a9",
+    "name_en": "Cheesy Omelette",
+    "name_tr": "Peynirli Omlet",
+    "description_en": "Fried egg (2), kasseri cheese, sweet green an red pepper",
+    "description_tr": "Yumurta (2 adet), kaşar peyniri, tatlı yeşil ve kırmızı biber"
+  },
+  {
+    "product_id": "a6e8e0cb-44be-58ac-baac-07ec04e6560b",
+    "name_en": "Menemen",
+    "name_tr": "Menemen",
+    "description_en": "Eggs, tomatoes, tomato paste, sweet green and red pepper",
+    "description_tr": "Yumurta, domates, domates salçası, tatlı yeşil ve kırmızı biber"
+  },
+  {
+    "product_id": "92c3c51e-ec7c-5456-a733-6e981fe12581",
+    "name_en": "Mexican Chicken Quesadilla + Chips",
+    "name_tr": "Meksika Usulü Tavuk Quesadilla + Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "173e687a-f016-5f82-939a-acca4eeec1bf",
+    "name_en": "Mexican Minced Meat Quesadilla + Chips",
+    "name_tr": "Meksika Usulü Kıymalı Quesadilla + Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6cb2e2ec-ff0e-5e70-be25-be5232faa18d",
+    "name_en": "Mexican Chicken Taquito + Chips",
+    "name_tr": "Meksika Usulü Tavuk Taquito + Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6f0396a1-e80a-5a4b-9f36-8601be20e472",
+    "name_en": "Mexican Minced Meat Taquito + Chips",
+    "name_tr": "Meksika Usulü Kıymalı Taquito + Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "22911aec-65cf-5489-b749-be97e35367fd",
+    "name_en": "Chicken Fajitas",
+    "name_tr": "Tavuk Fajita",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "f1835680-3db0-5e65-9ece-322d7a77e8f0",
+    "name_en": "Chicken Fajita Wrap + Cajun Fries",
+    "name_tr": "Tavuk Fajita Dürüm + Cajun Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "3e4b8bf5-5161-55b3-8a0f-b22ee97f1792",
+    "name_en": "Mexican Chicken Nachos",
+    "name_tr": "Meksika Usulü Tavuk Nachos",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "51e67dee-4d75-5c91-9aec-01254d51c778",
+    "name_en": "Mexican Minced Meat Nachos",
+    "name_tr": "Meksika Usulü Kıymalı Nachos",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4d75d0c5-da85-5386-8684-3270746a4bd9",
+    "name_en": "Cheesy Nachos",
+    "name_tr": "Peynirli Nachos",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c951557a-c4f3-5f20-a39e-5d1f4442fcbe",
+    "name_en": "Tenders",
+    "name_tr": "Tavuk Tenders",
+    "description_en": "Served with sauce & Cajun fries",
+    "description_tr": "Sos ve Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "05c79388-e89f-5ba5-8bf2-94b5180ccc61",
+    "name_en": "Wings",
+    "name_tr": "Tavuk Kanat",
+    "description_en": "Served with sauce & Cajun fries",
+    "description_tr": "Sos ve Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "03953211-7694-5ca6-8e03-44464b5034d7",
+    "name_en": "Wingers",
+    "name_tr": "Kanat ve Tenders",
+    "description_en": "Served with sauce & Cajun fries",
+    "description_tr": "Sos ve Cajun patates kızartması ile servis edilir"
+  },
+  {
+    "product_id": "f112e663-3ad0-57be-bbd5-6585da76d79b",
+    "name_en": "Chicken Doner Wrap + Cajun Fries",
+    "name_tr": "Tavuk Döner Dürüm + Cajun Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1e425c08-e3b6-58b0-bc84-39e5cd1c9d63",
+    "name_en": "Chicken Doner Sandwich + Cajun Fries",
+    "name_tr": "Tavuk Döner Sandviç + Cajun Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "b1d1a3b5-4585-5d81-81ad-7ae3010c5c03",
+    "name_en": "Chicken Doner Burger + Cajun Fries",
+    "name_tr": "Tavuk Döner Burger + Cajun Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "7a37bbcd-fb8c-51c5-a11b-c00374d93524",
+    "name_en": "Chicken Doner Service",
+    "name_tr": "Tavuk Döner Servis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "f884a465-891e-5781-b613-3ef1b61af22e",
+    "name_en": "Chicken Quesadilla + Cajun Fries",
+    "name_tr": "Tavuk Quesadilla + Cajun Patates",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "97faae73-12cf-5969-aae0-bb9a771aa223",
+    "name_en": "Arabic Shawarma",
+    "name_tr": "Arap Usulü Shawarma",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "5da9b712-7f9b-5148-ad7b-608efbe6716c",
+    "name_en": "Zereshk polo ba morgh",
+    "name_tr": "Zereshk polo ba morgh",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "f468781f-5d3b-5c3f-84c1-3657212fa95c",
+    "name_en": "Chelo Kebab Kubide",
+    "name_tr": "Chelo Kebab Kubide",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "a58ec31f-2b7b-5d28-a1fb-d4750ab7f606",
+    "name_en": "Chelo Jooje Kebab",
+    "name_tr": "Chelo Jooje Kebab",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "11fce945-2083-573a-8255-3ba1567924a7",
+    "name_en": "Mix Kebab / Jooje Menu",
+    "name_tr": "Karışık Kebap / Jooje Menü",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "be7ef9ac-71a8-5ba2-ae21-a8b1c2ff0c7f",
+    "name_en": "Gheyneh / Jooje Menu",
+    "name_tr": "Gheyneh / Jooje Menü",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1b168b6d-65e3-5c61-aec7-abdb8c2cb969",
+    "name_en": "Kubje Menu / Gheymen bademjoon",
+    "name_tr": "Kubje Menü / Gheymen bademjoon",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "4a27b4a0-7d24-5d14-9d11-70e0d6c61f92",
+    "name_en": "Gherneh Menu / Karafs",
+    "name_tr": "Gherneh Menü / Karafs",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c2ef14c6-4b1f-5ec8-993b-235c784d89f7",
+    "name_en": "Ghormeh sabzi",
+    "name_tr": "Ghormeh sabzi",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "eddf48c6-02db-53b1-8d4d-91dd944e24c2",
+    "name_en": "Sbzi polo mahi",
+    "name_tr": "Sbzi polo mahi",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "590da9ad-caa1-55d9-9ead-3acc1b8a5973",
+    "name_en": "Special Beef Pizza",
+    "name_tr": "Özel Dana Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "771ad742-5284-5b9e-a7ca-5ff27ae73fb3",
+    "name_en": "Charcuterie Pizza",
+    "name_tr": "Şarküteri Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "a69704f4-206f-5ff5-9d6a-5b1f65cbaf5c",
+    "name_en": "Tongue Pizza",
+    "name_tr": "Dil Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "493c631f-9a72-524b-b9af-b62fd5c2c1b3",
+    "name_en": "Meat & Mushroom Pizza",
+    "name_tr": "Et ve Mantar Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c0060e72-79e2-5111-8ebe-4ef0624bb027",
+    "name_en": "BBQ Smokey Pizza",
+    "name_tr": "BBQ Füme Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "eb9df878-d681-5b4f-a2bb-83656928f163",
+    "name_en": "Mix Pizza",
+    "name_tr": "Karışık Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "07f9dbbb-b67d-56e0-ba77-3fc53faaef5e",
+    "name_en": "Chicken & Mushroom Pizza",
+    "name_tr": "Tavuk ve Mantar Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "0d870ef2-f465-5b95-8d0e-aed858bba9ee",
+    "name_en": "Chicken Doner Pizza",
+    "name_tr": "Tavuk Döner Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c6f0a6f7-e604-5d14-a4d8-2d1e192a78d4",
+    "name_en": "Four Cheese Pizza",
+    "name_tr": "Dört Peynirli Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "78cc5536-1147-5957-90f8-443d97aee35e",
+    "name_en": "Pepperoni Pizza",
+    "name_tr": "Pepperoni Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "f8fe9fc4-6871-5da9-9cb8-cb55d948944b",
+    "name_en": "Vegetarian Pizza",
+    "name_tr": "Vejetaryen Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "569880d7-b8a2-5b02-a267-0d139cba2280",
+    "name_en": "Margherita Pizza",
+    "name_tr": "Margherita Pizza",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "d2a4ea32-c5fc-54dd-8986-af3c5a39b61b",
+    "name_en": "Cola / Cola Zero / Sprite / Fanta (Tin)",
+    "name_tr": "Cola / Cola Zero / Sprite / Fanta (Kutu)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "dccacb92-bc8b-56cd-9658-4eb341963c6e",
+    "name_en": "Fuse Tea",
+    "name_tr": "Fuse Tea",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "674c1dff-dcb8-5b1c-b83a-0a7f269fcffd",
+    "name_en": "Ayran",
+    "name_tr": "Ayran",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "dc8fc13e-6ac3-5dae-a735-d0b0a8742735",
+    "name_en": "Soda",
+    "name_tr": "Soda",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "3cf43cfa-3ef7-5c0d-aa52-9be7e036d15a",
+    "name_en": "Water",
+    "name_tr": "Su",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "133c616a-a2b1-52ef-b887-8f6242498a4c",
+    "name_en": "Egg",
+    "name_tr": "Yumurta",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "b92dbffd-8868-50e6-bb02-ffc5248d5053",
+    "name_en": "Halloumi (2 pcs)",
+    "name_tr": "Hellim (2 Adet)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ba674470-bbee-556f-bbfd-d7fd1abd9ce2",
+    "name_en": "Kasseri Cheese",
+    "name_tr": "Kaşar Peyniri",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "15bfebf6-d64c-5d05-b186-8492aa88ddae",
+    "name_en": "Cheddar Cheese",
+    "name_tr": "Cheddar Peyniri",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "aeca2eca-3d09-593a-a14a-594159e32261",
+    "name_en": "Mushrooms",
+    "name_tr": "Mantar",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "03a17e30-a6d5-5256-aded-d27c32d11b84",
+    "name_en": "Smokey Beef (1 slice)",
+    "name_tr": "Füme Dana (1 Dilim)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "88a3f5c8-7b83-5cf6-9f34-9e4096c5b41c",
+    "name_en": "Salami",
+    "name_tr": "Salam",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "71a18d8c-7fb6-5551-bd0c-cfe6c5272758",
+    "name_en": "Sausage",
+    "name_tr": "Sosis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "cc9b6518-9b7b-5684-b042-62721fc763a9",
+    "name_en": "Pepperoni",
+    "name_tr": "Pepperoni",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "f8c3ff35-9757-533c-b323-d8c7ece7b3fa",
+    "name_en": "Lavash",
+    "name_tr": "Lavaş",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
+    "name_en": "Espresso",
+    "name_tr": "Espresso",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "8945e8b5-8101-556d-9cab-406175a61a32",
+    "name_en": "Americano",
+    "name_tr": "Americano",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1dd15495-6048-52d3-9e30-a447132e4b2c",
+    "name_en": "Latte",
+    "name_tr": "Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "a06d8556-8121-5f6b-8116-1e1f554aa69e",
+    "name_en": "Cappuccino",
+    "name_tr": "Cappuccino",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1ca1e109-0cbf-5b31-a3f3-1c322203bf0f",
+    "name_en": "Mocha",
+    "name_tr": "Mocha",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "b33c7895-3542-57e3-8b04-ba5e0eb81eec",
+    "name_en": "Caramel Latte",
+    "name_tr": "Karamelli Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "bfcf33be-80da-5184-b960-8499e552a445",
+    "name_en": "Vanilla Latte",
+    "name_tr": "Vanilyalı Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "05c28fe6-37ef-5dfd-a94c-9349afb3fe37",
+    "name_en": "Cortado",
+    "name_tr": "Cortado",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "8bc2f228-9890-5fb2-aae6-db8bc243a4b2",
+    "name_en": "Turkish Coffee",
+    "name_tr": "Türk Kahvesi",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "447d2247-2f80-55b8-b541-9911fe170178",
+    "name_en": "Iced Americano",
+    "name_tr": "Soğuk Americano",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "3b4fa516-e954-52d4-8b7f-826f7c638496",
+    "name_en": "Iced Latte",
+    "name_tr": "Soğuk Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "d8b4ebe1-b7cb-54c7-97e3-b33ab90904d3",
+    "name_en": "Iced Mocha",
+    "name_tr": "Soğuk Mocha",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "887243c0-ff91-596e-92b1-edb67f67dec4",
+    "name_en": "Iced Caramel Latte",
+    "name_tr": "Soğuk Karamelli Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "61089f70-f3c0-55df-9a7f-827efe6e4456",
+    "name_en": "Iced Vanilla Latte",
+    "name_tr": "Soğuk Vanilyalı Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ed1d2521-7115-5237-8eaf-386ee519b4b8",
+    "name_en": "Bag Tea",
+    "name_tr": "Poşet Çay",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "25e21952-df64-553b-83ea-cdadeec362b7",
+    "name_en": "Hot Chocolate",
+    "name_tr": "Sıcak Çikolata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "33416261-dbce-5f85-8bd9-3477e101903b",
+    "name_en": "Water",
+    "name_tr": "Su",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "5a4a95bf-e07f-57b5-a078-324e8cf6a995",
+    "name_en": "Soda",
+    "name_tr": "Soda",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "aae34e81-a0cb-5bfb-b9b6-ba2d4ba8d1c9",
+    "name_en": "Cappy Juice",
+    "name_tr": "Cappy Meyve Suyu",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ceeba4e5-e521-5288-beb4-b87cfb6c9f59",
+    "name_en": "Fuse Tea",
+    "name_tr": "Fuse Tea",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "961412bc-3285-52db-af04-c6ff184f73c5",
+    "name_en": "Cola-Cola",
+    "name_tr": "Cola-Cola",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "96730169-de0b-503c-a060-4d3af97961f7",
+    "name_en": "Fanta",
+    "name_tr": "Fanta",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "aef71df5-7770-511c-828f-ee11e852e5eb",
+    "name_en": "Sprite",
+    "name_tr": "Sprite",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "af9c861f-8e13-557c-ad27-8d9a86d1a755",
+    "name_en": "Tiramisu",
+    "name_tr": "Tiramisu",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "9057f722-83df-5d08-8a2d-08301fb6b055",
+    "name_en": "Lotus Cheesecake",
+    "name_tr": "Lotus Cheesecake",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "056c40f6-3844-5255-b7b1-95d8647e64dd",
+    "name_en": "Burnt Cheesecake",
+    "name_tr": "Yanık Cheesecake",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "744d4fc7-f3d3-5ef8-a174-4287021474e3",
+    "name_en": "New York Cheesecake",
+    "name_tr": "New York Cheesecake",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "0c3925cc-f845-5b10-9ae0-807cef791f2d",
+    "name_en": "Devil's Pasta",
+    "name_tr": "Devil's Pasta",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "83a1de06-06b1-5d3d-a44e-2bce37e7ebdc",
+    "name_en": "Brownie",
+    "name_tr": "Brownie",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "e861e7e8-f446-5749-8995-bc3ad9192668",
+    "name_en": "Macaron (3 Pieces)",
+    "name_tr": "Makaron (3 Adet)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ad41d96f-9f9d-5fc9-ace0-f3923dfef2b4",
+    "name_en": "Donut",
+    "name_tr": "Donut",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "625357ce-3fb7-519d-b97d-96bdf5de86cf",
+    "name_en": "Latte Pasta",
+    "name_tr": "Latte Pasta",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "72486a4c-a9ae-59f8-a0f0-f01e8066dbfa",
+    "name_en": "English Breakfast",
+    "name_tr": "İngiliz Kahvaltısı",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c7559cdf-1fcf-5d0c-84fc-c3942dcc8d1f",
+    "name_en": "Cypriot Breakfast",
+    "name_tr": "Kıbrıs Kahvaltısı",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "ddce7a44-1a5f-5e91-8b06-22a5357b71e2",
+    "name_en": "Coffeeholic Breakfast",
+    "name_tr": "Coffeeholic Kahvaltı",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "a01e2ea2-56dd-5515-a6b4-090028c66ade",
+    "name_en": "Plain Menemen",
+    "name_tr": "Sade Menemen",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "2e621950-3485-5424-b2a2-33e27c981d92",
+    "name_en": "Mixed Menemen",
+    "name_tr": "Karışık Menemen",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "74fac3ad-705a-5795-80c6-d57e8459d369",
+    "name_en": "Kasseri Cheese Menemen",
+    "name_tr": "Kaşarlı Menemen",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "c7e0e500-4d43-56d7-b5aa-7f9f00051f84",
+    "name_en": "Fried Egg Menemen",
+    "name_tr": "Göz Yumurta Menemen",
+    "description_en": "Made with 2 eggs; served with tomatoes, cucumbers, black olives and bread.",
+    "description_tr": "Domates, salatalık, siyah zeytin ve ekmek ile servis edilir. 2 adet yumurta kullanılır."
+  },
+  {
+    "product_id": "33de8367-b8ba-5a1e-a07e-423402e9f329",
+    "name_en": "Plain Omelette",
+    "name_tr": "Sade Omlet",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "0af25ce8-6fa5-5040-bd46-8a9f47567171",
+    "name_en": "Kasseri Cheese Omelette",
+    "name_tr": "Kaşarlı Omlet",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "214adf34-0a3e-51c2-ba2e-d82f4be1793f",
+    "name_en": "Mixed Omelette",
+    "name_tr": "Karışık Omlet",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6a41adc7-9524-5f7d-9739-2e4d20587dcb",
+    "name_en": "Fried Egg Omelette",
+    "name_tr": "Göz Yumurta Omlet",
+    "description_en": "Made with 2 eggs; served with tomatoes, cucumbers, black olives and bread.",
+    "description_tr": "Domates, salatalık, siyah zeytin ve ekmek ile servis edilir. 2 adet yumurta kullanılır."
+  },
+  {
+    "product_id": "f41a8949-107a-58b5-9942-629e56d32cab",
+    "name_en": "Cheese Gözleme",
+    "name_tr": "Peynirli Gözleme",
+    "description_en": "Served with tomatoes, cucumbers, black olives and fries.",
+    "description_tr": "Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir."
+  },
+  {
+    "product_id": "62f53965-d985-55fc-83ed-8b54b31f39b5",
+    "name_en": "Halloumi Gözleme",
+    "name_tr": "Hellimli Gözleme",
+    "description_en": "Served with tomatoes, cucumbers, black olives and fries.",
+    "description_tr": "Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir."
+  },
+  {
+    "product_id": "623795f9-808f-5cd8-ba49-2143caaf8663",
+    "name_en": "Potato Gözleme",
+    "name_tr": "Patatesli Gözleme",
+    "description_en": "Served with tomatoes, cucumbers, black olives and fries.",
+    "description_tr": "Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir."
+  },
+  {
+    "product_id": "7c9fa195-00ff-5eaf-bd05-339c46174e74",
+    "name_en": "Kasseri Cheese Gözleme",
+    "name_tr": "Kaşarlı Gözleme",
+    "description_en": "Served with tomatoes, cucumbers, black olives and fries.",
+    "description_tr": "Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir."
+  },
+  {
+    "product_id": "cc4eaffa-efcd-5a87-8495-3b653a72760b",
+    "name_en": "Kasseri Cheese Toast",
+    "name_tr": "Kaşarlı Tost",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "6bdd1487-b6a7-52c2-bdaf-4cebd9ee9099",
+    "name_en": "Mixed Toast",
+    "name_tr": "Karışık Tost",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "f6ffe030-76d7-5c41-8824-52be4f942905",
+    "name_en": "Pastırma Toast",
+    "name_tr": "Pastırmalı Tost",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "a3271778-38ba-502f-8d22-053ced87cb2e",
+    "name_en": "Cheese Sandwich",
+    "name_tr": "Peynirli Sandviç",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "43433a2d-f490-5a4a-8439-8d800bd8f365",
+    "name_en": "Chicken Sandwich",
+    "name_tr": "Tavuklu Sandviç",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "c8f77928-10ea-598b-980e-9c9e3cfcd83f",
+    "name_en": "Boly Beef Sandwich",
+    "name_tr": "Boly Beef'li Sandviç",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "0f13dd8c-0876-5f51-8285-4329245ab7c6",
+    "name_en": "Mixed Sandwich",
+    "name_tr": "Karışık Sandviç",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "9e4da78d-8229-5a6e-8101-f0ea6b57a11a",
+    "name_en": "Tuna Sandwich",
+    "name_tr": "Ton Balıklı Sandviç",
+    "description_en": "Served with tomatoes, cucumbers and black olives.",
+    "description_tr": "Domates, salatalık ve siyah zeytin ile servis edilir."
+  },
+  {
+    "product_id": "9218cb74-83ae-57a3-ba42-c6423bb32780",
+    "name_en": "Cheese Salad",
+    "name_tr": "Peynirli Salata",
+    "description_en": "Fried halloumi, special salad dressing, white cheese, seasonal greens",
+    "description_tr": "Kızartılmış hellim, özel salata sosu, beyaz peynir, mevsim yeşillikleri"
+  },
+  {
+    "product_id": "51bb7b25-1a39-5384-8a56-9ccb23274007",
+    "name_en": "Caesar Salad",
+    "name_tr": "Sezar Salata",
+    "description_en": "Fried chicken, Caesar dressing, seasonal greens",
+    "description_tr": "Kızartılmış tavuk, sezar sos, mevsim yeşillikleri"
+  },
+  {
+    "product_id": "694a966d-abf2-5f2d-a815-461a016a8073",
+    "name_en": "Chicken Salad",
+    "name_tr": "Tavuklu Salata",
+    "description_en": "Fried chicken, special salad dressing, seasonal greens",
+    "description_tr": "Kızartılmış tavuk, özel salata sosu, mevsim yeşillikleri"
+  },
+  {
+    "product_id": "9e58eac7-e450-5be7-b77d-389f8d5a4a36",
+    "name_en": "Tuna Salad",
+    "name_tr": "Ton Balıklı Salata",
+    "description_en": "Tuna, special salad dressing, seasonal greens",
+    "description_tr": "Ton balığı, özel salata sosu, mevsim yeşillikleri"
+  },
+  {
+    "product_id": "2a6ec0e6-46a8-5414-a022-4f139e86651c",
+    "name_en": "Beef Fajita",
+    "name_tr": "Dana Et Fajita",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "ececaeb0-f49f-5743-bd2e-bb7315d5d3cb",
+    "name_en": "Stuffed Chicken",
+    "name_tr": "Tavuk Dolma",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "da7c0570-2ac1-5db2-97f0-a8eb1318788d",
+    "name_en": "Chicken Fajita",
+    "name_tr": "Tavuk Fajita",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "157a9319-da6e-5f9a-9fa3-c19b68d22e92",
+    "name_en": "Chicken with Curry Sauce",
+    "name_tr": "Köri Soslu Tavuk",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "2b00b887-12d3-5659-af4d-f884d895a3dd",
+    "name_en": "Chicken with Mustard Sauce",
+    "name_tr": "Hardal Soslu Tavuk",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "7baf569e-6424-5b57-a9ea-9f88d41babee",
+    "name_en": "Chicken with Mushroom Sauce",
+    "name_tr": "Mantar Soslu Tavuk",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "2b1b6098-ecfb-5af9-866c-056ec06d9541",
+    "name_en": "Grilled Wings",
+    "name_tr": "Izgara Kanat",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "481f09f7-1a51-5cad-abf5-b1c2fc36290e",
+    "name_en": "Chicken Tenders",
+    "name_tr": "Tavuk Tenders",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "e4e53f50-4114-5d60-ae58-64504b0ea91a",
+    "name_en": "Chicken Diana",
+    "name_tr": "Tavuk Diana",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "4e369dd9-b035-5218-b25c-8d9dea0e3308",
+    "name_en": "Chicken Princess",
+    "name_tr": "Tavuk Prenses",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "d2874958-65af-5caf-bfdc-03cda8fdd073",
+    "name_en": "Golden Chicken",
+    "name_tr": "Golden Tavuk",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "ba16eeb1-2c69-56f9-8dbc-a0f7a0c8ff50",
+    "name_en": "BBQ Chicken",
+    "name_tr": "BBQ Tavuk",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "acc8dde5-8446-5b1a-9447-61a0f189df02",
+    "name_en": "Grilled Chicken",
+    "name_tr": "Izgara Tavuk",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "66446765-e8c7-5b7a-a8f8-b2b2c8f492a6",
+    "name_en": "Kentucy Wings",
+    "name_tr": "Kanat Kentucy",
+    "description_en": "Served with rice, fries and salad.",
+    "description_tr": "Pilav, patates kızartması ve salata ile servis edilir."
+  },
+  {
+    "product_id": "9bc75ca2-05b2-57ca-99f0-afc18f6ec01b",
+    "name_en": "Sliced Doner over Rice",
+    "name_tr": "Pilav Üstü Yaprak Döner",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "03e1e0e5-e2db-52bf-942e-027a52190c4e",
+    "name_en": "Sliced Doner Iskender",
+    "name_tr": "İskender Yaprak Döner",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "40a90823-9287-52d2-a61f-112e31dae34e",
+    "name_en": "Sliced Doner Service",
+    "name_tr": "Yaprak Döner Servis",
+    "description_en": "With strained yoghurt, sliced onions and parsley, fries, fried tomatoes and peppers, and lavash",
+    "description_tr": "Süzme yoğurt, soğan-maydanoz söğüşü, patates kızartması, kızartılmış domates-biber ve lavaş ile"
+  },
+  {
+    "product_id": "ec41772c-5ffd-52e6-8795-12924bb30133",
+    "name_en": "Lamb Skewer Kebab Service",
+    "name_tr": "Kuzu Şiş Kebap Servis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "31e2fee8-e582-57c9-a110-8e27579d2d04",
+    "name_en": "Adana Kebab Service",
+    "name_tr": "Adana Kebap Servis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "1d6ca026-57b3-5829-aacf-f2347027f6c9",
+    "name_en": "Chicken Skewer Service",
+    "name_tr": "Tavuk Şiş Servis",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "fc7c686e-2822-5f69-aa2e-f1aa6c981aa3",
+    "name_en": "Sliced Doner Wrap",
+    "name_tr": "Yaprak Döner Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "92da539b-28fa-5189-95cc-0ff009721f91",
+    "name_en": "Lamb Skewer Wrap",
+    "name_tr": "Kuzu Şiş Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "c66e429a-2b43-5892-9a8c-6aca0ee5fb9e",
+    "name_en": "Adana Wrap",
+    "name_tr": "Adana Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "b1825fb7-8eb1-5738-aabf-6d33ccd356c1",
+    "name_en": "Kentucy Chicken Wrap",
+    "name_tr": "Kentucy Tavuk Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "24709a5b-e6b4-50b3-a8d7-4d014d6c3be9",
+    "name_en": "Meatball Wrap",
+    "name_tr": "Köfte Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "997f3111-601f-5b52-9f20-3dff39c08a55",
+    "name_en": "Steak Wrap",
+    "name_tr": "Steak Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "66e23296-c634-5433-9738-1a432309b23e",
+    "name_en": "Chicken Skewer Wrap",
+    "name_tr": "Tavuk Şiş Dürüm",
+    "description_en": "Wraps are served with onions, parsley, sliced tomatoes and 2 lavash breads.",
+    "description_tr": "Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir."
+  },
+  {
+    "product_id": "d6d7b507-e46e-5e7a-ac92-2e2acf4dbf68",
+    "name_en": "Meat Pita",
+    "name_tr": "Etli Pide",
+    "description_en": "Served with tomatoes, cucumbers and parsley.",
+    "description_tr": "Domates, salatalık ve maydanoz ile servis edilir."
+  },
+  {
+    "product_id": "f81795e7-3276-5e07-a559-2ff9c8d9bb4a",
+    "name_en": "Cubed Meat Pita",
+    "name_tr": "Kuşbaşı Pide",
+    "description_en": "Served with tomatoes, cucumbers and parsley.",
+    "description_tr": "Domates, salatalık ve maydanoz ile servis edilir."
+  },
+  {
+    "product_id": "9f23f223-c4da-51de-a8fb-6cc1a39a5027",
+    "name_en": "Kasseri Cheese Pita",
+    "name_tr": "Kaşarlı Pide",
+    "description_en": "Served with tomatoes, cucumbers and parsley.",
+    "description_tr": "Domates, salatalık ve maydanoz ile servis edilir."
+  },
+  {
+    "product_id": "802564a9-be0c-5722-a94d-0e4fec1dc4ed",
+    "name_en": "Lahmacun",
+    "name_tr": "Lahmacun",
+    "description_en": "Served with tomatoes, cucumbers and parsley.",
+    "description_tr": "Domates, salatalık ve maydanoz ile servis edilir."
+  },
+  {
+    "product_id": "fbbed72d-d14b-5384-81c7-1d930d233aca",
+    "name_en": "Original Maraş Paça Soup",
+    "name_tr": "Orjinal Maraş Paça Çorbası",
+    "description_en": "Served with greens, olives, butter, lemon and bread.",
+    "description_tr": "Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir."
+  },
+  {
+    "product_id": "8e63680c-eca0-5c66-a431-c37465a0654f",
+    "name_en": "Beyran Soup",
+    "name_tr": "Beyran Çorbası",
+    "description_en": "Served with greens, olives, butter, lemon and bread.",
+    "description_tr": "Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir."
+  },
+  {
+    "product_id": "d80eaeaa-3d63-5006-86b6-f636158cd7cf",
+    "name_en": "Lentil Soup",
+    "name_tr": "Mercimek Çorbası",
+    "description_en": "Served with greens, olives, butter, lemon and bread.",
+    "description_tr": "Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir."
+  },
+  {
+    "product_id": "dff22afd-021b-5a1d-b49b-25aa2c66d23f",
+    "name_en": "Chicken Soup",
+    "name_tr": "Tavuk Çorbası",
+    "description_en": "Served with greens, olives, butter, lemon and bread.",
+    "description_tr": "Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir."
+  },
+  {
+    "product_id": "ce0c832b-b99a-5d6f-86e2-197b682e8ce8",
+    "name_en": "Fettucini Alfredo",
+    "name_tr": "Fettucini Alfredo",
+    "description_en": "Chicken - mushrooms",
+    "description_tr": "Tavuk - Mantar"
+  },
+  {
+    "product_id": "038fbfb3-481e-53dc-8a6d-7ead1c7a395b",
+    "name_en": "Pesto Sauce Pasta",
+    "name_tr": "Pesto Sauce Pasta",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "e6b061e9-90c0-593f-8514-6bed28057dd0",
+    "name_en": "Spaghetti Bolognose",
+    "name_tr": "Spaghetti Bolognose",
+    "description_en": "Minced beef",
+    "description_tr": "Dana Kıyma"
+  },
+  {
+    "product_id": "3092cc3d-b9a1-578f-ab48-808b3c61697e",
+    "name_en": "Spaghetti Napolitan",
+    "name_tr": "Spaghetti Napolitan",
+    "description_en": "With tomato sauce",
+    "description_tr": "Domates Soslu"
+  },
+  {
+    "product_id": "5f29a0e2-738e-5a0a-9122-2a2f950b5c90",
+    "name_en": "Cyprus Style",
+    "name_tr": "Cyprus Style",
+    "description_en": "Grilled chicken - grated halloumi",
+    "description_tr": "Tavuk Grill - Rendelenmiş Hellim"
+  },
+  {
+    "product_id": "f3dc1142-ff20-52fb-ba4f-35a84732f6f0",
+    "name_en": "Pasta Eco 1 Menu",
+    "name_tr": "Makarna Eco 1 Menü",
+    "description_en": "Choose any 3 pastas, pay for 2",
+    "description_tr": "Herhangi 3 Makarna Al 2 Öde"
+  },
+  {
+    "product_id": "fc42e07d-27ef-5ec6-a204-ddbf5b9bc526",
+    "name_en": "Pasta Eco 2 Menu",
+    "name_tr": "Makarna Eco 2 Menü",
+    "description_en": "Choose any 4 pastas, pay for 3",
+    "description_tr": "Herhangi 4 Makarna Al 3 Öde"
+  },
+  {
+    "product_id": "9fe71f7a-1d72-5017-a33a-0fa0d1ebee22",
+    "name_en": "Italian Mix",
+    "name_tr": "İtalian Mix",
+    "description_en": "Salami, sucuk, sausage, green and red peppers, corn, olives, mushrooms",
+    "description_tr": "Salam, Sucuk, Sosis, Yeşil ve Kırmızı Biber, Mısır, Zeytin, Mantar"
+  },
+  {
+    "product_id": "0671f0b1-49b8-5295-b113-16bbdfa49298",
+    "name_en": "BBQ Chicken",
+    "name_tr": "BBQ Chicken",
+    "description_en": "Kentucy chicken pieces, corn, mushrooms, red pepper",
+    "description_tr": "Kentucy Tavuk Parçacıkları, Mısır, Mantar, Kırmızı Biber"
+  },
+  {
+    "product_id": "7796a758-342d-5c94-aeab-a63918295b2e",
+    "name_en": "Margherita",
+    "name_tr": "Margherita",
+    "description_en": "Mozzarella cheese, tomato pieces",
+    "description_tr": "Mozarella Peyniri, Domates Parçacıkları"
+  },
+  {
+    "product_id": "b02f57e0-ec2a-5db1-bea0-0fd95f6a54bd",
+    "name_en": "Veggie Pizza",
+    "name_tr": "Veggie Pizza",
+    "description_en": "Corn, mushrooms, green and red peppers, olives",
+    "description_tr": "Mısır, Mantar, Yeşil ve Kırmızı Biber, Zeytin"
+  },
+  {
+    "product_id": "a42e8370-72b4-5ed5-b3f0-b585ee163f8f",
+    "name_en": "Chilli Chicken",
+    "name_tr": "Chilli Chicken",
+    "description_en": "Kentucy chicken pieces, corn, mushrooms, jalapeño pepper",
+    "description_tr": "Kentucy Tavuk Parçacıkları, Mısır, Mantar, Jalapeno Biber"
+  },
+  {
+    "product_id": "3019f741-5eca-5a72-88e3-c691d908bd6a",
+    "name_en": "Coffeholic Special",
+    "name_tr": "Coffeholic Special",
+    "description_en": "Beef ham, corn, mushrooms, olives, red pepper",
+    "description_tr": "Et Jambon, Mısır, Mantar, Zeytin, Kırmızı Biber"
+  },
+  {
+    "product_id": "7a9ebd15-e38a-5248-b55e-e98d739e14f6",
+    "name_en": "Pizza Eco 1 Menu (32 cm)",
+    "name_tr": "Pizza Eco 1 Menü (32cm)",
+    "description_en": "Choose any 4 pizzas, pay for 3",
+    "description_tr": "Herhangi 4 Pizza Al 3 Öde"
+  },
+  {
+    "product_id": "c624645f-79f1-5a14-81c1-2219d98365ff",
+    "name_en": "Pizza Eco 2 Menu (32 cm)",
+    "name_tr": "Pizza Eco 2 Menü (32cm)",
+    "description_en": "Choose any 6 pizzas, pay for 4",
+    "description_tr": "Herhangi 6 Pizza Al 4 Öde"
+  },
+  {
+    "product_id": "790e1c37-1cf6-529f-bbd7-9c9511077723",
+    "name_en": "Chicken Burger",
+    "name_tr": "Tavuk Burger",
+    "description_en": "Served with fries.",
+    "description_tr": "Patates Kızartması ile servis edilir."
+  },
+  {
+    "product_id": "01ddf9b8-1462-5555-9d96-1b3100445df4",
+    "name_en": "Beef Burger",
+    "name_tr": "Et Burger",
+    "description_en": "Served with fries.",
+    "description_tr": "Patates Kızartması ile servis edilir."
+  },
+  {
+    "product_id": "3220febc-f28c-5ea9-9905-dff35b9e761e",
+    "name_en": "Cheeseburger",
+    "name_tr": "Cheeseburger",
+    "description_en": "Served with fries.",
+    "description_tr": "Patates Kızartması ile servis edilir."
+  },
+  {
+    "product_id": "964bafa5-434b-5bb6-8be7-a747367fd7e5",
+    "name_en": "Double Cheeseburger",
+    "name_tr": "Double Cheeseburger",
+    "description_en": "Served with fries.",
+    "description_tr": "Patates Kızartması ile servis edilir."
+  },
+  {
+    "product_id": "7d833ff2-6fc5-50c0-8019-ab830c07be4b",
+    "name_en": "Triple Cheeseburger",
+    "name_tr": "Triple Cheeseburger",
+    "description_en": "Served with fries.",
+    "description_tr": "Patates Kızartması ile servis edilir."
+  },
+  {
+    "product_id": "4a725633-3646-5172-b42a-c4f2f6ce0d94",
+    "name_en": "Cousin Menu",
+    "name_tr": "Cousin Menu",
+    "description_en": "1 chicken burger + 1 beef burger + 2 Coca Cola + 6 onion rings + 2 portions of fries",
+    "description_tr": "1 Tavuk Burger + 1 Et Burger + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması"
+  },
+  {
+    "product_id": "94b95ebb-418a-528b-8422-e9db1b7da66d",
+    "name_en": "Twins Menu",
+    "name_tr": "Twins Menu",
+    "description_en": "Italian pizza (32 cm) + vegetarian pizza (32 cm) + 2 Coca Cola + 6 onion rings + 2 portions of fries",
+    "description_tr": "İtalyan Pizza 32cm + Vejeteryan Pizza 32cm + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması"
+  },
+  {
+    "product_id": "8d5aca6e-fff3-50f7-a228-810d58a9beca",
+    "name_en": "I'm Hungry Menu",
+    "name_tr": "Acıktım Menu",
+    "description_en": "Main course + salad + rice + fries + Coca Cola + dessert",
+    "description_tr": "Ana Yemek + Salata + Pilav + Patates Kızartması + Coca Cola + Tatlı"
+  },
+  {
+    "product_id": "ebe42ac5-ec22-5f99-b608-bc28e3a48fea",
+    "name_en": "GYM Menu",
+    "name_tr": "GYM Menu",
+    "description_en": "Grilled chicken + 2 servings of rice + salad + soda",
+    "description_tr": "Izgara Tavuk + 2 Pilav + Salata + Soda"
+  },
+  {
+    "product_id": "85c7b2e0-38ab-5282-a18e-fc5821315352",
+    "name_en": "Hot Snack Basket",
+    "name_tr": "Sıcak Sepeti",
+    "description_en": "Fried sausage (6 pieces), salami (6 pieces), halloumi (6 pieces), cheese rolls (6 pieces), potatoes (6 pieces)",
+    "description_tr": "Kızartılmış Sosis (6 Adet), Salam (6 Adet), Hellim (6 Adet), Sigara Böreği (6 Adet), Patates (6 Adet)"
+  },
+  {
+    "product_id": "40f63639-199f-5920-bcd7-7a61b9c7c151",
+    "name_en": "Cheese Rolls (6 Pieces)",
+    "name_tr": "Sigara Böreği (6 Adet)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "674aea49-1c37-5a7d-ba0a-314a7d13df35",
+    "name_en": "Onion Rings (6 Pieces)",
+    "name_tr": "Soğan Halkası (6 Adet)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "70cf4bc7-848c-58fe-b159-2e0b587e2483",
+    "name_en": "Fries Plate",
+    "name_tr": "Cips Tabağı",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "596c7519-645f-50eb-943d-089e279ce617",
+    "name_en": "Mixed Baked Potato",
+    "name_tr": "Karışık Kumpir",
+    "description_en": "Cypriot potato, salami, sucuk, sausage, corn, mushrooms, olives, Russian salad",
+    "description_tr": "Kıbrıs Patatesi, Salam, Sucuk, Sosis, Mısır, Mantar, Zeytin, Rus Salatası"
+  },
+  {
+    "product_id": "e4109ec8-1b56-510b-92fa-7085540829b8",
+    "name_en": "Chicken Baked Potato",
+    "name_tr": "Tavuklu Kumpir",
+    "description_en": "Cypriot potato, chicken, corn, mushrooms, olives, Russian salad",
+    "description_tr": "Kıbrıs Patatesi, Tavuk, Mısır, Mantar, Zeytin, Rus Salatası"
+  },
+  {
+    "product_id": "b75dbafa-6815-50dc-bc3b-4f64b8a6bfa3",
+    "name_en": "Tuna Baked Potato",
+    "name_tr": "Ton Balıklı Kumpir",
+    "description_en": "Cypriot potato, tuna, corn, mushrooms, olives, Russian salad",
+    "description_tr": "Kıbrıs Patatesi, Ton Balığı, Mısır, Mantar, Zeytin, Rus Salatası"
+  },
+  {
+    "product_id": "88fc810d-bf35-54ba-a98d-863e31c29d7e",
+    "name_en": "Vegetarian Baked Potato",
+    "name_tr": "Vejeteryan Kumpir",
+    "description_en": "Cypriot potato, corn, mushrooms, olives, Russian salad",
+    "description_tr": "Kıbrıs Patatesi, Mısır, Mantar, Zeytin, Rus Salatası"
+  },
+  {
+    "product_id": "855e85bc-1b6b-5038-844b-6d0ccce51e49",
+    "name_en": "Macchiato",
+    "name_tr": "Macchiato",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "2e462e4d-eb9c-5b02-bef2-f769b93e86ed",
+    "name_en": "Americano",
+    "name_tr": "Americano",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "a26cd559-c6ec-52ad-871f-718a3947f655",
+    "name_en": "Latte",
+    "name_tr": "Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "3a8671f5-a68e-53b7-92b4-b13105abf52b",
+    "name_en": "Cappuccino",
+    "name_tr": "Cappuccino",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "6fd4a4d5-f7cf-5f74-bab2-88965a078670",
+    "name_en": "Flat White",
+    "name_tr": "Flat White",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "fd82485e-4e83-5591-8993-c8f9d03bea8d",
+    "name_en": "Mocha",
+    "name_tr": "Mocha",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "e6082734-afd7-5f73-8937-11b0bcfea53e",
+    "name_en": "White Mocha",
+    "name_tr": "White Mocha",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "bc2d21df-a2be-50db-8cc0-a7b71f24e876",
+    "name_en": "Spanish Latte",
+    "name_tr": "Spanish Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "e16f1c4e-532c-5cdc-acc8-e4e92a03b5fc",
+    "name_en": "Iced Americano",
+    "name_tr": "Iced Americano",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "b88b1f78-bb35-5054-8dc5-6ed8c3adf982",
+    "name_en": "Iced Latte",
+    "name_tr": "Iced Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "36174725-77e3-5e0c-9353-2efd11c624eb",
+    "name_en": "Iced Mocha",
+    "name_tr": "Iced Mocha",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "474aa97e-b697-5495-baba-9c13ec72936d",
+    "name_en": "Iced White Mocha",
+    "name_tr": "Iced White Mocha",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "2ca00f3f-c764-556f-965f-e76be36d212c",
+    "name_en": "Iced Spanish Latte",
+    "name_tr": "Iced Spanish Latte",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "44bc4f5e-65b8-513f-91bc-72a661a4eed8",
+    "name_en": "Voltage / Frozen / Milkshake",
+    "name_tr": "Voltage / Frozen / Milkshake",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "13fc1414-8d83-5b69-9245-4bfd1aa3ab94",
+    "name_en": "Italian Soda / Lemonade",
+    "name_tr": "Italian Soda / Limonata",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "8b6325fe-1fbd-5e72-a5ee-b49fb0b3c483",
+    "name_en": "Smoothies / Freshly Squeezed Orange Juice",
+    "name_tr": "Smoothies / Portakal Suyu (Taze Sıkılmış)",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "a628e8c8-dab4-54d6-8b46-f48846365cb2",
+    "name_en": "Coca Cola / Fanta / Sprite / Fuse Tea",
+    "name_tr": "Coca Cola / Fanta / Sprite / Fuse Tea",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "d17a221e-38f7-57e0-891f-13bf4139bff7",
+    "name_en": "Water",
+    "name_tr": "Su",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "43e1143c-b3ce-5cc3-8ba6-ec1150bd052d",
+    "name_en": "Soda",
+    "name_tr": "Soda",
+    "description_en": "",
+    "description_tr": ""
+  },
+  {
+    "product_id": "d37c9f01-ca06-5942-9eeb-4716c35b1cef",
+    "name_en": "Ayran",
+    "name_tr": "Ayran",
+    "description_en": "",
+    "description_tr": ""
+  }
+]

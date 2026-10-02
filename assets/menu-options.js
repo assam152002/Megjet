@@ -6,7 +6,12 @@
  document.body.append(dialog);
  let current=null,busy=false;
  const isTr=()=>document.documentElement.lang==='tr';
- const label=x=>x[isTr()?'label_tr':'label_en']||x.label_en||x.label_tr||'';
+ const label=x=>{
+  const raw=x[isTr()?'label_tr':'label_en']||x.label_en||x.label_tr||'';
+  const translated=Object.values(window.MEGJET_PRODUCT_TRANSLATIONS||{}).find(t=>[t.name_en,t.name_tr].includes(raw));
+  if(translated)return translated[isTr()?'name_tr':'name_en']||raw;
+  return isTr()?raw.replace(/\bpcs\b/g,'adet').replace(/\bwings\b/g,'kanat'):raw;
+ };
  const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  function selected(){const result={};for(const g of current.groups)result[g.id]=Array.from(dialog.querySelectorAll('input:checked')).filter(x=>x.dataset.group===g.id).map(x=>x.value);return result;}
  function total(selection){let price=Number(current.product.price);for(const g of current.groups)for(const id of selection[g.id])price+=Number(g.choices.find(c=>c.id===id)?.extra||0);return price;}
