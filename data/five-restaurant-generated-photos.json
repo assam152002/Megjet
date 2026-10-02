@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 120,
+  "generated": 130,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -1435,6 +1435,126 @@
       "path": "assets/menu-generated/f37cbcd5-49ee-5014-8e73-2ed7e6304656.jpg",
       "generation_mode": "built-in",
       "blob_sha": "53e54dbeed45cfda0a29c533297fb22429426627"
+    },
+    {
+      "id": "e38aa9de-638a-5e46-adde-a99b957487fa",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Cripy Chicken Salad",
+      "description": "[Salads] ",
+      "image_url": "./assets/menu-generated/e38aa9de-638a-5e46-adde-a99b957487fa.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cripy Chicken Salad\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/e38aa9de-638a-5e46-adde-a99b957487fa.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "4b46cf7094d09b401f6af5831e9722e26d5ed77f"
+    },
+    {
+      "id": "744d4fc7-f3d3-5ef8-a174-4287021474e3",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "New York Cheesecake",
+      "description": "[Pastry] ",
+      "image_url": "./assets/menu-generated/744d4fc7-f3d3-5ef8-a174-4287021474e3.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"New York Cheesecake\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/744d4fc7-f3d3-5ef8-a174-4287021474e3.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "a260fbe270b902cd582352d3a092f9309f86cf1e"
+    },
+    {
+      "id": "9e58eac7-e450-5be7-b77d-389f8d5a4a36",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Ton Balıklı Salata",
+      "description": "[Salatalar] Ton balığı, özel salata sosu, mevsim yeşillikleri",
+      "image_url": "./assets/menu-generated/9e58eac7-e450-5be7-b77d-389f8d5a4a36.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Ton Balıklı Salata\",\"description\":\"Ton balığı, özel salata sosu, mevsim yeşillikleri\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9e58eac7-e450-5be7-b77d-389f8d5a4a36.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "63a3c42a53268eca2f11e8c2ddbd9dc30127b6aa"
+    },
+    {
+      "id": "4e97928b-172b-5707-9305-39f33f91c31b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Crispy Chicken Caesar Salad",
+      "description": "[Salads] ",
+      "image_url": "./assets/menu-generated/4e97928b-172b-5707-9305-39f33f91c31b.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Crispy Chicken Caesar Salad\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/4e97928b-172b-5707-9305-39f33f91c31b.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "112a9c27a4c12fa0fe63b183b52128f663771b8c"
+    },
+    {
+      "id": "82b99362-444b-5c0d-8e5a-b73783e28581",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Head Soup",
+      "description": "[Soups] Pita, olive, lemon, greens",
+      "image_url": "./assets/menu-generated/82b99362-444b-5c0d-8e5a-b73783e28581.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Head Soup\",\"description\":\"Pita, olive, lemon, greens\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/82b99362-444b-5c0d-8e5a-b73783e28581.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "66cc3180d40f66e8396d8b574fd6f7e98b9221b0"
+    },
+    {
+      "id": "0c3925cc-f845-5b10-9ae0-807cef791f2d",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Devil's Pasta",
+      "description": "[Pastry] ",
+      "image_url": "./assets/menu-generated/0c3925cc-f845-5b10-9ae0-807cef791f2d.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Devil's Pasta\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/0c3925cc-f845-5b10-9ae0-807cef791f2d.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "8c344749822672b119b11bd5585c5f963c7d9dbd"
+    },
+    {
+      "id": "2a6ec0e6-46a8-5414-a022-4f139e86651c",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Dana Et Fajita",
+      "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
+      "image_url": "./assets/menu-generated/2a6ec0e6-46a8-5414-a022-4f139e86651c.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Dana Et Fajita\",\"description\":\"Pilav, patates kızartması ve salata ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/2a6ec0e6-46a8-5414-a022-4f139e86651c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "999c559b5a6e84f389fe1e110a87be8c4960fa7f"
+    },
+    {
+      "id": "1e9f9ceb-74e0-562c-be58-b12793832865",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Grilled Chicken Caesar Salad",
+      "description": "[Salads] ",
+      "image_url": "./assets/menu-generated/1e9f9ceb-74e0-562c-be58-b12793832865.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Grilled Chicken Caesar Salad\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/1e9f9ceb-74e0-562c-be58-b12793832865.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "61cb85c4d19c483458b9429695e46994c617ee4f"
+    },
+    {
+      "id": "16bc4359-7c85-5e27-b133-f48a6597d98a",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Lentil Soup",
+      "description": "[Soups] Pita, olive, lemon, greens",
+      "image_url": "./assets/menu-generated/16bc4359-7c85-5e27-b133-f48a6597d98a.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Lentil Soup\",\"description\":\"Pita, olive, lemon, greens\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/16bc4359-7c85-5e27-b133-f48a6597d98a.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "6f8707e24dcc32aea88bc4663495768b09983762"
+    },
+    {
+      "id": "83a1de06-06b1-5d3d-a44e-2bce37e7ebdc",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Brownie",
+      "description": "[Pastry] ",
+      "image_url": "./assets/menu-generated/83a1de06-06b1-5d3d-a44e-2bce37e7ebdc.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Brownie\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/83a1de06-06b1-5d3d-a44e-2bce37e7ebdc.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "56dcf5a923120ebc9a43e08ba6c93a023ef25352"
     }
   ]
 }
