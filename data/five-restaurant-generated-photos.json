@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 60,
+  "generated": 70,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -701,6 +701,126 @@
       "path": "assets/menu-generated/c46c2152-dff1-5292-9469-68d67bc6c0c3.jpg",
       "generation_mode": "built-in",
       "blob_sha": "0ca61a13ae716e735040397d9986c2903313c0b2"
+    },
+    {
+      "id": "887243c0-ff91-596e-92b1-edb67f67dec4",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Iced Caramel Latte",
+      "description": "[Cold Coffees] ",
+      "image_url": "./assets/menu-generated/887243c0-ff91-596e-92b1-edb67f67dec4.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Iced Caramel Latte\",\"description\":\"[Cold Coffees] \"}. Show the accurately named base item, only included sides from description, no optional extras. Pale neutral tabletop, appropriate cream plate or clear cup, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/887243c0-ff91-596e-92b1-edb67f67dec4.jpg",
+      "blob_sha": "d5b706a1a7f482163205c58f6ce4ca683c098f2a"
+    },
+    {
+      "id": "4e434065-1d9a-59e7-b3d7-9b47579ed6df",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Atom Kokoreç",
+      "description": "[Kokoreç] ",
+      "image_url": "./assets/menu-generated/4e434065-1d9a-59e7-b3d7-9b47579ed6df.jpg",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Atom Kokoreç\",\"description\":\"[Kokoreç] \"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/4e434065-1d9a-59e7-b3d7-9b47579ed6df.jpg",
+      "blob_sha": "53c83f28c76c7c14eb3d1df04174444fda360f63"
+    },
+    {
+      "id": "62f53965-d985-55fc-83ed-8b54b31f39b5",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Hellimli Gözleme",
+      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.",
+      "image_url": "./assets/menu-generated/62f53965-d985-55fc-83ed-8b54b31f39b5.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Hellimli Gözleme\",\"description\":\"[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/62f53965-d985-55fc-83ed-8b54b31f39b5.jpg",
+      "blob_sha": "fb8878b2ac85ecb2a572bbee7eb3376edfe17e46"
+    },
+    {
+      "id": "7a7481b8-5576-59b2-95d5-4222ca97fb22",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Triple Cheese Toast",
+      "description": "[Toasts] Grilled halloumi, kaşar, cheddar",
+      "image_url": "./assets/menu-generated/7a7481b8-5576-59b2-95d5-4222ca97fb22.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Triple Cheese Toast\",\"description\":\"[Toasts] Grilled halloumi, kaşar, cheddar\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/7a7481b8-5576-59b2-95d5-4222ca97fb22.jpg",
+      "blob_sha": "07db9646d79106619706234904a8911541facee3"
+    },
+    {
+      "id": "882c660a-3424-52e3-b5ab-957e05635b14",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Adana Service + Ayran",
+      "description": "[Service Menu] Salad, pita + Ayran",
+      "image_url": "./assets/menu-generated/882c660a-3424-52e3-b5ab-957e05635b14.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Adana Service + Ayran\",\"description\":\"[Service Menu] Salad, pita + Ayran\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/882c660a-3424-52e3-b5ab-957e05635b14.jpg",
+      "blob_sha": "b760c88c5a81011ac9e41b9dde65a3ab34f330fc"
+    },
+    {
+      "id": "61089f70-f3c0-55df-9a7f-827efe6e4456",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Iced Vanilla Latte",
+      "description": "[Cold Coffees] ",
+      "image_url": "./assets/menu-generated/61089f70-f3c0-55df-9a7f-827efe6e4456.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Iced Vanilla Latte\",\"description\":\"[Cold Coffees] \"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/61089f70-f3c0-55df-9a7f-827efe6e4456.jpg",
+      "blob_sha": "4ecf8300c270a2cab221a35649e84943c9028e08"
+    },
+    {
+      "id": "db512234-c27c-5d20-9a4b-fa9e007c313c",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Cup Ayran / Homemade Ayran",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/db512234-c27c-5d20-9a4b-fa9e007c313c.jpg",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cup Ayran / Homemade Ayran\",\"description\":\"[Drinks] \"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/db512234-c27c-5d20-9a4b-fa9e007c313c.jpg",
+      "blob_sha": "c1cf6499bb7588c8801c1f9a635174f31ed1de8b"
+    },
+    {
+      "id": "623795f9-808f-5cd8-ba49-2143caaf8663",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Patatesli Gözleme",
+      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.",
+      "image_url": "./assets/menu-generated/623795f9-808f-5cd8-ba49-2143caaf8663.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Patatesli Gözleme\",\"description\":\"[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/623795f9-808f-5cd8-ba49-2143caaf8663.jpg",
+      "blob_sha": "6f926d2df6926353cd91483b9aad4172621b1bb5"
+    },
+    {
+      "id": "ead9f50e-220f-5d96-b5b1-ff96327bc2c7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Toast",
+      "description": "[Toasts] Kaşar cheese only",
+      "image_url": "./assets/menu-generated/ead9f50e-220f-5d96-b5b1-ff96327bc2c7.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cheesy Toast\",\"description\":\"[Toasts] Kaşar cheese only\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/ead9f50e-220f-5d96-b5b1-ff96327bc2c7.jpg",
+      "blob_sha": "65cdea005869df9ba4b5674aca825bf98d746689"
+    },
+    {
+      "id": "ef403a05-8e09-503f-8938-42125fcd1623",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Lamb Skewer Service + Ayran",
+      "description": "[Service Menu] Salad, pita + Ayran",
+      "image_url": "./assets/menu-generated/ef403a05-8e09-503f-8938-42125fcd1623.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Lamb Skewer Service + Ayran\",\"description\":\"[Service Menu] Salad, pita + Ayran\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/ef403a05-8e09-503f-8938-42125fcd1623.jpg",
+      "blob_sha": "c0284ef629d81a3f60a72b0d723874dc5720453b"
     }
   ]
 }

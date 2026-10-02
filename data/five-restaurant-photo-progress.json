@@ -1,26 +1,8 @@
 {
   "total": 299,
-  "published_and_linked": 60,
-  "remaining": 239,
-  "blocked_reason": "Execution workspace stopped responding after item 65. Items 61–65 were saved locally but not committed; recover local manifest before regenerating.",
-  "last_deployed_photo_commit": "7c0073448dab3f48cf9f4f548c46739830ba66b0",
+  "published_and_linked": 70,
+  "remaining": 229,
   "remaining_items": [
-    {
-      "id": "887243c0-ff91-596e-92b1-edb67f67dec4",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Iced Caramel Latte",
-      "description": "[Cold Coffees] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "61089f70-f3c0-55df-9a7f-827efe6e4456",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Iced Vanilla Latte",
-      "description": "[Cold Coffees] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
     {
       "id": "ed1d2521-7115-5237-8eaf-386ee519b4b8",
       "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
@@ -28,158 +10,6 @@
       "description": "[Hot Drinks] ",
       "image_url": null,
       "restaurant": "Island Coffee"
-    },
-    {
-      "id": "25e21952-df64-553b-83ea-cdadeec362b7",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Hot Chocolate",
-      "description": "[Hot Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "33416261-dbce-5f85-8bd9-3477e101903b",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Su / Water",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "5a4a95bf-e07f-57b5-a078-324e8cf6a995",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Soda",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "aae34e81-a0cb-5bfb-b9b6-ba2d4ba8d1c9",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Cappy Juice",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "ceeba4e5-e521-5288-beb4-b87cfb6c9f59",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Fuse Tea",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "961412bc-3285-52db-af04-c6ff184f73c5",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Cola-Cola",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "96730169-de0b-503c-a060-4d3af97961f7",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Fanta",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "aef71df5-7770-511c-828f-ee11e852e5eb",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Sprite",
-      "description": "[Cold Drinks] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "af9c861f-8e13-557c-ad27-8d9a86d1a755",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Tiramisu",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "9057f722-83df-5d08-8a2d-08301fb6b055",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Lotus Cheesecake",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "056c40f6-3844-5255-b7b1-95d8647e64dd",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Yanık Cheesecake",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "744d4fc7-f3d3-5ef8-a174-4287021474e3",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "New York Cheesecake",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "0c3925cc-f845-5b10-9ae0-807cef791f2d",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Devil's Pasta",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "83a1de06-06b1-5d3d-a44e-2bce37e7ebdc",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Brownie",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "e861e7e8-f446-5749-8995-bc3ad9192668",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Macaron (3 Adet)",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "ad41d96f-9f9d-5fc9-ace0-f3923dfef2b4",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Donut",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "625357ce-3fb7-519d-b97d-96bdf5de86cf",
-      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
-      "name": "Latte Pasta",
-      "description": "[Pastry] ",
-      "image_url": null,
-      "restaurant": "Island Coffee"
-    },
-    {
-      "id": "4e434065-1d9a-59e7-b3d7-9b47579ed6df",
-      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
-      "name": "Atom Kokoreç",
-      "description": "[Kokoreç] ",
-      "image_url": null,
-      "restaurant": "Köz Adası (Salamis Yolu)"
-    },
-    {
-      "id": "db512234-c27c-5d20-9a4b-fa9e007c313c",
-      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
-      "name": "Cup Ayran / Homemade Ayran",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Köz Adası (Salamis Yolu)"
     },
     {
       "id": "ce4078a4-19e2-5b9f-abc1-aea3a5fb158c",
@@ -190,44 +20,44 @@
       "restaurant": "Köz Adası (Salamis Yolu)"
     },
     {
-      "id": "d2ec10af-d2e1-5555-9903-fec5dc8ce478",
-      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
-      "name": "Soda",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Köz Adası (Salamis Yolu)"
-    },
-    {
-      "id": "4eb698d8-f698-571a-95cf-b2f7432c394f",
-      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
-      "name": "Water",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Köz Adası (Salamis Yolu)"
-    },
-    {
-      "id": "62f53965-d985-55fc-83ed-8b54b31f39b5",
-      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
-      "name": "Hellimli Gözleme",
-      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.",
-      "image_url": null,
-      "restaurant": "Coffeeholic Boutique Bakery House"
-    },
-    {
-      "id": "623795f9-808f-5cd8-ba49-2143caaf8663",
-      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
-      "name": "Patatesli Gözleme",
-      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.",
-      "image_url": null,
-      "restaurant": "Coffeeholic Boutique Bakery House"
-    },
-    {
       "id": "7c9fa195-00ff-5eaf-bd05-339c46174e74",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Kaşarlı Gözleme",
       "description": "[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "1a68ec52-10d6-5847-a44c-e98a761906d1",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Beef Toast",
+      "description": "[Toasts] Beef, corn, sweet pepper, kaşar",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "e7474c35-95c7-56c4-a66e-20013151f91c",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Chicken Skewer Service + Ayran",
+      "description": "[Service Menu] Salad, pita + Ayran",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "25e21952-df64-553b-83ea-cdadeec362b7",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Hot Chocolate",
+      "description": "[Hot Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
+      "id": "d2ec10af-d2e1-5555-9903-fec5dc8ce478",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Soda",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Köz Adası (Salamis Yolu)"
     },
     {
       "id": "cc4eaffa-efcd-5a87-8495-3b653a72760b",
@@ -238,12 +68,68 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "39e83256-5320-5670-9ba1-1c86ed5ada44",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Toast",
+      "description": "[Toasts] Chicken, corn, sweet pepper, kaşar",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "15338492-1a46-591f-bf4a-af95a7486388",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Chicken Wing Service + Ayran",
+      "description": "[Service Menu] Wings + Salad, pita + Ayran",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "33416261-dbce-5f85-8bd9-3477e101903b",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Su / Water",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
+      "id": "4eb698d8-f698-571a-95cf-b2f7432c394f",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Water",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Köz Adası (Salamis Yolu)"
+    },
+    {
       "id": "6bdd1487-b6a7-52c2-bdaf-4cebd9ee9099",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Karışık Tost",
       "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "b4452e4d-9281-5441-8f98-a857ae4f258e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Doner Toast",
+      "description": "[Toasts] Chicken doner, kaşar cheese, sauce",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "44518cb2-ec69-548e-b6e5-34639c25b3a2",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Lahmacun",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "5a4a95bf-e07f-57b5-a078-324e8cf6a995",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Soda",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "f6ffe030-76d7-5c41-8824-52be4f942905",
@@ -254,12 +140,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "0df6d607-3575-58bf-bda5-92b0407c8666",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Club Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "a110b58f-ef16-5b81-88d7-992e27af7277",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Cubed Meat Kasseri Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "aae34e81-a0cb-5bfb-b9b6-ba2d4ba8d1c9",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Cappy Juice",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "a3271778-38ba-502f-8d22-053ced87cb2e",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Peynirli Sandviç",
       "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "aa93ec93-9c69-55d7-b3fd-099851c58c31",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Tongue Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "bdb8240c-78db-572b-8d9b-b9eb46be687d",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Minced Meat Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "ceeba4e5-e521-5288-beb4-b87cfb6c9f59",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Fuse Tea",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "43433a2d-f490-5a4a-8439-8d800bd8f365",
@@ -270,12 +204,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "90778bb6-9ec6-5f07-b870-781f1839191c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Beef Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "f2c119da-2012-530b-a1a5-dc379d8d0e23",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Sausage Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "961412bc-3285-52db-af04-c6ff184f73c5",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Cola-Cola",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "c8f77928-10ea-598b-980e-9c9e3cfcd83f",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Boly Beef'li Sandviç",
       "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "8596bd68-2baf-51b4-904a-2846599d94bd",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "caa319a6-37fc-57cd-87c5-353aaa877ab2",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Minced Meat Kasseri Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "96730169-de0b-503c-a060-4d3af97961f7",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Fanta",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "0f13dd8c-0876-5f51-8285-4329245ab7c6",
@@ -286,12 +268,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "b6ed1ed6-f3d6-5aae-8576-d5273e04e56e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Kumru Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "2844e9d0-4327-5e90-9c4d-acf90435457c",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Kasseri Cheese Pita",
+      "description": "[Pitas] Tomato, parsley",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "aef71df5-7770-511c-828f-ee11e852e5eb",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Sprite",
+      "description": "[Cold Drinks] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "9e4da78d-8229-5a6e-8101-f0ea6b57a11a",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Ton Balıklı Sandviç",
       "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "b466938c-5160-5add-b265-46a142095f57",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Hot Dog Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "2852d7a3-d1c1-5999-8865-6e10805fc0bd",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Crispy Chicken Menu",
+      "description": "[Other Dishes] Fries, ketchup, mayonnaise + Drink",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "af9c861f-8e13-557c-ad27-8d9a86d1a755",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Tiramisu",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "9218cb74-83ae-57a3-ba42-c6423bb32780",
@@ -302,12 +332,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "07f0286b-3d30-5855-88fd-7f6cf1f9c40e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Smoky Hot Dog Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "a09a3adb-4044-52fc-abee-50c9e7521b07",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Stuffed Chicken",
+      "description": "[Other Dishes] Fries, rice, salad, bread",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "9057f722-83df-5d08-8a2d-08301fb6b055",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Lotus Cheesecake",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "51bb7b25-1a39-5384-8a56-9ccb23274007",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Sezar Salata",
       "description": "[Salatalar] Kızartılmış tavuk, sezar sos, mevsim yeşillikleri",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "0c5fc666-e307-5d36-a639-6e3d0da233f3",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Chicken & Mushroom Sandwich & Cajun Fries",
+      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "308f189f-bb4f-56d4-83ae-b6c5a566e223",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Fries",
+      "description": "[Other Dishes] Ketchup, mayonnaise",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "056c40f6-3844-5255-b7b1-95d8647e64dd",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Yanık Cheesecake",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "694a966d-abf2-5f2d-a815-461a016a8073",
@@ -318,12 +396,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "f37cbcd5-49ee-5014-8e73-2ed7e6304656",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Butcher Meatball Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "e38aa9de-638a-5e46-adde-a99b957487fa",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Cripy Chicken Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "744d4fc7-f3d3-5ef8-a174-4287021474e3",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "New York Cheesecake",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "9e58eac7-e450-5be7-b77d-389f8d5a4a36",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Ton Balıklı Salata",
       "description": "[Salatalar] Ton balığı, özel salata sosu, mevsim yeşillikleri",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "4e97928b-172b-5707-9305-39f33f91c31b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Crispy Chicken Caesar Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "82b99362-444b-5c0d-8e5a-b73783e28581",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Head Soup",
+      "description": "[Soups] Pita, olive, lemon, greens",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "0c3925cc-f845-5b10-9ae0-807cef791f2d",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Devil's Pasta",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "2a6ec0e6-46a8-5414-a022-4f139e86651c",
@@ -334,12 +460,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "1e9f9ceb-74e0-562c-be58-b12793832865",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Grilled Chicken Caesar Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "16bc4359-7c85-5e27-b133-f48a6597d98a",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Lentil Soup",
+      "description": "[Soups] Pita, olive, lemon, greens",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "83a1de06-06b1-5d3d-a44e-2bce37e7ebdc",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Brownie",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "ececaeb0-f49f-5743-bd2e-bb7315d5d3cb",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Tavuk Dolma",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "6ea16c18-37f9-59f3-9197-e667a619124f",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Grilled Halloumi Caesar Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "c18b3552-a592-53ce-85b1-bb491f93ae77",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Chicken Soup",
+      "description": "[Soups] Pita, olive, lemon, greens",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "e861e7e8-f446-5749-8995-bc3ad9192668",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Macaron (3 Adet)",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "da7c0570-2ac1-5db2-97f0-a8eb1318788d",
@@ -350,12 +524,60 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "674a8407-0615-50b3-8d9b-d2a9df26e7e5",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "À La Meaty Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "456d89c8-e289-51b7-bb83-c1cfe26f7a36",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Çiğ Köfte Wrap",
+      "description": "[Çiğ Köfte] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "ad41d96f-9f9d-5fc9-ace0-f3923dfef2b4",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Donut",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
+    },
+    {
       "id": "157a9319-da6e-5f9a-9fa3-c19b68d22e92",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Köri Soslu Tavuk",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "5abd75c4-1314-512f-a683-0c85261321dd",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "À La Chicky Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "cede754f-a0d9-5dde-be55-f0beebb0131d",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Çiğ Köfte Service",
+      "description": "[Çiğ Köfte] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
+      "id": "625357ce-3fb7-519d-b97d-96bdf5de86cf",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Latte Pasta",
+      "description": "[Pastry] ",
+      "image_url": null,
+      "restaurant": "Island Coffee"
     },
     {
       "id": "2b00b887-12d3-5659-af4d-f884d895a3dd",
@@ -366,12 +588,44 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "0d9be271-df9f-5350-9b96-99c02401deb0",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Grilled Chicken Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "d6a58989-0d8b-5957-a6b9-9134ab756800",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Coca-Cola (33 cl.)",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
       "id": "7baf569e-6424-5b57-a9ea-9f88d41babee",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Mantar Soslu Tavuk",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "cad6950c-402e-5f72-82d5-285381af3ef4",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Grilled Halloumi Salad",
+      "description": "[Salads] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "e422ffbd-cb5e-5946-b0ad-15e1cba3158f",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Coca-Cola Zero (33 cl.)",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
     },
     {
       "id": "2b1b6098-ecfb-5af9-866c-056ec06d9541",
@@ -382,12 +636,44 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "1c84c716-d320-5d9f-9b17-1b5199ff3e8b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Breakfast Burrito + Chips",
+      "description": "[Breakfasts] Egg (2), sausage, sweet green & red pepper, kasseri cheese, optional sauce",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "10de15eb-191e-583e-b00c-0a2f0faa5f89",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Fanta (33 cl.)",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
       "id": "481f09f7-1a51-5cad-abf5-b1c2fc36290e",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Tavuk Tenders",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "ef0bb61c-bf0b-5983-adf1-8f1511665f44",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Smokey Breakfast Burrito + Chips",
+      "description": "[Breakfasts] Egg, smoked beef slices, sausage, sweet green & red pepper, tomatoes, kasseri cheese-flavored chips",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "86b097b4-7753-5f68-a70c-237b17549ad5",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Sprite (33 cl.)",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
     },
     {
       "id": "e4e53f50-4114-5d60-ae58-64504b0ea91a",
@@ -398,12 +684,44 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "bd541e16-a6dc-5d5e-8de1-8a619003c014",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Smokey Egg & Cheese Patty",
+      "description": "[Breakfasts] Egg, burger bread, smoky beef, kassericher, cheddar cheese",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "c4fe2618-3c2a-563a-b58e-5d2869d645f1",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Water (50 cl.)",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
       "id": "4e369dd9-b035-5218-b25c-8d9dea0e3308",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Tavuk Prenses",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "946f3118-5d07-52b3-8a95-9ee218daa7b4",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Plain Omelette",
+      "description": "[Breakfasts] Fried egg (2), bread (2 piece), fresh tomatoes, cucumbers",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "3df5c282-bb24-53be-aaf9-1d16ad3ee0a3",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Ayran (30 cl.)",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
     },
     {
       "id": "d2874958-65af-5caf-bfdc-03cda8fdd073",
@@ -414,12 +732,44 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "454d524d-5351-54b9-9dee-7e47cf2c94a9",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Omelette",
+      "description": "[Breakfasts] Fried egg (2), kasseri cheese, sweet green an red pepper",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "9abc8cc3-0eb3-50b0-8958-cdff0c7348f2",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Soda",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
+    },
+    {
       "id": "ba16eeb1-2c69-56f9-8dbc-a0f7a0c8ff50",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "BBQ Tavuk",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "a6e8e0cb-44be-58ac-baac-07ec04e6560b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Menemen",
+      "description": "[Breakfasts] Eggs, tomatoes, tomato paste, sweet green and red pepper",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
+      "id": "7cb2fc64-b12e-5aba-81a5-fdffe7747e35",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Turnip Juice",
+      "description": "[Drinks] ",
+      "image_url": null,
+      "restaurant": "Garson Ali (Dumlupınar)"
     },
     {
       "id": "acc8dde5-8446-5b1a-9447-61a0f189df02",
@@ -430,12 +780,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "92c3c51e-ec7c-5456-a733-6e981fe12581",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Quesadilla + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "66446765-e8c7-5b7a-a8f8-b2b2c8f492a6",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Kanat Kentucy",
       "description": "[Ana Yemekler] Pilav, patates kızartması ve salata ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "173e687a-f016-5f82-939a-acca4eeec1bf",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Minced Meat Quesadilla + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "9bc75ca2-05b2-57ca-99f0-afc18f6ec01b",
@@ -446,12 +812,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "6cb2e2ec-ff0e-5e70-be25-be5232faa18d",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Taquito + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "03e1e0e5-e2db-52bf-942e-027a52190c4e",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "İskender Yaprak Döner",
       "description": "[Dürüm & Kebap Çeşitleri] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "6f0396a1-e80a-5a4b-9f36-8601be20e472",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Minced Meat Taquito + Chips",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "40a90823-9287-52d2-a61f-112e31dae34e",
@@ -462,12 +844,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "22911aec-65cf-5489-b749-be97e35367fd",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Fajitas",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "ec41772c-5ffd-52e6-8795-12924bb30133",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Kuzu Şiş Kebap Servis",
       "description": "[Dürüm & Kebap Çeşitleri] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "f1835680-3db0-5e65-9ece-322d7a77e8f0",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Fajita Wrap + Cajun Fries",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "31e2fee8-e582-57c9-a110-8e27579d2d04",
@@ -478,12 +876,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "3e4b8bf5-5161-55b3-8a0f-b22ee97f1792",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Nachos",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "1d6ca026-57b3-5829-aacf-f2347027f6c9",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Tavuk Şiş Servis",
       "description": "[Dürüm & Kebap Çeşitleri] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "51e67dee-4d75-5c91-9aec-01254d51c778",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Minced Meat Nachos",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "fc7c686e-2822-5f69-aa2e-f1aa6c981aa3",
@@ -494,12 +908,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "4d75d0c5-da85-5386-8684-3270746a4bd9",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheesy Nachos",
+      "description": "[À La Mexicana] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "92da539b-28fa-5189-95cc-0ff009721f91",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Kuzu Şiş Dürüm",
       "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "c951557a-c4f3-5f20-a39e-5d1f4442fcbe",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Tenders",
+      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "c66e429a-2b43-5892-9a8c-6aca0ee5fb9e",
@@ -510,12 +940,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "05c79388-e89f-5ba5-8bf2-94b5180ccc61",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Wings",
+      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "b1825fb7-8eb1-5738-aabf-6d33ccd356c1",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Kentucy Tavuk Dürüm",
       "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "03953211-7694-5ca6-8e03-44464b5034d7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Wingers",
+      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "24709a5b-e6b4-50b3-a8d7-4d014d6c3be9",
@@ -526,12 +972,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "f112e663-3ad0-57be-bbd5-6585da76d79b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Wrap + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "997f3111-601f-5b52-9f20-3dff39c08a55",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Steak Dürüm",
       "description": "[Dürüm & Kebap Çeşitleri] Dürümler soğan, maydanoz, domates söğüşü ve 2 adet lavaş ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "1e425c08-e3b6-58b0-bc84-39e5cd1c9d63",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Sandwich + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "66e23296-c634-5433-9738-1a432309b23e",
@@ -542,12 +1004,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "b1d1a3b5-4585-5d81-81ad-7ae3010c5c03",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Burger + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "d6d7b507-e46e-5e7a-ac92-2e2acf4dbf68",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Etli Pide",
       "description": "[Pideler & Çorbalar] Domates, salatalık ve maydanoz ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "7a37bbcd-fb8c-51c5-a11b-c00374d93524",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Service",
+      "description": "[Doners Menu] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "f81795e7-3276-5e07-a559-2ff9c8d9bb4a",
@@ -558,12 +1036,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "f884a465-891e-5781-b613-3ef1b61af22e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Quesadilla + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "9f23f223-c4da-51de-a8fb-6cc1a39a5027",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Kaşarlı Pide",
       "description": "[Pideler & Çorbalar] Domates, salatalık ve maydanoz ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "97faae73-12cf-5969-aae0-bb9a771aa223",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Arabic Shawarma",
+      "description": "[Doners Menu] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "802564a9-be0c-5722-a94d-0e4fec1dc4ed",
@@ -574,12 +1068,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "5da9b712-7f9b-5148-ad7b-608efbe6716c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Zereshk polo ba morgh",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "fbbed72d-d14b-5384-81c7-1d930d233aca",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Orjinal Maraş Paça Çorbası",
       "description": "[Pideler & Çorbalar] Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "f468781f-5d3b-5c3f-84c1-3657212fa95c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chelo Kebab Kubide",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "8e63680c-eca0-5c66-a431-c37465a0654f",
@@ -590,12 +1100,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "a58ec31f-2b7b-5d28-a1fb-d4750ab7f606",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chelo Jooje Kebab",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "d80eaeaa-3d63-5006-86b6-f636158cd7cf",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Mercimek Çorbası",
       "description": "[Pideler & Çorbalar] Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "11fce945-2083-573a-8255-3ba1567924a7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mix Kebab / Jooje Menu",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "dff22afd-021b-5a1d-b49b-25aa2c66d23f",
@@ -606,12 +1132,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "be7ef9ac-71a8-5ba2-ae21-a8b1c2ff0c7f",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Gheyneh / Jooje Menu",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "ce0c832b-b99a-5d6f-86e2-197b682e8ce8",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Fettucini Alfredo",
       "description": "[Makarnalar] Tavuk - Mantar",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "1b168b6d-65e3-5c61-aec7-abdb8c2cb969",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Kubje Menu / Gheymen bademjoon",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "038fbfb3-481e-53dc-8a6d-7ead1c7a395b",
@@ -622,12 +1164,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "4a27b4a0-7d24-5d14-9d11-70e0d6c61f92",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Gherneh Menu / Karafs",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "e6b061e9-90c0-593f-8514-6bed28057dd0",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Spaghetti Bolognose",
       "description": "[Makarnalar] Dana Kıyma",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "c2ef14c6-4b1f-5ec8-993b-235c784d89f7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Ghormeh sabzi",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "3092cc3d-b9a1-578f-ab48-808b3c61697e",
@@ -638,12 +1196,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "eddf48c6-02db-53b1-8d4d-91dd944e24c2",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Sbzi polo mahi",
+      "description": "[À La Persia] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "5f29a0e2-738e-5a0a-9122-2a2f950b5c90",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Cyprus Style",
       "description": "[Makarnalar] Tavuk Grill - Rendelenmiş Hellim",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "590da9ad-caa1-55d9-9ead-3acc1b8a5973",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Special Beef Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "f3dc1142-ff20-52fb-ba4f-35a84732f6f0",
@@ -654,12 +1228,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "771ad742-5284-5b9e-a7ca-5ff27ae73fb3",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Charcuterie Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "fc42e07d-27ef-5ec6-a204-ddbf5b9bc526",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Makarna Eco 2 Menü",
       "description": "[Makarnalar] Herhangi 4 Makarna Al 3 Öde",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "a69704f4-206f-5ff5-9d6a-5b1f65cbaf5c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Tongue Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "9fe71f7a-1d72-5017-a33a-0fa0d1ebee22",
@@ -670,12 +1260,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "493c631f-9a72-524b-b9af-b62fd5c2c1b3",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Meat & Mushroom Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "0671f0b1-49b8-5295-b113-16bbdfa49298",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "BBQ Chicken",
       "description": "[Pizzalar (32 cm / 42 cm)] Kentucy Tavuk Parçacıkları, Mısır, Mantar, Kırmızı Biber",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "c0060e72-79e2-5111-8ebe-4ef0624bb027",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "BBQ Smokey Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "7796a758-342d-5c94-aeab-a63918295b2e",
@@ -686,12 +1292,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "eb9df878-d681-5b4f-a2bb-83656928f163",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mix Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "b02f57e0-ec2a-5db1-bea0-0fd95f6a54bd",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Veggie Pizza",
       "description": "[Pizzalar (32 cm / 42 cm)] Mısır, Mantar, Yeşil ve Kırmızı Biber, Zeytin",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "07f9dbbb-b67d-56e0-ba77-3fc53faaef5e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken & Mushroom Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "a42e8370-72b4-5ed5-b3f0-b585ee163f8f",
@@ -702,12 +1324,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "0d870ef2-f465-5b95-8d0e-aed858bba9ee",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Doner Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "3019f741-5eca-5a72-88e3-c691d908bd6a",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Coffeholic Special",
       "description": "[Pizzalar (32 cm / 42 cm)] Et Jambon, Mısır, Mantar, Zeytin, Kırmızı Biber",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "c6f0a6f7-e604-5d14-a4d8-2d1e192a78d4",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Four Cheese Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "7a9ebd15-e38a-5248-b55e-e98d739e14f6",
@@ -718,12 +1356,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "78cc5536-1147-5957-90f8-443d97aee35e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Pepperoni Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "c624645f-79f1-5a14-81c1-2219d98365ff",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Pizza Eco 2 Menü (32cm)",
       "description": "[Pizzalar (32 cm / 42 cm)] Herhangi 6 Pizza Al 4 Öde",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "f8fe9fc4-6871-5da9-9cb8-cb55d948944b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Vegetarian Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "790e1c37-1cf6-529f-bbd7-9c9511077723",
@@ -734,12 +1388,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "569880d7-b8a2-5b02-a267-0d139cba2280",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Margherita Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "01ddf9b8-1462-5555-9d96-1b3100445df4",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Et Burger",
       "description": "[Hamburgerler & Fırsat Menüler] Patates Kızartması ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "d2a4ea32-c5fc-54dd-8986-af3c5a39b61b",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cola / Cola Zero / Sprite / Fanta (Tin)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "3220febc-f28c-5ea9-9905-dff35b9e761e",
@@ -750,12 +1420,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "dccacb92-bc8b-56cd-9658-4eb341963c6e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Fuse Tea",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "964bafa5-434b-5bb6-8be7-a747367fd7e5",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Double Cheeseburger",
       "description": "[Hamburgerler & Fırsat Menüler] Patates Kızartması ile servis edilir.",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "674c1dff-dcb8-5b1c-b83a-0a7f269fcffd",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Ayran",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "7d833ff2-6fc5-50c0-8019-ab830c07be4b",
@@ -766,12 +1452,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "dc8fc13e-6ac3-5dae-a735-d0b0a8742735",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Soda",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "4a725633-3646-5172-b42a-c4f2f6ce0d94",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Cousin Menu",
       "description": "[Hamburgerler & Fırsat Menüler] 1 Tavuk Burger + 1 Et Burger + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "3cf43cfa-3ef7-5c0d-aa52-9be7e036d15a",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Water",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "94b95ebb-418a-528b-8422-e9db1b7da66d",
@@ -782,12 +1484,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "133c616a-a2b1-52ef-b887-8f6242498a4c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Egg",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "8d5aca6e-fff3-50f7-a228-810d58a9beca",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Acıktım Menu",
       "description": "[Hamburgerler & Fırsat Menüler] Ana Yemek + Salata + Pilav + Patates Kızartması + Coca Cola + Tatlı",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "b92dbffd-8868-50e6-bb02-ffc5248d5053",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Halloumi (2 pcs)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "ebe42ac5-ec22-5f99-b608-bc28e3a48fea",
@@ -798,12 +1516,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "ba674470-bbee-556f-bbfd-d7fd1abd9ce2",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Kasseri Cheese",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "85c7b2e0-38ab-5282-a18e-fc5821315352",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Sıcak Sepeti",
       "description": "[Atıştırmalıklar & Kumpir] Kızartılmış Sosis (6 Adet), Salam (6 Adet), Hellim (6 Adet), Sigara Böreği (6 Adet), Patates (6 Adet)",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "15bfebf6-d64c-5d05-b186-8492aa88ddae",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheddar Cheese",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "40f63639-199f-5920-bcd7-7a61b9c7c151",
@@ -814,12 +1548,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "aeca2eca-3d09-593a-a14a-594159e32261",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mushrooms",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "674aea49-1c37-5a7d-ba0a-314a7d13df35",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Soğan Halkası (6 Adet)",
       "description": "[Atıştırmalıklar & Kumpir] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "03a17e30-a6d5-5256-aded-d27c32d11b84",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Smokey Beef (1 slice)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "70cf4bc7-848c-58fe-b159-2e0b587e2483",
@@ -830,12 +1580,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "88a3f5c8-7b83-5cf6-9f34-9e4096c5b41c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Salami",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "596c7519-645f-50eb-943d-089e279ce617",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Karışık Kumpir",
       "description": "[Atıştırmalıklar & Kumpir] Kıbrıs Patatesi, Salam, Sucuk, Sosis, Mısır, Mantar, Zeytin, Rus Salatası",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "71a18d8c-7fb6-5551-bd0c-cfe6c5272758",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Sausage",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "e4109ec8-1b56-510b-92fa-7085540829b8",
@@ -846,12 +1612,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "cc9b6518-9b7b-5684-b042-62721fc763a9",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Pepperoni",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "b75dbafa-6815-50dc-bc3b-4f64b8a6bfa3",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Ton Balıklı Kumpir",
       "description": "[Atıştırmalıklar & Kumpir] Kıbrıs Patatesi, Ton Balığı, Mısır, Mantar, Zeytin, Rus Salatası",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "f8c3ff35-9757-533c-b323-d8c7ece7b3fa",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Lavash",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "88fc810d-bf35-54ba-a98d-863e31c29d7e",
@@ -862,12 +1644,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "bec38529-2715-5b0d-bad8-4603a877407f",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Jalapeno",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "855e85bc-1b6b-5038-844b-6d0ccce51e49",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Macchiato",
       "description": "[İçecekler & Kahveler] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "fbe9cc9b-71d9-5efd-ae79-5ee635d865e5",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Caramelized Onion",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "2e462e4d-eb9c-5b02-bef2-f769b93e86ed",
@@ -878,12 +1676,28 @@
       "restaurant": "Coffeeholic Boutique Bakery House"
     },
     {
+      "id": "afad63b4-f204-5d6e-8d60-c5ec29f6fa55",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Extra Chicken Doner (50 gr.)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
+    },
+    {
       "id": "a26cd559-c6ec-52ad-871f-718a3947f655",
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Latte",
       "description": "[İçecekler & Kahveler] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
+    },
+    {
+      "id": "dd7da262-ef6e-50fa-9ff9-23b3b6a10786",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Fries (100 gr.)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": null,
+      "restaurant": "A La Carte (Sakarya)"
     },
     {
       "id": "3a8671f5-a68e-53b7-92b4-b13105abf52b",
@@ -1020,902 +1834,6 @@
       "description": "[İçecekler & Kahveler] ",
       "image_url": null,
       "restaurant": "Coffeeholic Boutique Bakery House"
-    },
-    {
-      "id": "7a7481b8-5576-59b2-95d5-4222ca97fb22",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Triple Cheese Toast",
-      "description": "[Toasts] Grilled halloumi, kaşar, cheddar",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "ead9f50e-220f-5d96-b5b1-ff96327bc2c7",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Cheesy Toast",
-      "description": "[Toasts] Kaşar cheese only",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "1a68ec52-10d6-5847-a44c-e98a761906d1",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Beef Toast",
-      "description": "[Toasts] Beef, corn, sweet pepper, kaşar",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "39e83256-5320-5670-9ba1-1c86ed5ada44",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Chicken Toast",
-      "description": "[Toasts] Chicken, corn, sweet pepper, kaşar",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "b4452e4d-9281-5441-8f98-a857ae4f258e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Doner Toast",
-      "description": "[Toasts] Chicken doner, kaşar cheese, sauce",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "0df6d607-3575-58bf-bda5-92b0407c8666",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Club Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "aa93ec93-9c69-55d7-b3fd-099851c58c31",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Tongue Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "90778bb6-9ec6-5f07-b870-781f1839191c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Beef Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "8596bd68-2baf-51b4-904a-2846599d94bd",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Chicken Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "b6ed1ed6-f3d6-5aae-8576-d5273e04e56e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Kumru Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "b466938c-5160-5add-b265-46a142095f57",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Hot Dog Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "07f0286b-3d30-5855-88fd-7f6cf1f9c40e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Smoky Hot Dog Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "0c5fc666-e307-5d36-a639-6e3d0da233f3",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Cheesy Chicken & Mushroom Sandwich & Cajun Fries",
-      "description": "[Sandwiches] All sandwiches are served with Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f37cbcd5-49ee-5014-8e73-2ed7e6304656",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Butcher Meatball Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "4e97928b-172b-5707-9305-39f33f91c31b",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Crispy Chicken Caesar Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "1e9f9ceb-74e0-562c-be58-b12793832865",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Grilled Chicken Caesar Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "6ea16c18-37f9-59f3-9197-e667a619124f",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Grilled Halloumi Caesar Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "674a8407-0615-50b3-8d9b-d2a9df26e7e5",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "À La Meaty Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "5abd75c4-1314-512f-a683-0c85261321dd",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "À La Chicky Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "0d9be271-df9f-5350-9b96-99c02401deb0",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Grilled Chicken Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "cad6950c-402e-5f72-82d5-285381af3ef4",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Grilled Halloumi Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "1c84c716-d320-5d9f-9b17-1b5199ff3e8b",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Breakfast Burrito + Chips",
-      "description": "[Breakfasts] Egg (2), sausage, sweet green & red pepper, kasseri cheese, optional sauce",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "ef0bb61c-bf0b-5983-adf1-8f1511665f44",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Smokey Breakfast Burrito + Chips",
-      "description": "[Breakfasts] Egg, smoked beef slices, sausage, sweet green & red pepper, tomatoes, kasseri cheese-flavored chips",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "bd541e16-a6dc-5d5e-8de1-8a619003c014",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Smokey Egg & Cheese Patty",
-      "description": "[Breakfasts] Egg, burger bread, smoky beef, kassericher, cheddar cheese",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "946f3118-5d07-52b3-8a95-9ee218daa7b4",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Plain Omelette",
-      "description": "[Breakfasts] Fried egg (2), bread (2 piece), fresh tomatoes, cucumbers",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "454d524d-5351-54b9-9dee-7e47cf2c94a9",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Cheesy Omelette",
-      "description": "[Breakfasts] Fried egg (2), kasseri cheese, sweet green an red pepper",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "a6e8e0cb-44be-58ac-baac-07ec04e6560b",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Menemen",
-      "description": "[Breakfasts] Eggs, tomatoes, tomato paste, sweet green and red pepper",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "92c3c51e-ec7c-5456-a733-6e981fe12581",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Chicken Quesadilla + Chips",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "173e687a-f016-5f82-939a-acca4eeec1bf",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Minced Meat Quesadilla + Chips",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "6cb2e2ec-ff0e-5e70-be25-be5232faa18d",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Chicken Taquito + Chips",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "6f0396a1-e80a-5a4b-9f36-8601be20e472",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Minced Meat Taquito + Chips",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "22911aec-65cf-5489-b749-be97e35367fd",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Fajitas",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f1835680-3db0-5e65-9ece-322d7a77e8f0",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Fajita Wrap + Cajun Fries",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "3e4b8bf5-5161-55b3-8a0f-b22ee97f1792",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Chicken Nachos",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "51e67dee-4d75-5c91-9aec-01254d51c778",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mexican Minced Meat Nachos",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "4d75d0c5-da85-5386-8684-3270746a4bd9",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Cheesy Nachos",
-      "description": "[À La Mexicana] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "c951557a-c4f3-5f20-a39e-5d1f4442fcbe",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Tenders",
-      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "05c79388-e89f-5ba5-8bf2-94b5180ccc61",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Wings",
-      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "03953211-7694-5ca6-8e03-44464b5034d7",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Wingers",
-      "description": "[Tenders, Wings & Wingers] Served with sauce & Cajun fries",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f112e663-3ad0-57be-bbd5-6585da76d79b",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Doner Wrap + Cajun Fries",
-      "description": "[Doners Menu] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "1e425c08-e3b6-58b0-bc84-39e5cd1c9d63",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Doner Sandwich + Cajun Fries",
-      "description": "[Doners Menu] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "b1d1a3b5-4585-5d81-81ad-7ae3010c5c03",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Doner Burger + Cajun Fries",
-      "description": "[Doners Menu] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "7a37bbcd-fb8c-51c5-a11b-c00374d93524",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Doner Service",
-      "description": "[Doners Menu] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f884a465-891e-5781-b613-3ef1b61af22e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Quesadilla + Cajun Fries",
-      "description": "[Doners Menu] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "97faae73-12cf-5969-aae0-bb9a771aa223",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Arabic Shawarma",
-      "description": "[Doners Menu] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "5da9b712-7f9b-5148-ad7b-608efbe6716c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Zereshk polo ba morgh",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f468781f-5d3b-5c3f-84c1-3657212fa95c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chelo Kebab Kubide",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "a58ec31f-2b7b-5d28-a1fb-d4750ab7f606",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chelo Jooje Kebab",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "11fce945-2083-573a-8255-3ba1567924a7",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mix Kebab / Jooje Menu",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "be7ef9ac-71a8-5ba2-ae21-a8b1c2ff0c7f",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Gheyneh / Jooje Menu",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "1b168b6d-65e3-5c61-aec7-abdb8c2cb969",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Kubje Menu / Gheymen bademjoon",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "4a27b4a0-7d24-5d14-9d11-70e0d6c61f92",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Gherneh Menu / Karafs",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "c2ef14c6-4b1f-5ec8-993b-235c784d89f7",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Ghormeh sabzi",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "eddf48c6-02db-53b1-8d4d-91dd944e24c2",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Sbzi polo mahi",
-      "description": "[À La Persia] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "590da9ad-caa1-55d9-9ead-3acc1b8a5973",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Special Beef Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "771ad742-5284-5b9e-a7ca-5ff27ae73fb3",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Charcuterie Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "a69704f4-206f-5ff5-9d6a-5b1f65cbaf5c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Tongue Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "493c631f-9a72-524b-b9af-b62fd5c2c1b3",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Meat & Mushroom Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "c0060e72-79e2-5111-8ebe-4ef0624bb027",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "BBQ Smokey Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "eb9df878-d681-5b4f-a2bb-83656928f163",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mix Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "07f9dbbb-b67d-56e0-ba77-3fc53faaef5e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken & Mushroom Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "0d870ef2-f465-5b95-8d0e-aed858bba9ee",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Chicken Doner Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "c6f0a6f7-e604-5d14-a4d8-2d1e192a78d4",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Four Cheese Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "78cc5536-1147-5957-90f8-443d97aee35e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Pepperoni Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f8fe9fc4-6871-5da9-9cb8-cb55d948944b",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Vegetarian Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "569880d7-b8a2-5b02-a267-0d139cba2280",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Margherita Pizza",
-      "description": "[American Pizza (28 cm)] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "d2a4ea32-c5fc-54dd-8986-af3c5a39b61b",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Cola / Cola Zero / Sprite / Fanta (Tin)",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "dccacb92-bc8b-56cd-9658-4eb341963c6e",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Fuse Tea",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "674c1dff-dcb8-5b1c-b83a-0a7f269fcffd",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Ayran",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "dc8fc13e-6ac3-5dae-a735-d0b0a8742735",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Soda",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "3cf43cfa-3ef7-5c0d-aa52-9be7e036d15a",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Water",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "133c616a-a2b1-52ef-b887-8f6242498a4c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Egg",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "b92dbffd-8868-50e6-bb02-ffc5248d5053",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Halloumi (2 pcs)",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "ba674470-bbee-556f-bbfd-d7fd1abd9ce2",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Kasseri Cheese",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "15bfebf6-d64c-5d05-b186-8492aa88ddae",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Cheddar Cheese",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "aeca2eca-3d09-593a-a14a-594159e32261",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Mushrooms",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "03a17e30-a6d5-5256-aded-d27c32d11b84",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Smokey Beef (1 slice)",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "88a3f5c8-7b83-5cf6-9f34-9e4096c5b41c",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Salami",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "71a18d8c-7fb6-5551-bd0c-cfe6c5272758",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Sausage",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "cc9b6518-9b7b-5684-b042-62721fc763a9",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Pepperoni",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "f8c3ff35-9757-533c-b323-d8c7ece7b3fa",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Lavash",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "bec38529-2715-5b0d-bad8-4603a877407f",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Jalapeno",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "fbe9cc9b-71d9-5efd-ae79-5ee635d865e5",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Caramelized Onion",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "afad63b4-f204-5d6e-8d60-c5ec29f6fa55",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Extra Chicken Doner (50 gr.)",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "dd7da262-ef6e-50fa-9ff9-23b3b6a10786",
-      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
-      "name": "Fries (100 gr.)",
-      "description": "[Drinks, Extras & Sauces] ",
-      "image_url": null,
-      "restaurant": "A La Carte (Sakarya)"
-    },
-    {
-      "id": "882c660a-3424-52e3-b5ab-957e05635b14",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Adana Service + Ayran",
-      "description": "[Service Menu] Salad, pita + Ayran",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "ef403a05-8e09-503f-8938-42125fcd1623",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Lamb Skewer Service + Ayran",
-      "description": "[Service Menu] Salad, pita + Ayran",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "e7474c35-95c7-56c4-a66e-20013151f91c",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Chicken Skewer Service + Ayran",
-      "description": "[Service Menu] Salad, pita + Ayran",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "15338492-1a46-591f-bf4a-af95a7486388",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Chicken Wing Service + Ayran",
-      "description": "[Service Menu] Wings + Salad, pita + Ayran",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "44518cb2-ec69-548e-b6e5-34639c25b3a2",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Lahmacun",
-      "description": "[Pitas] Tomato, parsley",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "a110b58f-ef16-5b81-88d7-992e27af7277",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Cubed Meat Kasseri Cheese Pita",
-      "description": "[Pitas] Tomato, parsley",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "bdb8240c-78db-572b-8d9b-b9eb46be687d",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Minced Meat Pita",
-      "description": "[Pitas] Tomato, parsley",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "f2c119da-2012-530b-a1a5-dc379d8d0e23",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Sausage Cheese Pita",
-      "description": "[Pitas] Tomato, parsley",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "caa319a6-37fc-57cd-87c5-353aaa877ab2",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Minced Meat Kasseri Cheese Pita",
-      "description": "[Pitas] Tomato, parsley",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "2844e9d0-4327-5e90-9c4d-acf90435457c",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Kasseri Cheese Pita",
-      "description": "[Pitas] Tomato, parsley",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "2852d7a3-d1c1-5999-8865-6e10805fc0bd",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Crispy Chicken Menu",
-      "description": "[Other Dishes] Fries, ketchup, mayonnaise + Drink",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "a09a3adb-4044-52fc-abee-50c9e7521b07",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Stuffed Chicken",
-      "description": "[Other Dishes] Fries, rice, salad, bread",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "308f189f-bb4f-56d4-83ae-b6c5a566e223",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Fries",
-      "description": "[Other Dishes] Ketchup, mayonnaise",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "e38aa9de-638a-5e46-adde-a99b957487fa",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Cripy Chicken Salad",
-      "description": "[Salads] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "82b99362-444b-5c0d-8e5a-b73783e28581",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Head Soup",
-      "description": "[Soups] Pita, olive, lemon, greens",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "16bc4359-7c85-5e27-b133-f48a6597d98a",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Lentil Soup",
-      "description": "[Soups] Pita, olive, lemon, greens",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "c18b3552-a592-53ce-85b1-bb491f93ae77",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Chicken Soup",
-      "description": "[Soups] Pita, olive, lemon, greens",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "456d89c8-e289-51b7-bb83-c1cfe26f7a36",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Çiğ Köfte Wrap",
-      "description": "[Çiğ Köfte] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "cede754f-a0d9-5dde-be55-f0beebb0131d",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Çiğ Köfte Service",
-      "description": "[Çiğ Köfte] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "d6a58989-0d8b-5957-a6b9-9134ab756800",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Coca-Cola (33 cl.)",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "e422ffbd-cb5e-5946-b0ad-15e1cba3158f",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Coca-Cola Zero (33 cl.)",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "10de15eb-191e-583e-b00c-0a2f0faa5f89",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Fanta (33 cl.)",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "86b097b4-7753-5f68-a70c-237b17549ad5",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Sprite (33 cl.)",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "c4fe2618-3c2a-563a-b58e-5d2869d645f1",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Water (50 cl.)",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "3df5c282-bb24-53be-aaf9-1d16ad3ee0a3",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Ayran (30 cl.)",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "9abc8cc3-0eb3-50b0-8958-cdff0c7348f2",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Soda",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
-    },
-    {
-      "id": "7cb2fc64-b12e-5aba-81a5-fdffe7747e35",
-      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
-      "name": "Turnip Juice",
-      "description": "[Drinks] ",
-      "image_url": null,
-      "restaurant": "Garson Ali (Dumlupınar)"
     }
   ]
 }
