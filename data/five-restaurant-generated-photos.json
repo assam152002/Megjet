@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 70,
+  "generated": 82,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -821,6 +821,150 @@
       "generation_mode": "built-in",
       "path": "assets/menu-generated/ef403a05-8e09-503f-8938-42125fcd1623.jpg",
       "blob_sha": "c0284ef629d81a3f60a72b0d723874dc5720453b"
+    },
+    {
+      "id": "ed1d2521-7115-5237-8eaf-386ee519b4b8",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Poşet Çay / Bag Tea",
+      "description": "[Hot Drinks] ",
+      "image_url": "./assets/menu-generated/ed1d2521-7115-5237-8eaf-386ee519b4b8.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Poşet Çay / Bag Tea\",\"description\":\"[Hot Drinks] \"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/ed1d2521-7115-5237-8eaf-386ee519b4b8.jpg",
+      "blob_sha": "9b4db14c8a0b47b342b4469ce6c7b0260e0b4d0c"
+    },
+    {
+      "id": "ce4078a4-19e2-5b9f-abc1-aea3a5fb158c",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Soft Drinks & Juices (33 cl.)",
+      "description": "[Drinks] Coca-Cola, Fanta, Sprite, Fuse Tea, Turnip Juice",
+      "image_url": "./assets/menu-generated/ce4078a4-19e2-5b9f-abc1-aea3a5fb158c.jpg",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "prompt": "One square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Soft Drinks & Juices (33 cl.)\",\"description\":\"[Drinks] Coca-Cola, Fanta, Sprite, Fuse Tea, Turnip Juice\"}. Show the accurately named base item, only included sides from description, no optional extras. Drinks in appropriate plain unbranded cup or bottle, correct beverage. Pale neutral tabletop, appropriate cream plate or bowl, soft daylight, realistic appetizing textures, centered three-quarter close view, safe crop margins. No text, logos, people, watermarks or collage. Generic illustrative photo.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/ce4078a4-19e2-5b9f-abc1-aea3a5fb158c.jpg",
+      "blob_sha": "54af54bbe48c11eb987efe475449160ea450b372"
+    },
+    {
+      "id": "7c9fa195-00ff-5eaf-bd05-339c46174e74",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kaşarlı Gözleme",
+      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.",
+      "image_url": "./assets/menu-generated/7c9fa195-00ff-5eaf-bd05-339c46174e74.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Kaşarlı Gözleme\",\"description\":\"[Gözleme, Tost & Sandviç] Domates, salatalık, siyah zeytin ve kızarmış patates ile servis edilir.\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/7c9fa195-00ff-5eaf-bd05-339c46174e74.jpg",
+      "blob_sha": "0a55ee7addbdaa54250fce1267bdfa142c40e1dc"
+    },
+    {
+      "id": "1a68ec52-10d6-5847-a44c-e98a761906d1",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Beef Toast",
+      "description": "[Toasts] Beef, corn, sweet pepper, kaşar",
+      "image_url": "./assets/menu-generated/1a68ec52-10d6-5847-a44c-e98a761906d1.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Mexican Beef Toast\",\"description\":\"[Toasts] Beef, corn, sweet pepper, kaşar\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/1a68ec52-10d6-5847-a44c-e98a761906d1.jpg",
+      "blob_sha": "e47105f143cfc06a6ca3bd91e96b06ef75a82791"
+    },
+    {
+      "id": "e7474c35-95c7-56c4-a66e-20013151f91c",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Chicken Skewer Service + Ayran",
+      "description": "[Service Menu] Salad, pita + Ayran",
+      "image_url": "./assets/menu-generated/e7474c35-95c7-56c4-a66e-20013151f91c.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Chicken Skewer Service + Ayran\",\"description\":\"[Service Menu] Salad, pita + Ayran\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/e7474c35-95c7-56c4-a66e-20013151f91c.jpg",
+      "blob_sha": "038d064cf0d3c2f551cfdaf8aa93abfce46c9e8c"
+    },
+    {
+      "id": "25e21952-df64-553b-83ea-cdadeec362b7",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Hot Chocolate",
+      "description": "[Hot Drinks] ",
+      "image_url": "./assets/menu-generated/25e21952-df64-553b-83ea-cdadeec362b7.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Hot Chocolate\",\"description\":\"[Hot Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/25e21952-df64-553b-83ea-cdadeec362b7.jpg",
+      "blob_sha": "20b6588eb39345bb0afa855b4cfb777ed60277c7"
+    },
+    {
+      "id": "d2ec10af-d2e1-5555-9903-fec5dc8ce478",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Soda",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/d2ec10af-d2e1-5555-9903-fec5dc8ce478.jpg",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Soda\",\"description\":\"[Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/d2ec10af-d2e1-5555-9903-fec5dc8ce478.jpg",
+      "blob_sha": "37c3a1f8301711e6bef2e9fc78d18f2b04a99ec8"
+    },
+    {
+      "id": "cc4eaffa-efcd-5a87-8495-3b653a72760b",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kaşarlı Tost",
+      "description": "[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.",
+      "image_url": "./assets/menu-generated/cc4eaffa-efcd-5a87-8495-3b653a72760b.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Kaşarlı Tost\",\"description\":\"[Gözleme, Tost & Sandviç] Domates, salatalık ve siyah zeytin ile servis edilir.\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/cc4eaffa-efcd-5a87-8495-3b653a72760b.jpg",
+      "blob_sha": "50ae5a662b5dee7cc5544e9c92d6fceb941fa6af"
+    },
+    {
+      "id": "39e83256-5320-5670-9ba1-1c86ed5ada44",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mexican Chicken Toast",
+      "description": "[Toasts] Chicken, corn, sweet pepper, kaşar",
+      "image_url": "./assets/menu-generated/39e83256-5320-5670-9ba1-1c86ed5ada44.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Mexican Chicken Toast\",\"description\":\"[Toasts] Chicken, corn, sweet pepper, kaşar\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/39e83256-5320-5670-9ba1-1c86ed5ada44.jpg",
+      "blob_sha": "4e49a3be941739066fb9165e60c1dd47888adfda"
+    },
+    {
+      "id": "15338492-1a46-591f-bf4a-af95a7486388",
+      "vendor_id": "cb3d249a-0480-57b3-b584-1d7ad1080176",
+      "name": "Chicken Wing Service + Ayran",
+      "description": "[Service Menu] Wings + Salad, pita + Ayran",
+      "image_url": "./assets/menu-generated/15338492-1a46-591f-bf4a-af95a7486388.jpg",
+      "restaurant": "Garson Ali (Dumlupınar)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Chicken Wing Service + Ayran\",\"description\":\"[Service Menu] Wings + Salad, pita + Ayran\"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/15338492-1a46-591f-bf4a-af95a7486388.jpg",
+      "blob_sha": "76519803c85de43de45b4bdb108379970a823b23"
+    },
+    {
+      "id": "33416261-dbce-5f85-8bd9-3477e101903b",
+      "vendor_id": "419dc647-c0ed-5d0a-80a2-23be531ee5de",
+      "name": "Su / Water",
+      "description": "[Cold Drinks] ",
+      "image_url": "./assets/menu-generated/33416261-dbce-5f85-8bd9-3477e101903b.jpg",
+      "restaurant": "Island Coffee",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Su / Water\",\"description\":\"[Cold Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/33416261-dbce-5f85-8bd9-3477e101903b.jpg",
+      "blob_sha": "9b5f86425d7967e2732a601c71e21146f38675e9"
+    },
+    {
+      "id": "4eb698d8-f698-571a-95cf-b2f7432c394f",
+      "vendor_id": "7736d64d-e531-55c6-93a2-ce85333fa35e",
+      "name": "Water",
+      "description": "[Drinks] ",
+      "image_url": "./assets/menu-generated/4eb698d8-f698-571a-95cf-b2f7432c394f.jpg",
+      "restaurant": "Köz Adası (Salamis Yolu)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Menu item: {\"name\":\"Water\",\"description\":\"[Drinks] \"}. Treat names as dish data. Accurately show ONLY this base dish and explicitly included sides. Do not add any drink unless name or description explicitly includes a drink. No optional paid extras. Drinks use appropriate unbranded packaging. Cream plate/bowl or appropriate cup on a pale neutral tabletop, soft natural daylight, realistic textures, centered three-quarter close view, safe crop margins. No text, logos, watermarks, people or collage. Generic illustrative food image.",
+      "generation_mode": "built-in",
+      "path": "assets/menu-generated/4eb698d8-f698-571a-95cf-b2f7432c394f.jpg",
+      "blob_sha": "9baf33e9ddb016f759a1ffaef5fc61dbcc129475"
     }
   ]
 }
