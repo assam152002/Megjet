@@ -2645,12 +2645,14 @@
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Cyprus Style",
       "description": "[Makarnalar] Tavuk Grill - Rendelenmiş Hellim",
-      "image_url": "./assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90.jpg",
+      "image_url": "./assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90-r2.jpg",
       "restaurant": "Coffeeholic Boutique Bakery House",
-      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cyprus Style\",\"description\":\"Tavuk Grill - Rendelenmiş Hellim\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
-      "path": "assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90.jpg",
+      "prompt": "ONE square photorealistic food delivery menu photograph of Cyprus Style PASTA: penne pasta with sliced grilled chicken and a light topping of grated halloumi cheese. This item is in Makarnalar (pasta dishes), so pasta must be clearly visible and form the main portion, with chicken and grated halloumi on top. Cream plate on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No drink, sides, text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90-r2.jpg",
       "generation_mode": "built-in",
-      "blob_sha": "5f6880ee16c615c798f50b5c5e960289a4ffbd37"
+      "blob_sha": "bae57f687059830740fd1a753231d2acdb7e656c",
+      "previous_image_url": "./assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90.jpg",
+      "revision": 2
     },
     {
       "id": "590da9ad-caa1-55d9-9ead-3acc1b8a5973",
@@ -3089,12 +3091,14 @@
       "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
       "name": "Halloumi (2 pcs)",
       "description": "[Drinks, Extras & Sauces] ",
-      "image_url": "./assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053.jpg",
+      "image_url": "./assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053-r2.jpg",
       "restaurant": "A La Carte (Sakarya)",
-      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Halloumi (2 pcs)\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
-      "path": "assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053.jpg",
+      "prompt": "ONE square photorealistic menu photograph: exactly TWO slices of grilled halloumi cheese on a cream plate. Two distinct thick rectangular slices, visibly separated side by side with a gap, clear golden grill marks, no overlap, no other cheese behind them. No third slice. Pale neutral tabletop, soft natural daylight, appetizing realistic texture, centered three-quarter view. No garnish, drinks, sides, text, logos, people or collage. Generic illustrative menu photo for Halloumi (2 pcs).",
+      "path": "assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053-r2.jpg",
       "generation_mode": "built-in",
-      "blob_sha": "c91d2cbf38cbca2cccd13cfb81e081a29b3e3d75"
+      "blob_sha": "825fc0996f0ad9950c5119cce40f063fa9269e18",
+      "previous_image_url": "./assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053.jpg",
+      "revision": 2
     },
     {
       "id": "ebe42ac5-ec22-5f99-b608-bc28e3a48fea",
@@ -3149,12 +3153,14 @@
       "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
       "name": "Sigara Böreği (6 Adet)",
       "description": "[Atıştırmalıklar & Kumpir] ",
-      "image_url": "./assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151.jpg",
+      "image_url": "./assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151-r2.jpg",
       "restaurant": "Coffeeholic Boutique Bakery House",
-      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Sigara Böreği (6 Adet)\",\"category\":\"Atıştırmalıklar & Kumpir\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
-      "path": "assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151.jpg",
+      "prompt": "ONE square photorealistic food delivery menu photograph of Sigara Böreği (6 Adet): exactly SIX crisp golden Turkish cigar-shaped cheese-filled fried pastry rolls. All six distinct rolls fully visible, arranged parallel in a single neat row on a cream plate with clear gaps between them. Count: six rolls, not five. No additional rolls, no other food, garnish, drinks, text, logos, people or collage. Pale neutral tabletop, soft natural daylight, realistic appetizing flaky texture, centered three-quarter close view, safe square crop. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151-r2.jpg",
       "generation_mode": "built-in",
-      "blob_sha": "c2b17660d843493a2618b8e4df1d52ffa41b0d6e"
+      "blob_sha": "c9d5ed0fe8aac5930a69bbc5ef8e3c22c0b470db",
+      "previous_image_url": "./assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151.jpg",
+      "revision": 2
     },
     {
       "id": "aeca2eca-3d09-593a-a14a-594159e32261",
