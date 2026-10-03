@@ -2164,7 +2164,8 @@ function renderVendors(vendors,products){
     const item={...p,vendor_name:v.name};
     const menuLocale=window.MEGJET_MENU_LOCALE;
     const visibleName=menuLocale?.name(p)||p.name;
-    const visibleDescription=menuLocale?.description(p)??cleanDesc(p);
+    const rawVisibleDescription=menuLocale?.description(p)??cleanDesc(p);
+    const visibleDescription=String(v.id)==='06d76aea-1c94-5950-b621-22130e57ef75'?String(rawVisibleDescription).replace(/^\[[^\]]+\]\s*/,''):rawVisibleDescription;
     const photoKey=Object.keys(window.MEGJET_PRODUCT_PHOTOS || {}).find(k=>k.trim().toLowerCase()===String(p.name||"").trim().toLowerCase());
     const productImage=p.image_url||(window.MEGJET_VENDOR_PRODUCT_IMAGES||{})[String(p.id)]||(String(v.name||"").toLocaleLowerCase().includes("çikolata evim")?((window.MEGJET_CIKOLATA_SWEETS||{})[p.name]||(window.MEGJET_CIKOLATA_MENU||{})[`${p.name}|${Number(p.price)}`]):"")||(photoKey?(window.MEGJET_PRODUCT_PHOTOS || {})[photoKey]:"")||"https://placehold.co/96x96?text=Food";
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
@@ -2181,7 +2182,13 @@ function renderVendors(vendors,products){
     const isSweetHoles=String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholes' || String(v.name||'').trim().toLowerCase().replace(/\s+/g,'')==='sweetholesdonuts';
     const categoryClass=isSweetHoles?'menu-category sweetholes-category':'menu-category';
     const visibleCategory=window.MEGJET_MENU_LOCALE?.category(name,v.id)||name;
-    return `<details class="${categoryClass}"><summary>${categoryImage?`<img class="category-photo" src="${categoryImage}" alt="${escapeHtml(visibleCategory)}">`:`<span class="category-photo category-icon-fallback">${icon}</span>`}<span class="category-title"><strong data-menu-category="${escapeHtml(name)}" data-menu-vendor="${escapeHtml(v.id)}">${escapeHtml(visibleCategory)}</strong><span class="category-count">${items.length} ${items.length===1?'item':'items'}</span></span><span class="category-arrow">▼</span></summary><div class="category-items">${items.map(p=>renderProduct(p,v)).join('')}</div></details>`;
+    let categoryBody=items.map(p=>renderProduct(p,v)).join('');
+    if(String(v.id)==='06d76aea-1c94-5950-b621-22130e57ef75'){
+      const sections=new Map();
+      items.forEach(p=>{const section=String(p.description||'').match(/^\[[^\]]+\]\s*\[([^\]]+)\]/)?.[1]||'';if(!sections.has(section))sections.set(section,[]);sections.get(section).push(p);});
+      categoryBody=[...sections].map(([section,rows])=>section?`<section class="market-subsection" data-market-section="${escapeHtml(section)}"><h3 style="margin:18px 4px 8px;font-size:15px;color:inherit">${escapeHtml(section)}</h3>${rows.map(p=>renderProduct(p,v)).join('')}</section>`:rows.map(p=>renderProduct(p,v)).join('')).join('');
+    }
+    return `<details class="${categoryClass}"><summary>${categoryImage?`<img class="category-photo" src="${categoryImage}" alt="${escapeHtml(visibleCategory)}">`:`<span class="category-photo category-icon-fallback">${icon}</span>`}<span class="category-title"><strong data-menu-category="${escapeHtml(name)}" data-menu-vendor="${escapeHtml(v.id)}">${escapeHtml(visibleCategory)}</strong><span class="category-count">${items.length} ${items.length===1?'item':'items'}</span></span><span class="category-arrow">▼</span></summary><div class="category-items">${categoryBody}</div></details>`;
   }
   window.MEGJET_VENDOR_DATA={vendors,products,categoryOrder,productCategory,renderCategory};
   const profile=$("vendorProfile"), list=$("vendors");
@@ -2211,7 +2218,7 @@ function renderVendors(vendors,products){
     if(v.accepting_orders===false)profile.querySelector('.vendor-profile-body')?.insertAdjacentHTML('afterbegin','<div id="megjetClosedNotice" class="coming-soon-notice" role="status">Temporarily closed. You can browse the menu; new orders are paused.</div>');
     if(v.coming_soon){const body=profile.querySelector('.vendor-profile-body');if(body)body.insertAdjacentHTML('afterbegin','<div class="coming-soon-notice"><b>🍺 Alcohol Market is coming soon</b><br>You can browse the planned categories, but ordering and checkout are disabled until Megjet connects a licensed Gazimagusa market. Age and ID verification will be required when ordering is activated.</div>');}
     list.classList.add('hidden'); profile.classList.remove('hidden'); profile.scrollIntoView({behavior:'smooth',block:'start'});
-    const si=$("vendorProfileSearch"); if(si)si.addEventListener('input',function(){const q=this.value.trim().toLowerCase();profile.querySelectorAll('.menu-category').forEach(cat=>{let any=false;cat.querySelectorAll('.item').forEach(item=>{const hit=!q||(item.textContent||'').toLowerCase().includes(q);item.style.display=hit?'flex':'none';if(hit)any=true;});cat.style.display=any||!q?'block':'none';if(q&&any)cat.open=true;});});
+    const si=$("vendorProfileSearch"); if(si)si.addEventListener('input',function(){const q=this.value.trim().toLowerCase();profile.querySelectorAll('.menu-category').forEach(cat=>{let any=false;cat.querySelectorAll('.item').forEach(item=>{const hit=!q||((item.textContent||'')+' '+(item.closest('.market-subsection')?.dataset.marketSection||'')).toLowerCase().includes(q);item.style.display=hit?'flex':'none';if(hit)any=true;});cat.querySelectorAll('.market-subsection').forEach(section=>{section.style.display=!q||Array.from(section.querySelectorAll('.item')).some(item=>item.style.display!=='none')?'':'none';});cat.style.display=any||!q?'block':'none';if(q&&any)cat.open=true;});});
   };
   window.closeVendorProfile=function(){profile.classList.add('hidden');profile.innerHTML='';list.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});};
 }
