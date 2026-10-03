@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 290,
+  "generated": 299,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -3479,6 +3479,114 @@
       "path": "assets/menu-generated/36174725-77e3-5e0c-9353-2efd11c624eb.jpg",
       "generation_mode": "built-in",
       "blob_sha": "ae9b4dc4ea9dddc6521565acede334d910b0a086"
+    },
+    {
+      "id": "474aa97e-b697-5495-baba-9c13ec72936d",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Iced White Mocha",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/474aa97e-b697-5495-baba-9c13ec72936d.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Iced White Mocha\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/474aa97e-b697-5495-baba-9c13ec72936d.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "cb73f7392cda03ff02fd06066d5a9956f1677f0a"
+    },
+    {
+      "id": "2ca00f3f-c764-556f-965f-e76be36d212c",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Iced Spanish Latte",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/2ca00f3f-c764-556f-965f-e76be36d212c.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Iced Spanish Latte\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/2ca00f3f-c764-556f-965f-e76be36d212c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "ce2d6d9341d550d538dac79bccf80527d7caeb20"
+    },
+    {
+      "id": "44bc4f5e-65b8-513f-91bc-72a661a4eed8",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Voltage / Frozen / Milkshake",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/44bc4f5e-65b8-513f-91bc-72a661a4eed8.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Voltage / Frozen / Milkshake\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/44bc4f5e-65b8-513f-91bc-72a661a4eed8.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "6bcaf595f84c1572844bef35754f31e70d5868e4"
+    },
+    {
+      "id": "13fc1414-8d83-5b69-9245-4bfd1aa3ab94",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Italian Soda / Limonata",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/13fc1414-8d83-5b69-9245-4bfd1aa3ab94.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Italian Soda / Limonata\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/13fc1414-8d83-5b69-9245-4bfd1aa3ab94.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d12ea7768c22135c47cee3d05e6108abebc9e38a"
+    },
+    {
+      "id": "8b6325fe-1fbd-5e72-a5ee-b49fb0b3c483",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Smoothies / Portakal Suyu (Taze Sıkılmış)",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/8b6325fe-1fbd-5e72-a5ee-b49fb0b3c483.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Smoothies / Portakal Suyu (Taze Sıkılmış)\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/8b6325fe-1fbd-5e72-a5ee-b49fb0b3c483.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "9eaf33edf9833ee2a8ced0a98c7b06d8ad94220e"
+    },
+    {
+      "id": "a628e8c8-dab4-54d6-8b46-f48846365cb2",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Coca Cola / Fanta / Sprite / Fuse Tea",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/a628e8c8-dab4-54d6-8b46-f48846365cb2.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Coca Cola / Fanta / Sprite / Fuse Tea\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/a628e8c8-dab4-54d6-8b46-f48846365cb2.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "634f20ad61102c447970e4e16eacbb05c1944ddd"
+    },
+    {
+      "id": "d17a221e-38f7-57e0-891f-13bf4139bff7",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Su",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/d17a221e-38f7-57e0-891f-13bf4139bff7.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Su\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/d17a221e-38f7-57e0-891f-13bf4139bff7.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "84a9e0e08c10a0ccc9663ad88944808bbb98f4b3"
+    },
+    {
+      "id": "43e1143c-b3ce-5cc3-8ba6-ec1150bd052d",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Soda",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/43e1143c-b3ce-5cc3-8ba6-ec1150bd052d.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Soda\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\",\"clarification\":\"Turkish plain sparkling mineral water, colorless clear bubbly water, not cola\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/43e1143c-b3ce-5cc3-8ba6-ec1150bd052d.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "323a138752f2512ec9e326d717c97bc5e9f71507"
+    },
+    {
+      "id": "d37c9f01-ca06-5942-9eeb-4716c35b1cef",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Ayran",
+      "description": "[İçecekler & Kahveler] ",
+      "image_url": "./assets/menu-generated/d37c9f01-ca06-5942-9eeb-4716c35b1cef.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Ayran\",\"category\":\"İçecekler & Kahveler\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/d37c9f01-ca06-5942-9eeb-4716c35b1cef.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "fd228209b0b4bab5e92e834c6f802420c8b31eac"
     }
   ]
 }
