@@ -7033,7 +7033,7 @@
     {
       "id": "dda7d0ee-c530-5da8-b809-13503b183513",
       "name": "Pitaya / Dragon Fruit (1 piece)",
-      "prompt": "Use case: product-mockup. Square grocery thumbnail. One ripe pink dragon fruit with green-tipped scales, natural realistic texture. Clean studio photograph on white background, centered with generous margin, soft shadow, no text, labels, packaging, or other fruit.",
+      "prompt": "Use case: product-mockup. Asset type: square grocery product thumbnail for a delivery app. Subject: one ripe pink dragon fruit (pitaya), whole, with green-tipped scales, natural realistic texture. Clean professional studio product photograph on pure white background, centered with generous margin, soft shadow, no text, no labels, no packaging, no other fruit. Single square image.",
       "kind": "generated-product-image",
       "generation_tool": "built-in image_gen",
       "source": "Generated illustration",
@@ -7113,6 +7113,54 @@
       "status": "ready",
       "path": "assets/our-market/products/2936b744-48e6-533d-bf29-54c36a876ae6.jpg",
       "image_url": "./assets/our-market/products/2936b744-48e6-533d-bf29-54c36a876ae6.jpg"
+    },
+    {
+      "id": "5724e000-fbc5-54b0-b099-84546d89bf60",
+      "name": "Solo Napkin (100 pcs.)",
+      "score": 0.8243478260869566,
+      "match": "Solo Peçete Renkli 100’Lü",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2023/12/0092373_solo-pecete-renkli-100-lu_320.jpeg",
+      "source": "https://www.sarpermarket.com/urunler/solo-pecete-renkli-100lu/",
+      "path": "assets/our-market/products/5724e000-fbc5-54b0-b099-84546d89bf60.jpg",
+      "image_url": "./assets/our-market/products/5724e000-fbc5-54b0-b099-84546d89bf60.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "ef8576e4-798f-5340-a43d-a607b79d6572",
+      "name": "Gullon Mini Bites Quinoa & Chia (250 gr)",
+      "score": 0.7442857142857142,
+      "match": "GULLON CRACKERS 250 GR QİNOA & CHİA",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2021/03/1-3658.jpg",
+      "source": "https://www.sarpermarket.com/urunler/gullon-crackers-250-gr-qinoa-chia/",
+      "path": "assets/our-market/products/ef8576e4-798f-5340-a43d-a607b79d6572.jpg",
+      "image_url": "./assets/our-market/products/ef8576e4-798f-5340-a43d-a607b79d6572.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "6f9059fc-afd5-5f71-823b-27d2aae35b54",
+      "name": "Pınar Children Milk (500 ml.)",
+      "score": 1.0,
+      "match": "PINAR ÇOCUK DEVAM SÜTÜ 500 ML",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2021/03/pinar-cocuk-devam-sutu-500-ml-da9920b8a40369000655cfa1520dc9f5-1.jpg",
+      "source": "https://www.sarpermarket.com/urunler/pinar-cocuk-devam-sutu-500-ml/",
+      "path": "assets/our-market/products/6f9059fc-afd5-5f71-823b-27d2aae35b54.jpg",
+      "image_url": "./assets/our-market/products/6f9059fc-afd5-5f71-823b-27d2aae35b54.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "593a2057-5e59-5838-961f-10c1b7e5ffcb",
+      "name": "Emborg Emmentaler Cheese (200 gr.)",
+      "score": 0.8254545454545454,
+      "match": "EMBORG EMMENTALER 200GR",
+      "url": "https://www.kibrissanalmarket.com/wp-content/uploads/2021/08/emborg-emmentaler-peynir-100gr-9fe0.jpg",
+      "source": "https://www.kibrissanalmarket.com/urunler/emborg-emmentaler-200gr/",
+      "path": "assets/our-market/products/593a2057-5e59-5838-961f-10c1b7e5ffcb.jpg",
+      "image_url": "./assets/our-market/products/593a2057-5e59-5838-961f-10c1b7e5ffcb.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
     }
   ]
 }
