@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 250,
+  "generated": 260,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -2999,6 +2999,126 @@
       "path": "assets/menu-generated/674c1dff-dcb8-5b1c-b83a-0a7f269fcffd.jpg",
       "generation_mode": "built-in",
       "blob_sha": "caf3cca7a48aa5428a2024ac361c2d5c9ebffb97"
+    },
+    {
+      "id": "7d833ff2-6fc5-50c0-8019-ab830c07be4b",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Triple Cheeseburger",
+      "description": "[Hamburgerler & Fırsat Menüler] Patates Kızartması ile servis edilir.",
+      "image_url": "./assets/menu-generated/7d833ff2-6fc5-50c0-8019-ab830c07be4b.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Triple Cheeseburger\",\"category\":\"Hamburgerler & Fırsat Menüler\",\"description\":\"Patates Kızartması ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/7d833ff2-6fc5-50c0-8019-ab830c07be4b.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c3298ddf93679f34341303652b66ece15af48b88"
+    },
+    {
+      "id": "dc8fc13e-6ac3-5dae-a735-d0b0a8742735",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Soda",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/dc8fc13e-6ac3-5dae-a735-d0b0a8742735.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Soda\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\",\"clarification\":\"Turkish plain sparkling mineral water, colorless clear bubbly water, not cola\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/dc8fc13e-6ac3-5dae-a735-d0b0a8742735.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "e152e5730224dc6efe913362928831142e4ba43c"
+    },
+    {
+      "id": "4a725633-3646-5172-b42a-c4f2f6ce0d94",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Cousin Menu",
+      "description": "[Hamburgerler & Fırsat Menüler] 1 Tavuk Burger + 1 Et Burger + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması",
+      "image_url": "./assets/menu-generated/4a725633-3646-5172-b42a-c4f2f6ce0d94.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cousin Menu\",\"category\":\"Hamburgerler & Fırsat Menüler\",\"description\":\"1 Tavuk Burger + 1 Et Burger + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/4a725633-3646-5172-b42a-c4f2f6ce0d94.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c77509d77440d9420c1385830be9fd6dabb48b33"
+    },
+    {
+      "id": "3cf43cfa-3ef7-5c0d-aa52-9be7e036d15a",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Water",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/3cf43cfa-3ef7-5c0d-aa52-9be7e036d15a.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Water\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/3cf43cfa-3ef7-5c0d-aa52-9be7e036d15a.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "79a52d1c4815fc734fdb801dcdd4b5a8224c46e9"
+    },
+    {
+      "id": "94b95ebb-418a-528b-8422-e9db1b7da66d",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Twins Menu",
+      "description": "[Hamburgerler & Fırsat Menüler] İtalyan Pizza 32cm + Vejeteryan Pizza 32cm + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması",
+      "image_url": "./assets/menu-generated/94b95ebb-418a-528b-8422-e9db1b7da66d.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Twins Menu\",\"category\":\"Hamburgerler & Fırsat Menüler\",\"description\":\"İtalyan Pizza 32cm + Vejeteryan Pizza 32cm + 2 Coca Cola + 6 Soğan Halkası + 2 Porsiyon Patates Kızartması\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/94b95ebb-418a-528b-8422-e9db1b7da66d.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "1c6ff93296126ac9285c060f59ffc229219d9c6f"
+    },
+    {
+      "id": "133c616a-a2b1-52ef-b887-8f6242498a4c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Egg",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/133c616a-a2b1-52ef-b887-8f6242498a4c.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Egg\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/133c616a-a2b1-52ef-b887-8f6242498a4c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c1fcf2e5c9b82a898b02edb21ffe696230b3cb30"
+    },
+    {
+      "id": "8d5aca6e-fff3-50f7-a228-810d58a9beca",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Acıktım Menu",
+      "description": "[Hamburgerler & Fırsat Menüler] Ana Yemek + Salata + Pilav + Patates Kızartması + Coca Cola + Tatlı",
+      "image_url": "./assets/menu-generated/8d5aca6e-fff3-50f7-a228-810d58a9beca.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Acıktım Menu\",\"category\":\"Hamburgerler & Fırsat Menüler\",\"description\":\"Ana Yemek + Salata + Pilav + Patates Kızartması + Coca Cola + Tatlı\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/8d5aca6e-fff3-50f7-a228-810d58a9beca.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "9522841307963b5a10ad4ae4c15be4e7b46aed1b"
+    },
+    {
+      "id": "b92dbffd-8868-50e6-bb02-ffc5248d5053",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Halloumi (2 pcs)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Halloumi (2 pcs)\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/b92dbffd-8868-50e6-bb02-ffc5248d5053.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c91d2cbf38cbca2cccd13cfb81e081a29b3e3d75"
+    },
+    {
+      "id": "ebe42ac5-ec22-5f99-b608-bc28e3a48fea",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "GYM Menu",
+      "description": "[Hamburgerler & Fırsat Menüler] Izgara Tavuk + 2 Pilav + Salata + Soda",
+      "image_url": "./assets/menu-generated/ebe42ac5-ec22-5f99-b608-bc28e3a48fea.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"GYM Menu\",\"category\":\"Hamburgerler & Fırsat Menüler\",\"description\":\"Izgara Tavuk + 2 Pilav + Salata + Soda\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/ebe42ac5-ec22-5f99-b608-bc28e3a48fea.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "0a4666689b8aafaf72e6a637b8d6bb82d2bbd81a"
+    },
+    {
+      "id": "ba674470-bbee-556f-bbfd-d7fd1abd9ce2",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Kasseri Cheese",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/ba674470-bbee-556f-bbfd-d7fd1abd9ce2.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kasseri Cheese\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/ba674470-bbee-556f-bbfd-d7fd1abd9ce2.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "6c7dbd9cf68a0d444a547b1029dcaf5f7cd22483"
     }
   ]
 }
