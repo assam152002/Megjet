@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 208,
+  "generated": 218,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -2495,6 +2495,126 @@
       "path": "assets/menu-generated/a58ec31f-2b7b-5d28-a1fb-d4750ab7f606.jpg",
       "generation_mode": "built-in",
       "blob_sha": "235c365d201417652ad422dea0a0fe29dd67332b"
+    },
+    {
+      "id": "d80eaeaa-3d63-5006-86b6-f636158cd7cf",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Mercimek Çorbası",
+      "description": "[Pideler & Çorbalar] Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.",
+      "image_url": "./assets/menu-generated/d80eaeaa-3d63-5006-86b6-f636158cd7cf.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mercimek Çorbası\",\"description\":\"Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/d80eaeaa-3d63-5006-86b6-f636158cd7cf.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "477b774be3a81ecb63b9282fc152d920eb7022a3"
+    },
+    {
+      "id": "11fce945-2083-573a-8255-3ba1567924a7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mix Kebab / Jooje Menu",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/11fce945-2083-573a-8255-3ba1567924a7.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mix Kebab / Jooje Menu\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/11fce945-2083-573a-8255-3ba1567924a7.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "35e1b245ce3f689cecb01b039f1910a3718a2c2c"
+    },
+    {
+      "id": "dff22afd-021b-5a1d-b49b-25aa2c66d23f",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Tavuk Çorbası",
+      "description": "[Pideler & Çorbalar] Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.",
+      "image_url": "./assets/menu-generated/dff22afd-021b-5a1d-b49b-25aa2c66d23f.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tavuk Çorbası\",\"description\":\"Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/dff22afd-021b-5a1d-b49b-25aa2c66d23f.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c81ec0fee410daa4f91f484c6a60cf349c63b03e"
+    },
+    {
+      "id": "be7ef9ac-71a8-5ba2-ae21-a8b1c2ff0c7f",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Gheyneh / Jooje Menu",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/be7ef9ac-71a8-5ba2-ae21-a8b1c2ff0c7f.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Gheyneh / Jooje Menu\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/be7ef9ac-71a8-5ba2-ae21-a8b1c2ff0c7f.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "82a734c0aec7ef6756f5da98a1c57e6a35927088"
+    },
+    {
+      "id": "ce0c832b-b99a-5d6f-86e2-197b682e8ce8",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Fettucini Alfredo",
+      "description": "[Makarnalar] Tavuk - Mantar",
+      "image_url": "./assets/menu-generated/ce0c832b-b99a-5d6f-86e2-197b682e8ce8.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Fettucini Alfredo\",\"description\":\"Tavuk - Mantar\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/ce0c832b-b99a-5d6f-86e2-197b682e8ce8.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "639ba5cd82bece11bfcd1316004f01b0290c1a48"
+    },
+    {
+      "id": "1b168b6d-65e3-5c61-aec7-abdb8c2cb969",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Kubje Menu / Gheymen bademjoon",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/1b168b6d-65e3-5c61-aec7-abdb8c2cb969.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kubje Menu / Gheymen bademjoon\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/1b168b6d-65e3-5c61-aec7-abdb8c2cb969.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "1e1723d6a76b4cfd953a8f4290c051d205291de6"
+    },
+    {
+      "id": "038fbfb3-481e-53dc-8a6d-7ead1c7a395b",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Pesto Sauce Pasta",
+      "description": "[Makarnalar] ",
+      "image_url": "./assets/menu-generated/038fbfb3-481e-53dc-8a6d-7ead1c7a395b.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Pesto Sauce Pasta\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/038fbfb3-481e-53dc-8a6d-7ead1c7a395b.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "6a4f21e799af8b3c57f581a2d53528b48cd0e492"
+    },
+    {
+      "id": "4a27b4a0-7d24-5d14-9d11-70e0d6c61f92",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Gherneh Menu / Karafs",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/4a27b4a0-7d24-5d14-9d11-70e0d6c61f92.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Gherneh Menu / Karafs\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/4a27b4a0-7d24-5d14-9d11-70e0d6c61f92.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "9770a5c9c72d2968bbeec333403033a73bc35744"
+    },
+    {
+      "id": "e6b061e9-90c0-593f-8514-6bed28057dd0",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Spaghetti Bolognose",
+      "description": "[Makarnalar] Dana Kıyma",
+      "image_url": "./assets/menu-generated/e6b061e9-90c0-593f-8514-6bed28057dd0.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Spaghetti Bolognose\",\"description\":\"Dana Kıyma\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/e6b061e9-90c0-593f-8514-6bed28057dd0.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "9f386ab9988919492b5b56f134f107c7e57857b3"
+    },
+    {
+      "id": "c2ef14c6-4b1f-5ec8-993b-235c784d89f7",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Ghormeh sabzi",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/c2ef14c6-4b1f-5ec8-993b-235c784d89f7.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Ghormeh sabzi\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/c2ef14c6-4b1f-5ec8-993b-235c784d89f7.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "51073f5a466b383166a19d3553df5f29c1de81f1"
     }
   ]
 }
