@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 198,
+  "generated": 208,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -2375,6 +2375,126 @@
       "path": "assets/menu-generated/7a37bbcd-fb8c-51c5-a11b-c00374d93524.jpg",
       "generation_mode": "built-in",
       "blob_sha": "7a18692fbcf0b0c0a5b3b8ab4fed37dea67c63b8"
+    },
+    {
+      "id": "f81795e7-3276-5e07-a559-2ff9c8d9bb4a",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kuşbaşı Pide",
+      "description": "[Pideler & Çorbalar] Domates, salatalık ve maydanoz ile servis edilir.",
+      "image_url": "./assets/menu-generated/f81795e7-3276-5e07-a559-2ff9c8d9bb4a.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kuşbaşı Pide\",\"description\":\"Domates, salatalık ve maydanoz ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f81795e7-3276-5e07-a559-2ff9c8d9bb4a.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "1bb6b250c24cd0f7f13f46aaca25811803964b1a"
+    },
+    {
+      "id": "f884a465-891e-5781-b613-3ef1b61af22e",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chicken Quesadilla + Cajun Fries",
+      "description": "[Doners Menu] ",
+      "image_url": "./assets/menu-generated/f884a465-891e-5781-b613-3ef1b61af22e.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chicken Quesadilla + Cajun Fries\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f884a465-891e-5781-b613-3ef1b61af22e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c0904060781441d3e474abef011305676ab36c52"
+    },
+    {
+      "id": "9f23f223-c4da-51de-a8fb-6cc1a39a5027",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Kaşarlı Pide",
+      "description": "[Pideler & Çorbalar] Domates, salatalık ve maydanoz ile servis edilir.",
+      "image_url": "./assets/menu-generated/9f23f223-c4da-51de-a8fb-6cc1a39a5027.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Kaşarlı Pide\",\"description\":\"Domates, salatalık ve maydanoz ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9f23f223-c4da-51de-a8fb-6cc1a39a5027.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "ed8e3b45d772558c91e28b978504bb3f6006b8fe"
+    },
+    {
+      "id": "97faae73-12cf-5969-aae0-bb9a771aa223",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Arabic Shawarma",
+      "description": "[Doners Menu] ",
+      "image_url": "./assets/menu-generated/97faae73-12cf-5969-aae0-bb9a771aa223.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Arabic Shawarma\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/97faae73-12cf-5969-aae0-bb9a771aa223.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "dd117caa7be12eb78f73f5c1c76d9ce2537a70ff"
+    },
+    {
+      "id": "802564a9-be0c-5722-a94d-0e4fec1dc4ed",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Lahmacun",
+      "description": "[Pideler & Çorbalar] Domates, salatalık ve maydanoz ile servis edilir.",
+      "image_url": "./assets/menu-generated/802564a9-be0c-5722-a94d-0e4fec1dc4ed.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Lahmacun\",\"description\":\"Domates, salatalık ve maydanoz ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/802564a9-be0c-5722-a94d-0e4fec1dc4ed.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "5c124216eec1a0f65df461d25bbc7b38f73c56ec"
+    },
+    {
+      "id": "5da9b712-7f9b-5148-ad7b-608efbe6716c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Zereshk polo ba morgh",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/5da9b712-7f9b-5148-ad7b-608efbe6716c.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Zereshk polo ba morgh\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/5da9b712-7f9b-5148-ad7b-608efbe6716c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "ade6ad0fda142e9178dd1f6b6728710b1e50acab"
+    },
+    {
+      "id": "fbbed72d-d14b-5384-81c7-1d930d233aca",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Orjinal Maraş Paça Çorbası",
+      "description": "[Pideler & Çorbalar] Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.",
+      "image_url": "./assets/menu-generated/fbbed72d-d14b-5384-81c7-1d930d233aca.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Orjinal Maraş Paça Çorbası\",\"description\":\"Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/fbbed72d-d14b-5384-81c7-1d930d233aca.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "f35f31c595beb3d0bf938395f07b4ebee596d0af"
+    },
+    {
+      "id": "f468781f-5d3b-5c3f-84c1-3657212fa95c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chelo Kebab Kubide",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/f468781f-5d3b-5c3f-84c1-3657212fa95c.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chelo Kebab Kubide\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f468781f-5d3b-5c3f-84c1-3657212fa95c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "016ed99bb780a397dc263fb0fcf943279d30c738"
+    },
+    {
+      "id": "8e63680c-eca0-5c66-a431-c37465a0654f",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Beyran Çorbası",
+      "description": "[Pideler & Çorbalar] Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.",
+      "image_url": "./assets/menu-generated/8e63680c-eca0-5c66-a431-c37465a0654f.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Beyran Çorbası\",\"description\":\"Yeşillik, zeytin, tereyağ, limon ve ekmek ile servis edilir.\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/8e63680c-eca0-5c66-a431-c37465a0654f.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "f93ed17d03038273d8ab18a0e9c940464eb82694"
+    },
+    {
+      "id": "a58ec31f-2b7b-5d28-a1fb-d4750ab7f606",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Chelo Jooje Kebab",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/a58ec31f-2b7b-5d28-a1fb-d4750ab7f606.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Chelo Jooje Kebab\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/a58ec31f-2b7b-5d28-a1fb-d4750ab7f606.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "235c365d201417652ad422dea0a0fe29dd67332b"
     }
   ]
 }
