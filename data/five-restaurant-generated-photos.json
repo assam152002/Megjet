@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 218,
+  "generated": 228,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -2615,6 +2615,126 @@
       "path": "assets/menu-generated/c2ef14c6-4b1f-5ec8-993b-235c784d89f7.jpg",
       "generation_mode": "built-in",
       "blob_sha": "51073f5a466b383166a19d3553df5f29c1de81f1"
+    },
+    {
+      "id": "3092cc3d-b9a1-578f-ab48-808b3c61697e",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Spaghetti Napolitan",
+      "description": "[Makarnalar] Domates Soslu",
+      "image_url": "./assets/menu-generated/3092cc3d-b9a1-578f-ab48-808b3c61697e.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Spaghetti Napolitan\",\"description\":\"Domates Soslu\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/3092cc3d-b9a1-578f-ab48-808b3c61697e.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "fd347ad8d1075577471cef8ba955618974c14145"
+    },
+    {
+      "id": "eddf48c6-02db-53b1-8d4d-91dd944e24c2",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Sbzi polo mahi",
+      "description": "[À La Persia] ",
+      "image_url": "./assets/menu-generated/eddf48c6-02db-53b1-8d4d-91dd944e24c2.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Sbzi polo mahi\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/eddf48c6-02db-53b1-8d4d-91dd944e24c2.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "43829234426a79ca8b9405fe59e3e835cf4abe2c"
+    },
+    {
+      "id": "5f29a0e2-738e-5a0a-9122-2a2f950b5c90",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Cyprus Style",
+      "description": "[Makarnalar] Tavuk Grill - Rendelenmiş Hellim",
+      "image_url": "./assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cyprus Style\",\"description\":\"Tavuk Grill - Rendelenmiş Hellim\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/5f29a0e2-738e-5a0a-9122-2a2f950b5c90.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "5f6880ee16c615c798f50b5c5e960289a4ffbd37"
+    },
+    {
+      "id": "590da9ad-caa1-55d9-9ead-3acc1b8a5973",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Special Beef Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": "./assets/menu-generated/590da9ad-caa1-55d9-9ead-3acc1b8a5973.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Special Beef Pizza\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/590da9ad-caa1-55d9-9ead-3acc1b8a5973.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "342bb50e41e6ce483161f2df053a2073444d4dfb"
+    },
+    {
+      "id": "f3dc1142-ff20-52fb-ba4f-35a84732f6f0",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Makarna Eco 1 Menü",
+      "description": "[Makarnalar] Herhangi 3 Makarna Al 2 Öde",
+      "image_url": "./assets/menu-generated/f3dc1142-ff20-52fb-ba4f-35a84732f6f0.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Makarna Eco 1 Menü\",\"description\":\"Herhangi 3 Makarna Al 2 Öde\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/f3dc1142-ff20-52fb-ba4f-35a84732f6f0.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "7f5880f3ed03f4b856ac59a242cacda5b3cb777c"
+    },
+    {
+      "id": "771ad742-5284-5b9e-a7ca-5ff27ae73fb3",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Charcuterie Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": "./assets/menu-generated/771ad742-5284-5b9e-a7ca-5ff27ae73fb3.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Charcuterie Pizza\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/771ad742-5284-5b9e-a7ca-5ff27ae73fb3.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "1adc09496d95002726e5a70cb3d0448db418e38f"
+    },
+    {
+      "id": "fc42e07d-27ef-5ec6-a204-ddbf5b9bc526",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Makarna Eco 2 Menü",
+      "description": "[Makarnalar] Herhangi 4 Makarna Al 3 Öde",
+      "image_url": "./assets/menu-generated/fc42e07d-27ef-5ec6-a204-ddbf5b9bc526.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Makarna Eco 2 Menü\",\"description\":\"Herhangi 4 Makarna Al 3 Öde\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/fc42e07d-27ef-5ec6-a204-ddbf5b9bc526.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "41aaec0da2c6d3f45f501f0db16fd485d15a61de"
+    },
+    {
+      "id": "a69704f4-206f-5ff5-9d6a-5b1f65cbaf5c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Tongue Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": "./assets/menu-generated/a69704f4-206f-5ff5-9d6a-5b1f65cbaf5c.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Tongue Pizza\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/a69704f4-206f-5ff5-9d6a-5b1f65cbaf5c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "29edd774e0900ea56d58fed1bf73ff7548901d15"
+    },
+    {
+      "id": "9fe71f7a-1d72-5017-a33a-0fa0d1ebee22",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "İtalian Mix",
+      "description": "[Pizzalar (32 cm / 42 cm)] Salam, Sucuk, Sosis, Yeşil ve Kırmızı Biber, Mısır, Zeytin, Mantar",
+      "image_url": "./assets/menu-generated/9fe71f7a-1d72-5017-a33a-0fa0d1ebee22.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"İtalian Mix\",\"description\":\"Salam, Sucuk, Sosis, Yeşil ve Kırmızı Biber, Mısır, Zeytin, Mantar\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/9fe71f7a-1d72-5017-a33a-0fa0d1ebee22.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "4ddbc9f7b01049846371a5e8dd3131f493649bbf"
+    },
+    {
+      "id": "493c631f-9a72-524b-b9af-b62fd5c2c1b3",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Meat & Mushroom Pizza",
+      "description": "[American Pizza (28 cm)] ",
+      "image_url": "./assets/menu-generated/493c631f-9a72-524b-b9af-b62fd5c2c1b3.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Meat & Mushroom Pizza\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/493c631f-9a72-524b-b9af-b62fd5c2c1b3.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "8fe837b2810b3cce51132390628b3bc3b0d4b680"
     }
   ]
 }
