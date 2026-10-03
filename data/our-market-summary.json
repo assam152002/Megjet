@@ -1,0 +1,292 @@
+{
+  "vendor": {
+    "id": "06d76aea-1c94-5950-b621-22130e57ef75",
+    "name": "Our Market"
+  },
+  "sources": [
+    {
+      "file": "market waters.html",
+      "department": "Water & Ice",
+      "source_products": 16
+    },
+    {
+      "file": "market drinks.html",
+      "department": "Drinks",
+      "source_products": 22
+    },
+    {
+      "file": "market snacks.html",
+      "department": "Snacks",
+      "source_products": 142
+    },
+    {
+      "file": "market food.html",
+      "department": "Food",
+      "source_products": 169
+    },
+    {
+      "file": "market meat and chicken.html",
+      "department": "Meat & Chicken",
+      "source_products": 52
+    },
+    {
+      "file": "market basic foods.html",
+      "department": "Basic Foods",
+      "source_products": 197
+    },
+    {
+      "file": "market dairy and breakfast.html",
+      "department": "Dairy & Breakfast",
+      "source_products": 270
+    },
+    {
+      "file": "market bakery.html",
+      "department": "Bakery",
+      "source_products": 17
+    },
+    {
+      "file": "market fit and form.html",
+      "department": "Fit & Form",
+      "source_products": 135
+    },
+    {
+      "file": "market home care.html",
+      "department": "Home Care",
+      "source_products": 377
+    },
+    {
+      "file": "market home life.html",
+      "department": "Home Life",
+      "source_products": 67
+    },
+    {
+      "file": "market personal care.html",
+      "department": "Personal Care",
+      "source_products": 161
+    },
+    {
+      "file": "market technology.html",
+      "department": "Technology",
+      "source_products": 64
+    },
+    {
+      "file": "market sexual health.html",
+      "department": "Sexual Health",
+      "source_products": 22
+    },
+    {
+      "file": "market baby.html",
+      "department": "Baby",
+      "source_products": 49
+    },
+    {
+      "file": "market clothing.html",
+      "department": "Clothing",
+      "source_products": 10
+    },
+    {
+      "file": "market stationery.html",
+      "department": "Stationery",
+      "source_products": 84
+    },
+    {
+      "file": "market pet.html",
+      "department": "Pet",
+      "source_products": 31
+    }
+  ],
+  "source_product_count": 1885,
+  "unique_product_count": 1876,
+  "categories": [
+    "Water & Ice · Water",
+    "Water & Ice · Ice",
+    "Drinks · Tea & Herbal Tea",
+    "Drinks · Coffee",
+    "Drinks · Energy Drinks",
+    "Drinks · Sports & Traditional Drinks",
+    "Snacks · Chewing Gum & Mints",
+    "Snacks · Chocolates & Bars",
+    "Snacks · Wafers & Creams",
+    "Snacks · Biscuits, Cakes & Candies",
+    "Snacks · Chips, Crackers & Savory Snacks",
+    "Food · Convenience Food & Ready Meals",
+    "Food · Canned Products & Preserves",
+    "Food · Sandwiches",
+    "Food · Frozen Meats, Burgers & Poultry",
+    "Food · Frozen Vegetables & Prepared Foods",
+    "Food · Frozen Seafood & Sushi",
+    "Food · Frozen Bakery, Pastries & Pizza",
+    "Food · Pickles & Olives",
+    "Food · Fruits, Compotes & Condiments",
+    "Food · Frozen Desserts & Fruits",
+    "Meat & Chicken · Red Meat",
+    "Meat & Chicken · Chicken",
+    "Meat & Chicken · Fish & Seafood",
+    "Basic Foods · Dessert & Pastry Supplies",
+    "Basic Foods · Flour & Semolina",
+    "Basic Foods · Sugar",
+    "Basic Foods · Cream",
+    "Basic Foods · African Products",
+    "Basic Foods · Spice & Seasonings",
+    "Basic Foods · Vinegar",
+    "Basic Foods · Soup & Ready Meals",
+    "Basic Foods · Liquid Oil",
+    "Dairy & Breakfast · Cheese",
+    "Dairy & Breakfast · Egg",
+    "Dairy & Breakfast · Olive",
+    "Dairy & Breakfast · Delicatessen",
+    "Dairy & Breakfast · Honey & Jam",
+    "Dairy & Breakfast · Chocolate & Paste",
+    "Dairy & Breakfast · Cornflakes",
+    "Dairy & Breakfast · Milk",
+    "Dairy & Breakfast · Milky Drinks",
+    "Dairy & Breakfast · Yoghurt",
+    "Dairy & Breakfast · Butter & Margarin",
+    "Bakery · Bakery & Bread",
+    "Bakery · Grissini & Rusks",
+    "Fit & Form · Fit Drinks",
+    "Fit & Form · Cracker & Cookies",
+    "Fit & Form · Cereal",
+    "Fit & Form · Bar & Snacks",
+    "Home Care · Laundry",
+    "Home Care · Paper Products",
+    "Home Care · Dish Washing",
+    "Home Care · Cleaning & Surface Care",
+    "Home Care · Kitchen",
+    "Home Care · Home Fragrance",
+    "Home Care · Insecticide",
+    "Home Life · Battery",
+    "Home Life · Game & Toy",
+    "Home Life · Accessories",
+    "Home Life · Electricity and Lighting",
+    "Home Life · Shoe Care",
+    "Home Life · Picnic",
+    "Home Life · Party Materials",
+    "Home Life · Ironmongery",
+    "Home Life · Other",
+    "Personal Care · Shampoo & Conditioner",
+    "Personal Care · Hair Care",
+    "Personal Care · Bath & Shower",
+    "Personal Care · Nail Products & Remover",
+    "Personal Care · Wax & Epilation / Sun & Cologne",
+    "Personal Care · Hygienic Pads & Daily Care",
+    "Personal Care · Shaving Supplies & Appliances",
+    "Personal Care · Soap",
+    "Personal Care · Facial Skin Care & Mouthwash",
+    "Personal Care · Deodorant & Roll-On",
+    "Technology · Charging Adapters & Power",
+    "Technology · Cables & Adapters",
+    "Technology · Headsets & Audio",
+    "Technology · Smartwatches & Wearables",
+    "Technology · Phone Accessories, Holders & Covers",
+    "Technology · Other Tech & Gadgets",
+    "Sexual Health · Condoms",
+    "Sexual Health · Gels & Lubricants",
+    "Baby · Baby Care",
+    "Baby · Diapers",
+    "Baby · Baby Food & Formula",
+    "Baby · Laundry & Softeners",
+    "Clothing · Woman Socks",
+    "Clothing · Hats & Headwear",
+    "Clothing · Underwear",
+    "Stationery",
+    "Pet · Cat Food & Treats",
+    "Pet · Cat Litter",
+    "Pet · Dog Food & Wet Food",
+    "Pet · Other Pet Supplies"
+  ],
+  "duplicates": [],
+  "pending_price_review": [
+    {
+      "id": "239b0882-4a8a-5dde-9a85-87d303e5d448",
+      "name": "Evin Herbal Margarine (250 gr.)",
+      "source_file": "market dairy and breakfast.html",
+      "reason": "[Dairy & Breakfast · Butter & Margarin] — Source lists conflicting prices: 68.50 TL, 74.50 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "14343ba5-a50c-5a5c-8e86-94f16334e3ce",
+      "name": "Macromax Microfiber Cleaning Cloth (4 pcs.)",
+      "source_file": "market home care.html",
+      "reason": "[Home Care · Cleaning & Surface Care] — Source lists conflicting prices: 254.50 TL, 317.50 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "ffbf789f-75c9-5b12-ac17-1af3069f09ee",
+      "name": "Digital Spoon Scale (1 pcs.)",
+      "source_file": "market home care.html",
+      "reason": "[Home Care · Kitchen] — Source lists conflicting prices: 375.50 TL, 463.00 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "f5581660-8b64-5264-a7f2-1d5a15b19167",
+      "name": "Dough Cutter (1 pcs.)",
+      "source_file": "market home care.html",
+      "reason": "[Home Care · Kitchen] — Source lists conflicting prices: 224.00 TL, 152.00 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "ddc971ac-a532-5c9f-abba-31a75a5123c1",
+      "name": "Metal Spatula (1 pcs.)",
+      "source_file": "market home care.html",
+      "reason": "[Home Care · Kitchen] — Source lists conflicting prices: 119.00 TL, 181.50 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "83698767-ee10-5697-a5cf-99684d68f20e",
+      "name": "Aleda Deo Formen & Women Varieties (200 ml)",
+      "source_file": "market personal care.html",
+      "reason": "[Personal Care · Deodorant & Roll-On] 200 ml — Source price range: 227.00 - 247.50 TL. Exact variant prices need confirmation."
+    },
+    {
+      "id": "4cabe0aa-59c3-5912-bd6a-8d6c2b557a52",
+      "name": "Nivea Men & Women Sprays and Roll-Ons (50 / 150 ml)",
+      "source_file": "market personal care.html",
+      "reason": "[Personal Care · Deodorant & Roll-On] 50 / 150 ml — Source price range: 164.00 - 249.00 TL. Exact variant prices need confirmation."
+    },
+    {
+      "id": "569867e7-248d-5d13-8f22-63997c25d337",
+      "name": "Nivea Stick Deodorants (50 ml)",
+      "source_file": "market personal care.html",
+      "reason": "[Personal Care · Deodorant & Roll-On] 50 ml — Source price range: 231.00 - 249.00 TL. Exact variant prices need confirmation."
+    },
+    {
+      "id": "a54ec3e1-5411-5cb0-9c2c-2f844be85177",
+      "name": "Rexona Men & Women Deodorants & Roll-Ons (40 - 150 ml)",
+      "source_file": "market personal care.html",
+      "reason": "[Personal Care · Deodorant & Roll-On] 40 - 150 ml — Source price range: 228.00 - 322.00 TL. Exact variant prices need confirmation."
+    },
+    {
+      "id": "00a64ae6-81f0-559b-ab78-b023225ad45a",
+      "name": "Aux Cable (1 pcs.)",
+      "source_file": "market technology.html",
+      "reason": "[Technology · Cables & Adapters] — Source lists conflicting prices: 269.50 TL, 185.50 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "7af11b3b-e4ee-5fd0-9451-01cd3960225f",
+      "name": "Iphone Charging Cable (1 pcs.)",
+      "source_file": "market technology.html",
+      "reason": "[Technology · Cables & Adapters] — Source lists conflicting prices: 157.50 TL, 264.00 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "a3697e88-27ef-5e08-a714-591b9d857b97",
+      "name": "USB Type-C Charging Cable (1 pcs.)",
+      "source_file": "market technology.html",
+      "reason": "[Technology · Cables & Adapters] — Source lists conflicting prices: 157.50 TL, 264.00 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "831dc38c-a702-54e3-9b2c-7fe80b2605e8",
+      "name": "Type-C Charging Cable (1 pcs.)",
+      "source_file": "market technology.html",
+      "reason": "[Technology · Cables & Adapters] — Source lists conflicting prices: 157.50 TL, 264.00 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "0204142b-b4e1-5b8e-9738-cdd33493d003",
+      "name": "Magnetic Phone Holder",
+      "source_file": "market technology.html",
+      "reason": "[Technology · Phone Accessories, Holders & Covers] — Source lists conflicting prices: 378.50 TL, 526.50 TL, 509.50 TL. Confirm the correct price before enabling."
+    },
+    {
+      "id": "44bc457a-d8f5-5df9-af69-b06756ebe933",
+      "name": "Durex Naturals Pure Lubricant Gel (100 ml.)",
+      "source_file": "market sexual health.html",
+      "reason": "[Sexual Health · Gels & Lubricants] 100 ml. — Source lists conflicting prices: 1099.50 TL, 1067.00 TL. Confirm the correct price before enabling."
+    }
+  ],
+  "conflicting_price_listings": 11
+}
