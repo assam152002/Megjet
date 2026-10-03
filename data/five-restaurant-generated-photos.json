@@ -1,6 +1,6 @@
 {
   "total": 299,
-  "generated": 260,
+  "generated": 270,
   "items": [
     {
       "id": "9ba46cf9-eedd-5271-b407-e62a095ada40",
@@ -3119,6 +3119,126 @@
       "path": "assets/menu-generated/ba674470-bbee-556f-bbfd-d7fd1abd9ce2.jpg",
       "generation_mode": "built-in",
       "blob_sha": "6c7dbd9cf68a0d444a547b1029dcaf5f7cd22483"
+    },
+    {
+      "id": "85c7b2e0-38ab-5282-a18e-fc5821315352",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Sıcak Sepeti",
+      "description": "[Atıştırmalıklar & Kumpir] Kızartılmış Sosis (6 Adet), Salam (6 Adet), Hellim (6 Adet), Sigara Böreği (6 Adet), Patates (6 Adet)",
+      "image_url": "./assets/menu-generated/85c7b2e0-38ab-5282-a18e-fc5821315352.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Sıcak Sepeti\",\"category\":\"Atıştırmalıklar & Kumpir\",\"description\":\"Kızartılmış Sosis (6 Adet), Salam (6 Adet), Hellim (6 Adet), Sigara Böreği (6 Adet), Patates (6 Adet)\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/85c7b2e0-38ab-5282-a18e-fc5821315352.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "2b2b9df0c5828c11bf90447f684b7537a18aca97"
+    },
+    {
+      "id": "15bfebf6-d64c-5d05-b186-8492aa88ddae",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Cheddar Cheese",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/15bfebf6-d64c-5d05-b186-8492aa88ddae.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cheddar Cheese\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/15bfebf6-d64c-5d05-b186-8492aa88ddae.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d9207cb0e1791f722d864f66dd7655567aee9d12"
+    },
+    {
+      "id": "40f63639-199f-5920-bcd7-7a61b9c7c151",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Sigara Böreği (6 Adet)",
+      "description": "[Atıştırmalıklar & Kumpir] ",
+      "image_url": "./assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Sigara Böreği (6 Adet)\",\"category\":\"Atıştırmalıklar & Kumpir\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/40f63639-199f-5920-bcd7-7a61b9c7c151.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "c2b17660d843493a2618b8e4df1d52ffa41b0d6e"
+    },
+    {
+      "id": "aeca2eca-3d09-593a-a14a-594159e32261",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Mushrooms",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/aeca2eca-3d09-593a-a14a-594159e32261.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Mushrooms\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/aeca2eca-3d09-593a-a14a-594159e32261.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d157c8775df63e6b53bd5b4e5387d6edab5c05eb"
+    },
+    {
+      "id": "674aea49-1c37-5a7d-ba0a-314a7d13df35",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Soğan Halkası (6 Adet)",
+      "description": "[Atıştırmalıklar & Kumpir] ",
+      "image_url": "./assets/menu-generated/674aea49-1c37-5a7d-ba0a-314a7d13df35.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Soğan Halkası (6 Adet)\",\"category\":\"Atıştırmalıklar & Kumpir\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/674aea49-1c37-5a7d-ba0a-314a7d13df35.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "0c2f2244d0004d9419a000cc48b65cf21d362994"
+    },
+    {
+      "id": "03a17e30-a6d5-5256-aded-d27c32d11b84",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Smokey Beef (1 slice)",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/03a17e30-a6d5-5256-aded-d27c32d11b84.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Smokey Beef (1 slice)\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/03a17e30-a6d5-5256-aded-d27c32d11b84.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d8573de6ed799291d5a84057e13a179fee5a1cae"
+    },
+    {
+      "id": "70cf4bc7-848c-58fe-b159-2e0b587e2483",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Cips Tabağı",
+      "description": "[Atıştırmalıklar & Kumpir] ",
+      "image_url": "./assets/menu-generated/70cf4bc7-848c-58fe-b159-2e0b587e2483.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Cips Tabağı\",\"category\":\"Atıştırmalıklar & Kumpir\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/70cf4bc7-848c-58fe-b159-2e0b587e2483.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "d92e8d0c48004a08dc92466c851d03a4c5bec71b"
+    },
+    {
+      "id": "88a3f5c8-7b83-5cf6-9f34-9e4096c5b41c",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Salami",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/88a3f5c8-7b83-5cf6-9f34-9e4096c5b41c.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Salami\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/88a3f5c8-7b83-5cf6-9f34-9e4096c5b41c.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "f703a769b6d92b7279357c845d5979aee958b0aa"
+    },
+    {
+      "id": "596c7519-645f-50eb-943d-089e279ce617",
+      "vendor_id": "85657aa3-0aa4-5c0f-85a2-ab70c4bf8d1d",
+      "name": "Karışık Kumpir",
+      "description": "[Atıştırmalıklar & Kumpir] Kıbrıs Patatesi, Salam, Sucuk, Sosis, Mısır, Mantar, Zeytin, Rus Salatası",
+      "image_url": "./assets/menu-generated/596c7519-645f-50eb-943d-089e279ce617.jpg",
+      "restaurant": "Coffeeholic Boutique Bakery House",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Karışık Kumpir\",\"category\":\"Atıştırmalıklar & Kumpir\",\"description\":\"Kıbrıs Patatesi, Salam, Sucuk, Sosis, Mısır, Mantar, Zeytin, Rus Salatası\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/596c7519-645f-50eb-943d-089e279ce617.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "81e06a5c77d1071b886dc81c2ecd3cc88fe5210c"
+    },
+    {
+      "id": "71a18d8c-7fb6-5551-bd0c-cfe6c5272758",
+      "vendor_id": "88a97265-83db-5cf8-9ec8-bcb34106a46b",
+      "name": "Sausage",
+      "description": "[Drinks, Extras & Sauces] ",
+      "image_url": "./assets/menu-generated/71a18d8c-7fb6-5551-bd0c-cfe6c5272758.jpg",
+      "restaurant": "A La Carte (Sakarya)",
+      "prompt": "ONE square photorealistic food delivery menu photograph. Dish data: {\"name\":\"Sausage\",\"category\":\"Drinks, Extras & Sauces\",\"description\":\"\"}. Accurately show ONLY this named base dish and explicitly included sides. No drink unless explicitly included in name or description. No optional paid extras. Unbranded appropriate packaging for drinks. Cream plate or bowl, or appropriate cup, on pale neutral tabletop, soft natural daylight, realistic appetizing textures, centered three-quarter close view, safe square crop margins. No text, logos, watermarks, people or collage. Generic illustrative menu photograph.",
+      "path": "assets/menu-generated/71a18d8c-7fb6-5551-bd0c-cfe6c5272758.jpg",
+      "generation_mode": "built-in",
+      "blob_sha": "bc2cc349a129528356a2d8f9c7db00155ec249f2"
     }
   ]
 }
