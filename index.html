@@ -2223,6 +2223,7 @@ function renderVendors(vendors,products){
     return k?window.MEGJET_VENDOR_DESCRIPTIONS[k]:'';
   }
   function hoursFor(v){
+    if(window.MEGJET_HOURS){const raw=window.MEGJET_HOURS.source(v);const match=raw.match(/(?:24\s*(?:saat|hours?)|24\/7)|\d{1,2}[:.]\d{2}\s*(?:AM|PM)?\s*[–—-]\s*\d{1,2}[:.]\d{2}\s*(?:AM|PM)?/i);if(match)return match[0];}
     const n=String(v.name||'').trim();
     const k=Object.keys(window.MEGJET_VENDOR_HOURS||{}).find(x=>x.trim().toLowerCase()===n.toLowerCase());
     if(k)return window.MEGJET_VENDOR_HOURS[k];
@@ -2230,6 +2231,7 @@ function renderVendors(vendors,products){
   }
   function renderProduct(p,v){
     const item={...p,vendor_name:v.name};
+    const hoursClosed=window.MEGJET_HOURS?.status(v).closed||v.accepting_orders===false;
     const menuLocale=window.MEGJET_MENU_LOCALE;
     const visibleName=menuLocale?.name(p)||p.name;
     const rawVisibleDescription=menuLocale?.description(p)??cleanDesc(p);
@@ -2244,7 +2246,7 @@ function renderVendors(vendors,products){
     const productPhoto=`<img class="${photoClass}" src="${escapeHtml(productImage)}" loading="lazy" decoding="async" alt="${escapeHtml((illustrativeImage?'Illustrative image of ':'')+(visibleName||'Product'))}">`;
     const productPhotoMarkup=illustrativeImage?`<span style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">${productPhoto}<small style="font-size:9px;line-height:12px;color:#666">Illustrative image</small></span>`:productPhoto;
     if(v.coming_soon)return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0">${productPhotoMarkup}<div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="coming-soon-price">Products and prices coming soon</div></div></div><button type="button" class="coming-soon-button" disabled>Coming Soon</button></div>`;
-    return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0">${productPhotoMarkup}<div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-button" data-megjet-add-id="${registerMegjetCartProduct(item)}" onclick="return window.MEGJET_ADD_FROM_BUTTON(this,event);"${v.accepting_orders===false?' disabled':''}>${v.accepting_orders===false?'Temporarily closed':'Add +'}</button></div></div>`;
+    return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0">${productPhotoMarkup}<div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-button" data-megjet-add-id="${registerMegjetCartProduct(item)}" onclick="return window.MEGJET_ADD_FROM_BUTTON(this,event);"${hoursClosed?' disabled':''}>${hoursClosed?'Currently unavailable':'Add +'}</button></div></div>`;
   }
   function renderCategory(name,items,v){
     if(!items.length)return "";
@@ -2283,10 +2285,12 @@ function renderVendors(vendors,products){
     const map=mapFor(v);
     const desc=descriptionFor(v);
     const hours=hoursFor(v);
+    const hoursStatus=window.MEGJET_HOURS?.status(v,new Date(),document.documentElement.lang)||{label:'Accepting orders',detail:'',closed:false};
+    profile.dataset.vendorId=String(v.id);
     const phone=String(v.phone||'');
     const rating=v.rating||'New';
     profile.dataset.shop=String(/market|alcohol|cigerattes|cigarettes/i.test(v.name));
-    profile.innerHTML=`<div class="vendor-profile-hero" style="background-image:url('${escapeHtml(hero)}')"><button class="vendor-profile-back" onclick="closeVendorProfile()">‹</button><div class="vendor-profile-actions"><button title="Search" onclick="document.getElementById('vendorProfileSearch').focus()">⌕</button><button title="Cart" onclick="document.getElementById('cartToggle').click()">🛒</button></div><div class="vendor-profile-info"><h1>${escapeHtml(v.name)}</h1><div class="vendor-profile-meta"><span>${v.accepting_orders===false?'Orders paused':v.coming_soon?'Coming soon':'Accepting orders'}</span><span>⭐ ${escapeHtml(rating)}</span><span>📍 ${escapeHtml(v.area||'Gazimagusa')}</span><span>🕐 ${v.preparation_minutes?escapeHtml(v.preparation_minutes)+' min preparation':'Preparation time unavailable'}</span><span>${escapeHtml(money(Number(DELIVERY)))} delivery</span><span>${escapeHtml(hours||'Hours not listed')}</span></div></div></div><div class="vendor-profile-body">${(logo||desc||map||phone||hours)?`<div class="vendor-profile-intro">${logo?`<img class="vendor-profile-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-profile-logo" style="display:flex;align-items:center;justify-content:center;background:#edf9fd;font-size:25px;font-weight:900;color:#0878bd">${escapeHtml(String(v.name||'M').slice(0,1))}</div>`}<div><div class="vendor-profile-description" data-no-translate data-original-bio="${escapeHtml(desc)}" data-bio-en="${escapeHtml(v.bio_translation_source===v.bio?v.bio_en||'':'')}" data-bio-tr="${escapeHtml(v.bio_translation_source===v.bio?v.bio_tr||'':'')}">${escapeHtml(window.MEGJET_BIO_LOCALE?.(v,desc)||desc||'Local restaurant on Megjet.')}</div><div class="vendor-profile-links">${map?`<a href="${map}" target="_blank" rel="noopener">📍 Maps</a>`:''}${phone?`<a href="tel:${escapeHtml(phone)}">☎ ${escapeHtml(phone)}</a>`:''}${hours?`<span class="vendor-profile-links" style="margin:0"><a href="#">🕐 ${escapeHtml(hours)}</a></span>`:''}</div></div></div>`:''}<div class="vendor-profile-toolbar"><input id="vendorProfileSearch" placeholder="Search this menu…"><button class="secondary" onclick="closeVendorProfile()">All restaurants</button></div><nav class="vendor-profile-category-nav" aria-label="Menu categories">${cats.map((c,i)=>`<button type="button" data-jump-category="${i}" data-no-translate data-menu-category="${escapeHtml(c)}" data-menu-vendor="${escapeHtml(v.id)}">${escapeHtml(window.MEGJET_MENU_LOCALE?.category(c,v.id)||c)}</button>`).join('')}</nav><div class="vendor-profile-cats">${cats.map(c=>renderCategory(c,groups[c],v)).join('')||'<div class="vendor-profile-empty muted">No available products yet.</div>'}</div></div>`;
+    profile.innerHTML=`<div class="vendor-profile-hero" style="background-image:url('${escapeHtml(hero)}')"><button class="vendor-profile-back" onclick="closeVendorProfile()">‹</button><div class="vendor-profile-actions"><button title="Search" onclick="document.getElementById('vendorProfileSearch').focus()">⌕</button><button title="Cart" onclick="document.getElementById('cartToggle').click()">🛒</button></div><div class="vendor-profile-info"><h1>${escapeHtml(v.name)}</h1><div class="vendor-profile-meta"><span data-live-store-hours data-no-translate>${escapeHtml(hoursStatus.label)}${hoursStatus.detail?' · '+escapeHtml(hoursStatus.detail):''}</span><span>⭐ ${escapeHtml(rating)}</span><span>📍 ${escapeHtml(v.area||'Gazimagusa')}</span><span>🕐 ${v.preparation_minutes?escapeHtml(v.preparation_minutes)+' min preparation':'Preparation time unavailable'}</span><span>${escapeHtml(money(Number(DELIVERY)))} delivery</span><span>${escapeHtml(hours||'Hours not listed')}</span></div></div></div><div class="vendor-profile-body">${(logo||desc||map||phone||hours)?`<div class="vendor-profile-intro">${logo?`<img class="vendor-profile-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-profile-logo" style="display:flex;align-items:center;justify-content:center;background:#edf9fd;font-size:25px;font-weight:900;color:#0878bd">${escapeHtml(String(v.name||'M').slice(0,1))}</div>`}<div><div class="vendor-profile-description" data-no-translate data-original-bio="${escapeHtml(desc)}" data-bio-en="${escapeHtml(v.bio_translation_source===v.bio?v.bio_en||'':'')}" data-bio-tr="${escapeHtml(v.bio_translation_source===v.bio?v.bio_tr||'':'')}">${escapeHtml(window.MEGJET_BIO_LOCALE?.(v,desc)||desc||'Local restaurant on Megjet.')}</div><div class="vendor-profile-links">${map?`<a href="${map}" target="_blank" rel="noopener">📍 Maps</a>`:''}${phone?`<a href="tel:${escapeHtml(phone)}">☎ ${escapeHtml(phone)}</a>`:''}${hours?`<span class="vendor-profile-links" style="margin:0"><a href="#">🕐 ${escapeHtml(hours)}</a></span>`:''}</div></div></div>`:''}<div class="vendor-profile-toolbar"><input id="vendorProfileSearch" placeholder="Search this menu…"><button class="secondary" onclick="closeVendorProfile()">All restaurants</button></div><nav class="vendor-profile-category-nav" aria-label="Menu categories">${cats.map((c,i)=>`<button type="button" data-jump-category="${i}" data-no-translate data-menu-category="${escapeHtml(c)}" data-menu-vendor="${escapeHtml(v.id)}">${escapeHtml(window.MEGJET_MENU_LOCALE?.category(c,v.id)||c)}</button>`).join('')}</nav><div class="vendor-profile-cats">${cats.map(c=>renderCategory(c,groups[c],v)).join('')||'<div class="vendor-profile-empty muted">No available products yet.</div>'}</div></div>`;
     if(v.accepting_orders===false)profile.querySelector('.vendor-profile-body')?.insertAdjacentHTML('afterbegin','<div id="megjetClosedNotice" class="coming-soon-notice" role="status">Temporarily closed. You can browse the menu; new orders are paused.</div>');
     list.classList.add('hidden'); profile.classList.remove('hidden'); profile.scrollIntoView({behavior:'smooth',block:'start'});
     const si=$("vendorProfileSearch"); if(si)si.addEventListener('input',function(){const q=this.value.trim().toLowerCase();profile.querySelectorAll('.menu-category').forEach(cat=>{let any=false;cat.querySelectorAll('.item').forEach(item=>{const hit=!q||((item.textContent||'')+' '+(item.closest('.market-subsection')?.dataset.marketSection||'')).toLowerCase().includes(q);item.style.display=hit?'flex':'none';if(hit)any=true;});cat.querySelectorAll('.market-subsection').forEach(section=>{section.style.display=!q||Array.from(section.querySelectorAll('.item')).some(item=>item.style.display!=='none')?'':'none';});cat.style.display=any||!q?'block':'none';if(q&&any)cat.open=true;});});
@@ -5623,7 +5627,7 @@ document.addEventListener("DOMContentLoaded",function(){
 </script>
 <script src="./workflow-guard.js?v=8"></script>
 <script src="./assets/menu-language.js?v=1"></script>
-<script src="./interface-preferences.js?v=14"></script>
+<script src="./interface-preferences.js?v=15"></script>
 <script src="./assets/install-app.js?v=1"></script>
 <style>
 #supportFloatButton{position:fixed;right:16px;bottom:68px;z-index:1090;border:0;border-radius:999px;background:#075b91;color:#fff;padding:12px 17px;box-shadow:0 6px 22px #00253c55;font-weight:800;cursor:pointer}
@@ -5650,11 +5654,12 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./assets/operations.js?v=2"></script>
 <script src="./assets/menu-photo-preview.js?v=1"></script>
 <script src="./assets/menu-options.js?v=2"></script>
-<link rel="stylesheet" href="./assets/discovery.css?v=5">
+<link rel="stylesheet" href="./assets/discovery.css?v=6">
 <script>window.megjetCustomerDiscoveryState=()=>({signedIn:!!customerAuthUser,addresses:customerAuthUser?customerSavedAddresses:[],orders:customerAuthUser?(window._customerHistoryOrders||[]):[],fee:Number(DELIVERY)});</script>
+<script src="./assets/store-hours.js?v=1"></script>
 <script src="./assets/discovery-core.js?v=3"></script>
-<script src="./assets/discovery.js?v=8"></script>
+<script src="./assets/discovery.js?v=9"></script>
 <link rel="stylesheet" href="./assets/customer-polish.css?v=5">
-<script src="./assets/customer-polish.js?v=4"></script>
+<script src="./assets/customer-polish.js?v=5"></script>
 </body>
 </html>

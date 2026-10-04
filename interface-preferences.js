@@ -206,6 +206,7 @@
 
   Object.assign(tr,{"Decrease quantity":"Adedi azalt","Increase quantity":"Adedi artır"});
   Object.assign(tr,{"Shop market":"Marketten alışveriş yap","Shop now":"Şimdi alışveriş yap","New":"Yeni"});
+  Object.assign(tr,{"Currently unavailable":"Şu anda sipariş verilemiyor","Hours not listed":"Çalışma saatleri belirtilmedi"});
   const attrs=["placeholder","title","aria-label"];
   const textHistory=new WeakMap();
   const attrHistory=new WeakMap();

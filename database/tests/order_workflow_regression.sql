@@ -1,0 +1,52 @@
+-- Exercises production RPCs with existing role mappings; every write rolls back.
+begin;
+create temporary table workflow_results(check_name text,passed boolean,detail text);
+do $$
+declare a uuid; vu uuid; ru uuid; rid uuid; prod uuid; oid uuid:=gen_random_uuid(); other uuid; payload jsonb; replay json; pin text; price numeric; fee numeric; msg text;
+begin
+ select user_id into a from public.admin_users limit 1;
+ select u.user_id,p.id,p.price into vu,prod,price from public.vendor_users u join public.vendors v on v.id=u.vendor_id join public.products p on p.vendor_id=v.id where v.active and v.accepting_orders and p.available and p.price>0 order by p.price desc limit 1;
+ select u.user_id,u.rider_id into ru,rid from public.rider_users u join public.riders r on r.id=u.rider_id where r.active limit 1;
+ if a is null or vu is null or ru is null then raise exception 'Existing linked test roles required';end if;
+ payload:=jsonb_build_array(jsonb_build_object('product_id',prod,'quantity',2,'customizations','{}'::jsonb));
+ perform set_config('request.jwt.claim.sub','',true); perform set_config('request.jwt.claims','{"role":"anon"}',true);
+ perform public.create_customer_order_retry(oid,'MEGJET ROLLBACK TEST','0000000000','Rollback test address, Gazimagusa','Cash on Delivery',null,payload);
+ select delivery_fee into fee from public.orders where id=oid;
+ insert into workflow_results select 'checkout totals and quantity',subtotal=price*2 and total=subtotal+delivery_fee,'Server prices and delivery fee' from public.orders where id=oid;
+ replay:=public.create_customer_order_retry(oid,'MEGJET ROLLBACK TEST','0000000000','Rollback test address, Gazimagusa','Cash on Delivery',null,payload);
+ insert into workflow_results values('lost-response retry',coalesce((replay->>'replayed')::boolean,false),'Same checkout reuses its order');
+ begin
+ perform public.create_customer_order_retry(oid,'MEGJET ROLLBACK TEST','0000000000','Rollback test address, Gazimagusa','Cash on Delivery',null,jsonb_build_array(jsonb_build_object('product_id',prod,'quantity',3)));
+ insert into workflow_results values('changed-cart rejection',false,'Accepted changed cart');
+ exception when others then insert into workflow_results values('changed-cart rejection',true,sqlerrm);end;
+ begin perform public.admin_set_order_status(oid,'confirmed');insert into workflow_results values('unauthorized admin rejection',false,'Accepted');exception when others then insert into workflow_results values('unauthorized admin rejection',true,sqlerrm);end;
+ perform set_config('request.jwt.claim.sub',a::text,true);
+ begin perform public.admin_set_order_status(oid,'delivered');insert into workflow_results values('status-skip rejection',false,'Accepted');exception when others then insert into workflow_results values('status-skip rejection',true,sqlerrm);end;
+ perform public.admin_set_order_status(oid,'confirmed');
+ perform set_config('request.jwt.claim.sub',vu::text,true);
+ perform public.set_vendor_order_status(oid,'preparing'); perform public.set_vendor_order_status(oid,'ready_for_pickup');
+ insert into workflow_results select 'vendor preparation and ready',status='ready_for_pickup','Vendor RPC stages' from public.orders where id=oid;
+ perform set_config('request.jwt.claim.sub',a::text,true);
+ perform public.admin_assign_rider_to_order(oid,rid);
+ insert into workflow_results select 'admin assigns rider',exists(select 1 from public.order_riders where order_id=oid and rider_id=rid),'Assignment and delivery stage' from public.orders where id=oid;
+ perform set_config('request.jwt.claim.sub',ru::text,true);
+ begin perform public.rider_accept_delivery(oid);insert into workflow_results values('rider accepts assigned delivery',true,'Accepted');exception when others then insert into workflow_results values('rider accepts assigned delivery',false,sqlerrm);end;
+ select delivery_pin into pin from public.delivery_security where order_id=oid::text;
+ begin perform public.rider_complete_delivery(oid::text,case when pin='0000' then '1111' else '0000' end,null,true);insert into workflow_results values('wrong-PIN rejection',false,'Accepted');exception when others then insert into workflow_results values('wrong-PIN rejection',true,sqlerrm);end;
+ perform public.rider_complete_delivery(oid::text,pin,null,true);
+ insert into workflow_results select 'PIN delivery and payment',status='delivered' and payment_status='paid','Assigned rider completes delivery' from public.orders where id=oid;
+ insert into workflow_results select 'rider earning recorded',amount=fee and status='earned','Delivery fee credited once' from public.rider_earnings where order_id=oid::text;
+ begin perform public.rider_complete_delivery(oid::text,pin,null,true);insert into workflow_results values('duplicate-delivery rejection',false,'Accepted');exception when others then insert into workflow_results values('duplicate-delivery rejection',true,sqlerrm);end;
+ perform set_config('request.jwt.claim.sub','',true);
+ other:=gen_random_uuid();perform public.create_customer_order_retry(other,'MEGJET ROLLBACK TEST','0000000000','Rollback test address, Gazimagusa','Cash on Delivery',null,payload);
+ begin perform public.cancel_customer_order(other,'9999999999');insert into workflow_results values('wrong-phone cancellation rejection',false,'Accepted');exception when others then insert into workflow_results values('wrong-phone cancellation rejection',true,sqlerrm);end;
+ begin perform public.cancel_customer_order(other,'0000000000');insert into workflow_results select 'guest cancellation',status='cancelled','Pending order cancelled' from public.orders where id=other;exception when others then insert into workflow_results values('guest cancellation',false,sqlerrm);end;
+other:=gen_random_uuid();perform public.create_customer_order_retry(other,'MEGJET ROLLBACK TEST','0000000000','Rollback test address, Gazimagusa','Cash on Delivery',null,payload);
+ perform set_config('request.jwt.claim.sub',a::text,true);perform public.admin_set_order_status(other,'confirmed');
+ perform set_config('request.jwt.claim.sub','',true);
+ begin perform public.cancel_customer_order(other,'0000000000');insert into workflow_results values('late customer cancellation rejection',false,'Accepted');exception when others then insert into workflow_results values('late customer cancellation rejection',true,sqlerrm);end;
+ perform set_config('request.jwt.claim.sub',a::text,true);perform public.admin_set_order_status(other,'cancelled');
+ insert into workflow_results select 'admin rejection cancellation',status='cancelled','Admin rejects a confirmed order' from public.orders where id=other;
+end $$;
+select * from workflow_results;
+rollback;
