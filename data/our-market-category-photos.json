@@ -3,109 +3,109 @@
   "items": [
     {
       "name": "Water & Ice",
-      "image_url": "./assets/our-market/products/8ad8bf98-4eeb-5d69-a328-26fa46d36635.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-water-ice.jpg",
       "product_id": "8ad8bf98-4eeb-5d69-a328-26fa46d36635",
       "representative_product": "Aqua Fresh Water (1.5 lt.)"
     },
     {
       "name": "Drinks",
-      "image_url": "./assets/our-market/products/5c124372-d255-502f-8f02-8318f19a1484.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-drinks.jpg",
       "product_id": "5c124372-d255-502f-8f02-8318f19a1484",
       "representative_product": "Bixi Blue Energy Drink (1 lt)"
     },
     {
       "name": "Snacks",
-      "image_url": "./assets/our-market/products/dc4a427c-33aa-5336-8625-2c45db461a45.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-snacks.jpg",
       "product_id": "dc4a427c-33aa-5336-8625-2c45db461a45",
       "representative_product": "Kettle Thai Sweet Chilli Chips (130 gr.)"
     },
     {
       "name": "Food",
-      "image_url": "./assets/our-market/products/4121a239-ca54-522a-bfa0-0d98b215bbd8.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-food.jpg",
       "product_id": "4121a239-ca54-522a-bfa0-0d98b215bbd8",
       "representative_product": "Tomato (500 gr.)"
     },
     {
       "name": "Meat & Chicken",
-      "image_url": "./assets/our-market/products/9759cfef-7577-5a62-95f6-4d34d295861f.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-meat-chicken.jpg",
       "product_id": "9759cfef-7577-5a62-95f6-4d34d295861f",
       "representative_product": "Beef Ramsteak (500 gr.)"
     },
     {
       "name": "Basic Foods",
-      "image_url": "./assets/our-market/products/352977f3-3950-5f27-86cc-9c381c54380c.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-basic-foods.jpg",
       "product_id": "352977f3-3950-5f27-86cc-9c381c54380c",
       "representative_product": "Akdeniz Crystal Sugar (1500 gr.)"
     },
     {
       "name": "Dairy & Breakfast",
-      "image_url": "./assets/our-market/products/600a41bc-64e9-53de-8520-91c719bdac35.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-dairy-breakfast.jpg",
       "product_id": "600a41bc-64e9-53de-8520-91c719bdac35",
       "representative_product": "Kibsüt Piece of Halloumi (1000 gr.)"
     },
     {
       "name": "Bakery",
-      "image_url": "./assets/our-market/products/a00277d6-2dbf-523e-8a51-d0a19cb389dd.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-bakery.jpg",
       "product_id": "a00277d6-2dbf-523e-8a51-d0a19cb389dd",
       "representative_product": "Sandwich (235 gr.)"
     },
     {
       "name": "Fit & Form",
-      "image_url": "./assets/our-market/products/0b7e6506-23da-5eac-a659-7d8f6d37de5d.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-fit-form.jpg",
       "product_id": "0b7e6506-23da-5eac-a659-7d8f6d37de5d",
       "representative_product": "Moms Granola Blueberry (360 gr)"
     },
     {
       "name": "Home Care",
-      "image_url": "./assets/our-market/products/b9db4df4-5426-593f-b71f-d0f21305d9f2.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-home-care.jpg",
       "product_id": "b9db4df4-5426-593f-b71f-d0f21305d9f2",
       "representative_product": "Omomatic Active Fresh Washing Powder (1.5 kg.)"
     },
     {
       "name": "Home Life",
-      "image_url": "./assets/our-market/products/3602f858-3348-5425-8d89-51129b58acc3.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-home-life.jpg",
       "product_id": "3602f858-3348-5425-8d89-51129b58acc3",
       "representative_product": "Rose Luxury Candle (1 pcs.)"
     },
     {
       "name": "Personal Care",
-      "image_url": "./assets/our-market/products/6e1eed71-48cd-5c5e-af27-f79691c326f1.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-personal-care.jpg",
       "product_id": "6e1eed71-48cd-5c5e-af27-f79691c326f1",
       "representative_product": "Dove Coconut Oil Nourishing Therapy Shampoo (375 ml)"
     },
     {
       "name": "Technology",
-      "image_url": "./assets/our-market/products/144d7e6a-3d87-5f9a-bef9-f742d44d5f27.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-technology.jpg",
       "product_id": "144d7e6a-3d87-5f9a-bef9-f742d44d5f27",
       "representative_product": "45W Samsung Type-C Charge Set (1 pcs.)"
     },
     {
       "name": "Sexual Health",
-      "image_url": "./assets/our-market/products/3a2ca038-8124-5e15-a948-ed37ec39a471.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-sexual-health.jpg",
       "product_id": "3a2ca038-8124-5e15-a948-ed37ec39a471",
       "representative_product": "Durex Intense Stimulant Gel (10 ml.)"
     },
     {
       "name": "Baby",
-      "image_url": "./assets/our-market/products/0b894d89-f926-5477-81f1-ef477cc86b4e.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-baby.jpg",
       "product_id": "0b894d89-f926-5477-81f1-ef477cc86b4e",
       "representative_product": "Baby Turco Diaper 5 Junior (78 pcs.)"
     },
     {
       "name": "Clothing",
-      "image_url": "./assets/our-market/products/25fde88c-97f2-5254-8b51-4e2d40b5981a.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-clothing.jpg",
       "product_id": "25fde88c-97f2-5254-8b51-4e2d40b5981a",
       "representative_product": "Shining Socks (1 pair)"
     },
     {
       "name": "Stationery",
-      "image_url": "./assets/our-market/products/5659b22a-09d5-5d2c-b1ce-47dd4acfda86.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-stationery.jpg",
       "product_id": "5659b22a-09d5-5d2c-b1ce-47dd4acfda86",
       "representative_product": "Color Maxi School Notebook A4 (96 sheets)"
     },
     {
       "name": "Pet",
-      "image_url": "./assets/our-market/products/39ba00b7-b6f2-57ef-aeb8-8c2682862f10.jpg",
+      "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/our-market-category-pet.jpg",
       "product_id": "39ba00b7-b6f2-57ef-aeb8-8c2682862f10",
       "representative_product": "Simba Dog Food Chicken (1230 gr.)"
     }
