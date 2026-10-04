@@ -11603,6 +11603,193 @@
       "prompt": "Use case: product-mockup. Grocery catalog illustration: shelled walnut halves, displayed alone in a small shallow plain white ceramic bowl on a pure white background. Photorealistic studio lighting, square image, centered bowl and ingredient fill 75 percent of image, subtle shadow, realistic texture. No text, brand, label, packaging, collage, additional foods or decorative props. Ingredient-only AI illustration; no invented manufacturer packaging.",
       "note": "Ingredient illustration; does not depict branded packaging.",
       "status": "ready"
+    },
+    {
+      "id": "eaf8c132-4086-539b-8a1f-653e63fe3936",
+      "name": "Beef Cubed (500 gr.)",
+      "match": "Dana Kuşbaşı (Kemiksiz) 350 g",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/06/2000509.jpg",
+      "source": "https://www.sarpermarket.com/urunler/dana-kusbasi-kemiksiz-350-g/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/eaf8c132-4086-539b-8a1f-653e63fe3936.jpg",
+      "image_url": "./assets/our-market/products/eaf8c132-4086-539b-8a1f-653e63fe3936.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "3cd5c1aa-722e-5d7a-843e-5f830e8fbdd7",
+      "name": "Lamb Skewer (500 gr.)",
+      "match": "KUZU ŞİŞLİK 500 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/11/kuzu-kuşbaşı-kg.jpg",
+      "source": "https://www.sarpermarket.com/urunler/kuzu-sislik-500-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/3cd5c1aa-722e-5d7a-843e-5f830e8fbdd7.jpg",
+      "image_url": "./assets/our-market/products/3cd5c1aa-722e-5d7a-843e-5f830e8fbdd7.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "7bea5acc-1b07-5f24-8aa3-3d719aa6d111",
+      "name": "Chicken Drumsticks (900-1000 gr.)",
+      "match": "MAR Taze TAVUK BAGET BUT 800-900 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/10/keskinoglu-buyuk-tabakli-pilic-baget-kg-250b59.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-tavuk-baget-but-800-900-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/7bea5acc-1b07-5f24-8aa3-3d719aa6d111.jpg",
+      "image_url": "./assets/our-market/products/7bea5acc-1b07-5f24-8aa3-3d719aa6d111.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "9616d9a0-7d72-5d40-a78d-cef9049cd413",
+      "name": "Chicken Drumsticks (1,000-1,100 gr.)",
+      "match": "MAR Taze TAVUK BAGET BUT 800-900 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/10/keskinoglu-buyuk-tabakli-pilic-baget-kg-250b59.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-tavuk-baget-but-800-900-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/9616d9a0-7d72-5d40-a78d-cef9049cd413.jpg",
+      "image_url": "./assets/our-market/products/9616d9a0-7d72-5d40-a78d-cef9049cd413.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "b448c7de-2d7d-5750-9d3f-66c645da953e",
+      "name": "Chicken Drumsticks (1,100-1,200 gr.)",
+      "match": "MAR Taze TAVUK BAGET BUT 800-900 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/10/keskinoglu-buyuk-tabakli-pilic-baget-kg-250b59.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-tavuk-baget-but-800-900-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/b448c7de-2d7d-5750-9d3f-66c645da953e.jpg",
+      "image_url": "./assets/our-market/products/b448c7de-2d7d-5750-9d3f-66c645da953e.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "e80d45cb-f0ec-516f-a0c5-e01b0334fe36",
+      "name": "Whole Chicken (2,000-2,500 gr.)",
+      "match": "Mar Taze Bütün Tavuk 2000 &#8211; 2100 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2021/02/99-organik-butun-tavuk-organik-butun-tavuk-taze-butun-tavuk.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-taze-butun-tavuk-2000-2100-gr-2/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/e80d45cb-f0ec-516f-a0c5-e01b0334fe36.jpg",
+      "image_url": "./assets/our-market/products/e80d45cb-f0ec-516f-a0c5-e01b0334fe36.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "bde1974e-5011-5cb9-9799-62240138014f",
+      "name": "Whole Chicken (2500 - 2750 gr.)",
+      "match": "Mar Taze Bütün Tavuk 2000 &#8211; 2100 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2021/02/99-organik-butun-tavuk-organik-butun-tavuk-taze-butun-tavuk.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-taze-butun-tavuk-2000-2100-gr-2/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/bde1974e-5011-5cb9-9799-62240138014f.jpg",
+      "image_url": "./assets/our-market/products/bde1974e-5011-5cb9-9799-62240138014f.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "e4c23d1b-871e-5e0d-a7f5-93db6ef75cea",
+      "name": "Chicken Legs (1,000-1,100 gr.)",
+      "match": "MAR TAZE Tavuk BUT 800-900 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/10/pilic-but.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-taze-but-800-900-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/e4c23d1b-871e-5e0d-a7f5-93db6ef75cea.jpg",
+      "image_url": "./assets/our-market/products/e4c23d1b-871e-5e0d-a7f5-93db6ef75cea.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "6d7176a6-3044-58dc-91e7-58c29ce5bc88",
+      "name": "Chicken Legs (1100 - 1200 gr.)",
+      "match": "MAR TAZE Tavuk BUT 800-900 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/10/pilic-but.jpg",
+      "source": "https://www.sarpermarket.com/urunler/mar-taze-but-800-900-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/6d7176a6-3044-58dc-91e7-58c29ce5bc88.jpg",
+      "image_url": "./assets/our-market/products/6d7176a6-3044-58dc-91e7-58c29ce5bc88.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "befe50e1-2d28-53b9-9d1e-bd460052ec48",
+      "name": "Chicken Liver (700-800 gr.)",
+      "match": "KIRNI DONMUŞ TAVUK CİĞERİ 500-700 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/09/tavuk-ciger-kg-65e6.jpg",
+      "source": "https://www.sarpermarket.com/urunler/kirni-donmus-tavuk-cigeri-500-700-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/befe50e1-2d28-53b9-9d1e-bd460052ec48.jpg",
+      "image_url": "./assets/our-market/products/befe50e1-2d28-53b9-9d1e-bd460052ec48.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "ff72294c-cc0c-5b19-a72f-2e9d9426f7a8",
+      "name": "Chicken Liver (900-1,000 gr.)",
+      "match": "KIRNI DONMUŞ TAVUK CİĞERİ 500-700 GR",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/09/tavuk-ciger-kg-65e6.jpg",
+      "source": "https://www.sarpermarket.com/urunler/kirni-donmus-tavuk-cigeri-500-700-gr/",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/ff72294c-cc0c-5b19-a72f-2e9d9426f7a8.jpg",
+      "image_url": "./assets/our-market/products/ff72294c-cc0c-5b19-a72f-2e9d9426f7a8.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "f77d1b69-8614-5e21-85b3-447b20bce590",
+      "name": "Fatih Colored Pencils, 12 Colors (12 pcs.)",
+      "match": "Fatih 33112 long color pencil – Set of 12 colors",
+      "url": "https://cdn.shopify.com/s/files/1/0694/0737/5585/files/IMG-1667.png?v=1751608282",
+      "source": "https://elitestationeryhouse.com/products/fatih-33112-long-color-pencil-set-of-12-colors",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/f77d1b69-8614-5e21-85b3-447b20bce590.jpg",
+      "image_url": "./assets/our-market/products/f77d1b69-8614-5e21-85b3-447b20bce590.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "87128fb3-2fe3-5610-b873-bae9b483b70a",
+      "name": "Fatih Coloured Pencils (12-pack)",
+      "match": "Fatih 33112 long color pencil – Set of 12 colors",
+      "url": "https://cdn.shopify.com/s/files/1/0694/0737/5585/files/IMG-1667.png?v=1751608282",
+      "source": "https://elitestationeryhouse.com/products/fatih-33112-long-color-pencil-set-of-12-colors",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/87128fb3-2fe3-5610-b873-bae9b483b70a.jpg",
+      "image_url": "./assets/our-market/products/87128fb3-2fe3-5610-b873-bae9b483b70a.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "4280fb32-44c7-5b11-bf18-448685b12950",
+      "name": "Fatih Pastel Crayons, 12 Colors (12 pcs.)",
+      "match": "Fatih 34012 oil pastels – Set of 12 colors",
+      "url": "https://cdn.shopify.com/s/files/1/0694/0737/5585/files/12-_-3.png?v=1759484363",
+      "source": "https://elitestationeryhouse.com/products/fatih-34012-oil-pastels-set-of-12-colors",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/4280fb32-44c7-5b11-bf18-448685b12950.jpg",
+      "image_url": "./assets/our-market/products/4280fb32-44c7-5b11-bf18-448685b12950.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "d4292f5d-6a6f-59f0-95a5-81355159bc5a",
+      "name": "Pensan Office Pen Blue (1 pcs.)",
+      "match": "Pensan Office Pen Blue (1 pcs.)",
+      "url": "https://www.yagmurkirtasiye.com.tr/images_buyuk/f46/pensan-1010-buro-tukenmez-kalem-_4146_2.jpg",
+      "source": "https://www.yagmurkirtasiye.com.tr/pensan-1010-buro-tukenmez-kalem-mavi-1-mm_4146.html",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/d4292f5d-6a6f-59f0-95a5-81355159bc5a.jpg",
+      "image_url": "./assets/our-market/products/d4292f5d-6a6f-59f0-95a5-81355159bc5a.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "4b80205a-2e2b-559b-991f-a3a0eb077dcf",
+      "name": "Südor Finger Paint, 3 Colors (3 pcs.)",
+      "match": "Südor Finger Paint, 3 Colors (3 pcs.)",
+      "url": "https://www.nezih.com.tr/sudor-parmak-boyasi-takim-sise-30ml-3lu-821-132560-10-B.jpg",
+      "source": "https://www.nezih.com.tr/sudor-parmak-boyasi-takim-sise-30ml-3lu-821",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/4b80205a-2e2b-559b-991f-a3a0eb077dcf.jpg",
+      "image_url": "./assets/our-market/products/4b80205a-2e2b-559b-991f-a3a0eb077dcf.jpg",
+      "status": "ready"
+    },
+    {
+      "id": "a6f05d2e-9b60-5fd5-b1f1-610870e42b76",
+      "name": "Faber-Castell Exam Eraser (1 pcs.)",
+      "match": "Faber-Castell Exam Eraser (1 pcs.)",
+      "url": "https://cdn.shopify.com/s/files/1/1795/0445/products/FABER_CASTELL_EXAMGRADE_DUST_FREE_ERASER.png?v=1588945591",
+      "source": "https://1stationhub.com.my/products/faber-castell-dust-free-exam-grade-eraser-187134",
+      "kind": "real-product-photo",
+      "path": "assets/our-market/products/a6f05d2e-9b60-5fd5-b1f1-610870e42b76.jpg",
+      "image_url": "./assets/our-market/products/a6f05d2e-9b60-5fd5-b1f1-610870e42b76.jpg",
+      "status": "ready"
     }
   ]
 }

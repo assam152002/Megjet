@@ -1,7 +1,7 @@
 {
   "total": 1928,
-  "published_and_linked": 972,
-  "remaining": 956,
+  "published_and_linked": 989,
+  "remaining": 939,
   "vendor_id": "06d76aea-1c94-5950-b621-22130e57ef75",
   "remaining_query": "select id,name,description from public.products where vendor_id='06d76aea-1c94-5950-b621-22130e57ef75' and coalesce(image_url,'')='' order by menu_sort_order",
   "total_products": 1928
