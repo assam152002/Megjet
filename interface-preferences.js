@@ -205,6 +205,7 @@
   Object.assign(tr,{"Food & groceries, delivered.": "Yemek ve market alışverişi kapınızda.", "Your local favourites, all in one place.": "Yerel favorileriniz tek bir yerde.", "Explore local favourites": "Yerel favorileri keşfedin", "Restaurants & shops": "Restoranlar ve mağazalar", "Shops": "Mağazalar", "Favourites": "Favoriler", "Sort": "Sırala", "Name": "İsim", "Top rated": "En yüksek puan", "Preparation time": "Hazırlık süresi", "Preparation": "Hazırlık", "Rating": "Puan", "Any rating": "Tüm puanlar", "Any time": "Tüm süreler", "Delivery fee": "Teslimat ücreti", "Any fee": "Tüm ücretler", "Offers": "Fırsatlar", "Reset filters": "Filtreleri sıfırla", "Clear filters": "Filtreleri temizle", "No matches": "Sonuç bulunamadı", "Try another search or clear your filters.": "Başka bir arama yapın veya filtreleri temizleyin.", "Delivery address": "Teslimat adresi", "Street, building and apartment": "Sokak, bina ve daire", "Enter your delivery address": "Teslimat adresinizi girin", "Use this address": "Bu adresi kullan", "Manage saved addresses": "Kayıtlı adresleri yönet", "Enter an address, or sign in to use saved addresses.": "Bir adres girin veya kayıtlı adresleri kullanmak için giriş yapın.", "Current offers": "Güncel fırsatlar", "No active offers right now. Check back soon.": "Şu anda aktif fırsat yok. Daha sonra tekrar bakın.", "Order again": "Tekrar sipariş ver", "View orders": "Siparişleri gör", "View product": "Ürünü gör", "View menu": "Menüyü gör", "View offer →": "Fırsatı gör →", "All": "Tümü", "Home": "Ana sayfa", "Account": "Hesap", "Cart": "Sepet", "Search restaurants, food & groceries": "Restoran, yemek ve market ürünü ara", "Shop market →": "Marketten alışveriş yap →", "Shop now →": "Şimdi alışveriş yap →", "Groceries & daily essentials": "Market ve günlük ihtiyaçlar", "Beer, wine, spirits & tobacco": "Bira, şarap, alkollü içecekler ve tütün"});
 
   Object.assign(tr,{"Decrease quantity":"Adedi azalt","Increase quantity":"Adedi artır"});
+  Object.assign(tr,{"Shop market":"Marketten alışveriş yap","Shop now":"Şimdi alışveriş yap","New":"Yeni"});
   const attrs=["placeholder","title","aria-label"];
   const textHistory=new WeakMap();
   const attrHistory=new WeakMap();
@@ -241,6 +242,11 @@
     m=source.match(/^(Preparation time unavailable) · (.+) delivery$/);if(m)return 'Hazırlık süresi belirtilmedi · '+m[2]+' teslimat';
     m=source.match(/^Up to (\d+) min$/);if(m)return m[1]+' dk veya daha az';
     m=source.match(/^Up to ₺(\d+)$/);if(m)return '₺'+m[1]+' veya daha az';
+    m=source.match(/^Open (.+)$/);if(m)return m[1]+' menüsünü aç';
+    m=source.match(/^Shop (Our Market|Alcohol And Cigerattes)$/);if(m)return m[1]+' mağazasından alışveriş yap';
+    m=source.match(/^Save (.+) favourite$/);if(m)return m[1]+' favorilere ekle';
+    m=source.match(/^Remove (.+) favourite$/);if(m)return m[1]+' favorilerden kaldır';
+    m=source.match(/^(.+) logo$/);if(m)return m[1]+' logosu';
     return source;
   }
   function translateWithSpacing(source){
