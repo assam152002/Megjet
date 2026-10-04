@@ -2,6 +2,7 @@
 'use strict';
 const $=id=>document.getElementById(id);
 const profile=$('vendorProfile');
+$('mjReturnToMenu')?.addEventListener('click',()=>{$('checkout').classList.add('hidden');const target=profile.classList.contains('hidden')?$('discoveryTools'):profile;target.scrollIntoView({behavior:'smooth',block:'start'});});
 function profileState(){document.body.classList.toggle('mj-browsing-menu',!profile.classList.contains('hidden'));}
 new MutationObserver(profileState).observe(profile,{attributes:true,attributeFilter:['class']});profileState();
 document.addEventListener('click',e=>{const b=e.target.closest('[data-jump-category]');if(!b)return;const category=profile.querySelectorAll('details.menu-category')[Number(b.dataset.jumpCategory)];if(category){category.open=true;category.scrollIntoView({behavior:'smooth',block:'start'});profile.querySelectorAll('[data-jump-category]').forEach(x=>x.setAttribute('aria-current',String(x===b)));}});

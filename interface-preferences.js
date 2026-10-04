@@ -200,6 +200,8 @@
     "Ready for pickup":"Teslim Almaya Hazır","Out for delivery":"Dağıtımda","Delivered ✓":"Teslim Edildi ✓"
   };
 
+  Object.assign(tr,{"Total incl. delivery": "Teslimat dahil toplam", "Review quantities below. Delivery is included in the total.": "Aşağıdan ürün adetlerini kontrol edin. Teslimat toplam tutara dahildir.", "← Back to menu": "← Menüye dön", "Accepting orders": "Sipariş alıyor", "Orders paused": "Siparişler duraklatıldı", "Coming soon": "Yakında", "Delivery fee loading": "Teslimat ücreti yükleniyor", "Coming soon · Preview only": "Yakında · Yalnızca ön izleme", "Menu categories": "Menü kategorileri", "Cuisine categories": "Mutfak kategorileri", "Browse": "Göz at", "Close address selector": "Adres seçimini kapat", "Subtotal": "Ara toplam", "Your order": "Siparişiniz", "CHECKOUT": "SİPARİŞ", "Complete your order": "Siparişinizi tamamlayın", "Review your items and delivery details.": "Ürünlerinizi ve teslimat bilgilerinizi kontrol edin.", "Check your address and phone number before placing your order.": "Sipariş vermeden önce adresinizi ve telefon numaranızı kontrol edin.", "Remove": "Kaldır", "Order summary": "Sipariş özeti", "Full name": "Ad soyad", "Street, building, floor and apartment in Gazimagusa": "Gazimağusa’daki sokak, bina, kat ve daire", "Pizza": "Pizza", "Burger": "Burger", "Kebab": "Kebap", "Chicken": "Tavuk", "Dessert": "Tatlı", "Drinks": "İçecekler", "Choose your address ›": "Adresinizi seçin ›", "Type a name to find restaurants and products.": "Restoran ve ürün bulmak için bir isim yazın.", "Your cart is empty": "Sepetiniz boş", "Added to cart ✓": "Sepete eklendi ✓", "Preparation time unavailable": "Hazırlık süresi belirtilmedi"});
+
   const attrs=["placeholder","title","aria-label"];
   const textHistory=new WeakMap();
   const attrHistory=new WeakMap();
@@ -231,6 +233,11 @@
     if(m)return "Sipariş numaranız #"+m[1];
     m=source.match(/^([+-]?\d+) matching items?$/);
     if(m)return m[1]+" eşleşen ürün";
+    m=source.match(/^(\d+) (places|shops)(.*)$/);if(m)return m[1]+' '+(m[2]==='shops'?'mağaza':'işletme')+m[3].replace(' · Saved on this device',' · Bu cihazda kayıtlı').replace(' matching',' eşleşen');
+    m=source.match(/^(\d+) min preparation · (.+) delivery$/);if(m)return m[1]+' dk hazırlık · '+m[2]+' teslimat';
+    m=source.match(/^(Preparation time unavailable) · (.+) delivery$/);if(m)return 'Hazırlık süresi belirtilmedi · '+m[2]+' teslimat';
+    m=source.match(/^Up to (\d+) min$/);if(m)return m[1]+' dk veya daha az';
+    m=source.match(/^Up to ₺(\d+)$/);if(m)return '₺'+m[1]+' veya daha az';
     return source;
   }
   function translateWithSpacing(source){
