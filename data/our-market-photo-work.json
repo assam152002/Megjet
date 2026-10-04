@@ -1,6 +1,6 @@
 {
   "vendor_id": "06d76aea-1c94-5950-b621-22130e57ef75",
-  "status": "preparing",
+  "status": "complete",
   "remaining_at_start": 800,
   "source": "https://w.feedmecyprus.com/CategorizedBranchProducts?branchId=565",
   "exact_matches": [
@@ -4576,5 +4576,9 @@
       "original_id": 154939,
       "url": "https://www.mobilonsoft.com/fpsapi/data_image/product/a77c0ed4-a200-4d1b-8526-2f55f15300ac.jpg"
     }
-  ]
+  ],
+  "added": 800,
+  "real_photos": 766,
+  "illustrations": 34,
+  "remaining": 0
 }
