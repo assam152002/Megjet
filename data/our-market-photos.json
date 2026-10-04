@@ -10617,6 +10617,176 @@
       "image_url": "./assets/our-market/products/d6c19f54-043e-57ce-bf25-6ae80dcd6eb2.jpg",
       "kind": "real-product-photo",
       "status": "ready"
+    },
+    {
+      "id": "af0d552d-d370-5eb1-b750-bd80fdb321af",
+      "name": "Ateş White Pepper (40 gr.)",
+      "path": "assets/our-market/products/af0d552d-d370-5eb1-b750-bd80fdb321af.jpg",
+      "image_url": "./assets/our-market/products/af0d552d-d370-5eb1-b750-bd80fdb321af.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely ground white pepper powder, pale beige in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "6bfdbb34-1f72-5f4e-88ba-3f5be2049296",
+      "name": "Şah White Pepper (30 gr.)",
+      "path": "assets/our-market/products/6bfdbb34-1f72-5f4e-88ba-3f5be2049296.jpg",
+      "image_url": "./assets/our-market/products/6bfdbb34-1f72-5f4e-88ba-3f5be2049296.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely ground white pepper powder, pale beige in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "bb376484-9f36-5dce-9225-5ff145bed04f",
+      "name": "Ateş Coconut Powder (24 gr.)",
+      "path": "assets/our-market/products/bb376484-9f36-5dce-9225-5ff145bed04f.jpg",
+      "image_url": "./assets/our-market/products/bb376484-9f36-5dce-9225-5ff145bed04f.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely shredded dried coconut, bright white in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "2cf17f63-6fe5-523e-b1a9-ba359dd29c81",
+      "name": "Şah Coconut Grated (250 gr.)",
+      "path": "assets/our-market/products/2cf17f63-6fe5-523e-b1a9-ba359dd29c81.jpg",
+      "image_url": "./assets/our-market/products/2cf17f63-6fe5-523e-b1a9-ba359dd29c81.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely shredded dried coconut, bright white in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "3146961a-5aa1-5c6a-8351-bb19f2437203",
+      "name": "Ateş Chili Pepper Very Spicy (40 gr.)",
+      "path": "assets/our-market/products/3146961a-5aa1-5c6a-8351-bb19f2437203.jpg",
+      "image_url": "./assets/our-market/products/3146961a-5aa1-5c6a-8351-bb19f2437203.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of dried hot red chili flakes with some pale seeds in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "8c1ab783-65b4-51ba-a652-5ca0c8f669de",
+      "name": "Ateş Hot Pepper (40 gr.)",
+      "path": "assets/our-market/products/8c1ab783-65b4-51ba-a652-5ca0c8f669de.jpg",
+      "image_url": "./assets/our-market/products/8c1ab783-65b4-51ba-a652-5ca0c8f669de.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of dried hot red chili flakes with some pale seeds in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "5cb3b3f7-da00-5746-96de-378a35025ee9",
+      "name": "Ateş Sweet Powdered Pepper (40 gr.)",
+      "path": "assets/our-market/products/5cb3b3f7-da00-5746-96de-378a35025ee9.jpg",
+      "image_url": "./assets/our-market/products/5cb3b3f7-da00-5746-96de-378a35025ee9.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely ground sweet paprika powder, rich red in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "4c16ac5f-c22e-5091-aaad-a7800c0d7171",
+      "name": "Ateş Cumin (40 gr.)",
+      "path": "assets/our-market/products/4c16ac5f-c22e-5091-aaad-a7800c0d7171.jpg",
+      "image_url": "./assets/our-market/products/4c16ac5f-c22e-5091-aaad-a7800c0d7171.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely ground cumin powder, warm brown in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "6590ad1d-ad06-5f8f-9ed1-067d621e03b1",
+      "name": "Ateş Turmeric (40 gr.)",
+      "path": "assets/our-market/products/6590ad1d-ad06-5f8f-9ed1-067d621e03b1.jpg",
+      "image_url": "./assets/our-market/products/6590ad1d-ad06-5f8f-9ed1-067d621e03b1.jpg",
+      "kind": "ai-generated-product-illustration",
+      "source": "OpenAI ImageGen",
+      "prompt": "Create a single photorealistic grocery catalog image of finely ground turmeric powder, rich golden yellow in one small plain white shallow ceramic bowl. Pure white background, square composition, centered product fills 75 percent of image, gentle realistic shadow, clear fine texture, studio photography. Show only the ingredient and bowl. No packaging, labels, brands, text, collage, decorative props or additional foods. This is an illustrative AI product image, not a reconstruction of a manufacturer's packaging.",
+      "status": "ready",
+      "note": "Ingredient illustration; does not depict branded packaging."
+    },
+    {
+      "id": "f16e9ae4-725f-524f-8866-818cde61d7df",
+      "name": "Takis Volcano (100 gr.)",
+      "match": "TAKIS BLUE VOLCANO 100GR",
+      "url": "https://www.unimarmarket.com/Content/images/Sayfalar/Resimler/b0a0c285-4a2d-4967-a9b1-43655a24a329.jpg",
+      "source": "https://www.unimarmarket.com/Urun/takis_blue_volcano_100gr",
+      "score": 0.829,
+      "path": "assets/our-market/products/f16e9ae4-725f-524f-8866-818cde61d7df.jpg",
+      "image_url": "./assets/our-market/products/f16e9ae4-725f-524f-8866-818cde61d7df.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "f4fe284c-58b1-53ba-87b8-b8b5f7121415",
+      "name": "Ülker Teremyağ Butter (250 gr.)",
+      "match": "ULKER TEREMYAG 250GR",
+      "url": "https://www.kibrissanalmarket.com/wp-content/uploads/2021/08/8691375673153-1.jpg",
+      "source": "https://www.kibrissanalmarket.com/urunler/ulker-teremyag-250gr/",
+      "score": 0.818,
+      "path": "assets/our-market/products/f4fe284c-58b1-53ba-87b8-b8b5f7121415.jpg",
+      "image_url": "./assets/our-market/products/f4fe284c-58b1-53ba-87b8-b8b5f7121415.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "c2a7ce0b-9f88-528b-8bdd-297e0b9c96be",
+      "name": "Gullon Zero Maria (200 gr)",
+      "match": "GULLON MARIA BISKUVI 200GR",
+      "url": "https://www.unimarmarket.com/Content/images/Sayfalar/Resimler/73078dda-3ffb-4a79-ae7f-feead8d43585.jpg",
+      "source": "https://www.unimarmarket.com/Urun/gullon_maria_biskuvi_200gr",
+      "score": 0.69,
+      "path": "assets/our-market/products/c2a7ce0b-9f88-528b-8bdd-297e0b9c96be.jpg",
+      "image_url": "./assets/our-market/products/c2a7ce0b-9f88-528b-8bdd-297e0b9c96be.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "058a0062-6cbc-5943-adf7-96f7261cddde",
+      "name": "Ülker Laviva Slection (45 gr.)",
+      "match": "ULKER LAVIVA GOFRET WAFER MILK 45GR",
+      "url": "https://www.kibrissanalmarket.com/wp-content/uploads/2025/12/8690504065296.jpg",
+      "source": "https://www.kibrissanalmarket.com/urunler/ulker-laviva-gofret-wafer-milk-45gr/",
+      "score": 0.593,
+      "path": "assets/our-market/products/058a0062-6cbc-5943-adf7-96f7261cddde.jpg",
+      "image_url": "./assets/our-market/products/058a0062-6cbc-5943-adf7-96f7261cddde.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "f64fbbcd-7101-52f3-927b-c78c0f38520b",
+      "name": "Gullon Vitalday Fruity (44 gr)",
+      "match": "GULLON VITALDAY SAND. KIR.MEYV. 44GR",
+      "url": "https://www.unimarmarket.com/Content/images/Urunler/404863dc-e7ce-4267-81c0-8ae66660d531.png",
+      "source": "https://www.unimarmarket.com/Urun/gullon_vitalday_sand_kir_meyv_44gr",
+      "score": 0.589,
+      "path": "assets/our-market/products/f64fbbcd-7101-52f3-927b-c78c0f38520b.jpg",
+      "image_url": "./assets/our-market/products/f64fbbcd-7101-52f3-927b-c78c0f38520b.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "f1cd4e4a-8ac5-560c-a4f0-4911aee5105c",
+      "name": "Arsal Bicklie Pickle (660 ml)",
+      "match": "Bikla Turşusu 660ml",
+      "source": "https://arsalgida.com/urun/bikla-tursusu-660ml/",
+      "url": "https://arsalgida.com/wp-content/uploads/2023/03/Bikla660.jpg",
+      "path": "assets/our-market/products/f1cd4e4a-8ac5-560c-a4f0-4911aee5105c.jpg",
+      "image_url": "./assets/our-market/products/f1cd4e4a-8ac5-560c-a4f0-4911aee5105c.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
     }
   ]
 }
