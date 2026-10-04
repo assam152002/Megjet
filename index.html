@@ -2229,7 +2229,8 @@ function renderVendors(vendors,products){
   function hoursFor(v){
     const n=String(v.name||'').trim();
     const k=Object.keys(window.MEGJET_VENDOR_HOURS||{}).find(x=>x.trim().toLowerCase()===n.toLowerCase());
-    return k?window.MEGJET_VENDOR_HOURS[k]:'';
+    if(k)return window.MEGJET_VENDOR_HOURS[k];
+    return String(v.bio||descriptionFor(v)||'').match(/(?:⏰|opening hours|hours|saat)\s*:?\s*((?:[01]?\d|2[0-3]):[0-5]\d\s*[–—-]\s*(?:[01]?\d|2[0-3]):[0-5]\d)/i)?.[1]||'';
   }
   function renderProduct(p,v){
     const item={...p,vendor_name:v.name};
