@@ -1,0 +1,664 @@
+[
+  {
+    "id": "07f4c975-64a4-59dd-8d4f-16ef64d4d0d2",
+    "name": "Miller Beer Glass Bottle (33 cl)",
+    "replacement": {
+      "name": "MILLER BEER 0.33L BOT",
+      "source": "https://gbottleshop.com/products/miller-genuine-draft-beer-0-3l-bot",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/MILLER-GENUINE-DRAFT-BEER-0.3L-BOT.jpg?v=1669302324"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/07f4c975-64a4-59dd-8d4f-16ef64d4d0d2.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/07f4c975-64a4-59dd-8d4f-16ef64d4d0d2.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "89dd2c6b-9db9-5f01-aae7-527a6bef8c6f",
+    "name": "Carlsberg Beer Can (50 cl)",
+    "replacement": {
+      "name": "Carlsberg Teneke 50 CL Bira",
+      "barcode": "8690582722401",
+      "source": "https://www.sarpermarket.com/urunler/carlberg-teneke-50-cl-kutu/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8690582722401-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/89dd2c6b-9db9-5f01-aae7-527a6bef8c6f.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/89dd2c6b-9db9-5f01-aae7-527a6bef8c6f.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "f9bee8b2-a173-52a5-9350-dccb145cedc7",
+    "name": "Jack Daniel's Old No.7 (70 cl)",
+    "replacement": {
+      "name": "JACK DANIELS 70CL",
+      "source": "https://gbottleshop.com/products/copy-jack-daniels-1l-جاك-دانيالز-1لتر",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/JACKDANIELS70CL.jpg?v=1721673522"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f9bee8b2-a173-52a5-9350-dccb145cedc7.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f9bee8b2-a173-52a5-9350-dccb145cedc7.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "32546371-f137-59de-8d53-8776d55f5243",
+    "name": "Johnnie Walker Black Label (75 cl)",
+    "replacement": {
+      "name": "JOHNNIE WALKER BLACK LABEL 75CL",
+      "source": "https://gbottleshop.com/products/jw-black-label-75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/JW-BLACK-LABEL-75CL.jpg?v=1669305489"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/32546371-f137-59de-8d53-8776d55f5243.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/32546371-f137-59de-8d53-8776d55f5243.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "54bd1d69-3388-5c91-91a3-baa368a11e9f",
+    "name": "Bomonti Unfiltered Beer (50 cl)",
+    "replacement": {
+      "name": "BOMONTI UNFILTERED BEER 50CL BOT",
+      "source": "https://gbottleshop.com/products/bomonti-unfiltered-beer-0-5l-bot",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/BOMONTI-UNFILTERED-BEER-0.5L-BOT.jpg?v=1669308312"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/54bd1d69-3388-5c91-91a3-baa368a11e9f.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/54bd1d69-3388-5c91-91a3-baa368a11e9f.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "583dca1f-f36c-5db3-b466-06237604370d",
+    "name": "Efes Extra Beer (50 cl)",
+    "replacement": {
+      "name": "EFES BEER EXTRA 50CL CAN",
+      "source": "https://gbottleshop.com/products/efes-beer-extra-0-5l-can",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/EFES-BEER-EXTRA-0.5L-CAN-3.jpg?v=1669304981"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/583dca1f-f36c-5db3-b466-06237604370d.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/583dca1f-f36c-5db3-b466-06237604370d.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "38ba8802-d941-5bdc-b697-20f3c16073ed",
+    "name": "Guinness Draught Stout (44 cl)",
+    "replacement": {
+      "name": "GUINNESS DRAUGHT STOUT BEER CAN 44CL",
+      "source": "https://gbottleshop.com/products/guiness-draught-stout-can-50cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/GUINESSDRAUGHTSTOUTBEERCAN50CL.webp?v=1745060548"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/38ba8802-d941-5bdc-b697-20f3c16073ed.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/38ba8802-d941-5bdc-b697-20f3c16073ed.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "a1650a2f-8362-594e-bd63-2c7eacdd6237",
+    "name": "Sol Cerveza Beer (330 ml)",
+    "replacement": {
+      "name": "SOL BEER 33CL BOT",
+      "source": "https://gbottleshop.com/products/sol-beer-0-33l-bot",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/SOL-BEER-0.33L-BOT-3.jpg?v=1669304885"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/a1650a2f-8362-594e-bd63-2c7eacdd6237.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/a1650a2f-8362-594e-bd63-2c7eacdd6237.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "710c020c-76d4-5831-b097-c15628b25920",
+    "name": "Corona Beer (35.5 cl)",
+    "replacement": {
+      "name": "CORONA EXTRA BEER 35.5CL",
+      "source": "https://gbottleshop.com/products/corona-extra-beer-0-33l-bot",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/CORONA-EXTRA-BEER-0.33L-BOT.jpg?v=1669307106"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/710c020c-76d4-5831-b097-c15628b25920.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/710c020c-76d4-5831-b097-c15628b25920.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "69882288-3f6e-5652-a85b-8f41d3f1e14c",
+    "name": "Chivas Regal 12 Years (70 cl)",
+    "replacement": {
+      "name": "CHIVAS REGAL 12YO 70CL",
+      "source": "https://gbottleshop.com/products/chivas-regal-12yo-75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/CHIVASREGAL12YO70CL.jpg?v=1726253372"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/69882288-3f6e-5652-a85b-8f41d3f1e14c.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/69882288-3f6e-5652-a85b-8f41d3f1e14c.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "b4140770-8d32-542d-a7e4-fb9aef0c1d8e",
+    "name": "Jack Daniel's Old No.7 (35 cl)",
+    "replacement": {
+      "name": "JACK DANIELS 35CL",
+      "source": "https://gbottleshop.com/products/jack-daniels-37-5cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/JACKDANIELS37.5CL.jpg?v=1688671182"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/b4140770-8d32-542d-a7e4-fb9aef0c1d8e.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/b4140770-8d32-542d-a7e4-fb9aef0c1d8e.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "f9974d1b-dcb8-5b4b-a684-34a7d9301e1c",
+    "name": "Jack Daniel's Old No.7 (1 lt)",
+    "replacement": {
+      "name": "JACK DANİEL’S 1 LİTRE",
+      "barcode": "5099873090183",
+      "source": "https://www.sarpermarket.com/urunler/jack-daniels-70cl-2/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/5099873089798-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f9974d1b-dcb8-5b4b-a684-34a7d9301e1c.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f9974d1b-dcb8-5b4b-a684-34a7d9301e1c.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "00442a76-d20d-5270-a405-a9d37b4c34c0",
+    "name": "Jim Beam Bourbon Whiskey (1 lt)",
+    "replacement": {
+      "name": "JIM BEAM BOURBON WHISKEY 1L",
+      "source": "https://gbottleshop.com/products/jim-beam-70cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/JIMBEAMBOURBONWHISKEY1L.jpg?v=1694878799"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/00442a76-d20d-5270-a405-a9d37b4c34c0.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/00442a76-d20d-5270-a405-a9d37b4c34c0.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "101dd75a-50d1-5c6d-a79d-2990366e8c8d",
+    "name": "Johnnie Walker Red Label (75 cl)",
+    "replacement": {
+      "name": "JOHNNIE WALKER RED LABEL 75CL",
+      "source": "https://gbottleshop.com/products/jw-red-label-75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/JW-RED-LABEL-75CL.jpg?v=1669301542"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/101dd75a-50d1-5c6d-a79d-2990366e8c8d.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/101dd75a-50d1-5c6d-a79d-2990366e8c8d.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "ee684f07-c5bf-5e62-b3a7-08b5e0de39d4",
+    "name": "The Famous Grouse Scotch Whisky (20 cl)",
+    "replacement": {
+      "name": "FAMOUS GROUSE WHISKEY 20CL",
+      "source": "https://gbottleshop.com/products/copy-famous-grouse-75cl-40",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/FAMOUSGROUSEWHISKEY20CL.jpg?v=1696781739"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/ee684f07-c5bf-5e62-b3a7-08b5e0de39d4.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/ee684f07-c5bf-5e62-b3a7-08b5e0de39d4.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "17336559-0a8f-509e-8c22-31d0f04d1d62",
+    "name": "Gibson's London Dry Gin (1 lt)",
+    "replacement": {
+      "name": "GIBSON'S GIN 1L",
+      "source": "https://gbottleshop.com/products/gin-gibsons-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/GIBSONGIN.jpg?v=1687871858"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/17336559-0a8f-509e-8c22-31d0f04d1d62.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/17336559-0a8f-509e-8c22-31d0f04d1d62.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1836aa1c-aa25-50ce-bf69-b8d90d9c3ebd",
+    "name": "Gibson's Pink Premium Gin (1 lt)",
+    "replacement": {
+      "name": "GIBSON'S PINK GIN -  1L",
+      "source": "https://gbottleshop.com/products/gibsons-pink-gin-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/GIBSONSGINPINK.jpg?v=1687871876"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1836aa1c-aa25-50ce-bf69-b8d90d9c3ebd.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1836aa1c-aa25-50ce-bf69-b8d90d9c3ebd.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "32e32b0e-a468-5d24-b062-a973ab1e004e",
+    "name": "Olmeca Dark Chocolate (700 ml)",
+    "replacement": {
+      "name": "OLMECA DARK CHOCOLATE TEQUILA 70CL",
+      "source": "https://gbottleshop.com/products/olmeca-dark-chocolate-tequila-70cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/OLMECADARKCHOCOLATETEQUILA70CL.jpg?v=1696872139"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/32e32b0e-a468-5d24-b062-a973ab1e004e.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/32e32b0e-a468-5d24-b062-a973ab1e004e.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "d3014cf3-319f-5ecf-b0ee-7d05477a4073",
+    "name": "Yeni Rakı (70 cl)",
+    "replacement": {
+      "name": "YENI RAKI 70CL",
+      "source": "https://gbottleshop.com/products/yeni-raki-70cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/YENIRAKI70CL_c1be8e83-3f67-4836-b60b-d2e1f9280dde.jpg?v=1686174663"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/d3014cf3-319f-5ecf-b0ee-7d05477a4073.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/d3014cf3-319f-5ecf-b0ee-7d05477a4073.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1b53ff8e-c6fb-5c7b-9738-51565f61cdda",
+    "name": "Yeni Rakı (100 cl)",
+    "replacement": {
+      "name": "YENI RAKI 1L",
+      "source": "https://gbottleshop.com/products/yeni-raki-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/YENI-RAKI-1L.jpg?v=1669302160"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1b53ff8e-c6fb-5c7b-9738-51565f61cdda.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1b53ff8e-c6fb-5c7b-9738-51565f61cdda.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "ce2bfe77-8aa4-55e0-874e-1f24cd192b01",
+    "name": "Tuborg Beer Can (50 cl)",
+    "replacement": {
+      "name": "Tuborg Special Kırmızı Kutu 50 CL Bira",
+      "barcode": "8690582132408",
+      "source": "https://www.sarpermarket.com/urunler/tuborg-special-kirmizi-kutu-50-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8690582132408-168x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/ce2bfe77-8aa4-55e0-874e-1f24cd192b01.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/ce2bfe77-8aa4-55e0-874e-1f24cd192b01.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "3da9b618-dff6-54cc-80cd-3f09b4c11a3e",
+    "name": "Tuborg Beer Can (50 cl)",
+    "replacement": {
+      "name": "Tuborg Special Kırmızı Kutu 50 CL Bira",
+      "barcode": "8690582132408",
+      "source": "https://www.sarpermarket.com/urunler/tuborg-special-kirmizi-kutu-50-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8690582132408-168x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/3da9b618-dff6-54cc-80cd-3f09b4c11a3e.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/3da9b618-dff6-54cc-80cd-3f09b4c11a3e.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1f5f3c27-a1f4-540b-bc3f-de7aefb3e8fd",
+    "name": "Tuborg Malt Beer Bottle (50 cl)",
+    "replacement": {
+      "name": "Tuborg Malt Sişe 50 CL Bira",
+      "barcode": "8690582113407",
+      "source": "https://www.sarpermarket.com/urunler/tuborg-malt-sise-50-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8690582113407-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1f5f3c27-a1f4-540b-bc3f-de7aefb3e8fd.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1f5f3c27-a1f4-540b-bc3f-de7aefb3e8fd.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "392e28ff-26fa-524e-b0d0-8b6901dc40de",
+    "name": "Kavaklıdere Yakut Red Dry Wine (75 cl)",
+    "replacement": {
+      "name": "Kavaklıdere Yakut Kırmızı Şarap 750 ML",
+      "barcode": "8690584316400",
+      "source": "https://www.sarpermarket.com/urunler/kavaklidere-yakut-kirmizi-sarap-750ml/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8690584316400-133x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/392e28ff-26fa-524e-b0d0-8b6901dc40de.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/392e28ff-26fa-524e-b0d0-8b6901dc40de.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "f889e1fb-ad6d-57d0-9fce-b956371041f2",
+    "name": "Ballantines (70 cl)",
+    "replacement": {
+      "name": "BALLANTİNES FİNEST WHİSKEY  70CL",
+      "barcode": "5010106113127",
+      "source": "https://www.sarpermarket.com/urunler/ballantines-finest-whiskey-70cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/5010106113127-100x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f889e1fb-ad6d-57d0-9fce-b956371041f2.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f889e1fb-ad6d-57d0-9fce-b956371041f2.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "2c15af24-94db-579f-a293-cd169e6d44f7",
+    "name": "The Famous Grouse Scotch Whisky (70 cl)",
+    "replacement": {
+      "name": "THE FAMOUS GROUSE 70 CL",
+      "barcode": "5010314700003",
+      "source": "https://www.sarpermarket.com/urunler/the-famous-grouse-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/5010314700003-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/2c15af24-94db-579f-a293-cd169e6d44f7.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/2c15af24-94db-579f-a293-cd169e6d44f7.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "15cff3ce-5cec-5b94-8e25-00af9b969d80",
+    "name": "Strange Love Dry Gin (70 cl)",
+    "replacement": {
+      "name": "Strange Love Gin 70 cl",
+      "barcode": "5414145036230",
+      "source": "https://www.sarpermarket.com/urunler/strange-love-gin-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2022/11/5414145036230-strange-luve-136x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/15cff3ce-5cec-5b94-8e25-00af9b969d80.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/15cff3ce-5cec-5b94-8e25-00af9b969d80.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "20253e27-cfa1-59cf-a25f-ce40db107cf4",
+    "name": "Strange Love Dry Gin Pink (70 cl)",
+    "replacement": {
+      "name": "Gin Strange Love Pink 70 cl",
+      "barcode": "5414145034182",
+      "source": "https://www.sarpermarket.com/urunler/gin-strange-love-pink-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2022/11/strange-luve-london-155x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/20253e27-cfa1-59cf-a25f-ce40db107cf4.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/20253e27-cfa1-59cf-a25f-ce40db107cf4.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "b9c23abd-ff5d-592d-8e44-17ab02831be6",
+    "name": "Dos Mexicanos Gold Tequila (70 cl)",
+    "replacement": {
+      "name": "Dos Mexicanos 70 cl Gold Tekila",
+      "barcode": "5414145037671",
+      "source": "https://www.sarpermarket.com/urunler/dos-mexicanos-70-cl-gold-tekila/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2022/10/3378437d-f3e0-01c0-0aec-1614c5043727-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/b9c23abd-ff5d-592d-8e44-17ab02831be6.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/b9c23abd-ff5d-592d-8e44-17ab02831be6.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "6b7b6322-52fb-5b67-8975-f9774e0360f1",
+    "name": "Dos Mexicanos Silver Tequila (70 cl)",
+    "replacement": {
+      "name": "Dos Mexicanos 70 cl Silver Tekila",
+      "barcode": "5414145037664",
+      "source": "https://www.sarpermarket.com/urunler/dos-mexicanos-70-cl-silver/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2022/10/5414145037664-136x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/6b7b6322-52fb-5b67-8975-f9774e0360f1.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/6b7b6322-52fb-5b67-8975-f9774e0360f1.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "3aeedf27-4afd-5590-a292-5426aa66e290",
+    "name": "Carlsberg Beer Bottle (50 cl)",
+    "replacement": {
+      "name": "Carlsberg Şişe Bira 50 CL",
+      "barcode": "8690582711405",
+      "source": "https://www.sarpermarket.com/urunler/carlsberg-teneke-50-cl-2/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2024/10/8690582721404-200x200-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/3aeedf27-4afd-5590-a292-5426aa66e290.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/3aeedf27-4afd-5590-a292-5426aa66e290.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "b5ca3a5c-fab7-5e1f-abbe-910cce65ba1f",
+    "name": "Strange Love Gin Quince (70 cl)",
+    "replacement": {
+      "name": "Strange Love Gin Quince 70 cl",
+      "barcode": "5414145033338",
+      "source": "https://www.sarpermarket.com/urunler/strange-love-gin-quince-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2022/10/quince-90x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/b5ca3a5c-fab7-5e1f-abbe-910cce65ba1f.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/b5ca3a5c-fab7-5e1f-abbe-910cce65ba1f.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1fcfeb1a-6521-51c7-b68e-731f601a789a",
+    "name": "Grant's Blended Scotch Whisky (70 cl)",
+    "replacement": {
+      "name": "GRANTS VİSKİ 70 CL",
+      "barcode": "5010327000404",
+      "source": "https://www.sarpermarket.com/urunler/grants-viski-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2021/03/5010327000404-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1fcfeb1a-6521-51c7-b68e-731f601a789a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1fcfeb1a-6521-51c7-b68e-731f601a789a.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "6acc7f46-577c-5629-b210-e0afe5b7d048",
+    "name": "Malibu (70 cl)",
+    "replacement": {
+      "name": "MALİBU LİQUEUR 70 CL",
+      "barcode": "5010284100018",
+      "source": "https://www.sarpermarket.com/urunler/malibu-liqueur-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/07/5010284100018-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/6acc7f46-577c-5629-b210-e0afe5b7d048.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/6acc7f46-577c-5629-b210-e0afe5b7d048.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "98d9cb31-4171-5f36-b6f1-d9053fd3df52",
+    "name": "Olmeca Tequila Blanco (70 cl)",
+    "replacement": {
+      "name": "Tequila Olmeca Silver 35 % 0,7 l",
+      "barcode": "080432115251",
+      "source": "https://www.sarpermarket.com/urunler/tequila-olmeca-silver-35-07-l/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/02/olmeca_silver-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/98d9cb31-4171-5f36-b6f1-d9053fd3df52.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/98d9cb31-4171-5f36-b6f1-d9053fd3df52.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "ce6d662e-156a-596f-9789-a54cdcadc39e",
+    "name": "Olmeca Silver (35 cl)",
+    "replacement": {
+      "name": "OLMECA TEQUİLA SİLVER BLANCO 35 CL",
+      "barcode": "080432115244",
+      "source": "https://www.sarpermarket.com/urunler/olmeca-tequila-silver-blanco-35-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/11/Olmeca-Silver-Tequila--200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/ce6d662e-156a-596f-9789-a54cdcadc39e.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/ce6d662e-156a-596f-9789-a54cdcadc39e.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "89f24503-85f9-5d57-8ab1-3ce67376c236",
+    "name": "Volim Kavun (25 cl)",
+    "replacement": {
+      "name": "Volim Kavun 25 cl",
+      "barcode": "8682315592733",
+      "source": "https://www.sarpermarket.com/urunler/volim-kavun-25-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2026/05/8682315592030-185x200.jpeg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/89f24503-85f9-5d57-8ab1-3ce67376c236.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/89f24503-85f9-5d57-8ab1-3ce67376c236.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "4dc99eed-592a-5804-af54-1b829d40565d",
+    "name": "Pasqua Bardolino Red Wine (750 ml)",
+    "replacement": {
+      "name": "PASQUA COLL BARDOLİNO ŞARAP 75 CL",
+      "barcode": "8007880211207",
+      "source": "https://www.sarpermarket.com/urunler/pasqua-coll-bardolino-75-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2021/03/8007880211207-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/4dc99eed-592a-5804-af54-1b829d40565d.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/4dc99eed-592a-5804-af54-1b829d40565d.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "d1e2bbd3-0f1f-5b31-96c3-51fb81c9dca1",
+    "name": "Angora Red Wine (75 cl)",
+    "replacement": {
+      "name": "Angora Kırmızı Sek Şarap 750 ML",
+      "barcode": "8690584301406",
+      "source": "https://www.sarpermarket.com/urunler/angora-kirmizi-sek-sarap-750ml/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8690584301406-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/d1e2bbd3-0f1f-5b31-96c3-51fb81c9dca1.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/d1e2bbd3-0f1f-5b31-96c3-51fb81c9dca1.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "32c40d0e-b3a4-5f12-b3b6-9790295f39f1",
+    "name": "Mercan Rakı (35 cl)",
+    "replacement": {
+      "name": "Mercan Raki 35 cl",
+      "barcode": "8697702233045",
+      "source": "https://www.sarpermarket.com/urunler/mercan-raki-35-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/12/mercan-raki-70cl-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/32c40d0e-b3a4-5f12-b3b6-9790295f39f1.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/32c40d0e-b3a4-5f12-b3b6-9790295f39f1.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "b46eaf3c-2474-511e-9ba9-a01d63611e5e",
+    "name": "Mercan Rakı (70 cl)",
+    "replacement": {
+      "name": "Mercan Raki 70 cl",
+      "barcode": "8697702233021",
+      "source": "https://www.sarpermarket.com/urunler/mercan-raki-07l/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/12/mercan-raki-70cl-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/b46eaf3c-2474-511e-9ba9-a01d63611e5e.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/b46eaf3c-2474-511e-9ba9-a01d63611e5e.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1931d394-55f8-5138-8e6f-b2e20b3cbb40",
+    "name": "Mercan Rakı (100 cl)",
+    "replacement": {
+      "name": "Mercan Raki 100 cl",
+      "barcode": "8697702233014",
+      "source": "https://www.sarpermarket.com/urunler/mercan-raki-100-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/12/mercan-raki-70cl-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1931d394-55f8-5138-8e6f-b2e20b3cbb40.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1931d394-55f8-5138-8e6f-b2e20b3cbb40.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "c9141ff3-1d08-5122-b559-f748d7b18da0",
+    "name": "Efe Yaş Üzüm Rakısı (70 cl)",
+    "replacement": {
+      "name": "Yeşil Efe Yaş Üzüm Rakısı 70 cl",
+      "barcode": "8682392503332",
+      "source": "https://www.sarpermarket.com/urunler/yesil-efe-yas-uzum-rakisi-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/05/c6708cf8-12aa-5d58-7032-5742d4e79e62-48x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c9141ff3-1d08-5122-b559-f748d7b18da0.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c9141ff3-1d08-5122-b559-f748d7b18da0.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "5be433ac-1542-588c-974f-30f5198f81a0",
+    "name": "Efe Gold Rakı (70 cl)",
+    "replacement": {
+      "name": "EFE GOLD RAKI 70 CL",
+      "barcode": "8682392502991",
+      "source": "https://www.sarpermarket.com/urunler/efe-gold-raki-70-cl-2/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2021/06/efe-gold-raki-0-7l-200x200.jpg?x75857"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/5be433ac-1542-588c-974f-30f5198f81a0.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/5be433ac-1542-588c-974f-30f5198f81a0.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "659fe513-85b9-5ead-9f6b-f1169fe376b4",
+    "name": "Gibson's Italian Lemon Gin (70 cl)",
+    "replacement": {
+      "name": "Gibson's Italian Lemon Gin (70 cl)",
+      "source": "https://www.gin-gibsons.com/en/our-gins",
+      "image": "https://www.gin-gibsons.com/sites/gibson/files/styles/product_bottle_range/public/media/image/Gibson%27s-Italian-Lemon-70cl_1.png?itok=bVHZO2Oz"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/659fe513-85b9-5ead-9f6b-f1169fe376b4.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/659fe513-85b9-5ead-9f6b-f1169fe376b4.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "c3f6bd26-d585-5e71-8803-26711f32f35a",
+    "name": "Gibson's London Dry Gin (70 cl)",
+    "replacement": {
+      "name": "Gibson's London Dry Gin (70 cl)",
+      "source": "https://www.gin-gibsons.com/en/our-gins",
+      "image": "https://www.gin-gibsons.com/sites/gibson/files/styles/product_bottle_range/public/media/image/GIBSON%27S_70CL_0.png?itok=QNwCoQ10"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c3f6bd26-d585-5e71-8803-26711f32f35a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c3f6bd26-d585-5e71-8803-26711f32f35a.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "6de4f63c-382e-5aba-a8a0-bc0dd6397c2a",
+    "name": "Gibson's Pink Gin (70 cl)",
+    "replacement": {
+      "name": "Gibson's Pink Gin (70 cl)",
+      "source": "https://www.gin-gibsons.com/en/our-gins",
+      "image": "https://www.gin-gibsons.com/sites/gibson/files/styles/product_bottle_range/public/media/image/GIBSON%27S_PINK_70CL.png?itok=sHdK62l6"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/6de4f63c-382e-5aba-a8a0-bc0dd6397c2a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/6de4f63c-382e-5aba-a8a0-bc0dd6397c2a.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "200cb7ab-e4f7-5236-aa30-6d804790a639",
+    "name": "Gibson's London Dry Gin Botanical (70 cl)",
+    "replacement": {
+      "name": "Gibson's London Dry Gin Botanical (70 cl)",
+      "source": "https://www.gin-gibsons.com/en/our-gins",
+      "image": "https://www.gin-gibsons.com/sites/gibson/files/styles/product_bottle_range/public/media/image/GIBSON%E2%80%99S_BOTANICAL_GIN%2070CL_SS_CADRE.png?itok=TVH80WhP"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/200cb7ab-e4f7-5236-aa30-6d804790a639.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/200cb7ab-e4f7-5236-aa30-6d804790a639.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "115a5f6d-1ffb-5917-9f04-ecf861cb232a",
+    "name": "Gibson's London Blood Orange Gin (70 cl)",
+    "replacement": {
+      "name": "Gibson's London Blood Orange Gin (70 cl)",
+      "source": "https://www.gin-gibsons.com/en/our-gins",
+      "image": "https://www.gin-gibsons.com/sites/gibson/files/styles/product_bottle_range/public/media/image/petit.png?itok=M-xxc6MU"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/115a5f6d-1ffb-5917-9f04-ecf861cb232a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/115a5f6d-1ffb-5917-9f04-ecf861cb232a.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "0c0dac95-73f9-580c-bbde-e791831dbb80",
+    "name": "Finlandia Vodka (70 cl)",
+    "replacement": {
+      "name": "FINLANDIA VODKA 70 CL",
+      "source": "https://gbottleshop.com/products/finlandia-vodka-70cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/FINLANDIA-VODKA-70CL.jpg?v=1669311908"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/0c0dac95-73f9-580c-bbde-e791831dbb80.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/0c0dac95-73f9-580c-bbde-e791831dbb80.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "a7876bfc-db78-5e25-b4b4-0c4e5ad7c1ce",
+    "name": "Finlandia Vodka (100 cl)",
+    "replacement": {
+      "name": "FINLANDIA VODKA 1L",
+      "source": "https://gbottleshop.com/products/finlandia-vodka-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/FINLANDIA-VODKA-1L-1.jpg?v=1669308586"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/a7876bfc-db78-5e25-b4b4-0c4e5ad7c1ce.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/a7876bfc-db78-5e25-b4b4-0c4e5ad7c1ce.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "0837d200-54bf-5678-bf1d-8659293baaf7",
+    "name": "Absolut Vodka (35 cl)",
+    "replacement": {
+      "name": "ABSOLUT VODKA 35CL",
+      "source": "https://gbottleshop.com/products/absolut-vodka-375cl",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/products/ABSOLUTVODKA37.5CL.jpg?v=1679545230"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/0837d200-54bf-5678-bf1d-8659293baaf7.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/0837d200-54bf-5678-bf1d-8659293baaf7.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "e4e194f2-a21d-5cb7-9425-623a01061805",
+    "name": "Chivas Regal (100 cl)",
+    "replacement": {
+      "name": "CHIVAS REGAL 12YO 1L",
+      "source": "https://gbottleshop.com/products/chivas-regal-12yo-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/CHIVASREGAL12YO1L.jpg?v=1700930237"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/e4e194f2-a21d-5cb7-9425-623a01061805.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/e4e194f2-a21d-5cb7-9425-623a01061805.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  }
+]
