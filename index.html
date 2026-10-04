@@ -1851,7 +1851,7 @@ function renderCart(){
   if(badgeEl)badgeEl.textContent=itemCount;
   if(itemsEl)itemsEl.innerHTML=cart.map((p,i)=>{
     const q=Math.max(1,Number(p.quantity||1));
-    return `<div class="row"><span><b>${escapeHtml(window.MEGJET_MENU_LOCALE?.name(p)||p.name)}</b>${p.vendor_name?`<div class="cart-vendor" data-no-translate>${escapeHtml(p.vendor_name)}</div>`:""}${q>1?` <small>×${q}</small>`:""} <button class="secondary" style="padding:4px 8px" type="button" onclick="removeItem(${i})">×</button></span><span>${money(Number(p.price||0)*q)}</span></div>`;
+    return `<div class="row"><span><b>${escapeHtml(window.MEGJET_MENU_LOCALE?.name(p)||p.name)}</b>${p.vendor_name?`<div class="cart-vendor" data-no-translate>${escapeHtml(p.vendor_name)}</div>`:""}<span class="mj-qty"><button type="button" data-mj-minus="${i}" aria-label="Decrease quantity">−</button><b>${q}</b><button type="button" data-mj-plus="${i}" aria-label="Increase quantity">+</button></span><button class="secondary" type="button" data-mj-remove="${i}">Remove</button></span><span>${money(Number(p.price||0)*q)}</span></div>`;
   }).join("");
   const subtotal=cart.reduce((a,p)=>a+(Number(p.price||0)*Math.max(1,Number(p.quantity||1))),0);
   const total=subtotal+DELIVERY;
