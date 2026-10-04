@@ -12928,6 +12928,437 @@
       "image_url": "./assets/our-market/products/3d338caa-97b8-5f19-9ff5-2272bb3a6c5d.jpg",
       "kind": "real-product-photo",
       "status": "ready"
+    },
+    {
+      "id": "17de374e-c0de-54a0-84a8-dc4beef9c47b",
+      "name": "Mahmood Ceylon Black Tea (100-pack)",
+      "source": "https://www.mahmoodtea.com/english/ceylon_black_tea.html",
+      "url": "https://www.mahmoodtea.com/assets/img/products/071.png",
+      "path": "assets/our-market/products/17de374e-c0de-54a0-84a8-dc4beef9c47b.jpg",
+      "image_url": "./assets/our-market/products/17de374e-c0de-54a0-84a8-dc4beef9c47b.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "b8f4608f-3564-595a-812b-21a522010e4a",
+      "name": "Black Bruin Original Energy Drink (250 ml)",
+      "source": "https://blackbruin.com.tr/en/original",
+      "url": "https://blackbruin.com.tr/public/images/products/orginal.webp",
+      "path": "assets/our-market/products/b8f4608f-3564-595a-812b-21a522010e4a.jpg",
+      "image_url": "./assets/our-market/products/b8f4608f-3564-595a-812b-21a522010e4a.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "6e34b7d6-24a3-57a0-ad85-732355dcb0d0",
+      "name": "First Mint Freshness Chewing Gum Bottle (65 gr.)",
+      "source": "https://www.macrocenter.com.tr/first-60-dakika-sise-yesil-nane-aromalisekersiz-sakiz-64g-p-6ca507",
+      "url": "https://images.migrosone.com/macrocenter/product/7120135/07120135-005a6a.jpg",
+      "path": "assets/our-market/products/6e34b7d6-24a3-57a0-ad85-732355dcb0d0.jpg",
+      "image_url": "./assets/our-market/products/6e34b7d6-24a3-57a0-ad85-732355dcb0d0.jpg",
+      "kind": "real-product-photo",
+      "match_note": "Current package is 64g; catalog lists 65g. Same mint bottle product.",
+      "status": "ready"
+    },
+    {
+      "id": "26a07002-6801-52da-9013-583a52c14f86",
+      "name": "Duru Pratik White Beans in Tomato Sauce (400 gr.)",
+      "source": "https://mopas.com.tr/duru-bakliyat-fasulye-pilaki-400-gr/p/872799",
+      "url": "https://cdnprod.mopas.com.tr/sys-master-mopascdncontainer/hd9/h16/9126111772702/872799_0_521Wx521H",
+      "path": "assets/our-market/products/26a07002-6801-52da-9013-583a52c14f86.jpg",
+      "image_url": "./assets/our-market/products/26a07002-6801-52da-9013-583a52c14f86.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "4d492fe5-1d21-5d9a-bd7e-282843fd6163",
+      "name": "Emborg Avocado (900 gr.)",
+      "source": "https://www.emborg.com/product/avocado-halves/",
+      "url": "https://www.emborg.com/app/uploads/2026/05/1200x1200px_114598_Avocado_Pack.webp",
+      "path": "assets/our-market/products/4d492fe5-1d21-5d9a-bd7e-282843fd6163.jpg",
+      "image_url": "./assets/our-market/products/4d492fe5-1d21-5d9a-bd7e-282843fd6163.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "3ab616e8-16d3-5d10-a28c-60643a257513",
+      "name": "Emborg Gouda Sliced Cheese (150 gr.)",
+      "source": "https://www.emborg.com/product/natural-gouda-slices/",
+      "url": "https://www.emborg.com/app/uploads/2023/06/1200x1200px_111459_Emborg-Gouda_315-369_Pack.webp",
+      "path": "assets/our-market/products/3ab616e8-16d3-5d10-a28c-60643a257513.jpg",
+      "image_url": "./assets/our-market/products/3ab616e8-16d3-5d10-a28c-60643a257513.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "2ca815ba-d07a-5463-b262-48a713dcd66c",
+      "name": "Emborg Red Cheddar Cheese (200 gr.)",
+      "source": "https://www.emborg.com/product/red-cheddar-block/",
+      "url": "https://www.emborg.com/app/uploads/2023/06/1200x1200px_114301_Cheddar_Red_Pack.webp",
+      "path": "assets/our-market/products/2ca815ba-d07a-5463-b262-48a713dcd66c.jpg",
+      "image_url": "./assets/our-market/products/2ca815ba-d07a-5463-b262-48a713dcd66c.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "f3ba817d-6d81-5bb0-9070-3e348d77405c",
+      "name": "Emborg Spreadable Unsalted Butter (225 gr.)",
+      "source": "https://www.emborg.com/product/unsalted-spreadable-butter/",
+      "url": "https://www.emborg.com/app/uploads/2023/06/1200x1200px_113363_Emborg_Unsalted_Spreadable_Butter_Pack.webp",
+      "path": "assets/our-market/products/f3ba817d-6d81-5bb0-9070-3e348d77405c.jpg",
+      "image_url": "./assets/our-market/products/f3ba817d-6d81-5bb0-9070-3e348d77405c.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "31450099-c415-57ef-bc97-d871efd211ba",
+      "name": "Emborg Butter Salt-Free (200 gr.)",
+      "source": "https://www.emborg.com/product/unsalted-butter/",
+      "url": "https://www.emborg.com/app/uploads/2026/07/1200x1200px_104133_Emborg-Butter-Unsaltet_810-153_Pack.webp",
+      "path": "assets/our-market/products/31450099-c415-57ef-bc97-d871efd211ba.jpg",
+      "image_url": "./assets/our-market/products/31450099-c415-57ef-bc97-d871efd211ba.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "7590b69a-4ca3-5671-bd6e-7356ad2b195f",
+      "name": "Emborg Edam Sliced Cheese (150 gr.)",
+      "source": "https://www.emborg.com/product/natural-edam-slices/",
+      "url": "https://www.emborg.com/app/uploads/2023/06/1200x1200px_111452-Emborg-Edam-Slices-12x150g_Pack.webp",
+      "path": "assets/our-market/products/7590b69a-4ca3-5671-bd6e-7356ad2b195f.jpg",
+      "image_url": "./assets/our-market/products/7590b69a-4ca3-5671-bd6e-7356ad2b195f.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "ef81087a-6bc5-5c8e-9234-7fb8b69aea6f",
+      "name": "Halta Double Whipping Cream (1 lt.)",
+      "source": "https://www.ipsa.it/en/halta-uht-double-prep-1l",
+      "url": "https://www.ipsa.it/media/Xtemplate/images/images/catalogo/large/0728.png/0728_q70_t1764850690.webp",
+      "path": "assets/our-market/products/ef81087a-6bc5-5c8e-9234-7fb8b69aea6f.jpg",
+      "image_url": "./assets/our-market/products/ef81087a-6bc5-5c8e-9234-7fb8b69aea6f.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "c28eb039-afd9-5aaa-bc54-71f09d11881d",
+      "name": "Takis Smokin Bbq (100 gr.)",
+      "source": "https://www.sweets.ch/produkt/snacks/takis-smokin-bbq-100g/",
+      "url": "https://cdn.sweets.ch/wp-content/uploads/2026/06/Takis_Smokin_BBQ-1200x630.png.jpg",
+      "path": "assets/our-market/products/c28eb039-afd9-5aaa-bc54-71f09d11881d.jpg",
+      "image_url": "./assets/our-market/products/c28eb039-afd9-5aaa-bc54-71f09d11881d.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "745e7c6f-2af5-5dda-993b-0f1577d7c0ea",
+      "name": "Kitr Chickpea Protein Chips Green Herbs (50 gr.)",
+      "source": "https://ozelbeslenme.com/products/kitr-sebze-yesillikleri-cesnili-yuksek-proteinli-nohut-cipsi-50g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/Adsiz_tasarim_-_2026-02-25T092415.067.png?v=1772001759",
+      "path": "assets/our-market/products/745e7c6f-2af5-5dda-993b-0f1577d7c0ea.jpg",
+      "image_url": "./assets/our-market/products/745e7c6f-2af5-5dda-993b-0f1577d7c0ea.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "a1fc3916-3640-50ea-aefd-1d26bd35db94",
+      "name": "Fellas Nuts Hazelnut Cocoa (30 gr)",
+      "source": "https://ozelbeslenme.com/products/fellas-findikli-kakaolu-kuruyemis-bar-30g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/fellas-findikli-kakaolu.png?v=1770033624",
+      "path": "assets/our-market/products/a1fc3916-3640-50ea-aefd-1d26bd35db94.jpg",
+      "image_url": "./assets/our-market/products/a1fc3916-3640-50ea-aefd-1d26bd35db94.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "52f9acb5-ffd4-554e-a6b5-63d54a955c7c",
+      "name": "Kellogg's Granola Chocolate & Hazelnuts (340 gr.)",
+      "source": "https://ozelbeslenme.com/products/kelloggs-granola-cikolata-parcacikli-ve-findikli-340g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/kelloggs-granola-cikolata-parcacikli-ve-findikli-340g.png?v=1736923840",
+      "path": "assets/our-market/products/52f9acb5-ffd4-554e-a6b5-63d54a955c7c.jpg",
+      "image_url": "./assets/our-market/products/52f9acb5-ffd4-554e-a6b5-63d54a955c7c.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "a25fd84e-d52f-5bfd-8c1d-aee044041ac9",
+      "name": "Kellogg's Granola Classic (340 gr.)",
+      "source": "https://ozelbeslenme.com/products/kelloggs-granola-klasik-340g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/kelloggs-granola-klasik-340g.png?v=1736923334",
+      "path": "assets/our-market/products/a25fd84e-d52f-5bfd-8c1d-aee044041ac9.jpg",
+      "image_url": "./assets/our-market/products/a25fd84e-d52f-5bfd-8c1d-aee044041ac9.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "231b4e15-4d70-511c-a17b-20e085683af1",
+      "name": "Kellogg's Granola Mix Fruits (340 gr.)",
+      "source": "https://ozelbeslenme.com/products/kelloggs-granola-karisik-meyveli-340g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/kelloggs-granola-karisik-meyveli-340g.png?v=1736921630",
+      "path": "assets/our-market/products/231b4e15-4d70-511c-a17b-20e085683af1.jpg",
+      "image_url": "./assets/our-market/products/231b4e15-4d70-511c-a17b-20e085683af1.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "b9e9ef00-0b7a-5073-ae20-d9c68827f72a",
+      "name": "Fellas Gluten Free Muesli Red Berries (270 gr)",
+      "source": "https://ozelbeslenme.com/products/fellas-glutensiz-musli-kirmizi-meyveli-270g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/fellas-glutensiz-musli-kirmizi-meyveli-270g.png?v=1761139604",
+      "path": "assets/our-market/products/b9e9ef00-0b7a-5073-ae20-d9c68827f72a.jpg",
+      "image_url": "./assets/our-market/products/b9e9ef00-0b7a-5073-ae20-d9c68827f72a.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "4015383e-b7fc-5880-bec8-87f6c6bbbb34",
+      "name": "Wasp Peanut & Cocoa Protein Bar (50 gr)",
+      "source": "https://ozelbeslenme.com/products/waspco-yer-fistikli-ve-kakaolu-protein-bar-50-g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/files/waspco-yer-fistikli-ve-kakaolu-protein-bar-50-g.png?v=1781509202",
+      "path": "assets/our-market/products/4015383e-b7fc-5880-bec8-87f6c6bbbb34.jpg",
+      "image_url": "./assets/our-market/products/4015383e-b7fc-5880-bec8-87f6c6bbbb34.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "fc8ea645-1895-5bdc-a7bc-426fbb75c674",
+      "name": "Züber Cocoa Gluten-Free Protein Bar (40 gr)",
+      "source": "https://ozelbeslenme.com/products/zuber-kakaolu-protein-bar-40g",
+      "url": "https://cdn.shopify.com/s/files/1/0507/4160/8616/products/MOM_SNATURALGLUT.YABANMERSINI_GRANOLABITES_42.png?v=1675769041",
+      "path": "assets/our-market/products/fc8ea645-1895-5bdc-a7bc-426fbb75c674.jpg",
+      "image_url": "./assets/our-market/products/fc8ea645-1895-5bdc-a7bc-426fbb75c674.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "a6ce30db-51e7-55b5-938c-392db2fde82c",
+      "name": "Yayla Notto Roasted Pea Chips – Aegean Spices Seasoned (55 gr.)",
+      "source": "https://yaylastore.com/yayla-notto-ege-baharatlari-cesnili-bezelye-cipsi-55-g",
+      "url": "https://cdn.myikas.com/images/a4d134f8-b159-4faf-84d4-b88993f70147/c08f34cd-bb8c-466f-8808-a3f6fc147b77/image_1080.jpg",
+      "path": "assets/our-market/products/a6ce30db-51e7-55b5-938c-392db2fde82c.jpg",
+      "image_url": "./assets/our-market/products/a6ce30db-51e7-55b5-938c-392db2fde82c.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "80a14373-4dcc-54de-957c-0723e9dd30b2",
+      "name": "Gullon Cuor Di Cereale (280 gr)",
+      "source": "https://contestdistribution.com/en/gullon/gullon-cuor-di-cereale-tradizionale-280g",
+      "url": "https://contestdistribution.com/images/products/original/gullon-cuor-di-cereale-tradizionale-280g.jpg",
+      "path": "assets/our-market/products/80a14373-4dcc-54de-957c-0723e9dd30b2.jpg",
+      "image_url": "./assets/our-market/products/80a14373-4dcc-54de-957c-0723e9dd30b2.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "3d59fa5a-b41d-589f-bc47-ab77d97cfe31",
+      "name": "Gullon Digestive Mini Frutta (225 gr)",
+      "source": "https://www.sigo.com.ve/galleta-s%C3%A1ndwich-sabor-yogurt-con-avena-y-frutos-rojos-vitalday-gull%C3%B3n-225-gr",
+      "url": "https://www.sigo.com.ve/images/thumbs/0003980_galleta-sandwich-sabor-yogurt-con-avena-y-frutos-rojos-vitalday-gullon-225-gr.jpeg",
+      "path": "assets/our-market/products/3d59fa5a-b41d-589f-bc47-ab77d97cfe31.jpg",
+      "image_url": "./assets/our-market/products/3d59fa5a-b41d-589f-bc47-ab77d97cfe31.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "1e9a1fae-d853-550a-a1fb-3e40631bb599",
+      "name": "Kellogg's Frosties Cereal (330 gr.)",
+      "source": "https://midiminuit-epinal.com/products/cereales-kelloggs-frosties-330g",
+      "url": "https://midiminuit-epinal.com/cdn/shop/files/e8c50b87-a5af-430c-8609-a16992b41ec5_size3840_cropCenter.webp?v=1741622277",
+      "path": "assets/our-market/products/1e9a1fae-d853-550a-a1fb-3e40631bb599.jpg",
+      "image_url": "./assets/our-market/products/1e9a1fae-d853-550a-a1fb-3e40631bb599.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "72b91cd6-657c-56d2-8750-1348d49c9269",
+      "name": "Kellogg's Corn Flakes (650 gr.)",
+      "source": "https://www.trendyol.com/kellogg-s/corn-flakes-kahvaltilik-misir-gevregi-650-gr-lif-kaynagi-demir-ve-6-vitamin-icerir-p-42387602",
+      "url": "https://cdn.dsmcdn.com/ty1611/prod/QC/20241213/16/62537899-22d1-399e-91a3-f3e3236f8485/1_org_zoom.jpg",
+      "path": "assets/our-market/products/72b91cd6-657c-56d2-8750-1348d49c9269.jpg",
+      "image_url": "./assets/our-market/products/72b91cd6-657c-56d2-8750-1348d49c9269.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "1b8e7f2c-a76b-59d2-bdc8-e495cf6f3d86",
+      "name": "İçim İçimino Strawberry Milk (180 ml.)",
+      "source": "https://mopas.com.tr/icim-sut-icimino-cilekli-180-ml/p/858213",
+      "url": "https://cdnprod.mopas.com.tr/sys-master-mopascdncontainer/h91/hb9/9067396694046/858213_0_521Wx521H",
+      "path": "assets/our-market/products/1b8e7f2c-a76b-59d2-bdc8-e495cf6f3d86.jpg",
+      "image_url": "./assets/our-market/products/1b8e7f2c-a76b-59d2-bdc8-e495cf6f3d86.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "afa7c551-2fbf-5a7c-9358-5a8bcd7d4293",
+      "name": "Halta Cucina Cooking Cream (1 lt.)",
+      "source": "https://www.ipsa.it/it/halta-preparato-uht-vegetale-cucina",
+      "url": "https://www.ipsa.it/media/Xtemplate/images/images/catalogo/large/0723.png/0723_q70_t1764850694.webp",
+      "path": "assets/our-market/products/afa7c551-2fbf-5a7c-9358-5a8bcd7d4293.jpg",
+      "image_url": "./assets/our-market/products/afa7c551-2fbf-5a7c-9358-5a8bcd7d4293.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "a01b6eee-c57d-516a-b14e-755d2f81d20b",
+      "name": "Halta Dolci Whipping Cream (1 lt.)",
+      "source": "https://www.ipsa.it/it/halta-preparato-uht-vegetale-dolci",
+      "url": "https://www.ipsa.it/media/Xtemplate/images/images/catalogo/large/0716.png/0716_q70_t1764850701.webp",
+      "path": "assets/our-market/products/a01b6eee-c57d-516a-b14e-755d2f81d20b.jpg",
+      "image_url": "./assets/our-market/products/a01b6eee-c57d-516a-b14e-755d2f81d20b.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "aeb078e0-0771-5a83-9953-4566dc54c1ec",
+      "name": "Gullon Creme Tropical (200 gr)",
+      "source": "https://www.waangoo.com/products/gullon-tropical-creme-biscuit-200-g",
+      "url": "https://www.waangoo.com/cdn/shop/files/60918_1.jpg?v=1763557022",
+      "path": "assets/our-market/products/aeb078e0-0771-5a83-9953-4566dc54c1ec.jpg",
+      "image_url": "./assets/our-market/products/aeb078e0-0771-5a83-9953-4566dc54c1ec.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "0b4cfb74-da5e-56c7-818e-a602f8cab6f2",
+      "name": "Gullon Chocolate & Soja (144 gr)",
+      "source": "https://tienda.gullon.es/products/barritas-snack-choco-soja-zero",
+      "url": "https://cdn.shopify.com/s/files/1/0908/2106/7132/files/Galletas_Gullon_Zero_Sin_Azucares_Snack_Choco_Soja.webp?v=1772783354",
+      "path": "assets/our-market/products/0b4cfb74-da5e-56c7-818e-a602f8cab6f2.jpg",
+      "image_url": "./assets/our-market/products/0b4cfb74-da5e-56c7-818e-a602f8cab6f2.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "fa2a7f56-cacb-5289-bf65-8919dd67f7cf",
+      "name": "Gullon Digestive Orange Chocolate (280 gr)",
+      "source": "https://tienda.gullon.es/products/galletas-digestive-avena-naranja-choco",
+      "url": "https://cdn.shopify.com/s/files/1/0908/2106/7132/files/GalletasGullonDigestiveAvenachocolatenaranja.webp?v=1774612684",
+      "path": "assets/our-market/products/fa2a7f56-cacb-5289-bf65-8919dd67f7cf.jpg",
+      "image_url": "./assets/our-market/products/fa2a7f56-cacb-5289-bf65-8919dd67f7cf.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "d1d0886c-51cb-52ee-b41c-88e175b6a9eb",
+      "name": "Gullon Hookies Sharkies (160 gr)",
+      "source": "https://tienda.gullon.es/products/galletas-hookies-sharkies-packs-sin-gluten",
+      "url": "https://cdn.shopify.com/s/files/1/0908/2106/7132/files/Galletas_Gullon_Sin_Gluten_Sharkies_Sin_Lactosa_Sin_Huevo_sin_frutos_de_cascara.webp?v=1773664519",
+      "path": "assets/our-market/products/d1d0886c-51cb-52ee-b41c-88e175b6a9eb.jpg",
+      "image_url": "./assets/our-market/products/d1d0886c-51cb-52ee-b41c-88e175b6a9eb.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "b3e4b4ba-fe72-5e4c-8338-c6f2e46c5e05",
+      "name": "Kellogg's Corn Flakes (375 gr.)",
+      "source": "https://lhr.greenvalley.pk/products/kelloggs-corn-flakes-original-375gm",
+      "url": "http://lhr.greenvalley.pk/cdn/shop/files/kellogg_s-corn-flakes-original-375gm_ec886a9c-74f5-4117-9c1f-275449c6119c.webp?v=1754899349",
+      "path": "assets/our-market/products/b3e4b4ba-fe72-5e4c-8338-c6f2e46c5e05.jpg",
+      "image_url": "./assets/our-market/products/b3e4b4ba-fe72-5e4c-8338-c6f2e46c5e05.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "e4a65e84-c644-552f-b2b3-a85635bd5238",
+      "name": "Ülker İçim Fit Milk Coffee (400 ml)",
+      "source": "https://www.icim.com.tr/en/products/icim-fit-coffee-protein-milk-400-ml/",
+      "url": "https://www.icim.com.tr/wp-content/uploads/2024/02/icim-fit-kahveli-protein-sut.webp",
+      "path": "assets/our-market/products/e4a65e84-c644-552f-b2b3-a85635bd5238.jpg",
+      "image_url": "./assets/our-market/products/e4a65e84-c644-552f-b2b3-a85635bd5238.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "19a9b650-81c3-5e40-8113-2772b425ee3a",
+      "name": "İçim İçimino Banana Milk (180 ml.)",
+      "source": "https://mopas.com.tr/icim-sut-icimino-muzlu-180-ml/p/858214",
+      "url": "https://cdnprod.mopas.com.tr/sys-master-mopascdncontainer/h06/h65/9067397021726/858214_0_521Wx521H",
+      "path": "assets/our-market/products/19a9b650-81c3-5e40-8113-2772b425ee3a.jpg",
+      "image_url": "./assets/our-market/products/19a9b650-81c3-5e40-8113-2772b425ee3a.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "bc006b6e-0bdb-56a8-92e0-94167f685846",
+      "name": "Kellogg's Corn Flakes Crunchy Nut (300 gr.)",
+      "source": "https://www.supermart.ng/products/kelloggs-crunchy-nut-300-g",
+      "url": "https://www.supermart.ng/cdn/shop/files/spmtsc2667.jpg?v=1760744524",
+      "path": "assets/our-market/products/bc006b6e-0bdb-56a8-92e0-94167f685846.jpg",
+      "image_url": "./assets/our-market/products/bc006b6e-0bdb-56a8-92e0-94167f685846.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "45dc182d-9f25-5059-9378-c64003fc8fe7",
+      "name": "Kellog's Miel Pops Loops (330 gr.)",
+      "source": "https://www.chronodrive.com/kelloggs--miel-pops-loops---cereales-de-mais-souffles-au-miel-P156172",
+      "url": "https://static1.chronodrive.com/img/PM/Z/0/72/0Z_156172.jpg",
+      "path": "assets/our-market/products/45dc182d-9f25-5059-9378-c64003fc8fe7.jpg",
+      "image_url": "./assets/our-market/products/45dc182d-9f25-5059-9378-c64003fc8fe7.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "2914517c-423f-5f29-a082-22d06a6abd07",
+      "name": "Solo Toilet Paper (12-pack)",
+      "source": "https://mopas.com.tr/solo-tuvalet-kagidi-40yil-12li/p/756836",
+      "url": "https://cdnprod.mopas.com.tr/sys-master-mopascdncontainer/h5c/h3a/8827403042846/756836_0_521Wx521H",
+      "path": "assets/our-market/products/2914517c-423f-5f29-a082-22d06a6abd07.jpg",
+      "image_url": "./assets/our-market/products/2914517c-423f-5f29-a082-22d06a6abd07.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "a61c7a39-fd19-5b69-ae01-3846d9704d9e",
+      "name": "Mr. Sheen Multi Surface Polish Spring Fresh (250 ml.)",
+      "source": "https://shop.supervalu.ie/product/mr-sheen-spring-fresh-multi-surface-polish-250-ml-1015122004",
+      "url": "https://images.cdn.shop.supervalu.ie/cell/1015122004_596",
+      "path": "assets/our-market/products/a61c7a39-fd19-5b69-ae01-3846d9704d9e.jpg",
+      "image_url": "./assets/our-market/products/a61c7a39-fd19-5b69-ae01-3846d9704d9e.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "ab0e2b57-e1b9-516c-a53d-f6ebf42b4105",
+      "name": "Dettol Antibacterial Mould & Mildew Remover (500 ml.)",
+      "source": "https://www.amazon.co.uk/Dettol-Mould-Mildew-Remover-500ml/dp/B00H7ELFOM",
+      "url": "https://m.media-amazon.com/images/I/6111f8mpTGL._AC_SL1500_.jpg",
+      "path": "assets/our-market/products/ab0e2b57-e1b9-516c-a53d-f6ebf42b4105.jpg",
+      "image_url": "./assets/our-market/products/ab0e2b57-e1b9-516c-a53d-f6ebf42b4105.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "8f2e7444-4549-56e1-80ef-769e7200a086",
+      "name": "Solo Hanging Paper Towel 1=7 (1 pack)",
+      "source": "https://www.kaganparfumeri.com/solo",
+      "url": "https://cdn.kaganparfumeri.com/solo-asilabilir-kagit-havlu-17-saglik-urunleri-solo-85372-31-K.jpg",
+      "path": "assets/our-market/products/8f2e7444-4549-56e1-80ef-769e7200a086.jpg",
+      "image_url": "./assets/our-market/products/8f2e7444-4549-56e1-80ef-769e7200a086.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "c4ca6d69-da22-5c5e-9006-c5a370a3e703",
+      "name": "Selpak Napkin (75 pcs.)",
+      "source": "https://www.selpak.com.tr/selpak-pecete",
+      "url": "https://www.selpak.com.tr/getmedia/8fb50702-f95a-4398-8df9-44fecd73c23c/pecete-75.png?width=567&height=450&ext=.png",
+      "path": "assets/our-market/products/c4ca6d69-da22-5c5e-9006-c5a370a3e703.jpg",
+      "image_url": "./assets/our-market/products/c4ca6d69-da22-5c5e-9006-c5a370a3e703.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "f76b771d-01a2-5df9-9986-107537c60ac5",
+      "name": "Emborg Cream (1 lt.)",
+      "source": "https://eborong.com.my/product/emborg-whipping-cream-1ctn-x-12unit-x-1l/",
+      "url": "https://eborong.com.my/wp-content/uploads/2019/03/emborg_whippingcream_1l-1.jpg",
+      "path": "assets/our-market/products/f76b771d-01a2-5df9-9986-107537c60ac5.jpg",
+      "image_url": "./assets/our-market/products/f76b771d-01a2-5df9-9986-107537c60ac5.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
     }
   ]
 }
