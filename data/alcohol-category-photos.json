@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Beer",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/beer.jpg",
+    "path": "assets/menu-photos/alcohol-categories/beer.jpg"
+  },
+  {
+    "name": "Wine",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/wine.jpg",
+    "path": "assets/menu-photos/alcohol-categories/wine.jpg"
+  },
+  {
+    "name": "Whiskey",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/whiskey.jpg",
+    "path": "assets/menu-photos/alcohol-categories/whiskey.jpg"
+  },
+  {
+    "name": "Vodka",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/vodka.jpg",
+    "path": "assets/menu-photos/alcohol-categories/vodka.jpg"
+  },
+  {
+    "name": "Gin",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/gin.jpg",
+    "path": "assets/menu-photos/alcohol-categories/gin.jpg"
+  },
+  {
+    "name": "Tequila",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/tequila.jpg",
+    "path": "assets/menu-photos/alcohol-categories/tequila.jpg"
+  },
+  {
+    "name": "Liqueur",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/liqueur.jpg",
+    "path": "assets/menu-photos/alcohol-categories/liqueur.jpg"
+  },
+  {
+    "name": "Rakı",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/rak.jpg",
+    "path": "assets/menu-photos/alcohol-categories/rak.jpg"
+  },
+  {
+    "name": "Cigarette",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/cigarette.jpg",
+    "path": "assets/menu-photos/alcohol-categories/cigarette.jpg"
+  },
+  {
+    "name": "Cigar & Flavored Cigarettes",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/cigar-flavored-cigarettes.jpg",
+    "path": "assets/menu-photos/alcohol-categories/cigar-flavored-cigarettes.jpg"
+  },
+  {
+    "name": "Tobacco",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/tobacco.jpg",
+    "path": "assets/menu-photos/alcohol-categories/tobacco.jpg"
+  },
+  {
+    "name": "Tobacco Supplies",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/tobacco-supplies.jpg",
+    "path": "assets/menu-photos/alcohol-categories/tobacco-supplies.jpg"
+  },
+  {
+    "name": "Electronic Cigarette",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/electronic-cigarette.jpg",
+    "path": "assets/menu-photos/alcohol-categories/electronic-cigarette.jpg"
+  },
+  {
+    "name": "Shisha",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/shisha.jpg",
+    "path": "assets/menu-photos/alcohol-categories/shisha.jpg"
+  },
+  {
+    "name": "Accessories / Miscellaneous",
+    "image_url": "https://assam152002.github.io/Megjet/assets/menu-photos/alcohol-categories/accessories-miscellaneous.jpg",
+    "path": "assets/menu-photos/alcohol-categories/accessories-miscellaneous.jpg"
+  }
+]

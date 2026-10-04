@@ -1043,6 +1043,11 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
   <span class="market-spotlight-copy"><strong>Our Market</strong><span>Groceries &amp; daily essentials</span></span>
   <span class="market-spotlight-action">Shop market <span aria-hidden="true">→</span></span>
 </button>
+<button id="alcoholMarketSpotlight" type="button" class="our-market-spotlight alcohol-market-spotlight" disabled onclick="openVendorProfile('0fda82be-7bde-5187-9a15-0d8f12bbcd73')" aria-label="Shop Alcohol And Cigerattes">
+  <img class="market-spotlight-logo" src="./assets/alcohol-and-cigerattes.svg" alt="" width="42" height="42">
+  <span class="market-spotlight-copy"><strong>Alcohol And Cigerattes</strong><span>Beer, wine, spirits &amp; tobacco</span></span>
+  <span class="market-spotlight-action">Shop now <span aria-hidden="true">→</span></span>
+</button>
 <div class="quick-row" aria-label="Megjet categories">
   <div class="quick-chip">🍽️ Food</div>
   <div class="quick-chip">🍔 Meals</div>
@@ -2287,6 +2292,8 @@ function renderVendors(vendors,products){
   };
   const marketSpotlight=document.getElementById('ourMarketSpotlight');
   if(marketSpotlight)marketSpotlight.disabled=!vendors.some(v=>String(v.id)==='06d76aea-1c94-5950-b621-22130e57ef75');
+  const alcoholSpotlight=document.getElementById('alcoholMarketSpotlight');
+  if(alcoholSpotlight)alcoholSpotlight.disabled=!vendors.some(v=>String(v.id)==='0fda82be-7bde-5187-9a15-0d8f12bbcd73');
   window.closeVendorProfile=function(){profile.classList.add('hidden');profile.innerHTML='';list.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});};
   window.dispatchEvent(new Event('megjet-vendors-ready'));
 }
@@ -5646,7 +5653,7 @@ document.addEventListener("DOMContentLoaded",function(){
 <script>window.megjetCustomerDiscoveryState=()=>({signedIn:!!customerAuthUser,addresses:customerAuthUser?customerSavedAddresses:[],orders:customerAuthUser?(window._customerHistoryOrders||[]):[],fee:Number(DELIVERY)});</script>
 <script src="./assets/discovery-core.js?v=2"></script>
 <script src="./assets/discovery.js?v=6"></script>
-<link rel="stylesheet" href="./assets/customer-polish.css?v=1">
+<link rel="stylesheet" href="./assets/customer-polish.css?v=2">
 <script src="./assets/customer-polish.js?v=1"></script>
 </body>
 </html>
