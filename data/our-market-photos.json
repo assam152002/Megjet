@@ -12479,6 +12479,30 @@
       "image_url": "./assets/our-market/products/7341c673-fe8f-58f3-8fd3-bed229264cb5.jpg",
       "kind": "real-product-photo",
       "status": "ready"
+    },
+    {
+      "id": "bc1f832b-93e1-5522-bf79-8aec0e8a8781",
+      "name": "Çamsakızı Wax (240 gr.)",
+      "match": "CAMSAKIZI ILIK AGDA",
+      "url": "https://www.unimarmarket.com/Content/images/Urunler/3ca386a1-5386-4f30-a5d4-f564c83ed9f6.png",
+      "source": "https://www.unimarmarket.com/Urun/camsakizi_ilik_agda",
+      "score": 0.329,
+      "path": "assets/our-market/products/bc1f832b-93e1-5522-bf79-8aec0e8a8781.jpg",
+      "image_url": "./assets/our-market/products/bc1f832b-93e1-5522-bf79-8aec0e8a8781.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "fd8c7fd3-747b-5de0-b7ea-98af6b7d2464",
+      "name": "Glade Spare Sheet Refreshment (20 ml.)",
+      "match": "GLADE ODA KOKUSU YEDEK CARSAF FERAHLIGI 20ML",
+      "url": "https://www.kibrissanalmarket.com/wp-content/uploads/2026/08/8690784818339.jpg",
+      "source": "https://www.kibrissanalmarket.com/urunler/glade-oda-kokusu-yedek-carsaf-ferahligi-20ml/",
+      "score": 0.326,
+      "path": "assets/our-market/products/fd8c7fd3-747b-5de0-b7ea-98af6b7d2464.jpg",
+      "image_url": "./assets/our-market/products/fd8c7fd3-747b-5de0-b7ea-98af6b7d2464.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
     }
   ]
 }
