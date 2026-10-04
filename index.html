@@ -854,6 +854,30 @@ try{
 }catch(_){document.documentElement.dataset.theme="light";}
 </script>
 <link rel="stylesheet" href="./assets/operations.css?v=3">
+
+<style id="megjet-phone-density-market">
+.our-market-spotlight{width:100%;display:flex;align-items:center;gap:12px;margin:12px 0;padding:15px 16px;border:1px solid #0b80b2;border-radius:18px;background:linear-gradient(115deg,#07558a,#0799be);color:#fff;text-align:left;box-shadow:0 6px 18px #0878bd26;cursor:pointer}
+.our-market-spotlight:disabled{opacity:.75;cursor:wait}
+.market-spotlight-icon{font-size:32px;line-height:1}
+.market-spotlight-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:3px}
+.market-spotlight-copy strong{font-size:19px}.market-spotlight-copy>span{font-size:12px;font-weight:500}
+.market-spotlight-action{font-size:12px;font-weight:800;white-space:nowrap}
+#growthHome .growth-feature-vendor{color:var(--mj-navy,#0b2748);text-align:left;cursor:pointer;font:inherit}
+#growthHome .growth-feature-vendor:active{transform:scale(.985)}
+#growthHome .growth-view-all{background:transparent;box-shadow:none;padding:8px;min-height:44px}
+@media(max-width:600px){
+ .customer-hero{padding:13px 12px!important}.customer-hero h1{font-size:19px!important;line-height:1.2!important}.customer-hero p{margin:7px 0 10px!important;font-size:12px!important}
+ .quick-row{gap:7px!important;margin:10px 0!important}.quick-chip{padding:8px 10px!important;font-size:11px!important}
+ #vendors .card.vendor{flex-basis:194px!important;width:194px!important;border-radius:17px!important}
+ #vendors .vendor-logo-wrap{height:106px!important;padding:12px!important}#vendors .vendor-logo{width:80px!important;height:80px!important}
+ #vendors .vendor-card-body{padding:10px 11px!important}#vendors .vendor-card-title{font-size:15px!important}#vendors .vendor-view{height:44px!important;min-height:44px!important;margin-top:7px!important}
+ .growth-home{gap:12px!important;margin:13px 0!important}.growth-section-head h2{font-size:18px!important}
+ #growthHome .growth-feature-vendor{flex-basis:184px!important;min-height:148px!important;padding:9px!important}#growthHome .growth-feature-vendor img{height:80px!important}
+ .vendor-profile-hero{height:235px!important}.vendor-profile-info h1{font-size:23px!important}
+ .vendor-profile-cats .item{min-height:96px!important;padding:10px 0!important}.item .item-info b{font-size:15px!important}
+ .our-market-spotlight{padding:13px 12px;gap:9px;margin:10px 0;border-radius:16px}.market-spotlight-icon{font-size:28px}.market-spotlight-copy strong{font-size:18px}.market-spotlight-copy>span{font-size:11px}.market-spotlight-action{font-size:11px}
+}
+</style>
 </head>
 <body>
 <script>
@@ -976,6 +1000,11 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
   </div>
 </div>
 
+<button id="ourMarketSpotlight" type="button" class="our-market-spotlight" disabled onclick="openVendorProfile('06d76aea-1c94-5950-b621-22130e57ef75')" aria-label="Shop Our Market">
+  <span class="market-spotlight-icon" aria-hidden="true">🛍️</span>
+  <span class="market-spotlight-copy"><strong>Our Market</strong><span>Groceries &amp; daily essentials</span></span>
+  <span class="market-spotlight-action">Shop market <span aria-hidden="true">→</span></span>
+</button>
 <div class="quick-row" aria-label="Megjet categories">
   <div class="quick-chip">🍽️ Food</div>
   <div class="quick-chip">🍔 Meals</div>
@@ -2223,6 +2252,8 @@ function renderVendors(vendors,products){
     list.classList.add('hidden'); profile.classList.remove('hidden'); profile.scrollIntoView({behavior:'smooth',block:'start'});
     const si=$("vendorProfileSearch"); if(si)si.addEventListener('input',function(){const q=this.value.trim().toLowerCase();profile.querySelectorAll('.menu-category').forEach(cat=>{let any=false;cat.querySelectorAll('.item').forEach(item=>{const hit=!q||((item.textContent||'')+' '+(item.closest('.market-subsection')?.dataset.marketSection||'')).toLowerCase().includes(q);item.style.display=hit?'flex':'none';if(hit)any=true;});cat.querySelectorAll('.market-subsection').forEach(section=>{section.style.display=!q||Array.from(section.querySelectorAll('.item')).some(item=>item.style.display!=='none')?'':'none';});cat.style.display=any||!q?'block':'none';if(q&&any)cat.open=true;});});
   };
+  const marketSpotlight=document.getElementById('ourMarketSpotlight');
+  if(marketSpotlight)marketSpotlight.disabled=!vendors.some(v=>String(v.id)==='06d76aea-1c94-5950-b621-22130e57ef75');
   window.closeVendorProfile=function(){profile.classList.add('hidden');profile.innerHTML='';list.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});};
 }
 
@@ -4851,7 +4882,7 @@ async function loadGrowthHome(){
     const fv=Array.isArray(data?.featured_vendors)?data.featured_vendors.filter(x=>x.featured):[];
     let out="";
     if(promos.length) out+=`<div><div class="growth-offer-head"><h2 style="margin:0">🔥 Special offers</h2><span class="growth-view-all">Hot deals</span></div><div class="growth-strip">${promos.map(p=>`<div class="growth-card">${p.image_url?`<img src="${escapeHtml(p.image_url)}" alt="">`:``}<div class="growth-card-body"><h3>${escapeHtml(p.title||"Offer")}</h3><div class="muted">${escapeHtml(p.subtitle||"")}</div>${p.link_type==="coupon"&&p.link_value?`<div class="growth-badge" style="margin-top:8px">Code: ${escapeHtml(p.link_value)}</div>`:""}</div></div>`).join("")}</div></div>`;
-    if(fv.length) out+=`<div><div class="growth-section-head"><h2>🏪 Featured vendors</h2><span class="growth-view-all">View all →</span></div><div class="growth-feature-list">${fv.slice(0,8).map(v=>`<div class="growth-feature-row growth-feature-vendor">${v.image_url?`<img src="${escapeHtml(v.image_url)}" alt="${escapeHtml(v.name||"")}">`:`<div style="width:100%;height:92px;border-radius:12px;background:linear-gradient(135deg,#7b401c,#e18428);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px">☕</div>`}<div class="growth-feature-info"><b class="growth-feature-name">${escapeHtml(v.name||"Vendor")}</b><div class="growth-feature-meta">${escapeHtml(v.area||"Gazimagusa")} · ⭐ ${escapeHtml(String(v.rating??"New"))}</div></div><span class="growth-feature-arrow">›</span></div>`).join("")}</div></div>`;
+    if(fv.length) out+=`<div><div class="growth-section-head"><h2>🏪 Featured vendors</h2><button type="button" class="growth-view-all" onclick="closeVendorProfile();document.getElementById('vendors').scrollIntoView({behavior:'smooth'});">View all →</button></div><div class="growth-feature-list">${fv.slice(0,8).map(v=>`<button type="button" class="growth-feature-row growth-feature-vendor" onclick="openVendorProfile('${escapeHtml(v.id)}')" aria-label="Open ${escapeHtml(v.name||'vendor')}">${v.image_url?`<img src="${escapeHtml(v.image_url)}" alt="${escapeHtml(v.name||"")}">`:`<div style="width:100%;height:92px;border-radius:12px;background:linear-gradient(135deg,#7b401c,#e18428);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px">🏪</div>`}<div class="growth-feature-info"><b class="growth-feature-name">${escapeHtml(v.name||"Vendor")}</b><div class="growth-feature-meta">${escapeHtml(v.area||"Gazimagusa")} · ⭐ ${escapeHtml(String(v.rating??"New"))}</div></div><span class="growth-feature-arrow" aria-hidden="true">›</span></button>`).join("")}</div></div>`;
     box.innerHTML=out;
   }catch(e){console.warn("Growth home unavailable",e);}
 }
