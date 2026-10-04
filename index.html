@@ -1053,7 +1053,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
 </div>
 <div id="growthHome" class="growth-home"></div>
 <div class="section-title">
-  <h2>Popular near you</h2><span>Gazimagusa</span>
+  <h2>Explore local favourites</h2><span>Gazimagusa</span>
 </div>
 
   <div id="setup" class="card hidden">
@@ -1069,19 +1069,21 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
 <div id="vendorProfile" class="vendor-profile hidden"></div>
 
   <div id="checkout" class="card hidden">
-    <h2>Delivery details</h2>
-    <input id="customerName" placeholder="Your name">
-    <input id="phone" placeholder="Phone number">
+    <div class="mj-checkout-heading"><span class="mj-eyebrow">CHECKOUT</span><h2>Complete your order</h2><p>Review your items and delivery details.</p></div>
+    <section id="mjCheckoutSummary" aria-label="Order summary"><h3>Your order</h3><div id="mjCheckoutItems"></div><div class="row"><span>Subtotal</span><strong id="mjCheckoutSubtotal">₺ 0</strong></div></section>
+    <h3 class="mj-checkout-section-title">Delivery details</h3>
+    <div class="mj-checkout-contact"><label for="customerName">Full name<input id="customerName" placeholder="Your name"></label><label for="phone">Phone number<input id="phone" placeholder="Phone number"></label></div>
     <div id="savedAddressPicker" class="address-picker hidden">
       <select id="savedAddressSelect"><option value="">Use a saved address…</option></select>
       <div class="small">Choose a saved address or enter a new one below.</div>
     </div>
-    <textarea id="address" rows="3" placeholder="Delivery address in Gazimagusa"></textarea>
+    <label class="mj-checkout-address" for="address">Delivery address<textarea id="address" rows="3" placeholder="Street, building, floor and apartment in Gazimagusa"></textarea></label>
     <div class="payment-box"><b>💳 Payment</b><select id="paymentMethod"><option value="Cash on Delivery">Cash on Delivery</option><option value="Card at Doorstep (POS)">Card at Doorstep (POS)</option></select><div class="feature-small">Pay the rider at your door. For card, the rider brings a physical POS terminal; no card details are entered in the app.</div></div>
     <div class="payment-box"><b>🎟️ Coupon</b><div class="coupon-box"><input id="couponCode" placeholder="Coupon code" autocomplete="off"><button id="applyCoupon" class="secondary" type="button">Apply</button></div><div id="couponMessage" class="coupon-message"></div></div>
     <div class="row"><span>Discount</span><span id="checkoutDiscount">₺ 0</span></div>
     <div class="row"><span>Delivery</span><span id="checkoutDelivery">₺0</span></div>
     <div class="row total"><span>Payable Total</span><span id="checkoutTotal">₺0</span></div>
+    <p class="mj-checkout-review-note">Check your address and phone number before placing your order.</p>
     <button id="placeOrder">Place order</button>
     <div id="orderMessage" class="small"></div>
   </div>
@@ -2242,10 +2244,10 @@ function renderVendors(vendors,products){
     const photoClass=isSweetHoles?'product-image-admin sweetholes-product-photo':(isCafe5?'product-image-admin cafe5-product-photo':'product-image-admin');
     const infoClass=isSweetHoles?'item-info sweetholes-product-info':'item-info';
     const illustrativeImage=String(productImage).includes('/our-market/illustrations/');
-    const productPhoto=`<img class="${photoClass}" src="${escapeHtml(productImage)}" alt="${escapeHtml((illustrativeImage?'Illustrative image of ':'')+(visibleName||'Product'))}">`;
+    const productPhoto=`<img class="${photoClass}" src="${escapeHtml(productImage)}" loading="lazy" decoding="async" alt="${escapeHtml((illustrativeImage?'Illustrative image of ':'')+(visibleName||'Product'))}">`;
     const productPhotoMarkup=illustrativeImage?`<span style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">${productPhoto}<small style="font-size:9px;line-height:12px;color:#666">Illustrative image</small></span>`:productPhoto;
     if(v.coming_soon)return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0">${productPhotoMarkup}<div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="coming-soon-price">Products and prices coming soon</div></div></div><button type="button" class="coming-soon-button" disabled>Coming Soon</button></div>`;
-    return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0">${productPhotoMarkup}<div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-button" data-megjet-add-id="${registerMegjetCartProduct(item)}" onclick="return window.MEGJET_ADD_FROM_BUTTON(this,event);"${v.accepting_orders===false?' disabled':''}>${v.accepting_orders===false?'Temporarily closed':'Add'}</button></div></div>`;
+    return `<div class="item"><div class="${infoClass}" data-menu-product-id="${escapeHtml(p.id)}" style="display:flex;gap:10px;align-items:center;min-width:0">${productPhotoMarkup}<div><b>${escapeHtml(visibleName)}</b><div class="muted">${escapeHtml(visibleDescription)}</div><div class="price">${money(p.price)}</div></div></div><div class="account-mini-actions"><button class="fav-btn" data-product-id="${escapeHtml(p.id)}" onclick='toggleFavorite(${JSON.stringify(item).replace(/'/g,"&#39;")})'>♡</button><button type="button" class="megjet-add-button" data-megjet-add-id="${registerMegjetCartProduct(item)}" onclick="return window.MEGJET_ADD_FROM_BUTTON(this,event);"${v.accepting_orders===false?' disabled':''}>${v.accepting_orders===false?'Temporarily closed':'Add +'}</button></div></div>`;
   }
   function renderCategory(name,items,v){
     if(!items.length)return "";
@@ -2286,7 +2288,7 @@ function renderVendors(vendors,products){
     const hours=hoursFor(v);
     const phone=String(v.phone||'');
     const rating=v.rating||'New';
-    profile.innerHTML=`<div class="vendor-profile-hero" style="background-image:url('${escapeHtml(hero)}')"><button class="vendor-profile-back" onclick="closeVendorProfile()">‹</button><div class="vendor-profile-actions"><button title="Search" onclick="document.getElementById('vendorProfileSearch').focus()">⌕</button><button title="Cart" onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">🛒</button></div><div class="vendor-profile-info"><h1>${escapeHtml(v.name)}</h1><div class="vendor-profile-meta"><span>⭐ ${escapeHtml(rating)}</span><span>📍 ${escapeHtml(v.area||'Gazimagusa')}</span><span>🕐 ${v.preparation_minutes?escapeHtml(v.preparation_minutes)+' min':'Prep time not provided'}</span></div></div></div><div class="vendor-profile-body">${(logo||desc||map||phone||hours)?`<div class="vendor-profile-intro">${logo?`<img class="vendor-profile-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-profile-logo" style="display:flex;align-items:center;justify-content:center;background:#edf9fd;font-size:25px;font-weight:900;color:#0878bd">${escapeHtml(String(v.name||'M').slice(0,1))}</div>`}<div><div class="vendor-profile-description" data-no-translate data-original-bio="${escapeHtml(desc)}" data-bio-en="${escapeHtml(v.bio_translation_source===v.bio?v.bio_en||'':'')}" data-bio-tr="${escapeHtml(v.bio_translation_source===v.bio?v.bio_tr||'':'')}">${escapeHtml(window.MEGJET_BIO_LOCALE?.(v,desc)||desc||'Local restaurant on Megjet.')}</div><div class="vendor-profile-links">${map?`<a href="${map}" target="_blank" rel="noopener">📍 Maps</a>`:''}${phone?`<a href="tel:${escapeHtml(phone)}">☎ ${escapeHtml(phone)}</a>`:''}${hours?`<span class="vendor-profile-links" style="margin:0"><a href="#">🕐 ${escapeHtml(hours)}</a></span>`:''}</div></div></div>`:''}<div class="vendor-profile-toolbar"><input id="vendorProfileSearch" placeholder="Search this menu…"><button class="secondary" onclick="closeVendorProfile()">All restaurants</button></div><div class="vendor-profile-cats">${cats.map(c=>renderCategory(c,groups[c],v)).join('')||'<div class="vendor-profile-empty muted">No available products yet.</div>'}</div></div>`;
+    profile.innerHTML=`<div class="vendor-profile-hero" style="background-image:url('${escapeHtml(hero)}')"><button class="vendor-profile-back" onclick="closeVendorProfile()">‹</button><div class="vendor-profile-actions"><button title="Search" onclick="document.getElementById('vendorProfileSearch').focus()">⌕</button><button title="Cart" onclick="document.getElementById('checkout').scrollIntoView({behavior:'smooth'})">🛒</button></div><div class="vendor-profile-info"><h1>${escapeHtml(v.name)}</h1><div class="vendor-profile-meta"><span>⭐ ${escapeHtml(rating)}</span><span>📍 ${escapeHtml(v.area||'Gazimagusa')}</span><span>🕐 ${v.preparation_minutes?escapeHtml(v.preparation_minutes)+' min preparation':'Preparation time unavailable'}</span><span>${escapeHtml(money(Number(DELIVERY)))} delivery</span><span>${escapeHtml(hours||'Hours not listed')}</span></div></div></div><div class="vendor-profile-body">${(logo||desc||map||phone||hours)?`<div class="vendor-profile-intro">${logo?`<img class="vendor-profile-logo" src="${logo}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-profile-logo" style="display:flex;align-items:center;justify-content:center;background:#edf9fd;font-size:25px;font-weight:900;color:#0878bd">${escapeHtml(String(v.name||'M').slice(0,1))}</div>`}<div><div class="vendor-profile-description" data-no-translate data-original-bio="${escapeHtml(desc)}" data-bio-en="${escapeHtml(v.bio_translation_source===v.bio?v.bio_en||'':'')}" data-bio-tr="${escapeHtml(v.bio_translation_source===v.bio?v.bio_tr||'':'')}">${escapeHtml(window.MEGJET_BIO_LOCALE?.(v,desc)||desc||'Local restaurant on Megjet.')}</div><div class="vendor-profile-links">${map?`<a href="${map}" target="_blank" rel="noopener">📍 Maps</a>`:''}${phone?`<a href="tel:${escapeHtml(phone)}">☎ ${escapeHtml(phone)}</a>`:''}${hours?`<span class="vendor-profile-links" style="margin:0"><a href="#">🕐 ${escapeHtml(hours)}</a></span>`:''}</div></div></div>`:''}<div class="vendor-profile-toolbar"><input id="vendorProfileSearch" placeholder="Search this menu…"><button class="secondary" onclick="closeVendorProfile()">All restaurants</button></div><nav class="vendor-profile-category-nav" aria-label="Menu categories">${cats.map((c,i)=>`<button type="button" data-jump-category="${i}">${escapeHtml(window.MEGJET_MENU_LOCALE?.category(c,v.id)||c)}</button>`).join('')}</nav><div class="vendor-profile-cats">${cats.map(c=>renderCategory(c,groups[c],v)).join('')||'<div class="vendor-profile-empty muted">No available products yet.</div>'}</div></div>`;
     if(v.accepting_orders===false)profile.querySelector('.vendor-profile-body')?.insertAdjacentHTML('afterbegin','<div id="megjetClosedNotice" class="coming-soon-notice" role="status">Temporarily closed. You can browse the menu; new orders are paused.</div>');
     if(v.coming_soon){const body=profile.querySelector('.vendor-profile-body');if(body)body.insertAdjacentHTML('afterbegin','<div class="coming-soon-notice"><b>🍺 Alcohol Market is coming soon</b><br>You can browse the planned categories, but ordering and checkout are disabled until Megjet connects a licensed Gazimagusa market. Age and ID verification will be required when ordering is activated.</div>');}
     list.classList.add('hidden'); profile.classList.remove('hidden'); profile.scrollIntoView({behavior:'smooth',block:'start'});
@@ -4890,7 +4892,7 @@ async function loadGrowthHome(){
     const box=$("growthHome");if(!box)return;
     window.MEGJET_GROWTH_HOME=data; window.dispatchEvent(new Event("megjet-growth-ready"));
     const promos=Array.isArray(data?.promotions)?data.promotions:[];
-    const fv=Array.isArray(data?.featured_vendors)?data.featured_vendors.filter(x=>x.featured).map(v=>({...v,image_url:v.image_url||(window.MEGJET_VENDOR_DATA?.vendors||[]).find(x=>String(x.id)===String(v.id))?.logo_url})):[];
+    const fv=Array.isArray(data?.featured_vendors)?data.featured_vendors.filter(x=>x.featured&&String(x.id)!=='06d76aea-1c94-5950-b621-22130e57ef75').map(v=>({...v,image_url:v.image_url||(window.MEGJET_VENDOR_DATA?.vendors||[]).find(x=>String(x.id)===String(v.id))?.logo_url})):[];
     let out="";
     if(promos.length) out+=`<div><div class="growth-offer-head"><h2 style="margin:0">🔥 Special offers</h2><span class="growth-view-all">Hot deals</span></div><div class="growth-strip">${promos.map(p=>`<div class="growth-card">${p.image_url?`<img src="${escapeHtml(p.image_url)}" alt="">`:``}<div class="growth-card-body"><h3>${escapeHtml(p.title||"Offer")}</h3><div class="muted">${escapeHtml(p.subtitle||"")}</div>${p.link_type==="coupon"&&p.link_value?`<div class="growth-badge" style="margin-top:8px">Code: ${escapeHtml(p.link_value)}</div>`:""}</div></div>`).join("")}</div></div>`;
     if(fv.length) out+=`<div><div class="growth-section-head"><h2>🏪 Featured vendors</h2><button type="button" class="growth-view-all" onclick="closeVendorProfile();document.getElementById('vendors').scrollIntoView({behavior:'smooth'});">View all →</button></div><div class="growth-feature-list">${fv.slice(0,8).map(v=>`<button type="button" class="growth-feature-row growth-feature-vendor" onclick="openVendorProfile('${escapeHtml(v.id)}')" aria-label="Open ${escapeHtml(v.name||'vendor')}">${v.image_url?`<img src="${escapeHtml(v.image_url)}" alt="${escapeHtml(v.name||"")}">`:`<div style="width:100%;height:92px;border-radius:12px;background:linear-gradient(135deg,#7b401c,#e18428);display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px">🏪</div>`}<div class="growth-feature-info"><b class="growth-feature-name">${escapeHtml(v.name||"Vendor")}</b><div class="growth-feature-meta">${escapeHtml(v.area||"Gazimagusa")} · ⭐ ${escapeHtml(String(v.rating??"New"))}</div></div><span class="growth-feature-arrow" aria-hidden="true">›</span></button>`).join("")}</div></div>`;
@@ -5649,9 +5651,11 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./assets/operations.js?v=2"></script>
 <script src="./assets/menu-photo-preview.js?v=1"></script>
 <script src="./assets/menu-options.js?v=2"></script>
-<link rel="stylesheet" href="./assets/discovery.css?v=3">
+<link rel="stylesheet" href="./assets/discovery.css?v=4">
 <script>window.megjetCustomerDiscoveryState=()=>({signedIn:!!customerAuthUser,addresses:customerAuthUser?customerSavedAddresses:[],orders:customerAuthUser?(window._customerHistoryOrders||[]):[],fee:Number(DELIVERY)});</script>
 <script src="./assets/discovery-core.js?v=1"></script>
-<script src="./assets/discovery.js?v=3"></script>
+<script src="./assets/discovery.js?v=4"></script>
+<link rel="stylesheet" href="./assets/customer-polish.css?v=1">
+<script src="./assets/customer-polish.js?v=1"></script>
 </body>
 </html>
