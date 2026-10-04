@@ -12822,6 +12822,112 @@
       "image_url": "./assets/our-market/products/8771416e-e7d6-514c-b85c-23bd84eb64e0.jpg",
       "kind": "real-product-photo",
       "status": "ready"
+    },
+    {
+      "id": "9438af25-fa05-5c4e-bbd1-9c3d1acf69ad",
+      "name": "Dalan Traditional Pure Olive Oil Soap (4 x 150 gr.)",
+      "match": "Dalan Pure Olive Oil Soap (Beyaz Sabun Zeytinyağlı) 4x150g",
+      "source": "https://turkishplaza.com/products/dalan-pure-olive-oil-soap-beyaz-sabun-zeytinyagli-4x150g",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/products/29200034-974c35-1650x1650.jpg?v=1606476952",
+      "score": 0.734375,
+      "path": "assets/our-market/products/9438af25-fa05-5c4e-bbd1-9c3d1acf69ad.jpg",
+      "image_url": "./assets/our-market/products/9438af25-fa05-5c4e-bbd1-9c3d1acf69ad.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "0a6ab0fd-398e-553d-aab3-3b248748149b",
+      "name": "Nestlé Nesfit Granola with Pumpkin Seeds and Cranberries (300 gr)",
+      "match": "Nestle Nesfit Pumpkin Seed and Cranberry Granola (Yulaf & Kabak Çekirdeği & Cranberry) 300g",
+      "source": "https://turkishplaza.com/products/nestle-nesfit-granola-corn-pumpkin-seed-yulaf-kabak-cekirdegi-cranberry-300g",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/products/05099124-14328e-1650x1650.jpg?v=1606221376",
+      "score": 0.575,
+      "path": "assets/our-market/products/0a6ab0fd-398e-553d-aab3-3b248748149b.jpg",
+      "image_url": "./assets/our-market/products/0a6ab0fd-398e-553d-aab3-3b248748149b.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "eceb14e6-0c96-5a86-adc8-b59bd44c30ba",
+      "name": "Kellogg's Choco Pops (700 gr.)",
+      "match": "Kellogg's Cocopops 700g",
+      "source": "https://turkishplaza.com/products/ulker-kelloggs-cocopops-700g",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/products/05098290-145da7-1650x1650.jpg?v=1594763731",
+      "score": 0.5642105263157895,
+      "path": "assets/our-market/products/eceb14e6-0c96-5a86-adc8-b59bd44c30ba.jpg",
+      "image_url": "./assets/our-market/products/eceb14e6-0c96-5a86-adc8-b59bd44c30ba.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "de614277-b82f-5bce-ba8e-da4fbebb7ec7",
+      "name": "Knorr Tomato Soup with Vermicelli and Chicken (67 gr.)",
+      "match": "Knorr Chicken and Tomato Noodle Soup (Şehriyeli Tavuklu Domates Çorbası) 67g",
+      "source": "https://turkishplaza.com/products/knorr-chicken-and-tomato-noodle-soup-sehriyeli-tavuklu-domates-corbasi-67g",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/files/3_3478364b-d059-4606-a073-675a52aa36d9.jpg?v=1763452993",
+      "score": 0.5634259259259259,
+      "path": "assets/our-market/products/de614277-b82f-5bce-ba8e-da4fbebb7ec7.jpg",
+      "image_url": "./assets/our-market/products/de614277-b82f-5bce-ba8e-da4fbebb7ec7.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "a9f528c0-5310-502b-ac01-6d2d68d157ce",
+      "name": "Torku Wholegrain Chocolate Biscuits (252 gr.)",
+      "match": "Torku Whole Wheat Chocolate Biscuits (Tam Ruşeymli Çikolata Kaplamalı Bisküvi) 3X84g",
+      "source": "https://turkishplaza.com/products/torku-whole-wheat-chocolate-biscuit-tam-ruseymli-cikolata-kaplamali-biskuvi-3x84g",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/products/07019120-06fe2f-1650x1650.jpg?v=1606977676",
+      "score": 0.5547945205479451,
+      "path": "assets/our-market/products/a9f528c0-5310-502b-ac01-6d2d68d157ce.jpg",
+      "image_url": "./assets/our-market/products/a9f528c0-5310-502b-ac01-6d2d68d157ce.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "85bb04f0-5390-528c-9a2a-ad6aa555ee25",
+      "name": "Nesquik Cocoa Whole Grain Bar (25 gr)",
+      "match": "Nesquik Bar 25g",
+      "source": "https://turkishplaza.com/products/nesquik-bar-25g",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/files/1_fafbf607-e8f8-4c02-b531-45fbfc42a115.jpg?v=1744809093",
+      "score": 0.44499999999999995,
+      "path": "assets/our-market/products/85bb04f0-5390-528c-9a2a-ad6aa555ee25.jpg",
+      "image_url": "./assets/our-market/products/85bb04f0-5390-528c-9a2a-ad6aa555ee25.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "08186bf1-0c54-561d-b629-2f0b4e5d2383",
+      "name": "Loofah (Standard)",
+      "match": "Loofah Bath Loofa (Banyo Lifi)",
+      "source": "https://turkishplaza.com/products/loofah-banyo-lifi",
+      "url": "https://cdn.shopify.com/s/files/1/0413/1107/6505/products/34540637-9b24e6-1650x1650.jpg?v=1598629023",
+      "score": 0.38985507246376805,
+      "path": "assets/our-market/products/08186bf1-0c54-561d-b629-2f0b4e5d2383.jpg",
+      "image_url": "./assets/our-market/products/08186bf1-0c54-561d-b629-2f0b4e5d2383.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "27af5e30-e1ce-5848-bcaf-2c8c26b96e11",
+      "name": "Ülker İçim Fit Chocolate Milk (400 ml)",
+      "description": "[Fit & Form] [Fit Drinks] 400 ml",
+      "source": "https://mopas.com.tr/icim-sut-fit-cikolatali-400-ml/p/869011",
+      "url": "https://cdnprod.mopas.com.tr/sys-master-mopascdncontainer/h46/h94/9065190031390/869011_0_521Wx521H",
+      "path": "assets/our-market/products/27af5e30-e1ce-5848-bcaf-2c8c26b96e11.jpg",
+      "image_url": "./assets/our-market/products/27af5e30-e1ce-5848-bcaf-2c8c26b96e11.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "3d338caa-97b8-5f19-9ff5-2272bb3a6c5d",
+      "name": "Long Chip Truffle (75 gr.)",
+      "description": "[Snacks] [Chips, Crackers & Savory Snacks] 75 gr.",
+      "source": "https://www.kismetsarkuteri.com/tr/long-chips-mashed-potato-snack-truffle-flavoured-75g",
+      "url": "https://www.kismetsarkuteri.com/cache/upload/images/xml/3462ed75745467a7ac0d2bcd495dea6b-680x680.jpg",
+      "path": "assets/our-market/products/3d338caa-97b8-5f19-9ff5-2272bb3a6c5d.jpg",
+      "image_url": "./assets/our-market/products/3d338caa-97b8-5f19-9ff5-2272bb3a6c5d.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
     }
   ]
 }
