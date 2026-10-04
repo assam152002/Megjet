@@ -1447,7 +1447,7 @@ window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
                 <div class="full"><input id="growthPromoImage" placeholder="Image URL (optional)"></div>
                 <div><select id="growthPromoLinkType" style="width:100%;padding:13px;border:1px solid #ddd;border-radius:11px;font:inherit"><option value="none">No link</option><option value="product">Product ID</option><option value="vendor">Vendor ID</option><option value="coupon">Coupon code</option></select></div>
                 <div><input id="growthPromoLinkValue" placeholder="Link value (optional)"></div>
-                <div><input id="growthPromoSort" type="number" value="0" placeholder="Sort order"></div>
+                <div><label>Starts (local time)<input id="growthPromoStart" type="datetime-local"></label></div><div><label>Ends (local time)<input id="growthPromoEnd" type="datetime-local"></label></div><div><input id="growthPromoSort" type="number" value="0" placeholder="Sort order"></div>
               </div>
               <label style="display:flex;align-items:center;gap:8px;margin:10px 0"><input id="growthPromoActive" type="checkbox" checked style="width:auto;margin:0"> Active now</label>
               <button id="growthPromoSave" type="button">Create Promotion</button>
@@ -2293,41 +2293,9 @@ function renderVendors(vendors,products){
   const marketSpotlight=document.getElementById('ourMarketSpotlight');
   if(marketSpotlight)marketSpotlight.disabled=!vendors.some(v=>String(v.id)==='06d76aea-1c94-5950-b621-22130e57ef75');
   window.closeVendorProfile=function(){profile.classList.add('hidden');profile.innerHTML='';list.classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});};
+  window.dispatchEvent(new Event('megjet-vendors-ready'));
 }
 
-
-// Customer home search: filters the already-loaded vendor/menu cards only.
-// It does not change Supabase data or the existing ordering workflow.
-(function(){
-  const input=document.getElementById("customerSearch");
-  if(!input)return;
-  input.addEventListener("input",function(){
-    const q=this.value.trim().toLowerCase();
-    document.querySelectorAll("#vendors .vendor").forEach(card=>{
-      let visible=false;
-      card.querySelectorAll(".menu-category").forEach(cat=>{
-        let catVisible=false;
-        cat.querySelectorAll(".item").forEach(item=>{
-          const text=(item.textContent||"").toLowerCase();
-          const match=!q||text.includes(q);
-          item.style.display=match?"flex":"none";
-          if(match)catVisible=true;
-        });
-        if(q && catVisible) cat.open=true;
-        if(q && !catVisible) cat.open=false;
-        if(!q) cat.querySelectorAll(".item").forEach(item=>item.style.display="flex");
-        if(catVisible) visible=true;
-      });
-      const vendorText=(card.querySelector("h2")?.textContent||"").toLowerCase();
-      if(!q || vendorText.includes(q)) {
-        card.style.display="";
-        if(q && !visible) card.querySelectorAll(".item").forEach(item=>item.style.display="flex");
-      } else {
-        card.style.display=visible?"":"none";
-      }
-    });
-  });
-})();
 
 $("connectBtn").onclick=()=>{
   const u=$("url").value.trim(),k=$("key").value.trim();
@@ -2638,7 +2606,7 @@ async function loadCustomerOrderHistory(){
       body:JSON.stringify({})
     });
     const matches=Array.isArray(rpcResult)?rpcResult:[];
-    window._customerHistoryOrders=matches;
+    window._customerHistoryOrders=matches; window.dispatchEvent(new Event("megjet-history-ready"));
     if(!matches.length){
       $("historyMessage").textContent="No orders found in this account.";
       return;
@@ -4916,6 +4884,7 @@ async function loadGrowthHome(){
   try{
     const data=await fetchJson(cfg.url.replace(/\/+$/,'')+"/rest/v1/rpc/get_growth_home",{method:"POST",headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key,"Content-Type":"application/json"},body:"{}"});
     const box=$("growthHome");if(!box)return;
+    window.MEGJET_GROWTH_HOME=data; window.dispatchEvent(new Event("megjet-growth-ready"));
     const promos=Array.isArray(data?.promotions)?data.promotions:[];
     const fv=Array.isArray(data?.featured_vendors)?data.featured_vendors.filter(x=>x.featured).map(v=>({...v,image_url:v.image_url||(window.MEGJET_VENDOR_DATA?.vendors||[]).find(x=>String(x.id)===String(v.id))?.logo_url})):[];
     let out="";
@@ -4961,14 +4930,17 @@ async function loadGrowthAdmin(){
 }
 async function saveGrowthPromotion(){
   const title=$("growthPromoTitle").value.trim(); if(!title){$("growthPromoMessage").textContent="Enter a promotion title.";return;}
+  const start=$("growthPromoStart").value?new Date($("growthPromoStart").value).toISOString():null;
+  const end=$("growthPromoEnd").value?new Date($("growthPromoEnd").value).toISOString():null;
+  if(start&&end&&end<=start){$("growthPromoMessage").textContent="End time must be after start time.";return;}
   try{
     await adminRequest("/rest/v1/rpc/admin_save_promotion",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({
       p_id:null,p_title:title,p_subtitle:$("growthPromoSubtitle").value.trim()||null,p_image_url:$("growthPromoImage").value.trim()||null,
       p_link_type:$("growthPromoLinkType").value,p_link_value:$("growthPromoLinkValue").value.trim()||null,p_active:$("growthPromoActive").checked,
-      p_starts_at:null,p_ends_at:null,p_sort_order:Number($("growthPromoSort").value||0)
+      p_starts_at:start,p_ends_at:end,p_sort_order:Number($("growthPromoSort").value||0)
     })});
     $("growthPromoMessage").textContent="✓ Promotion created.";
-    ["growthPromoTitle","growthPromoSubtitle","growthPromoImage","growthPromoLinkValue"].forEach(id=>$(id).value="");
+    ["growthPromoTitle","growthPromoSubtitle","growthPromoImage","growthPromoLinkValue","growthPromoStart","growthPromoEnd"].forEach(id=>$(id).value="");
     await loadGrowthAdmin(); await loadGrowthHome();
   }catch(e){$("growthPromoMessage").textContent="Could not create promotion: "+e.message;}
 }
@@ -5633,12 +5605,12 @@ document.addEventListener("DOMContentLoaded",function(){
   function portalOpen(){return ['admin','vendor','rider'].some(id=>{const e=$(id);if(!e)return false;const s=getComputedStyle(e);return !e.classList.contains('hidden')&&s.display!=='none'&&s.visibility!=='hidden'})}
   function toast(msg){let e=$('mjCustomerToast');if(!e){e=document.createElement('div');e.id='mjCustomerToast';e.setAttribute('role','status');e.setAttribute('aria-live','polite');document.body.appendChild(e)}e.textContent=msg;e.classList.add('show');clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove('show'),1400)}
   function scrollToEl(el){if(!el)return;el.scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>{try{el.focus({preventScroll:true})}catch(e){}},350)}
-  function makeNav(){if($('mjCustomerNav'))return;const n=document.createElement('nav');n.id='mjCustomerNav';n.setAttribute('aria-label','Customer navigation');n.innerHTML='<button type="button" data-mj-nav="home"><span class="mj-i">⌂</span><span>Home</span></button><button type="button" data-mj-nav="search"><span class="mj-i">⌕</span><span>Search</span></button><button type="button" data-mj-nav="orders"><span class="mj-i">▤</span><span>Orders</span></button><button type="button" data-mj-nav="account"><span class="mj-i">♙</span><span>Account</span></button><button type="button" data-mj-nav="cart"><span class="mj-i">🛒</span><span>Cart</span><b id="mjNavCartBadge" hidden>0</b></button>';document.body.appendChild(n)}
+  function makeNav(){if($('mjCustomerNav'))return;const n=document.createElement('nav');n.id='mjCustomerNav';n.setAttribute('aria-label','Customer navigation');n.innerHTML='<button type="button" data-mj-nav="home"><span class="mj-i">⌂</span><span>Home</span></button><button type="button" data-mj-nav="search"><span class="mj-i">⌕</span><span>Search</span></button><button type="button" data-mj-nav="shops"><span class="mj-i">▤</span><span>Shops</span></button><button type="button" data-mj-nav="account"><span class="mj-i">♙</span><span>Account</span></button><button type="button" data-mj-nav="cart"><span class="mj-i">🛒</span><span>Cart</span><b id="mjNavCartBadge" hidden>0</b></button>';document.body.appendChild(n)}
   function net(){let e=$('mjCustomerStatus');if(!e){e=document.createElement('div');e.id='mjCustomerStatus';e.innerHTML='<i></i><span></span>';document.body.appendChild(e)}const on=navigator.onLine;e.classList.toggle('offline',!on);e.querySelector('span').textContent=on?'Online':'Offline'}
   function menuUX(){const ds=document.querySelectorAll('details.menu-category');if(ds.length&&!Array.from(ds).some(d=>d.open))ds[0].open=true;document.querySelectorAll('.megjet-add-button').forEach(b=>{b.style.setProperty('min-height','42px','important');b.style.setProperty('min-width','58px','important')})}
   function checkoutUX(){const n=$('customerName'),p=$('phone'),a=$('address'),pay=$('paymentMethod');if(n){n.required=true;n.autocomplete='name'}if(p){p.required=true;p.inputMode='tel';p.autocomplete='tel'}if(a){a.required=true;a.autocomplete='street-address'}if(pay)pay.required=true;const btn=$('placeOrder');if(btn){btn.setAttribute('aria-label','Place your Megjet order');btn.style.minHeight='48px'}}
   function sync(){makeNav();net();menuUX();checkoutUX();const n=$('mjCustomerNav');if(n)n.classList.toggle('mj-hide',portalOpen());const c=$('count');const b=$('mjNavCartBadge');if(b){const m=(c&&c.textContent.match(/\d+/));const q=m?Number(m[0]):0;b.textContent=q>99?'99+':q;b.hidden=!q}}
-  document.addEventListener('click',e=>{if(e.target.closest('.vendor-view'))setTimeout(menuUX,500);const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home')window.scrollTo({top:0,behavior:'smooth'});if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
+  document.addEventListener('click',e=>{if(e.target.closest('.vendor-view'))setTimeout(menuUX,500);const nav=e.target.closest&&e.target.closest('[data-mj-nav]');if(nav){const a=nav.dataset.mjNav;if(a==='home'){window.MEGJET_DISCOVERY?.setView('all');window.closeVendorProfile?.();window.scrollTo({top:0,behavior:'smooth'});}if(a==='shops'){window.MEGJET_DISCOVERY?.setView('shops');scrollToEl($('discoveryTools'));}if(a==='search')scrollToEl($('customerSearch'));if(a==='orders')scrollToEl($('lookupOrderNumber'));if(a==='account')$('customerAccountOpen')?.click();if(a==='cart'){const box=$('cartBox');if(!box||box.classList.contains('hidden'))toast('Your cart is empty');else $('cartToggle')?.click()}return}const add=e.target.closest&&e.target.closest('[data-megjet-add-id]');if(add)setTimeout(()=>{sync();toast('Added to cart ✓')},80)},true)
   let syncQueued=false;const mo=new MutationObserver(()=>{if(syncQueued)return;syncQueued=true;requestAnimationFrame(()=>{syncQueued=false;sync()})});
   function init(){makeNav();sync();['admin','vendor','rider','count','cartBadge'].forEach(id=>{const e=$(id);if(e)mo.observe(e,{attributes:true,childList:true,subtree:true,characterData:true})});window.addEventListener('pageshow',sync);window.addEventListener('online',sync);window.addEventListener('offline',sync)}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init()
@@ -5673,5 +5645,9 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./assets/operations.js?v=2"></script>
 <script src="./assets/menu-photo-preview.js?v=1"></script>
 <script src="./assets/menu-options.js?v=2"></script>
+<link rel="stylesheet" href="./assets/discovery.css?v=1">
+<script>window.megjetCustomerDiscoveryState=()=>({signedIn:!!customerAuthUser,addresses:customerAuthUser?customerSavedAddresses:[],orders:customerAuthUser?(window._customerHistoryOrders||[]):[],fee:Number(DELIVERY)});</script>
+<script src="./assets/discovery-core.js?v=1"></script>
+<script src="./assets/discovery.js?v=1"></script>
 </body>
 </html>
