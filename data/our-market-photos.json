@@ -10787,6 +10787,102 @@
       "image_url": "./assets/our-market/products/f1cd4e4a-8ac5-560c-a4f0-4911aee5105c.jpg",
       "kind": "real-product-photo",
       "status": "ready"
+    },
+    {
+      "id": "42bd4c25-3ba4-58b9-849e-0b46a60f7039",
+      "name": "Go On Protein Crisp Cookies & Caramel (50 gr)",
+      "match": "Protein Crisp Cookies & Caramel GO ON 50 g",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2023/02/sante-go-on-protein-crisp-cookies-caramel-50g.jpg",
+      "source": "https://www.sarpermarket.com/urunler/protein-crisp-cookies-caramel-go-on-50-g/",
+      "score": 0.948,
+      "path": "assets/our-market/products/42bd4c25-3ba4-58b9-849e-0b46a60f7039.jpg",
+      "image_url": "./assets/our-market/products/42bd4c25-3ba4-58b9-849e-0b46a60f7039.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "1904400f-0e43-5481-bdae-48997ee015a6",
+      "name": "McVitie's Dark Chocolate Digestive (200 gr)",
+      "match": "Dark chocolate – McVitie’s – 200g",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2021/10/front_fr.34.full_.jpg",
+      "source": "https://www.sarpermarket.com/urunler/dark-chocolate-mcvities-200g/",
+      "score": 0.807,
+      "path": "assets/our-market/products/1904400f-0e43-5481-bdae-48997ee015a6.jpg",
+      "image_url": "./assets/our-market/products/1904400f-0e43-5481-bdae-48997ee015a6.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "d0ec9a80-7c77-5408-b9c0-635240c17215",
+      "name": "Doyfarm Chicken Salami (380 gr.)",
+      "match": "SENPILIC PILIC SALAM DOYFARM 380GR",
+      "url": "https://www.unimarmarket.com/Content/images/Sayfalar/Resimler/3489d3c4-5bb6-4219-a7de-cb1d95ce70c3.jpg",
+      "source": "https://www.unimarmarket.com/Urun/senpilic_pilic_salam_doyfarm_380gr",
+      "score": 0.768,
+      "path": "assets/our-market/products/d0ec9a80-7c77-5408-b9c0-635240c17215.jpg",
+      "image_url": "./assets/our-market/products/d0ec9a80-7c77-5408-b9c0-635240c17215.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "3e2aa6ff-bdde-587e-bbce-1b201f8bffea",
+      "name": "Nesfit Caramel Full Goed Bar (23.5 gr)",
+      "match": "NESTLE NESFIT KARAMELLI BAR 23,5GR",
+      "url": "https://www.kibrissanalmarket.com/wp-content/uploads/2023/05/5900020033246.jpg",
+      "source": "https://www.kibrissanalmarket.com/urunler/nestle-nesfit-karamelli-bar-235gr/",
+      "score": 0.667,
+      "path": "assets/our-market/products/3e2aa6ff-bdde-587e-bbce-1b201f8bffea.jpg",
+      "image_url": "./assets/our-market/products/3e2aa6ff-bdde-587e-bbce-1b201f8bffea.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "caf00348-2f4d-5742-9640-dd03719941a6",
+      "name": "Doyfarm Chicken Sausage (250 gr.)",
+      "match": "SENPILIC DOYFARM PILIC SUCUK 250GR",
+      "url": "https://www.kibrissanalmarket.com/wp-content/uploads/2022/02/8696415319893-1.jpg",
+      "source": "https://www.kibrissanalmarket.com/urunler/senpilic-sucuk-250gr/",
+      "score": 0.63,
+      "path": "assets/our-market/products/caf00348-2f4d-5742-9640-dd03719941a6.jpg",
+      "image_url": "./assets/our-market/products/caf00348-2f4d-5742-9640-dd03719941a6.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "b6f35a81-27fa-5bf6-95b9-0247c01414ca",
+      "name": "Dessert Spoon (6 pcs.)",
+      "match": "6PCS DESSERT SPOONS",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2023/02/tatlı-kaşığı-12li.jpg",
+      "source": "https://www.sarpermarket.com/urunler/6-li-tatli-kasigi/",
+      "score": 0.612,
+      "path": "assets/our-market/products/b6f35a81-27fa-5bf6-95b9-0247c01414ca.jpg",
+      "image_url": "./assets/our-market/products/b6f35a81-27fa-5bf6-95b9-0247c01414ca.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "c671038b-6f06-5ddd-a7b7-5dbe64ae4be6",
+      "name": "Covex Antibacterial Soap (115 gr.)",
+      "match": "DALAN COVEX ANTBKTRIEL SABUN 115GR AKTIF",
+      "url": "https://www.unimarmarket.com/Content/images/Sayfalar/Resimler/2dfd7ea7-f503-46e0-8642-f4c7d2f57591.jpeg",
+      "source": "https://www.unimarmarket.com/Urun/dalan_covex_antbktriel_sabun_115gr_aktif",
+      "score": 0.579,
+      "path": "assets/our-market/products/c671038b-6f06-5ddd-a7b7-5dbe64ae4be6.jpg",
+      "image_url": "./assets/our-market/products/c671038b-6f06-5ddd-a7b7-5dbe64ae4be6.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
+    },
+    {
+      "id": "ec29e070-0f97-57fa-aeb0-e46bad92fcc5",
+      "name": "Bizim Butter (250 gr.)",
+      "match": "Ülker Bizim Kase 250 G",
+      "url": "https://www.sarpermarket.com/wp-content/uploads/2020/06/8691375608506.jpg",
+      "source": "https://www.sarpermarket.com/urunler/ulker-bizim-kase-250-g/",
+      "score": 0.552,
+      "path": "assets/our-market/products/ec29e070-0f97-57fa-aeb0-e46bad92fcc5.jpg",
+      "image_url": "./assets/our-market/products/ec29e070-0f97-57fa-aeb0-e46bad92fcc5.jpg",
+      "kind": "real-product-photo",
+      "status": "ready"
     }
   ]
 }
