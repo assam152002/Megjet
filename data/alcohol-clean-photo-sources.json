@@ -1709,5 +1709,29 @@
     "path": "assets/menu-photos/alcohol-clean-v1/d22620a6-d9a4-59bb-83ad-7a692dfddcbe.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/d22620a6-d9a4-59bb-83ad-7a692dfddcbe.webp",
     "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "c56bb586-99e8-52b6-8cab-7cd5a9750934",
+    "name": "Sarı Zeybek Yaş Üzüm (100 cl)",
+    "replacement": {
+      "name": "Sarı Zeybek Yaş Üzüm (100 cl)",
+      "source": "https://akincanmeyhanesi.com.tr/",
+      "image": "https://akincanmeyhanesi.com.tr/uploads/img_6a8073b059b5f3.09538706.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c56bb586-99e8-52b6-8cab-7cd5a9750934.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c56bb586-99e8-52b6-8cab-7cd5a9750934.webp",
+    "review": "Clean branded product photo from matching 100 cl menu listing; visually checked for retailer watermark"
+  },
+  {
+    "id": "2447922e-2bed-550d-af6c-979fe4610469",
+    "name": "Efe Yaş Üzüm Rakısı (1 lt)",
+    "replacement": {
+      "name": "Efe Yaş Üzüm Rakısı (1 lt)",
+      "source": "https://www.kuyulukonak.com.tr/",
+      "image": "https://www.kuyulukonak.com.tr/uploads/img_6a7c489b911bd.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/2447922e-2bed-550d-af6c-979fe4610469.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/2447922e-2bed-550d-af6c-979fe4610469.webp",
+    "review": "Clean branded product photo from matching 100 cl menu listing; visually checked for retailer watermark"
   }
 ]
