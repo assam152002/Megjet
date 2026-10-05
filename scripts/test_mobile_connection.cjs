@@ -19,9 +19,9 @@ async function run(fetch,body){
  calls=0;await run(async()=>{calls++;throw new TypeError('Network failed');},async f=>assert.rejects(f('/checkout',{method:'POST'})));assert.equal(calls,1);
  const loadCode=html.slice(html.indexOf('let restaurantLoadPromise='),html.indexOf('/* NO.33 Limon Tantuni — imported'));
  const elements={vendors:{innerHTML:''}};let setupShown=0,hidden=0,renders=0,reads=0,listener;
- const ctx=vm.createContext({escapeHtml:s=>String(s),$:id=>elements[id]||{},cfg:{url:'https://test.invalid',key:'publishable'},window:{addEventListener:(name,fn)=>{if(name==='online')listener=fn;}},setStatus:()=>{},showSetup:()=>setupShown++,hideSetup:()=>hidden++,loadDeliveryFee:async()=>100,fetchJson:async()=>{reads++;await new Promise(r=>setTimeout(r,5));return [];},megjetFetchPages:async()=>[],renderVendors:()=>renders++,loadGrowthHome:async()=>{},MEGJET_COMING_SOON_ALCOHOL_VENDOR:{},MEGJET_COMING_SOON_ALCOHOL_PRODUCTS:[],console:{warn:()=>{}}});
- vm.runInContext(loadCode,ctx);const a=ctx.load(),b=ctx.load();assert.equal(a,b);await a;assert.equal(reads,2);assert.equal(renders,1);assert.equal(setupShown,0);
+ const ctx=vm.createContext({escapeHtml:s=>String(s),$:id=>elements[id]||{},cfg:{url:'https://test.invalid',key:'publishable'},Event:class Event{},window:{dispatchEvent:()=>{},addEventListener:(name,fn)=>{if(name==='online')listener=fn;}},setStatus:()=>{},showSetup:()=>setupShown++,hideSetup:()=>hidden++,loadDeliveryFee:async()=>100,fetchJson:async()=>{reads++;await new Promise(r=>setTimeout(r,5));return [];},megjetFetchPages:async()=>[],renderVendors:()=>renders++,loadGrowthHome:async()=>{},MEGJET_COMING_SOON_ALCOHOL_VENDOR:{},MEGJET_COMING_SOON_ALCOHOL_PRODUCTS:[],console:{warn:()=>{}}});
+ vm.runInContext(loadCode,ctx);const a=ctx.load(),b=ctx.load();assert.equal(a,b);await a;assert.equal(reads,2);assert.equal(renders,2);assert.equal(setupShown,0);
  ctx.fetchJson=async()=>{throw new TypeError('Offline');};await ctx.load();assert.match(elements.vendors.innerHTML,/Retry/);assert.match(elements.vendors.innerHTML,/Support reference: DISPLAY-ERROR/);assert.equal(setupShown,0);assert.ok(hidden);
- ctx.fetchJson=async()=>[];listener();await ctx.load();assert.equal(renders,2);
+ ctx.fetchJson=async()=>[];listener();await ctx.load();assert.equal(renders,4);
  console.log('Passed: script syntax, slow reads, bounded read retries, no auth/write retries, timer cleanup, load deduplication, customer error screen and reconnection recovery.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

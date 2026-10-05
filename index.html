@@ -932,7 +932,7 @@ window.MEGJET_VENDOR_HOURS = window.MEGJET_VENDOR_HOURS || {};
 window.MEGJET_VENDOR_LINKS = window.MEGJET_VENDOR_LINKS || {};
 </script>
 <header>
-  <div class="brand"><img class="megjet-logo" src="./assets/img/eb7b6dd755d5c82c9f0d.jpg" alt="MEG JET"><span>MEG JET</span></div>
+  <a class="brand" href="#" aria-label="Megjet homepage"><img class="megjet-logo" src="./assets/img/eb7b6dd755d5c82c9f0d.jpg" alt="MEG JET"><span>MEG JET</span></a>
   <div class="sub">Cargo &amp; Delivery • Yeni Nesil Kurye</div>
   <div>📍 <span id="serviceAreaHeader">Gazimagusa</span> • <span id="deliveryFeeHeader">Delivery fee loading…</span></div>
   <div style="margin-top:12px;display:flex;gap:8px;align-items:center;flex-wrap:wrap"><button id="customerAccountOpen" type="button" class="customer-account-btn"><span class="account-dot">👤</span><span id="customerAccountButtonText">My Account</span></button><a href="#admin" style="color:#fff;font-weight:700;text-decoration:underline">Admin</a></div><div style="margin-top:8px"><a href="#vendor" style="color:#fff;font-weight:700;text-decoration:underline">Vendor Login</a></div><div style="margin-top:8px"><a href="#rider" style="color:#fff;font-weight:700;text-decoration:underline">Rider Login</a></div>
@@ -2034,11 +2034,14 @@ async function loadDeliveryFee(){
 
 async function megjetFetchPages(path,request){
   const pageSize=500,all=[];
-  for(let offset=0;offset<20000;offset+=pageSize){
-    const rows=await request(`${path}&limit=${pageSize}&offset=${offset}`);
-    if(!Array.isArray(rows))throw new Error("Could not load menu page.");
-    all.push(...rows);
-    if(rows.length<pageSize)return all;
+  // Fetch independent pages together instead of waiting for each round trip.
+  for(let offset=0;offset<20000;offset+=pageSize*4){
+    const pages=await Promise.all(Array.from({length:4},(_,i)=>request(`${path}&limit=${pageSize}&offset=${offset+i*pageSize}`)));
+    for(const rows of pages){
+      if(!Array.isArray(rows))throw new Error("Could not load menu page.");
+      all.push(...rows);
+      if(rows.length<pageSize)return all;
+    }
   }
   throw new Error("Menu has more than 20,000 rows.");
 }
@@ -2071,24 +2074,27 @@ async function loadRestaurants(){
   const base=cfg.url.replace(/\/+$/,"" );
   try{
     const feeReady=loadDeliveryFee();
+    window.MEGJET_MENU_LOADING=true;
     const [vendors,products,categoryMeta,translations]=await Promise.all([
       fetchJson(base+"/rest/v1/vendors?select=id,name,area,rating,preparation_minutes,logo_url,banner_url,bio,bio_en,bio_tr,bio_translation_source,accepting_orders&active=eq.true&order=name",{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
-      }),
+      }).then(rows=>{renderVendors(rows,[]);return rows;}),
       megjetFetchPages("/rest/v1/products?select=id,vendor_id,name,description,price,image_url,menu_sort_order&available=eq.true&order=name,id",path=>fetchJson(base+path,{
         headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}
       })),
       fetchJson(base+"/rest/v1/vendor_menu_categories?select=vendor_id,name,name_en,name_tr,image_url,sort_order",{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}}).catch(()=>[]),
       megjetFetchPages("/rest/v1/product_translations?select=product_id,name_en,name_tr,description_en,description_tr&order=product_id",path=>fetchJson(base+path,{headers:{apikey:cfg.key,Authorization:"Bearer "+cfg.key}})).catch(()=>[])
     ]);
-    await feeReady;
+    feeReady.then(()=>window.dispatchEvent(new Event("megjet-history-ready")));
     window.MEGJET_VENDOR_CATEGORY_META=categoryMeta||[];
     window.MEGJET_PRODUCT_TRANSLATIONS=Object.fromEntries((translations||[]).map(t=>[String(t.product_id),t]));
     setStatus("Connected ✓ Live vendors from Supabase","ok");
     hideSetup();
+    window.MEGJET_MENU_LOADING=false;
     renderVendors(vendors,products);
     loadGrowthHome().catch(()=>{});
   }catch(e){
+    window.MEGJET_MENU_LOADING=false;
     console.warn("Megjet live menu load failed:",e);
     showRestaurantLoadError(e);
   }
@@ -2272,7 +2278,8 @@ function renderVendors(vendors,products){
     const prep=v.preparation_minutes;
     return `<div class="card vendor vendor-profile-list-card" data-vendor-id="${escapeHtml(v.id)}" onclick="openVendorProfile('${escapeHtml(v.id)}')"><div class="vendor-head"><div class="vendor-logo-wrap">${logo?`<img class="vendor-logo" src="${escapeHtml(logo)}" alt="${escapeHtml(v.name)} logo">`:`<div class="vendor-logo" style="display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:900;color:#0878bd">${v.coming_soon?'🍺':escapeHtml(String(v.name||'M').slice(0,1))}</div>`}</div><div class="vendor-card-body"><div class="vendor-card-title">${escapeHtml(v.name)}</div><div class="vendor-card-meta"><span class="vendor-rating"><span class="star">★</span> ${escapeHtml(rating)}</span> • ${escapeHtml(area)}<br>${v.coming_soon?'🔒 Browsing preview only':`🕐 ${prep?escapeHtml(prep)+' min preparation':'Prep time not provided'}`}</div>${v.accepting_orders===false?'<span class="phase1-badge closed">Temporarily closed</span>':''}${v.coming_soon?'<span class="coming-soon-badge">● COMING SOON</span>':''}<button class="vendor-view" type="button" onclick="event.stopPropagation();openVendorProfile('${escapeHtml(v.id)}')">${v.coming_soon?'Browse Preview':'View Menu'}&nbsp; →</button></div></div></div>`;
   }).join(''):`<div class='card'><h2>No vendors yet</h2><p class='muted'>Your Supabase connection works, but no active vendors have been added yet.</p></div>`;
-  window.openVendorProfile=function(vendorId){
+  window.openVendorProfile=async function(vendorId){
+    if(window.MEGJET_MENU_LOADING){setStatus("Loading this menu…");await restaurantLoadPromise;if(!restaurantLoadFailed)return window.openVendorProfile(vendorId);return;}
     const v=vendors.find(x=>String(x.id)===String(vendorId)); if(!v)return;
     profile.dataset.vendorId=v.id;
     const ps=products.filter(p=>String(p.vendor_id)===String(v.id));
@@ -5653,12 +5660,12 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./assets/traffic-support.js?v=3"></script>
 <script src="./assets/operations.js?v=2"></script>
 <script src="./assets/menu-photo-preview.js?v=1"></script>
-<script src="./assets/menu-options.js?v=2"></script>
-<link rel="stylesheet" href="./assets/discovery.css?v=6">
+<script src="./assets/menu-options.js?v=3"></script>
+<link rel="stylesheet" href="./assets/discovery.css?v=7">
 <script>window.megjetCustomerDiscoveryState=()=>({signedIn:!!customerAuthUser,addresses:customerAuthUser?customerSavedAddresses:[],orders:customerAuthUser?(window._customerHistoryOrders||[]):[],fee:Number(DELIVERY)});</script>
 <script src="./assets/store-hours.js?v=1"></script>
 <script src="./assets/discovery-core.js?v=3"></script>
-<script src="./assets/discovery.js?v=9"></script>
+<script src="./assets/discovery.js?v=10"></script>
 <link rel="stylesheet" href="./assets/customer-polish.css?v=5">
 <script src="./assets/customer-polish.js?v=5"></script>
 </body>
