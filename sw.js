@@ -1,8 +1,8 @@
-const CACHE_NAME = "megjet-app-v37";
+const CACHE_NAME = "megjet-app-v38";
 const GUARD_URL = "./workflow-guard.js?v=8";
 const APP_SHELL = [
   "./assets/florist.js?v=7",
-  "./assets/florist-portal.js?v=3",
+  "./assets/florist-portal.js?v=4",
   "./assets/florist.css?v=4",
   "./assets/florist/alya-logo.jpg",
   "./assets/menu-options.js?v=3",
@@ -75,7 +75,7 @@ self.addEventListener("fetch", event => {
     return;
   }
 
-  if (url.pathname.endsWith("/workflow-guard.js")) {
+  if (url.pathname.endsWith("/workflow-guard.js") || /\/assets\/florist(?:-portal)?\.js$/.test(url.pathname)) {
     event.respondWith(
       fetch(event.request, { cache: "no-store" })
         .then(response => {
