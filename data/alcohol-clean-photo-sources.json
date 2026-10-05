@@ -1397,5 +1397,89 @@
     "path": "assets/menu-photos/alcohol-clean-v1/7a6bdd3e-47dd-5507-91c3-076f558c47e6.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/7a6bdd3e-47dd-5507-91c3-076f558c47e6.webp",
     "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "6022fe34-d951-5af8-abcf-9fb5dc620cf0",
+    "name": "Finlandia Vodka (37.5 cl)",
+    "replacement": {
+      "name": "Finlandia Vodka (37.5 cl)",
+      "source": "https://caskandbarrelerbil.com/products/finlandia-vodka-37",
+      "image": "https://caskandbarrelerbil.com/cdn/shop/files/FINLANDIA_VODKA_37.jpg?v=1774209006"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/6022fe34-d951-5af8-abcf-9fb5dc620cf0.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/6022fe34-d951-5af8-abcf-9fb5dc620cf0.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "f6eb49a1-6df8-5f58-af1f-50f546ed16d3",
+    "name": "Gold Bar Whisky The Original (100 cl)",
+    "replacement": {
+      "name": "Gold Bar Whisky The Original (100 cl)",
+      "source": "https://www.spiritsandwine.lv/en/whiskey/gold-bar-3139803/",
+      "image": "https://www.spiritsandwine.lv/img/items/31398/m-3139803.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f6eb49a1-6df8-5f58-af1f-50f546ed16d3.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f6eb49a1-6df8-5f58-af1f-50f546ed16d3.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "3abccabc-e1c7-54ec-a39b-864b68d1b6be",
+    "name": "Muirhead's Blended Scotch Whisky (150 cl)",
+    "replacement": {
+      "name": "Muirhead's Blended Scotch Whisky (150 cl)",
+      "source": "https://letzshop.lu/en/products/muirheads-b-seal-whisky-blend-ecosse-75c527",
+      "image": "https://images.platoyo.com/v7/_letzshop_production_img_/b8788c706384351ab35927c1dbf493b5.png?q=75&width=750&height=750&func=bound&org_if_sml=1&force_format=webp%2Cjpeg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/3abccabc-e1c7-54ec-a39b-864b68d1b6be.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/3abccabc-e1c7-54ec-a39b-864b68d1b6be.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "13072270-1f5c-5d19-b1ab-fa6eb0b02449",
+    "name": "Angora White Sec Wine (750 ml)",
+    "replacement": {
+      "name": "Angora White Sec Wine (750 ml)",
+      "source": "https://spb.decanter.ru/product/kavaklidere-angora-2021-id241852",
+      "image": "https://static.decanter.ru/upload/images/401790/401790-vino-kavaklidere-angora-white-2021-0-75-l-sq.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/13072270-1f5c-5d19-b1ab-fa6eb0b02449.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/13072270-1f5c-5d19-b1ab-fa6eb0b02449.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "58c61fde-255f-5240-bf83-604fff387762",
+    "name": "Black Ram Blended Whisky (1 Lt)",
+    "replacement": {
+      "name": "Black Ram Blended Whisky (1 Lt)",
+      "source": "https://gaidov.bg/produkt/уиски-блек-рам-1л/",
+      "image": "https://gaidov.bg/wp-content/uploads/2020/09/BR_1-l.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/58c61fde-255f-5240-bf83-604fff387762.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/58c61fde-255f-5240-bf83-604fff387762.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "c3fd9e8e-2c14-5e58-8a8a-92308794d08b",
+    "name": "Sarı Zeybek 3 Meşe (70 cl)",
+    "replacement": {
+      "name": "Sarı Zeybek 3 Meşe (70 cl)",
+      "source": "https://www.kibrissanalmarket.com/urunler/sari-zeybek-3-mese-70cl/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2021/12/8682392503394.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c3fd9e8e-2c14-5e58-8a8a-92308794d08b.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c3fd9e8e-2c14-5e58-8a8a-92308794d08b.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "d33ab566-8fc9-5a4d-b447-327470933801",
+    "name": "Efe Classic Rakı (70 cl)",
+    "replacement": {
+      "name": "Efe Classic Rakı (70 cl)",
+      "source": "https://www.sarpermarket.com/urunler/efe-klasik-raki-35-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/06/20-54-59-Efe_Classic_70-cl_600.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/d33ab566-8fc9-5a4d-b447-327470933801.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/d33ab566-8fc9-5a4d-b447-327470933801.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
   }
 ]
