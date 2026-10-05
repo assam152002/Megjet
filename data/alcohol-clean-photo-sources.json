@@ -821,5 +821,29 @@
     "path": "assets/menu-photos/alcohol-clean-v1/02f43742-3657-5692-ac6b-5557f308a3f9.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/02f43742-3657-5692-ac6b-5557f308a3f9.webp",
     "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "94c08167-b1dd-5d68-83c9-5ddafcac4016",
+    "name": "Finlandia Vodka Redberry (70 cl)",
+    "replacement": {
+      "name": "Buy Finlandia Redberry Vodka, 70 cl Online | The Bottle Club",
+      "source": "https://www.thebottleclub.com/products/finlandia-redberry-vodka-70-cl",
+      "image": "https://www.thebottleclub.com/cdn/shop/files/finlandia-redberry-vodka-70-cl-vodka-32842072227955.jpg?v=1703668999"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/94c08167-b1dd-5d68-83c9-5ddafcac4016.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/94c08167-b1dd-5d68-83c9-5ddafcac4016.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "12796506-9220-5387-969a-721890790c4b",
+    "name": "Tequila San Jose Gold (70 cl)",
+    "replacement": {
+      "name": "Tequila San Jose' Gold 70cl",
+      "source": "https://bottleofitaly.com/en/products/tequila-san-jose-gold-cl-70",
+      "image": "https://bottleofitaly.com/cdn/shop/files/san-jose-gold-reposado-tequila-bottle-of-italy-min_grande.jpg?v=1717166280"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/12796506-9220-5387-969a-721890790c4b.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/12796506-9220-5387-969a-721890790c4b.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
   }
 ]
