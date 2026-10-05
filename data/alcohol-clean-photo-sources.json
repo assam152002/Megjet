@@ -1481,5 +1481,29 @@
     "path": "assets/menu-photos/alcohol-clean-v1/d33ab566-8fc9-5a4d-b447-327470933801.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/d33ab566-8fc9-5a4d-b447-327470933801.webp",
     "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "05db6628-a6cf-5e4e-bad5-bb3f73aa507d",
+    "name": "Cricova Wild Feteasca Neagra Organic Wine (75 cl)",
+    "replacement": {
+      "name": "Cricova Wild Feteasca Neagra Organic Wine (75 cl)",
+      "source": "https://nitelashop.ro/cricova-vin-rosu-wild-feteasca-neagra-0-75l",
+      "image": "https://nitelashop.ro/media/cache/1200x630xf/media/catalog/product/c/r/cricova-vin-rosu-wild-feteasca-neagra-0-75l_1.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/05db6628-a6cf-5e4e-bad5-bb3f73aa507d.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/05db6628-a6cf-5e4e-bad5-bb3f73aa507d.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "91266191-3c49-569b-ac64-ce0b277e6daf",
+    "name": "Sarı Zeybek 3 Meşe (35 cl)",
+    "replacement": {
+      "name": "Sarı Zeybek 3 Meşe (35 cl)",
+      "source": "https://wine-nine.com/sar-zeybek-3-mese-35-cl",
+      "image": "https://eu.myikas.com/images/b849f5bf-4f74-4f98-ae0f-f9c1df0e8fb4/7323e4c4-1cb6-43f0-a69c-79fe3d683f3f/1080/efe-sari-zeybek-3-mese-triple-oak-raki-35cl-wine-nine.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/91266191-3c49-569b-ac64-ce0b277e6daf.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/91266191-3c49-569b-ac64-ce0b277e6daf.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
   }
 ]
