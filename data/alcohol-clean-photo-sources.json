@@ -1505,5 +1505,209 @@
     "path": "assets/menu-photos/alcohol-clean-v1/91266191-3c49-569b-ac64-ce0b277e6daf.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/91266191-3c49-569b-ac64-ce0b277e6daf.webp",
     "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "b37ea3cd-34a0-513e-9445-1e61694edad4",
+    "name": "Kavaklıdere Lal Wine (75 cl)",
+    "replacement": {
+      "name": "Kavaklıdere Lal Wine (75 cl)",
+      "source": "https://weinatolien.de/products/kavaklidere-lal",
+      "image": "https://weinatolien.de/cdn/shop/files/kavaklidere-lal-rosewein.jpg?v=1789220109"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/b37ea3cd-34a0-513e-9445-1e61694edad4.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/b37ea3cd-34a0-513e-9445-1e61694edad4.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "e27b8312-8985-5128-b500-4336b9214e43",
+    "name": "Cricova Codru Red Dry Wine (75 cl)",
+    "replacement": {
+      "name": "Cricova Codru Red Dry Wine (75 cl)",
+      "source": "https://www.bswliquor.com/products/cricova-codru",
+      "image": "https://www.bswliquor.com/cdn/shop/files/codru-cricova.jpg?v=1753215570"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/e27b8312-8985-5128-b500-4336b9214e43.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/e27b8312-8985-5128-b500-4336b9214e43.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "6d46a162-a915-5424-b96e-517ca2905bb2",
+    "name": "Jim Beam Red Stag Bourbon Whiskey (70 cl)",
+    "replacement": {
+      "name": "Jim Beam Red Stag Bourbon Whiskey (70 cl)",
+      "source": "https://8barrelsclub.com/product/jim-beam-red-stag-70cl/",
+      "image": "https://8barrelsclub.com/wp-content/uploads/2021/07/Jim-Beam-Red-Stag-70cl-2-1.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/6d46a162-a915-5424-b96e-517ca2905bb2.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/6d46a162-a915-5424-b96e-517ca2905bb2.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1fff4626-ab27-5f78-bc62-33e8d991a9e6",
+    "name": "Absolut Vodka Citrus (70 cl)",
+    "replacement": {
+      "name": "Absolut Vodka Citrus (70 cl)",
+      "source": "https://www.drinksinc.com/products/absolut-citron-vodka-700ml",
+      "image": "https://www.drinksinc.com/cdn/shop/files/75db6e9d-ebac-4547-8de9-f140cca01c9c.jpg?v=1775106059"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1fff4626-ab27-5f78-bc62-33e8d991a9e6.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1fff4626-ab27-5f78-bc62-33e8d991a9e6.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "9d29a6b8-2e1f-5444-b96a-1fb626ba8916",
+    "name": "Gibson's London Dry Gin (250 ml)",
+    "replacement": {
+      "name": "Gibson's London Dry Gin (250 ml)",
+      "source": "https://www.gin-gibsons.com/en/node/49",
+      "image": "https://www.gin-gibsons.com/en/m_enhance/189?style_name=product_media_full&filename=rtd-gibsons&ext=png&h=700&w=680&rule=680w"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/9d29a6b8-2e1f-5444-b96a-1fb626ba8916.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/9d29a6b8-2e1f-5444-b96a-1fb626ba8916.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "2fbee7ba-4053-5da5-bc0a-6b3c3a1b734f",
+    "name": "The Gin (700 ml)",
+    "replacement": {
+      "name": "The Gin (700 ml)",
+      "source": "https://avantgarde-spirits.com/product/the-gin/",
+      "image": "https://avantgarde-spirits.com/wp-content/uploads/2024/06/I-The-Gin-AvantGardeSpirits.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/2fbee7ba-4053-5da5-bc0a-6b3c3a1b734f.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/2fbee7ba-4053-5da5-bc0a-6b3c3a1b734f.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "7ee42838-7900-53f8-a491-32b91e88a782",
+    "name": "Sarı Zeybek 3 Meşe (100 cl)",
+    "replacement": {
+      "name": "Sarı Zeybek 3 Meşe (100 cl)",
+      "source": "https://winniey.com/menu/asmaalti",
+      "image": "https://d192zzs1z9r997.cloudfront.net/item/medium/1777918185293-c60br6.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/7ee42838-7900-53f8-a491-32b91e88a782.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/7ee42838-7900-53f8-a491-32b91e88a782.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "be715dcb-2893-50bc-b16c-787b00b8d9b5",
+    "name": "Efe Göbek Rakısı (35 cl)",
+    "replacement": {
+      "name": "Efe Göbek Rakısı (35 cl)",
+      "source": "https://prtl.liquorconnect.com/Agents/Pages/3210-80467000.aspx",
+      "image": "https://connectstorageprd.blob.core.windows.net/productimages/123721.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/be715dcb-2893-50bc-b16c-787b00b8d9b5.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/be715dcb-2893-50bc-b16c-787b00b8d9b5.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "1f47423b-5d40-5aaf-ba8e-5b51bbea0971",
+    "name": "Efe Göbek Rakısı (70 cl)",
+    "replacement": {
+      "name": "Efe Göbek Rakısı (70 cl)",
+      "source": "https://prtl.liquorconnect.com/Agents/Pages/3210-80467000.aspx",
+      "image": "https://connectstorageprd.blob.core.windows.net/productimages/123727.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1f47423b-5d40-5aaf-ba8e-5b51bbea0971.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1f47423b-5d40-5aaf-ba8e-5b51bbea0971.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "56e426d6-0bb6-52fb-9cab-d6d88d6119d8",
+    "name": "Sarı Zeybek Yaş Üzüm (35 cl)",
+    "replacement": {
+      "name": "Sarı Zeybek Yaş Üzüm (35 cl)",
+      "source": "https://prtl.liquorconnect.com/Agents/Pages/3210-80467000.aspx",
+      "image": "https://connectstorageprd.blob.core.windows.net/productimages/138449.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/56e426d6-0bb6-52fb-9cab-d6d88d6119d8.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/56e426d6-0bb6-52fb-9cab-d6d88d6119d8.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "f7f2a67c-7dbe-5f4a-bed7-52e216a41c9d",
+    "name": "Amsterdam Bottled Beer (50 cl)",
+    "replacement": {
+      "name": "Amsterdam Bottled Beer (50 cl)",
+      "source": "https://www.extrablattkonya.com/tr/urun/amsterdam-50-cl",
+      "image": "https://www.extrablattkonya.com/uploads/images/ws00jYsZ2BNfkOWulWuU.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f7f2a67c-7dbe-5f4a-bed7-52e216a41c9d.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f7f2a67c-7dbe-5f4a-bed7-52e216a41c9d.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "9aef511d-c607-5577-935b-0d002cca0fcf",
+    "name": "Tuborg Ice Beer Bottle (33 cl)",
+    "replacement": {
+      "name": "Tuborg Ice Beer Bottle (33 cl)",
+      "source": "https://www.reshop-arad.ro/produs/21038-033l-tuborg-ice-sticla-sgr-24b",
+      "image": "https://www.reshop-arad.ro/storage/photos/000/021/21038/033l-tuborg-ice-sticla-sgr-24b.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/9aef511d-c607-5577-935b-0d002cca0fcf.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/9aef511d-c607-5577-935b-0d002cca0fcf.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "b4d1c216-e82c-563a-a640-2073ce6b774c",
+    "name": "Gibson's London Blood Orange Gin (1 lt)",
+    "replacement": {
+      "name": "Gibson's London Blood Orange Gin (1 lt)",
+      "source": "https://citydrinks.com/p/gibsons-blood-orange-premium-gin-4711",
+      "image": "https://citydrinks.com/cdn-cgi/image/quality=90,width=128,format=auto/https://s3.ap-south-1.amazonaws.com/catalog-india.citydrinks.com/offers/e7db51b4-6f0c-4cd0-a961-ad8eceb5f1ed.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/b4d1c216-e82c-563a-a640-2073ce6b774c.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/b4d1c216-e82c-563a-a640-2073ce6b774c.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "599ef3b8-3783-553e-a063-ee970bf3e6eb",
+    "name": "Monte Rose Wine (75 cl)",
+    "replacement": {
+      "name": "Monte Rose Wine (75 cl)",
+      "source": "https://wein-schaepers.de/monte-rosato-suess-fruchtig-0-75l",
+      "image": "https://wein-schaepers.de/media/f5/c8/47/1722342636/monte-rosato-jpg.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/599ef3b8-3783-553e-a063-ee970bf3e6eb.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/599ef3b8-3783-553e-a063-ee970bf3e6eb.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "2774b3d9-552e-5bf5-b62c-23759ce24034",
+    "name": "Bud Beer Can (50 cl)",
+    "replacement": {
+      "name": "Bud Beer Can (50 cl)",
+      "source": "https://www.sarpermarket.com/urunler/bud-50-cl-kutu/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2020/07/bud-blonde-50cl-pack-de-12-canettes.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/2774b3d9-552e-5bf5-b62c-23759ce24034.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/2774b3d9-552e-5bf5-b62c-23759ce24034.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "a3151913-0338-5a3b-b6b4-71cad27163c1",
+    "name": "Le Bernajou Perigord (750 ml)",
+    "replacement": {
+      "name": "Le Bernajou Perigord (750 ml)",
+      "source": "https://chateauperrou.com/en/collection/red/",
+      "image": "https://chateauperrou.com/img/products/le-petit-bernajou-cutout-1920.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/a3151913-0338-5a3b-b6b4-71cad27163c1.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/a3151913-0338-5a3b-b6b4-71cad27163c1.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "d22620a6-d9a4-59bb-83ad-7a692dfddcbe",
+    "name": "Stella Artois (44 cl)",
+    "replacement": {
+      "name": "Stella Artois (44 cl)",
+      "source": "https://www.babsthepub.com/menu?menu=biralar",
+      "image": "https://static.wixstatic.com/media/ced9d3_bd4f475ac4eb42a8b156f8ac0d9a1e53~mv2.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/d22620a6-d9a4-59bb-83ad-7a692dfddcbe.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/d22620a6-d9a4-59bb-83ad-7a692dfddcbe.webp",
+    "review": "Matched branded product; visually checked for retailer watermark"
   }
 ]
