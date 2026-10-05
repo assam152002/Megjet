@@ -24,6 +24,7 @@ function source(v){const maps=root.MEGJET_VENDOR_HOURS||{},key=Object.keys(maps)
 const time=n=>String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0');
 function status(v,now=new Date(),lang='en'){
  const tr=lang==='tr',hours=evaluate(parse(source(v)),now);let label,detail;
+ if(v.quote_only){const c=clock(now),sun=c.day===0,start=sun?600:480,end=sun?1080:1200,open=c.minute>=start&&c.minute<end;return {label:open?(tr?'Şimdi açık':'Open now'):(tr?'Kapalı':'Closed'),detail:tr?'Teslimat zamanı teklifle onaylanır':'Delivery time confirmed with quote',closed:!open,known:true};}
  if(v.coming_soon)return {label:tr?'Yakında':'Coming soon',detail:'',closed:true,known:hours.known};
  if(v.accepting_orders===false)return {label:tr?'Siparişler duraklatıldı':'Orders paused',detail:tr?'Yeni sipariş alınmıyor':'New orders are paused',closed:true,known:hours.known};
  if(!hours.known)return {label:tr?'Sipariş alıyor':'Accepting orders',detail:tr?'Çalışma saatleri belirtilmedi':'Hours unavailable',closed:false,known:false};
