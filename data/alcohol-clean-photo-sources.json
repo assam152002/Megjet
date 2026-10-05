@@ -660,5 +660,166 @@
     "path": "assets/menu-photos/alcohol-clean-v1/e4e194f2-a21d-5cb7-9425-623a01061805.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/e4e194f2-a21d-5cb7-9425-623a01061805.webp",
     "review": "Matched branded product; visually checked for retailer watermark"
+  },
+  {
+    "id": "c98fcf3a-96af-59c6-9182-bec47aae93f7",
+    "name": "The Duke's Own Extra Special (330 ml)",
+    "replacement": {
+      "name": "THE DUKES OWN 330ML",
+      "barcode": "8692015500082",
+      "source": "https://www.kibrissanalmarket.com/urunler/the-dukes-own-330ml/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2023/04/8692015500082.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c98fcf3a-96af-59c6-9182-bec47aae93f7.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c98fcf3a-96af-59c6-9182-bec47aae93f7.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "25c0c070-3406-52aa-94e1-1900c5ee3e75",
+    "name": "Cricova Muscat White Dry Wine (75 cl)",
+    "replacement": {
+      "name": "CRICOVA MUSCAT WHITE DRY 75CL",
+      "barcode": "4840013007766",
+      "source": "https://www.kibrissanalmarket.com/urunler/cricova-muscat-white-dry-75cl/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2026/09/4840013007766.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/25c0c070-3406-52aa-94e1-1900c5ee3e75.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/25c0c070-3406-52aa-94e1-1900c5ee3e75.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "f0ea0ef3-2579-579f-bfe3-2a35a0af8ec1",
+    "name": "Smirnoff Ice Original (275 ml)",
+    "replacement": {
+      "name": "SMIRNOFF ICE ORIGINAL 275ML",
+      "barcode": "5410316992060",
+      "source": "https://www.kibrissanalmarket.com/urunler/smirnoff-ice-original-275ml/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2025/05/5410316992060.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f0ea0ef3-2579-579f-bfe3-2a35a0af8ec1.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f0ea0ef3-2579-579f-bfe3-2a35a0af8ec1.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "55d7e461-fc84-5042-91af-e1acb4102aab",
+    "name": "Jack Daniel's Honey (70 cl)",
+    "replacement": {
+      "name": "JACK DANIELS HONEY WHISKY 70CL",
+      "source": "https://www.kibrissanalmarket.com/urunler/jack-daniels-honey-whisky-70cl/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2023/12/5099873001370.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/55d7e461-fc84-5042-91af-e1acb4102aab.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/55d7e461-fc84-5042-91af-e1acb4102aab.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "3c16ff3b-2519-5e88-8d69-b1be40ae7bac",
+    "name": "Label 5 Blended Scotch Whisky (70 cl)",
+    "replacement": {
+      "name": "LABEL 5 70CL",
+      "source": "https://www.kibrissanalmarket.com/urunler/label-5-70cl/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2021/08/3147690051206-1.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/3c16ff3b-2519-5e88-8d69-b1be40ae7bac.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/3c16ff3b-2519-5e88-8d69-b1be40ae7bac.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "7de99059-4efb-5820-b637-13e461e70ce2",
+    "name": "Scotch Label 5 Whisky (100 cl)",
+    "replacement": {
+      "name": "LABEL 5 100CL",
+      "source": "https://www.kibrissanalmarket.com/urunler/label-5-100cl-2/",
+      "image": "https://www.kibrissanalmarket.com/wp-content/uploads/2021/08/3147690051107-3.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/7de99059-4efb-5820-b637-13e461e70ce2.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/7de99059-4efb-5820-b637-13e461e70ce2.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "a5777086-cac5-50bb-85ac-02ce428d6d20",
+    "name": "Ballantines Finest Naked (100 cl)",
+    "replacement": {
+      "name": "BALLANTINE'S FINEST WHISKEY 1L",
+      "source": "https://gbottleshop.com/products/ballantines-finest-whiskey-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/BALLANTINESFINESTWHISKEY1L.jpg?v=1695478053"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/a5777086-cac5-50bb-85ac-02ce428d6d20.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/a5777086-cac5-50bb-85ac-02ce428d6d20.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "43c06f00-9467-541e-82cf-1f2a0d762a08",
+    "name": "Monkey Shoulder Whisky (100 cl)",
+    "replacement": {
+      "name": "MONKEY SHOULDER WHISKY 1L",
+      "source": "https://gbottleshop.com/products/monkey-shoulder-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/MONKEYSHOULDERWHISKY1L.jpg?v=1711174417"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/43c06f00-9467-541e-82cf-1f2a0d762a08.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/43c06f00-9467-541e-82cf-1f2a0d762a08.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "16d9f782-c3a5-5a81-bbc9-edc380dacf20",
+    "name": "Olmeca Silver (1 lt)",
+    "replacement": {
+      "name": "OLMECA TEQUILA SILVER 1L",
+      "source": "https://gbottleshop.com/products/olmeca-tequila-blanco-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/OMECATEQUILASILVER1L_78bcf5bb-9ab9-4dfe-91ce-48d072a76a16.jpg?v=1683140786"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/16d9f782-c3a5-5a81-bbc9-edc380dacf20.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/16d9f782-c3a5-5a81-bbc9-edc380dacf20.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "6d890a13-48f6-5882-a07d-b28376e419c5",
+    "name": "Van Pur Non Alcoholic Beer Can (500 ml)",
+    "replacement": {
+      "name": "Van Pur Alkolsüz Bira Teneke 500 ml",
+      "barcode": "5900535023046",
+      "source": "https://www.sarpermarket.com/urunler/van-pur-alkolsuz-bira-teneke-500-ml-2/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/02/71L0DfIByiL._SL1500_.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/6d890a13-48f6-5882-a07d-b28376e419c5.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/6d890a13-48f6-5882-a07d-b28376e419c5.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "3cbc657f-9ab8-5ae6-b0e0-500c5f15dd27",
+    "name": "Italia Monte Bianco Sweet & Fruity (75 cl)",
+    "replacement": {
+      "name": "Monte Bianco s 75 cl",
+      "barcode": "4003301045424",
+      "source": "https://www.sarpermarket.com/urunler/monte-bianco-s-75-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2022/12/31D-qDvUuIL-1.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/3cbc657f-9ab8-5ae6-b0e0-500c5f15dd27.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/3cbc657f-9ab8-5ae6-b0e0-500c5f15dd27.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "f092de0c-b07f-5bdc-9a29-ee1d87eb96be",
+    "name": "Aperol Aperitif Since 1919 (70 cl)",
+    "replacement": {
+      "name": "APEROL 70CL",
+      "source": "https://www.sarpermarket.com/urunler/aperol-70cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/11/9165bbfb47991a3ce7ea875f0898f2b2.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f092de0c-b07f-5bdc-9a29-ee1d87eb96be.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f092de0c-b07f-5bdc-9a29-ee1d87eb96be.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "02f43742-3657-5692-ac6b-5557f308a3f9",
+    "name": "Jagermeister (70 cl)",
+    "replacement": {
+      "name": "Jägermeister Original 70cl",
+      "source": "https://uk.jagermeister.com/shop/our-products/jagermeister-70cl",
+      "image": "https://cdn.shopify.com/s/files/1/0832/9330/7169/files/70cl.png?v=1786036907"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/02f43742-3657-5692-ac6b-5557f308a3f9.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/02f43742-3657-5692-ac6b-5557f308a3f9.webp",
+    "review": "Matched branded product and size; visually checked for retailer watermark"
   }
 ]
