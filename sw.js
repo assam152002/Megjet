@@ -1,7 +1,7 @@
-const CACHE_NAME = "megjet-app-v31";
+const CACHE_NAME = "megjet-app-v32";
 const GUARD_URL = "./workflow-guard.js?v=8";
 const APP_SHELL = [
-  "./assets/florist.js?v=3",
+  "./assets/florist.js?v=4",
   "./assets/florist.css?v=1",
   "./assets/florist/alya-logo.jpg",
   "./assets/menu-options.js?v=3",
