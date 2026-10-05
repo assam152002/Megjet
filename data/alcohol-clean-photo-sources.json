@@ -845,5 +845,557 @@
     "path": "assets/menu-photos/alcohol-clean-v1/12796506-9220-5387-969a-721890790c4b.webp",
     "image_url": "./assets/menu-photos/alcohol-clean-v1/12796506-9220-5387-969a-721890790c4b.webp",
     "review": "Matched branded product and size; visually checked for retailer watermark"
+  },
+  {
+    "id": "cda2d16a-42a1-55cd-a984-0ad619d7544b",
+    "name": "Desperados (330 ml)",
+    "replacement": {
+      "name": "Desperados (330 ml)",
+      "source": "https://kroonbeveragegroup.com/products/desperados/",
+      "image": "https://kroonbeveragegroup.com/wp-content/uploads/2026/03/desperados-alcoholic-beverage-thumb.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/cda2d16a-42a1-55cd-a984-0ad619d7544b.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/cda2d16a-42a1-55cd-a984-0ad619d7544b.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "0eb2049c-2ec9-5bcf-817a-a2b469c78d28",
+    "name": "Çankaya Kavaklıdere White Dry Wine (75 cl)",
+    "replacement": {
+      "name": "Çankaya Kavaklıdere White Dry Wine (75 cl)",
+      "source": "https://bonvila.com/products/kavakli-cankaya-white",
+      "image": "https://bonvila.com/cdn/shop/products/cankaya_1.jpg?v=1659451968&width=1200"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/0eb2049c-2ec9-5bcf-817a-a2b469c78d28.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/0eb2049c-2ec9-5bcf-817a-a2b469c78d28.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "5f1aeac2-1d90-5f47-b20d-335aef590f06",
+    "name": "Jp. Chenet Medium Sweet Rose Wine (750 ml)",
+    "replacement": {
+      "name": "Jp. Chenet Medium Sweet Rose Wine (750 ml)",
+      "source": "https://premiumcellars.ae/products/jp-chenet-medium-sweet-rose-75-cl",
+      "image": "https://premiumcellars.ae/cdn/shop/files/JP_Chenet_Medium_Sweet_Rose_750ml_a38cf62b-811e-4a66-81c0-b5be4aa2c87a.webp?v=1786176435"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/5f1aeac2-1d90-5f47-b20d-335aef590f06.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/5f1aeac2-1d90-5f47-b20d-335aef590f06.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "643cac83-0e98-58ee-8a6d-d372d75265cf",
+    "name": "Cricova Dinos Red Dry Wine (75 cl)",
+    "replacement": {
+      "name": "Cricova Dinos Red Dry Wine (75 cl)",
+      "source": "https://rozetka.com.ua/cricova-4840013000316n/p574947859/",
+      "image": "https://content1.rozetka.com.ua/goods/images/big/651814404.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/643cac83-0e98-58ee-8a6d-d372d75265cf.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/643cac83-0e98-58ee-8a6d-d372d75265cf.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "e6264f06-2d5f-5042-a8fa-7c8df7ef1e27",
+    "name": "Chivas Regal 12 Years (35 cl)",
+    "replacement": {
+      "name": "Chivas Regal 12 Years (35 cl)",
+      "source": "https://www.thebottleclub.com/products/chivas-regal-12-years-old-blended-scotch-whisky",
+      "image": "https://www.thebottleclub.com/cdn/shop/files/chivas-regal-12-year-old-blended-scotch-whisky-35-cl-whisky-32841688088691.jpg?v=1703678194"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/e6264f06-2d5f-5042-a8fa-7c8df7ef1e27.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/e6264f06-2d5f-5042-a8fa-7c8df7ef1e27.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "d2c66170-66d1-5dc0-9695-a619f6c7ea47",
+    "name": "Nemiroff Original Vodka (1000 ml)",
+    "replacement": {
+      "name": "Nemiroff Original Vodka (1000 ml)",
+      "source": "https://www.conalco.de/nemiroff-original-vodka-1-liter-40-vol",
+      "image": "https://www.conalco.de/media/0e/e9/39/1754893708/Nemiroff_Original_Vodka___1_Liter_40__vol.jpg?ts=1754893708"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/d2c66170-66d1-5dc0-9695-a619f6c7ea47.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/d2c66170-66d1-5dc0-9695-a619f6c7ea47.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "943a86aa-394e-53e1-96bd-181977c1ae36",
+    "name": "Tequila San Jose Silver (70 cl)",
+    "replacement": {
+      "name": "Tequila San Jose Silver (70 cl)",
+      "source": "https://www.schiphol.nl/en/at-schiphol/products/tequila-silver/101190669/",
+      "image": "https://d3cajdvn64228v.cloudfront.net/eyJidWNrZXQiOiJjb21yYWRzLXNjaGlwaG9sLXYzLXByZCIsImtleSI6Im1lZGlhXC9wcml2YXRlXC83MTdcLzEwOTMyMVwvMTA5MzIxLXNvdXJjZS5wbmciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjEyODAsImZpdCI6ImNvdmVyIn19fQ==?signature=27ded64bd3b73a3b3316a713566ee791963cac426ff8b395882fc8651e46f800&version=58"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/943a86aa-394e-53e1-96bd-181977c1ae36.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/943a86aa-394e-53e1-96bd-181977c1ae36.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "59ee7c81-9f7e-5eb5-b189-0d321c8d123c",
+    "name": "Absente Grande Alcohol (70 cl)",
+    "replacement": {
+      "name": "Absente Grande Alcohol (70 cl)",
+      "source": "https://www.amathusdrinks.com/grande-absente-absinthe",
+      "image": "https://www.amathusdrinks.com/media/catalog/product/cache/af886fa68eb5121618ef1bc6359cf7da/g/r/grande_absente_absinthe.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/59ee7c81-9f7e-5eb5-b189-0d321c8d123c.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/59ee7c81-9f7e-5eb5-b189-0d321c8d123c.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "f1fc7757-b5eb-5c85-b3b6-ad8565f4c0a4",
+    "name": "Efe Gold Rakı (1 lt)",
+    "replacement": {
+      "name": "Efe Gold Rakı (1 lt)",
+      "source": "https://premiumcellars.ae/products/efe-gold-raki-1ltr",
+      "image": "https://premiumcellars.ae/cdn/shop/files/EFEGoldRaki1L.png?v=1764864628"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f1fc7757-b5eb-5c85-b3b6-ad8565f4c0a4.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f1fc7757-b5eb-5c85-b3b6-ad8565f4c0a4.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "bd290519-84f6-560b-a6ee-a641499e2636",
+    "name": "Villa Doluca White Wine (75 cl)",
+    "replacement": {
+      "name": "Villa Doluca White Wine (75 cl)",
+      "source": "https://www.dolucawines.com/products/our-wines-detail/47/villa-doluca-classic-white",
+      "image": "https://www.dolucawines.com/images/urunler/villa_doluca_beyaz_klasik.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/bd290519-84f6-560b-a6ee-a641499e2636.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/bd290519-84f6-560b-a6ee-a641499e2636.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "15c7c16c-447a-5ed6-91d1-bc33a703f978",
+    "name": "Villa Doluca White Wine Neo (75 cl)",
+    "replacement": {
+      "name": "Villa Doluca White Wine Neo (75 cl)",
+      "source": "https://www.dolucawines.com/products/our-wines-detail/199/villa-doluca-neo-white-",
+      "image": "https://www.dolucawines.com/images/urunler/villa_doluca_neo_narince.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/15c7c16c-447a-5ed6-91d1-bc33a703f978.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/15c7c16c-447a-5ed6-91d1-bc33a703f978.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "8c7bbeb1-d427-5557-9734-7732fcaa4aee",
+    "name": "Chatean Perot-La-Baragoile Bergerac (750 ml)",
+    "replacement": {
+      "name": "Chatean Perot-La-Baragoile Bergerac (750 ml)",
+      "source": "https://chateauperrou.com/en/collection/chateau-perrou-la-baragoile/",
+      "image": "https://chateauperrou.com/img/products/chateau-perrou-la-baragoile-front-1920.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/8c7bbeb1-d427-5557-9734-7732fcaa4aee.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/8c7bbeb1-d427-5557-9734-7732fcaa4aee.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "1f9d5ce7-9c2d-5c5d-bb41-6f0fe79cf206",
+    "name": "Chatean Perot-La-Baragoile Bergerac Rose (750 ml)",
+    "replacement": {
+      "name": "Chatean Perot-La-Baragoile Bergerac Rose (750 ml)",
+      "source": "https://chateauperrou.com/fr/collection/chateau-perrou-rose/",
+      "image": "https://chateauperrou.com/img/products/chateau-perrou-rose-front-1920.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/1f9d5ce7-9c2d-5c5d-bb41-6f0fe79cf206.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/1f9d5ce7-9c2d-5c5d-bb41-6f0fe79cf206.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "257497c6-7116-5e0d-94f8-bf026ebc3f43",
+    "name": "Chatean Perot-La-Baragoile Cotes De Bergerac (750 ml)",
+    "replacement": {
+      "name": "Chatean Perot-La-Baragoile Cotes De Bergerac (750 ml)",
+      "source": "https://chateauperrou.com/en/collection/cotes-de-bergerac-moelleux/",
+      "image": "https://chateauperrou.com/img/products/cotes-de-bergerac-moelleux-front-1920.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/257497c6-7116-5e0d-94f8-bf026ebc3f43.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/257497c6-7116-5e0d-94f8-bf026ebc3f43.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "c63ded27-cdc7-5b99-a5b1-a4ddb1e46c08",
+    "name": "Chatean Perot-La-Baragoile Saussigna (500 ml)",
+    "replacement": {
+      "name": "Chatean Perot-La-Baragoile Saussigna (500 ml)",
+      "source": "https://chateauperrou.com/en/collection/saussignac/",
+      "image": "https://chateauperrou.com/img/products/saussignac-front-1920.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c63ded27-cdc7-5b99-a5b1-a4ddb1e46c08.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c63ded27-cdc7-5b99-a5b1-a4ddb1e46c08.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "62755319-28a6-53bf-8f2f-fdfbf5fe24fd",
+    "name": "Cutty Sark Scotch Whisky & Ginger Ale (250 ml)",
+    "replacement": {
+      "name": "Cutty Sark Scotch Whisky & Ginger Ale (250 ml)",
+      "source": "https://cutty-sark.com/products/cutty-sark-ginger-ale-ready-drink",
+      "image": "https://cutty-sark.com/m_enhance/289?style_name=product_media_full&filename=Capture%2520d%25C3%2594%25C3%2587%25C3%2596e%25E2%2595%25A0%25C3%25BCcran%25202025-02-06%2520a%25E2%2595%25A0%25C3%2587%25208-compressed%2520%25281%2529&ext=jpg&h=700&w=680&rule=680w"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/62755319-28a6-53bf-8f2f-fdfbf5fe24fd.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/62755319-28a6-53bf-8f2f-fdfbf5fe24fd.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "cc61107f-206b-5be5-98b9-edac9fd80cd7",
+    "name": "Old Virginia 6 Years Bourbon (70 cl)",
+    "replacement": {
+      "name": "Old Virginia 6 Years Bourbon (70 cl)",
+      "source": "https://www.la-martiniquaise.com/en/marques/old-virginia-3/",
+      "image": "https://www.la-martiniquaise.com/wp-content/uploads/2018/08/old-virginia-6yo-front-view_2024_v5-2-e1729173629514.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/cc61107f-206b-5be5-98b9-edac9fd80cd7.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/cc61107f-206b-5be5-98b9-edac9fd80cd7.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "c8d12fed-d0c3-5cfd-8843-cc0d616557c5",
+    "name": "Absinthe Grande Absente 69% (70 cl)",
+    "replacement": {
+      "name": "Absinthe Grande Absente 69% (70 cl)",
+      "source": "https://www.emporiabrands.com/distilleries-et-domaines-de-provence/grande-absente-absinthe",
+      "image": "https://images.squarespace-cdn.com/content/v1/5f996365a2d243584d4ea59e/1767723861898-LKM9OYDACHCANWX8X6UE/DDP-Grande-Absente.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/c8d12fed-d0c3-5cfd-8843-cc0d616557c5.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/c8d12fed-d0c3-5cfd-8843-cc0d616557c5.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "3853c875-0602-549f-bf74-940d0c30fd79",
+    "name": "Campari Since 1860 (70 cl)",
+    "replacement": {
+      "name": "Campari Since 1860 (70 cl)",
+      "source": "https://shop.oxfordwine.co.uk/products/campari-bitter",
+      "image": "https://www.oxfordwine.co.uk/productimages/Campari_Bitter.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/3853c875-0602-549f-bf74-940d0c30fd79.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/3853c875-0602-549f-bf74-940d0c30fd79.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "08bfa6f7-3784-594a-af4e-4a5ac5e36321",
+    "name": "Villa Doluca Kalecik Karası - Çal Karası (75 cl)",
+    "replacement": {
+      "name": "Villa Doluca Kalecik Karası - Çal Karası (75 cl)",
+      "source": "https://www.dolucawines.com/products/our-wines-detail/44/villa-doluca-classic-red-",
+      "image": "https://www.dolucawines.com/images/urunler/villa_doluca_klasik.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/08bfa6f7-3784-594a-af4e-4a5ac5e36321.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/08bfa6f7-3784-594a-af4e-4a5ac5e36321.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "d48c6e4c-e3c7-54ec-b235-d63023fb6ee8",
+    "name": "Kav Narince Dry White Wine (75 cl)",
+    "replacement": {
+      "name": "Kav Narince Dry White Wine (75 cl)",
+      "source": "https://dolucawines.com/products/our-wines-detail/39/kav-narince",
+      "image": "https://dolucawines.com/images/urunler/kav_narince.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/d48c6e4c-e3c7-54ec-b235-d63023fb6ee8.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/d48c6e4c-e3c7-54ec-b235-d63023fb6ee8.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "8bc66f4d-ea06-5d55-964a-198e2e7b5d5b",
+    "name": "Finlandia Vodka Lime (70 cl)",
+    "replacement": {
+      "name": "Finlandia Vodka Lime (70 cl)",
+      "source": "https://cz.coca-colahellenic.com/en/our-24-7-portfolio/premium-spirits/finlandia",
+      "image": "https://cz.coca-colahellenic.com/content/dam/cch/cz/images/our-24-7-portfolio_new/premium-spirits/finlandia/Finlandia%20vodka%20Lime%2070%20CL_5099873002100.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/8bc66f4d-ea06-5d55-964a-198e2e7b5d5b.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/8bc66f4d-ea06-5d55-964a-198e2e7b5d5b.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "dba0a396-84ac-55cc-9af8-288e6f396670",
+    "name": "Bickens Premium Pink Distilled Gin (70 cl)",
+    "replacement": {
+      "name": "Bickens Premium Pink Distilled Gin (70 cl)",
+      "source": "https://www.scotthomedelivery.mu/products/copy-of-wild-turkey-70cl",
+      "image": "http://www.scotthomedelivery.mu/cdn/shop/files/Untitled_design_-_2024-08-21T110226.671.png?v=1749555544"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/dba0a396-84ac-55cc-9af8-288e6f396670.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/dba0a396-84ac-55cc-9af8-288e6f396670.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "522e6168-2f97-57e3-8776-aff92d2a384a",
+    "name": "Weihenstephaner Bavarian Style (33 cl)",
+    "replacement": {
+      "name": "Weihenstephaner Bavarian Style (33 cl)",
+      "source": "https://www.nipponbeer.jp/lineup/weihenstephaner-hefe-weiss-330ml/",
+      "image": "https://www.nipponbeer.jp/cms/wp-content/uploads/2017/09/nb_081_ws-hefeweiss-1.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/522e6168-2f97-57e3-8776-aff92d2a384a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/522e6168-2f97-57e3-8776-aff92d2a384a.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "eaf30f46-b476-5b82-8828-636b0bf5c367",
+    "name": "Van Pur Famous Premium Quality Beer (500 ml)",
+    "replacement": {
+      "name": "Van Pur Famous Premium Quality Beer (500 ml)",
+      "source": "https://liquid-library.co.nz/van-pur-extra-strong-10-500ml/",
+      "image": "https://cdn11.bigcommerce.com/s-42akb23r8c/products/6985/images/8095/VAN-PUR-10__96908.1786505806.386.513.png?c=1"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/eaf30f46-b476-5b82-8828-636b0bf5c367.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/eaf30f46-b476-5b82-8828-636b0bf5c367.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "486c686e-f6f3-5513-ab7b-5a9e952b19a8",
+    "name": "Budweiser Original Czech Lager (330 ml)",
+    "replacement": {
+      "name": "Budweiser Original Czech Lager (330 ml)",
+      "source": "https://www.beer52.com/shop/product/budvar/original-cezch-lager/6218",
+      "image": "https://dth50iqs19w2y.cloudfront.net/12/1b90a22ea94252adf0ba9505417214/Budweiser-Original-Czech-Lager.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/486c686e-f6f3-5513-ab7b-5a9e952b19a8.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/486c686e-f6f3-5513-ab7b-5a9e952b19a8.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "69333630-773c-565e-bdff-b37c7aaa886f",
+    "name": "Muirhead's Blended Scotch Whisky (70 cl)",
+    "replacement": {
+      "name": "Muirhead's Blended Scotch Whisky (70 cl)",
+      "source": "https://www.gall.nl/muirheads-blended-scotch-whisky-70cl-699772.html",
+      "image": "https://static.gall.nl/images/IMG_683224_500.png?rev=0.2"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/69333630-773c-565e-bdff-b37c7aaa886f.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/69333630-773c-565e-bdff-b37c7aaa886f.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "e9973bf9-a8ed-5c26-ac84-0c98f1bf6b3c",
+    "name": "Famous Names Signature Chocolate Liqueurs Collection (185 gr)",
+    "replacement": {
+      "name": "Famous Names Signature Chocolate Liqueurs Collection (185 gr)",
+      "source": "https://www.elyswimbledon.co.uk/products/famous-names-signature-chocolate-liqueurs-collection-185g",
+      "image": "http://www.elyswimbledon.co.uk/cdn/shop/files/springvale-foods-famous-names-signature-chocolate-liqueurs-collection-185g-1203060828_1024x.jpg?v=1762356325"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/e9973bf9-a8ed-5c26-ac84-0c98f1bf6b3c.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/e9973bf9-a8ed-5c26-ac84-0c98f1bf6b3c.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "a61310d7-38d5-5b0d-8fcb-869626b4602f",
+    "name": "Absolut Vodka Pears (70 cl)",
+    "replacement": {
+      "name": "Absolut Vodka Pears (70 cl)",
+      "source": "https://www.amathusdrinks.com/absolut-pear-vodka",
+      "image": "https://www.amathusdrinks.com/media/catalog/product/cache/af886fa68eb5121618ef1bc6359cf7da/a/b/absolut_pear_vodka.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/a61310d7-38d5-5b0d-8fcb-869626b4602f.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/a61310d7-38d5-5b0d-8fcb-869626b4602f.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "8bf616a5-6637-5360-98b6-789e79fedfca",
+    "name": "Finlandia Vodka (50 cl)",
+    "replacement": {
+      "name": "Finlandia Vodka (50 cl)",
+      "source": "https://www.heinemann-shop.com/en/global/finlandia/finlandia-vodka-40vol-0-5l/p/000000000000082683/",
+      "image": "https://www.heinemann-shop.com/medias/300Wx300H-null?context=bWFzdGVyfGltYWdlc3wyNTQ1M3xpbWFnZS9qcGVnfGFHWXhMMmd6Tnk4eE16UTJOemc0TnpnMk1UYzVNQzh6TURCWGVETXdNRWhmYm5Wc2JBfGQxMDE4MWI4OTY0ZGNmZGE2ODg2NTZiODk0ZTE5NTlmNTBmYmFkNjcyMWI4YjA0NmMwNjM0NmNiNmMzMGMyNDQ&v=1774621209791"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/8bf616a5-6637-5360-98b6-789e79fedfca.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/8bf616a5-6637-5360-98b6-789e79fedfca.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "eb306033-3a3e-52dd-87f5-fc73a2340de8",
+    "name": "Southern Comfort (100 cl)",
+    "replacement": {
+      "name": "Southern Comfort (100 cl)",
+      "source": "https://preetliquor.com/products/southern-comfort-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0830/6058/8863/files/southern-comfort-1l-liquor-088544018941-g2-wine-and-spirits-660244.jpg?v=1735597839"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/eb306033-3a3e-52dd-87f5-fc73a2340de8.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/eb306033-3a3e-52dd-87f5-fc73a2340de8.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "4a7015a7-06e0-5e0d-b174-e23b64d6be49",
+    "name": "Highland Queen Blended Scotch Whisky (70 cl)",
+    "replacement": {
+      "name": "Highland Queen Blended Scotch Whisky (70 cl)",
+      "source": "https://www.singlemalt.ph/products/highland-queen-scotch-whisky-70cl",
+      "image": "https://www.singlemalt.ph/cdn/shop/files/highlandqueen.png?v=1730087509"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/4a7015a7-06e0-5e0d-b174-e23b64d6be49.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/4a7015a7-06e0-5e0d-b174-e23b64d6be49.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "ba29887e-c5b4-57f6-8dbc-f76a42e6ba26",
+    "name": "Jagermeister (70 cl + 2 Shot)",
+    "replacement": {
+      "name": "Jagermeister (70 cl + 2 Shot)",
+      "source": "https://www.myfyxx.com/products/jagermeister-limited-edition-70cl-with-shot-glasses",
+      "image": "https://www.myfyxx.com/cdn/shop/files/Ninkasi_Vodka___Fleurs_De_Houblon_Saaz_fyxx_premium-alcohol-delivery_amman-jordan_5.png?v=1784633923"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/ba29887e-c5b4-57f6-8dbc-f76a42e6ba26.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/ba29887e-c5b4-57f6-8dbc-f76a42e6ba26.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "30e4200c-b85e-5de6-bf57-95f256d100c5",
+    "name": "Sarı Zeybek Yaş Üzüm (70 cl)",
+    "replacement": {
+      "name": "Sarı Zeybek Yaş Üzüm (70 cl)",
+      "source": "https://www.sarpermarket.com/urunler/sari-zeybek-yas-uzum-rakisi-70-cl/",
+      "image": "https://www.sarpermarket.com/wp-content/uploads/2023/05/efe_SZ_fresh_grape-550x700w.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/30e4200c-b85e-5de6-bf57-95f256d100c5.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/30e4200c-b85e-5de6-bf57-95f256d100c5.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "2310abbc-d775-50ba-96bf-c1903abadbc6",
+    "name": "Label 5 Scotch (2 lt)",
+    "replacement": {
+      "name": "Label 5 Scotch (2 lt)",
+      "source": "https://alkoprestige.pl/pl/p/WHISKY-LABEL-5-2L-40/815",
+      "image": "https://alkoprestige.pl/environment/cache/images/productGfx_1271_500_500/WHISKY-LABEL-5-2L-40.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/2310abbc-d775-50ba-96bf-c1903abadbc6.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/2310abbc-d775-50ba-96bf-c1903abadbc6.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "47a53a84-532b-57ec-8f83-96cb3a43c3c3",
+    "name": "Old Virginia 2 Years Old (70 cl)",
+    "replacement": {
+      "name": "Old Virginia 2 Years Old (70 cl)",
+      "source": "https://www.la-martiniquaise.com/en/marques/old-virginia-3/",
+      "image": "https://www.la-martiniquaise.com/wp-content/uploads/2018/08/old-virginia-original-front-view_2024_v3-118x320.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/47a53a84-532b-57ec-8f83-96cb3a43c3c3.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/47a53a84-532b-57ec-8f83-96cb3a43c3c3.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "f4762fb1-104b-50a6-a189-82fc26a1b7f0",
+    "name": "Koskenkorva Blueberry (50 cl)",
+    "replacement": {
+      "name": "Koskenkorva Blueberry (50 cl)",
+      "source": "https://koskenkorva.com/en/koskenkorva-blueberry",
+      "image": "https://res.cloudinary.com/anora/image/upload/f_auto/own-brands%2Fkoskenkorva%2Fproducts%2Fkoskenkorva-blueberry-50cl-3d"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/f4762fb1-104b-50a6-a189-82fc26a1b7f0.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/f4762fb1-104b-50a6-a189-82fc26a1b7f0.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "db718c28-e77c-52dd-81ef-d599eabb0c0a",
+    "name": "Absinthe Sublime Absente 89% (100 cl)",
+    "replacement": {
+      "name": "Absinthe Sublime Absente 89% (100 cl)",
+      "source": "https://gbottleshop.com/products/sublime-absent-89-1l",
+      "image": "https://cdn.shopify.com/s/files/1/0679/9353/4776/files/SUBLIMEABSENTE89_1L.jpg?v=1687627381"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/db718c28-e77c-52dd-81ef-d599eabb0c0a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/db718c28-e77c-52dd-81ef-d599eabb0c0a.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "61fd48c5-646b-534d-9e35-d22fd7867317",
+    "name": "Gibson's London Dry Gin Botanical (1 lt)",
+    "replacement": {
+      "name": "Gibson's London Dry Gin Botanical (1 lt)",
+      "source": "https://supermarketkibris.com/product/gibsons-gin-botanical-100cl822-p-15286",
+      "image": "https://supermarketkibris.com/uploads/images/3147699121993.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/61fd48c5-646b-534d-9e35-d22fd7867317.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/61fd48c5-646b-534d-9e35-d22fd7867317.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "a0136045-1e84-5969-b94a-60097cea2871",
+    "name": "Venüs Pilsner Tin Beer (50 cl)",
+    "replacement": {
+      "name": "Venüs Pilsner Tin Beer (50 cl)",
+      "source": "https://www.bipaketci.com/market/urunler/venus-pilsner-50cl-kutu/",
+      "image": "https://www.bipaketci.com/market/wp-content/uploads/2024/09/8690582222406.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/a0136045-1e84-5969-b94a-60097cea2871.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/a0136045-1e84-5969-b94a-60097cea2871.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "75b119fa-d915-5ce2-a2d2-eb7cc1317936",
+    "name": "Volim Limon (25 cl)",
+    "replacement": {
+      "name": "Volim Limon (25 cl)",
+      "source": "https://www.saridayilar.com.tr/urun-fiyat-listesi/",
+      "image": "https://www.saridayilar.com.tr/image/volim-limon-100x100.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/75b119fa-d915-5ce2-a2d2-eb7cc1317936.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/75b119fa-d915-5ce2-a2d2-eb7cc1317936.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "129c46bc-ca86-5d04-89ac-2a063c751153",
+    "name": "Carlsberg Beer Bottle (33 cl)",
+    "replacement": {
+      "name": "Carlsberg Beer Bottle (33 cl)",
+      "source": "https://www.shopping-d.com/products/carlsberg-330ml-bottle-chilled",
+      "image": "https://www.shopping-d.com/cdn/shop/products/800x800pxCB_ND_33cl_Pilsner_Wet_Bottle.png?v=1594009090"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/129c46bc-ca86-5d04-89ac-2a063c751153.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/129c46bc-ca86-5d04-89ac-2a063c751153.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "58a6b78a-25bf-5ca1-84af-a6ae1e79c58b",
+    "name": "Yeni Rakı (35 cl)",
+    "replacement": {
+      "name": "Yeni Rakı (35 cl)",
+      "source": "https://bottleswithoutborders.com/product/yeni-raki-1937/",
+      "image": "https://bottleswithoutborders.com/wp-content/uploads/2026/06/liq12262_yeni_raki_1937.webp"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/58a6b78a-25bf-5ca1-84af-a6ae1e79c58b.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/58a6b78a-25bf-5ca1-84af-a6ae1e79c58b.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "5b6fce27-658f-5bb1-9dda-a57012b704b1",
+    "name": "Koskenkorva Creme Caramel (50 cl)",
+    "replacement": {
+      "name": "Koskenkorva Creme Caramel (50 cl)",
+      "source": "https://www.raschvin.com/produkt/koskenkorva-cream-creme-caramel-50-cl-15/",
+      "image": "https://www.raschvin.com/wp-content/uploads/2026/01/Koskenkorva-Creme-Caramel-15-050-l-1.jpg"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/5b6fce27-658f-5bb1-9dda-a57012b704b1.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/5b6fce27-658f-5bb1-9dda-a57012b704b1.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "e59f984b-1e44-5cf9-aed9-969400f91c7a",
+    "name": "Kronenbourg 1664 Blanc (33 cl)",
+    "replacement": {
+      "name": "Kronenbourg 1664 Blanc (33 cl)",
+      "source": "https://www.schurch.ch/shop/auslaendische-biere/kronenbourg-1664-blanc",
+      "image": "https://www.schurch.ch/shop/images/artikel/large/9872697/0/kronenbourg-1664-blanc.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/e59f984b-1e44-5cf9-aed9-969400f91c7a.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/e59f984b-1e44-5cf9-aed9-969400f91c7a.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
+  },
+  {
+    "id": "7a6bdd3e-47dd-5507-91c3-076f558c47e6",
+    "name": "Label 5 Scotch Citrus Spirit (70 cl)",
+    "replacement": {
+      "name": "Label 5 Scotch Citrus Spirit (70 cl)",
+      "source": "https://www.la-martiniquaise.com/en/marques/label-5-3/",
+      "image": "https://www.la-martiniquaise.com/wp-content/uploads/2018/08/label-5-original-citrus-1-115x320.png"
+    },
+    "path": "assets/menu-photos/alcohol-clean-v1/7a6bdd3e-47dd-5507-91c3-076f558c47e6.webp",
+    "image_url": "./assets/menu-photos/alcohol-clean-v1/7a6bdd3e-47dd-5507-91c3-076f558c47e6.webp",
+    "review": "Matched brand and variant; visually checked for retailer watermark"
   }
 ]
