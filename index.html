@@ -2509,6 +2509,7 @@ function renderTracking(data){
   const items=Array.isArray(data?.items)?data.items:[];
   if(!o) throw new Error("Order not found. Please use the same phone number used when placing the order.");
   const status=normalizedStatus(o.status);
+  window.MEGJET_SERVICE?.orderUpdate(o);
   $("trackingNumber").textContent="Order #"+displayOrderId(o.id);
   $("trackingStatus").textContent=status.replaceAll("_"," ");
   $("trackingStatus").className="track-status "+status;
@@ -4216,6 +4217,7 @@ function renderAdminOrders(){
   const filter=$("adminStatusFilter").value;
   const q=($("adminSearch")?.value||"").trim().toLowerCase();
   let orders=filter==="all"?adminOrdersCache:adminOrdersCache.filter(o=>normalizedStatus(o.status)===filter);
+  if(window.MEGJET_SERVICE_FILTER){const attention=window.MegjetServiceCore?.attention(orders);orders=attention?.[window.MEGJET_SERVICE_FILTER]||orders;}
   if(q){
     orders=orders.filter(o=>{
       const hay=[o.id,o.customer_name,o.customer_phone,o.delivery_address].map(x=>String(x??"").toLowerCase()).join(" ");
@@ -4626,6 +4628,7 @@ document.addEventListener('click',e=>{const b=e.target.closest('[data-prep-prese
 
 function renderAdminOverview(){
   const orders=adminOrdersCache||[];
+  window.MEGJET_SERVICE?.renderAttention(orders);
   const today=orders.filter(o=>isTodayCyprus(o.created_at));
   const deliveredToday=today.filter(o=>normalizedStatus(o.status)==="delivered");
   const active=orders.filter(o=>!["delivered","cancelled"].includes(normalizedStatus(o.status)));
@@ -5684,5 +5687,8 @@ document.addEventListener("DOMContentLoaded",function(){
 <link rel="stylesheet" href="./assets/home-sections.css?v=1">
 <script src="./assets/home-sections-core.js?v=1"></script>
 <script src="./assets/home-sections.js?v=1"></script>
+<link rel="stylesheet" href="./assets/service-improvements.css?v=1">
+<script src="./assets/service-core.js?v=1"></script>
+<script src="./assets/service-improvements.js?v=1"></script>
 </body>
 </html>

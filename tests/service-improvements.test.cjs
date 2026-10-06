@@ -1,0 +1,15 @@
+const assert=require('node:assert/strict'),{eta,resolve,attention}=require('../assets/service-core.js');
+assert.deepEqual(eta([{preparation_minutes:20},{preparation_minutes:35}],{travel_min:15,travel_max:25}),{min:50,max:60,multi:true});
+assert.equal(eta([{preparation_minutes:null}],{travel_min:15,travel_max:25}),null);
+assert.equal(eta([{preparation_minutes:20,quote_only:true}],{travel_min:15,travel_max:25}),null);
+const now=Date.parse('2026-10-06T20:00:00Z');const orders=[{id:1,status:'pending',payment_method:'Bank Transfer',payment_status:'unpaid',created_at:'2026-10-06T19:00:00Z'},{id:2,status:'delivered',payment_method:'Bank Transfer',payment_status:'unpaid',created_at:'2026-10-06T18:00:00Z'},{id:3,status:'preparing',payment_method:'Cash on Delivery',created_at:'2026-10-06T19:45:00Z'}];
+assert.deepEqual(attention(orders,now).bank.map(o=>o.id),[1]);assert.deepEqual(attention(orders,now).waiting.map(o=>o.id),[1]);
+const products=[{id:'p',vendor_id:'v',name:'Meal',price:120,available:true}],vendors=[{id:'v',name:'Restaurant',active:true}],options=[{product_id:'p',groups:[{id:'size',min:1,max:1,label_en:'Size',choices:[{id:'large',label_en:'Large',extra:30}]}]}];
+const item={product_id:'p',product_name:'Meal',quantity:2,customizations:{size:['large']}};
+assert.equal(resolve([item],products,vendors,options,()=>false).resolved[0].price,150);
+assert.equal(resolve([item],products,vendors,options,()=>false).resolved[0].quantity,2);
+assert.equal(resolve([{...item,customizations:{size:['old']}}],products,vendors,options,()=>false).resolved.length,0);
+assert.equal(resolve([item],products,vendors,options,()=>true).resolved.length,0);
+assert.equal(resolve([item],products,[{...vendors[0],accepting_orders:false}],options,()=>false).resolved.length,0);
+assert.equal(resolve([item],products,vendors,[],()=>false).resolved.length,0);
+console.log('Delivery ranges, unknown preparation, private attention filters, current reorder prices, changed options and unavailable stores passed.');
