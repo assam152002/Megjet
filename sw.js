@@ -1,6 +1,8 @@
-const CACHE_NAME = "megjet-app-v38";
-const GUARD_URL = "./workflow-guard.js?v=8";
+const CACHE_NAME = "megjet-app-v39";
+const GUARD_URL = "./workflow-guard.js?v=9";
 const APP_SHELL = [
+  "./assets/bank-transfer.js?v=1",
+  "./assets/bank-transfer.css?v=1",
   "./assets/florist.js?v=7",
   "./assets/florist-portal.js?v=4",
   "./assets/florist.css?v=4",
@@ -42,7 +44,7 @@ async function withWorkflowGuard(response) {
 
   let html = await response.text();
   html = html.replace(/<script src="\.\/workflow-guard\.js(?:\?[^"]*)?"><\/script>/g, "");
-  html = html.replace("</body>", '<script src="./workflow-guard.js?v=8"></script></body>');
+  html = html.replace("</body>", '<script src="./workflow-guard.js?v=9"></script></body>');
 
   const headers = new Headers(response.headers);
   headers.delete("content-length");

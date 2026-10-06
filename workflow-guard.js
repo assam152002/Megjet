@@ -181,8 +181,8 @@
         return;
       }
 
-      if (!["Cash on Delivery", "Card at Doorstep (POS)"].includes(document.getElementById("paymentMethod")?.value)) {
-        checkoutMessage("Choose cash or a physical POS terminal at your door.");
+      if (!["Cash on Delivery", "Card at Doorstep (POS)", "Bank Transfer"].includes(document.getElementById("paymentMethod")?.value)) {
+        checkoutMessage("Choose cash, a physical POS terminal at your door, or bank transfer.");
         return;
       }
       const fingerprint = checkoutFingerprint(name, phone, address);
