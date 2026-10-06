@@ -1,0 +1,16 @@
+(()=>{'use strict';
+const $=id=>document.getElementById(id),t=(en,tr)=>document.documentElement.lang==='tr'?tr:en;
+let key='',quoted=null,requestId=0,timer;
+const items=()=>Array.from(new Set((window.cart||[]).map(p=>String(p.id)))).sort().map(id=>({product_id:id}));
+function address(){return window.MEGJET_DELIVERY_PIN?.serialized('address')||$('address')?.value||'';}
+function quoteKey(){return JSON.stringify([items(),address()]);}
+function message(){const box=$('nearbyDeliveryMessage');if(!box)return;const q=quoted;if(!items().length){box.hidden=true;return;}box.hidden=false;box.textContent=q?.nearby?t('Nearby delivery: ₺50 or less · all pickups within 25 m of your pin.','Yakın teslimat: ₺50 veya daha az · tüm teslim alımlar konumunuzun 25 m yakınında.')+(q?.fee<50?' ('+money(q.fee)+')':''):q?.reason==='distance'?t('Standard delivery fee · your pin is over 25 m from at least one pickup.','Standart teslimat ücreti · konumunuz en az bir teslim alma noktasından 25 m uzakta.'):q?.reason==='vendor_pin'?t('Standard fee applies. A pickup location is not yet verified.','Standart ücret geçerli. Teslim alma konumu henüz doğrulanmadı.'):t('Pin your delivery address to check the 25 m nearby discount. Standard fee applies otherwise.','25 m yakın teslimat indirimini kontrol etmek için adresinizi işaretleyin. Aksi halde standart ücret uygulanır.');}
+function redraw(){renderCart();renderCheckoutTotals();message();}
+async function refresh(force=false){const next=quoteKey();if(!force&&next===key)return quoted;key=next;const run=++requestId;quoted=null;redraw();if(!items().length||!window.MegjetDeliveryPinCore.parse(address()))return null;try{const q=await fetchJson(cfg.url.replace(/\/$/,'')+'/rest/v1/rpc/quote_nearby_delivery',{method:'POST',headers:{apikey:cfg.key,Authorization:'Bearer '+cfg.key,'Content-Type':'application/json'},body:JSON.stringify({p_items:items(),p_delivery_address:address()})});if(run!==requestId||next!==quoteKey()){if(force)return refresh(true);return null;}if(!Number.isFinite(Number(q.fee))||Number(q.fee)<0)throw Error('Invalid delivery quote');quoted=q;redraw();return q;}catch(error){if(run===requestId){quoted=null;redraw();}if(force)throw error;return null;}}
+window.MEGJET_NEARBY={fee(){return key===quoteKey()&&quoted?Number(quoted.fee):Number(DELIVERY);},refresh};
+const note=document.createElement('p');note.id='nearbyDeliveryMessage';note.className='service-eta';note.dataset.noTranslate='';$('serviceCheckoutFormEstimate')?.after(note);
+const settings=document.createElement('p');settings.className='feature-small';settings.textContent='Nearby delivery: ₺50 within 25 metres of every vendor pickup pin (straight-line map distance). Without a verified pickup pin, the standard delivery fee applies.';$('deliveryFeeAdminMessage')?.after(settings);
+const changed=()=>{clearTimeout(timer);timer=setTimeout(()=>void refresh(),250);};
+$('address')?.addEventListener('input',changed);const cartItems=$('cartItems');if(cartItems)new MutationObserver(()=>{if(quoteKey()!==key)changed();}).observe(cartItems,{childList:true});
+setInterval(()=>{if(!document.hidden&&quoteKey()!==key)changed();},700);window.addEventListener('megjet:languagechange',message);void refresh();
+})();

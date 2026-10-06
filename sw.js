@@ -1,6 +1,7 @@
-const CACHE_NAME = "megjet-app-v42";
+const CACHE_NAME = "megjet-app-v43";
 const GUARD_URL = "./workflow-guard.js?v=9";
 const APP_SHELL = [
+  "./assets/nearby-delivery.js?v=1",
   "./assets/service-core.js?v=1",
   "./assets/service-improvements.js?v=2",
   "./assets/service-improvements.css?v=1",
