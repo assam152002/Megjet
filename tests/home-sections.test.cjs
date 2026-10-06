@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const {select}=require('../assets/home-sections-core.js');
+const vendors=[{id:'a',name:'Burger House'},{id:'b',name:'Pizza House'},{id:'m',name:'Market'},{id:'f',name:'Flowers',quote_only:true}];
+const product=(id,vendor_id,name,extra={})=>({id,vendor_id,name,price:100,image_url:'photo.webp',...extra});
+const products=[product('1','a','Burger'),product('2','a','Chicken wrap'),product('3','b','Pizza'),product('4','a','Beer'),product('5','a','Extra sauce'),product('6','m','Burger'),product('7','f','Cake'),product('8','b','Pizza',{available:false}),product('9','b','Pizza',{price:0}),product('10','b','Pizza',{image_url:''})];
+const result=select(vendors,products,p=>p.image_url);
+assert.deepEqual(result.meals.map(p=>p.id),['1','3','2']);
+assert.deepEqual(new Set(result.restaurants.map(v=>v.id)),new Set(['a','b']));
+assert.equal(select([{id:'a',name:'Burger House',active:false}],products,p=>p.image_url).meals.length,0);
+assert.deepEqual(select(vendors,[],p=>p.image_url),{meals:[],restaurants:[]});
+console.log('Home sections: vendor diversity, real photos and prices, availability, shop and alcoholic product exclusions passed.');
