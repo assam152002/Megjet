@@ -1,7 +1,7 @@
 BEGIN;
 CREATE TEMP TABLE ops_test_results(check_name text,passed boolean);
 DO $$
-DECLARE a uuid;vu uuid;v uuid;ru uuid;rid uuid;p uuid:=gen_random_uuid();o uuid:=gen_random_uuid();o2 uuid:=gen_random_uuid();req jsonb;r jsonb;pin text;payload jsonb;address text:=E'Rollback test, Gazimagusa\nMap pin: https://www.google.com/maps?q=35,33';replay json;
+DECLARE a uuid;vu uuid;v uuid;ru uuid;rid uuid;p uuid:=gen_random_uuid();o uuid:=gen_random_uuid();o2 uuid:=gen_random_uuid();req jsonb;r jsonb;pin text;payload jsonb;address text:=E'Rollback test, Gazimagusa\nMap pin: https://www.google.com/maps?q=35,33';replay json;method text;trial uuid;
 BEGIN
  SELECT user_id INTO a FROM public.admin_users LIMIT 1;
  SELECT u.user_id,u.vendor_id INTO vu,v FROM public.vendor_users u WHERE NOT EXISTS(SELECT 1 FROM public.admin_users WHERE user_id=u.user_id) LIMIT 1;
@@ -89,6 +89,32 @@ BEGIN
  INSERT INTO ops_test_results VALUES('Paused vendor and sold-out checkout rejection',true);
  IF has_table_privilege('anon','public.order_service_requests','select') OR has_table_privilege('authenticated','public.order_service_requests','update') THEN RAISE EXCEPTION 'Request table permissions too broad';END IF;
  INSERT INTO ops_test_results VALUES('Private request table permissions',true);
+
+ UPDATE public.products SET available=true WHERE id=p;
+ FOR method IN SELECT unnest(ARRAY['Card at Doorstep (POS)','Bank Transfer']) LOOP
+  trial:=gen_random_uuid();
+  PERFORM set_config('request.jwt.claim.sub',vu::text,true);
+  PERFORM public.create_customer_order_retry(trial,'Rollback test','0000000000',address,method,null,payload);
+  PERFORM set_config('request.jwt.claim.sub',a::text,true);
+  IF method='Bank Transfer' THEN
+   BEGIN PERFORM public.admin_set_order_status(trial,'confirmed');RAISE EXCEPTION 'Unverified bank order confirmed';EXCEPTION WHEN OTHERS THEN IF sqlerrm<>'Verify the bank transfer before confirming or preparing this order' THEN RAISE;END IF;END;
+   BEGIN PERFORM public.confirm_bank_transfer(trial,1,'Rollback wrong amount');RAISE EXCEPTION 'Wrong transfer amount allowed';EXCEPTION WHEN OTHERS THEN IF sqlerrm<>'Received amount must match the order total' THEN RAISE;END IF;END;
+   PERFORM public.confirm_bank_transfer(trial,(SELECT total FROM public.orders WHERE id=trial),'Rollback receipt');
+  END IF;
+  PERFORM public.admin_set_order_status(trial,'confirmed');
+  PERFORM set_config('request.jwt.claim.sub',vu::text,true);
+  PERFORM public.set_vendor_order_status(trial,'preparing');PERFORM public.set_vendor_order_status(trial,'ready_for_pickup');
+  PERFORM set_config('request.jwt.claim.sub',a::text,true);PERFORM public.admin_assign_rider_to_order(trial,rid);
+  PERFORM set_config('request.jwt.claim.sub',ru::text,true);PERFORM public.rider_accept_delivery(trial);
+  SELECT delivery_pin INTO pin FROM public.delivery_security WHERE order_id=trial::text;
+  IF method='Card at Doorstep (POS)' THEN
+   BEGIN PERFORM public.rider_complete_delivery(trial::text,pin,null,false);RAISE EXCEPTION 'Unpaid POS delivery allowed';EXCEPTION WHEN OTHERS THEN IF sqlerrm<>'Confirm successful payment on the physical POS terminal' THEN RAISE;END IF;END;
+  END IF;
+  PERFORM public.rider_complete_delivery(trial::text,pin,null,true);
+  IF NOT EXISTS(SELECT 1 FROM public.orders WHERE id=trial AND status='delivered' AND payment_status='paid') THEN RAISE EXCEPTION 'Payment trial failed: %',method;END IF;
+  INSERT INTO ops_test_results VALUES(method||' delivery flow and payment safeguards',true);
+ END LOOP;
+
 END $$;
 SELECT * FROM ops_test_results;
 ROLLBACK;
