@@ -1,11 +1,12 @@
 (()=>{'use strict';
 const $=id=>document.getElementById(id),t=(en,tr)=>document.documentElement.lang==='tr'?tr:en;
 let key='',quoted=null,requestId=0,timer;
+const availability=document.createElement('p');availability.id='deliveryAvailability';availability.className='notice bad';availability.setAttribute('role','status');availability.hidden=true;$('mjCheckoutSummary')?.after(availability);
 const items=()=>Array.from(new Set((window.cart||[]).map(p=>String(p.id)))).sort().map(id=>({product_id:id}));
 function address(){return window.MEGJET_DELIVERY_PIN?.serialized('address')||$('address')?.value||'';}
 function quoteKey(){return JSON.stringify([items(),address()]);}
 function redraw(){renderCart();renderCheckoutTotals();}
-async function refresh(force=false){const next=quoteKey();if(!force&&next===key)return quoted;key=next;const run=++requestId;quoted=null;redraw();if(!items().length||!window.MegjetDeliveryPinCore.parse(address()))return null;try{const q=await fetchJson(cfg.url.replace(/\/$/,'')+'/rest/v1/rpc/quote_nearby_delivery',{method:'POST',headers:{apikey:cfg.key,Authorization:'Bearer '+cfg.key,'Content-Type':'application/json'},body:JSON.stringify({p_items:items(),p_delivery_address:address()})});if(run!==requestId||next!==quoteKey()){if(force)return refresh(true);return null;}if(!Number.isFinite(Number(q.fee))||Number(q.fee)<0)throw Error('Invalid delivery quote');quoted=q;redraw();return q;}catch(error){if(run===requestId){quoted=null;redraw();}if(force)throw error;return null;}}
+async function refresh(force=false){const next=quoteKey();if(!force&&next===key)return quoted;key=next;const run=++requestId;quoted=null;availability.hidden=true;redraw();if(!items().length||!window.MegjetDeliveryPinCore.parse(address()))return null;try{const q=await fetchJson(cfg.url.replace(/\/$/,'')+'/rest/v1/rpc/quote_nearby_delivery',{method:'POST',headers:{apikey:cfg.key,Authorization:'Bearer '+cfg.key,'Content-Type':'application/json'},body:JSON.stringify({p_items:items(),p_delivery_address:address()})});if(run!==requestId||next!==quoteKey()){if(force)return refresh(true);return null;}if(!Number.isFinite(Number(q.fee))||Number(q.fee)<0)throw Error('Invalid delivery quote');quoted=q;redraw();return q;}catch(error){if(run===requestId){quoted=null;availability.textContent=error.message;availability.hidden=false;redraw();}if(force)throw error;return null;}}
 window.MEGJET_NEARBY={fee(){return key===quoteKey()&&quoted?Number(quoted.fee):Number(DELIVERY);},refresh};
 const changed=()=>{clearTimeout(timer);timer=setTimeout(()=>void refresh(),250);};
 $('address')?.addEventListener('input',changed);const cartItems=$('cartItems');if(cartItems)new MutationObserver(()=>{if(quoteKey()!==key)changed();}).observe(cartItems,{childList:true});

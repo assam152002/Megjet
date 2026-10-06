@@ -2342,7 +2342,7 @@ $("placeOrder").onclick=async()=>{
   let address=$("address").value.trim();
   if(!name||!phone||!address){$("orderMessage").textContent="Please enter your name, phone and delivery address.";return;}
   address=await window.MEGJET_DELIVERY_PIN.require("address");if(!address)return;
-  try{await window.MEGJET_NEARBY?.refresh(true);}catch(e){$("orderMessage").textContent="Could not confirm delivery fee. Please retry.";return;}
+  try{await window.MEGJET_NEARBY?.refresh(true);}catch(e){$("orderMessage").textContent=e.message||"Could not confirm delivery fee. Please retry.";return;}
   const base=cfg.url.replace(/\/+$/,"");
   const subtotal=cart.reduce((a,p)=>a+Number(p.price),0);
   try{
@@ -3034,10 +3034,12 @@ async function deleteVendorPortalMenu(id){const p=vendorMenuCache.find(x=>String
 
 let vendorNotificationTimer=null;let vendorLastOrderSnapshot={};
 function vendorPortalNotice(text){const el=$("vendorPortalNotice");if(!el)return;el.innerHTML='<span>🔔 '+escapeHtml(text)+'</span><button type="button" onclick="this.parentElement.classList.remove(\'show\')">Dismiss</button>';el.classList.add('show');if("Notification" in window&&Notification.permission==='granted'){try{new Notification('Megjet — Vendor Update',{body:text});}catch(e){}}}
-function startVendorNotifications(){if(vendorNotificationTimer)clearInterval(vendorNotificationTimer);vendorNotificationTimer=setInterval(async()=>{if(!localStorage.getItem('megjet_vendor_access_token'))return;try{const before={...vendorLastOrderSnapshot};await loadVendorDashboard();const changed=[];(vendorOrdersCache||[]).forEach(o=>{const id=String(o.id),st=normalizedStatus(o.status);if(!before[id]) changed.push('New order #'+displayOrderId(o.id)+' is '+st.replaceAll('_',' ')); else if(before[id]!==st)changed.push('Order #'+displayOrderId(o.id)+' is now '+st.replaceAll('_',' '));vendorLastOrderSnapshot[id]=st;});if(changed.length)vendorPortalNotice(changed[0]);}catch(e){}},20000);}
+let vendorNotificationBusy=false;
+function startVendorNotifications(){if(vendorNotificationTimer)clearInterval(vendorNotificationTimer);vendorNotificationTimer=setInterval(async()=>{if(document.hidden||vendorNotificationBusy||!localStorage.getItem('megjet_vendor_access_token'))return;vendorNotificationBusy=true;try{const before={...vendorLastOrderSnapshot};await loadVendorDashboard();const changed=[];(vendorOrdersCache||[]).forEach(o=>{const id=String(o.id),st=normalizedStatus(o.status);if(!before[id]) changed.push('New order #'+displayOrderId(o.id)+' is '+st.replaceAll('_',' ')); else if(before[id]!==st)changed.push('Order #'+displayOrderId(o.id)+' is now '+st.replaceAll('_',' '));vendorLastOrderSnapshot[id]=st;});if(changed.length)vendorPortalNotice(changed[0]);}catch(e){}finally{vendorNotificationBusy=false;}},15000);}
 let riderNotificationTimer=null;let riderLastOrderSnapshot={};
 function riderPortalNotice(text){const el=$("riderPortalNotice");if(!el)return;el.innerHTML='<span>🔔 '+escapeHtml(text)+'</span><button type="button" onclick="this.parentElement.classList.remove(\'show\')">Dismiss</button>';el.classList.add('show');if("Notification" in window&&Notification.permission==='granted'){try{new Notification('Megjet — Delivery Update',{body:text});}catch(e){}}}
-function startRiderNotifications(){if(riderNotificationTimer)clearInterval(riderNotificationTimer);riderNotificationTimer=setInterval(async()=>{if(!localStorage.getItem('megjet_rider_access_token'))return;try{const before={...riderLastOrderSnapshot};await loadRiderDashboard();const changed=[];(riderOrdersCache||[]).forEach(o=>{const id=String(o.id),st=normalizedStatus(o.status);if(!before[id]) changed.push('New delivery #'+displayOrderId(o.id)+' is '+st.replaceAll('_',' ')); else if(before[id]!==st)changed.push('Order #'+displayOrderId(o.id)+' is now '+st.replaceAll('_',' '));riderLastOrderSnapshot[id]=st;});if(changed.length)riderPortalNotice(changed[0]);}catch(e){}},20000);}
+let riderNotificationBusy=false;
+function startRiderNotifications(){if(riderNotificationTimer)clearInterval(riderNotificationTimer);riderNotificationTimer=setInterval(async()=>{if(document.hidden||riderNotificationBusy||!localStorage.getItem('megjet_rider_access_token'))return;riderNotificationBusy=true;try{const before={...riderLastOrderSnapshot};await loadRiderDashboard();const changed=[];(riderOrdersCache||[]).forEach(o=>{const id=String(o.id),st=normalizedStatus(o.status);if(!before[id]) changed.push('New delivery #'+displayOrderId(o.id)+' is '+st.replaceAll('_',' ')); else if(before[id]!==st)changed.push('Order #'+displayOrderId(o.id)+' is now '+st.replaceAll('_',' '));riderLastOrderSnapshot[id]=st;});if(changed.length)riderPortalNotice(changed[0]);}catch(e){}finally{riderNotificationBusy=false;}},15000);}
 
 let riderProfile=null;
 let riderOrdersCache=[];
@@ -5675,7 +5677,7 @@ document.addEventListener("DOMContentLoaded",function(){
 <script>window.megjetCustomerDiscoveryState=()=>({signedIn:!!customerAuthUser,addresses:customerAuthUser?customerSavedAddresses:[],orders:customerAuthUser?(window._customerHistoryOrders||[]):[],fee:Number(DELIVERY)});</script>
 <script src="./assets/store-hours.js?v=2"></script>
 <script src="./assets/discovery-core.js?v=5"></script>
-<script src="./assets/discovery.js?v=17"></script>
+<script src="./assets/discovery.js?v=18"></script>
 <link rel="stylesheet" href="./assets/delivery-pin.css?v=2">
 <script src="./assets/delivery-pin-core.js?v=1"></script>
 <script src="./assets/delivery-pin.js?v=1"></script>
@@ -5688,11 +5690,13 @@ document.addEventListener("DOMContentLoaded",function(){
 <script src="./assets/bank-transfer.js?v=1"></script>
 <link rel="stylesheet" href="./assets/home-sections.css?v=1">
 <script src="./assets/home-sections-core.js?v=1"></script>
-<script src="./assets/home-sections.js?v=1"></script>
+<script src="./assets/home-sections.js?v=2"></script>
 <link rel="stylesheet" href="./assets/service-improvements.css?v=1">
 <script src="./assets/service-core.js?v=1"></script>
-<script src="./assets/service-improvements.js?v=2"></script>
-<script src="./assets/nearby-delivery.js?v=3"></script>
+<script src="./assets/service-improvements.js?v=3"></script>
+<script src="./assets/nearby-delivery.js?v=4"></script>
 <script src="./assets/delivery-pricing.js?v=2"></script>
+<link rel="stylesheet" href="./assets/operations-upgrade.css?v=1">
+<script src="./assets/operations-upgrade.js?v=1"></script>
 </body>
 </html>
