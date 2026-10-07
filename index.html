@@ -2453,22 +2453,35 @@ function resetTrackingMap(){
   if(link){link.classList.add("hidden");link.removeAttribute("href");}
 }
 
+function clearRiderLocation(){
+  resetTrackingMap();
+  $("liveRiderBox")?.classList.remove("hidden");
+  $("liveRiderMeta").textContent="";
+  $("liveRiderFresh").textContent="UNAVAILABLE";
+  $("liveRiderMapLink").classList.add("hidden");
+  $("liveRiderMapLink").removeAttribute("href");
+}
+
 function renderRiderLocation(loc){
   const box=$("liveRiderBox");
   if(!box)return;
   box.classList.remove("hidden");
-  const lat=Number(loc?.latitude),lng=Number(loc?.longitude);
-  if(!Number.isFinite(lat)||!Number.isFinite(lng)){
-    $("liveRiderStatus").textContent="📍 Rider location is not available yet. Ask the rider to allow location access.";
+  const lat=loc?.latitude==null?NaN:Number(loc.latitude),lng=loc?.longitude==null?NaN:Number(loc.longitude);
+  if(!Number.isFinite(lat)||!Number.isFinite(lng)||Math.abs(lat)>90||Math.abs(lng)>180){
+    clearRiderLocation();
+    $("liveRiderStatus").textContent="📍 Rider location is unavailable. The rider may not have enabled location access.";
     $("liveRiderStatus").className="rider-location-status warn";
     return;
   }
   const updated=loc?.updated_at?new Date(loc.updated_at):null;
-  const age=updated&&!Number.isNaN(updated.getTime())?Math.max(0,Math.round((Date.now()-updated.getTime())/1000)):null;
+  const now=Date.now();
+  const age=updated&&!Number.isNaN(updated.getTime())&&updated.getTime()<=now+30000?Math.max(0,Math.round((now-updated.getTime())/1000)):null;
+  const fresh=age!==null&&age<=30,recent=age!==null&&age<=120;
+  const elapsed=age===null?"update time unknown":age<60?age+" sec ago":age<3600?Math.floor(age/60)+" min ago":age<86400?Math.floor(age/3600)+" hours ago":Math.floor(age/86400)+" days ago";
   $("liveRiderMeta").textContent=(loc.rider_name||"Your rider")+(loc.rider_phone?" • "+loc.rider_phone:"");
-  $("liveRiderStatus").textContent="📍 Live location • "+(age!==null?(age<60?"updated "+age+" sec ago":"updated "+Math.floor(age/60)+" min ago"):"updated just now")+(loc.accuracy?" • GPS accuracy ±"+Math.round(Number(loc.accuracy))+"m":"");
-  $("liveRiderStatus").className="rider-location-status ok";
-  $("liveRiderFresh").textContent=age!==null&&age>30?"RECENT":"LIVE";
+  $("liveRiderStatus").textContent=(recent?"📍 Live location • updated ":"📍 Last known location • ")+elapsed+(loc.accuracy?" • GPS accuracy ±"+Math.round(Number(loc.accuracy))+"m":"");
+  $("liveRiderStatus").className="rider-location-status "+(recent?"ok":"warn");
+  $("liveRiderFresh").textContent=fresh?"LIVE":recent?"RECENT":"LAST KNOWN";
   const mapLink="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(lat+","+lng);
   $("liveRiderMapLink").href=mapLink;$("liveRiderMapLink").classList.remove("hidden");
   if(!window.L)return;
@@ -2494,13 +2507,13 @@ async function fetchTrackedRiderLocation(orderId,phone){
     });
     if(Array.isArray(rows)&&rows.length){renderRiderLocation(rows[0]);}
     else{
-      $("liveRiderBox").classList.remove("hidden");
-      $("liveRiderMeta").textContent="";$("liveRiderFresh").textContent="WAITING";
+      clearRiderLocation();
+      $("liveRiderFresh").textContent="WAITING";
       $("liveRiderStatus").textContent="📍 Rider location is not available yet. The rider may not have enabled GPS, or the first location update is still coming.";
       $("liveRiderStatus").className="rider-location-status warn";
     }
   }catch(e){
-    $("liveRiderBox").classList.remove("hidden");
+    clearRiderLocation();
     $("liveRiderFresh").textContent="OFFLINE";
     $("liveRiderStatus").textContent="📍 Live rider location could not be loaded right now.";
     $("liveRiderStatus").className="rider-location-status warn";
