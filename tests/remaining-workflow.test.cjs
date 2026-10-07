@@ -1,0 +1,11 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const html=fs.readFileSync('index.html','utf8');
+const extract=name=>html.match(new RegExp('(?:async )?function '+name+'\\([^\\n]*\\)\\{[\\s\\S]*?\\n\\}'))[0];
+const ctx={};vm.createContext(ctx);vm.runInContext(extract('recentSalesDays'),ctx);
+const days={'2026-09-25':{},'2026-10-01':{},'2026-10-02':{},'2026-10-08':{},'2026-10-09':{}};
+assert.deepEqual(Array.from(ctx.recentSalesDays(days,new Date('2026-10-08T12:00:00Z')),x=>x[0]),['2026-10-08','2026-10-02']);
+assert.deepEqual(Array.from(ctx.recentSalesDays({'2025-12-26':{},'2025-12-27':{},'2026-01-02':{}},new Date('2026-01-01T22:30:00Z')),x=>x[0]),['2026-01-02','2025-12-27']);
+assert.equal(ctx.recentSalesDays({'2026-09-25':{}},new Date('2026-10-08')).length,0);
+let token=true,calls=[];Object.assign(ctx,{localStorage:{getItem:()=>token},loadRiderDashboard:async()=>calls.push('load'),riderOrdersCache:[{id:'one',status:'delivered'}],normalizedStatus:x=>x,startRiderNotifications:()=>calls.push('notifications'),startRealtimeForCurrentRole:async()=>calls.push('realtime')});
+vm.runInContext(extract('restoreRiderPortal'),ctx);
+(async()=>{await ctx.restoreRiderPortal();assert.deepEqual(calls,['load','notifications','realtime']);assert.equal(ctx.riderLastOrderSnapshot.one,'delivered');calls=[];token=false;await ctx.restoreRiderPortal();assert.deepEqual(calls,['load']);assert.ok(extract('handleAdminRoute').includes("if(localStorage.getItem('megjet_rider_access_token'))restoreRiderPortal()"));console.log('Calendar sales window, Cyprus midnight/year boundary, rider restoration and rejected sessions passed.');})().catch(e=>{console.error(e);process.exitCode=1;});
