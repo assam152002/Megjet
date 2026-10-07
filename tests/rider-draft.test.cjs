@@ -1,0 +1,14 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const html=fs.readFileSync('index.html','utf8');
+const start=html.indexOf('  const deliveryBoxes=new Map();');
+const code=html.slice(start,html.indexOf('  async function uploadProof',start));
+const retained={dataset:{orderId:'qa',paymentMethod:'Card at Doorstep (POS)'},pin:{value:'1234'},pos:{checked:true},file:{files:[{name:'proof.jpg'}]}};
+let current=[{status:'out_for_delivery',id:'qa',payment_method:'Card at Doorstep (POS)'}],attached=null,created=0;
+const card={querySelector:selector=>selector==='.phase3b-delivery-box'?attached:null,appendChild:box=>{attached=box}};
+const ctx={window:{},document:{querySelectorAll:selector=>selector.includes('.phase3b-delivery-box')?[retained]:[card],createElement:()=>{created++;throw Error('should retain existing inputs')}},normalizedStatus:x=>x};
+Object.defineProperty(ctx,'riderOrdersCache',{get:()=>current});vm.createContext(ctx);vm.runInContext(code+'\nthis.boxes=deliveryBoxes;',ctx);
+ctx.keepDeliveryBoxes();ctx.enhanceRiderOrders();assert.equal(attached,retained);assert.equal(attached.pin.value,'1234');assert.equal(attached.pos.checked,true);assert.equal(attached.file.files[0].name,'proof.jpg');assert.equal(created,0);
+ctx.enhanceRiderOrders();assert.equal(attached,retained);assert.equal(created,0);
+current=[{id:'qa',status:'cancelled'}];ctx.enhanceRiderOrders();assert.equal(ctx.boxes.size,0);
+current=[{id:'qa',status:'out_for_delivery',payment_method:'Cash on Delivery'}];attached=null;ctx.boxes.set('qa',retained);assert.throws(()=>ctx.enhanceRiderOrders(),/should retain/);assert.equal(created,1);
+console.log('Rider refresh preserves actual PIN, POS and file nodes; inactive orders and changed payment methods discard drafts.');
