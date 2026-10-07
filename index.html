@@ -4025,7 +4025,7 @@ async function loadSalesDashboard(){
 
     const vendors=Object.entries(vendorMap).sort((a,b)=>b[1].sales-a[1].sales);
     const itemsRanked=Object.entries(itemMap).sort((a,b)=>b[1].qty-a[1].qty || b[1].sales-a[1].sales);
-    const days=Object.entries(dayMap).sort((a,b)=>b[0].localeCompare(a[0])).slice(0,7);
+    const days=recentSalesDays(dayMap);
 
     $("vendorSalesList").innerHTML=vendors.length
       ? vendors.map(([name,v])=>`<div class="sales-row"><div><b>${escapeHtml(name)}</b><div class="muted">${v.qty} items • ${v.orders.size} delivered orders</div></div><b>${money(v.sales)}</b></div>`).join("")
@@ -4875,6 +4875,25 @@ function showPreviousOrder(){
   $("previousOrder").classList.remove("hidden");
 }
 
+function recentSalesDays(dayMap,now=new Date()){
+  const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Nicosia',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);
+  const value=type=>parts.find(p=>p.type===type).value;
+  const today=value('year')+'-'+value('month')+'-'+value('day');
+  const cutoff=new Date(today+'T00:00:00Z');
+  cutoff.setUTCDate(cutoff.getUTCDate()-6);
+  const first=cutoff.toISOString().slice(0,10);
+  return Object.entries(dayMap).filter(([day])=>day>=first&&day<=today).sort((a,b)=>b[0].localeCompare(a[0]));
+}
+
+async function restoreRiderPortal(){
+  await loadRiderDashboard();
+  if(!localStorage.getItem('megjet_rider_access_token'))return;
+  riderLastOrderSnapshot={};
+  (riderOrdersCache||[]).forEach(o=>riderLastOrderSnapshot[String(o.id)]=normalizedStatus(o.status));
+  startRiderNotifications();
+  await startRealtimeForCurrentRole();
+}
+
 function handleAdminRoute(){
   const isAdmin=location.hash==='#admin';
   const isVendor=location.hash==='#vendor';
@@ -4884,6 +4903,7 @@ function handleAdminRoute(){
   $("rider").classList.toggle("hidden",!isRider);
   if(isAdmin){$("admin").scrollIntoView({behavior:'smooth'});if(localStorage.getItem("megjet_access_token")){loadAdminOrders();startRealtimeForCurrentRole();}}
   if(isVendor){$("vendor").scrollIntoView({behavior:'smooth'});if(localStorage.getItem("megjet_vendor_access_token")){loadVendorDashboard();startRealtimeForCurrentRole();}}
+  if(isRider){$("rider").scrollIntoView({behavior:'smooth'});if(localStorage.getItem('megjet_rider_access_token'))restoreRiderPortal();}
 }
 window.addEventListener('hashchange',handleAdminRoute);
 handleAdminRoute();
