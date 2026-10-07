@@ -4886,6 +4886,7 @@ function recentSalesDays(dayMap,now=new Date()){
 }
 
 async function restoreRiderPortal(){
+  if(document.readyState==='loading')await new Promise(resolve=>document.addEventListener('DOMContentLoaded',resolve,{once:true}));
   await loadRiderDashboard();
   if(!localStorage.getItem('megjet_rider_access_token'))return;
   riderLastOrderSnapshot={};
