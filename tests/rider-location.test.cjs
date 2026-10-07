@@ -1,0 +1,17 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const html=fs.readFileSync('index.html','utf8');
+const code=html.slice(html.indexOf('function clearRiderLocation(){'),html.indexOf('\nfunction renderTracking(',html.indexOf('function clearRiderLocation(){')));
+const nodes={};const $=id=>nodes[id]||(nodes[id]={textContent:'',className:'',attrs:{},hidden:false,classList:{add(){},remove(){}},removeAttribute(name){delete this[name]}});
+const now=Date.parse('2026-10-08T00:00:00Z');
+const ctx={$,window:{},Date:class extends Date{static now(){return now}},resetTrackingMap(){ctx.cleared=(ctx.cleared||0)+1},cfg:{url:'https://example.invalid',key:'test'},fetchJson:async()=>[]};
+vm.createContext(ctx);vm.runInContext(code,ctx);
+const loc={latitude:35.12,longitude:33.94,rider_name:'Test rider'};
+const render=age=>ctx.renderRiderLocation({...loc,updated_at:new Date(now-age*1000).toISOString()});
+render(10);assert.equal($('liveRiderFresh').textContent,'LIVE');
+render(31);assert.equal($('liveRiderFresh').textContent,'RECENT');
+render(120);assert.equal($('liveRiderFresh').textContent,'RECENT');
+render(121);assert.equal($('liveRiderFresh').textContent,'LAST KNOWN');assert.ok($('liveRiderStatus').className.includes('warn'));
+render(11*86400);assert.ok($('liveRiderStatus').textContent.includes('11 days ago'));assert.ok(!$('liveRiderStatus').textContent.includes('Live location'));
+ctx.renderRiderLocation(loc);assert.equal($('liveRiderFresh').textContent,'LAST KNOWN');assert.ok($('liveRiderStatus').textContent.includes('unknown'));
+ctx.renderRiderLocation({...loc,latitude:null});assert.equal($('liveRiderFresh').textContent,'UNAVAILABLE');assert.equal($('liveRiderMapLink').href,undefined);
+(async()=>{render(1);await ctx.fetchTrackedRiderLocation('test','');assert.equal($('liveRiderFresh').textContent,'WAITING');assert.equal($('liveRiderMapLink').href,undefined);ctx.fetchJson=async()=>{throw Error('offline')};await ctx.fetchTrackedRiderLocation('test','');assert.equal($('liveRiderFresh').textContent,'OFFLINE');assert.ok(ctx.cleared>=3);console.log('Rider location: freshness boundaries, old/missing time, invalid coordinates, empty responses and failures passed.');})().catch(e=>{console.error(e);process.exitCode=1});
