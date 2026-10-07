@@ -638,10 +638,10 @@ function megjetSupportHTML(orderId=""){
       <p class="muted">We're here to help with your Megjet order.</p>
       <div style="display:flex;gap:8px;flex-wrap:wrap">
         <button class="btn" id="megjetChatOpen" type="button">💬 Chat with Megjet</button>
-        <a class="btn" href="tel:${MEGJET_SUPPORT_PHONE}">📞 Call Megjet</a>
-        <a class="btn" href="${wa}" target="_blank" rel="noopener">💬 WhatsApp</a>
+        ${MEGJET_SUPPORT_PHONE ? `<a class="btn" href="tel:${phoneForCall(MEGJET_SUPPORT_PHONE)}">📞 Call Megjet</a>` : ""}
+        ${MEGJET_SUPPORT_WHATSAPP ? `<a class="btn" href="${wa}" target="_blank" rel="noopener">💬 WhatsApp</a>` : ""}
       </div>
-      ${orderId ? `<p class="small" style="margin-bottom:0">Order #${orderId} is included in your WhatsApp message.</p>` : ""}
+      ${orderId && MEGJET_SUPPORT_WHATSAPP ? `<p class="small" style="margin-bottom:0">Order #${orderId} is included in your WhatsApp message.</p>` : ""}
     </section>`;
 }
 </script>
@@ -2367,6 +2367,7 @@ $("placeOrder").onclick=async()=>{
     trackedOrderId=String(orderId||"");
     localStorage.setItem("megjet_last_order_id",trackedOrderId);
     localStorage.setItem("megjet_last_order_phone",phone);
+    showPreviousOrder();
     cart=[];renderCart();
     $("checkout").classList.add("hidden");
     $("confirmationOrderNumber").textContent="Your order number is #"+displayId;
@@ -2374,7 +2375,7 @@ $("placeOrder").onclick=async()=>{
     window.MEGJET_BANK_TRANSFER?.confirmation(placed);
     $("orderConfirmation").classList.remove("hidden");
     $("orderMessage").textContent="";
-    $("customerName").value=$("phone").value=$("address").value="";$("couponCode").value="";$("couponMessage").textContent="";appliedCoupon=null;renderCheckoutTotals();
+    $("customerName").value=$("phone").value=$("address").value="";window.MEGJET_DELIVERY_PIN?.set("address","");$("couponCode").value="";$("couponMessage").textContent="";appliedCoupon=null;renderCheckoutTotals();
   }catch(e){$("orderMessage").textContent="Order failed: "+e.message;}
   finally{$("placeOrder").disabled=false;}
 };
@@ -3899,7 +3900,8 @@ async function deleteMenuItem(id){
 
 function phoneForWhatsApp(value){
   let p=String(value||"").replace(/\D/g,"");
-  if(p.startsWith("0"))p="92"+p.slice(1);
+  if(/^05\d{9}$/.test(p))p="90"+p.slice(1);
+  else if(/^03\d{9}$/.test(p))p="92"+p.slice(1);
   return p;
 }
 function phoneForCall(value){
@@ -4552,7 +4554,11 @@ async function quickOrderStatus(id,status){await saveOrderStatus(id,status);}
 $("trackOrderNow").onclick=showTracking;
 $("lookupOrderBtn").onclick=lookupExistingOrder;
 $("trackingRefresh").onclick=fetchTrackedOrder;
-$("openPreviousOrder").onclick=showTracking;
+$("openPreviousOrder").onclick=()=>{
+  trackedOrderId=localStorage.getItem("megjet_last_order_id")||"";
+  showPreviousOrder();
+  showTracking();
+};
 $("vendorAddBtn").onclick=()=>showVendorForm();
 $("vendorPinClear").onclick=()=>{vendorPinDirty=true;$("vendorPickupLatitude").value="";$("vendorPickupLongitude").value="";if(vendorPinMarker){vendorPinMarker.remove();vendorPinMarker=null;}$("vendorPinStatus").textContent="Pin removed. Save Vendor to confirm.";};
 ["vendorPickupLatitude","vendorPickupLongitude"].forEach(id=>$(id).addEventListener("change",()=>{try{const pin=vendorPinCoordinates();if(pin)setVendorPin(pin.latitude,pin.longitude);else{vendorPinDirty=true;if(vendorPinMarker){vendorPinMarker.remove();vendorPinMarker=null;}}}catch(e){$("vendorPinStatus").textContent=e.message;}}));
@@ -5555,7 +5561,7 @@ document.addEventListener("DOMContentLoaded",function(){
     if(items)items.innerHTML=state().map((x,i)=>{
       const q=Math.max(1,Number(x.quantity||1));
       return '<div class="row"><span><b>'+esc(window.MEGJET_MENU_LOCALE?.name(x)||x.name||'Item')+'</b>'+(x.vendor_name?'<div class="cart-vendor" data-no-translate>'+esc(x.vendor_name)+'</div>':'')+
-      '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'">+</button></span>'+
+      '<span class="mj-qty"><button type="button" data-mj-minus="'+i+'" aria-label="Decrease quantity">−</button><b>'+q+'</b><button type="button" data-mj-plus="'+i+'" aria-label="Increase quantity">+</button></span>'+
       ' <button type="button" class="secondary" data-mj-remove="'+i+'">Remove</button></span><span>'+money(Number(x.price||0)*q)+'</span></div>';
     }).join('');
     // The cart belongs to the customer shopping flow and must never depend on
