@@ -5198,11 +5198,37 @@ Object.assign(MEGJET_PRODUCT_PHOTOS, {"BİRA TABAĞI (2 Kişilik)":"./assets/img
     }catch(e){console.warn('Phase 3B earnings unavailable:',e.message);}
   }
 
+  const deliveryBoxes=new Map();
+  function keepDeliveryBoxes(){
+    document.querySelectorAll('#riderOrders .phase3b-delivery-box').forEach(box=>{
+      if(box.dataset.orderId)deliveryBoxes.set(box.dataset.orderId,box);
+    });
+  }
+  const originalRiderRender=window.renderRiderDashboard;
+  if(typeof originalRiderRender==='function'){
+    window.renderRiderDashboard=function(){
+      const focused=document.activeElement;
+      keepDeliveryBoxes();
+      originalRiderRender.apply(this,arguments);
+      enhanceRiderOrders();
+      if(focused&&!focused.isConnected)return;
+      if(focused&&focused.closest?.('.phase3b-delivery-box'))focused.focus({preventScroll:true});
+    };
+  }
+
   function addDeliveryBox(card,order){
     if(!card||!order||normalizedStatus(order.status)!=='out_for_delivery')return;
-    card.querySelector('.phase3b-delivery-box')?.remove();
     const id=String(order.id),safe=id.replace(/[^a-zA-Z0-9_-]/g,'');
+    if(card.querySelector('.phase3b-delivery-box'))return;
+    const previous=deliveryBoxes.get(id);
+    if(previous&&previous.dataset.paymentMethod===String(order.payment_method||'')){
+      const actions=card.querySelector('.rider-order-actions');
+      if(actions)actions.insertAdjacentElement('beforebegin',previous);else card.appendChild(previous);
+      return;
+    }
     const box=document.createElement('div');box.className='phase3b-delivery-box';
+    box.dataset.orderId=id;box.dataset.paymentMethod=String(order.payment_method||'');
+    deliveryBoxes.set(id,box);
     box.innerHTML='<h4>🔐 Complete Delivery</h4><div class="muted">Ask the customer for the 4-digit delivery PIN. A photo is optional.</div><div class="phase3b-delivery-grid"><input id="phase3b-pin-'+safe+'" inputmode="numeric" maxlength="4" placeholder="Customer PIN"><label class="phase3b-proof-label">📷 Add proof photo <input id="phase3b-proof-'+safe+'" type="file" accept="image/*" capture="environment"></label></div><img id="phase3b-preview-'+safe+'" class="phase3b-proof-preview" alt="Delivery proof preview">'+(order.payment_method==='Card at Doorstep (POS)'?'<label class="rider-note"><input id="phase3b-pos-'+safe+'" type="checkbox"> I charged the customer on the physical POS terminal.</label>':'')+'<div class="phase3b-delivery-actions"><button id="phase3b-complete-'+safe+'" type="button">🔢 Verify PIN & Mark Delivered</button></div><div id="phase3b-msg-'+safe+'" class="phase3b-help">The order will not be completed until the PIN is correct.</div>';
     const file=box.querySelector('input[type=file]'),preview=box.querySelector('img');
     file.addEventListener('change',()=>{const f=file.files?.[0];if(!f){preview.style.display='none';preview.removeAttribute('src');return;}preview.src=URL.createObjectURL(f);preview.style.display='block';});
@@ -5214,6 +5240,8 @@ Object.assign(MEGJET_PRODUCT_PHOTOS, {"BİRA TABAĞI (2 Kişilik)":"./assets/img
   function enhanceRiderOrders(){
     const cards=[...(document.querySelectorAll('#riderOrders .rider-order'))];
     const orders=riderOrdersCache||[];
+    const activeIds=new Set(orders.filter(o=>normalizedStatus(o.status)==='out_for_delivery').map(o=>String(o.id)));
+    for(const id of deliveryBoxes.keys())if(!activeIds.has(id))deliveryBoxes.delete(id);
     cards.forEach((card,i)=>{
       const order=orders[i];
       if(order)addDeliveryBox(card,order);
