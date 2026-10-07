@@ -1,7 +1,7 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const html=fs.readFileSync('index.html','utf8');
 const extract=name=>html.match(new RegExp('(?:async )?function '+name+'\\([^\\n]*\\)\\{[\\s\\S]*?\\n\\}'))[0];
-const ctx={};vm.createContext(ctx);vm.runInContext(extract('recentSalesDays'),ctx);
+const ctx={document:{readyState:'complete'}};vm.createContext(ctx);vm.runInContext(extract('recentSalesDays'),ctx);
 const days={'2026-09-25':{},'2026-10-01':{},'2026-10-02':{},'2026-10-08':{},'2026-10-09':{}};
 assert.deepEqual(Array.from(ctx.recentSalesDays(days,new Date('2026-10-08T12:00:00Z')),x=>x[0]),['2026-10-08','2026-10-02']);
 assert.deepEqual(Array.from(ctx.recentSalesDays({'2025-12-26':{},'2025-12-27':{},'2026-01-02':{}},new Date('2026-01-01T22:30:00Z')),x=>x[0]),['2026-01-02','2025-12-27']);
